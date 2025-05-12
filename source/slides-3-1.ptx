@@ -1,0 +1,640 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3-1 : Sampling from a finite population</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section xml:id="subsec-literary-computing">
+      <title>Literary Computing</title>
+      <slide>
+        <title>Figure 1: </title>
+        <figure width="100%" xml:id="gettysburg-1">
+          <image source="3-1/gettysburg_1.png">
+            <description>The text of Lincoln's Gettysburg address, which begins: Fourscore and seven years ago… and ends: shall not perish from the earth.
+      </description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>
+      Select a representative set of 10 words from the passage above by circling them with your pen
+  or pencil.
+    </p>
+      </slide>
+      <slide>
+        <p>The authorship of literary works is often a topic for debate. For example, researchers have
+tried to determine whether some of the works attributed to Shakespeare were actually written by Bacon or Marlow. The field of “literary computing” examines ways of numerically analyzing authors' works, looking at variables such as sentence length and rates of occurrence of specific words.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>
+    Complete the following data table by recording each word from your sample and then
+    indicate the length of the word (number of letters) and whether or not the word is "short" (3 or fewer letters).
+  </p>
+        <image source="3-1/word_length_1.png">
+          <description> A table is shown. There are 10 rows, with columns labeled &amp;qout;Word&amp;qout;, &amp;qout;Length (no. of letters)&amp;qout;, and &amp;qout;Short (3 or fewer letters)? (Y or N)&amp;qout;
+    </description>
+        </image>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Identify the observational units and the variables you have recorded on these
+observational units (Keep in mind that observational units do not have to be people!)</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>The <term>population</term> is the entire collection of observational units of interest, and the
+<term>sample</term> is a subset of the population on which we record data.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>The passage is, of course, Lincoln's Gettysburg Address, given November 19, 1863, on the
+battlefield near Gettysburg, Pennsylvania. We are considering this passage a <term>population</term> of
+268 words, and the 10 words you selected are a <term>sample</term> from this population. As before, we can
+use <m>\hat{p}</m> to refer to a sample proportion and <m>\pi </m> to refer to the parameter, this time the proportion
+of short words in the population.
+</p>
+      </slide>
+      <slide>
+        <image source="3-1/gettysburg_2.png" width="50%">
+          <description>The Gettysburg Address of Abraham Lincoln is shown.</description>
+        </image>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Do you think the sample proportion of short words you found will be a good estimate of
+the population proportion, <m>\pi= 0.41 </m> ? Why or why not?</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Suggest a method for deciding whether the sample proportion of short words is likely
+to be close to the population proportion of short words. (Hint: Whereas any one sample
+may not produce a statistic that exactly equals the population parameter, what would we
+like to be true in general?)</p>
+      </slide>
+      <slide xml:id="q-3-2-6">
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>
+    Combine your results with your classmates' by producing a dotplot of the distribution of
+    the proportion of short words in your samples.
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>What label should be along the horizontal axis of this graph? How many dots do you
+have? In other words, clarify what each dot represents. (Hint: If you wanted to add
+another dot to the graph, what would you need to do?)</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Based on the class dotplot, does this sampling method tend to produce sample
+proportions close to the population proportion, 0.41? Justify your answer.</p>
+      </slide>
+      <slide>
+        <title>Definition 3: </title>
+        <definition>
+          <statement>
+            <p>A sampling method is <term>biased</term> if, when using that sampling method, statistics
+from different samples <em>consistently</em> overestimate or consistently underestimate the
+population parameter of interest.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>Note that bias is a property of a sampling <em>method</em>, not a property of an individual sample.
+Also note that the sampling method must <em>consistently</em> produce nonrepresentative results in
+the same direction in order to be considered biased</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Does asking you to quickly select 10 representative words appear to be a biased or
+unbiased sampling method? If biased, what is the direction of the bias (tendency to
+overestimate or underestimate the proportion of short words)?</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Explain why we might have expected this sampling method (asking you to quickly pick
+10 representative words) to be biased for this variable.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Do you think that if we'd asked each of you to take 20 words instead of 10 words it
+would have helped with this issue? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Suggest another technique for selecting 10 words from this population in order for the
+sampling method to be unbiased and likely to produce samples that are representative
+of the population proportion of short words.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Taking a Simple Random Sample</title>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <p>A <term>simple random</term> sample ensures that every sample of size <em>n</em> is equally likely to be
+the sample selected from the population. In particular, each observational unit has the
+same chance of being selected as every other observational unit.</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>The key to obtaining a representative sample is using some type of <em> random</em> mechanism to
+select the observational units from the population, rather than relying on <term>convenience samples</term>
+or any type of human judgment.</p>
+      </slide>
+      <slide>
+        <title>Definition 5: </title>
+        <definition>
+          <statement>
+            <p>A <term>convenience sample</term> is a nonrandom sample of a population.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>Instead of having you choose “random” words using your own judgment, we will now ask
+you to take a simple random sample of words and evaluate your results. The first step is to obtain
+a <term>sampling frame</term>—a complete list of every member of the population where each member of
+the population can be assigned a number. Below is a copy of the Gettysburg Address that includes
+numbers in front of every word. For example, the 43rd word is <q>nation</q>. <em>Note</em>: In this sampling
+frame, “four score” is listed as two words.</p>
+      </slide>
+      <!--Question 13-->
+      <slide>
+        <title>Exercise 13a: </title>
+        <p>Go to the <term>
+            <url href="https://static-content.zybooks.com/applets/2021/randomnumbers/GenRandom01.htm?hideExtras=1">Random Numbers</url>
+          </term> applet
+      (or <url href="http://www.random.org/"> random.org</url>).</p>
+        <sidebyside>
+          <p>
+            <ul>
+              <li>
+                <p>
+              Specify that you want 5 <em>Numbers per replication</em>
+              in the range from 1 to 268.
+            </p>
+              </li>
+              <li>
+                <p>
+              Press <em>Generate</em> to view the 5 random numbers.
+            </p>
+              </li>
+              <li>
+                <p>
+                  <em>Enter</em> the random numbers in the table below:
+            </p>
+              </li>
+            </ul>
+          </p>
+          <image source="3-1/random_num_app.png" width="40%">
+            <description>A screen capture of the random number generator linked above, with three input boxes. For number of
+        replications, enter 1. For numbers per replications, put 5. For number range, there are two boxes. In the from box,
+        put 1. In the to box, put 268. 
+        </description>
+          </image>
+        </sidebyside>
+        <p>Randomly generated five ID values from 1 to 268:</p>
+        <image source="3-1/five_nums.png" width="80%">
+          <description>Five empty boxes are displayed.</description>
+        </image>
+      </slide>
+      <slide>
+        <title>Exercise 13b: </title>
+        <p>Using your randomly generated numbers, look up the corresponding word from the sampling frame. Fill in the <term>
+            <em> data table</em>
+          </term> below.</p>
+        <image source="3-1/word_length_2.png" width="100%">
+          <description>
+        A table is shown. There are 5 rows, with columns labeled <q>Word</q>, <q>Length (no. of letters)</q>,
+        and <q>Short (3 or fewer letters)? (Y or N)</q>
+          </description>
+        </image>
+      </slide>
+      <slide>
+        <title>Figure 6: </title>
+        <figure width="90%" xml:id="fig-gettysburg-frame-1">
+          <caption> Gettysburg Address Sampling Frame </caption>
+          <image source="3-1/gettysburg_3.png">
+            <description>A table with two columns: the first is a list from 1 to 268, the second is each word in the Gettysburg address listed in order. 
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Figure 7: </title>
+        <figure width="90%" xml:id="fig-gettysburg-frame-2">
+          <image source="3-1/gettysburg_4.png">
+            <description>Gettysburg address sampling frame (continued).
+</description>
+          </image>
+        </figure>
+      </slide>
+      <!--Question 14-->
+      <slide>
+        <title>Exercise 14</title>
+        <p>Let's examine your sample of five words, as well as those of your classmates.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14a: </title>
+        <p>
+        Calculate the proportion of short words in your random sample.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14b: </title>
+        <p>
+        Again, produce a dotplot of the distribution of proportions of short words for
+        your sample and those of your classmates. Make sure you label the horizontal
+        axis appropriately.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14c: </title>
+        <p>
+        Comment on how this distribution compares to your class' dotplot of sample
+        proportions from <xref ref="q-3-2-6" text="type-hybrid"/> which used nonrandom sampling.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14d: </title>
+        <p>
+        Does this second method appear to be an unbiased sampling method? How are
+        you deciding?
+      </p>
+      </slide>
+      <slide>
+        <p>Let's use technology to take even more random samples.
+<ul>
+            <li>Open the <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?population=gettysburg">
+  Sampling Words</url> applet.</li>
+            <li>Use the <em>Variable</em> pull down menu, to choose "Short".
+Confirm the population proportion is 0.41.
+</li>
+            <li>Check the <em> Show Sampling Options</em> box. Specify 5 in the
+<em>Sample Size</em> box and press the <em> Draw Samples</em> button.</li>
+          </ul>
+          <sidebyside widths="30% 70%">
+            <image source="3-1/samp_words_app.png" width="100%">
+              <description>A screen capture of the random number generator linked above, with three input boxes. For number of
+    replications, enter 1. For numbers per replications, put 5. For number range, there are two boxes. In the from box,
+    put 1. In the to box, put 268. 
+    </description>
+            </image>
+            <p>You will see the five selected words appear in the box below. You will also see five blue
+    dots within the population distribution representing the five words you have sampled (and
+    whether they are short). These five yes/no outcomes for your sample are also displayed in a
+    dotplot in the middle panel. The blue triangle indicates the proportion of short words in this
+    sample. This value also appears on the Sampling Distribution graph to the right.
+    Press <em>Draw Samples</em> again.</p>
+          </sidebyside>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Did you get the same sample this time? Did you get the same sample proportion?</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Suppose you take 1,000 different random samples and examined the distribution of the
+1,000 sample proportions. Where do you think this distribution will be centered? What
+shape do you think it will have? Predict the largest and smallest values.</p>
+      </slide>
+      <slide xml:id="q-3-2-17">
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>Change the Number of samples from 1 to 9998, for a total of 10,000 samples and
+press Draw Samples. Describe the behavior of the distribution of sample proportions
+and contrast it with your prediction, as well as to the class distribution of nonrandom
+samples using 10 words.</p>
+      </slide>
+      <slide>
+        <title>Definition 8: </title>
+        <definition>
+          <statement>
+            <p>A <term>sampling distribution</term>  is the distribution of a statistic for all possible samples of
+size n randomly selected from the same population. By taking lots of samples, you can
+approximate this sampling distribution.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>The following table outlines the simulation process you are using to approximate the sampling
+distribution of sample proportions of short words from the Gettysburg Address.</p>
+      </slide>
+      <slide>
+        <title>Table 9: </title>
+        <table>
+          <title> Parallels between population distributions and sampling distributions </title>
+          <tabular>
+            <row>
+              <cell>Population</cell>
+              <cell>All 268 words in the Gettysburg Address</cell>
+            </row>
+            <row>
+              <cell>Parameter</cell>
+              <cell>Proportion of words in the population that are short (<m>\pi  = 0.41</m>)</cell>
+            </row>
+            <row>
+              <cell>Sample</cell>
+              <cell>5 randomly selected words</cell>
+            </row>
+            <row>
+              <cell>Statistic</cell>
+              <cell>Proportion of sampled words that are short ( <m>\hat p</m> varies from sample to sample)</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <p>One big change between the random samples and the previous convenience samples is
+the center of the sampling distribution should now be close to <m>\pi </m>, the population proportion.
+In other words, simple random sampling is an unbiased sampling method because there is no
+tendency to over- or underestimate the parameter.</p>
+      </slide>
+      <slide>
+        <title>Remark 10: </title>
+        <remark>
+          <p>
+    The mean of the sampling distribution of sample proportions for all possible simple
+    random samples from a population with success proportion <m>\pi </m> will be equal to <m>\pi </m>.
+  </p>
+        </remark>
+      </slide>
+      <slide>
+        <p>As we saw, this sampling method (taking 5 randomly selected words) is better (unbiased)
+even though we selected fewer words.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Sampling Distribution of Sample Proportions</title>
+      <slide>
+        <p>Based on what you learned about sample proportions previously, you should not be too surprised that
+the distribution of sample proportions you produced in <xref ref="q-3-2-17" text="type-hybrid"/> is
+somewhat symmetric (because <m>\pi </m> is close to 0.50),
+with a mean close to 0.41 (because the sampling method is unbiased). In fact, our previous formula for the
+standard deviation of sample proportions, <m>\sqrt{\dfrac{\pi(1 - \pi)}{n}}</m>, still works as well!
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>Verify that the standard deviation of your 10,000 sample proportions is close to the standard deviation 
+  of sample proportions defined above. (Hint: What values are you using for <m>\pi </m> and n?)</p>
+      </slide>
+      <slide>
+        <title>Remark 11: </title>
+        <remark>
+          <p>
+    When sampling from a large population, the standard deviation of sample proportions is estimated by the same formula, 
+  </p>
+          <p>
+            <me> \text{standard deviation of sample proportions} = \sqrt{\dfrac{\pi(1 - \pi)}{n}},</me>
+          </p>
+          <p>
+    where <m>\pi </m> represents the proportion of successes in the population and n represents the sample size. The population
+    size is considered large enough when it is more than 20 times that sample size.
+  </p>
+        </remark>
+      </slide>
+      <slide>
+        <p>Notice one new aspect here compared to earlier: When we are sampling from a finite
+population rather than from an infinite random process, we want the population to be large
+in order to assume <m>\pi </m> represents a constant probability of success. In this case,
+<m>268 &gt; 200( = 20 \times 10)</m>, and the formula should apply. In which case, we
+can use the same theory-based methods we used before.</p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 19-->
+        <p>How would our prediction of the behavior (shape, mean, largest value/smallest value)
+of the distribution of sample proportions change if the population size had been 2,680?</p>
+      </slide>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 20-->
+        <p>Name two things that do impact the standard deviation of the distribution of
+sample proportions.</p>
+      </slide>
+      <slide xml:id="q-3-2-21">
+        <title>Exercise 21</title>
+        <!--Question 21-->
+        <p>In the applet, select the radio button labeled Fixed. Then change the Sample size from
+5 to 10 and the Number of samples from 9,998 to 10,000. Press Draw Samples and
+describe the behavior of the new sampling distribution. Does the standard deviation
+change as you predicted? Is the sampling method still unbiased? How are you deciding?</p>
+      </slide>
+      <slide>
+        <title>Exercise 22</title>
+        <!--Question 22-->
+        <p>Repeat <xref ref="q-3-2-21" text="type-hybrid"/> for a sample size of 20.</p>
+      </slide>
+      <slide>
+        <p>Keep in mind that our population size (268) is not all that large here and you may start to
+see some discrepancies with the standard deviation formula with samples of 20 or more (Why?).
+But also notice that the shape of the distribution of sample proportions is looking more and
+more like a normal distribution as we increase the sample size, just as you saw previously.</p>
+      </slide>
+      <slide>
+        <title>Remark 12: </title>
+        <remark>
+          <p>
+  The <term>Central Limit Theorem for sampling from a large finite population</term>
+  says that the distribution of sample proportions from repeated random samples will be
+  approximately normal if there at least 10 successes and at least 10 failures in each sample.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>In the following figure, we have overlaid the normal distribution predicted by the Central Limit
+Theorem and determined the proportion of samples and the theoretical probability for a sample
+proportion of 0.55 and higher.</p>
+      </slide>
+      <slide>
+        <title>Figure 13: </title>
+        <figure>
+          <caption> Figure 321: Distribution of sample proportions compared to predicted distribution </caption>
+          <image source="3-1/fig-3-1-1.png" width="40%">
+            <description>
+    Output from the applet, which shows a mound-shaped simulated null distribution with a normal
+    approximation overlay. The observed statistic has been inputted, and the repetitions above
+    the observed statistic of 0.55 are measured. The simulation-based p-value is reported as
+    1381/10000 = .1381. The theory-based p-value is 0.1027.
+  </description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <!--Question 23-->
+        <p>Does the normal approximation appear to be valid here? Which value (0.1381 or 0.1027)
+do you trust more? Explain your reasoning.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Other Considerations</title>
+      <slide>
+        <p>Another key property of our sampling method is that we had a list of every word in the population.
+This list is referred to as a <term> sampling frame</term>. An incomplete sampling frame (e.g., only
+the first paragraph of the speech) would also produce a biased sampling method if the observational
+units not in the sampling frame were systematically different from the rest of the population.
+</p>
+      </slide>
+      <slide>
+        <title>Remark 14: </title>
+        <remark>
+          <p>
+  If a sampling frame does not include every member of the population (e.g., last paragraph missing, nouns not
+  listed), then we cannot claim to represent those segments in the population with our sample.
+  An incomplete sampling frame can also lead to biased sampling.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>You also need to be sure there are not any other <term>nonsampling concerns</term>. These represent
+problems that arise even with a carefully selected sample. For example, suppose we were not
+able to accurately measure the lengths of the words. Or, different individuals used different
+definitions of "short."</p>
+      </slide>
+      <slide>
+        <title>Remark 15: </title>
+        <remark>
+          <p>
+  In addition to carefully selecting the sample, you need to guard against other possible sources of bias
+  as well. For example, when talking to people, their suspect memories and truthfulness can impact people's
+  answers. Other examples of <term>nonsampling concerns</term> include the effects that the wording of a
+  question can have on people's responses (e.g., how extreme the phrasing is), the effects that the interviewer
+  can have by virtue of their demeanor, sex, race, and other characteristics, using an uncalibrated scale, and so on.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>See Example 2.1 for additional discussion of nonsampling concerns.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring Further</title>
+      <!--Question 24-->
+      <slide>
+        <title>Exercise 24</title>
+        <p>
+    As part of the General Social Survey in 2018, a random sample of U.S. adults were asked whether at least
+    one of their grandparents was born outside the United States. In the sample of 2,214 respondents, 881 said "yes."
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 24a: </title>
+        <p>
+      Define the parameter of interest in words. Do you know its value (if so, what is it)?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24b: </title>
+        <p>
+      Describe the statistic in words. Do you know its value (if so, what is it)?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24c: </title>
+        <p>
+      Do you consider this sample of 2,214 U.S. adults to be generalizable to the roughly
+      253,881,929 U.S. adults in 2018? Explain why or why not.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24d: </title>
+        <p>
+      Suppose we assume the population proportion is 0.50. If we were to predict the
+      behavior of the distribution of sample proportions, what do you predict for: Mean? Standard deviation? Shape?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24e: </title>
+        <p>
+      Based on the observed sample proportion, is it plausible that the observed sample
+      came from a population with <m>\pi = 0.50</m>? Be clear how you are deciding.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24f: </title>
+        <p>
+      Is it plausible that the observed sample came from a population with <m>\pi = 0.40</m>?
+      Explain how you are deciding.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24g: </title>
+        <p>
+      Do you have any reason to suspect the respondents could be giving misleading
+      information to this question? What are the implications of your answer?
+    </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

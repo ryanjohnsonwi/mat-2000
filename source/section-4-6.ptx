@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_4_11" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Tools, data, and formulas</title>
+
+<subsection> 
+ <title>Tools</title>
+<p>The standalone tools below are the previously introduced simulation zyTools for one proportion 
+(<url href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/a9ead249-be3a-1cea-2e87-7bb963727c38" rel="noopener noreferrer">
+2.12</url>) and one mean (<url href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/bc553747-b533-fd11-aeca-e2816608da2d" rel="noopener noreferrer">
+3.10</url>) with expanded capabilities for computing confidence intervals. Additionally, a tool 
+for simulating theory-based confidence intervals from population parameters is included as well. </p>
+
+ 
+<table>
+ <title>One proportion simulator relevant features by section </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Feature</cell>
+</row>
+<row>
+<cell>2SD and theory-based confidence intervals for a single proportion</cell>
+<cell>Calculate a 2SD 95% confidence interval</cell>
+</row>
+<row>
+<cell>Factors that affect the width of a confidence interval</cell>
+<cell>Calculate a theory-based confidence interval for any confidence level</cell>
+</row>
+</tabular>
+</table>
+
+<table>
+ <title> Table 4112: One mean simulator relevant features by section </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Feature</cell>
+</row>
+<row>
+<cell>2SD and theory-based confidence intervals for a single mean</cell>
+<cell>Calculate a 2SD 95% confidence interval</cell>
+</row>
+<row>
+<cell>Tools, data, and formulas</cell>
+<cell>Calculate a theory-based confidence interval for any confidence level</cell>
+</row>
+</tabular>
+</table>
+
+<table>
+ <title>Confidence intervals simulator relevant features by section </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Feature</cell>
+</row>
+<row>
+<cell>Factors that affect the width of a confidence interval</cell>
+<cell>Simulation of multiple confidence intervals for one proportion</cell>
+</row>
+<row>
+<cell>Tools, data, and formulas</cell>
+<cell>Simulation of multiple confidence intervals for one mean.</cell>
+</row>
+</tabular>
+</table>
+</subsection>
+
+<subsection> 
+ <title>Data</title>
+
+<table>
+ <title> Table 4114: References </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Data</cell>
+<cell>Reference</cell>
+</row>
+<row>
+<cell>Example: Statistical inference - confidence intervals</cell>
+<cell><m>\pi</m>=0.2, n=33, <m>\hat{p}</m>=0.909</cell>
+<cell><url href="http://doi.org/10.1136/gut.2010.218305">Sonoda et al. (Gut 2011)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Statistical inference - confidence intervals</cell>
+<cell><m>\pi</m>=0.5, n=124, <m>\hat{p}</m>=0.645</cell>
+<cell><url href="https://doi.org/10.1038/421711a">Güntürkün (Nature 2003)</url></cell>
+</row>
+<row>
+<cell>Example: 2SD and theory-based <br/>confidence intervals for a single proportion</cell>
+<cell><m>\pi</m>=0.5, n=743, <m>\hat{p}</m>=0.59</cell>
+<cell><url href="http://www.pewresearch.org/internet/2018/09/27/a-majority-of-teens-have-experienced-some-form-of-cyberbullying/">Pew (2018)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: 2SD and theory-based <br/>confidence intervals for a single proportion</cell>
+<cell><m>\pi</m>=0.5, n=2348, <m>\hat{p}</m>=0.362</cell>
+<cell><url href="https://gss.norc.org/">General Social Survey (2018)</url></cell>
+</row>
+<row>
+<cell>Example: 2SD and theory-based <br/>confidence intervals for a single mean</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch04/UsedCarsSample.csv">UsedCarsSample.csv</url><br/>
+n=102, <m>\overline{x}</m>=13292, <m>s</m>=4535<br/><br/>
+Population: Normal, <br/>mean=13292, sd = 4535</cell>
+<cell></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: 2SD and theory-based <br/>confidence intervals for a single mean</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/SleepTimes.csv">SleepTimes.csv</url><br/>
+n=22, <m>\overline{x}</m>=6.705, <m>s</m>=1.267<br/><br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch04/SleepTimesPopulationBootstrap.csv">SleepTimesPopulationBootstrap.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Example: Factors that affect <br/> the width of a confidence interval</cell>
+<cell>n=41000, <m>\hat{p}</m>=0.2543 (Cats)<br/>
+n=41000, <m>\hat{p}</m>=0.3840 (Dogs)</cell>
+<cell><url href="https://www.avma.org/resources-tools/reports-statistics/us-pet-ownership-statistics">AVMA (2016)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration A: Factors that affect <br/> the width of a confidence interval</cell>
+<cell>n=1526, <m>\overline{x}</m>=942</cell>
+<cell><url href="https://news.gallup.com/poll/267914/americans-plan-spend-generously-christmas.aspx">Gallup  (2018)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration B: Factors that affect <br/> the width of a confidence interval</cell>
+<cell><m>\pi</m>=0.5, n=100</cell>
+<cell></cell>
+</row>
+<row>
+<cell>Investigation: Cell phones while driving</cell>
+<cell><m>\pi</m>=0.5, n=242, <m>\hat{p}</m>=0.52</cell>
+<cell><url href="https://www.pewresearch.org/internet/wp-content/uploads/sites/9/2009/07/PI_2009.07.22_wireless-internet-use_FINAL.pdf">Pew (2009)</url></cell>
+</row>
+</tabular>
+</table>
+</subsection>
+
+<subsection> 
+ <title>Formulas for one proportion</title>
+<p>
+<ul>
+<li><m>\pi</m> is the underlying process probability of success or population proportion of success.</li>
+<li><m>n</m> is the sample size.</li>
+<li><m>\hat{p} = \frac{\text{number of successes in the sample}}{n}</m> is the sample proportion.</li>
+<li><m>SD(\hat{p})</m> is the standard deviation of the statistic.</li>
+<li><m>SD = \sqrt{ \pi(1-\pi) / n } </m> is the theory-based standard deviation of the null distribution.</li>
+<li><m>SE = \sqrt{ \hat{p}(1-\hat{p}) / n } </m> is the theory-based standard error, which approximates <m>SD</m> and <m>SD(\hat{p})</m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> z = \frac{\hat{p} - \pi}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one proportion.</li>
+<li><m> z = \frac{\hat{p} - \pi}{SD}  =  \frac{\hat{p} - \pi}{\sqrt{ \pi(1-\pi) / n } } </m> is the theory-based standardized statistic for one proportion.</li></ul>
+</ul>
+<ul><li><m> z = \frac{\hat{p} - \pi}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one proportion.</li>
+<li><m> z = \frac{\hat{p} - \pi}{SD}  =  \frac{\hat{p} - \pi}{\sqrt{ \pi(1-\pi) / n } } </m> is the theory-based standardized statistic for one proportion.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m>\hat{p} \pm 2 \times SD(\hat{p}) </m> is a 2SD CI approximating a 95% confidence interval estimating <m>\pi</m>.</li>
+<li><m>\hat{p} \pm \text{(multiplier)} \times SE </m> is a theory-based confidence interval estimating <m>\pi</m>, where the multiplier comes from the standard normal distribution.</li></ul>
+</ul>
+<ul><li><m>\hat{p} \pm 2 \times SD(\hat{p}) </m> is a 2SD CI approximating a 95% confidence interval estimating <m>\pi</m>.</li>
+<li><m>\hat{p} \pm \text{(multiplier)} \times SE </m> is a theory-based confidence interval estimating <m>\pi</m>, where the multiplier comes from the standard normal distribution.</li></ul>
+</p>
+</subsection>
+
+<subsection> 
+ <title>Formulas for one mean</title>
+<p>
+<ul>
+<li><m>\mu</m> is the population mean.</li>
+<li><m>\sigma</m> is the population standard deviation.</li>
+<li><m>n</m> is the sample size.</li>
+<li><m>\overline{x}</m> is the sample mean.</li>
+<li><m>s</m> is the sample standard deviation.</li>
+<li><m>SD(\overline{x})</m> is the standard deviation of the statistic.</li>
+<li><m>SD = \sigma/\sqrt{n} </m> is the theory-based standard deviation of the null distribution.</li>
+<li><m>SE = s / \sqrt{n} </m> is the theory-based standard error, which approximates <m>SD</m> and <m>SD(\overline{x})</m>.</li></ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> t = \frac{\overline{x} - \mu}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one mean.</li>
+<li><m> t = \frac{\overline{x} - \mu}{SE} =  \frac{\overline{x} - \mu}{s/\sqrt{n}} </m> is the theory-based standardized statistic for one mean.</li></ul>
+</ul>
+<ul><li><m> t = \frac{\overline{x} - \mu}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one mean.</li>
+<li><m> t = \frac{\overline{x} - \mu}{SE} =  \frac{\overline{x} - \mu}{s/\sqrt{n}} </m> is the theory-based standardized statistic for one mean.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m>\overline{x} \pm 2 \times SD(\overline{x}) </m> is a 2SD CI approximating a 95% confidence interval estimating <m>\mu</m>.</li>
+<li><m>\overline{x} \pm \text{(multiplier)} \times SE </m> is a theory-based confidence interval estimating <m>\mu</m>, where the multiplier comes from the t-distribution with <m>n-1</m> degrees of freedom.</li></ul>
+</ul>
+<ul><li><m>\overline{x} \pm 2 \times SD(\overline{x}) </m> is a 2SD CI approximating a 95% confidence interval estimating <m>\mu</m>.</li>
+<li><m>\overline{x} \pm \text{(multiplier)} \times SE </m> is a theory-based confidence interval estimating <m>\mu</m>, where the multiplier comes from the t-distribution with <m>n-1</m> degrees of freedom.</li></ul>
+</p>
+</subsection>
+
+</section>

@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>9-3 : Comparing multiple proportions: Theory-based approach (Part B)</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Nearsightedness and nightlights revisited</title>
+      <slide>
+        <p>Recall that a previous example described <url href="https://doi.org/10.1038/20094">
+  a study</url> investigating whether there is a relationship between use of night lights 
+  in a child's room before age 2 and the child's eyesight condition a few years later. 
+  Before, we presented a two-way table of counts from the study examining whether the 
+  child was nearsighted as the response variable:
+</p>
+      </slide>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <tabular>
+            <row header="yes">
+              <cell>
+        Observed
+      </cell>
+              <cell>
+        Darkness
+      </cell>
+              <cell>
+        Near light
+      </cell>
+              <cell>
+        Room light
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Nearsighted
+      </cell>
+              <cell>
+        18
+      </cell>
+              <cell>
+        78
+      </cell>
+              <cell>
+        41
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Not nearsighted
+      </cell>
+              <cell>
+        154
+      </cell>
+              <cell>
+        154
+      </cell>
+              <cell>
+        34
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Total
+      </cell>
+              <cell>
+        172
+      </cell>
+              <cell>
+        232
+      </cell>
+              <cell>
+        75
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <p>
+  The conditional proportions of nearsightedness in the three lighting groups are 0.105, 0.336, 
+  and 0.547, respectively, which suggest that the more light used in the child's room, the 
+  more likely the child is to become nearsighted. Now we know how to calculate a standardized 
+  statistic and estimate a p-value to measure the strength of evidence provided by these sample 
+  data for the conjecture that eyesight is associated with the type of lighting used in the child's room.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>State null and alternative hypotheses in terms of population proportions.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>State null and alternative hypotheses in terms of association between variables.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Are the validity conditions necessary for a chi-square test met for these data? Explain.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Alternative Formula for Chi-square Statistic</title>
+      <slide>
+        <p>Another popular and more general way to formulate the chi-square statistic is in terms of 
+observed and expected cell counts. The <term>observed counts</term> are what you actually observed 
+in the study. The <em>expected cell counts</em> are what you would expect for the count in a cell 
+if the null hypothesis were true.</p>
+      </slide>
+      <!--Question 4-->
+      <slide>
+        <title>Exercise 4</title>
+        <p>To find out how many children we expect to be in the (darkness, nearsighted) 
+    cell of the table, answer (a)-(d):</p>
+      </slide>
+      <slide>
+        <title>Exercise 4a: </title>
+        <p>
+        Find the overall proportion of children who were nearsighted in the sample.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 4b: </title>
+        <p>
+        How many children in the sample slept in darkness?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 4c: </title>
+        <p>
+        Multiply these two numbers together to find the “expected” number of children who would be 
+        nearsighted in the “slept in darkness” group if the null hypothesis were true (the 
+        probability of nearsightedness is the same in each condition).
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 4d: </title>
+        <p>
+        How different is this expected cell count from what was observed for that cell? What does 
+        this suggest about the strength of evidence against the null hypothesis?
+      </p>
+      </slide>
+      <slide>
+        <p>A similar calculation is performed to find the expected cell count for each of the six cells 
+of the table. The chi-square statistic is obtained by squaring the differences in the observed 
+and expected counts, dividing by the expected count (a form of standardizing), and then summing 
+the six values. This can be thought of as <m> (O - E)^2 / E</m>, where where <m>O</m> = observed 
+count and <m>E</m> = expected count. </p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Enter the two-way table of counts into the 
+  <url href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1">
+  Multiple Proportions applet</url> (remember
+to use one-word variable names and to not include the totals). Press <em>Use Table</em> and
+check the box to <em>Show <m> \chi^2 </m> output</em>.
+</p>
+        <p>Report the chi-square statistic and theory-based p-value. What conclusion do you draw 
+about the statistical significance of the sample results?</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Examine the Chisq Cell Contributions (remember you can expand that table by pulling out the 
+lower right corner). (Verify that the first term in the table is the square of [18 -the number 
+you calculated in #4(c)]/number from #4(c).) These six values are added together to yield the 
+chi-square statistic; in other words, they are the six <m>(O-E)^2/E</m> values. Which cell 
+contributions are largest and so are contributing the most to the
+chi-square statistic value? According to the segmented bar graph, how are the observed counts in 
+these cells deviating from what the null hypothesis would predict? (In other words, which is 
+larger, the observed count or the expected count? How does that relate to our research question?)</p>
+      </slide>
+      <slide>
+        <p>The original research study actually classified the response variable into three 
+categories of eyesight, as shown in the following table:
+</p>
+      </slide>
+      <slide>
+        <title>Table 2: </title>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+        Observed
+      </cell>
+              <cell>
+        Darkness
+      </cell>
+              <cell>
+        Near light
+      </cell>
+              <cell>
+        Room light
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Nearsighted
+      </cell>
+              <cell>
+        18
+      </cell>
+              <cell>
+        78
+      </cell>
+              <cell>
+        41
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Normal refraction
+      </cell>
+              <cell>
+        114
+      </cell>
+              <cell>
+        115
+      </cell>
+              <cell>
+        22
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Farsighted
+      </cell>
+              <cell>
+        40
+      </cell>
+              <cell>
+        39
+      </cell>
+              <cell>
+        12
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <p>
+  One advantage to the more general chi-square statistic formula using observed and expected counts is 
+  that it works for any size table (any number of categories for the explanatory variable and the response variable).
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>
+    Create a segmented bar graph to summarize this table. Discuss what the graph reveals, including what this 
+    graph tells you that we did not learn from the initial table showing only nearsighted vs. not nearsighted.
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>With this new table, do you need to change your null and alternative hypotheses from question 2?</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Are the validity conditions for the chi-square test met for this table?</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Enter this table into the Multiple Proportions applet and carry out the chi-square test. Report the 
+chi-square statistic and p-value. Is the strength of evidence of a genuine association between the 
+variables in the population stronger, weaker, or essentially the same as before? Explain your answer.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Carry out a randomization test (shuffling) for this table using the chi-square statistic. 
+Overlay the chi-square distribution on the simulated null distribution of chi-square statistic 
+values. Does it appear to be a reasonable model for the null distribution?</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Examine the cell contributions. Is the pattern of deviations from the null similar to before?</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Does this study suggest that use of night lights and room lights causes an increase to the 
+chance that a child is nearsighted? Why or why not?</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

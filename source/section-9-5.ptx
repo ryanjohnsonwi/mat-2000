@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_9-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Data and Formulas</title>
+
+
+<subsection> 
+ <title>Data</title>
+ 
+<table>
+ <title> References </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Data</cell>
+<cell>Reference</cell>
+</row>
+<row>
+<cell>Example: Comparing multiple proportions: <br/> Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/Stop.csv">Stop.csv</url></cell>
+<cell><url href="https://www.scribd.com/document/25779288/Observational-Study-for-Determining-the-Percentage-of-Vehicles-Completely-Stopping-at-an-All-way-Stop-sign-Intersection">Kishore et al. (Virgina Tech 2009)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Comparing multiple proportions: <br/> Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/OrganDonation.csv">OrganDonation.csv</url></cell>
+<cell><url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">Johnson and Goldstein (Science 2003)</url></cell>
+</row>
+<row>
+<cell>Example: Comparing multiple proportions: <br/> Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/Acupunture.csv">Acupunture.csv</url></cell>
+<cell><url href="https://doi.org/10.1001/archinte.167.17.1892">Haake et al. (JAMA 2007)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration A: Comparing multiple proportions: <br/> Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/Towels.csv">Towels.csv</url></cell>
+<cell><url href="https://doi.org/10.1086/586910">Goldstein et al. (J. Consum. Res. 2008)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration B: Comparing multiple proportions: <br/> Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/NightLight1.csv">NightLight1.csv</url><br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch09/NightLight2.csv">NightLight2.csv</url></cell>
+<cell><url href="https://doi.org/10.1038/20094">Quinn et al. (Nature 1999)</url></cell>
+</row>
+<row>
+<cell>Example: Chi-square goodness of fit</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/DieRolls.csv">DieRolls.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Chi-square goodness of fit</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/Birthdays.csv">Birthdays.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Investigation: Who yields to pedestrians?</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch09/Pedestrians.csv">Pedestrians.csv</url></cell>
+<cell><url href="https://doi.org/10.1073/pnas.1118373109">Piff et al. (PNAS 2012)</url></cell>
+</row>
+</tabular>
+</table>
+
+</subsection>
+
+<subsection> 
+ <title>Formulas for multiple proportions and goodness-of-fit</title>
+<p>
+Difference of proportions (two samples):
+</p>
+<ul>
+<li><m>n_1</m> and <m>n_2</m> are the sample sizes for the two groups.</li>
+<li><m>\hat{p}_2 = \frac{\text{number of successes in group 1}}{n_1}</m> is the sample proportion for group 1.</li>
+<li><m>\hat{p}_2 = \frac{\text{number of successes in group 2}}{n_2}</m> is the sample proportion for group 2.</li>
+<li><m> \hat{p}_1 - \hat{p}_2</m> is the difference in sample proportions.</li>
+<li><m>\hat{p} = \frac{\text{total number of successes}}{n_1 + n_2}</m> is the pooled sample proportion.</li>
+<li><m>SD(\hat{p}_1 - \hat{p}_2)</m> is the standard deviation of the statistic.</li>
+<li><m>\text{SE using pooled } \hat{p} =  \sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}</m> is a theory-based standard error that approximates SD of the null distribution.</li>
+<li><m>\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2 = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}} </m> is a theory-based standard error that approximates <m>SD(\hat{p}_1 - \hat{p}_2)</m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> z =  \frac{\big(\hat{p}_1 - \hat{p}_2\big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two proportions.</li>
+<li><m> z =\frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\text{SE using pooled } \hat{p}}  =  \frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}} </m> is the theory-based standardized statistic for two proportions.</li></ul>
+</ul>
+<ul><li><m> z =  \frac{\big(\hat{p}_1 - \hat{p}_2\big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two proportions.</li>
+<li><m> z =\frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\text{SE using pooled } \hat{p}}  =  \frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}} </m> is the theory-based standardized statistic for two proportions.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m> (\hat{p}_1 - \hat{p}_2) \pm 2 \times SD(\hat{p}_1 - \hat{p}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \pi_1 - \pi_2 </m>.</li>
+<li><m>(\hat{p}_1 - \hat{p}_2) \pm \text{(multiplier)} \times (\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2) </m> is a theory-based confidence interval estimating <m> \pi_1 - \pi_2 </m>, where the multiplier comes from the standard normal distribution.</li></ul>
+</ul>
+<ul><li><m> (\hat{p}_1 - \hat{p}_2) \pm 2 \times SD(\hat{p}_1 - \hat{p}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \pi_1 - \pi_2 </m>.</li>
+<li><m>(\hat{p}_1 - \hat{p}_2) \pm \text{(multiplier)} \times (\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2) </m> is a theory-based confidence interval estimating <m> \pi_1 - \pi_2 </m>, where the multiplier comes from the standard normal distribution.</li></ul>
+<p></p>
+<p>
+Mean Group Diff:
+</p>
+<ul>
+<li><m>p_i</m>  are the population proportions for the groups.</li>
+<li><m>n_i</m> are the sample sizes for the groups.</li>
+<li><m>\hat{p}_i</m> are the sample proportions for the groups.</li>
+<li><m>l</m> is the number of groups.</li>
+<li>The Mean Group Diff is the mean of the absolute value of the differences of sample proportions, and can be computed directly as 
+<m> \displaystyle \frac{\sum_{\text{groups } i,j} |\hat{p}_i - \hat{p}_j | }{ (l-1)(l/2) } </m>.
+</li>
+</ul>
+<p></p>
+<p>
+Chi-square for proportions:
+</p>
+<ul>
+<li><m>p_i</m>  are the population proportions for the groups.</li>
+<li><m>n_i</m> are the sample sizes for the groups with <m>n</m> as the overall sample size.</li>
+<li><m>\hat{p}_i</m> are the sample proportions for the groups with <m>\hat{p}</m> as the overall sample proportion.</li>
+<li><m>l</m> is the number of groups.</li>
+<li>Chi-square <m>\chi^2</m> is the sum of squared standardized proportions and can be calculated directly as <m> \displaystyle \chi^2 = \sum_{\text{groups } i} \left( \frac{\hat{p}_i - \hat{p} }{\sqrt{\hat{p}(1-\hat{p}) / n_i} }\right)^2 </m>.</li>
+<li>The mean of a chi-square distribution is equal to the degrees of freedom <m> df = l-1 </m>.</li>
+<li>The SD of a chi-square distribution is equal to <m> \sqrt{2 \ df }  </m>.</li>
+</ul>
+<p></p>
+<p>
+Mean Absolute Difference (MAD):
+</p>
+<ul>
+<li><m> O </m>  are the observed counts for the cells.</li>
+<li><m>E </m> are the expected counts for the cells.</li>
+<ul><li>one-way table: <m>E = (\text{Expected probability } p_i) \times (\text{Total}) </m>.</li>
+<li>two-way table: <m>E = (\text{Row total}) \times (\text{Column total}) / (\text{Grand total}) </m>.</li></ul>
+<li>The Mean Absolute Difference (<m> MAD </m>) is the mean of the absolute value of the differences of cell counts, and can be computed directly as 
+<m> \displaystyle \frac{ \sum_{\text{cells}} |O - E |  }{\# \text{Cells}} </m>.
+</li>
+</ul>
+<ul><li>one-way table: <m>E = (\text{Expected probability } p_i) \times (\text{Total}) </m>.</li>
+<li>two-way table: <m>E = (\text{Row total}) \times (\text{Column total}) / (\text{Grand total}) </m>.</li></ul>
+<p></p>
+<p>
+Chi-square for tables:
+</p>
+<ul>
+<li><m> O </m>  are the observed counts for the cells.</li>
+<li><m>E </m> are the expected counts for the cells.</li>
+<ul><li>one-way table: <m>E = (\text{Expected probability } p_i) \times (\text{Total}) </m>.</li>
+<li>two-way table: <m>E = (\text{Row total}) \times (\text{Column total}) / (\text{Grand total}) </m>.</li></ul>
+<li>The cell contributions are the values <m> \frac{(O - E)^2}{E} </m>.</li>
+<li>Chi-square <m>\chi^2</m> is the sum of cell contributions and can be calculated directly as <m> \displaystyle \chi^2 = \sum_{\text{cells}} \left( \frac{(O - E)^2 }{E} \right)  </m>.</li>
+<li>The mean of a chi-square distribution is equal to the degrees of freedom.</li>
+<ul><li>one-way table: <m>df = \# \text{Groups} - 1 </m>.</li>
+<li>two-way table: <m>df = (\# \text{Groups} - 1) \times (\# \text{Outcomes} - 1 ) </m>.</li></ul>
+<li>The SD of a chi-square distribution is equal to <m> \sqrt{2 \ df }  </m>.</li>
+</ul>
+<ul><li>one-way table: <m>E = (\text{Expected probability } p_i) \times (\text{Total}) </m>.</li>
+<li>two-way table: <m>E = (\text{Row total}) \times (\text{Column total}) / (\text{Grand total}) </m>.</li></ul>
+<ul><li>one-way table: <m>df = \# \text{Groups} - 1 </m>.</li>
+<li>two-way table: <m>df = (\# \text{Groups} - 1) \times (\# \text{Outcomes} - 1 ) </m>.</li></ul>
+<p></p>
+</subsection>
+
+</section>

@@ -1,0 +1,3269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/8 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <title>Section 2.8 - MAT 2000: Introduction to Statistics | zyBooks</title>
+        <meta content="" name="description">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="https://learn.zybooks.com/assets/favicon.ico" integrity="" rel="icon">
+
+        
+<meta name="zybooks-web/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22locationType%22%3A%22auto%22%2C%22modulePrefix%22%3A%22zybooks-web%22%2C%22rootURL%22%3A%22%2F%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%2C%22EXTEND_PROTOTYPES%22%3Atrue%7D%2C%22APP%22%3A%7B%22ACCESS_DEV%22%3Afalse%2C%22ADMIN_URL%22%3A%22https%3A%2F%2Fadmin.zybooks.com%2F%22%2C%22ANALYTICS_URL%22%3A%22https%3A%2F%2Fanalytics.zybooks.com%2F%22%2C%22API_HOST%22%3A%22https%3A%2F%2Fzyserver.zybooks.com%2Fv1%2F%22%2C%22APP_URL%22%3A%22https%3A%2F%2Flearn.zybooks.com%2F%22%2C%22AUTHORS_ONLY%22%3Afalse%2C%22BUILDKEY%22%3A%22a9565714-ae2f-3cf1-d62b-29f0f911ac4e%22%2C%22CLOUDSEARCH_ENDPOINT%22%3A%22https%3A%2F%2Foqsgv0xbv7.execute-api.us-west-2.amazonaws.com%2Fproduction%22%2C%22CODINGROOMS_URL%22%3A%22https%3A%2F%2Fapp.codingrooms.com%22%2C%22DISABLE_EVENTS%22%3Afalse%2C%22EVENTS_API_HOST%22%3A%22https%3A%2F%2Fzyevents.zybooks.com%2F%22%2C%22EVENTS_API_TARGET%22%3A%22v1%2Fstream%22%2C%22ROUTE_IF_ALREADY_AUTHENTICATED%22%3A%22library%22%2C%22SALES_URL%22%3A%22https%3A%2F%2Fsales.zybooks.com%2F%22%2C%22SESSION_KEY_SUFFIX%22%3A%225%22%2C%22STREAMLIT_API_HOST%22%3A%22https%3A%2F%2Fzystreamlit.zybooks.com%2Fv1%2F%22%2C%22TERMINAL_SOCKET_URL%22%3A%22wss%3A%2F%2Fzyterminal.zybooks.com%2Fws%22%2C%22WEBINAR_URL%22%3A%22https%3A%2F%2Fzoom.us%2Fwebinar%2Fregister%2FWN_vuUaO8C6QLy_yzxW4ixU3Q%22%2C%22WHAT_IS_ZYBOOK_VIDEO_URL%22%3A%22https%3A%2F%2Fvimeo.com%2F285133146%2F48bc90afb5%22%2C%22ZYBOOKS_URL%22%3A%22https%3A%2F%2Flearn.zybooks.com%2F%22%2C%22ZYSERVER2_API_HOST%22%3A%22https%3A%2F%2Fzyserver2.zybooks.com%2Fv1%2F%22%2C%22ITLABS_API_HOST%22%3A%22https%3A%2F%2Fitlabs-server.zybooks.com%2Fv1%2F%22%2C%22ZYSERVER2_DR_API_HOST%22%3A%22https%3A%2F%2Fzyserver2.dr.zybooks.com%2Fv1%2F%22%2C%22ZYEXAM_SERVER_API_HOST%22%3A%22https%3A%2F%2Fzyexam-server.zybooks.com%2Fv1%2F%22%2C%22JUPYTERHUB_HOST%22%3A%22https%3A%2F%2Fjupyterhub.zybooks.com%2F%22%7D%2C%22contentSecurityPolicy%22%3A%7B%22connect-src%22%3A%22&#39;self&#39;%20www.google-analytics.com%20https%3A%2F%2Ffonts.googleapis.com%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2Fmaps.googleapis.com%20https%3A%2F%2F*.nr-data.net%20https%3A%2F%2Fzyserver.zybooks.com%2Fv1%2F%22%2C%22default-src%22%3A%22&#39;none&#39;%22%2C%22font-src%22%3A%22&#39;self&#39;%20fonts.gstatic.com%20%22%2C%22frame-src%22%3A%22&#39;self&#39;%20https%3A%2F%2F*.stripe.com%22%2C%22img-src%22%3A%22&#39;self&#39;%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2F*.nr-data.net%20http%3A%2F%2Fupload.wikimedia.org.com%2F%22%2C%22media-src%22%3A%22&#39;self&#39;%22%2C%22script-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20&#39;unsafe-eval&#39;%20www.google-analytics.com%20https%3A%2F%2F*.stripe.com%20https%3A%2F%2Fmaps.googleapis.com%20https%3A%2F%2F*.newrelic.com%20https%3A%2F%2F*.nr-data.net%22%2C%22style-src%22%3A%22&#39;self&#39;%20&#39;unsafe-inline&#39;%20https%3A%2F%2Ffonts.googleapis.com%22%2C%22frame-ancestors%22%3A%22*%22%7D%2C%22metricsAdapters%22%3A%5B%7B%22name%22%3A%22GoogleAnalyticsFour%22%2C%22environments%22%3A%5B%22production%22%5D%2C%22config%22%3A%7B%22id%22%3A%22G-QMGE8062S6%22%2C%22debug%22%3Afalse%2C%22trace%22%3Afalse%2C%22sendHitTask%22%3Atrue%7D%7D%5D%2C%22moment%22%3A%7B%22includeTimezone%22%3A%22subset%22%7D%2C%22stripe%22%3A%7B%22lazyLoad%22%3Atrue%2C%22publishableKey%22%3A%22pk_live_6WfpM1NZl9sSnKivV9WvGD2H%22%7D%2C%22ember-froala-editor%22%3A%7B%22key%22%3A%22mPD4tD2F2B2D1H1A1D3lFa1f1PVWEd2Fa1XHTHh1THMMb1NCg1tA2B2C2E2C5F1A1F1I4C10%3D%3D%22%2C%22videoAllowedTypes%22%3A%5B%22mp4%22%5D%2C%22videoMaxSize%22%3A300000000%2C%22videoUploadMethod%22%3A%22POST%22%2C%22videoInsertButtons%22%3A%5B%22videoUpload%22%5D%7D%2C%22newRelic%22%3A%7B%22agent%22%3A%22js-agent.newrelic.com%2Fnr-1216.min.js%22%2C%22applicationId%22%3A%22772289686%22%2C%22licenseKey%22%3A%2245d36ecda8%22%2C%22spaMonitoring%22%3Afalse%2C%22beacon%22%3A%22bam.nr-data.net%22%2C%22errorBeacon%22%3A%22bam.nr-data.net%22%7D%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Afalse%7D%2C%22resourceHost%22%3A%22https%3A%2F%2Fzytools.zybooks.com%2FzyBooks2%2F%22%2C%22staticResourceHost%22%3A%22https%3A%2F%2Fstatic-resources.zybooks.com%2F%22%2C%22imageHost%22%3A%22https%3A%2F%2Fzytools.zybooks.com%2FzyAuthor%2F%22%2C%22zydeHost%22%3A%22http%3A%2F%2Fzyde2.zyante.com%22%2C%22terminalSocketUrl%22%3A%22wss%3A%2F%2Fzyterminal.dev.kube.zybooks.com%2Fws%22%7D">
+
+        <link href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/vendor-b693f3fea5fbb39e2229c5a37e96083e.css" integrity="" rel="stylesheet">
+<link rel="stylesheet" href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/chunk.680.1fca2770605b69120dc0.css" integrity="sha256-A9H9tJjisCH7NIEoMBYsZFrQ4CzjNoTCq7nwDKPAIkQ= sha512-F6vKgfNU7uPQ6Nux5kknCONQsF0F2QY9Zf5kKcFEyOcvyDhqoWgQSJT5NHbjs/2CHPqO8qd0CoD9ADWbV2WC9g==">
+        <link href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/zybooks-web-fbb85fa44c1b8ee47a9ef363db14c951.css" integrity="" rel="stylesheet">
+        <link crossorigin="anonymous" href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/css" integrity="" rel="stylesheet">
+        <link href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/css(1)" integrity="" rel="stylesheet">
+        <link href="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/basicLightbox.min-69bdb9cd40a5bbcb4587424b1c70f89b.css" integrity="" rel="stylesheet">
+
+        <script type="text/javascript" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/45d36ecda8"></script><script src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/nr-1216.min.js.download"></script><script integrity="" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/vendor-50104f815cff2d8a0609aaa0ebeacab0.js.download"></script>
+<script src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/chunk.680.1fca2770605b69120dc0.js.download" integrity="sha256-O5yN0z9dOo71Juj1WuRPM/vm8yiv5qbtBtNe5HyzFoQ= sha512-qYqVmH2QbAknSOechYl8zLVsPfO310YKSe3lu8ThgwhY3op4Vbz+Ae6FH1I2BDZduT7pvp+fn/OpH2c0Ses12g=="></script>
+<script src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/chunk.143.d514ea1f763bd21b844c.js.download" integrity="sha256-XZQbLz1DQ/GY/e75hMAtsHYuUyJsGr5tCbMeX7NEnmk= sha512-NtqExe/wtsoKcJm60Uia7dqbBkzecQ4pKkGlq4Ac+XFXVKn9DzILdzgDhNY+cDYHTLM9gyyjS+VhC34MBvS6Ag=="></script>
+        <script integrity="" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/zybooks-web-5d976e6249753d9836406c9a97858d10.js.download"></script>
+        <script integrity="" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/ace.js.download"></script>
+        <script integrity="" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/string-diff-e0bbca1822d01af91ebb85faf6848c6b.js.download"></script>
+
+        
+    <script src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/MathJax.js.download"></script><style id="plotly.js-style-global"></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/520b7461-ef02-4db4-9fcd-1c32fee01bdb/ProgressionPlayerInteractiveAndAccessible/js/ProgressionPlayerInteractiveAndAccessible.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/ProgressionPlayerInteractiveAndAccessible.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/a7c1e93d-b301-4340-8da8-af05dbfc7226/ProgressionPlayer/js/ProgressionPlayer.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/ProgressionPlayer.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/aa7347b6-54f4-46e1-90cc-37d76d01945d/utilities/js/utilities.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/utilities.js.download"></script><style type="text/css">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+#MathJax_SVG_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_SVG > div {display: inline-block}
+.mjx-svg-href {fill: blue; stroke: blue}
+.MathJax_SVG_Processing {visibility: hidden; position: absolute; top: 0; left: 0; width: 0; height: 0; overflow: hidden; display: block!important}
+.MathJax_SVG_Processed {display: none!important}
+.MathJax_SVG_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_SVG_test.mjx-test-display {display: table!important}
+.MathJax_SVG_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_SVG_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_SVG_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .MathJax_SVG_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_SVG_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_SVG_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax_SVG .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/aa7347b6-54f4-46e1-90cc-37d76d01945d/progressionTool/js/progressionTool.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/progressionTool.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/68f9d224-0080-4c71-ae31-a5ae6453a780/ProgressionUtilities/js/ProgressionUtilities.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/ProgressionUtilities.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/ebfbba14-5a3b-4bd3-a53c-6f083685ba52/vendor/clipboard.min.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/clipboard.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="https://zytools.zybooks.com/zyBooks2/fingerprinted/ebfbba14-5a3b-4bd3-a53c-6f083685ba52/vendor/spin.min.js" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/spin.min.js.download"></script><style type="text/css"></style><style id="plotly.js-style-modebar-f1e8fa"></style><style id="plotly.js-style-modebar-f607ca"></style><style id="plotly.js-style-modebar-ea4aef"></style><style id="plotly.js-style-modebar-b7d68d"></style></head>
+    <body class="do-not-process-mathjax-2 ember-application" data-ol-has-click-handler="" style="overflow: auto;"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_SVG_Hidden"></div><svg><defs id="MathJax_SVG_glyphs"><path stroke-width="1" id="MJMATHI-3C0" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path><path stroke-width="1" id="MJMAIN-3E" d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"></path><path stroke-width="1" id="MJMATHI-48" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path><path stroke-width="1" id="MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path stroke-width="1" id="MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path stroke-width="1" id="MJMATHI-70" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path><path stroke-width="1" id="MJMAIN-5E" d="M112 560L249 694L257 686Q387 562 387 560L361 531Q359 532 303 581L250 627L195 580Q182 569 169 557T148 538L140 532Q138 530 125 546L112 560Z"></path><path stroke-width="1" id="MJMAIN-73" d="M295 316Q295 356 268 385T190 414Q154 414 128 401Q98 382 98 349Q97 344 98 336T114 312T157 287Q175 282 201 278T245 269T277 256Q294 248 310 236T342 195T359 133Q359 71 321 31T198 -10H190Q138 -10 94 26L86 19L77 10Q71 4 65 -1L54 -11H46H42Q39 -11 33 -5V74V132Q33 153 35 157T45 162H54Q66 162 70 158T75 146T82 119T101 77Q136 26 198 26Q295 26 295 104Q295 133 277 151Q257 175 194 187T111 210Q75 227 54 256T33 318Q33 357 50 384T93 424T143 442T187 447H198Q238 447 268 432L283 424L292 431Q302 440 314 448H322H326Q329 448 335 442V310L329 304H301Q295 310 295 316Z"></path><path stroke-width="1" id="MJMAIN-74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path stroke-width="1" id="MJMAIN-61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z"></path><path stroke-width="1" id="MJMAIN-6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="1" id="MJMAIN-64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z"></path><path stroke-width="1" id="MJMAIN-72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z"></path><path stroke-width="1" id="MJMAIN-69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z"></path><path stroke-width="1" id="MJMAIN-7A" d="M42 263Q44 270 48 345T53 423V431H393Q399 425 399 415Q399 403 398 402L381 378Q364 355 331 309T265 220L134 41L182 40H206Q254 40 283 46T331 77Q352 105 359 185L361 201Q361 202 381 202H401V196Q401 195 393 103T384 6V0H209L34 1L31 3Q28 8 28 17Q28 30 29 31T160 210T294 394H236Q169 393 152 388Q127 382 113 367Q89 344 82 264V255H42V263Z"></path><path stroke-width="1" id="MJMAIN-65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z"></path><path stroke-width="1" id="MJMAIN-63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z"></path><path stroke-width="1" id="MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="1" id="MJMATHI-7A" d="M347 338Q337 338 294 349T231 360Q211 360 197 356T174 346T162 335T155 324L153 320Q150 317 138 317Q117 317 117 325Q117 330 120 339Q133 378 163 406T229 440Q241 442 246 442Q271 442 291 425T329 392T367 375Q389 375 411 408T434 441Q435 442 449 442H462Q468 436 468 434Q468 430 463 420T449 399T432 377T418 358L411 349Q368 298 275 214T160 106L148 94L163 93Q185 93 227 82T290 71Q328 71 360 90T402 140Q406 149 409 151T424 153Q443 153 443 143Q443 138 442 134Q425 72 376 31T278 -11Q252 -11 232 6T193 40T155 57Q111 57 76 -3Q70 -11 59 -11H54H41Q35 -5 35 -2Q35 13 93 84Q132 129 225 214T340 322Q352 338 347 338Z"></path><path stroke-width="1" id="MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path stroke-width="1" id="MJMAIN-6D" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q351 442 364 440T387 434T406 426T421 417T432 406T441 395T448 384T452 374T455 366L457 361L460 365Q463 369 466 373T475 384T488 397T503 410T523 422T546 432T572 439T603 442Q729 442 740 329Q741 322 741 190V104Q741 66 743 59T754 49Q775 46 803 46H819V0H811L788 1Q764 2 737 2T699 3Q596 3 587 0H579V46H595Q656 46 656 62Q657 64 657 200Q656 335 655 343Q649 371 635 385T611 402T585 404Q540 404 506 370Q479 343 472 315T464 232V168V108Q464 78 465 68T468 55T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z"></path><path stroke-width="1" id="MJMAIN-6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z"></path><path stroke-width="1" id="MJMAIN-66" d="M273 0Q255 3 146 3Q43 3 34 0H26V46H42Q70 46 91 49Q99 52 103 60Q104 62 104 224V385H33V431H104V497L105 564L107 574Q126 639 171 668T266 704Q267 704 275 704T289 705Q330 702 351 679T372 627Q372 604 358 590T321 576T284 590T270 627Q270 647 288 667H284Q280 668 273 668Q245 668 223 647T189 592Q183 572 182 497V431H293V385H185V225Q185 63 186 61T189 57T194 54T199 51T206 49T213 48T222 47T231 47T241 46T251 46H282V0H273Z"></path><path stroke-width="1" id="MJMAIN-75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z"></path><path stroke-width="1" id="MJMAIN-6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path stroke-width="1" id="MJMAIN-62" d="M307 -11Q234 -11 168 55L158 37Q156 34 153 28T147 17T143 10L138 1L118 0H98V298Q98 599 97 603Q94 622 83 628T38 637H20V660Q20 683 22 683L32 684Q42 685 61 686T98 688Q115 689 135 690T165 693T176 694H179V543Q179 391 180 391L183 394Q186 397 192 401T207 411T228 421T254 431T286 439T323 442Q401 442 461 379T522 216Q522 115 458 52T307 -11ZM182 98Q182 97 187 90T196 79T206 67T218 55T233 44T250 35T271 29T295 26Q330 26 363 46T412 113Q424 148 424 212Q424 287 412 323Q385 405 300 405Q270 405 239 390T188 347L182 339V98Z"></path><path stroke-width="1" id="MJMAIN-76" d="M338 431Q344 429 422 429Q479 429 503 431H508V385H497Q439 381 423 345Q421 341 356 172T288 -2Q283 -11 263 -11Q244 -11 239 -2Q99 359 98 364Q93 378 82 381T43 385H19V431H25L33 430Q41 430 53 430T79 430T104 429T122 428Q217 428 232 431H240V385H226Q187 384 184 370Q184 366 235 234L286 102L377 341V349Q377 363 367 372T349 383T335 385H331V431H338Z"></path><path stroke-width="1" id="MJMAIN-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path stroke-width="1" id="MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="1" id="MJMAIN-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path stroke-width="1" id="MJMAIN-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path><path stroke-width="1" id="MJMAIN-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path stroke-width="1" id="MJMAIN-3A" d="M78 370Q78 394 95 412T138 430Q162 430 180 414T199 371Q199 346 182 328T139 310T96 327T78 370ZM78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path stroke-width="1" id="MJAMS-25A0" d="M71 0Q59 4 55 16V346L56 676Q64 686 70 689H709Q719 681 722 674V15Q719 10 709 1L390 0H71Z"></path><path stroke-width="1" id="MJMAIN-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path><path stroke-width="1" id="MJMAIN-2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path><path stroke-width="1" id="MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path stroke-width="1" id="MJMATHI-73" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path><path stroke-width="1" id="MJMATHI-74" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path stroke-width="1" id="MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-64" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path><path stroke-width="1" id="MJMATHI-72" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-69" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-65" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path stroke-width="1" id="MJMATHI-63" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path><path stroke-width="1" id="MJMATHI-6D" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-6F" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path stroke-width="1" id="MJMATHI-66" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path><path stroke-width="1" id="MJMATHI-75" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="1" id="MJMATHI-6C" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path><path stroke-width="1" id="MJMATHI-62" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path><path stroke-width="1" id="MJMATHI-76" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path><path stroke-width="1" id="MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="1" id="MJMAIN-2248" d="M55 319Q55 360 72 393T114 444T163 472T205 482Q207 482 213 482T223 483Q262 483 296 468T393 413L443 381Q502 346 553 346Q609 346 649 375T694 454Q694 465 698 474T708 483Q722 483 722 452Q722 386 675 338T555 289Q514 289 468 310T388 357T308 404T224 426Q164 426 125 393T83 318Q81 289 69 289Q55 289 55 319ZM55 85Q55 126 72 159T114 210T163 238T205 248Q207 248 213 248T223 249Q262 249 296 234T393 179L443 147Q502 112 553 112Q609 112 649 141T694 220Q694 249 708 249T722 217Q722 153 675 104T555 55Q514 55 468 76T388 123T308 170T224 192Q164 192 125 159T83 84Q80 55 69 55Q55 55 55 85Z"></path><path stroke-width="1" id="MJMAIN-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path><path stroke-width="1" id="MJMAIN-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path stroke-width="1" id="MJMAIN-2260" d="M166 -215T159 -215T147 -212T141 -204T139 -197Q139 -190 144 -183L306 133H70Q56 140 56 153Q56 168 72 173H327L406 327H72Q56 332 56 347Q56 360 70 367H426Q597 702 602 707Q605 716 618 716Q625 716 630 712T636 703T638 696Q638 692 471 367H707Q722 359 722 347Q722 336 708 328L451 327L371 173H708Q722 163 722 153Q722 140 707 133H351Q175 -210 170 -212Q166 -215 159 -215Z"></path></defs></svg></div><div id="MathJax_Message" style="display: none;"></div>
+        
+
+        
+
+        <div id="ember-basic-dropdown-wormhole"></div>
+
+        <script integrity="" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/script.js.download"></script><iframe src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/frame.html" title="zyBooks Status" aria-hidden="true" style="position: fixed; border: none; box-shadow: rgba(9, 20, 66, 0.25) 0px 20px 32px -8px; z-index: 9999; transition: left 1s ease 0s, bottom 1s ease 0s, right 1s ease 0s; height: 115px; width: 320px; left: -9999px; right: -9999px; bottom: calc(100% - 175px);"></iframe>
+    
+
+
+
+<header class="top-toolbar " role="none">
+    <div class="left-buttons">
+        <div class="zb-breadcrumbs ">
+        <button aria-label="Menu" class="zb-button  grey    icon-button left        menu-button" aria-expanded="false" type="button">
+            <i aria-label="menu" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            menu
+<!----></i>
+
+<!----><!----></button>
+
+
+        <div class="logo">
+                <a id="ember4" class="ember-view" href="https://learn.zybooks.com/" data-ol-has-click-handler=""><img alt="zyBooks" height="22px" src="./Section 2.8 - MAT 2000_ Introduction to Statistics _ zyBooks_files/logo.svg" width="83px"></a>
+        </div>
+
+            <ul class="bread-crumbs">
+<!---->                    <a id="ember11" class="ember-view no-underline" href="https://learn.zybooks.com/library" data-ol-has-click-handler="">
+                        <li class="bread-crumb">My library</li>
+                    </a>
+                        <span aria-hidden="true" class="divider">&gt;</span>
+                    <a id="ember7180" class="ember-view active no-underline" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023">
+                        <li class="bread-crumb">MAT 2000: Introduction to Statistics home</li>
+                    </a>
+                        <span aria-hidden="true" class="divider">&gt;</span>
+                    <a id="ember7181" class="ember-view active no-underline" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/8">
+                        <li class="bread-crumb">2.8: Supplemental Exploration: Competitive Advantage to Uniform Colors?</li>
+                    </a>
+            </ul>
+</div>
+
+    </div>
+    <div class="right-buttons">
+            <a id="ember5" class="ember-view no-underline zb-button" href="https://learn.zybooks.com/whats-new" data-ol-has-click-handler="">
+                <i aria-label="new_releases" class="zb-icon material-icons med grey  " role="img">
+            new_releases
+<!----></i>
+
+                <span class="font-light ml-2 text-base">
+                    What's new
+                </span>
+            </a>
+                <a id="ember6" class="ember-view no-underline zb-button" href="https://learn.zybooks.com/adopt?recent_zybook=GRACEMAT2000JohnsonFall2023" data-ol-has-click-handler="">
+                    <i aria-label="book" class="zb-icon material-icons med grey  " role="img">
+            book
+<!----></i>
+
+                    <span class="font-light ml-2 text-base">
+                        Adopt a zyBook
+                    </span>
+                </a>
+            <a class="no-underline zb-button" href="https://discourse.zybooks.com/" rel="noopener noreferrer" target="_blank">
+<!---->                <i aria-label="groups" class="zb-icon material-icons med grey  " role="img">
+            groups
+<!----></i>
+
+                <span class="font-light ml-2 text-base">
+                    zyCommunity
+                </span>
+            </a>
+<!---->        <a class="no-underline zb-button help-button" href="http://support.zybooks.com/" rel="noopener noreferrer" target="_blank">
+            <i aria-label="Help/FAQ" class="zb-icon material-icons med grey  " role="img">
+            help
+<!----></i>
+
+                <span aria-hidden="true">Help/FAQ</span>
+        </a>
+                <div class="ember-basic-dropdown zb-menu">
+                  <div id="ember8" class="ember-view ember-basic-dropdown-trigger
+       ember-basic-dropdown-trigger--in-place
+      
+      
+       toolbar-menu-toggle" tabindex="0" aria-label="Profile for Ryan Johnson" role="button" data-ebd-id="ember7-trigger" aria-owns="ember-basic-dropdown-content-ember7" aria-controls="ember-basic-dropdown-content-ember7" aria-expanded="false" aria-disabled="false" data-ol-has-click-handler="">
+    
+                    <i aria-label="account_circle" class="zb-icon material-icons med grey  " role="img" aria-hidden="true">
+            account_circle
+<!----></i>
+
+                    Ryan Johnson
+                    <i aria-label="arrow_drop_down" class="zb-icon material-icons med grey  " role="img" aria-hidden="true">
+            arrow_drop_down
+<!----></i>
+
+                
+  </div>
+
+                  <div id="ember-basic-dropdown-content-ember7" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+            </div>
+
+    </div>
+</header>
+
+<!---->
+<!---->
+<div aria-label="zybook page" class="route-container zybook-chapter-section-page no-margin-left " role="main">
+<!---->
+    <nav id="ember9" class="zb-nav-menu ember-view hide-nav-menu"><ul class="level-1">
+            <li class="flex-row">
+                    <a id="ember5706" class="ember-view flex-row  invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/content-explorer">
+                                <i aria-label="search" class="zb-icon material-icons med grey   item-bullet" role="img" aria-hidden="true">
+            search
+<!----></i>
+
+                                                    <span class="self-center">
+                            Search zyBook
+                        </span>
+                    </a>
+            </li>
+            <li class="flex-row">
+                    <button class="list-toggle invisible" type="button">
+                        <div class="flex-row">
+                                    <i aria-label="info" class="zb-icon material-icons med grey   item-bullet" role="img" aria-hidden="true">
+            info
+<!----></i>
+
+                                                            <span class="self-center list-toggle-title ">
+                                About this Material
+                            </span>
+                        </div>
+                    </button>
+            </li>
+            <li>
+                <button aria-expanded="true" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">1)</span>
+                            <span class="list-toggle-title ">
+                                Introduction to Statistical Investigations
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_less" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_less
+<!----></i>
+
+                    </div>
+                </button>
+
+                    <ul class="level-2">
+                            <li>
+                                <a id="ember5707" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/section/1">
+                                            <span class="item-bullet">1.1</span>
+                                    <span>
+                                        Preliminary: Introduction to the six-step method
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5708" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/section/2">
+                                            <span class="item-bullet">1.2</span>
+                                    <span>
+                                        Preliminary: Exploring data
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5709" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/section/3">
+                                            <span class="item-bullet">1.3</span>
+                                    <span>
+                                        Preliminary: Exploring random processes
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5710" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/section/4">
+                                            <span class="item-bullet">1.4</span>
+                                    <span>
+                                        Data and formulas
+                                    </span>
+                                    <div class="section-labels">
+<!---->                                            <span class="nav-item-label-optional">Optional</span>
+<!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5711" class="ember-view invisible" target="_blank" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/print">
+                                            <i aria-label="print" class="zb-icon material-icons med grey   item-bullet" role="img">
+            print
+<!----></i>
+
+                                                                            <span>
+                                        Print chapter
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5712" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/1/section/new">
+                                            <i aria-label="library_books" class="zb-icon material-icons med grey   item-bullet" role="img">
+            library_books
+<!----></i>
+
+                                                                            <span>
+                                        Create section
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <button aria-expanded="true" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">2)</span>
+                            <span class="list-toggle-title ">
+                                Significance
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_less" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_less
+<!----></i>
+
+                    </div>
+                </button>
+
+                    <ul class="level-2">
+                            <li>
+                                <a id="ember5713" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/1">
+                                            <span class="item-bullet">2.1</span>
+                                    <span>
+                                        Example: Introduction to chance models
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5714" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/2">
+                                            <span class="item-bullet">2.2</span>
+                                    <span>
+                                        Supplemental Exploration: Introduction to chance models
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5715" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/3">
+                                            <span class="item-bullet">2.3</span>
+                                    <span>
+                                        Example: Measuring the strength of evidence
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5716" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/4">
+                                            <span class="item-bullet">2.4</span>
+                                    <span>
+                                        Supplemental Exploration: Measuring the strength of evidence
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5717" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/5">
+                                            <span class="item-bullet">2.5</span>
+                                    <span>
+                                        Example: Alternative measure of strength of evidence
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5718" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/6">
+                                            <span class="item-bullet">2.6</span>
+                                    <span>
+                                        Supplemental Exploration: Do People Use Facial Prototyping?
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5719" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/7">
+                                            <span class="item-bullet">2.7</span>
+                                    <span>
+                                        Example: What impacts strength of evidence?
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5720" class="ember-view active invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/8">
+                                            <span class="item-bullet">2.8</span>
+                                    <span>
+                                        Supplemental Exploration: Competitive Advantage to Uniform Colors?
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5721" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/9">
+                                            <span class="item-bullet">2.9</span>
+                                    <span>
+                                        Example: Inference on a single proportion: Theory-based approach
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5722" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/10">
+                                            <span class="item-bullet">2.10</span>
+                                    <span>
+                                        Supplemental Exploration: Eye Dominance
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5723" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/11">
+                                            <span class="item-bullet">2.11</span>
+                                    <span>
+                                        Investigation: Tire story falls flat
+                                    </span>
+                                    <div class="section-labels">
+<!---->                                            <span class="nav-item-label-optional">Optional</span>
+<!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5724" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/12">
+                                            <span class="item-bullet">2.12</span>
+                                    <span>
+                                        Tools, data, and formulas
+                                    </span>
+                                    <div class="section-labels">
+<!---->                                            <span class="nav-item-label-optional">Optional</span>
+<!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5725" class="ember-view invisible" target="_blank" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/print">
+                                            <i aria-label="print" class="zb-icon material-icons med grey   item-bullet" role="img">
+            print
+<!----></i>
+
+                                                                            <span>
+                                        Print chapter
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a id="ember5726" class="ember-view invisible" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/new">
+                                            <i aria-label="library_books" class="zb-icon material-icons med grey   item-bullet" role="img">
+            library_books
+<!----></i>
+
+                                                                            <span>
+                                        Create section
+                                    </span>
+                                    <div class="section-labels">
+<!----><!----><!----><!---->                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">3)</span>
+                            <span class="list-toggle-title ">
+                                Generalization
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">4)</span>
+                            <span class="list-toggle-title ">
+                                Estimation
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">5)</span>
+                            <span class="list-toggle-title ">
+                                Causation
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">6)</span>
+                            <span class="list-toggle-title ">
+                                Comparing Two Proportions
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">7)</span>
+                            <span class="list-toggle-title ">
+                                Comparing Two Means
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">8)</span>
+                            <span class="list-toggle-title ">
+                                Paired Data
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">9)</span>
+                            <span class="list-toggle-title ">
+                                Comparing More Than Two Proportions
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">10)</span>
+                            <span class="list-toggle-title ">
+                                Comparing More Than Two Means
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">11)</span>
+                            <span class="list-toggle-title ">
+                                Two Quantitative Variables
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+                                    <span class="item-bullet">12)</span>
+                            <span class="list-toggle-title ">
+                                Instructor Resources
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+            <li>
+                <button aria-expanded="false" class="list-toggle" type="button">
+                    <div class="list-toggle">
+                        <div class="flex-row">
+<!---->                            <span class="list-toggle-title margin-for-bullet">
+                                Unused
+                            </span>
+                        </div>
+<!---->                            <i aria-label="expand_more" class="zb-icon material-icons med grey   item-icon" role="img" aria-hidden="true">
+            expand_more
+<!----></i>
+
+                    </div>
+                </button>
+
+<!---->            </li>
+</ul>
+</nav>
+
+    <section class="section-container">
+<!---->    
+
+        <nav aria-label="previous section" class="section-nav previous">
+                <a id="ember7183" class="ember-view nav-link" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/7">
+                    <i aria-label="arrow_upward" class="zb-icon material-icons sm secondary  " role="img" aria-hidden="true">
+            arrow_upward
+<!----></i>
+
+                    <span class="nav-text previous">
+                        2.7 Example: What impacts strength of evidence?
+                    </span>
+                </a>
+        </nav>
+
+    <div aria-label="section content" role="main">
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+        <article id="ember7184" class="zb-card ember-view zybook-section"><div class="zb-card-content ">
+    
+<!----><!---->    <div class="section-header-row">
+        <h1 canonical_section_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508" canonical_section_id="25356626" class="zybook-section-title">
+            2.8 Supplemental Exploration: Competitive Advantage to Uniform Colors?
+        </h1>
+            <div class="section-action-container">
+<!---->
+<!---->                    <button class="zb-button  primary     left      icon-button-with-title  presentation-mode-button" type="button">
+            <i aria-label="desktop_windows" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            desktop_windows
+<!----></i>
+
+            <span class="title">Present</span>
+<!----></button>
+
+<!----><!---->
+                    <button class="zb-button  primary     left      icon-button-with-title  show-all-instructor-notes" type="button">
+            <i aria-label="note" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note
+<!----></i>
+
+            <span class="title">Note</span>
+<!----></button>
+
+            </div>
+    </div>
+
+<!---->
+<!---->
+<!---->
+        <div id="ember7185" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+
+        <div class="section-content-resources-container">
+                        <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_1319aa70-1a20-347a-13c5-8c4ca7293c83" content_resource_id="73769637" id="ember7186" class="content-resource html-resource html-content-resource ember-view">    
+<p>In this exploration, we are going to explore three factors that influence the strength of evidence
+in a test of significance: (1) the difference between the observed sample statistic and the value
+of the parameter used in the null hypothesis; (2) the sample size; and (3) one-sided tests versus
+two-sided tests. To do this we will look at a study conducted by <a href="https://doi.org/10.1038/435293a" target="_blank">Hill and Barton (Nature, 2005)</a>
+to investigate whether Olympic athletes in certain uniform colors have an advantage over
+their competitors. They noticed that competitors in the combat sports of boxing, tae kwon do,
+Greco-Roman wrestling, and freestyle wrestling are randomly assigned red or blue uniforms.
+For each match in the 2004 Olympics, they recorded the uniform color of the winner.
+</p>
+<!----><!---->
+</div>
+        
+<!---->
+        <div id="ember7356" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_a3f57fcc-4eb7-98e6-ceae-ae7bcf3a1e46" content_resource_id="73770048" id="ember7188" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Think About It.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7191" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>What are the observational units? What is the variable measured? Is the variable categorical or quantitative?</p>
+<!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7189">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+<!---->            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_7ad33ec2-4ad7-d4c6-4130-c63e852c5901" content_resource_id="73770049" id="ember7193" class="content-resource html-resource html-content-resource ember-view">    
+<p>The observational units in this study are the matches, and the variable is whether the
+match was won by someone wearing red or someone wearing blue—a categorical variable.
+Let’s suppose that going into this study, the researchers wanted to see whether the color red
+had an advantage over blue. In other words, competitors that wear red uniforms will win a
+majority of the time.</p>
+<!----><!---->
+</div>
+        
+<!---->
+        <div id="ember7357" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_50c271a3-3f64-ce57-eaee-97493200aa38" content_resource_id="73770050" id="ember7195" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.1:
+                    Question 1.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7198" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7199" class="ember-view prompt-area"><p>State the null and the alternative hypotheses in words.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="e2c4afa9-b4d6-45e5-a58c-10f726449935">
+<!----><!---->        <textarea aria-describedby="promptember7199" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7200" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7196">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7201" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_1d8ee451-c5c8-de5e-8c5f-7e2fe395738a" content_resource_id="73770051" id="ember7202" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.2:
+                    Question 2.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7205" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7206" class="ember-view prompt-area"><p>We will let π represent the probability that a competitor wearing a red uniform wins.
+Using this, restate the hypotheses using symbols.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="d38853b4-1cb6-49d1-8f00-57d30ab8af0f">
+<!----><!---->        <textarea aria-describedby="promptember7206" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7207" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7203">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7208" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_c540a156-1357-17ee-be23-e68f1ac82085" content_resource_id="73772779" id="ember7209" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Question 3.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7212" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>Researchers Hill and Barton used data collected on the results of 457 matches and found
+that the competitor wearing red won 248 times, whereas the competitor wearing blue
+won 209 times. We will carry out a simulation to assess whether or not the observed data
+provide evidence in support of the research conjecture. This simulation will employ the
+<b>3S strategy</b>: Determine the <b>s</b>tatistic,<b> s</b>imulate could-have-been outcomes of the statistic
+under the null model, and assess the <b>s</b>trength of evidence against the null model by
+estimating the p-value or the standardized statistic.
+</p><!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7210">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7358" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_2439d41d-4b1c-11b8-ba45-ba97eb8d68e9" content_resource_id="73772780" id="ember7214" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.3:
+                    Question 3a.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7217" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7218" class="ember-view prompt-area"><p>What is the statistic we will use? Calculate the observed value of the statistic in this
+study.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="ff0480cf-97d5-4e54-a028-17bc436131a0">
+<!----><!---->        <textarea aria-describedby="promptember7218" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7219" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7215">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7220" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_db73db5a-ece3-1ea4-5916-8f529b241927" content_resource_id="73772781" id="ember7221" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.4:
+                    Question 3b.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7224" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7225" class="ember-view prompt-area"><p>Describe how you could use a coin to develop a null distribution to test our
+hypothesis.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="f54a9ecd-2969-4ffb-bfc5-a7aeaff27c66">
+<!----><!---->        <textarea aria-describedby="promptember7225" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7226" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7222">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7227" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_58492c32-9525-353c-3b57-d797ae49e568" content_resource_id="73772782" id="ember7228" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.5:
+                    Question 3c.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7231" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7232" class="ember-view prompt-area"><p>Use the One Proportion applet to test our hypothesis. Based on your simulation,
+find the p-value and write a conclusion. Also write down the mean and standard
+deviation from your null distribution when the proportion of successes is used for the
+variable on the horizontal axis. You will need this later.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="e0c47a34-ef31-4a34-97b7-9e023389bc67">
+<!----><!---->        <textarea aria-describedby="promptember7232" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7233" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7229">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7234" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_85e8003b-31d7-0e25-f5c8-c9fb1bab9d6d" content_resource_id="73772783" id="ember7235" class="content-resource html-resource html-content-resource ember-view">    
+<h3>One-Sided vs. Two-Sided Tests</h3>
+<p>One factor that influences strength of evidence is whether we conduct a two-sided or a one-sided test. Up until now we have only done one-sided tests. In a one-sided test the alternative hypothesis is either &gt; or &lt;. In a two-sided test, the alternative hypothesis is ≠. So, why would you do a two-sided test and what are the implications?</p><p> Suppose the researchers did not necessarily think that red would win more often, but
+they also didn’t necessarily think that blue would win more often. They were just interested in
+whether one color would win more often than the other. A two-sided alternative hypothesis (red wins at a rate other than 50% of the time, or at a rate not equal to 50%) allows the researchers to be less sure of the anticipated value of the parameter than a one-sided test.</p>
+<!----><!---->
+</div>
+        
+<!---->
+        <div id="ember7359" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_8cb4b054-53c1-a97b-cda0-a51a3502fb45" content_resource_id="73772784" id="ember7237" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.6:
+                    Question 4.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7240" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7241" class="ember-view prompt-area"><p>If we let π equal the probability that a competitor wearing a red uniform wins, state the
+hypotheses for this study in symbols using a two-sided alternative.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="e82844eb-7ebe-47cc-bc0e-055b4940e6a2">
+<!----><!---->        <textarea aria-describedby="promptember7241" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7242" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7238">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7243" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_656ac9a2-d991-a396-ac33-5894e3b72d38" content_resource_id="73774663" id="ember7244" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Question 5.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7247" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>Return to the <a href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank"> One Proportion</a> applet to approximate the p-value for our original overall
+proportion of red winning 248 times out of 457 matches, but now select the “Two-sided”
+check box to find the “two-sided p-value.” </p><!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7245">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7360" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_89715a3e-d5c3-da91-a812-6e40b7a2b837" content_resource_id="73774664" id="ember7249" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.7:
+                    Question 5a.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7252" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7253" class="ember-view prompt-area"><p>Describe how the portion of the null distribution that is shaded red is different than
+our first test done in #3c.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="f9b683f0-d5fc-4981-84a6-dd4cdbbfb4ff">
+<!----><!---->        <textarea aria-describedby="promptember7253" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7254" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7250">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7255" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_997e9359-49fb-6edd-95dc-11a552c80bfa" content_resource_id="73775581" id="ember7256" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.8:
+                    Question 5b.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7259" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7260" class="ember-view prompt-area"><p>Describe how the p-value is different from the p-value that was obtained in our
+original test done in #3c.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="c79a0a3d-9ea5-41ea-a4b4-d4d1e86b441f">
+<!----><!---->        <textarea aria-describedby="promptember7260" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7261" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7257">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7262" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_3333126d-1c7c-a170-246a-e9ea145ec6cd" content_resource_id="73775582" id="ember7263" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.9:
+                    Question 5c.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7266" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7267" class="ember-view prompt-area"><p>To find the two-sided p-value, the applet is looking to see how often 0.543 or larger
+occurs and how often the comparable value on the other side of the null distribution
+(or smaller) occurs. To find this value, first compute how far 0.543 is from the center
+of the null distribution and then go that same distance to the left (less than) the
+center of the null distribution. What is the comparable value?</p>
+</div>
+                <div class="zb-textarea-container     info    " id="dc2e20e1-527f-4375-b259-e844b2c5f699">
+<!----><!---->        <textarea aria-describedby="promptember7267" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7268" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7264">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7269" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_a155357c-6c89-649d-7f99-4db17daeb1fc" content_resource_id="73775583" id="ember7270" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.10:
+                    Question 5d.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7273" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7274" class="ember-view prompt-area"><p>Complete the following sentence: The two-sided p-value of _____  is the
+probability of obtaining _____ or larger plus the probability of obtaining
+_____ or smaller if the _____ is true.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="fa14c19a-bd97-4b5b-91d1-8a386b6ef278">
+<!----><!---->        <textarea aria-describedby="promptember7274" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7275" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7271">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7276" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_86634696-c736-5feb-97bb-45ca86d57b66" content_resource_id="73775584" id="ember7277" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.11:
+                    Question 5e.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7280" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7281" class="ember-view prompt-area"><p>You should have seen that when the alternative hypothesis is two-sided, the p-value
+is computed by looking at how extreme the observed data is in both tails on the null
+distribution. This makes the p-value about twice as large. Because of this, explain
+how switching from a one-sided to a two-sided test influences the strength of
+evidence against the null.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="f964f76b-03c6-4bec-b602-f92ac037da35">
+<!----><!---->        <textarea aria-describedby="promptember7281" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7282" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7278">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7283" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_fc8fd989-4d07-77a3-1596-32cc2c05a72b" content_resource_id="73777740" id="ember7284" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Key Idea.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7287" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>Because the p-value for a two-sided test is about twice as large as that for a one-sided
+test, they provide less evidence against the null hypothesis. However, two-sided tests
+are used more often in scientific practice.</p>
+<!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7285">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7361" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_4db127df-00ee-d2a5-73a8-81171d8e8940" content_resource_id="73777741" id="ember7289" class="content-resource html-resource html-content-resource ember-view">    
+<h3>Difference Between Statistic and Null Hypothesis Parameter Value</h3>
+<!----><!---->
+</div>
+        
+<!---->
+<!---->            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_d4077d74-875b-258c-c182-dba0d2c4a517" content_resource_id="73777742" id="ember7291" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Question 6.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7294" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>A second factor that influences the strength of evidence against the null is how far apart
+the observed sample statistic and the value of the parameter specified under the null
+hypothesis are. For this study the null value was 0.50 and the observed sample statistic
+was about 0.543 (or 54.3% of the competitors wearing red won their matches). Suppose a
+larger proportion of competitors wearing red won their matches. In fact, suppose 57% of
+the 457 matches were won by a competitor wearing red.</p><!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7292">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7362" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_42ea59a5-8e38-f4ce-8d4d-0446918c52cd" content_resource_id="73777743" id="ember7296" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.12:
+                    Question 6a.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7299" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7300" class="ember-view prompt-area"><p>Go back to the One Proportion applet and approximate the (one-sided) p-value for
+this situation where again we are testing to see whether the overall probability of
+winning is more than 0.50.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="c25021b6-45d9-410a-a963-ecea53a124c6">
+<!----><!---->        <textarea aria-describedby="promptember7300" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7301" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7297">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7302" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_04ce72cd-6ba4-0db5-962d-88b4df43ef13" content_resource_id="73777744" id="ember7303" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.13:
+                    Question 6b.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7306" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7307" class="ember-view prompt-area"><p>Is your p-value larger or smaller than your original one? Explain why this
+makes sense.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="e9745149-0cc9-413a-9094-f2dbabb3b4b2">
+<!----><!---->        <textarea aria-describedby="promptember7307" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7308" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7304">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7309" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_3e417f29-8b6c-9694-3195-c7b154898797" content_resource_id="73777745" id="ember7310" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.14:
+                    Question 6c.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7313" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7314" class="ember-view prompt-area"><p>Write a sentence explaining the relationship between the distance between the
+observed sample statistic and the value of the parameter specified under the null
+hypothesis to the strength of evidence against the null hypothesis.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="f0089291-2f0d-412a-81bb-0d9809722d72">
+<!----><!---->        <textarea aria-describedby="promptember7314" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7315" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7311">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7316" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_8423d7c7-32b4-e366-edba-41296363c601" content_resource_id="73777746" id="ember7317" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Key Idea.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7320" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>The farther away the observed statistic is from the average value of the null distribution,
+the more evidence there is against the null hypothesis.</p>
+<!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7318">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7363" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_8f7234b9-b898-5816-6644-b79f2633cc3b" content_resource_id="73777747" id="ember7322" class="content-resource html-resource html-content-resource ember-view">    
+<h3>Sample Size</h3>
+<!----><!---->
+</div>
+        
+<!---->
+<!---->            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_2ae882bc-9a64-d6b6-26cb-e9372651b15c" content_resource_id="73777748" id="ember7324" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Question 7.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7327" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>The third factor we will look at that influences strength of evidence against the null
+hypothesis is the sample size. As we said earlier, the data for this study came from four
+combat sports in the 2004 Olympics. One of those sports was boxing. The researchers
+found that out of the 272 boxing matches, 150 of them were won by competitors
+wearing red. This proportion of 150/272 ≈ 0.551 is similar to the overall proportion of
+times the competitor wearing red won. Let’s see what the smaller sample size does to
+the strength of evidence. Use the <a href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank"> One Proportion</a> applet to test the same hypotheses as
+we originally did, but with just the boxing matches as our sample.
+</p><!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7325">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7364" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_fcdd3894-694b-b785-c3ac-487d7b8a3634" content_resource_id="73777749" id="ember7329" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.15:
+                    Question 7a.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7332" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7333" class="ember-view prompt-area"><p>Compare the null distribution you generate in this case to that generated in #3. In
+particular, how do the center (mean) and variability (standard deviation) compare?</p>
+</div>
+                <div class="zb-textarea-container     info    " id="d6b8249d-23e7-41e0-83a9-5d14077bd729">
+<!----><!---->        <textarea aria-describedby="promptember7333" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7334" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7330">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7335" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_5b73c1d8-bf9b-5318-9ede-5d5399aca63b" content_resource_id="73777750" id="ember7336" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.16:
+                    Question 7b.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7339" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7340" class="ember-view prompt-area"><p>What is your new p-value? Is it larger or smaller than your original p-value from #3c?
+Explain why this makes sense.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="e0a7b6bd-6fa4-4b13-8e6a-2dd5eee8fe5e">
+<!----><!---->        <textarea aria-describedby="promptember7340" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7341" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7337">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7342" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_69d31888-1088-9f6e-2a5e-4aeaf7adb4ee" content_resource_id="73777751" id="ember7343" class="interactive-activity-container content-tool-content-resource participation large ember-view"><div class="activity-title-bar" role="button">
+    <div aria-label="participation activity" class="activity-type">
+        participation activity
+    </div>
+
+    <div class="activity-description ">
+            <div class="activity-title">
+                2.8.17:
+                    Question 7c.<!----><!---->
+            </div>
+<!---->            <div class="title-bar-chevron-container">
+<!----><!----><!---->
+<!---->
+                        <div aria-label="Activity not completed" role="img" class="zb-chevron  title-bar-chevron grey   chevron-outline large">
+    
+</div>
+
+            </div>
+    </div>
+</div>
+<div class="activity-payload">
+<!----><!---->
+    <div id="ember7346" class="content-resource content-tool-resource-payload ember-view"><div class="content-tool-container ">
+    <div class="open-response">
+            <div id="promptember7347" class="ember-view prompt-area"><p>Write a sentence explaining the relationship between sample size and the strength of
+evidence against the null hypothesis.</p>
+</div>
+                <div class="zb-textarea-container     info    " id="f1ac5fc2-79ed-4a38-9e40-0bdec40def29">
+<!----><!---->        <textarea aria-describedby="promptember7347" class="zb-textarea   " rows="4"></textarea><!----><!---->    </div>
+
+<!---->        <div class="submit-area">
+            <button class="zb-button  primary  raised          " type="button">
+<!---->            <span class="title">Submit</span>
+<!----></button>
+
+<!---->        </div>
+<!---->            <div>
+                    <div class="explanation-confirmation">
+                        <button class="zb-button  secondary        no-padding    " type="button">
+<!---->            <span class="title">Show explanation</span>
+<!----></button>
+
+                    </div>
+                            </div>
+
+        <div class="button-row">
+                <button class="zb-button  secondary     left      icon-button-with-title  download-last-submission-button" type="button">
+            <i aria-label="arrow_downward" class="zb-icon material-icons med secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+            <span class="title">Download student submissions</span>
+<!----></button>
+
+            <button class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="info" class="zb-icon material-icons med secondary  " role="img" aria-hidden="false">
+            info
+<!----></i>
+
+<!----><!----></button>
+
+        </div>
+</div>
+
+<!----> 
+
+<!----></div>
+
+<div id="ember7348" class="view-solution-container ember-view view-solution"><!----></div>
+
+<!----></div>
+</div>
+
+<div class="flex-row ">
+<!---->
+        <div class="zb-feedback resource" id="ember7344">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+</div>
+</div>
+
+<!---->
+        <div id="ember7349" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+            <div content_resource_guid="9a1d3ab7-ed8c-8d8a-39dc-f44b12f46508_6d8539e0-7281-4d9b-6563-d2c5a8da763a" content_resource_id="73777752" id="ember7350" class="static-container container-content-resource large ember-view">    <div class="static-container-header ">
+        <div class="static-container-title " role="button">
+                    Key Idea.<!----><!---->
+        </div>
+<!----><!---->    </div>
+
+    <div class="static-container-payload   ">
+        <div class="  ">
+<!---->            <div id="ember7353" class="content-resource container-content-resource ember-view">    <div class="container-resource-payload">
+        
+<p>As the sample size increases (and the value of the observed sample statistic stays the
+same) the strength of evidence against the null hypothesis increases.</p>
+<!----><!---->
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="zb-feedback resource" id="ember7351">
+        <div class="feedback-control-row">
+<!----><!---->
+<!---->
+                <button class="zb-button  secondary             open-feedback expand-feedback-button" type="button">
+<!---->            <span class="title">Feedback?</span>
+<!----></button>
+
+        </div>
+
+<!----><!----></div>
+
+
+<!----></div>
+
+<!---->
+        <div id="ember7365" class="instructor-note-container ember-view"><!---->
+    <div class="instructor-note-button-container">
+        <button class="zb-button  grey    icon-button left        show-edit-instructor-note-icon" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med grey  " role="img" aria-hidden="false">
+            note_add
+<!----></i>
+
+<!----><!----></button>
+
+        <button class="zb-button  primary  raised   right      icon-button-with-title  edit-instructor-note-button" type="button">
+            <i aria-label="note_add" class="zb-icon material-icons med primary  " role="img" aria-hidden="true">
+            note_add
+<!----></i>
+
+            <span class="title">Add note</span>
+<!----></button>
+
+    </div>
+</div>
+
+        </div>
+
+<!---->
+        <div class="zb-feedback " id="ember7179">
+        <div class="feedback-control-row">
+<!---->                <div class="section-feedback-controls">
+                    <span class="feedback-prompt">How was this section?</span>
+                    <div class="feedback-thumbs-pill raised shadow flex justify-between px-2 items-center">
+                            <button aria-label="Thumbs up" class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="thumb_up" class="zb-icon material-icons-outlined med secondary  " role="img" aria-hidden="false">
+            thumb_up
+<!----></i>
+
+<!----><!----></button>
+
+                        <div aria-hidden="true" class="vertical-divider">|</div>
+                            <button aria-label="Thumbs down" class="zb-button  secondary    icon-button left       " type="button">
+            <i aria-label="thumb_down" class="zb-icon material-icons-outlined med secondary  " role="img" aria-hidden="false">
+            thumb_down
+<!----></i>
+
+<!----><!----></button>
+
+                    </div>
+                    <button class="zb-button  secondary             open-feedback" type="button">
+<!---->            <span class="title">Provide section feedback</span>
+<!----></button>
+
+                </div>
+
+<!---->
+<!---->        </div>
+
+<!----><!----></div>
+
+
+</div>
+</article>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+
+<!---->
+<!---->    </div>
+
+<!---->
+        <nav aria-label="next section" class="section-nav next">
+                <a id="ember7355" class="ember-view nav-link" href="https://learn.zybooks.com/zybook/GRACEMAT2000JohnsonFall2023/chapter/2/section/9">
+                    <i aria-label="arrow_downward" class="zb-icon material-icons sm secondary  " role="img" aria-hidden="true">
+            arrow_downward
+<!----></i>
+
+                    <span class="nav-text next">
+                        2.9 Example: Inference on a single proportion: Theory-based approach
+                    </span>
+                </a>
+        </nav>
+
+<!---->
+<!---->
+<!---->
+<!---->
+</section>
+
+
+<!---->
+<!---->
+
+<!----></div>
+<svg id="js-plotly-tester" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; left: -10000px; top: -10000px; width: 9000px; height: 9000px; z-index: 1;"><path class="js-reference-point" d="M0,0H1V1H0Z" style="stroke-width: 0; fill: black;"></path></svg></body></html>

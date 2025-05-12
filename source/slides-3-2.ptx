@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3-2 : Inference for a single quantitative variable</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Sampling words (cont.)</title>
+      <slide>
+        <p>Let's reconsider the <em>population</em> of words in the <url href="https://www.loc.gov/exhibits/gettysburg-address/">Gettysburg Address</url>
+  you first looked at in a previous exploration. Suppose instead of looking at the proportion of short words (3 or fewer letters) we look at the
+  <em>number of letters per word</em>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Is number of letters per word a quantitative or categorical variable? Why?</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Suggest a statistic (a single number) you could calculate from your sample that summarizes the number of letters per word variable.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>What parameter are you hoping to estimate with your statistic? (Hint: Be clear how this relates to the population.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>How could we explore whether the sampling methods used previously are unbiased in estimating the parameter you identified in #3? What does it mean to be unbiased in this context?</p>
+      </slide>
+      <slide>
+        <title>Figure 1: </title>
+        <figure>
+          <caption> Population distribution for lengths of words (number of letters per word) in the Gettysburg address </caption>
+          <image source="3-2/fig-3-2-1.png" width="50%">
+            <description>A histogram of the population data. The x-axis is labeled Length and ranges from 0 to 12. The y-axis is labeled count and ranges from 0 to 60. The distribution is skewed to the right. The mean is 4.295, the SD is 2.123, and the pop size is 268.
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>A distribution of data is <term>skewed</term> if it is not symmetric and, instead, the bulk of
+ values tend to fall on one side of the distribution with a "longer tail" on the other. Right-skewed distributions
+ have their tail on the right, and left-skewed distributions have their tail on the left.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>With skewed data, we might prefer to measure the “center” of the distribution with the median rather than the mean.</p>
+      </slide>
+      <slide>
+        <title>Definition 3: </title>
+        <definition>
+          <statement>
+            <p>The <term>median</term> is the middle data value when the data are sorted in order from smallest
+to largest.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>The mean is found to be 4.295 letters, do you think the median is larger or smaller than 4.295? Briefly explain your reasoning.</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Summarize the behavior of this population. Recall that when we have a quantitative variable, we should talk about shape, center (using the mean and/or the median), variability (using the standard deviation), and outliers, as well as making sure that we are making comments relevant to the context of the study.</p>
+      </slide>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <p>To distinguish a quantitative variable from a categorical variable, we will use different
+symbols to refer to the statistics and parameters. In particular,</p>
+          <slide>
+            <title>Table 5: </title>
+            <table>
+              <tabular>
+                <row header="yes">
+                  <cell>Statistics</cell>
+                  <cell>Parameters</cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\bar{x} =</m> sample mean</cell>
+                  <cell>
+                    <m>\mu =</m> population mean</cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>s = </m> sample standard deviation</cell>
+                  <cell>
+                    <m>\sigma = </m> population standard deviation</cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </remark>
+      </slide>
+      <slide>
+        <p>Note that we are focusing on the mean and the standard deviation.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Identify the values of <m>\mu</m> and <m>\sigma</m> for the length of words in the Gettysburg Address.</p>
+      </slide>
+      <slide>
+        <p>To evaluate our sampling method for a quantitative variable, we want to see whether the means from different samples center around the population mean.</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 7-->
+        <p>What term do we use to describe a sampling method where the distribution of the statistic centers around the population mean?</p>
+      </slide>
+      <slide>
+        <p>To evaluate our sampling method for a quantitative variable, we want to see whether the means from different samples center around the population mean.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 8-->
+        <p>What term do we use to describe a sampling method where the distribution of the statistic centers around the population mean?</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 9-->
+        <p>Open the <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?population=gettysburg&amp;hideExtras=1">
+  Sampling Words applet</url>. Make sure that the Variable is set to "Length." Check the Show Sampling Options box, change the
+  Sample size to 5, and press Draw Samples.</p>
+      </slide>
+      <slide>
+        <p>Notice that the graph on the left in the applet and in <xref ref="fig-3-2-2"/> is the population, the graph in the middle
+is your sample, and the mean of this sample is placed in the graph on the right. Fill in your results for the middle and
+right most graphs in <xref ref="fig-3-2-2"/>. Also indicate the value of the sample mean that you obtained.</p>
+      </slide>
+      <slide>
+        <title>Figure 6: </title>
+        <figure width="50%" xml:id="fig-3-2-2">
+          <caption> Outputs in the Sampling Words applet </caption>
+          <image source="3-2/fig-3-2-2.png">
+            <description>A screen shot of the sampling words applet which shows how the applet looks before sampling any repetitions.
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 10-->
+        <p>If we were to repeat the process in #9 thousands of times, predict the behavior of the distribution of sample means—the graph all the way to the right in the applet. (Shape? Center? Variability? Compared to the population?) Sketch your prediction, changing the horizontal axis scale if necessary.</p>
+      </slide>
+      <!--Question 11-->
+      <slide>
+        <title>Exercise 12</title>
+        <p>Change the Number of samples from 1 to 9999 (for 10,000 samples) and press Draw Samples.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12a: </title>
+        <p>
+      Create a sketch of the distribution in the box below — including carefully labeling the horizontal
+      axis and indicating what each dot on the graph represents. (Hint: How many dots do you have? What
+      would you/the applet do to add one more dot to the graph?)
+    </p>
+        <image source="3-2/question-11-a.png" width="100%">
+          <description>An empty graph for plotting the sample means (x-axis from 0 to 1.0) and counts
+      (y-axis from 0 to 20). </description>
+        </image>
+      </slide>
+      <slide>
+        <title>Exercise 12b: </title>
+        <p>
+      Describe the shape of the distribution of sample means. How does it compare to the shape of the population?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 12c: </title>
+        <p>
+      What is the mean of the sampling distribution of sample means? How does it
+      compare to the mean of the population?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 12d: </title>
+        <p>
+      What is the standard deviation of the sampling distribution of sample means? How does it compare to the standard deviation of the population?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 12-->
+        <p>Does simple random sampling for quantitative data appear to be an unbiased sampling method? How are you deciding?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 13-->
+        <p>Suppose we wanted less sample-to-sample variation in the sample means. What would you change about the sampling process?</p>
+      </slide>
+      <slide>
+        <title>Remark 7: </title>
+        <remark>
+          <p>When taking random samples from a large population (more than 20 times the size of
+the sample), the distribution of sample means will</p>
+          <p>
+            <ol>
+              <li>Center around the population mean (<m>\mu</m>)</li>
+              <li>Have a standard deviation smaller than the population,
+  <m>SD(\bar{X})=\dfrac{\text{population standard deviation}}{\sqrt{\text{sample size}}}=\dfrac{\sigma}{\sqrt{n}}</m>
+              </li>
+              <li>Be approximately normal when the sample size is large (by the <term>Central Limit Theorem</term> or if
+  the population distribution is normally distributed)</li>
+            </ol>
+          </p>
+        </remark>
+      </slide>
+      <slide>
+        <p>Like with proportions, we see that the sample mean (<m>\bar{x}</m>) is unbiased for estimating the population mean, but now we have a different formula for predicting the standard deviation of the statistic.</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 14-->
+        <p>Use your applet output to verify that the standard deviation of sample means is
+approximately equal to <m>\sigma/\sqrt{n}</m>
+        </p>
+      </slide>
+      <slide>
+        <p>The Central Limit Theorem tells us that we can also assume that the distribution of sample
+means is approximately normal when the sample size is large. How large is large? We cannot check
+the number of successes and failures because we are working with a quantitative variable. But in
+a similar manner, the sampling distribution will look normal as long as the population distribution
+is not too skewed. As we increase the sample size, the distribution of sample means will look more
+and more like a normal distribution. Generally, if the sample size is at least 20 we can assume
+that distribution of sample means is approximately normal. We also have a new case—the distribution
+of sample means will behave like a normal distribution for any sample size, if the population shape
+is itself approximately normal.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 15-->
+        <p>Next you will change the sample size from 5 to 10. Predict how this will impact the shape, center,
+and variability of the distribution of sample means.</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 16-->
+        <p>Generate 10,000 random samples of 10 words. Sketch the resulting distribution
+of sample means, remembering to carefully label the horizontal axis. Were your predictions
+about how the increased sample size would impact the shape, center, and variability accurate?</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 16-->
+        <p>Using what you have seen so far, which is least likely:
+<ol>
+            <li>Randomly picking one word from the Gettysburg Address and finding it be 6 letters or more.</li>
+            <li>Randomly picking 5 words from the Gettysburg Address and finding the mean of the 5
+words to be 6 letters or more in length.</li>
+            <li>Randomly picking 10 words from the Gettysburg Address and finding the mean of the 10
+words to be 6 letters or more in length.</li>
+          </ol>
+        </p>
+        <p>Explain your reasoning.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

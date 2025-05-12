@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>7-1 : Comparing two groups: Quantitative response</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <slide>
+      <p>A worksheet for Grace College from Zybooks</p>
+    </slide>
+    <section>
+      <title>Cancer Pamphlets</title>
+      <slide>
+        <p>
+Researchers in Philadelphia investigated whether pamphlets containing informa- tion for cancer patients 
+are written at a level that the cancer patients can compre- hend 
+(<url href="https://doi.org/10.1080/10691898.1995.11910492">Short, Moriarty, and Cooley, 1995
+</url>). First, they measured the readability of a sample of cancer pamphlets based on factors 
+such as the length of sentences and the number of polysyllabic words, assigning each pamphlet a 
+grade level. The results shown below are presented as a frequency table, reporting the number of 
+pamphlets at each grade level.
+</p>
+      </slide>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <title>Readability measures (grade level) for pamphlets aimed at cancer patients.</title>
+          <tabular>
+            <row>
+              <cell>Pamphlets' readability levels</cell>
+              <cell>6</cell>
+              <cell>7</cell>
+              <cell>8</cell>
+              <cell>9</cell>
+              <cell>10</cell>
+              <cell>11</cell>
+              <cell>12</cell>
+              <cell>13</cell>
+              <cell>14</cell>
+              <cell>15</cell>
+              <cell>16</cell>
+            </row>
+            <row>
+              <cell>Count (number of pamphlets)</cell>
+              <cell>3</cell>
+              <cell>3</cell>
+              <cell>8</cell>
+              <cell>4</cell>
+              <cell>1</cell>
+              <cell>1</cell>
+              <cell>4</cell>
+              <cell>2</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>1</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>What are the observational units in the table above? How many observational units were measured?</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Use the information in the table above to construct a histogram of the pamphlets' readability 
+levels. How would you summarize the behavior of this histogram?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Using the information in the table above, calculate the mean pamphlet readability level. 
+(Hint: Add up the values, 6 + 6 + 6 + 7 + … + 15 + 15 + 16 and divide by the number of 
+observational units.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Using the information in the table above, calculate the median pamphlet readability 
+level. How many observations are on each side of this median value (including the repeat 
+values)? (Hint: What is the position of the median?)</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>How do the mean and median compare? Is this what you would have predicted from 
+the histogram? Explain briefly.</p>
+      </slide>
+      <slide>
+        <p>
+While the mean and median tell us about the center of the distribution, one way to 
+sum- marize the behavior of the distribution of a quantitative variable is by 
+dividing the distribution into four pieces of roughly equal size (number of 
+observations). In other words, summarize the distribution by determining where 
+the bottom 25% of the data are, the next 25%, the next 25%, and then the top 25%.
+</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+The value for which 25% of the data lie below that value is called the <term>lower quartile</term> 
+(or 25th percentile). Similarly, the value for which 25% of the data lie above that 
+value is called the <term>upper quartile</term> (or 75th percentile). Quartiles can be calculated 
+by determining the median of the values above/below the location of the overall median. 
+The difference between the quartiles is called the <term>inter-quartile range (IQR)</term>, another 
+measure of variability along with standard deviation.
+</statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Take the 15 values below the position of the median, and find the median of those 
+15 values. This is the lower quartile.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Repeat for the 15 values above the position of the median. This is the upper quartile.</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Calculate and interpret the inter-quartile range.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Explain why the inter-quartile range might be preferred to the standard deviation to 
+summarize the variability in the pamphlet reading levels.</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <p>
+    The minimum, lower quartile, median, upper quartile, and maximum comprise the 
+    <term>five-number summary</term>. A visual representation of the five-number 
+    summary is a boxplot. The figure below shows a boxplot for these data.
+  </p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Figure 4: </title>
+        <figure>
+          <caption> Boxplot of cancer pamphlet reading levels </caption>
+          <image source="7-1/boxplot.png" width="100%">
+            <description>Boxplot of cancer pamphlet reading levels.
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Definition 5: </title>
+        <definition>
+          <statement>
+A <term>boxplot</term> is a visual display of the five-number summary. The 
+box displays the middle 50% of the distribution, and its width (the IQR) 
+helps us visualize the spread of the distribution; the whiskers extend to 
+the smallest and largest values in the dataset.
+</statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>How does the boxplot match up to the five-number summary? (Endpoint of 
+lower whisker, lower edge of box, line within the box, upper edge of box, 
+upper whisker).</p>
+      </slide>
+      <slide>
+        <p>
+The boxplot illustrates that there is some variability in the pamphlet 
+reading levels. What the researchers wanted to know was how these 
+different reading levels matched up to the reading ability of the cancer 
+patients. The table below shows a frequency table for the reading level 
+(again a grade level) for 63 cancer patients. Note that patient reading 
+levels of under 3rd grade and above 12th grade are not determined exactly.
+</p>
+      </slide>
+      <slide>
+        <title>Table 6: </title>
+        <table>
+          <title> Comparing pamphlet readability scores and patient reading levels </title>
+          <tabular>
+            <row header="yes">
+              <cell>Patients' reading levels</cell>
+              <cell>&lt;3</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>5</cell>
+              <cell>6</cell>
+              <cell>7</cell>
+              <cell>8</cell>
+              <cell>9</cell>
+              <cell>10</cell>
+              <cell>11</cell>
+              <cell>12</cell>
+              <cell>&gt;12</cell>
+              <cell>Total</cell>
+            </row>
+            <row header="yes">
+              <cell>Count (number of patients)</cell>
+              <cell>6</cell>
+              <cell>4</cell>
+              <cell>4</cell>
+              <cell>3</cell>
+              <cell>3</cell>
+              <cell>2</cell>
+              <cell>6</cell>
+              <cell>5</cell>
+              <cell>4</cell>
+              <cell>7</cell>
+              <cell>2</cell>
+              <cell>17</cell>
+              <cell>63</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Explain why it is not possible to calculate the mean reading ability for these patients.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Explain why it is possible to calculate the median reading ability for 
+these patients and do so.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>How does the median reading level of the patients compare to the median 
+reading level of the pamphlets? Does this indicate that the pamphlets are a 
+good match to the cancer patients? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>Determine and interpret the lower quartile for the patient reading levels.</p>
+      </slide>
+      <slide xml:id="q-7-1-15">
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>How does the lower quartile of patient reading levels compare to the lower 
+quartile of the reading level of the cancer pamphlets? How does the lower 
+quartile of patient reading levels compare to the minimum reading level of 
+the cancer pamphlets?</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Use your answer to question <xref ref="q-7-1-15"/> to decide whether the cancer pamphlets 
+are a good match to patient reading levels. (Hint: Interpret the second 
+comparison in <xref ref="q-7-1-15"/> in context.)</p>
+      </slide>
+      <slide>
+        <p>
+Later in this chapter, you will learn formal methods for assessing whether 
+the centers of two distributions are statistically significantly different. 
+But notice how such analysis may not be valid for a study like this: 
+<ul>
+            <li>Means are not the most important feature to be comparing. For example,
+ means will be influenced by outliers, and these data were not presented 
+ in a way to allow for calculation of means. </li>
+            <li>We could focus on comparing the medians instead, but only 
+comparing the centers of these distributions ignores the 
+variability in the distributions, which is perhaps of more 
+interest to these research questions. 
+</li>
+            <li>We don't know whether the pamphlets or patients are randomly 
+sampled from larger populations. </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <p>This exploration reveals that measures of center do not always 
+tell the whole story when you are analyzing data to address a 
+particular research question. In this case, the research question 
+of whether pamphlets' readability levels are well aligned with 
+patients' reading lev- els requires looking at the entire distributions, 
+not simply at measures of center. Examining displays of the distributions 
+would be a better place to begin. In addition to dotplots and histograms, 
+boxplots are another potential type of display that is especially useful 
+for comparing distributions. But keep in mind, as shown in a previous 
+exploration, that they can sometimes mask important features of 
+distributions. Many software packages now allow you to overlay a 
+boxplot on top of a histogram or dotplot to help see the entire 
+distribution while highlighting key features like the quartiles.
+</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_7-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing two groups: Quantitative response</title>
+
+<p>A worksheet for Grace College from Zybooks</p>
+
+<subsection> 
+ <title>Cancer Pamphlets</title>
+<p>
+Researchers in Philadelphia investigated whether pamphlets containing informa- tion for cancer patients 
+are written at a level that the cancer patients can compre- hend 
+(<url href="https://doi.org/10.1080/10691898.1995.11910492">Short, Moriarty, and Cooley, 1995
+</url>). First, they measured the readability of a sample of cancer pamphlets based on factors 
+such as the length of sentences and the number of polysyllabic words, assigning each pamphlet a 
+grade level. The results shown below are presented as a frequency table, reporting the number of 
+pamphlets at each grade level.
+</p>
+
+ 
+<table>
+<title>Readability measures (grade level) for pamphlets aimed at cancer patients.</title>
+<tabular><row >
+<cell>Pamphlets' readability levels</cell>
+<cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+<cell>12</cell><cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell>
+</row>
+<row >
+<cell>Count (number of pamphlets)</cell>
+<cell>3</cell><cell>3</cell><cell>8</cell><cell>4</cell><cell>1</cell><cell>1</cell>
+<cell>4</cell><cell>2</cell><cell>1</cell><cell>2</cell><cell>1</cell>
+</row>
+</tabular></table>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>What are the observational units in the table above? How many observational units were measured?</p>
+</statement>
+<solution>
+  <p>
+    Observational units are the pamphlets. 30
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Use the information in the table above to construct a histogram of the pamphlets' readability 
+levels. How would you summarize the behavior of this histogram?</p>
+</statement>
+<solution>
+  <p>
+    The histogram is slightly skewed to the right.
+  </p>
+  <image source="7-1/a-7-1-2.png" width="50%">
+    <description>Histogram of reading level with largest mode at 8, second-largest mode at 12, and a slight right tail.</description>
+  </image>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Using the information in the table above, calculate the mean pamphlet readability level. 
+(Hint: Add up the values, 6 + 6 + 6 + 7 + … + 15 + 15 + 16 and divide by the number of 
+observational units.)</p>
+</statement>
+<solution>
+  <p>
+    Mean reading level of pamphlets is 9.8.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>Using the information in the table above, calculate the median pamphlet readability 
+level. How many observations are on each side of this median value (including the repeat 
+values)? (Hint: What is the position of the median?)</p>
+</statement>
+<solution>
+  <p>
+    Median reading level of pamphlets is 9. There are 15 observations on each side of the median.     The median is half-way between the 15th and 16th highest values (position 15.5), both of which are 9.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>How do the mean and median compare? Is this what you would have predicted from 
+the histogram? Explain briefly.</p>
+</statement>
+<solution>
+  <p>
+    The mean is slightly larger than the median. Yes, with a skewed distribution the mean is pulled toward the tail.
+  </p>
+</solution>
+</activity>
+
+<p>
+While the mean and median tell us about the center of the distribution, one way to 
+summarize the behavior of the distribution of a quantitative variable is by 
+dividing the distribution into four pieces of roughly equal size (number of 
+observations). In other words, summarize the distribution by determining where 
+the bottom 25% of the data are, the next 25%, the next 25%, and then the top 25%.
+</p>
+
+<definition>
+ <statement>
+The value for which 25% of the data lie below that value is called the <term>lower quartile</term> 
+(or 25th percentile). Similarly, the value for which 25% of the data lie above that 
+value is called the <term>upper quartile</term> (or 75th percentile). Quartiles can be calculated 
+by determining the median of the values above/below the location of the overall median. 
+The difference between the quartiles is called the <term>inter-quartile range (IQR)</term>, another 
+measure of variability along with standard deviation.
+</statement>
+</definition>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>Take the 15 values below the position of the median, and find the median of those 
+15 values. This is the lower quartile.</p>
+</statement>
+<solution>
+  <p>
+    Lower quartile, <m>Q_1=8</m>.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Repeat for the 15 values above the position of the median. This is the upper quartile.</p>
+</statement>
+<solution>
+  <p>
+    Upper quartile, <m>Q_3=12</m>.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 8-->
+<statement>
+<p>Calculate and interpret the inter-quartile range.</p>
+</statement>
+<solution>
+  <p>
+    Inter-quartile range, <m>Q_3-Q_1 = 4</m>.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>Explain why the inter-quartile range might be preferred to the standard deviation to 
+summarize the variability in the pamphlet reading levels.</p>
+</statement>
+<solution>
+  <p>
+    Because the distribution of reading levels is skewed, the standard deviation may be a bit     misleading as it assume the variability below the mean is the same (on average) as the amount of variability above the mean .The inter-quartile range is not affected by outliers.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+ <p>
+    The minimum, lower quartile, median, upper quartile, and maximum comprise the 
+    <term>five-number summary</term>. A visual representation of the five-number 
+    summary is a boxplot. The figure below shows a boxplot for these data.
+  </p>
+</remark>
+
+<figure> 
+ <caption> Boxplot of cancer pamphlet reading levels </caption>
+<image source="7-1/boxplot.png" width="100%">
+<description>Boxplot of cancer pamphlet reading levels.
+</description>
+</image>
+</figure>
+
+<definition>
+ <statement>
+A <term>boxplot</term> is a visual display of the five-number summary. The 
+box displays the middle 50% of the distribution, and its width (the IQR) 
+helps us visualize the spread of the distribution; the whiskers extend to 
+the smallest and largest values in the dataset.
+</statement>
+</definition>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>How does the boxplot match up to the five-number summary? (Endpoint of 
+lower whisker, lower edge of box, line within the box, upper edge of box, 
+upper whisker).</p>
+</statement>
+<solution>
+  <p>
+    The boxplot construction matches up to the 5-number summary: endpoint of lower whisker is min = 6, lower edge of box is <m>Q_1=8</m>, line within box is median = 9, upper edge of box is <m>Q_3=12</m>, endpoint of upper whisker is max = 16.
+  </p>
+</solution>
+</activity>
+
+<p>
+The boxplot illustrates that there is some variability in the pamphlet 
+reading levels. What the researchers wanted to know was how these 
+different reading levels matched up to the reading ability of the cancer 
+patients. The table below shows a frequency table for the reading level 
+(again a grade level) for 63 cancer patients. Note that patient reading 
+levels of under 3rd grade and above 12th grade are not determined exactly.
+</p>
+ 
+<table>
+<title> Comparing pamphlet readability scores and patient reading levels </title>
+<tabular><row header="yes">
+<cell>Patients' reading levels</cell>
+<cell>&lt;3</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+<cell>12</cell><cell>&gt;12</cell><cell>Total</cell>
+</row>
+<row header="yes">
+<cell>Count (number of patients)</cell>
+<cell>6</cell><cell>4</cell><cell>4</cell><cell>3</cell><cell>3</cell><cell>2</cell>
+<cell>6</cell><cell>5</cell><cell>4</cell><cell>7</cell><cell>2</cell><cell>17</cell><cell>63</cell>
+</row>
+</tabular></table>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Explain why it is not possible to calculate the mean reading ability for these patients.</p>
+</statement>
+<solution>
+  <p>
+    The exact reading level for those less than 3 and more than 12 is not known, so 23 of the 63 patients don't have an exact reading level.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Explain why it is possible to calculate the median reading ability for 
+these patients and do so.</p>
+</statement>
+<solution>
+  <p>
+    The median is the 50th percentile, because calculating the median only involves the position of the (ordered) observations, we don't need the exact numerical values of the other observations. Median reading level of patients is 9.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>How does the median reading level of the patients compare to the median 
+reading level of the pamphlets? Does this indicate that the pamphlets are a 
+good match to the cancer patients? Explain.</p>
+</statement>
+<solution>
+  <p>
+    The median reading level of the patients is exactly the same as the median reading level of the pamphlets; 9. Not necessarily, the spread of reading levels needs to be considered, as does the shape of the distribution of reading levels for both the pamphlets and the patients.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>Determine and interpret the lower quartile for the patient reading levels.</p>
+</statement>
+<solution>
+  <p>
+    <m>Q_1</m> for the cancer patients is 5. Twenty five percent of cancer patients have reading levels below grade 5.
+  </p>
+</solution>
+</activity>
+
+<activity xml:id="q-7-1-15">
+ <!--Question 15-->
+<statement>
+<p>How does the lower quartile of patient reading levels compare to the lower 
+quartile of the reading level of the cancer pamphlets? How does the lower 
+quartile of patient reading levels compare to the minimum reading level of 
+the cancer pamphlets?</p>
+</statement>
+<solution>
+  <p>
+    The lower quartile for the reading level of the patients is 5, which is 3 grades lower than the lower quartile for the reading level of the cancer pamphlets (8). The lower quartile for the reading level of the patients is 5, which is 1 grade lower than the minimum reading level for the cancer pamphlets (6).
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Use your answer to question <xref ref="q-7-1-15"/> to decide whether the cancer pamphlets 
+are a good match to patient reading levels. (Hint: Interpret the second 
+comparison in <xref ref="q-7-1-15"/> in context.)</p>
+</statement>
+<solution>
+  <p>
+    The reading levels of the pamphlets are not a good match to the reading levels of the patients; 17/63 (27%) of the cancer patients can't read even the simplest pamphlet. Pamphlets need to err on the side of being readable to all patients.
+  </p>
+</solution>
+</activity>
+
+<p>
+Later in this chapter, you will learn formal methods for assessing whether 
+the centers of two distributions are statistically significantly different. 
+But notice how such analysis may not be valid for a study like this: 
+<ul>
+<li>Means are not the most important feature to be comparing. For example,
+ means will be influenced by outliers, and these data were not presented 
+ in a way to allow for calculation of means. </li>
+<li>We could focus on comparing the medians instead, but only 
+comparing the centers of these distributions ignores the 
+variability in the distributions, which is perhaps of more 
+interest to these research questions. 
+</li>
+<li>We don't know whether the pamphlets or patients are randomly 
+sampled from larger populations. </li>
+</ul>
+</p>
+<p>This exploration reveals that measures of center do not always 
+tell the whole story when you are analyzing data to address a 
+particular research question. In this case, the research question 
+of whether pamphlets' readability levels are well aligned with 
+patients' reading levels requires looking at the entire distributions, 
+not simply at measures of center. Examining displays of the distributions 
+would be a better place to begin. In addition to dotplots and histograms, 
+boxplots are another potential type of display that is especially useful 
+for comparing distributions. But keep in mind, as shown in a previous 
+exploration, that they can sometimes mask important features of 
+distributions. Many software packages now allow you to overlay a 
+boxplot on top of a histogram or dotplot to help see the entire 
+distribution while highlighting key features like the quartiles.
+</p>
+</subsection>
+
+</section>

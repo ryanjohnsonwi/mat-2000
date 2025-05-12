@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>6-3 : Comparing two proportions: Theory-based approach</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Donating blood</title>
+      <slide>
+        <p>Blood donations from volunteers serve a crucial role in the nation's health care system. 
+Are Americans any more or less generous about donating blood in some years than others? Are
+ women any more or less willing to give blood than men? To investigate these questions we can 
+ analyze data from the <url href="https://gss.norc.org/">General Social Survey</url>, which 
+ is a national survey conducted every two years on a nationwide random sample of adult Americans.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Did this study make use of random sampling, random assignment, both, or neither? Also explain 
+what your answer means in terms of the scope of conclusions that can be drawn from these data.</p>
+      </slide>
+      <slide>
+        <p>Let's start by comparing the years 2002 and 2004.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>State the appropriate null and alternative hypotheses, in words and in symbols, to address 
+the research question of whether Americans were more generous with blood donations in one of 
+these years than the other. (Hint: Remember that hypotheses are always about population parameters, 
+and think about whether the alternative should be one- or two-sided before you see the data.)</p>
+      </slide>
+      <slide>
+        <p>Data from the 2002 and 2004 surveys are summarized in this two-way table:
+</p>
+      </slide>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+      </cell>
+              <cell>
+        2002
+      </cell>
+              <cell>
+        2004
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Donated blood in past year
+      </cell>
+              <cell>
+        210
+      </cell>
+              <cell>
+        230
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Have not donated blood in past year
+      </cell>
+              <cell>
+        1,152
+      </cell>
+              <cell>
+        1,106
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Total
+      </cell>
+              <cell>
+        1,362
+      </cell>
+              <cell>
+        1,336
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>For each year, calculate the (conditional) proportion of adult Americans sampled who donated 
+blood in the previous 12 months. Use appropriate symbols to represent them. Also calculate the 
+difference between these sample proportions (taking the 2002 proportion minus the 2004 proportion).</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Produce a segmented bar graph or mosaic plot to display the conditional proportions who gave
+  blood in these two years. Comment on what the graph and your calculations from question 3 reveal about these two samples.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Use the <url href="http://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=2">
+  Multiple Proportions applet</url> to conduct a simulation analysis to approximate a p-value for 
+  testing the hypotheses that you stated in question 2. You can enter the table of counts in the 
+  <m>2\times 2</m> table or type in the table in the <term>Sample data</term> box and press <term>Use Table</term>. 
+  Or you can copy the data from the text webpage and paste into the <term>Sample data</term> box and press 
+  <term>Use Data</term>. Verify the segmented bar graph that you created.
+  </p>
+        <image source="6-3/screenshot.png" width="50%">
+          <description>A screenshot of the multiple proportions tool
+</description>
+        </image>
+      </slide>
+      <slide>
+        <title>Remark 2: </title>
+        <remark>
+          <p>Shuffling is an appropriate way to estimate a p-value for comparing groups regardless of 
+the study design (observational study or experiment, random assignment or random sampling or 
+neither). Of course, the study design is very important in determining the appropriate scope 
+of conclusions. (Can you generalize to a larger population? Can you infer a 
+cause-and-effect conclusion?)
+</p>
+        </remark>
+      </slide>
+      <!--Question 6-->
+      <slide>
+        <title>Exercise 6</title>
+        <p>
+    Check the <term>Show Shuffle Options</term> box, ask for 1000 repetitions, and press 
+    <term>Shuffle</term>.
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 6a: </title>
+        <p>
+        Indicate how to find the p-value from the null distribution. (Hint: Remember whether the alternative hypothesis is one-sided or two-sided.)
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 6b: </title>
+        <p>
+        Report the approximate p-value.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 6c: </title>
+        <p>
+        Based on this p-value, do the sample data provide much evidence that the population 
+        proportion who gave blood in 2002 differs from the population proportion who gave 
+        blood in 2004?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Does the null distribution of the simulated values appear to follow an approximately normal distribution? Centered around what value? Also report the standard deviation of these values.</p>
+      </slide>
+      <!--Question 8-->
+      <slide>
+        <title>Exercise 8</title>
+        <p>Let's see what the standardized statistic tells us.</p>
+      </slide>
+      <slide>
+        <title>Exercise 8a: </title>
+        <p>
+        Report the observed value in the sample for the statistic.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8b: </title>
+        <p>
+        How many standard deviations (based on your answer to question 7) above 
+        or below zero (the hypothesized value) is the observed value of the statistic?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8c: </title>
+        <p>
+        Is the strength of evidence against the null hypothesis based on this standardized 
+        statistic consistent with what the p-value revealed in question 6? Explain.
+      </p>
+      </slide>
+      <slide>
+        <p>Just as you learned a theory-based approach for making inferences about a single proportion, 
+so too will you now learn a theory-based approach for making inferences about comparing 
+proportions between two groups. This theory-based approach is again based on an approximation 
+from a normal distribution.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Check the Overlay Normal distribution box. Is the behavior of the two distributions similar? How do the p-values compare?</p>
+      </slide>
+      <!--Question 10-->
+      <slide>
+        <title>Exercise 10</title>
+        <p>Check the box to compute <term>95% CI(s) for difference in proportions</term>. (This box appears 
+    in the left-hand panel when the difference is selected as the statistic.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 10a: </title>
+        <p>
+        Report the endpoints of this interval.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 10b: </title>
+        <p>
+        Interpret this interval. Be sure to mention clearly what parameter is being estimated 
+        by this interval. (Hint: In other words, you are 95% confident that this interval contains what?)
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 10c: </title>
+        <p>
+        Does this interval contain only negative values, only positive values, or does the interval 
+        include the value zero as well as both positive and negative values? Comment on the 
+        importance of what this means.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>
+    Another applet that can compute p-values and confidence intervals for tests of two
+    proportions is the <url href="http://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">Theory-Based Inference applet</url>. Use the pull-down menu to select
+    <term>Two proportions</term> and enter the relevant summary information, using the 2002 sample
+    as Group 1. Check the <term>Test of Significance</term> box and press on the <term>inequality</term> sign
+    button until the alternative hypothesis becomes two-sided. Press <term>Calculate</term>. Verify the
+    p-value you obtained earlier (question 9) as well as the confidence interval (question 10).
+  </p>
+      </slide>
+    </section>
+    <section>
+      <title>Validity Conditions for Theory-Based Approach (Two Proportions)</title>
+      <slide>
+        <p>As with a single proportion, the theory-based inference approach for comparing two proportions 
+is only valid when a normal distribution provides a good approximation to the distribution of the 
+statistic <m> \hat{p}_1 - \hat{p}_2 </m>. Conservatively, the theory-based significance test and 
+confidence interval work well when there are at least 10 observations in each of the four cells 
+of the two-way table. In other words, we require at least 10 "successes" and at least 10 "failures" 
+in each sample in order to use this theory-based approach.
+</p>
+      </slide>
+      <slide>
+        <title>Convention 3: </title>
+        <convention>
+          <p>The theory-based test and interval for the difference in two proportions (called a 
+<term>two-sample z-test or interval</term>) work well when there are at least 10 
+observations in each of the four cells of the <m>2\times 2</m> table.
+</p>
+        </convention>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Is it valid to use the theory-based approach for two proportions in this study? Justify
+your answer.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Is it reasonable to generalize your conclusions from this analysis to the population of all adult Americans? Explain why or why not.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring further</title>
+      <!--Question 14-->
+      <slide>
+        <title>Exercise 14</title>
+        <p>Let's see what will happen if we switch which is Group 1 and which is Group 2.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14a: </title>
+        <p>
+        Before doing any calculations, what do you think would happen to the standardized statistic, 
+        p-value, and confidence interval if you entered the 2004 sample as Group 1 and the 2002 
+        sample as Group 2?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14b: </title>
+        <p>
+        Make this change in the Theory-Based Inference applet (i.e., switch the roles of Groups 
+        1 and 2), and then press Calculate. Report the new values of the standardized statistic, 
+        p-value, and confidence interval.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14c: </title>
+        <p>
+        Did these change as you predicted in part (a)?
+      </p>
+      </slide>
+      <slide>
+        <p>Using the General Social Survey data to classify respondents by sex and combining the years 2002 and 2004 we can construct a two-way table:
+</p>
+      </slide>
+      <slide>
+        <title>Table 4: </title>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+      </cell>
+              <cell>
+        Male
+      </cell>
+              <cell>
+        Female
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Donated blood in past year
+      </cell>
+              <cell>
+        239
+      </cell>
+              <cell>
+        201
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Have not donated blood in past year
+      </cell>
+              <cell>
+        1,032
+      </cell>
+              <cell>
+        1,226
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Total
+      </cell>
+              <cell>
+        1,271
+      </cell>
+              <cell>
+        1,427
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <!--Question 15-->
+      <slide>
+        <title>Exercise 15</title>
+        <p>
+      Analyze these data to address the question of whether American men and women differ with regard to donating blood.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 15a: </title>
+        <p>
+        Are the validity conditions met?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15b: </title>
+        <p>
+        State the null and alternative hypothesis using full sentences.  (Do males - females)
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15c: </title>
+        <p>
+        Calculate the proportion of male blood donors and female blood donors.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15d: </title>
+        <p>
+        Create a chart that compares these two proportions.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15e: </title>
+        <p>
+        Calculate the standardized statistic and the p-value.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15f: </title>
+        <p>
+        Make a conclusion regarding your null and alternative hypothesis in light of the p-value you calculated.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15g: </title>
+        <p>
+        Calculate a 95% confidence interval for the difference between the proportion of each gender who donate blood.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15h: </title>
+        <p>
+        Interpret your confidence interval, giving all necessary context.
+      </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>11-3 : Least squares regression</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Predicting height from footprints</title>
+      <slide>
+        <p>Can a footprint taken at the scene of a crime help to predict the height of the criminal? In other words, is there an association between height and foot length? To investigate this question, a sample of 20 statistics students measured their height (in inches) and their foot length (in centimeters).</p>
+      </slide>
+      <!--  Question 1  -->
+      <slide>
+        <title>Exercise 1a: </title>
+        <p>
+                What are the observational units in this study?
+            </p>
+      </slide>
+      <slide>
+        <title>Exercise 1b: </title>
+        <p>
+                Identify the two variables recorded for each observational unit. Which is the explanatory variable, and which is the response? Also classify these variables as categorical or quantitative.
+            </p>
+      </slide>
+      <slide>
+        <title>Exercise 1c: </title>
+        <p>
+                Is this an observational study or a randomized experiment?
+            </p>
+      </slide>
+      <slide>
+        <title>Exercise 1d: </title>
+        <p>
+                The sample data for the 20 students appear in the <url href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2">Corr/Regression applet</url>
+        </p>
+        <p>
+                Open the applet and look at the scatterplot for the data already there. Describe the association between the variables as revealed in the scatterplot. (Hint: Remember to comment on direction, strength, and form of association as well as unusual observations.)
+            </p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--  Question 3 -->
+        <p>Would you say that a straight line could summarize the relationship between height and foot length reasonably well?</p>
+      </slide>
+      <!--  Question 4  -->
+      <slide>
+        <title>Exercise 3</title>
+        <p>
+        Check the <term>Show Movable Line</term> box to add a blue line to the scatterplot. If you place your mouse over one of the green squares at the ends of the line and drag, you can change the slope of the line. You can also use the mouse to move the green dot up and down vertically to change the intercept of the line.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 3a: </title>
+        <p>
+            Move the line until you believe your line "best" summarizes the relationship between height and foot length for these data. Write down the resulting equation for your line (using traditional statistical notation).
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 3b: </title>
+        <p>
+            Why do you believe that your line is "best"?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 3c: </title>
+        <p>
+            Did all students in your class obtain the same line/equation?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 3d: </title>
+        <p>
+            How can we decide whether your line provides a better fit to the data than other students' lines? Suggest a criterion for deciding which line "best" summarizes the relationship.
+        </p>
+      </slide>
+      <slide>
+        <p>One way to draw the best fit line is to minimize the distance of the points to the line (these distances are called <em>residuals</em>).</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--  Question 5 -->
+        <p>Would points above the line have a positive or negative residual, or is it impossible to tell? What about points below the line?</p>
+      </slide>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>A <term>residual</term> is the difference between an observed response and the corresponding prediction made by the least squares regression line (residual = observed − predicted). Thus, negative residuals occur when points are below the best fit line and positive residuals occur when points are above the best fit line.</p>
+        </remark>
+      </slide>
+      <!--  Question 6  -->
+      <slide>
+        <title>Exercise 5</title>
+        <p>
+        Check the <term>Show Residuals</term> box to visually represent these residuals for your line on the scatterplot. The applet also reports the sum of the values of the residuals (<term>SAE</term>). SAE stands for "sum of the absolute errors." The acronym indicates that we need to make residuals positive before we add them up and that sometimes people call residuals "errors." 
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 5a: </title>
+        <p>
+            Record the SAE value for your line. What is the best (lowest) SAE in the class?
+        </p>
+      </slide>
+      <!--  Question 7  -->
+      <slide>
+        <title>Exercise 6</title>
+        <p>
+        It turns out that a more common criterion for determining the “best” line is to instead look at the sum of the squared residuals (<term>SSE</term>). This approach is similar to simply adding up the residuals but is even more strict in not letting individual residuals get too large. Check the <term>Show Squared Residuals</term> box to visually represent the squared residual for each observation. Note that we can visually represent the squared residual as the area of a square where each side of the square has length equal to the residual.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 6a: </title>
+        <p>
+            What is the SSE (sum of squared residuals) for your line? What is the best (lowest) SSE in the class?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 6b: </title>
+        <p>
+            Now continue to adjust your line until you think you have minimized the sum of the squared residuals. Report your new equation and your new SSE value. What is the best SSE in the class?
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 2: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>The least squares regression line minimizes the sum of squared residuals.</p>
+        </remark>
+      </slide>
+      <!--  Question 8  -->
+      <slide>
+        <title>Exercise 7</title>
+        <p>
+        Now check the <term>Show Regression Line</term> box to determine and display the equation for the line that actually does minimize (as can be shown using calculus) the sum of the squared residuals.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 7a: </title>
+        <p>
+            Record the equation of the least squares regression line by indicating the appropriate slope and intercept of the line. Note that we've used variable names in the equation, not generic x and y. And put a caret ("hat") over the y variable name to emphasize that the line gives predicted values of the y (response) variable.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7b: </title>
+        <p>
+            Did everyone in your class obtain the same equation?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7c: </title>
+        <p>
+            Is the slope positive or negative? Explain how the sign of the slope tells you about whether your data display a positive or a negative association.
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <!--  Notation  -->
+          <p>
+        The equation of the best fit line is written as <m>\hat{y} = a + bx</m>, where
+        <ul>
+              <li>
+                <p>
+                  <m>a</m> is the y-intercept
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>b</m> is the slope
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>x</m> is a value of the explanatory variable
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\hat{y}</m> is the predicted value for the response variable
+                </p>
+              </li>
+            </ul>
+          </p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>For a given dataset, the signs (positive or negative) for the correlation coefficient and the slope of the regression line must be the same.</p>
+        </remark>
+      </slide>
+      <!--  Question 9  -->
+      <slide>
+        <title>Exercise 8</title>
+        <p>
+        Let's investigate what the slope means in the context of height and foot length.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 8a: </title>
+        <p>
+            Use the least squares regression line to predict the height of someone whose foot length is 28 cm. (Simply plug in the value of 28 cm for foot length in the equation of the line.)
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8b: </title>
+        <p>
+            Use the least squares regression line to predict the height of someone whose foot length is 29 cm.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8c: </title>
+        <p>
+            By how much do your predictions in (a) and (b) differ? Does this number look familiar? Explain.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8d: </title>
+        <p>
+            Interpret the slope in context:
+The slope of the regression line predicting height based on foot length is ______, meaning that for every additional ______ cm increase in foot length, the predicted height increases by ______ inches.
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 5: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>The <term>slope</term> coefficient of a least squares regression model is interpreted as the predicted change in the response (<m>y</m>) variable for a one-unit change in the explanatory (<m>x</m>) variable.
+</p>
+        </remark>
+      </slide>
+      <!--  Question 10  -->
+      <slide>
+        <title>Exercise 9</title>
+        <p>
+        Let's investigate the meaning of the y-intercept in the context of height and foot length.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 9a: </title>
+        <p>
+            Use the least squares regression line to predict the height of someone who has a foot length of 0 cm.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 9b: </title>
+        <p>
+            Your answer to (a) should look familiar. What is this value?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 9c: </title>
+        <p>
+            Explain how your prediction of the height of someone whose foot length is 0 cm is an example of extrapolation.
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 6: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>The <term>y-intercept</term> of a regression line is interpreted as the predicted value of the response variable when the explanatory variable has a value of zero (though be wary of extrapolation (see the next Key Idea) in interpreting the intercept or other values outside the original data range).
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Remark 7: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>Predicting values for the response variable for values of the explanatory variable that are outside of the range of the original data is known as <term>extrapolation</term> and can give very misleading predictions.</p>
+        </remark>
+      </slide>
+      <!--  Question 11  -->
+      <slide>
+        <title>Exercise 10</title>
+        <p>
+        Earlier, we explored the notion of a residual as the distance of a point to a line.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 10a: </title>
+        <p>
+            Using the equation for the best fit line that you reported in question 8, find the residual for the person whose foot length is 32 centimeters and height is 74 inches. Note: Find this value by taking the actual height and subtracting the person's predicted height from the equation.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 10b: </title>
+        <p>
+            Is this person's dot on the scatterplot above or below the line? How does the residual tell you this?
+        </p>
+      </slide>
+      <slide>
+        <p>Residuals are helpful for identifying unusual observations. But not all observations of interest have large residuals.
+</p>
+      </slide>
+      <!--  Question 12  -->
+      <slide>
+        <title>Exercise 11</title>
+        <p>
+        Uncheck the <term>Show Movable Line</term> box to remove it from the display and check the <term>Move observations</term> box.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 11a: </title>
+        <p>
+            Now click on one student's point in the scatterplot and drag the point up and down (changing the height, without changing the foot length, the original regression line will remain in grey). Does the regression line change much as you change this student's height?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 11b: </title>
+        <p>
+            Press Revert and repeat (a) using a student with a very small x (foot size) value and then a point with an x value near the middle and then a point with a very large x value. Which of these seem(s) to have the most influence on the least squares regression line? Explain.
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 8: </title>
+        <remark>
+          <!--  Key Idea  -->
+          <p>An observation or set of observations is considered <term>influential</term> if removing the observation from the dataset substantially changes the values of the correlation coefficient and/or the least squares regression equation. Typically, observations that have extreme explanatory variable values (far below or far above <m>\bar{x}</m>) are potentially influential. They may not have large residuals, having pulled the line close to them.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>Residuals also help us measure how accurate our predictions are from using the regression line. In particular, we can compare the “prediction errors” from the regression line to the prediction errors if we made no use of the explanatory variable.</p>
+      </slide>
+      <!--  Question 13  -->
+      <slide>
+        <title>Exercise 12</title>
+        <p>
+        Press the <term>Revert</term> button to reload the original dataset. Recheck the <term>Show Movable Line</term> box to redisplay the blue line. Notice that this line is flat at the mean of the <m>y</m> (height) values.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 12a: </title>
+        <p>
+            Check the Show Squared Residuals box (under the Movable Line information) to determine the SSE if we were to use the average height as the predicted value for every x (foot size). Record this value.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 12b: </title>
+        <p>
+            What is the slope of this line?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 12c: </title>
+        <p>
+            If the slope of the best fit line is zero, our data shows ______ (positive/negative/no) association between the explanatory and response variables.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--  Question 14 -->
+        <p>Now compare this to the SSE value from the regression line. Which is smaller? Why does that make sense?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Coefficient of Determination </title>
+      <slide>
+        <title>Remark 9: </title>
+        <remark>
+          <!--  Question 15  -->
+          <p>A quantity related to the correlation coefficient is called the coefficient of determination, or R-squared (R²).
+To measure how much the regression line decreases the "unexplained variability" in the response variable, we can calculate the percentage reduction in SSE:
+<me>
+    R^2 = \frac{\operatorname{SSE}(\bar{y}) - \operatorname{SSE}(\text{regression line})}{\operatorname{SSE}(\bar{y})}
+</me>
+          </p>
+          <p>The <term>coefficient of determination</term> (<m>R^2</m>) is the percentage of total observed variation in the response variable (height) that is accounted for by changes (variability) in the explanatory variable (foot length).
+</p>
+        </remark>
+      </slide>
+      <!--  Question 15a -->
+      <slide>
+        <title>Exercise 14a: </title>
+        <p>
+            Find <m>R^2</m> and report it.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 14b: </title>
+        <p>
+            Complete the following statement: The coefficient of determination is ____​​_ ; this means that ______ % of the variation in people's ______ is attributable to changes in their ______.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 14c: </title>
+        <p>
+            Find the value of the correlation coefficient using the applet and confirm that when you square the correlation coefficient you get the same number as the applet reports for the coefficient of determination.
+        </p>
+      </slide>
+      <slide>
+        <p>If we think of <m>\hat{y} = \bar{y}</m> as the "worst" line (no association with <m>x</m>), then we are seeing how much better the actual line is than this worst line. The best possible line would have zeros for all of the residuals and would have an <m>R^2</m> of 100%.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring further</title>
+      <slide>
+        <title>Exercise 15</title>
+        <!--  Question 16 -->
+        <p>What other variables could explain variation in height?</p>
+      </slide>
+      <slide>
+        <p>The figure below illustrates which people in the sample are men and which are women and
+then plots the least squares regression line separately for men and women.</p>
+      </slide>
+      <slide>
+        <title>Figure 10: </title>
+        <figure xml:id="fig-11-3">
+          <image source="11-3/height-vs-foot.png">
+            <shortdescription>A scatter plot with color-coded dots and regression lines that closely fit the respective colors. The male line is higher than the female line. The two lines have similar slopes.
+        </shortdescription>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--  Question 17 -->
+        <p>How do the female foot lengths tend to compare to the male foot lengths? How do the female heights tend to compare to the male height?</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--  Question 18 -->
+        <p>What do you notice about the slopes and intercepts for the two lines? How do you interpret these differences in this context?</p>
+      </slide>
+      <slide>
+        <p>The least squares regression line for men is <m>\text{predicted height} = 44.03 + 0.8561(\text{foot length})</m>,
+and the least squares regression line for women is <m>\text{predicted height} = 45.90 + 0.7152(\text{foot length})</m> .</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--  Question 19 -->
+        <p>What do you think the R² will be just for the men? Just for the women? How do you think these values will compare to the overall R² of 0.506? Why?</p>
+      </slide>
+      <slide>
+        <p>In this case, the <m>R^2</m> for the female-only data is 0.116 and for the male-only data is 0.267. Both groups have lower <m>R^2</m> values than the overall <m>R^2</m>. <m>R^2</m> measures how close the observations are to their respective lines. When we examine only the female data, the residuals are large relative to the smaller variation in female heights. Whereas the combined line (ignoring sex) has similar residuals, they are smaller compared to the larger total variation in heights.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

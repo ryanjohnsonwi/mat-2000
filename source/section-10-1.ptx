@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_10-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing multiple means: Simulation-based approach</title>
+
+<subsection> 
+ <title>Exercise and brain volume</title>
+<p>Brain size typically shrinks as people age past adulthood, and such shrinkage may be 
+linked to dementia. Therefore, any intervention that can protect against brain shrinkage 
+could help to protect the elderly against dementia and Alzheimer's disease. Researchers 
+in China recently investigated whether different kinds of exercise/activity might help 
+to prevent brain shrinkage or perhaps even lead to an increase in brain size 
+(<url href="http://doi.org/10.3233/JAD-2012-120079">Mortimer et al., 2012</url>).</p>
+<p>The researchers randomly assigned elderly adult volunteers into four activity groups: 
+tai chi, walking, social interaction, and no intervention. Except for the group with no 
+intervention, each group met for about an hour three times a week for 40 weeks to 
+participate in their assigned activity. The tai chi group was led by a tai chi master 
+and an assistant, the walking group walked around a track, the social interaction group 
+met at a community center and discussed topics that interested them, and the no-intervention 
+group just received four phone calls during the study period. A total of 120 participants 
+started the study, and 13 dropped out along the way, so 107 completed the study.</p>
+<p>Each participant had an MRI to determine brain size before the study began and again at 
+its end. The researchers measured the percentage increase or decrease in brain size during 
+that time. They thought that physical activity would help increase brain size; hence they 
+anticipated that the tai chi and walking groups would tend to show larger increases in brain 
+size during the study than the other activity groups.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<activity>
+ <!--Question 1-->
+<statement>
+<p>What is the main research question that the researchers hoped to answer?</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+<activity>
+
+ <!--Question 2-->
+<statement>
+<p>Identify the observational units in this study.</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Identify the explanatory and response variables in this study. Indicate whether they 
+are quantitative or categorical. If they are categorical, indicate how many categories. </p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>What type of study was this: an experiment or an observational study? Are the responses 
+of the participants in one treatment group paired with or independent of the responses of 
+the participants in other treatment groups?</p>
+</statement>
+</activity>
+
+<p>We need a procedure that considers information from across all four groups to allow 
+for comparing all four groups simultaneously. When we compared two groups, the null hypothesis 
+can be written in terms of no association between the explanatory and response variables, 
+whereas the alternative asserts that there is an association between the explanatory and 
+response variables. More specifically, the null hypothesis asserts that all four long-run 
+means are equal, and the alternative states that at least one long-run mean differs from 
+the others.
+</p>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>State the null and the alternative hypotheses, in symbols and in words, in the 
+context of this study. </p>
+</statement>
+</activity>
+
+<p>The researchers calculated the percentage change in size of each participant's brain. 
+If a person's brain size increased, then this percentage change was positive; if brain 
+size decreased, then this percentage change was negative. These data can be found in 
+the file <url href="https://static-content2.zybooks.com/isi/data/chap9/Brain.txt">Brain</url>.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+<activity> 
+ <!--Question 6-->
+  <introduction>
+    <p>Paste the data into the 
+    <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+    Multiple Means applet</url> and press <em>Use Data</em>. The applet will produce a dotplot and 
+    descriptive statistics. Then check the <em>Show Groups</em> box. Check the <em>Boxplots</em> 
+    box to overlay those as well.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>Record the means and standard deviations in the table and provide estimates of the five-number summaries of each group from the boxplots.
+      </p>
+      <table>
+      <tabular><row header="yes" bottom="minor">
+      <cell left="minor" right="minor">Group</cell>
+      <cell left="minor" right="minor">Sample size</cell>
+      <cell left="minor" right="minor">Mean</cell>
+      <cell left="minor" right="minor">SD</cell>
+      <cell left="minor" right="minor">Minimum</cell>
+      <cell left="minor" right="minor">Lower quartile</cell>
+      <cell left="minor" right="minor">Median</cell>
+      <cell left="minor" right="minor">Upper quartile</cell>
+      <cell left="minor" right="minor">Maximum</cell>
+      </row>
+      <row header="yes" bottom="minor"><cell left="minor" right="minor">No interaction</cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell></row>
+      <row header="yes" bottom="minor"><cell left="minor" right="minor">Social</cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell></row>
+      <row header="yes" bottom="minor"><cell left="minor" right="minor">Walking</cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell></row>
+      <row header="yes" bottom="minor"><cell left="minor" right="minor">Tai chi</cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell><cell left="minor" right="minor"></cell></row>
+      </tabular></table>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Which activity group tended to have the largest increase in brain size percentage change? 
+        Which tended to have the smallest increase (i.e., largest decrease)? 
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Describe what the graphs and statistics reveal about whether the four activities appear to 
+differ with regard to percentage change in brain size for the participants in this study.</p>
+</statement>
+</activity>
+
+<remark> 
+ <!--Question 8-->
+<p>Suppose for the moment that there really is no effect of the different activities on 
+percentage change in brain size.</p>
+</remark>
+
+<activity>
+ <!--Question 8a-->
+<statement>
+<p>Would it be possible to obtain sample means as far apart as these four are in this sample?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 8b-->
+<statement>
+<p>Describe a general process for assessing how unlikely it would be, when the null 
+hypothesis is true, to obtain sample means as far apart as these four are.</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences (3S Strategy)</title>
+<p><term>Statistic</term>: To minimize the chance of making a Type I error, we won't run 
+six different tests comparing each group to each other. So, instead we need a single statistic 
+to help test the overall null hypothesis of no association.</p>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>The first step in applying the 3S strategy is to decide on a statistic that measures how far 
+apart the sample means are. We could focus on the difference between the max x̄ and the min x̄ 
+values that you identified in question 6b. Why might this not be the best statistic to use?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>Propose an alternative statistic to use for this purpose. In other words, come up with a 
+formula based on the four sample means that will result in a single number that summarizes 
+how far apart the four sample means are. (Hint: You should be able to calculate the value of 
+your statistic from the observed sample data.)</p>
+</statement>
+</activity>
+
+<p>When we compared means between two groups in Chapter 6 using simulation-based approaches, 
+we used the difference between the two means for the statistic. But in this study involving 
+four groups, there are six different pairs of groups for which we could take the differences 
+in means.</p>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Suggest how you might combine those six differences into one statistic.</p>
+</statement>
+</activity>
+
+<p>One suggestion for this statistic is to calculate the mean of the absolute values of the 
+differences in means (called Mean Group Diff, for mean group differences):
+</p>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Explain why it's important to take the absolute values before averaging the six differences.</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>What is the value of the Mean Group Diff statistic for the exercise data, as shown in the applet?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>What types of values will the Mean Group Diff statistic have if the null hypothesis is true 
+(large, small, positive, negative)? If there is strong evidence against the null hypothesis?</p>
+</statement>
+</activity>
+
+<p><term>Simulate</term></p>
+<activity> 
+ <!--Question 15-->
+  <introduction>
+    <p>Suppose that you were to conduct a tactile simulation to generate many possible values of 
+    the Mean Group Diff statistic that could have happened if the null hypothesis were true, that 
+    is, by random chance alone. As you didin the simpler case with comparing just two means, you 
+    can use index cards here. Answer (a)-(f) about what else needs to be kept in mind:</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        How many cards will you need?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Do the cards just need to be certain colors, or do they need something written on them, and if so, what?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        When you shuffle and deal, how many piles will you make?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        How many cards will you place in each pile?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        What should you be recording after the completion of each shuffle and deal?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        What else do you need to do to find the p-value?
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<p>Instead of doing the tactile simulation (which would be fun, of course, but time consuming) 
+let us use the 
+<url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+Multiple Means applet</url> to run the simulation with the 
+<url href="https://static-content2.zybooks.com/isi/data/chap9/Brain.txt">Brain</url> data. Check 
+the <em>Show Shuffle Options</em> box in the applet. Enter 1 for <em>Number of 
+Shuffles</em> and press <em>Shuffle Responses</em>. Notice in the <em>Most Recent 
+Shuffle</em> data window, the <em>Treatment</em> column has not changed, but the <em>
+BrainChange</em> column has mixed up all its values. If you select the <em>Plot</em> radio 
+button, you will see the new dotplots.
+</p>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Notice that the new dotplots and statistics are produced for the shuffled data. The individual with the 
+smallest percentage change, originally in the walking group, is now in which group? Report the value of 
+the Mean Group Diff statistic for the shuffled data. Is this value more extreme than the observed value 
+of the Mean Group Diff statistic from the observed data?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 17-->
+<statement>
+<p>Press Shuffle Responses again, with the Plot option selected. Notice the applet pooling all the 
+responses together and then randomly reassigning them to their new groups. What did you get for the 
+Mean Group Diff value for these shuffled responses?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 18-->
+<statement>
+<p>Press Shuffle Responses three more times. Record the three new values of the Mean Group Diff statistic 
+for the shuffled data. Are these all the same? Are any of them more extreme than the observed value of 
+the Mean Group Diff statistic from the experimental data?</p>
+</statement>
+</activity>
+
+<activity> 
+ <!--Question 19-->
+  <introduction>
+    <p>Now enter 995 for the <em>Number of Shuffles</em>, producing a total of 1,000 shuffles.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Describe the shape of the null distribution of the Mean Group Diff statistic. Is it symmetric or skewed? 
+        If it is skewed, in which direction is it skewed?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Is the null distribution centered at zero? Explain why your answer makes sense.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<p><term>Strength of evidence</term></p>
+
+<activity> 
+ <!--Question 20-->
+  <introduction>
+    <p>Now you will calculate a p-value, as you have done from simulated null distributions many 
+    times before, in order to assess the strength of evidence that the experimental data provide 
+    against the null hypothesis that activity has no effect on change in brain size.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        To calculate the p-value, you will count how many of the simulated Mean Group Diff 
+        statistics are equal to ______ or (larger/smaller). (Review your answer to 
+        question 14 to consider what values are “more extreme” than those observed.)
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Check the Count Samples box in the applet and then enter the observed value of the Mean Group Diff statistic. Report the p-value.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        You should find that the p-value is fairly close to a common cutoff value for assessing statistical 
+        significance. So, go ahead and produce 9,000 more shuffles to produce a more accurate estimate of 
+        the p-value (there will be a pause). Report this p-value.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Interpret this p-value: It is the probability of obtaining a Mean Group Diff 
+        statistic of ______ or ______, assuming that ______.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Based on this p-value, evaluate the strength of evidence: The experimental data provide ______ evidence 
+        against the null hypothesis that the activity group has no effect on percentage change in brain size.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 21</title>-->
+  <introduction>
+    <p>Significance:</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Summarize your conclusion based on the p-value.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Does this analysis allow you to determine which activities differ significantly from which others 
+        with regard to percentage change in brain size? Explain why or why not.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 22-->
+<statement>
+<p>Estimation: Based on what you learned in earlier chapters, suggest how you might go about estimating 
+the magnitude of the difference in the long-run average percentage change in brain size between the tai 
+chi and no-intervention groups. (You will see a method for doing this later)</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions</title>
+
+<activity>
+ <!--Question 23-->
+<statement>
+<p>Generalization: To what population would you feel comfortable generalizing these results?</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 24-->
+<statement>
+<p>Causation: Would you feel comfortable with drawing a cause-and-effect conclusion from this study? 
+Between what two variables? Explain why or why not. </p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead</title>
+<activity>
+ <!--Question 25-->
+<statement>
+<p>Looking back: Did anything about the design and conclusions of this study concern you? Issues you may 
+want to critique include: The match between the research question and the study design, how the experimental 
+units were selected, how the treatments were assigned to the experimental units, how the measurements were 
+recorded, the number of experimental units in the study, whether what we observed is of practical value.</p>
+</statement>
+</activity>
+
+<activity>
+ <!--Question 26-->
+<statement>
+<p>Looking ahead: What should the researchers' next steps be to fix the limitations or build on this 
+knowledge?</p>
+</statement>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-7-4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Data and Formulas</title>
+
+<subsection xml:id="subsec-Learning-Goals">
+  <title>Learning Goals</title>
+<p>
+<ul>
+<li><em>Compare two sample means numerically and graphically.</em></li>
+<li><em>Carry out a simulation-based analysis to investigate the difference between two population means.</em></li>
+<li><em>Carry out a theory-based analysis to investigate the difference between two population means.</em></li>
+</ul>
+</p>  
+</subsection>
+
+<subsection> 
+ <title>Data</title>
+ 
+<table>
+ <title> References </title>
+<tabular>
+<col width="33%"/>
+<col width="33%"/>
+<col width="33%"/>
+<row header="yes">
+<cell><p>Section</p></cell>
+<cell><p>Data</p></cell>
+<cell><p>Reference</p></cell>
+</row>
+<row>
+<cell><p>Example: Comparing two groups: <br/>Quantitative response</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/OldFaithful.csv">OldFaithful.csv</url></p></cell>
+<cell><p><url href="http://www.geyserstudy.org/">GOSA (1978)</url><br/><url href="http://www.geyserstudy.org/">GOSA (2003)</url></p></cell>
+</row>
+<row>
+<cell><p>Supplemental Exploration: Comparing two groups: <br/>Quantitative response</p></cell>
+<cell><p></p></cell>
+<cell><p><url href="https://doi.org/10.1080/10691898.1995.11910492">Short et al. (JSE 2017)</url></p></cell>
+</row>
+<row>
+<cell><p>Example: Comparing two means: <br/>Simulation-based approach</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/DungBeetles.csv">DungBeetles.csv</url></p></cell>
+<cell><p><url href="http://www.doi.org/10.1016/j.cub.2012.12.034">Dacke et al. (Curr. Biol. 2013)</url></p></cell>
+</row>
+<row>
+<cell><p>Supplemental Exploration: Comparing two means: <br/>Simulation-based approach</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/Sleep.csv">Sleep.csv</url></p></cell>
+<cell><p><url href="https://doi.org/10.1038/81756">Stickgold et al.(Nat. Neurosci. 2000)</url></p></cell>
+</row>
+<row>
+<cell><p>Example: Comparing two means: <br/>Theory-based approach</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/VideogameAgression.csv">VideogameAgression.csv</url></p></cell>
+<cell><p><url href="https://dx.doi.org/10.1371%2Fjournal.pone.0111790">Hollingdale and Greitemeyer (PLOS ONE 2014)</url></p></cell>
+</row>
+<row>
+<cell><p>Supplemental Exploration: Comparing two means: <br/>Theory-based approach</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/CloseFriends.csv">CloseFriends.csv</url></p></cell>
+<cell><p><url href="https://gss.norc.org/">General Social Survey (2004)</url></p></cell>
+</row>
+<row>
+<cell><p>Investigation: Memorizing letters</p></cell>
+<cell><p><url href="https://static-resources.zybooks.com/ISI/Ch07/memorizing_letters.csv">memorizing_letters.csv</url></p></cell>
+<cell><p></p></cell>
+</row>
+</tabular>
+</table>
+
+</subsection>
+
+<subsection> 
+ <title>Formulas for two means</title>
+<p>
+<ul>
+<li><m>\mu_1</m> and <m>\mu_2</m> are the population means for the two groups.</li>
+<li><m>n_1</m> and <m>n_2</m> are the sample sizes for the two groups.</li>
+<li><m>\overline{x}_1</m> and <m>\overline{x}_2</m> are the sample means for the two groups.</li>
+<li><m>s_1</m> and <m>s_2</m> are the sample standard deviations for the two groups.</li>
+<li><m>SD(\overline{x}_1 - \overline{x}_2)</m> is the standard deviation of the statistic.</li>
+<li><m>\text{SE} = \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } </m> is the theory-based standard error that approximates SD of the null distribution and <m>SD(\overline{x}_1 - \overline{x}_2) </m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> t =  \frac{\big(\overline{x}_1 - \overline{x}_2 \big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two independent means.</li>
+<li><m> t =\frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{SE}  =  \frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{ \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } }  </m> is the theory-based standardized statistic for two independent means.</li></ul>
+</ul>
+<ul><li><m> t =  \frac{\big(\overline{x}_1 - \overline{x}_2 \big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two independent means.</li>
+<li><m> t =\frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{SE}  =  \frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{ \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } }  </m> is the theory-based standardized statistic for two independent means.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m> (\overline{x}_1 - \overline{x}_2) \pm 2 \times SD(\overline{x}_1 - \overline{x}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_1 - \mu_2 </m>.</li>
+<li><m>(\overline{x}_1 - \overline{x}_2) \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_1 - \mu_2</m>, where the multiplier comes from a t distribution with 
+<m> \frac{ \big( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  \big)^2 }{ \frac{1}{n_1-1}\big( \frac{s_1^2}{n_1} \big)^2 + \frac{1}{n_2-1}\big( \frac{s_2^2}{n_2}  \big)^2  } </m> 
+
+degrees of freedom.</li></ul>
+</ul>
+<ul><li><m> (\overline{x}_1 - \overline{x}_2) \pm 2 \times SD(\overline{x}_1 - \overline{x}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_1 - \mu_2 </m>.</li>
+<li><m>(\overline{x}_1 - \overline{x}_2) \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_1 - \mu_2</m>, where the multiplier comes from a t distribution with 
+<m> \frac{ \big( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  \big)^2 }{ \frac{1}{n_1-1}\big( \frac{s_1^2}{n_1} \big)^2 + \frac{1}{n_2-1}\big( \frac{s_2^2}{n_2}  \big)^2  } </m> 
+
+degrees of freedom.</li></ul>
+</p>
+</subsection>
+
+</section>

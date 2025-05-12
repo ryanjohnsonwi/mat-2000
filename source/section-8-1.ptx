@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-8-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Paired designs</title>
+
+<subsection> 
+ <title>Rounding first base</title>
+<p>Imagine you are at the plate in baseball and have hit a hard line drive. You want to 
+try to stretch your hit from a single to a double. Does the path that you take to “round” 
+first base make much of a difference? For example (see the figure below), is it better to 
+take a "narrow angle" or a "wide angle" around first base? (This exploration is based on 
+an actual study reported in <url href="https://fsu.catalog.fcla.edu/permalink.jsp?23FS027575641">
+a master's thesis by W. F. Woodward in 1970.</url>)</p>
+
+<figure> 
+ <caption> Narrow angle versus wide angle </caption>
+<image source="8-1/first_base.png" width="70%">
+  <description>(for accessibility)</description>
+</image>
+</figure>
+
+<p>Think about designing a study to investigate this question.</p>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Identify the explanatory and response variables in this study.</p>
+</statement>
+<solution>
+  <p>
+    Explanatory: Narrow/wide angle, Response: Time it takes to run to second base
+  </p>
+</solution>
+</activity>
+
+<activity xml:id="q-8-1-2">
+ <!--Question 2-->
+  <statement>
+    <p>
+      How would you design an observational study to investigate this question? Explain why an observational study would not allow you to decide which base-running angle is better than the other.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Gather data on the time it takes players to run to second base by watching a bunch of games, then seeing if people who rounded first base using a wide angle tend to get to second base faster than those who took a narrow angle. We can't draw cause and effect conclusions because there are many confounding variables that haven't been controlled for through random assignment.
+    </p>
+  </solution>
+</activity>
+
+<activity xml:id="q-8-1-3">
+ <!--Question 3-->
+<statement>
+<p>Suppose 20 baseball players volunteered to participate in an experiment. 
+Suppose that you also plan to assign a single angle, either wide or narrow, 
+to each player. How would you decide which player ran with which base-running 
+angle?</p>
+</statement>
+<solution>
+  <p>
+    Randomly assign the 20 players to the two conditions (wide vs. narrow angle).
+  </p>
+</solution>
+</activity>
+
+<p>A reasonable experimental design would be to randomly assign 10 of the 20 
+players to run with the wide angle and the other 10 to run with the narrow angle.
+</p>
+<activity xml:id="q-8-1-4">
+ <!--Question 4-->
+<statement>
+<p>Some runners are faster than others. Explain how random assignment controls 
+for this, so that speed is not likely to be a confounding variable in this study.</p>
+</statement>
+<solution>
+  <p>
+    Random assignment should place some fast runners and some slow runners in each group, so runner speed is not a confounding variable.
+  </p>
+</solution>
+</activity>
+
+<p>Even though random assignment tends to balance out other variables (such 
+as speed) between the two groups, there's still a chance that most of the 
+fast runners could be in one group and most of the slow runners in the other 
+group. More importantly, there's likely to be a good bit of variability in 
+the runners' speeds, and that variability would make it harder to spot a 
+difference between the base-running angles even if one angle really is superior 
+to the other.</p>
+
+<activity xml:id="q-8-1-5">
+ <!--Question 5-->
+<statement>
+<p>Suggest a different way of conducting the experiment to make sure that 
+speed is completely balanced between the two groups.</p>
+</statement>
+<solution>
+  <p>
+    Have each player run both ways, once using the wide angle and once using the narrow angle.
+  </p>
+</solution>
+</activity>
+
+<definition>
+ <statement>
+<p>For a <term>paired design</term>, response values come in pairs, with 
+one response value in the pair for Group 1 and the other for Group 2. 
+Sometimes the pairs come from matching individuals to create groups of 
+two (we call this <term>paired design using matching</term>); sometimes 
+the pairs come from measuring the same individual twice, once under each 
+condition (we call this <term>paired design using repeated measures</term>). 
+For an <term>independent groups design</term>, each individual in a group is 
+unrelated to all the other individuals in the study. Each individual 
+provides only one response value.
+</p>
+</statement>
+</definition>
+
+<p>In this study each runner can use both base-running angles. That way we 
+can be sure that neither treatment has more of the fast or slow runners, and 
+we can also expect that differences in times for each runner will show 
+considerably less variability than individual running times.</p>
+
+<activity xml:id="q-8-1-6">
+  <statement>
+    <p>
+      What aspect of this experiment should be determined randomly? (Hint: The treatment is not determined randomly, because each runner experiences both treatments. But what other factor could still have an effect on the response unless it was randomized?)
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Randomly decide whether each player runs the wide angle or the narrow angle first.
+    </p>
+  </solution>
+</activity>
+
+<activity xml:id="q-8-1-7">
+ <!--Question 7-->
+<statement>
+<p>What do you suggest using as the variable to be analyzed with this 
+paired-design experiment? (Hint: Think of a better option than simply 
+analyzing the set of times with the wide angle and the set of times with 
+the narrow angle separately the way you would for an independent groups 
+design of the sort described in #3 and #4.)</p>
+</statement>
+<solution>
+  <p>
+    Difference in times
+  </p>
+</solution>
+</activity>
+
+<p>With a paired design, we analyze the differences in the response between 
+the two treatments. In this case we would calculate the difference in running 
+times between the wide and narrow angles for each player and then analyze the 
+sample of differences. You will learn how to do this in future sections.</p>
+<p>The order in which the players run with the two angles should be 
+determined randomly; otherwise, the order could be a confounding variable. 
+Perhaps players would be slower with their second angle because of fatigue 
+or perhaps they would be faster with their second angle if they were slow 
+to get warmed up. Randomizing the order takes away any worries about an 
+order effect.</p>
+<p>
+  So far you have seen three designs for this study. The first (<xref ref="q-8-1-2"/>) was observational. The second (<xref ref="q-8-1-3"/> and <xref ref="q-8-1-4"/>) was a randomized experiment with independent groups. The third (<xref ref="q-8-1-5"/> and <xref ref="q-8-1-6"/>) used a paired design with pairs created by repeated measures. 
+</p>
+
+</subsection>
+
+<subsection>
+  <title>Exploring Further</title>
+
+<activity xml:id="q-8-1-8">
+ <!--Question 8-->
+<statement>
+<p>Consider a fourth design: Suppose you have 20 players, as before, 
+and you have the time for each player in a 100-yard dash. Explain how you 
+could use this information to create pairs of runners that you expect to 
+be similar and how you would assign one runner in each pair to the narrow 
+angle and the other to a wide angle.</p>
+</statement>
+<solution>
+  <p>
+    Pair runners who have the same time in the 100 yard dash. Randomly assign one runner from each pair to run the wide angle and one to run the narrow angle.
+  </p>
+</solution>
+</activity>
+
+<activity xml:id="q-8-1-9">
+ <!--Question 9-->
+<statement>
+<p>Of the four designs (observational with independent groups, experimental 
+with independent groups, paired design using repeated measures, and paired 
+design using matching), which do you think is best for this context? 
+Explain why. (Hint: Pairing works best when the units in a pair are as 
+similar to each other as possible.)</p>
+</statement>
+<solution>
+  <p>
+    In the repeated measures design the individuals in the pair are exactly the same because they are the same person, this is the best study design.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>As noted in <xref ref="q-8-1-9"/>, pairing works best when the two units in a pair are as 
+similar as possible. When the units in a pair are not similar, pairing will 
+not be effective. Invent and describe an example where you think pairing 
+will be effective. Give the response and explanatory variable, how you 
+would create the pairs, and why you think pairing will be effective.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  One example:
+  </p>
+  <p>
+    In marriages, are males typically older than females? Pairs=married couples, pairing likely effective because couples will have experienced similar life events. Explanatory variable is (husband/wife) and response is age.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Invent and describe an example where you think pairing will not be 
+effective. Again, give the response and explanatory variable, how you would 
+create the pairs, and this time why you think pairing will not be effective.</p>
+</statement>
+<solution>
+  <p>
+    Responses will vary. One example is:
+  </p>
+  <p> 
+    Suppose that you want to investigate whether teenagers in the United Kingdom have read more Harry Potter books on average than teenagers in the United States. Explanatory variable: country (UK or U.S.), response variable: number of books read. There is no obvious way to pair teenagers from the two countries.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>For some contexts, the strategy of using repeated measures to create 
+pairs is either impossible or a bad idea. Invent and describe such a context. </p>
+</statement>
+<solution>
+  <p>
+    Responses will vary.  One example is:
+  </p>
+  <p>
+    If you are comparing different treatments on lab animals, say beetles, and the response variable can only be found by killing the beetle (i.e., measuring something that is internal ) then repeated measures is not possible.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>Pairing can also be used in the design of an observational study. 
+Revisit the observational study in #2, and suppose also that you have 
+times in the hundred yard dash for each of the 20 players. Explain how 
+you could use those times to create pairs. (Suppose that, of the 20 
+players, 12 used the wide angle and only 8 used the narrow angle. This 
+means you can create only 8 pairs.)</p>
+</statement>
+<solution>
+  <p>
+    Use the time of the 100-yard dash from the 8 players who rounded first with the narrow angle and match those times to the closest 8 times out of the 12 players who ran the wide angle. That will give 8 matched pairs. We didn't assign the angle, but we can still try to compare the most similar runners to each other.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

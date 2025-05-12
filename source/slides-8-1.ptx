@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>8-1 : Paired designs</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Rounding first base</title>
+      <slide>
+        <p>Imagine you are at the plate in baseball and have hit a hard line drive. You want to 
+try to stretch your hit from a single to a double. Does the path that you take to “round” 
+first base make much of a difference? For example (see the figure below), is it better to 
+take a "narrow angle" or a "wide angle" around first base? (This exploration is based on 
+an actual study reported in <url href="https://fsu.catalog.fcla.edu/permalink.jsp?23FS027575641">
+a master's thesis by W. F. Woodward in 1970.</url>)</p>
+      </slide>
+      <slide>
+        <title>Figure 1: </title>
+        <figure>
+          <caption> Narrow angle versus wide angle </caption>
+          <image source="8-1/first_base.png" width="70%">
+            <description>(for accessibility)</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <p>Think about designing a study to investigate this question.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Identify the explanatory and response variables in this study.</p>
+      </slide>
+      <slide xml:id="q-8-1-2">
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>
+      How would you design an observational study to investigate this question? Explain why an observational study would not allow you to decide which base-running angle is better than the other.
+    </p>
+      </slide>
+      <slide xml:id="q-8-1-3">
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Suppose 20 baseball players volunteered to participate in an experiment. 
+Suppose that you also plan to assign a single angle, either wide or narrow, 
+to each player. How would you decide which player ran with which base-running 
+angle?</p>
+      </slide>
+      <slide>
+        <p>A reasonable experimental design would be to randomly assign 10 of the 20 
+players to run with the wide angle and the other 10 to run with the narrow angle.
+</p>
+      </slide>
+      <slide xml:id="q-8-1-4">
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Some runners are faster than others. Explain how random assignment controls 
+for this, so that speed is not likely to be a confounding variable in this study.</p>
+      </slide>
+      <slide>
+        <p>Even though random assignment tends to balance out other variables (such 
+as speed) between the two groups, there's still a chance that most of the 
+fast runners could be in one group and most of the slow runners in the other 
+group. More importantly, there's likely to be a good bit of variability in 
+the runners' speeds, and that variability would make it harder to spot a 
+difference between the base-running angles even if one angle really is superior 
+to the other.</p>
+      </slide>
+      <slide xml:id="q-8-1-5">
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Suggest a different way of conducting the experiment to make sure that 
+speed is completely balanced between the two groups.</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>For a <term>paired design</term>, response values come in pairs, with 
+one response value in the pair for Group 1 and the other for Group 2. 
+Sometimes the pairs come from matching individuals to create groups of 
+two (we call this <term>paired design using matching</term>); sometimes 
+the pairs come from measuring the same individual twice, once under each 
+condition (we call this <term>paired design using repeated measures</term>). 
+For an <term>independent groups design</term>, each individual in a group is 
+unrelated to all the other individuals in the study. Each individual 
+provides only one response value.
+</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>In this study each runner can use both base-running angles. That way we 
+can be sure that neither treatment has more of the fast or slow runners, and 
+we can also expect that differences in times for each runner will show 
+considerably less variability than individual running times.</p>
+      </slide>
+      <slide xml:id="q-8-1-6">
+        <title>Exercise 6</title>
+        <p>
+      What aspect of this experiment should be determined randomly? (Hint: The treatment is not determined randomly, because each runner experiences both treatments. But what other factor could still have an effect on the response unless it was randomized?)
+    </p>
+      </slide>
+      <slide xml:id="q-8-1-7">
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>What do you suggest using as the variable to be analyzed with this 
+paired-design experiment? (Hint: Think of a better option than simply 
+analyzing the set of times with the wide angle and the set of times with 
+the narrow angle separately the way you would for an independent groups 
+design of the sort described in #3 and #4.)</p>
+      </slide>
+      <slide>
+        <p>With a paired design, we analyze the differences in the response between 
+the two treatments. In this case we would calculate the difference in running 
+times between the wide and narrow angles for each player and then analyze the 
+sample of differences. You will learn how to do this in future sections.</p>
+      </slide>
+      <slide>
+        <p>The order in which the players run with the two angles should be 
+determined randomly; otherwise, the order could be a confounding variable. 
+Perhaps players would be slower with their second angle because of fatigue 
+or perhaps they would be faster with their second angle if they were slow 
+to get warmed up. Randomizing the order takes away any worries about an 
+order effect.</p>
+      </slide>
+      <slide>
+        <p>
+  So far you have seen three designs for this study. The first (<xref ref="q-8-1-2"/>) was observational. The second (<xref ref="q-8-1-3"/> and <xref ref="q-8-1-4"/>) was a randomized experiment with independent groups. The third (<xref ref="q-8-1-5"/> and <xref ref="q-8-1-6"/>) used a paired design with pairs created by repeated measures. 
+</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring Further</title>
+      <slide xml:id="q-8-1-8">
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Consider a fourth design: Suppose you have 20 players, as before, 
+and you have the time for each player in a 100-yard dash. Explain how you 
+could use this information to create pairs of runners that you expect to 
+be similar and how you would assign one runner in each pair to the narrow 
+angle and the other to a wide angle.</p>
+      </slide>
+      <slide xml:id="q-8-1-9">
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Of the four designs (observational with independent groups, experimental 
+with independent groups, paired design using repeated measures, and paired 
+design using matching), which do you think is best for this context? 
+Explain why. (Hint: Pairing works best when the units in a pair are as 
+similar to each other as possible.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>As noted in <xref ref="q-8-1-9"/>, pairing works best when the two units in a pair are as 
+similar as possible. When the units in a pair are not similar, pairing will 
+not be effective. Invent and describe an example where you think pairing 
+will be effective. Give the response and explanatory variable, how you 
+would create the pairs, and why you think pairing will be effective.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Invent and describe an example where you think pairing will not be 
+effective. Again, give the response and explanatory variable, how you would 
+create the pairs, and this time why you think pairing will not be effective.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>For some contexts, the strategy of using repeated measures to create 
+pairs is either impossible or a bad idea. Invent and describe such a context. </p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Pairing can also be used in the design of an observational study. 
+Revisit the observational study in #2, and suppose also that you have 
+times in the hundred yard dash for each of the 20 players. Explain how 
+you could use those times to create pairs. (Suppose that, of the 20 
+players, 12 used the wide angle and only 8 used the narrow angle. This 
+means you can create only 8 pairs.)</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

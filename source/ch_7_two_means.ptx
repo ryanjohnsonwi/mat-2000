@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Chapters are enclosed with <chapter> tags. Use xml:id to -->
+<!-- uniquely identify the chapter.  The @xmlns:xi attribute  -->
+<!-- is needed if you use xi:include in this file             -->
+<chapter xml:id="ch_7_two_means" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- Change title when you have one: -->
+  <title>Comparing Two Means</title>
+  <!-- If the chapter has sections, there may be an introduction -->
+  <!-- before those sections. Note the <p> tags around content.  -->
+  
+  <xi:include href="./section-7-1.ptx"/>
+  <xi:include href="./section-7-2.ptx"/>
+  <xi:include href="./section-7-3.ptx"/>
+  <xi:include href="./section-7-4.ptx"/>
+  
+</chapter>

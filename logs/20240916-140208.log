@@ -1,0 +1,25 @@
+INFO    : PreTeXt-CLI version: 2.4.1
+
+INFO    : PreTeXt project found in `G:\Shared drives\MAT - 2000 Intro to Stats\code`.
+WARNING : Using CLI version 2.4.1 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.4.1.
+INFO    : Building with custom xsl G:\Shared drives\MAT - 2000 Intro to Stats\code\xsl\pretext-revealjs.xsl
+INFO    : Preparing to build into G:\Shared drives\MAT - 2000 Intro to Stats\code\..\slides.
+INFO    : XSL conversion of G:\Shared drives\MAT - 2000 Intro to Stats\code\source\slides-2-4.ptx by C:\Users\johnsor\AppData\Local\Temp\pretext_2t_nbn5l\pretext-revealjs.xsl
+INFO    : messages from the log for XSL processing (indented):
+INFO    :     * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+INFO    :     * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    :     * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    :     * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    :     * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    :     * ********************************************************************************
+INFO    :     * Conversion to reveal.js presentations/slideshows is experimental
+INFO    :     * Requests for additional specific constructions welcome
+INFO    :     * Additional PreTeXt elements are subject to change
+INFO    :     * ********************************************************************************
+INFO    : successful application of C:\Users\johnsor\AppData\Local\Temp\pretext_2t_nbn5l\pretext-revealjs.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-3-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Inference for a single quantitative variable</title>
+
+<subsection> 
+ <title>Sampling words (cont.)</title>
+<p>Let's reconsider the <em>population</em> of words in the <url href="https://www.loc.gov/exhibits/gettysburg-address/">Gettysburg Address</url>
+  you first looked at in a previous exploration. Suppose instead of looking at the proportion of short words (3 or fewer letters) we look at the
+  <em>number of letters per word</em>.</p>
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Is number of letters per word a quantitative or categorical variable? Why?</p>
+</statement>
+<solution>
+  <p>
+    Number of letters per word is quantitative.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Suggest a statistic (a single number) you could calculate from your sample that summarizes the number of letters per word variable.</p>
+</statement>
+<solution>
+  <p>
+    The average number of letters per word in the sample.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>What parameter are you hoping to estimate with your statistic? (Hint: Be clear how this relates to the population.)</p>
+</statement>
+<solution>
+  <p>
+    The average number of letters per word in the entire Gettysburg address (all 268 words).
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>How could we explore whether the sampling methods used previously are unbiased in estimating the parameter you identified in #3? What does it mean to be unbiased in this context?</p>
+</statement>
+<solution>
+  <p>
+    We would take several samples of the same number of words and calculate the average number
+    of letters in the words in each sample. Then we would compare the distribution of sample mean
+    word lengths to the parameter to see whether they consistently over- or under-estimate the
+    population parameter
+  </p>
+</solution>
+</activity>
+
+<figure> 
+ <caption> Population distribution for lengths of words (number of letters per word) in the Gettysburg address </caption>
+<image source="3-2/fig-3-2-1.png" width="50%">
+<description>A histogram of the population data. The x-axis is labeled Length and ranges from 0 to 12. The y-axis is labeled count and ranges from 0 to 60. The distribution is skewed to the right. The mean is 4.295, the SD is 2.123, and the pop size is 268.
+</description>
+</image>
+</figure>
+
+<definition>
+ <statement><p>A distribution of data is <term>skewed</term> if it is not symmetric and, instead, the bulk of
+ values tend to fall on one side of the distribution with a "longer tail" on the other. Right-skewed distributions
+ have their tail on the right, and left-skewed distributions have their tail on the left.</p>
+</statement>
+</definition>
+
+<p>With skewed data, we might prefer to measure the “center” of the distribution with the median rather than the mean.</p>
+
+<definition>
+ <statement><p>The <term>median</term> is the middle data value when the data are sorted in order from smallest
+to largest.</p>
+</statement>
+</definition>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>The mean is found to be 4.295 letters, do you think the median is larger or smaller than 4.295? Briefly explain your reasoning.</p>
+</statement>
+<solution>
+  <p>
+    Median is smaller because it is not affected by the words with larger numbers of letters.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>Summarize the behavior of this population. Recall that when we have a quantitative variable, we should talk about shape, center (using the mean and/or the median), variability (using the standard deviation), and outliers, as well as making sure that we are making comments relevant to the context of the study.</p>
+</statement>
+<solution>
+  <p>
+    The shape of the word lengths in the Gettysburg address is skewed to the right. The mean word
+    length is 4.295 letters and the standard deviation is 2.123 letters. There are no unusual word
+    lengths.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>To distinguish a quantitative variable from a categorical variable, we will use different
+symbols to refer to the statistics and parameters. In particular,</p>
+<table>
+<tabular>
+<row header="yes">
+<cell>Statistics</cell>
+<cell>Parameters</cell>
+</row>
+<row>
+<cell><m>\bar{x} =</m> sample mean</cell>
+<cell><m>\mu =</m> population mean</cell>
+</row>
+<row>
+<cell><m>s = </m> sample standard deviation</cell>
+<cell><m>\sigma = </m> population standard deviation</cell>
+</row>
+</tabular></table>
+</remark>
+
+<p>Note that we are focusing on the mean and the standard deviation.</p>
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Identify the values of <m>\mu</m> and <m>\sigma</m> for the length of words in the Gettysburg Address.</p>
+</statement>
+<solution>
+  <p>
+    <m>\mu = 4.295</m> letters and <m>\sigma = 2.123</m>.
+  </p>
+</solution>
+</activity>
+
+<p>To evaluate our sampling method for a quantitative variable, we want to see whether the means from different samples center around the population mean.</p>
+<activity>
+ <!--Question 7-->
+<statement>
+<p>What term do we use to describe a sampling method where the distribution of the statistic centers around the population mean?</p>
+</statement>
+</activity>
+
+<p>To evaluate our sampling method for a quantitative variable, we want to see whether the means from different samples center around the population mean.</p>
+<activity>
+ <!--Question 8-->
+<statement>
+<p>What term do we use to describe a sampling method where the distribution of the statistic centers around the population mean?</p>
+</statement>
+<solution>
+  <p>
+    Unbiased method
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 9-->
+<statement>
+  <p>Open the <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?population=gettysburg&amp;hideExtras=1">
+  Sampling Words applet</url>. Make sure that the Variable is set to "Length." Check the Show Sampling Options box, change the
+  Sample size to 5, and press Draw Samples.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary. See graphs below for one possible answer, where sample mean is 6.8.
+  </p>
+  <image source="3-2/exercise-9.png">
+  </image>
+</solution>
+</activity>
+
+<p>Notice that the graph on the left in the applet and in <xref ref="fig-3-2-2"/> is the population, the graph in the middle
+is your sample, and the mean of this sample is placed in the graph on the right. Fill in your results for the middle and
+right most graphs in <xref ref="fig-3-2-2"/>. Also indicate the value of the sample mean that you obtained.</p>
+<figure width="50%" xml:id="fig-3-2-2">
+ <caption> Outputs in the Sampling Words applet </caption>
+<image source="3-2/fig-3-2-2.png">
+<description>A screen shot of the sampling words applet which shows how the applet looks before sampling any repetitions.
+</description>
+</image>
+</figure>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>If we were to repeat the process in #9 thousands of times, predict the behavior of the distribution of sample means—the graph all the way to the right in the applet. (Shape? Center? Variability? Compared to the population?) Sketch your prediction, changing the horizontal axis scale if necessary.</p>
+</statement>
+<solution>
+  <p>
+    We might predict that the graph of sample means would be fairly bell-shaped and symmetric,
+    centered near 4.295 and have a smaller standard deviation than 2.119, the standard deviation of
+    words in the population.
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 11-->
+ <introduction>
+  <p>Change the Number of samples from 1 to 9999 (for 10,000 samples) and press Draw Samples.</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      Create a sketch of the distribution in the box below — including carefully labeling the horizontal
+      axis and indicating what each dot on the graph represents. (Hint: How many dots do you have? What
+      would you/the applet do to add one more dot to the graph?)
+    </p>
+    <image source="3-2/question-11-a.png" width="100%">
+      <description>An empty graph for plotting the sample means (x-axis from 0 to 1.0) and counts
+      (y-axis from 0 to 20). </description>
+    </image>
+  </statement>
+  <solution>
+    <p>
+      There are 10,000 dots, each represents the mean number of letters of a sample of 5
+      words. To add another dot, one must take another sample of 5 words and calculate the
+      average number of letters per word.
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Describe the shape of the distribution of sample means. How does it compare to the shape of the population?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The distribution of sample means is less variable and more symmetric (though still
+      slightly skewed right) compared to the population distribution of word lengths.
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      What is the mean of the sampling distribution of sample means? How does it
+      compare to the mean of the population?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      4.305, it is very close to the population mean of 4.295.
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      What is the standard deviation of the sampling distribution of sample means? How does it compare to the standard deviation of the population?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      0.948, it is much smaller than the standard deviation of the population.
+    </p>
+    <image source="3-2/exercise-11-d.png">
+    </image>
+  </solution>
+</task>
+</activity>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Does simple random sampling for quantitative data appear to be an unbiased sampling method? How are you deciding?</p>
+</statement>
+<solution>
+  <p>
+    It does appear to be unbiased as the mean of the sample statistics is very close to the population mean
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>Suppose we wanted less sample-to-sample variation in the sample means. What would you change about the sampling process?</p>
+</statement>
+<solution>
+  <p>
+    Increase the sample size.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>When taking random samples from a large population (more than 20 times the size of
+the sample), the distribution of sample means will</p>
+<p>
+<ol>
+<li>Center around the population mean (<m>\mu</m>)</li>
+<li>Have a standard deviation smaller than the population,
+  <m>SD(\bar{X})=\dfrac{\text{population standard deviation}}{\sqrt{\text{sample size}}}=\dfrac{\sigma}{\sqrt{n}}</m></li>
+<li>Be approximately normal when the sample size is large (by the <term>Central Limit Theorem</term> or if
+  the population distribution is normally distributed)</li>
+</ol>
+</p>
+</remark>
+
+<p>Like with proportions, we see that the sample mean (<m>\bar{x}</m>) is unbiased for estimating the population mean, but now we have a different formula for predicting the standard deviation of the statistic.</p>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>Use your applet output to verify that the standard deviation of sample means is
+approximately equal to <m>\sigma/\sqrt{n}</m></p>
+</statement>
+<solution>
+  <p>
+    <m>\frac{2.119}{\sqrt{5}} \approx 0.948</m> which is the same as the standard deviation of the distribution of sample
+    means.
+  </p>
+</solution>
+</activity>
+
+<p>The Central Limit Theorem tells us that we can also assume that the distribution of sample
+means is approximately normal when the sample size is large. How large is large? We cannot check
+the number of successes and failures because we are working with a quantitative variable. But in
+a similar manner, the sampling distribution will look normal as long as the population distribution
+is not too skewed. As we increase the sample size, the distribution of sample means will look more
+and more like a normal distribution. Generally, if the sample size is at least 20 we can assume
+that distribution of sample means is approximately normal. We also have a new case—the distribution
+of sample means will behave like a normal distribution for any sample size, if the population shape
+is itself approximately normal.</p>
+
+<activity>
+ <!--Question 15-->
+<statement>
+<p>Next you will change the sample size from 5 to 10. Predict how this will impact the shape, center,
+and variability of the distribution of sample means.</p>
+</statement>
+<solution>
+  <p>
+    We might predict that the shape will be more symmetric, the center will remain close to 4.295,
+    and the standard deviation will decrease.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Generate 10,000 random samples of 10 words. Sketch the resulting distribution
+of sample means, remembering to carefully label the horizontal axis. Were your predictions
+about how the increased sample size would impact the shape, center, and variability accurate?</p>
+</statement>
+<solution>
+  <p>
+    See graph below. Yes, predictions were accurate.
+  </p>
+  <image source="3-2/exercise-16.png">
+  </image>
+</solution>
+</activity>
+
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Using what you have seen so far, which is least likely:
+<ol>
+<li>Randomly picking one word from the Gettysburg Address and finding it be 6 letters or more.</li>
+<li>Randomly picking 5 words from the Gettysburg Address and finding the mean of the 5
+words to be 6 letters or more in length.</li>
+<li>Randomly picking 10 words from the Gettysburg Address and finding the mean of the 10
+words to be 6 letters or more in length.</li></ol>
+</p>
+<p>Explain your reasoning.</p>
+</statement>
+<solution>
+  <p>
+    Randomly picking 10 words and finding the mean of these words to be 6 letters or more is the
+    least likely because as the sample size increases from 1 to 5 to 10 the standard deviation of the
+    sampling distribution will be progressively smaller and a value of 6 will become further and
+    further in the tail of the distribution as the sample means cluster more closely around 4.295.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

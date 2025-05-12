@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>4-1 : Statistical inference: Confidence intervals</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <slide>
+      <p>A worksheet for Grace College from Zybooks</p>
+    </slide>
+    <section>
+      <title>Kissing right?</title>
+      <slide>
+        <p>Most people are right handed, and even the right eye is dominant for most people. Developmental
+biologists have suggested that late-stage human embryos tend to turn their heads to the right. In
+<url href="https://doi.org/10.1038/421711a">a study reported in Nature (2003)</url>, German bio-psychologist
+Onur Güntürkün conjectured that this tendency to turn to the right manifests itself in other ways as well,
+so he studied kissing couples to see which side they leaned their heads to while kissing. He and his
+researchers observed kissing couples in public places such as airports, train stations, beaches, and
+parks. They were careful not to include couples who were holding objects such as luggage that might have
+affected which direction they turned. For each kissing couple observed, the researchers noted whether
+the couple leaned their heads to the right or to the left. They observed 124 couples, ages 13 to 70 years.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Identify the observational units in this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Identify the variable recorded in this study. Classify it as categorical or quantitative.</p>
+      </slide>
+      <slide>
+        <p>You will first use Güntürkün's data to test his conjecture that kissing couples tend to lean
+their heads to the right. Use the symbol <m>\pi</m> to denote the proportion of all kissing couples
+in the countries where the data were collected that lean their heads to the right.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Is π a parameter or a statistic? Explain how you are deciding.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Do we know the exact value of π based on the observed data? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>State the appropriate null and alternative hypotheses, both in words and in terms of the parameter π, for
+testing the conjecture that kissing couples tend to lean their heads to the right more often than by random chance.</p>
+      </slide>
+      <slide>
+        <p>Of the 124 couples observed, 80 leaned their heads to the right while kissing.</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Calculate the sample proportion of the observed couples who leaned their heads to the right
+while kissing. Also indicate the symbol used to denote this value.</p>
+      </slide>
+      <slide xml:id="q-4-2-7">
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Conduct a simulation analysis (using the
+<url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">
+One Proportion applet</url>) to assess the strength of evidence that the sample data provide
+for Güntürkün's conjecture that kissing couples tend to lean their heads to the right more
+often than they would by random chance.</p>
+        <p>Report the approximate p-value and summarize your conclusion about this strength of evidence.</p>
+      </slide>
+      <slide>
+        <p>Your simulation analysis should convince you that the sample data provide very strong evidence to believe
+that kissing couples lean their heads to the right more than half the time in the long run. That leads to a
+natural follow-up question: How much more than half the time? In other words, we have strong evidence that
+the long-run proportion of kissing couples who lean to the right is greater than 1/2, but can we now estimate
+the value for that probability? We will do this by testing many different (null) values for the probability
+that a couple leans to the right when kissing.</p>
+      </slide>
+      <slide xml:id="q-4-2-8">
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Now test whether the data provide evidence that the probability that a couple leans their
+heads to the right while kissing (<m>\pi</m>) is different from 0.60. Use the
+<url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">
+One Proportion applet</url> to determine the p-value for testing the null value of 0.60. 
+</p>
+        <p>Report what you changed in the applet and report your p-value.</p>
+      </slide>
+      <slide>
+        <title>Insight 1: </title>
+        <insight>
+          <p>What kind of test are we conducting if we want to determine whether the population parameter
+is different from a hypothesized value: a one-sided test or a two-sided test?</p>
+        </insight>
+      </slide>
+      <slide>
+        <p>Remember from previous sections that if we don't have a specific direction we are testing, greater
+than or less than, we need to use a two-sided test of significance. If you used a one-sided alternative
+in <xref ref="q-4-2-8"/>, determine the two-sided p-value now by checking the <em>Two-sided box</em>.</p>
+      </slide>
+      <slide>
+        <p>We can specify a <em>level of significance</em> in order to decide whether the p-value is small.
+For example, we can say a p-value of 0.05 or less is strong evidence against the null hypothesis and in
+favor of the alternative hypothesis.</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>The <term>significance level</term> is a value used as a criterion for deciding how small
+ a p-value needs to be to provide convincing evidence to reject the null hypothesis.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>Thus, we can <em>reject</em> the null hypothesis when the p-value is less than or equal to 0.05.
+Otherwise, when the p-value is greater than 0.05, we do not have strong enough evidence against the null
+hypothesis and so we consider the null value to be <em>plausible</em> for the parameter.</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <p>We will consider a value of the parameter to be plausible if the two-sided p-value for testing that
+parameter value is larger than the level of significance.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Is the p-value for testing the null value of 0.60 less than 0.05? Can the value 0.60 be rejected, or is the value 0.60 plausible for the probability that a couple leans their heads to the right while kissing?</p>
+      </slide>
+      <slide>
+        <p>The p-value you found in #9 should not have been smaller than 0.05. Hence, you do not reject the null hypothesis at the 0.05 level of significance and therefore you do not reject 0.60 as a plausible value for <m>\pi</m>. Thus, it is plausible (i.e., believable) that the probability a kissing couple leans their heads to the right is 0.60.</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Does this mean that you've proven that exactly 60% of kissing couples lean right? Why or why not?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!-- Question 11 -->
+        <p>Use the applet to test the probability values given in the following table.</p>
+        <p>
+          <ul>
+            <li>Each time, change the <em>Probability of success</em> to match the value that you are testing (keeping the observed sample proportion that you count beyond the same). </li>
+            <li>Everything else should stay the same; press <em>Draw Samples</em> and then <em>Count</em> to see the new two-sided p-value (with the <em>Two-sided</em> box checked). You can also check the <em>Show sliders</em> box and double click on the orange value to change the value of <m>\pi</m> and press <em>Enter</em>.</li>
+          </ul>
+        </p>
+        <slide>
+          <title>Table 4: </title>
+          <table>
+            <tabular>
+              <row>
+                <cell>Probability under <m>H_0</m>
+                </cell>
+                <cell>0.54</cell>
+                <cell>0.55</cell>
+                <cell>0.56</cell>
+                <cell>0.57</cell>
+                <cell>0.58</cell>
+                <cell>0.59</cell>
+                <cell>0.60</cell>
+              </row>
+              <row>
+                <cell>(Two-sided) p-value</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+              <row>
+                <cell>Reject or plausible?</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+        <p/>
+        <slide>
+          <title>Table 5: </title>
+          <table>
+            <tabular>
+              <row>
+                <cell>Probability under <m>H_0</m>
+                </cell>
+                <cell>0.70</cell>
+                <cell>0.71</cell>
+                <cell>0.72</cell>
+                <cell>0.73</cell>
+                <cell>0.74</cell>
+                <cell>0.75</cell>
+                <cell>0.76</cell>
+              </row>
+              <row>
+                <cell>(Two-sided) p-value</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+              <row>
+                <cell>Reject or plausible?</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Using a 0.05 significance level and your results from question 11, provide a list of plausible values for π,
+the long-run proportion of kissing couples who lean their heads to the right.</p>
+      </slide>
+      <slide>
+        <p>This list of values represents an interval containing all values between two endpoints.</p>
+      </slide>
+      <slide>
+        <title>Remark 6: </title>
+        <remark>
+          <p>The interval of plausible values that you found in question 12 is also called a <term>95% confidence interval
+for <m>\pi</m>
+            </term>. Why is this called 95% confidence? This corresponds to the 5% (0.05) significance level
+that was used to decide whether there was enough evidence against a hypothesized value. Notice that 95% and 5%
+add up to give 100%. The 95% is called the <term>confidence level</term>, and is a measure of how confident we
+are about our interval estimate of the parameter. In this case, we are 95% confident that the population proportion
+of all couples who lean their heads to the right while kissing is in the interval that you found.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Does your 95% confidence interval from question 12 include the value of 0.50? Does it include the value 0.60?
+Explain how your answers relate to the significance tests and p-values that you calculated in <xref ref="q-4-2-7"/>
+and <xref ref="q-4-2-8"/>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>Now suppose we were to use a significance level of 0.01 instead of 0.05 to decide whether or not to reject the
+corresponding null hypothesis for each listed value of π. How would you expect the interval of plausible values to
+change: wider, narrower, or no change? Explain your reasoning.</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Implement the 0.01 significance level to determine plausible values for the population proportion of all kissing
+couples that lean their heads to the right. (Hint: Start with the null values listed in the table in question 11,
+although you might have to test more null values as well. You can also change the success probability on the slider
+box by clicking on the bar and then using the arrow keys to move the slider value left and right.) Report the
+interval of plausible values.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>How confident are you about the interval of plausible values that you listed in question 15?</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>What is the primary difference between the 95% confidence interval reported in question 12 and the 99%
+confidence interval reported in question 15? Which interval is wider? Is this consistent with what you
+predicted in question 14?</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>How would you expect a 90% confidence interval to compare to the 95% and 99% confidence intervals? Explain.</p>
+      </slide>
+      <slide>
+        <title>Remark 7: </title>
+        <remark>
+          <p>As the confidence level increases, the <em>width</em> of the confidence interval also increases.</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>You should have found very strong evidence, based on a small p-value, that a majority
+of kissing couples in the population lean their heads to the right. Moreover, your confidence
+intervals, which provide plausible values of the population proportion that lean to the right,
+contain only values above 0.50, confirming the conclusion made from the p-value.</p>
+      </slide>
+      <slide>
+        <p>In fact, confidence intervals and tests of significance generally give complementary
+information. Values that are not considered plausible by the (two-sided) test of significance
+should not be contained in the corresponding confidence interval (confidence level = 100% -
+level of significance). Because 0.50 is not inside the confidence interval, this matches the test.
+It is not “further evidence against the null” but confirms that your calculations agree. The
+confidence interval then gives us additional information in how large this majority is.
+</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

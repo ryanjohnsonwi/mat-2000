@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>4-3 : 2SD and theory-based confidence intervals for a single mean</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Sleepless Nights (cont.)?</title>
+      <slide>
+        <p>Recall that in a previous explanation you investigated whether, on average, students at your school get less
+than 8 hours of sleep on a typical night. Even though 8 hours is often cited as the recommended amount, many
+people believe that college students will average less than 8 hours. But how much less? In this exploration, you
+will use the same data to estimate the average number of hours of sleep students at your school get.</p>
+      </slide>
+      <!--Question 1-->
+      <slide>
+        <title>Exercise 1</title>
+        <p>Let <m>\mu</m> represent the average number of hours of sleep all the students at your school got the
+  previous night. The question we asked in a previous exploration was, "How much sleep (to the nearest quarter
+  hour) did you get last night?" If you still have the data from that exploration, give the summary statistics
+  here. If not, collect a new set of data from your class and give those summary statistics here.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1a: </title>
+        <p>
+      Sample size, n = ?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 1b: </title>
+        <p>
+      Sample mean, x̄ = ?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 1c: </title>
+        <p>
+      Sample SD, s = ?
+    </p>
+      </slide>
+      <slide>
+        <p>Similar to what you did in a previous exploration, we could conduct a simulation to
+generate a sampling distribution of the sample mean number of hours of sleep, assuming
+different values for μ to determine which are plausible. (In the
+<url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1">
+One Mean applet</url>, you can use a slider below the population to quickly change the
+value of the population mean.) Recall that such an interval is called a confidence interval.
+But this would be rather tedious, so in this exploration we will consider some shortcuts to
+estimating a confidence interval for <m> \mu </m>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Based on your sample data, what is your best guess or estimate for the value of μ, that
+is, the average number of hours of sleep students at your school got the previous night?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Suppose you repeated the survey by asking a different group of students at your school.
+Will the average for this new sample be exactly the same as the original sample average
+reported in question 2? Why or why not?</p>
+      </slide>
+      <slide>
+        <p>A natural guess or estimate for the population average number of hours of sleep students
+at your school got the previous night (<m>\mu</m>) is the observed value of the sample
+average sleep time. But, we know that if we were to conduct this study again we would most
+likely observe a different value for the sample average due to sampling variability—we need
+to account for this in our estimate for <m>\mu</m>. To do so, we create a confidence
+interval for <m>\mu</m> by using the formula 
+</p>
+      </slide>
+      <me>
+  \text{sample mean} \pm \text{multiplier} \times (\text{SD of sample mean})
+</me>
+      <slide>
+        <p>To find a 95% confidence interval for <m>\mu</m> we can use the 2SD method that you saw
+previously, but we need to know what to use for the SD of the sample mean.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>In a previous exploration you simulated the distribution of sample means from the
+hypothetical population of sleep times (population 1). What did you find for the standard
+deviation of the sampling distribution? How did this value compare to the standard
+deviation of your sample?</p>
+      </slide>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <p>There will be less sample-to-sample variability in the sample mean than
+person-to-person variability in sleep times.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Previously, we saw that <m>s/\sqrt{n}</m> could be used to approximate the standard deviation of
+the sample means. We often refer to such an estimate of the standard deviation of a
+statistic as the standard error. Report this value.</p>
+      </slide>
+      <slide>
+        <title>Remark 2: </title>
+        <remark>
+          <p>An approximate 2SD method for a 95% confidence interval for a population
+mean <m>\mu</m> is  <m>\overline{x} \pm 2 \times s / \sqrt{n} </m> . This
+method is valid when the sampling distribution follows a bell-shaped,
+symmetric distribution.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Use the value of s/√n you found in #5 and the 2SD method to approximate a 95%
+confidence interval for μ in the context of the sleep study, and then interpret
+this interval. (Hint: When interpreting the interval, be clear about what the
+interval estimates. You are estimating not the individual sleep times of students
+but how much sleep students at your school get on …)</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Does the 95% confidence interval reported in #6 contain 8 (the population mean
+under the original null hypothesis)? Explain how you could have known this in
+advance based on your p-value from the previous sleep times exploration.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Theory-based approach</title>
+      <slide>
+        <p>Previously, you saw a theory-based approach to find the p-value when testing
+hypotheses about a single population mean. This approach uses a more precise value
+of the multiplier in the confidence interval formula based on the t-distribution.</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Go to the 
+<url href="https://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">
+Theory-Based Inference applet</url>, and select the <em>One Mean</em> option from
+the <em>Scenario</em> pull-down menu. Then, you can either copy and paste your class
+data or just enter the sample statistics (as recorded in #1). Press <em>Calculate</em>,
+check the <em>Confidence Interval</em> box, and press <em>Calculate CI</em>.</p>
+        <p>Report the 95% confidence interval and compare it to the interval you found in #6.
+Are they about the same? Same midpoint? Same width? Could you have anticipated this?
+Explain your reasoning.</p>
+      </slide>
+      <slide>
+        <p>Recall that the theory-based approach uses a theoretical probability distribution
+called the t-distribution to predict the behavior of the standardized statistic
+(denoted by t) and that this approach required certain validity conditions to be met.</p>
+      </slide>
+      <slide>
+        <title>Convention 3: </title>
+        <convention>
+          <p>The theory-based interval for a population mean (called a <term>one-sample
+<em>t</em>-interval</term>) requires that the quantitative variable should have a
+symmetric distribution or you should have at least 20 observations and the sample
+distribution should not be strongly skewed.</p>
+        </convention>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Are the validity conditions for using the 2SD or t-distribution based method to
+find a confidence interval met for your class data? Explain why or why not. </p>
+      </slide>
+      <slide>
+        <p>In summary, the formula for a theory-based confidence interval for a population mean
+(<m>\mu</m>) is given by
+</p>
+      </slide>
+      <me>
+  \overline x \pm (\text{multiplier}) \times \frac{s}{\sqrt{n}}
+</me>
+    </section>
+  </slideshow>
+</pretext>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-6-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing two proportions: Theory-based approach</title>
+
+<subsection> 
+ <title>Donating blood</title>
+<p>Blood donations from volunteers serve a crucial role in the nation's health care system. 
+Are Americans any more or less generous about donating blood in some years than others? Are
+ women any more or less willing to give blood than men? To investigate these questions we can 
+ analyze data from the <url href="https://gss.norc.org/">General Social Survey</url>, which 
+ is a national survey conducted every two years on a nationwide random sample of adult Americans.
+</p>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Did this study make use of random sampling, random assignment, both, or neither? Also explain 
+what your answer means in terms of the scope of conclusions that can be drawn from these data.</p>
+</statement>
+<solution>
+  <p>
+    Random sampling only, this means we can generalize to the population of all Adult Americans.
+  </p>
+</solution>
+</activity>
+
+<p>Let's start by comparing the years 2002 and 2004.</p>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>State the appropriate null and alternative hypotheses, in words and in symbols, to address 
+the research question of whether Americans were more generous with blood donations in one of 
+these years than the other. (Hint: Remember that hypotheses are always about population parameters, 
+and think about whether the alternative should be one- or two-sided before you see the data.)</p>
+</statement>
+<solution>
+  <p>
+    Null: The proportion of all US adults who gave blood in 2002 is the same as in 2004
+  </p>
+  <p>
+    Alternative: The proportion of all US adults who gave blood in 2002 is different than in 2004
+  </p>
+  <p>
+    Null: <m>\pi_{2002} - \pi_{2004} = 0</m>
+  </p>
+  <p>
+    Alternative:  <m>\pi_{2002} - \pi_{2004} \not = 0</m>
+  </p>
+</solution>
+</activity>
+
+<p>Data from the 2002 and 2004 surveys are summarized in this two-way table:
+</p>
+<table>
+  <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        2002
+      </cell>
+      <cell>
+        2004
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Donated blood in past year
+      </cell>
+      <cell>
+        210
+      </cell>
+      <cell>
+        230
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Have not donated blood in past year
+      </cell>
+      <cell>
+        1,152
+      </cell>
+      <cell>
+        1,106
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Total
+      </cell>
+      <cell>
+        1,362
+      </cell>
+      <cell>
+        1,336
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>For each year, calculate the (conditional) proportion of adult Americans sampled who donated 
+blood in the previous 12 months. Use appropriate symbols to represent them. Also calculate the 
+difference between these sample proportions (taking the 2002 proportion minus the 2004 proportion).</p>
+</statement>
+<solution>
+  <p>
+    <m>\hat{p}_{2002} = 0.154</m> and <m>\hat{p}_{2004} = 0.172</m> which gives us  <m>\hat{p}_{2002} - \hat{p}_{2004} = -0.018</m>
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 4-->
+<statement>
+  <p>Produce a segmented bar graph or mosaic plot to display the conditional proportions who gave
+  blood in these two years. Comment on what the graph and your calculations from question 3 reveal about these two samples.</p>
+</statement>
+<solution>
+  <p>
+    The proportion of donors in 2002 is very close to the proportion of donors in 2004.
+  </p>
+  <image source="6-3/bars.png" width="70%">
+    <description>bar chart showing that <m>\hat{p}_{2002} = 0.154</m> and <m>\hat{p}_{2004} = 0.172</m></description>
+  </image>
+  <image source="6-3/mosaic.png" width="50%">
+    <description>mosaic chart showing <m>\hat{p}_{2002} = 0.154</m> and <m>\hat{p}_{2004} = 0.172</m></description>
+  </image>
+</solution>
+</activity>
+
+<activity>
+ <statement>
+  <!--Question 5-->
+<p>Use the <url href="http://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=2">
+  Multiple Proportions applet</url> to conduct a simulation analysis to approximate a p-value for 
+  testing the hypotheses that you stated in question 2. You can enter the table of counts in the 
+  <m>2\times 2</m> table or type in the table in the <term>Sample data</term> box and press <term>Use Table</term>. 
+  Or you can copy the data from the text webpage and paste into the <term>Sample data</term> box and press 
+  <term>Use Data</term>. Verify the segmented bar graph that you created.
+  </p>
+<image source="6-3/screenshot.png" width="50%">
+<description>A screenshot of the multiple proportions tool
+</description>
+</image>
+</statement>
+<solution>
+  <p>
+    Instructions for entering a table in the Two Proportions applet
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>Shuffling is an appropriate way to estimate a p-value for comparing groups regardless of 
+the study design (observational study or experiment, random assignment or random sampling or 
+neither). Of course, the study design is very important in determining the appropriate scope 
+of conclusions. (Can you generalize to a larger population? Can you infer a 
+cause-and-effect conclusion?)
+</p>
+</remark>
+
+<activity> 
+ <!--Question 6-->
+ <introduction>
+  <p>
+    Check the <term>Show Shuffle Options</term> box, ask for 1000 repetitions, and press 
+    <term>Shuffle</term>.
+  </p>
+ </introduction>
+  <task>
+    <statement>
+      <p>
+        Indicate how to find the p-value from the null distribution. (Hint: Remember whether the alternative hypothesis is one-sided or two-sided.)
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The proportion of simulated differences in proportions smaller than -0.018, or larger than 0.018.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Report the approximate p-value.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Approximate p-value = 0.19
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Based on this p-value, do the sample data provide much evidence that the population 
+        proportion who gave blood in 2002 differs from the population proportion who gave 
+        blood in 2004?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We do not have evidence that the proportion of blood donors in 2002 is different than in 2004.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Does the null distribution of the simulated values appear to follow an approximately normal distribution? Centered around what value? Also report the standard deviation of these values.</p>
+</statement>
+<solution>
+  <p>
+    Yes, approximately normal. Mean = 0, standard deviation = 0.014
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 8-->
+  <introduction>
+    <p>Let's see what the standardized statistic tells us.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Report the observed value in the sample for the statistic.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        -0.018.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        How many standard deviations (based on your answer to question 7) above 
+        or below zero (the hypothesized value) is the observed value of the statistic?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        -0.018/0.014 = -1.29.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Is the strength of evidence against the null hypothesis based on this standardized 
+        statistic consistent with what the p-value revealed in question 6? Explain.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Yes, the strength of evidence based on the standardized statistic is consistent. The standardized statistic is not very large (it is between -1.5 and 1.5), so we do not have evidence of a significant difference.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<p>Just as you learned a theory-based approach for making inferences about a single proportion, 
+so too will you now learn a theory-based approach for making inferences about comparing 
+proportions between two groups. This theory-based approach is again based on an approximation 
+from a normal distribution.
+</p>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>Check the Overlay Normal distribution box. Is the behavior of the two distributions similar? How do the p-values compare?</p>
+</statement>
+<solution>
+  <p>
+    The normal distribution overlays fairly well with the simulated null distribution. p-value = 0.2058, similar to what we got before.
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 10-->
+  <introduction>
+    <p>Check the box to compute <term>95% CI(s) for difference in proportions</term>. (This box appears 
+    in the left-hand panel when the difference is selected as the statistic.)</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Report the endpoints of this interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        (-0.046, 0.01)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Interpret this interval. Be sure to mention clearly what parameter is being estimated 
+        by this interval. (Hint: In other words, you are 95% confident that this interval contains what?)
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We are 95% confident that the parameter (difference in true proportion of blood donors in 2002 and 2004) is between -0.046 and 0.01.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Does this interval contain only negative values, only positive values, or does the interval 
+        include the value zero as well as both positive and negative values? Comment on the 
+        importance of what this means.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The interval contains both positive and negative values. This means that 0 is a plausible value for the difference in the two proportions. In other words, we don't have evidence to reject the null hypothesis that the two proportions are the same.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity> 
+ <!--Question 11-->
+ <statement>
+  <p>
+    Another applet that can compute p-values and confidence intervals for tests of two
+    proportions is the <url href="http://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">Theory-Based Inference applet</url>. Use the pull-down menu to select
+    <term>Two proportions</term> and enter the relevant summary information, using the 2002 sample
+    as Group 1. Check the <term>Test of Significance</term> box and press on the <term>inequality</term> sign
+    button until the alternative hypothesis becomes two-sided. Press <term>Calculate</term>. Verify the
+    p-value you obtained earlier (question 9) as well as the confidence interval (question 10).
+  </p>
+ </statement>
+ <solution>
+  <p>
+    Calculations verified. Same p-value and confidence interval.
+  </p>
+ </solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Validity Conditions for Theory-Based Approach (Two Proportions)</title>
+<p>As with a single proportion, the theory-based inference approach for comparing two proportions 
+is only valid when a normal distribution provides a good approximation to the distribution of the 
+statistic <m> \hat{p}_1 - \hat{p}_2 </m>. Conservatively, the theory-based significance test and 
+confidence interval work well when there are at least 10 observations in each of the four cells 
+of the two-way table. In other words, we require at least 10 "successes" and at least 10 "failures" 
+in each sample in order to use this theory-based approach.
+</p>
+<convention>
+<p>The theory-based test and interval for the difference in two proportions (called a 
+<term>two-sample z-test or interval</term>) work well when there are at least 10 
+observations in each of the four cells of the <m>2\times 2</m> table.
+</p>
+</convention>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Is it valid to use the theory-based approach for two proportions in this study? Justify
+your answer.</p>
+</statement>
+<solution>
+  <p>
+    Yes, 210, 1152, 230 and 1106 are all larger than 10—thus the validity conditions are met.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>Is it reasonable to generalize your conclusions from this analysis to the population of all adult Americans? Explain why or why not.</p>
+</statement>
+<solution>
+  <p>
+    Yes, because the data is from a random sample of Americans.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Exploring further</title>
+
+<activity> 
+ <!--Question 14-->
+  <introduction>
+    <p>Let's see what will happen if we switch which is Group 1 and which is Group 2.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Before doing any calculations, what do you think would happen to the standardized statistic, 
+        p-value, and confidence interval if you entered the 2004 sample as Group 1 and the 2002 
+        sample as Group 2?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Standardized statistic would switch signs, p-value would remain the same, confidence interval would be same width, but centered at 0.018 instead of -0.018
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Make this change in the Theory-Based Inference applet (i.e., switch the roles of Groups 
+        1 and 2), and then press Calculate. Report the new values of the standardized statistic, 
+        p-value, and confidence interval.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        1.27, p-value = 0.21, confidence interval (-0.01, 0.046)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Did these change as you predicted in part (a)?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Yes
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<p>Using the General Social Survey data to classify respondents by sex and combining the years 2002 and 2004 we can construct a two-way table:
+</p>
+<table>
+  <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        Male
+      </cell>
+      <cell>
+        Female
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Donated blood in past year
+      </cell>
+      <cell>
+        239
+      </cell>
+      <cell>
+        201
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Have not donated blood in past year
+      </cell>
+      <cell>
+        1,032
+      </cell>
+      <cell>
+        1,226
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Total
+      </cell>
+      <cell>
+        1,271
+      </cell>
+      <cell>
+        1,427
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ <!--Question 15-->
+  <introduction>
+    <p>
+      Analyze these data to address the question of whether American men and women differ with regard to donating blood.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Are the validity conditions met?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The validity conditions are met (239, 1032, 201 and 1226 are all larger than 10)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        State the null and alternative hypothesis using full sentences.  (Do males - females)
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Null hypothesis: The proportion of U.S. male blood donors is the same as the proportion of U.S. female blood donors.
+      </p>
+      <p>
+        Alternative hypothesis: The proportion of U.S. male blood donors is different than the proportion of U.S. female blood donors.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Calculate the proportion of male blood donors and female blood donors.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The proportion of male blood donors is 239/1271=0.188, females is 201/1427=0.141
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Create a chart that compares these two proportions.
+      </p>
+    </statement>
+    <solution>
+      <image source="6-3/bars-sex.png" width="70%">
+        <description>Bar chart showing the proportion of male blood donors is 239/1271=0.188, females is 201/1427=0.141</description>
+      </image>
+      <image source="6-3/mosaic-sex.png" width="50%">
+        <description>Mosaic chart showing the proportion of male blood donors is 239/1271=0.188, females is 201/1427=0.141</description>
+      </image>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Calculate the standardized statistic and the p-value.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Standardized statistic = 3.31, p-value = 0.0009.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Make a conclusion regarding your null and alternative hypothesis in light of the p-value you calculated.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We have very strong evidence that the proportion of male blood donors is different than the proportion of female blood donors.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Calculate a 95% confidence interval for the difference between the proportion of each gender who donate blood.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        (0.019, 0.075)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Interpret your confidence interval, giving all necessary context.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We are 95% confident that the proportion of males in the U.S. who donate blood is between 0.019 and 0.075 higher than the proportion of females in the U.S. who donate blood.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,15 @@
+INFO    : PreTeXt-CLI version: 2.4.1
+
+INFO    : PreTeXt project found in `G:\Shared drives\MAT - 2000 Intro to Stats\code`.
+WARNING : Using CLI version 2.4.1 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.4.1.
+INFO    : Building with custom xsl G:\Shared drives\MAT - 2000 Intro to Stats\code\xsl\solution-manual.xsl
+INFO    : Preparing to build into G:\Shared drives\MAT - 2000 Intro to Stats\code\..\ws-solutions.
+INFO    : XSL conversion of G:\Shared drives\MAT - 2000 Intro to Stats\code\source\main.ptx by C:\Users\johnsor\AppData\Local\Temp\pretext_hrwewuat\solution-manual.xsl
+CRITICAL: Cannot resolve URI file:/C:/Users/johnsor/AppData/Local/Temp/pretext_hrwewuat/common.xsl
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : While running pretext, the following errors occurred:
+

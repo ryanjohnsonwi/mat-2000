@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_11_2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Inference for correlation coefficient</title>
+
+<subsection> 
+ <title>Draft lottery</title>
+<p>In 1970, the U.S. Selective Service conducted a lottery to decide which young men would be drafted into the armed forces (<url href="https://doi.org/10.1126/science.171.3968.255">Fienberg, 1971</url>). Each of the 366 birthdays in a year (including February 29) was assigned a draft number. Young men born on days assigned low draft numbers were drafted.</p>
+<p>We will regard the 366 dates of the year as observational units. We will consider two variables recorded on each date: <em>draft number</em> assigned to the date and <em>sequential date</em> in the year (so January 31 is sequential date 31, February 1 is sequential date 32, and so on).</p>
+<activity>
+ <!--  Question 1 -->
+<statement>
+<p>In a perfectly fair, random lottery, what should be the value of the correlation coefficient between draft number and sequential date of birthday?</p>
+</statement>
+<solution>
+  <p>
+    0
+  </p>
+</solution>
+</activity>
+
+<p>The figure below displays a scatterplot of the assigned draft numbers and the sequential dates. There are 366 dots, one for each day of the (leap) year.</p>
+<figure xml:id="fig-11-2-draft-numbers">
+    <caption>A scatterplot of the draft numbers by sequential days of the year </caption>
+    <image source="11-2/draft_numbers.png">
+        <shortdescription>The scatterplot shows slightly higher concentration of points in the top-left and bottom-right of the graph.
+        </shortdescription>
+    </image>
+</figure>
+
+<activity> 
+ <!--  Question 2  -->
+   <introduction>
+    <p>
+        Let's take a look at the scatterplot in the figure.
+    </p>
+   </introduction>
+   <task>
+    <statement>
+        <p>
+            Does the scatterplot reveal much of an association between draft number and sequential date?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        No
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Based on the scatterplot, guess the value of the correlation coefficient.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Responses will vary, should all be close to 0.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Does it appear that this was a fair, random lottery?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Yes.
+      </p>
+    </solution>
+   </task>
+</activity>
+
+<p>It's difficult to see much of a pattern or association in the scatterplot, so it seems reasonable to conclude that this was a fair, random lottery with a correlation coefficient near zero. But let's dig a little deeper:
+</p>
+
+<activity> 
+ <!--  Question 3  -->
+   <introduction>
+    <p>
+        The 1970 Draft Lottery data sheet below shows the draft number assigned to each of the 366 birthdays.
+    </p>
+    <table>        
+        <tabular>
+            <row header="yes">
+                <cell>Date</cell>
+                <cell>Jan</cell>
+                <cell>Feb</cell>
+                <cell>Mar</cell>
+                <cell>Apr</cell>
+                <cell>May</cell>
+                <cell>Jun</cell>
+                <cell>Jul</cell>
+                <cell>Aug</cell>
+                <cell>Sep</cell>
+                <cell>Oct</cell>
+                <cell>Nov</cell>
+                <cell>Dec</cell>
+            </row>
+        <row >
+        <cell>1</cell>
+        <cell>305</cell>
+        <cell>86</cell>
+        <cell>108</cell>
+        <cell>32</cell>
+        <cell>330</cell>
+        <cell>249</cell>
+        <cell>93</cell>
+        <cell>111</cell>
+        <cell>225</cell>
+        <cell>359</cell>
+        <cell>19</cell>
+        <cell>129</cell>
+        </row>
+        <row >
+        <cell>2</cell>
+        <cell>159</cell>
+        <cell>144</cell>
+        <cell>29</cell>
+        <cell>271</cell>
+        <cell>298</cell>
+        <cell>228</cell>
+        <cell>350</cell>
+        <cell>45</cell>
+        <cell>161</cell>
+        <cell>125</cell>
+        <cell>34</cell>
+        <cell>328</cell>
+        </row>
+        <row >
+        <cell>3</cell>
+        <cell>251</cell>
+        <cell>297</cell>
+        <cell>267</cell>
+        <cell>83</cell>
+        <cell>40</cell>
+        <cell>301</cell>
+        <cell>115</cell>
+        <cell>261</cell>
+        <cell>49</cell>
+        <cell>244</cell>
+        <cell>348</cell>
+        <cell>157</cell>
+        </row>
+        <row >
+        <cell>4</cell>
+        <cell>215</cell>
+        <cell>210</cell>
+        <cell>275</cell>
+        <cell>81</cell>
+        <cell>276</cell>
+        <cell>20</cell>
+        <cell>279</cell>
+        <cell>145</cell>
+        <cell>232</cell>
+        <cell>202</cell>
+        <cell>266</cell>
+        <cell>165</cell>
+        </row>
+        <row >
+        <cell>5</cell>
+        <cell>101</cell>
+        <cell>214</cell>
+        <cell>293</cell>
+        <cell>269</cell>
+        <cell>364</cell>
+        <cell>28</cell>
+        <cell>188</cell>
+        <cell>54</cell>
+        <cell>82</cell>
+        <cell>24</cell>
+        <cell>310</cell>
+        <cell>56</cell>
+        </row>
+        <row >
+        <cell>6</cell>
+        <cell>224</cell>
+        <cell>347</cell>
+        <cell>139</cell>
+        <cell>253</cell>
+        <cell>155</cell>
+        <cell>110</cell>
+        <cell>327</cell>
+        <cell>114</cell>
+        <cell>6</cell>
+        <cell>87</cell>
+        <cell>76</cell>
+        <cell>10</cell>
+        </row>
+        <row >
+        <cell>7</cell>
+        <cell>306</cell>
+        <cell>91</cell>
+        <cell>122</cell>
+        <cell>147</cell>
+        <cell>35</cell>
+        <cell>85</cell>
+        <cell>50</cell>
+        <cell>168</cell>
+        <cell>8</cell>
+        <cell>234</cell>
+        <cell>51</cell>
+        <cell>12</cell>
+        </row>
+        <row >
+        <cell>8</cell>
+        <cell>199</cell>
+        <cell>181</cell>
+        <cell>213</cell>
+        <cell>312</cell>
+        <cell>321</cell>
+        <cell>366</cell>
+        <cell>13</cell>
+        <cell>48</cell>
+        <cell>184</cell>
+        <cell>283</cell>
+        <cell>97</cell>
+        <cell>105</cell>
+        </row>
+        <row >
+        <cell>9</cell>
+        <cell>194</cell>
+        <cell>338</cell>
+        <cell>317</cell>
+        <cell>219</cell>
+        <cell>197</cell>
+        <cell>335</cell>
+        <cell>277</cell>
+        <cell>106</cell>
+        <cell>263</cell>
+        <cell>342</cell>
+        <cell>80</cell>
+        <cell>43</cell>
+        </row>
+        <row >
+        <cell>10</cell>
+        <cell>325</cell>
+        <cell>216</cell>
+        <cell>323</cell>
+        <cell>218</cell>
+        <cell>65</cell>
+        <cell>206</cell>
+        <cell>284</cell>
+        <cell>21</cell>
+        <cell>71</cell>
+        <cell>220</cell>
+        <cell>282</cell>
+        <cell>41</cell>
+        </row>
+        <row >
+        <cell>11</cell>
+        <cell>329</cell>
+        <cell>150</cell>
+        <cell>136</cell>
+        <cell>14</cell>
+        <cell>37</cell>
+        <cell>134</cell>
+        <cell>248</cell>
+        <cell>324</cell>
+        <cell>158</cell>
+        <cell>237</cell>
+        <cell>46</cell>
+        <cell>39</cell>
+        </row>
+        <row >
+        <cell>12</cell>
+        <cell>221</cell>
+        <cell>68</cell>
+        <cell>300</cell>
+        <cell>346</cell>
+        <cell>133</cell>
+        <cell>272</cell>
+        <cell>15</cell>
+        <cell>142</cell>
+        <cell>242</cell>
+        <cell>72</cell>
+        <cell>66</cell>
+        <cell>314</cell>
+        </row>
+        <row >
+        <cell>13</cell>
+        <cell>318</cell>
+        <cell>152</cell>
+        <cell>259</cell>
+        <cell>124</cell>
+        <cell>295</cell>
+        <cell>69</cell>
+        <cell>42</cell>
+        <cell>307</cell>
+        <cell>175</cell>
+        <cell>138</cell>
+        <cell>126</cell>
+        <cell>163</cell>
+        </row>
+        <row >
+        <cell>14</cell>
+        <cell>238</cell>
+        <cell>4</cell>
+        <cell>354</cell>
+        <cell>231</cell>
+        <cell>178</cell>
+        <cell>356</cell>
+        <cell>331</cell>
+        <cell>198</cell>
+        <cell>1</cell>
+        <cell>294</cell>
+        <cell>127</cell>
+        <cell>26</cell>
+        </row>
+        <row >
+        <cell>15</cell>
+        <cell>17</cell>
+        <cell>89</cell>
+        <cell>169</cell>
+        <cell>273</cell>
+        <cell>130</cell>
+        <cell>180</cell>
+        <cell>322</cell>
+        <cell>102</cell>
+        <cell>113</cell>
+        <cell>171</cell>
+        <cell>131</cell>
+        <cell>320</cell>
+        </row>
+        <row >
+        <cell>16</cell>
+        <cell>121</cell>
+        <cell>212</cell>
+        <cell>166</cell>
+        <cell>148</cell>
+        <cell>55</cell>
+        <cell>274</cell>
+        <cell>120</cell>
+        <cell>44</cell>
+        <cell>207</cell>
+        <cell>254</cell>
+        <cell>107</cell>
+        <cell>96</cell>
+        </row>
+        <row >
+        <cell>17</cell>
+        <cell>235</cell>
+        <cell>189</cell>
+        <cell>33</cell>
+        <cell>260</cell>
+        <cell>112</cell>
+        <cell>73</cell>
+        <cell>98</cell>
+        <cell>154</cell>
+        <cell>255</cell>
+        <cell>288</cell>
+        <cell>143</cell>
+        <cell>304</cell>
+        </row>
+        <row >
+        <cell>18</cell>
+        <cell>140</cell>
+        <cell>292</cell>
+        <cell>332</cell>
+        <cell>90</cell>
+        <cell>278</cell>
+        <cell>341</cell>
+        <cell>190</cell>
+        <cell>141</cell>
+        <cell>246</cell>
+        <cell>5</cell>
+        <cell>146</cell>
+        <cell>128</cell>
+        </row>
+        <row >
+        <cell>19</cell>
+        <cell>58</cell>
+        <cell>25</cell>
+        <cell>200</cell>
+        <cell>336</cell>
+        <cell>75</cell>
+        <cell>104</cell>
+        <cell>227</cell>
+        <cell>311</cell>
+        <cell>177</cell>
+        <cell>241</cell>
+        <cell>203</cell>
+        <cell>240</cell>
+        </row>
+        <row >
+        <cell>20</cell>
+        <cell>280</cell>
+        <cell>302</cell>
+        <cell>239</cell>
+        <cell>345</cell>
+        <cell>183</cell>
+        <cell>360</cell>
+        <cell>187</cell>
+        <cell>344</cell>
+        <cell>63</cell>
+        <cell>192</cell>
+        <cell>185</cell>
+        <cell>135</cell>
+        </row>
+        <row >
+        <cell>21</cell>
+        <cell>186</cell>
+        <cell>363</cell>
+        <cell>334</cell>
+        <cell>62</cell>
+        <cell>250</cell>
+        <cell>60</cell>
+        <cell>27</cell>
+        <cell>291</cell>
+        <cell>204</cell>
+        <cell>243</cell>
+        <cell>156</cell>
+        <cell>70</cell>
+        </row>
+        <row >
+        <cell>22</cell>
+        <cell>337</cell>
+        <cell>290</cell>
+        <cell>265</cell>
+        <cell>316</cell>
+        <cell>326</cell>
+        <cell>247</cell>
+        <cell>153</cell>
+        <cell>339</cell>
+        <cell>160</cell>
+        <cell>117</cell>
+        <cell>9</cell>
+        <cell>53</cell>
+        </row>
+        <row >
+        <cell>23</cell>
+        <cell>118</cell>
+        <cell>57</cell>
+        <cell>256</cell>
+        <cell>252</cell>
+        <cell>319</cell>
+        <cell>109</cell>
+        <cell>172</cell>
+        <cell>116</cell>
+        <cell>119</cell>
+        <cell>201</cell>
+        <cell>182</cell>
+        <cell>162</cell>
+        </row>
+        <row >
+        <cell>24</cell>
+        <cell>59</cell>
+        <cell>236</cell>
+        <cell>258</cell>
+        <cell>2</cell>
+        <cell>31</cell>
+        <cell>358</cell>
+        <cell>23</cell>
+        <cell>36</cell>
+        <cell>195</cell>
+        <cell>196</cell>
+        <cell>230</cell>
+        <cell>95</cell>
+        </row>
+        <row >
+        <cell>25</cell>
+        <cell>52</cell>
+        <cell>179</cell>
+        <cell>343</cell>
+        <cell>351</cell>
+        <cell>361</cell>
+        <cell>137</cell>
+        <cell>67</cell>
+        <cell>286</cell>
+        <cell>149</cell>
+        <cell>176</cell>
+        <cell>132</cell>
+        <cell>84</cell>
+        </row>
+        <row >
+        <cell>26</cell>
+        <cell>92</cell>
+        <cell>365</cell>
+        <cell>170</cell>
+        <cell>340</cell>
+        <cell>357</cell>
+        <cell>22</cell>
+        <cell>303</cell>
+        <cell>245</cell>
+        <cell>18</cell>
+        <cell>7</cell>
+        <cell>309</cell>
+        <cell>173</cell>
+        </row>
+        <row >
+        <cell>27</cell>
+        <cell>355</cell>
+        <cell>205</cell>
+        <cell>268</cell>
+        <cell>74</cell>
+        <cell>296</cell>
+        <cell>64</cell>
+        <cell>289</cell>
+        <cell>352</cell>
+        <cell>233</cell>
+        <cell>264</cell>
+        <cell>47</cell>
+        <cell>78</cell>
+        </row>
+        <row >
+        <cell>28</cell>
+        <cell>77</cell>
+        <cell>299</cell>
+        <cell>223</cell>
+        <cell>262</cell>
+        <cell>308</cell>
+        <cell>222</cell>
+        <cell>88</cell>
+        <cell>167</cell>
+        <cell>257</cell>
+        <cell>94</cell>
+        <cell>281</cell>
+        <cell>123</cell>
+        </row>
+        <row >
+        <cell>29</cell>
+        <cell>349</cell>
+        <cell>285</cell>
+        <cell>362</cell>
+        <cell>191</cell>
+        <cell>226</cell>
+        <cell>353</cell>
+        <cell>270</cell>
+        <cell>61</cell>
+        <cell>151</cell>
+        <cell>229</cell>
+        <cell>99</cell>
+        <cell>16</cell>
+        </row>
+        <row >
+        <cell>30</cell>
+        <cell>164</cell>
+        <cell></cell>
+        <cell>217</cell>
+        <cell>208</cell>
+        <cell>103</cell>
+        <cell>209</cell>
+        <cell>287</cell>
+        <cell>333</cell>
+        <cell>315</cell>
+        <cell>38</cell>
+        <cell>174</cell>
+        <cell>3</cell>
+        </row>
+        <row >
+        <cell>31</cell>
+        <cell>211</cell>
+        <cell></cell>
+        <cell>30</cell>
+        <cell></cell>
+        <cell>313</cell>
+        <cell></cell>
+        <cell>193</cell>
+        <cell>11</cell>
+        <cell></cell>
+        <cell>79</cell>
+        <cell></cell>
+        <cell>100</cell>
+        </row>
+        </tabular>
+        </table>
+   </introduction>
+   <task>
+    <statement>
+        <p>
+            Find and report the draft number assigned to your birthday.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Responses will vary to correspond with responder's birthday
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Is your draft number in the bottom third (1-122), middle third (123-244), or top third (245-366)?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Depends on answer to part a
+      </p>
+    </solution>
+   </task>
+</activity>
+
+<activity> 
+ <!--  Question 4  -->
+   <introduction>
+    <p>
+        This second table has the draft numbers in order for each month.
+    </p>
+    <table>
+        <tabular>
+            <row header="yes">
+                <cell>Rank</cell>
+                <cell>Jan</cell>
+                <cell>Feb</cell>
+                <cell>Mar</cell>
+                <cell>Apr</cell>
+                <cell>May</cell>
+                <cell>Jun</cell>
+                <cell>Jul</cell>
+                <cell>Aug</cell>
+                <cell>Sep</cell>
+                <cell>Oct</cell>
+                <cell>Nov</cell>
+                <cell>Dec</cell>
+                </row>
+        <row >
+        <cell>1</cell>
+        <cell>17</cell>
+        <cell>4</cell>
+        <cell>29</cell>
+        <cell>2</cell>
+        <cell>31</cell>
+        <cell>20</cell>
+        <cell>13</cell>
+        <cell>11</cell>
+        <cell>1</cell>
+        <cell>5</cell>
+        <cell>9</cell>
+        <cell>3</cell>
+        </row>
+        <row >
+        <cell>2</cell>
+        <cell>52</cell>
+        <cell>25</cell>
+        <cell>30</cell>
+        <cell>14</cell>
+        <cell>35</cell>
+        <cell>22</cell>
+        <cell>15</cell>
+        <cell>21</cell>
+        <cell>6</cell>
+        <cell>7</cell>
+        <cell>19</cell>
+        <cell>10</cell>
+        </row>
+        <row >
+        <cell>3</cell>
+        <cell>58</cell>
+        <cell>57</cell>
+        <cell>33</cell>
+        <cell>32</cell>
+        <cell>37</cell>
+        <cell>28</cell>
+        <cell>23</cell>
+        <cell>36</cell>
+        <cell>8</cell>
+        <cell>24</cell>
+        <cell>34</cell>
+        <cell>12</cell>
+        </row>
+        <row >
+        <cell>4</cell>
+        <cell>59</cell>
+        <cell>68</cell>
+        <cell>108</cell>
+        <cell>62</cell>
+        <cell>40</cell>
+        <cell>60</cell>
+        <cell>27</cell>
+        <cell>44</cell>
+        <cell>18</cell>
+        <cell>38</cell>
+        <cell>46</cell>
+        <cell>16</cell>
+        </row>
+        <row >
+        <cell>5</cell>
+        <cell>77</cell>
+        <cell>86</cell>
+        <cell>122</cell>
+        <cell>74</cell>
+        <cell>55</cell>
+        <cell>64</cell>
+        <cell>42</cell>
+        <cell>45</cell>
+        <cell>49</cell>
+        <cell>72</cell>
+        <cell>47</cell>
+        <cell>26</cell>
+        </row>
+        <row >
+        <cell>6</cell>
+        <cell>92</cell>
+        <cell>89</cell>
+        <cell>136</cell>
+        <cell>81</cell>
+        <cell>65</cell>
+        <cell>69</cell>
+        <cell>50</cell>
+        <cell>48</cell>
+        <cell>63</cell>
+        <cell>79</cell>
+        <cell>51</cell>
+        <cell>39</cell>
+        </row>
+        <row >
+        <cell>7</cell>
+        <cell>101</cell>
+        <cell>91</cell>
+        <cell>139</cell>
+        <cell>83</cell>
+        <cell>75</cell>
+        <cell>73</cell>
+        <cell>67</cell>
+        <cell>54</cell>
+        <cell>71</cell>
+        <cell>87</cell>
+        <cell>66</cell>
+        <cell>41</cell>
+        </row>
+        <row >
+        <cell>8</cell>
+        <cell>118</cell>
+        <cell>144</cell>
+        <cell>166</cell>
+        <cell>90</cell>
+        <cell>103</cell>
+        <cell>85</cell>
+        <cell>88</cell>
+        <cell>61</cell>
+        <cell>82</cell>
+        <cell>94</cell>
+        <cell>76</cell>
+        <cell>43</cell>
+        </row>
+        <row >
+        <cell>9</cell>
+        <cell>121</cell>
+        <cell>150</cell>
+        <cell>169</cell>
+        <cell>124</cell>
+        <cell>112</cell>
+        <cell>104</cell>
+        <cell>93</cell>
+        <cell>102</cell>
+        <cell>113</cell>
+        <cell>117</cell>
+        <cell>80</cell>
+        <cell>53</cell>
+        </row>
+        <row >
+        <cell>10</cell>
+        <cell>140</cell>
+        <cell>152</cell>
+        <cell>170</cell>
+        <cell>147</cell>
+        <cell>130</cell>
+        <cell>109</cell>
+        <cell>98</cell>
+        <cell>106</cell>
+        <cell>119</cell>
+        <cell>125</cell>
+        <cell>97</cell>
+        <cell>56</cell>
+        </row>
+        <row >
+        <cell>11</cell>
+        <cell>159</cell>
+        <cell>179</cell>
+        <cell>200</cell>
+        <cell>148</cell>
+        <cell>133</cell>
+        <cell>110</cell>
+        <cell>115</cell>
+        <cell>111</cell>
+        <cell>149</cell>
+        <cell>138</cell>
+        <cell>99</cell>
+        <cell>70</cell>
+        </row>
+        <row >
+        <cell>12</cell>
+        <cell>164</cell>
+        <cell>181</cell>
+        <cell>213</cell>
+        <cell>191</cell>
+        <cell>155</cell>
+        <cell>134</cell>
+        <cell>120</cell>
+        <cell>114</cell>
+        <cell>151</cell>
+        <cell>171</cell>
+        <cell>107</cell>
+        <cell>78</cell>
+        </row>
+        <row >
+        <cell>13</cell>
+        <cell>186</cell>
+        <cell>189</cell>
+        <cell>217</cell>
+        <cell>208</cell>
+        <cell>178</cell>
+        <cell>137</cell>
+        <cell>153</cell>
+        <cell>116</cell>
+        <cell>158</cell>
+        <cell>176</cell>
+        <cell>126</cell>
+        <cell>84</cell>
+        </row>
+        <row >
+        <cell>14</cell>
+        <cell>194</cell>
+        <cell>205</cell>
+        <cell>223</cell>
+        <cell>218</cell>
+        <cell>183</cell>
+        <cell>180</cell>
+        <cell>172</cell>
+        <cell>141</cell>
+        <cell>160</cell>
+        <cell>192</cell>
+        <cell>127</cell>
+        <cell>95</cell>
+        </row>
+        <row >
+        <cell>15</cell>
+        <cell>199</cell>
+        <cell>210</cell>
+        <cell>239</cell>
+        <cell>219</cell>
+        <cell>197</cell>
+        <cell>206</cell>
+        <cell>187</cell>
+        <cell>142</cell>
+        <cell>161</cell>
+        <cell>196</cell>
+        <cell>131</cell>
+        <cell>96</cell>
+        </row>
+        <row >
+        <cell>16</cell>
+        <cell>211</cell>
+        <cell>212</cell>
+        <cell>256</cell>
+        <cell>231</cell>
+        <cell>226</cell>
+        <cell>209</cell>
+        <cell>188</cell>
+        <cell>145</cell>
+        <cell>175</cell>
+        <cell>201</cell>
+        <cell>132</cell>
+        <cell>100</cell>
+        </row>
+        <row >
+        <cell>17</cell>
+        <cell>215</cell>
+        <cell>214</cell>
+        <cell>258</cell>
+        <cell>252</cell>
+        <cell>250</cell>
+        <cell>222</cell>
+        <cell>190</cell>
+        <cell>154</cell>
+        <cell>177</cell>
+        <cell>202</cell>
+        <cell>143</cell>
+        <cell>105</cell>
+        </row>
+        <row >
+        <cell>18</cell>
+        <cell>221</cell>
+        <cell>216</cell>
+        <cell>259</cell>
+        <cell>253</cell>
+        <cell>276</cell>
+        <cell>228</cell>
+        <cell>193</cell>
+        <cell>167</cell>
+        <cell>184</cell>
+        <cell>220</cell>
+        <cell>146</cell>
+        <cell>123</cell>
+        </row>
+        <row >
+        <cell>19</cell>
+        <cell>224</cell>
+        <cell>236</cell>
+        <cell>265</cell>
+        <cell>260</cell>
+        <cell>278</cell>
+        <cell>247</cell>
+        <cell>227</cell>
+        <cell>168</cell>
+        <cell>195</cell>
+        <cell>229</cell>
+        <cell>156</cell>
+        <cell>128</cell>
+        </row>
+        <row >
+        <cell>20</cell>
+        <cell>235</cell>
+        <cell>285</cell>
+        <cell>267</cell>
+        <cell>262</cell>
+        <cell>295</cell>
+        <cell>249</cell>
+        <cell>248</cell>
+        <cell>198</cell>
+        <cell>204</cell>
+        <cell>234</cell>
+        <cell>174</cell>
+        <cell>129</cell>
+        </row>
+        <row >
+        <cell>21</cell>
+        <cell>238</cell>
+        <cell>290</cell>
+        <cell>268</cell>
+        <cell>269</cell>
+        <cell>296</cell>
+        <cell>272</cell>
+        <cell>270</cell>
+        <cell>245</cell>
+        <cell>207</cell>
+        <cell>237</cell>
+        <cell>182</cell>
+        <cell>135</cell>
+        </row>
+        <row >
+        <cell>22</cell>
+        <cell>251</cell>
+        <cell>292</cell>
+        <cell>275</cell>
+        <cell>271</cell>
+        <cell>298</cell>
+        <cell>274</cell>
+        <cell>277</cell>
+        <cell>261</cell>
+        <cell>225</cell>
+        <cell>241</cell>
+        <cell>185</cell>
+        <cell>157</cell>
+        </row>
+        <row >
+        <cell>23</cell>
+        <cell>280</cell>
+        <cell>297</cell>
+        <cell>293</cell>
+        <cell>273</cell>
+        <cell>308</cell>
+        <cell>301</cell>
+        <cell>279</cell>
+        <cell>286</cell>
+        <cell>232</cell>
+        <cell>243</cell>
+        <cell>203</cell>
+        <cell>162</cell>
+        </row>
+        <row >
+        <cell>24</cell>
+        <cell>305</cell>
+        <cell>299</cell>
+        <cell>300</cell>
+        <cell>312</cell>
+        <cell>313</cell>
+        <cell>335</cell>
+        <cell>284</cell>
+        <cell>291</cell>
+        <cell>233</cell>
+        <cell>244</cell>
+        <cell>230</cell>
+        <cell>163</cell>
+        </row>
+        <row >
+        <cell>25</cell>
+        <cell>306</cell>
+        <cell>302</cell>
+        <cell>317</cell>
+        <cell>316</cell>
+        <cell>319</cell>
+        <cell>341</cell>
+        <cell>287</cell>
+        <cell>307</cell>
+        <cell>242</cell>
+        <cell>254</cell>
+        <cell>266</cell>
+        <cell>165</cell>
+        </row>
+        <row >
+        <cell>26</cell>
+        <cell>318</cell>
+        <cell>338</cell>
+        <cell>323</cell>
+        <cell>336</cell>
+        <cell>321</cell>
+        <cell>353</cell>
+        <cell>289</cell>
+        <cell>311</cell>
+        <cell>246</cell>
+        <cell>264</cell>
+        <cell>281</cell>
+        <cell>173</cell>
+        </row>
+        <row >
+        <cell>27</cell>
+        <cell>325</cell>
+        <cell>347</cell>
+        <cell>332</cell>
+        <cell>340</cell>
+        <cell>326</cell>
+        <cell>356</cell>
+        <cell>303</cell>
+        <cell>324</cell>
+        <cell>255</cell>
+        <cell>283</cell>
+        <cell>282</cell>
+        <cell>240</cell>
+        </row>
+        <row >
+        <cell>28</cell>
+        <cell>329</cell>
+        <cell>363</cell>
+        <cell>334</cell>
+        <cell>345</cell>
+        <cell>330</cell>
+        <cell>358</cell>
+        <cell>322</cell>
+        <cell>333</cell>
+        <cell>257</cell>
+        <cell>288</cell>
+        <cell>309</cell>
+        <cell>304</cell>
+        </row>
+        <row >
+        <cell>29</cell>
+        <cell>337</cell>
+        <cell>365</cell>
+        <cell>343</cell>
+        <cell>346</cell>
+        <cell>357</cell>
+        <cell>360</cell>
+        <cell>327</cell>
+        <cell>339</cell>
+        <cell>263</cell>
+        <cell>294</cell>
+        <cell>310</cell>
+        <cell>314</cell>
+        </row>
+        <row >
+        <cell>30</cell>
+        <cell>349</cell>
+        <cell></cell>
+        <cell>354</cell>
+        <cell>351</cell>
+        <cell>361</cell>
+        <cell>366</cell>
+        <cell>331</cell>
+        <cell>344</cell>
+        <cell>315</cell>
+        <cell>342</cell>
+        <cell>348</cell>
+        <cell>320</cell>
+        </row>
+        <row >
+        <cell>31</cell>
+        <cell>355</cell>
+        <cell></cell>
+        <cell>362</cell>
+        <cell></cell>
+        <cell>364</cell>
+        <cell></cell>
+        <cell>350</cell>
+        <cell>352</cell>
+        <cell></cell>
+        <cell>359</cell>
+        <cell></cell>
+        <cell>328</cell>
+        </row>
+        </tabular>
+        </table>
+   </introduction>
+   <task>
+    <statement>
+        <p>
+            Use this table to determine the median draft number for your birth month.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will depend on birth month
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Collaborate with your classmates to determine and report the median draft number for all 12 months.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+                Month
+              </cell>
+              <cell>
+                Jan
+              </cell>
+              <cell>
+                Feb
+              </cell>
+              <cell>
+                Mar
+              </cell>
+              <cell>
+                Apr
+              </cell>
+              <cell>
+                May
+              </cell>
+              <cell>
+                June
+              </cell>
+              <cell>
+                July
+              </cell>
+              <cell>
+                Aug
+              </cell>
+              <cell>
+                Sep
+              </cell>
+              <cell>
+                Oct
+              </cell>
+              <cell>
+                Nov
+              </cell>
+              <cell>
+                Dec
+              </cell>
+            </row>
+            <row>
+              <cell>
+                Median draft number
+              </cell>
+              <cell>
+                211
+              </cell>
+              <cell>
+                210
+              </cell>
+              <cell>
+                256
+              </cell>
+              <cell>
+                225
+              </cell>
+              <cell>
+                226
+              </cell>
+              <cell>
+                207.5
+              </cell>
+              <cell>
+                188
+              </cell>
+              <cell>
+                145
+              </cell>
+              <cell>
+                168
+              </cell>
+              <cell>
+                201
+              </cell>
+              <cell>
+                131.5
+              </cell>
+              <cell>
+                100
+              </cell>
+            </row>
+          </tabular>
+        </table>
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Do you notice any pattern or trend in the median draft numbers over the course of the year? (Hint: If you do not see a trend, compare the six medians from January to June with the six medians from July to December.)
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Median draft numbers trend downward as months increase from Jan to Dec.
+      </p>
+    </solution>
+   </task>
+</activity>
+
+<activity>
+ <!--  Question 5 -->
+<statement>
+<p>The correlation coefficient for the full dataset is <m>r = -0.226</m>. What does this number reveal? Is it consistent with the scatterplot?</p>
+</statement>
+<solution>
+  <p>
+    A negative association. This doesn’t seem consistent with the scatter plot until you notice that
+there does tend to be fewer “dots” in the upper right and lower left corners.
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--  Question 6  -->
+   <introduction>
+    <p>
+        Let's think about how we would complete a test of significance for correlation.
+    </p>
+   </introduction>
+   <task>
+    <statement>
+        <p>
+            Suggest two possible explanations (hypotheses) which could have generated the value of the nonzero correlation coefficient.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        The population correlation is zero and we just got this result by random chance, OR
+there really is an association between the draft lottery number and the sequential date.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            In your own words, how could we go about determining whether random chance is a plausible explanation for the observed correlation value between sequential date and draft number? Explain how the 3S strategy could be applied here, in particular identifying a simulation strategy you could conduct “by hand.” Note: You do not need to actually carry out a simulation analysis.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Simulate by shuffling the draft lottery numbers and reassign to the sequential
+dates. Do this many times, recalculating the correlation coefficient each time to
+see what values we would expect for the correlation coefficient if this truly were
+governed by random chance.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            What is the statistic? How would you simulate? How would you evaluate the strength of evidence?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Compare the observed correlation coefficient to the distribution of simulated
+correlation coefficients to see whether it is a typical value or a value that is
+unlikely to have occurred assuming the null to be true.
+      </p>
+    </solution>
+   </task>
+</activity>
+
+<p>The null hypothesis to be tested is that the lottery was conducted with a fair, random process. The null hypothesis would therefore imply that there is <em>no</em> association between sequential date and draft number for this process. The alternative hypothesis is that this lottery was <em>not</em> conducted with a fair, random process, so there is an association between sequential date and draft number.</p>
+<p>How can we assess whether the observed correlation coefficient of <m>r = -0.226</m> is far enough from zero to provide convincing evidence that the lottery process was not random? Like always, we ask how unlikely it would be for a fair, random lottery to produce a correlation value as far from zero as −0.226. Also like always, we answer that question by simulating a large number of fair random lotteries (a true null hypothesis), calculating the correlation coefficient for each one, and seeing how often we obtain a correlation coefficient as or more extreme (as far from zero) as -0.226.</p>
+
+<activity> 
+ <!--  Question 7  -->
+   <introduction>
+    <p>
+        Open the <url href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2">Corr/Regression applet</url>. Copy the data from <url href="https://static-content2.zybooks.com/isi/data/chap10/DraftLottery.txt">DraftLottery</url> into the applet (remember to include the column titles). Check the Correlation Coefficient box and confirm that the correlation coefficient is -0.226.
+    </p>
+   </introduction>
+   <task>
+    <statement>
+        <p>
+            Check the Show Shuffle Options box and select Correlation from the Statistic pull-down menu to the right to keep track of that statistic. Then press Shuffle Y-values to simulate one fair, random lottery. Record the value of the correlation coefficient between the shuffled draft numbers and sequential date.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        After one shuffle, answers will vary.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Press Shuffle Y-values four more times to generate results of four more fair, random lotteries. Record the values of the shuffled correlation coefficients in a table.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary, for example: 0.002, 0.039, -0.027, 0.09, -0.039
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Did any of your simulated statistics from fair, random lotteries produce a correlation coefficient as extreme (far from zero) as the observed -0.226?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        No.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Change the Number of Shuffles from 1 to 995 and press Shuffle Y-values to simulate 995 more fair, random lotteries. Look at the null distribution of these 1,000 correlation coefficients. Where is this distribution centered? Why does this make sense?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        Center is 0. If the null hypothesis is true, that means there is no underlying association
+between the two variables, so we would expect correlations around zero.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Next to the Count Samples box choose Beyond from the pull-down menu. Specify the observed correlation coefficient (-0.226) and press Count. What proportion, of the 1,000 simulated random lotteries produced a correlation coefficient as extreme (as far from zero in either direction) as -0.226? Report the approximate p-value.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        The approximate p-value is 0.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            Interpret this p-value: This is the probability of what, assuming what?
+        </p>
+    </statement>
+    <solution>
+      <p>
+        The probability of getting a correlation coefficient of -0.226 or more extreme (in either
+direction) assuming the null hypothesis of no association is true.
+      </p>
+    </solution>
+   </task>
+   <task>
+    <statement>
+        <p>
+            What conclusion would you draw from this p-value? Do you have strong evidence that the 1970 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion.
+        </p>
+    </statement>
+    <solution>
+      <p>
+        The p-value of zero offers very strong evidence against the null hypothesis and in
+support of the alternative hypothesis that states there is an association between draft
+lottery number and sequential birth date. In all the shufflings and recalculations of
+simulated correlation coefficients, not one was as extreme as -0.226 from the study.
+      </p>
+    </solution>
+   </task>
+</activity>
+
+</subsection>
+
+<subsection xml:id="subsection-11-2-exploring-further"> 
+ <title>Exploring further</title>
+<p>Once they saw these results, statisticians were quick to point out that something fishy happened with the 1970 draft lottery. The irregularity can be attributed to improper mixing of the balls used in the lottery drawing process. (Balls with birthdays early in the year were placed in the bin first, and balls with birthdays late in the year were placed in the bin last. Without thorough mixing, balls with birthdays late in the year settled near the top of the bin and so tended to be selected earlier.) The mixing process was changed for the 1971 draft lottery (e.g., two bins, one for the draft numbers and one for the birthdays), for which the correlation coefficient turned out to be r = 0.014.</p>
+
+<activity>
+ <!--  Question 8 -->
+<statement>
+<p>Use your simulation results to approximate the p-value for the 1971 draft lottery. Is there any reason to suspect that this 1971 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion. Also explain why you don't need to paste in the data from the 1971 lottery first.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary, should be a p-value around 0.80. It appears this lottery was conducted by a
+fair, random process because the observed correlation coefficient is a typical correlation
+coefficient we’d expect from a random process. The null distribution generated from the 1971
+data would be essentially the same as the null distribution from the 1970 data (just lose one
+day).
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

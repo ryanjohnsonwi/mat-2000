@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-11-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Data and Formulas</title>
+
+
+
+<subsection> 
+ <title>Data</title>
+ 
+<table>
+  <title> References </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Data</cell>
+<cell>Reference</cell>
+</row>
+<row>
+<cell>Example: Two quantitative variables: Scatterplot and correlation</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/Whales.csv">Whales.csv</url></cell>
+<cell><url href="http://doi.org/10.1126/science.aax9044">Goldbogen et al. (Science 2019) </url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Two quantitative variables: Scatterplot and correlation</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/WimbledonGL.csv">WimbledonGL.csv</url></cell>
+<cell><url href="https://www.topendsports.com/sport/tennis/anthropometry-wimbledon.htm">Topend Sports (2019) </url></cell>
+</row>
+<row>
+<cell>Example: Inference for correlation coefficient:A simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/ExerciseMood.csv">ExerciseMood.csv</url></cell>
+<cell><url href="https://doi.org/10.1080/00222216.2003.11949988">Szabo (J. Leis. Res. 2017) </url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Inference for correlation coefficient: A simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/DraftLottery.csv">DraftLottery.csv</url></cell>
+<cell><url href="https://doi.org/10.1126/science.171.3968.255">
+Fienberg (Science 1971) </url></cell>
+</row>
+<row>
+<cell>Example: Least squares regression</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/WimbledonMF.csv">WimbledonMF.csv</url></cell>
+<cell><url href="https://www.topendsports.com/sport/tennis/anthropometry-wimbledon.htm">Topend Sports (2019) </url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Least squares regression</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/FootHeight.csv">FootHeight.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Example: Inference for regression slope:  Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/GPA.csv">GPA.csv</url></cell>
+<cell><url href="https://sites.google.com/a/umn.edu/sentience/Ock_2008.pdf">Ock (Sentience 2008) </url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Inference for regression slope:Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/Facebook.csv">Facebook.csv</url></cell>
+<cell><url href="https://doi.org/10.1098/rspb.2011.1959">Kanai et al. (Proc. Royal Soc. B 2011) </url></cell>
+</row>
+<row>
+<cell>Example: Inference for regression slope:  Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/TempHeart.csv">TempHeart.csv</url>
+<br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch11/AlcoholSmoke.csv">AlcoholSmoke.csv</url></cell>
+<cell><url href="https://doi.org/10.1080/10691898.1996.11910512">Shoemaker (J. Educ. Stat. 2017) </url><br/>Survey at Hope College (2008)</cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Inference for regression slope: Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/Facebook.csv">Facebook.csv</url></cell>
+<cell><url href="https://doi.org/10.1098/rspb.2011.1959">Kanai et al. (Proc. Royal Soc. B 2011) </url></cell>
+</row>
+<row>
+<cell>Investigation: Association between hand span and candy?</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch11/HandSpan.csv">HandSpan.csv</url></cell>
+<cell></cell>
+</row>
+</tabular>
+</table>
+
+</subsection>
+
+<subsection> 
+ <title>Formulas for correlation and regression</title>
+<p>
+Correlation:
+<ul>
+<li><m> (x_{i}, y_{i}) </m> are the paired data.</li>
+<li><m>n</m> is the sample size.</li>
+<li><m>\overline{x}</m> and <m>\overline{y}</m> are the sample means for the two variables.</li>
+<li><m>s_x</m> and <m> s_y </m> are the sample standard deviations for the variables.</li>
+<li><m>\displaystyle r =  \frac{1}{n-1} \sum \left( \frac{x_i - \overline{x}}{s_x}  \right) \left( \frac{y_i - \overline{y}}{s_y}  \right)  </m> is the pearson correlation coefficient.</li>
+<li><m>\rho </m> is the population correlation coefficient.</li>
+<li><m>\displaystyle \text{SE}_r =  \sqrt{\frac{1-r^2}{n-2} }  </m> is the theory-based standard error for correlation.</li>
+<li><m>t = r/SE_r  </m> is the standardized statistic for correlation.</li>
+</ul>
+</p>
+<p>
+Regression:
+<ul>
+<li>
+  <p>
+    <m>\hat{y} = a + b \cdot x</m> is the least squares regression equation that predicts the value
+    <m>\hat{y}_i </m> for the value <m> x_i </m></li>
+    <ul>
+      <li><m>a = \overline{y} - b \cdot \overline{x}  </m> is the intercept of the regression equation that represents the predicted value <m> \hat{y}</m> when <m>x = 0 </m>.</li>
+      <li><m>\displaystyle b = r \frac{s_y}{s_x} </m> is the slope of the regression equation that represents how much the predicted value <m> \hat{y}</m> increases/decreases per a change of 1 unit of <m> x </m>.</li>
+      </ul>
+      <li><m> \text{SAE} = \sum |y_i - \overline{y}| </m> is the sum of absolute errors.</li>
+      <li><m> \text{SSE} </m> is the sum of square residuals (sum of square errors).</li>
+      <ul>
+  </p>
+<li><m>\text{SSE}(\overline{x}) = \sum (x_i - \overline{x} )^2 </m> is the sum of square residuals for <m>x</m>.</li>
+<li><m> \text{SSE}(\overline{y}) = \sum (y_i - \overline{y} )^2 </m> is the sum of square residuals for <m>y</m>.</li>
+<li><m> \text{SSE}(\text{Regression Line}) = \sum (y_i - \hat{y}_i )^2 </m> is the sum of square residuals for the regression line.</li>
+</ul>
+<li><m>R^2 = \frac{\text{SSE}(\overline{y}) - \text{SSE}(\text{Regression Line}) }{\text{SSE}(\overline{y})} =  r^2 </m> is the coefficient of determination that measures the proportion of total variation in <m>y</m> that is explained by the linear relationship with <m>x</m>.</li>
+<li><m>\text{SE}</m> is standard error.</li>
+<ul>
+<li><m>\displaystyle \text{SE}_a =  \sqrt{ \left( \frac{ \text{SSE}(\text{Regression Line})  }{n-2} \right) \left( \frac{1}{n} + \frac{\overline{x}^2}{\text{SSE}(\overline{x}) } \right)  }   </m> is the theory-based standard error for intercept.</li>
+<li><m>\displaystyle \text{SE}_b =  \frac{1}{\sqrt{n-2}} \sqrt{ \frac{ \text{SSE}(\text{Regression Line}) }{\text{SSE}(\overline{x}) }  }  </m> is the theory-based standard error for slope.</li>
+</ul>
+<li><m>t </m> is standardized statistic .</li>
+<ul>
+<li><m>t = b/SE_b  </m> is the standardized statistic for slope.</li>
+<li><m>t = a/SE_a  </m> is the standardized statistic for intercept.</li>
+</ul>
+<li><m> \beta </m> is the population regression slope that represents how much <m>y</m> changes on average per a change of 1 unit in <m>x</m>.</li>
+<li><m> b \pm (\text{Multiplier}) \cdot SE_b </m> is the theory-based is a theory-based confidence interval estimating <m>\beta</m>, where the multiplier comes from a t distribution with <m> n-2</m> degrees of freedom. </li>
+</ul>
+<ul>
+<li><m>a = \overline{y} - b \cdot \overline{x}  </m> is the intercept of the regression equation that represents the predicted value <m> \hat{y}</m> when <m>x = 0 </m>.</li>
+<li><m>\displaystyle b = r \frac{s_y}{s_x} </m> is the slope of the regression equation that represents how much the predicted value <m> \hat{y}</m> increases/decreases per a change of 1 unit of <m> x </m>.</li>
+</ul>
+<ul>
+<li><m>\text{SSE}(\overline{x}) = \sum (x_i - \overline{x} )^2 </m> is the sum of square residuals for <m>x</m>.</li>
+<li><m> \text{SSE}(\overline{y}) = \sum (y_i - \overline{y} )^2 </m> is the sum of square residuals for <m>y</m>.</li>
+<li><m> \text{SSE}(\text{Regression Line}) = \sum (y_i - \hat{y}_i )^2 </m> is the sum of square residuals for the regression line.</li>
+</ul>
+<ul>
+<li><m>\displaystyle \text{SE}_a =  \sqrt{ \left( \frac{ \text{SSE}(\text{Regression Line})  }{n-2} \right) \left( \frac{1}{n} + \frac{\overline{x}^2}{\text{SSE}(\overline{x}) } \right)  }   </m> is the theory-based standard error for intercept.</li>
+<li><m>\displaystyle \text{SE}_b =  \frac{1}{\sqrt{n-2}} \sqrt{ \frac{ \text{SSE}(\text{Regression Line}) }{\text{SSE}(\overline{x}) }  }  </m> is the theory-based standard error for slope.</li>
+</ul>
+<ul>
+<li><m>t = b/SE_b  </m> is the standardized statistic for slope.</li>
+<li><m>t = a/SE_a  </m> is the standardized statistic for intercept.</li>
+</ul>
+</p>
+</subsection>
+
+</section>

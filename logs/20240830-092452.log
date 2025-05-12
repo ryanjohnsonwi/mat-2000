@@ -1,0 +1,96 @@
+INFO    : PreTeXt-CLI version: 2.4.1
+
+INFO    : PreTeXt project found in `G:\Shared drives\MAT - 2000 Intro to Stats\code`.
+WARNING : Using CLI version 2.4.1 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.4.1.
+INFO    : Preparing to build into G:\Shared drives\MAT - 2000 Intro to Stats\code\..\worksheets-pdf.
+INFO    : discovering source file's directory name: G:\Shared drives\MAT - 2000 Intro to Stats\code\source
+INFO    : verifying and expanding input directory: G:\Shared drives\MAT - 2000 Intro to Stats\code\source\../generated-assets
+INFO    : input directory expanded to absolute path: G:\Shared drives\MAT - 2000 Intro to Stats\code\generated-assets
+INFO    : verifying and expanding input directory: G:\Shared drives\MAT - 2000 Intro to Stats\code\source\../assets
+INFO    : input directory expanded to absolute path: G:\Shared drives\MAT - 2000 Intro to Stats\code\assets
+INFO    : converting G:\Shared drives\MAT - 2000 Intro to Stats\code\source\main.ptx to LaTeX as C:\Users\johnsor\AppData\Local\Temp\ptx-gxi9_a4t\main.tex
+INFO    : XSL conversion of G:\Shared drives\MAT - 2000 Intro to Stats\code\source\main.ptx by C:\Users\johnsor\.ptx\xsl\pretext-latex.xsl
+INFO    : messages from the log for XSL processing (indented):
+INFO    :     * PTX:ERROR:      The @xml:id "subsec-Exploring Further" is invalid.  Use only letters, numbers, hyphens and underscores.
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_1_1" (xml:id), "Preliminary: Introduction to the six-step method" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_1_2" (xml:id), "Preliminary: Exploring Data" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_4_2" (xml:id), "Statistical inference: Confidence intervals" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_7-1" (xml:id), "Comparing two groups: Quantitative response" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_7-2" (xml:id), "Comparing two means: Simulation-based approach" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section-7-3" (xml:id), "Comparing two means: Theory-based approach" (title)
+INFO    :     * PTX:WARNING: A section containing subsections needs to have other content inside an <introduction> and/or  <conclusion>.
+INFO    :     *              located within: "section_10-2" (xml:id), "Comparing multiple means: Theory-based approach" (title)
+INFO    :     * PTX:DEPRECATE: (2016-05-23) <br> can no longer be used to create multiline output; you may use <line> elements in select situations (59 times)
+INFO    :     *              located within: " Table 2121: One-proportion relevant features by section " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: "References" (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " Table 4114: References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     *              located within: " References " (title)
+INFO    :     * --------------
+INFO    : successful application of C:\Users\johnsor\.ptx\xsl\pretext-latex.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-2-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Alternative measure of strength of evidence</title>
+<introduction>
+  <p>
+    <url href="https://doi.org/10.3758/BF03194119">A study in Psychonomic Bulletin and Review</url> (Lea, Thomas, Lamkin, and Bell, 2007) presented evidence that “people use facial prototypes when they encounter different names.” Participants were given two faces and asked to identify which one was Tim and which one was Bob. The researchers wrote that their participants “overwhelmingly agreed” on which face belonged to Tim and which face belonged to Bob but did not provide the exact results of their study.
+  </p>
+</introduction>
+<subsection> 
+ <title>STEP 1: Ask a research question</title>
+<p>We will gather data from your class to investigate the
+research question of whether students have a tendency to associate certain facial features with
+a name.</p>
+</subsection>
+
+<subsection> 
+ <title>STEP 2: Design a study and collect data</title>
+<p>Each student in your class will be shown the
+same two pictures of men's faces used in the research study. You will be asked to assign the
+name Bob to one photo and the name Tim to the other. Each student will then submit the
+name that he or she assigned to the picture on the left. Then the name that the researchers
+identify with the face on the left will be revealed.</p>
+<activity>
+ <!-- Question 1-->
+<statement>
+<p>Identify the observational units in this study. </p>
+</statement>
+<solution>
+  <p>
+    Each student in the class.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!-- Question 2-->
+<statement>
+<p>Identify the variable. Is the variable categorical or quantitative? </p>
+</statement>
+<solution>
+  <p>
+    Variable: Tim on left? Yes/no, categorical variable
+  </p>
+</solution>
+</activity>
+
+<p>The parameter of interest here is the probability that a student in your class would assign
+the same name to the face on the left.</p>
+<activity>
+ <!-- Question 3-->
+<statement>
+<p>State the null and alternative hypotheses to be tested when the data are collected.
+Express these both in words and symbols. (Hint: Think about the parameter and the
+research question of interest here.) </p>
+</statement>
+<solution>
+  <p>
+    Null: The long-run proportion of students who assign the same (Tim) name to the picture on the left is 50%
+  </p>
+  <p>
+    Alt: The long-run proportion of students who assign the same (Tim) name to the picture on the left is more than 50%
+  </p>
+  <p>
+    <m>H_0 : \pi = 0.5</m>
+  </p>
+  <p>
+    <m>H_a : \pi &gt; 0.5</m> (also <m>H_a : \pi \neq 0.5</m> would be okay)
+  </p>
+  <p>
+    where <m>\pi = </m>The long-run proportion of students who would assign the same name (Tim) to the face on the left
+  </p>
+</solution>
+</activity>
+
+<figure width="100%" xml:id="bob-and-tim">
+  <caption>Consider these two photos:</caption>
+  <image source="2-3/bob_and_tim.png" width="100%">
+    <description>Two men are shown. The man to the left has medium-length, unruly hair. He has a short beard and mustache. The man on the right is almost bald, has drooping eyes and a small amount of facial hair on his chin and upper lip.
+    </description>
+    </image>
+</figure>
+
+<activity>
+ <!-- Question 4-->
+<statement>
+<p>Do you think the face on the left is Bob or Tim? </p>
+</statement>
+<solution>
+  <p>
+    Give credit for either answer.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title> STEP 4: Explore the data</title>
+<activity xml:id="q-2-3-5">
+ <!-- Question 5-->
+<statement>
+<p>Collect the responses (data) for all the students in your class. How many students put
+Tim as the name on the left? How many students participated in this study (sample
+size)? What proportion put Tim's name on the left?</p>
+</statement>
+<solution>
+  <p>
+    This solution will be different each time this class is taught.
+  </p>
+  <p>
+    For the solutions, we will use a class that had 18 students out of 25 total students put Tim on the left. Your class may be different thus changing answers to subsequent questions
+  </p>
+  <p>
+    Number (Tim on left): 18, Sample size =25, proportion=18/25=0.72
+  </p>
+</solution>
+</activity>
+
+<p>When we conduct analyses with binary variables, we often call one of the outcomes a
+“success” and the other a “failure” and then focus the analysis on the “success” outcome. It is arbitrary which outcome is defined to be a success, but you need to make sure you do so consistently throughout the analysis. In this case we'll call “Tim on left” a success because that's what previous studies have found to be a popular choice.
+</p>
+</subsection>
+
+<subsection> 
+ <title>STEP 4: Draw inferences</title>
+<p>You will use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion</url> applet to investigate how
+surprising the observed class statistic would be if students were just randomly selecting which
+name to put with which face.
+</p>
+<activity> 
+ <!-- Question 6. -->
+ <introduction>
+  <p>Before you use the applet, indicate what you will enter for the following values:</p>
+ </introduction>
+ 
+<task>
+  <statement>
+    <p>
+      Probability of success:
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Probability=0.50
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Sample size: 
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Sample size=25
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Number of repetitions:
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Number of samples=[any number that is 1000 or more works here]
+    </p>
+  </solution>
+</task>
+</activity>
+
+
+
+
+<activity> 
+ <!-- Question 7. -->
+ <introduction>
+  <p>Conduct this simulation analysis. Make sure the Proportion of heads button is
+    selected in the applet and not Number of heads.</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      Indicate how to calculate the approximate p-value (count the number of simulated
+      statistics that equal ____ or ____).
+    </p>
+  </statement>
+  <solution>
+    <p>
+      0.72 or larger
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Report the approximate p-value.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      0.018
+    </p>
+  </solution>
+</task>
+<task xml:id="q-2-3-7-c">
+  <statement>
+    <p>
+      Use the p-value to evaluate the strength of evidence provided by the sample data
+      against the null hypothesis, in favor of the alternative that students really do tend to
+      assign the name Tim (as the researchers predicted) to the face on the left.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We have strong evidence that the long-run proportion of students who assign the name <q>Tim</q> to the face on the left is more than 50%.
+    </p>
+  </solution>
+</task>
+</activity>
+
+<p>The p-value is the most common way to evaluate strength of evidence against the null hypothesis,
+but now we will explore a common alternative way to evaluate strength of evidence. The goal of any
+measure of strength of evidence is to use a number to assess whether the observed statistic falls
+in the tail of the null distribution (and is therefore surprising when the null hypothesis is true)
+or among the typical values we see when the null hypothesis is true.
+</p>
+<activity> 
+ <!-- Question 8. -->
+ <introduction>
+  <p>Check the <term>Summary Stats</term> box in the applet.</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      Report the mean (average) value of the simulated statistics.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Close to 50%
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Explain why it makes sense that this mean is close to 0.50.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      50% is the null hypothesized value of the long-run proportion
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Report the standard deviation (SD) of the simulated statistics.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      For my set of 1000 simulations, SD=0.099
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      Report (again) the observed class value of the statistic. (What proportion of students
+      in your class put Tim's name on the left?)
+      <m>\hat p =</m>
+    </p>
+    <p>
+      0.72
+    </p>
+  </statement>
+</task>
+<task xml:id="q-2-3-8-e">
+  <statement>
+    <p>
+      Calculate how many standard deviations the observed class value of the statistic is
+      from the hypothesized mean of the null distribution, 0.50. In other words, subtract
+      the 0.50 from the observed value and then divide by the standard deviation. In still
+      other words, calculate:
+      <me>\frac{\text{observed statistic} (\hat p) - 0.50}{\text{SD of null distribution}}</me>.
+    </p>
+    <p>
+      (0.72-0.496)/0.099 = 2.26
+    </p>
+  </statement>
+</task>
+</activity>
+
+<p>Your calculation in <xref ref="q-2-3-8-e" text="type-hybrid"/> is called “standardizing the statistic.” It is telling us how far above
+the mean the observed statistic is in terms of the “how many standard deviations.”
+</p>
+
+<definition>
+ <statement><p>To <term>standardize</term> a statistic, compute the distance of the statistic from the
+(hypothesized) mean of the null distribution and divide by the standard deviation of the null distribution.</p>
+<me>\text{standardized statistic} = z = \dfrac{\text{statistic} - \text{mean of null distribution}}{\text{standard deviation of null distribution}} </me>
+</statement>
+</definition>
+
+<p>Once you calculate this value, you interpret it as “how many standard deviations the
+observed statistic falls from the hypothesized parameter value.”</p>
+<p>The next question is how to evaluate strength of evidence against the null hypothesis
+based on a standardized value. Here are some guidelines:</p>
+<p>Standardizing gives us a quick, informal way to evaluate the strength of evidence against the null
+hypothesis. For standardized statistics:</p>
+
+<table>
+<title> Guidelines for evaluating strength of evidence from standardized values of statistics</title>
+<tabular><row>
+<cell>between -1.5 and 1.5</cell>
+<cell><term>little or no evidence</term> against the null hypothesis </cell>
+</row>
+<row>
+<cell>below -1.5 or above 1.5</cell>
+<cell><term> moderate</term> evidence against the null hypothesis</cell>
+</row>
+<row>
+<cell>below -2 or above 2</cell>
+<cell><term>strong</term> evidence against the null hypothesis</cell>
+</row>
+<row>
+<cell>below -3 or above 3</cell>
+<cell><term>very strong</term> evidence against the null hypothesis</cell>
+</row>
+</tabular></table>
+
+<p>The diagram in the figure below illustrates the basis for using a standardized statistic to assess strength of evidence against the null hypothesis for a mound-shaped, symmetric distribution.</p>
+<figure xml:id="fig-2-3_bell_curve">
+  <caption>Positions of standardized statistics for a bell-shaped distribution.</caption>
+  <image source="2-3/bell_curve.png" width="70%">
+    <description>A bell-shaped distribution is shown. The peak of the curve is at 0, with symmetric downward slopes at both positive and negative 1.5, 2, and 3.</description>
+</image>
+</figure>
+
+<p>The figure can be summarized by the following key idea.</p>
+<remark> 
+ <p>Observations that fall more than 2 or 3 standard deviations from the mean can be
+considered in the tail of the distribution.</p>
+</remark>
+
+</subsection>
+
+<subsection> 
+ <title>STEP 5: Formulate conclusions.</title>
+<activity> 
+ <!-- Question 9. -->
+ <introduction>
+  <p>Let's examine the strength of evidence against the null.</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      Based on the value of the standardized statistic, z, in <xref ref="q-2-3-8-e" text="type-hybrid"/> and the guidelines shown
+      above, how much evidence do the class data provide against the null hypothesis?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Strong evidence
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      How closely does your evaluation of strength of evidence based on the standardized
+      statistic compare to the strength of evidence based on the p-value in <xref ref="q-2-3-7-c" text="type-hybrid"/>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Similar strength of evidence as obtained using the p-value.
+    </p>
+  </solution>
+</task>
+</activity>
+
+<p>Now, let's step back a bit further and think about the scope of inference. We have found
+that in most classes, the observed data provide strong evidence that students do better than
+random guessing which face is Tim's and which is Bob's. In that case, do you think that most
+students at your school would agree on which face is Tim's? Do you think this means that most
+people can agree on which face belongs to Tim? Furthermore, does this mean that all people
+do ascribe to the same facial prototyping?</p>
+</subsection>
+
+<subsection> 
+ <title>STEP 6: Look back and ahead.</title>
+<activity>
+ <!-- Question 10-->
+<statement>
+<p>Based on the limitations of this study, suggest a new research question that you would
+investigate next.</p>
+</statement>
+<solution>
+  <p>
+    Grade this based on whether they gave the effort to pose a good question.  I (Dr. Johnson) often allow students to work together on this, so it is not a big deal if students have the same question.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Exploring Further</title>
+<activity> 
+ <!-- Question 11. -->
+ <introduction>
+  <p>In <xref ref="q-2-3-5" text="type-hybrid"/> you recorded the proportion of students in your class who put Tim's name with
+ the photo on the left. Imagine that the proportion was actually larger than that (e.g., if
+ your class was 60%, imagine it was 70%).</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      How would this have affected the p-value?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      smaller
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      How would this have affected the absolute value of the standardized statistic?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      larger
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      How would this have affected the strength of evidence against the null hypothesis?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      stronger
+    </p>
+  </solution>
+</task>
+</activity>
+
+<activity> 
+ <!-- Question 12. -->
+ <introduction>
+  <p>Suppose that less than half of the students in your class had put Tim's name on the left,
+ so your class result was in the opposite direction of the research conjecture and the
+ alternative hypothesis.</p>
+ </introduction>
+<task>
+  <statement>
+    <p>
+      What can you say about the standardized value of the statistic in this case? Explain.
+      (Hint: You cannot give a value for the standardized statistic, but you can say
+      something specific about its value.)
+    </p>
+  </statement>
+  <solution>
+    <p>
+      It will be negative since the value is less than the mean and, so, the numerator of the
+      standardized statistic formula will be negative (the denominator will always be positive
+      because standard deviation is always positive)
+    </p>
+  </solution>
+</task>
+<task>
+  <statement>
+    <p>
+      What can you say about the strength of evidence against the null hypothesis and in
+favor of the alternative hypothesis in this case?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      There is weak evidence against null and no evidence in favor of alternative because
+      alternative says “greater than” and the observed data is not greater than
+    </p>
+  </solution>
+</task>
+</activity>
+
+</subsection>
+
+</section>

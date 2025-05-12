@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-7-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing two means: Theory-based approach</title>
+
+<p>A worksheet for Grace College from Zybooks</p>
+
+<subsection> 
+ <title>Close Friends</title>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<p>How many close friends do you have? You know, the kind of people you like to talk 
+to about important personal matters. Do men and women tend to differ on the number of 
+close friends? And if so, by how much do men and women differ with regard to how many 
+close friends they have?
+</p>
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+<p>One of the questions asked of a random sample of adult Americans on the 2004 
+<url href="https://gss.norc.org/">General Social Survey (GSS)</url> was: "From 
+time to time, most people discuss important matters with other people. Looking 
+back over the last six months—who are the people with whom you discussed matters 
+important to you? Just tell me their first names or initials." The interviewer 
+then recorded how many names each person gave, along with keeping track of the 
+person's sex. The GSS is a survey of a representative sample of U.S. adults 
+who are not institutionalized.</p>
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Identify the variables recorded. Also classify each as either categorical 
+or quantitative, and identify each variable's role: explanatory or response.</p>
+</statement>
+<solution>
+  <p>
+    Explanatory: Sex (categorical), Response: Number of close friends (quantitative)
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Did this study make use of random assignment, random sampling, both, or 
+neither?</p>
+</statement>
+<solution>
+  <p>
+    Random sampling only
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Was this an experiment or an observational study? Explain how you are 
+deciding.</p>
+</statement>
+<solution>
+  <p>
+    Observational study---the researchers did not assign values of the explanatory variable
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>In words, state the null and the alternative hypotheses to test 
+whether American men and women differ with regard to how many friends they have.</p>
+</statement>
+<solution>
+  <p>
+    Null: Among U.S. adults, there is no association between a person's sex and the number of close
+friends they have, Alternative: Among U.S. adults, there is an association between a person's sex
+and the number of close friends they have
+</p>
+<p>
+Null: The average number of friends for men in the U.S. is the same as the average number of
+friends for women in the U.S..
+Alternative: The average number of friends for men in the U.S. is different than the average
+number of friends for women in the U.S..
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>Define the parameters of interest and assign symbols to them.</p>
+</statement>
+<solution>
+  <p>
+    The average number of close friends among all adult U.S. men (<m>\mu_{\text{men}}</m>). The average number of
+close friends among all adult U.S. women (<m>\mu_{\text{women}}</m>).
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>State the null and the alternative hypotheses in symbols.</p>
+</statement>
+<solution>
+  <p>
+    Null: <m>\mu_{text{men}}=\mu_{\text{women}}</m>, Alternative: \mu_{text{men}}\not=\mu_{\text{women}}
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+<p>The survey responses are summarized in the table below (and the data can be found in expanded 
+form in the file <url href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt">
+CloseFriends</url>).</p>
+ 
+ 
+<table>
+<title> Number of close friends reported by sex </title>
+<tabular><row header="yes"><cell>Number of close friends reported</cell>
+<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>Total</cell></row>
+<row ><cell>Men</cell>
+<cell>196</cell><cell>135</cell><cell>108</cell><cell>100</cell><cell>42</cell><cell>40</cell><cell>33</cell><cell>654</cell></row>
+<row ><cell>Women</cell>
+<cell>201</cell><cell>146</cell><cell>155</cell><cell>132</cell><cell>86</cell><cell>56</cell><cell>37</cell><cell>813</cell></row>
+</tabular></table>
+
+  <activity> 
+  <!--Question 7-->
+    <introduction>
+      <p>Now you will obtain numerical summaries (statistics, such as mean and SD) of the survey data using the 
+      <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+      Multiple Means applet</url>.
+      <ul>
+      <li>Open the data file <url href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt">
+        CloseFriends</url> to access the raw data. Copy the data (e.g., CTRL-A and CTRL-C).</li>
+      <li>Open the <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+        Multiple Means applet</url> and press <em>Clear</em>. Click inside the <em>Sample data</em> box
+      and paste (e.g., CTRL-V). Then press <em>Use Data</em>.</li>
+      </ul></p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Report the sample size, sample mean, and sample SD of the number of close friends reported for 
+          each sex. Based on the sample statistics, who tends to have more close friends, on average: 
+          men or women? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          men: sample size=654, mean=1.86, standard deviation=1.78
+        </p>
+        <p>
+          women: sample size=813, mean=2.09, standard deviation=1.76.
+        </p>
+        <p>
+          Women, <m>2.09 &lt; 1.86</m> (compare means)
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Based on the sample statistics, who tends to have more variability with respect to how many 
+          close friends they have: men or women? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          men <m>1.78 &lt; 1.76</m> (compare standard deviations)
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Based on the data as presented in the table, are the distributions of number of close friends 
+          symmetric or skewed? If skewed, in which direction?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Right skewedmost<ndash/>people have a few close friends, but a few people have a large number.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Calculate the observed difference in the mean number of close friends between these two groups 
+          (men - women). (Verify your calculation by checking the Observed diff output.)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          -0.228
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Notice that the value recorded in (d) is a negative number. Well, number of friends can only be 0 or more. Why is the number recorded in (d) less than 0?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          It is the difference in the average number of friends (men minus women). In particular, 1.78 - 2.09 = -0.228.
+        </p>
+      </solution>
+    </task>
+  </activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences beyond the data</title>
+  <p>
+    The question we want to answer is, Is the difference in mean number of close friends between men and 
+    women, as seen in the GSS sample data, something that could plausibly have happened by chance, by random 
+    sampling alone, if, on average, men and women have the same number of close friends?
+  </p>
+
+  <activity> 
+  <!--Question 8-->
+    <introduction>
+      <p>
+        Using the same approach you did previously with the Multiple Means applet, you can use this applet 
+        to generate possible values of the difference in sample means under the null hypothesis by shuffling 
+        which response values go with which explanatory variable values. Check the <em>Show Shuffle Options</em> 
+        box and enter 1,000 for the <em>Number of Shuffles</em>. Press the <em>Shuffle Responses</em> button 
+        (there will be a pause; this is a large
+        dataset!). The histogram on the right is the simulated null distribution for the difference
+        in sample means. Enter the observed difference in sample means in the <em>Count Samples</em> box and press
+        <em>Count</em>.
+      </p>
+    </introduction>
+    <task xml:id="q-7-3-8-a">
+      <statement>
+        <p>
+          Record your estimated p-value.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          p-value=0.014
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Fill in the blanks of the sentence, to complete the interpretation of the p-value: 
+          The p-value of ______ is the probability of observing ______ assuming______.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          0.014; -0.228; that there is no difference in average number of close friends for males
+          and females in the U.S. population.
+        </p>
+      </solution>
+    </task>
+  </activity>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>If the difference in means was larger (more different than 0), how would this impact the size of the p-value?</p>
+</statement>
+<solution>
+  <p>
+    The p-value would get smaller.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>How would increasing the sample size (all else remaining the same) change the p-value? Why?</p>
+</statement>
+<solution>
+  <p>
+    Increasing the sample size will reduce the p-value because the variability of the null distribution will decrease.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>How would increasing the standard deviation of the number of close friends for both males and females (all else remaining the same) change the p-value? Why?  </p>
+</statement>
+<solution>
+  <p>
+    Increasing the standard deviation will increase the variability of the null distribution and the p-value will increase.
+  </p>
+</solution>
+</activity>
+
+<p>As we saw earlier, another measure of the strength of evidence against the null hypothesis would be to standardize the statistic by subtracting the hypothesized value and dividing by the standard error of the statistic.</p>
+<activity>
+ <!--Question 12-->
+<statement>
+<p>On the left side of the applet (below the Sample data window) use the Statistic pull-
+down menu to select the t-statistic (again, there will be a pause). Record the value of the t-statistic that is computed for your data. Write a one-sentence interpretation of this value. </p>
+</statement>
+<solution>
+  <p>
+    The standardized statistic is t = -2.45 which means the observed difference in averages is 2.45 standard deviations below zero (the mean of the null distribution).
+  </p>
+</solution>
+</activity>
+
+<p>Notice that the standardized statistic uses the letter <m>t</m> instead of the <m>z</m> we saw when testing proportions. This is because the theoretical distribution used is now a t-distribution instead of a normal distribution. These t-distributions are very similar to normal distributions especially when sample sizes are large. The t-statistic, like the z-statistic, tells us how many standard deviations our sample difference is above or below the mean and it can be judged in the same manner.</p>
+<activity>
+ <!--Question 13-->
+<statement>
+<p>In light of the value of the standardized statistic, should you expect the p-value to be large or small? How are you deciding?</p>
+</statement>
+<solution>
+  <p>
+    Small<mdash/>t-statistic is less than -2, meaning the observed statistic is more than 2 standard deviationss away from the mean of the null.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>The histogram on the far right now displays the null distribution of simulated t-statistics. Describe the behavior of this distribution.</p>
+</statement>
+<solution>
+  <p>
+    Symmetric, bell-shaped and centered at zero.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 15-->
+<statement>
+<p>Below the null distribution check the box Overlay t distribution. Does the t-distribution appear to adequately predict the behavior of the shuffled t-statistics? What do you think this suggests about whether the validity conditions will be met for these data?</p>
+</statement>
+<solution>
+  <p>
+    Yes, the t-overlay matches the simulated t-distribution. This suggests the validity conditions will be met.
+  </p>
+</solution>
+</activity>
+
+<activity xml:id="q-7-3-16">
+ <!--Question 16-->
+<statement>
+<p>Enter the observed value of the t-statistic in the Count Samples box and 
+press Count. (Remember to use the pull-down menu to specify what direction(s) 
+you want to consider more extreme based on the alternative hypothesis.) How does 
+the p-value from the t-distribution (in orange) compare to the simulation-based 
+p-value (from <xref ref="q-7-3-8-a"/>)?</p>
+</statement>
+<solution>
+  <p>
+    Very similar
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Validity Conditions</title>
+<p>The validity conditions required for this theory-based approach 
+(a "two-sample t-test") to be valid are shown in the box.</p>
+
+<convention> 
+<p>The quantitative variable should have a symmetric distribution in both 
+groups or you should have at least 20 observations in each group and the 
+sample distributions should not be strongly skewed.</p>
+</convention>
+
+<activity>
+ <!--Question 17-->
+<statement>
+<p>Do the validity conditions appear to be satisfied for these data? Justify your answer.</p>
+</statement>
+<solution>
+  <p>
+    Yes, the validity conditions are satisfied because the sample sizes are both well above twenty in each group (654 and 813 are both are more than 20) and the distributions are not strongly skewed.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions</title>
+
+  <activity> 
+  <!--Question 18-->
+    <introduction>
+      <p>Based on the analysis you have just carried out, state your conclusion 
+      in the context of the study. Be sure to comment on the following:</p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Statistical significance: Do the data provide evidence that the mean number of 
+          close friends that men have is different from the mean number of friends women 
+          have? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Yes, the average number of close friends is different between U.S. men and women.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Causation: Do the data provide evidence that how many friends one has is caused by one's sex? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          No, we are not saying that the number of friends one has is caused by one’s sex, because this is not a randomized experiment.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Generalization: To whom can you apply the results of this study? All people? All adults? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          This result generalizes to all U.S. adults because it is based on a random sample of all U.S. adults.
+        </p>
+      </solution>
+    </task>
+  </activity>
+
+  <activity> 
+  <!--Question 19-->
+    <introduction>
+      <p>When you have selected the t-statistic and the theory-based overlay, you can also use this applet 
+      for estimating the parameter of interest. (You can also go directly to the 
+      <url href="http://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">
+      Theory-Based Inference applet</url> which will also allow you to change the confidence level.) 
+      Check the box next to <em>95% CI(s) for difference in means</em>.</p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Identify, in words related to the context of this study, the relevant parameter to be
+          estimated here.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The difference in the average number of close friends between men and women in the U.S. population.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Report the 95% confidence interval for this parameter.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          (-0.4100, -0.0454)
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Does the 95% confidence interval calculated from the GSS sample data contain 
+          the value 0? What does that imply? (Hint: Recall that a confidence interval 
+          is an interval of plausible values for the parameter of interest, and the 
+          interval is calculated using the sample statistics.)
+        </p>
+      </statement>
+      <solution>
+        <p>
+          No, it does not contain zero, implying that a difference of zero between the two means (men and women) is not plausible.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Does the 95% confidence interval agree with your conclusion in <xref ref="q-7-3-16"/>? How are you deciding?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Yes, we had evidence to reject the null hypothesis which stated that the two group means were the same; the small p-value gave us evidence that it's not plausible that the two group means are the same in the population, based on the evidence we have in our sample.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Fill in the blanks of the sentence to complete the interpretation of the 95% 
+          confidence interval:
+        </p>
+        <p>
+          We are ______% confident that the mean number of close friends
+          men have is ______ than the mean number of close friends
+          that women have, by between ______ and ______ friends.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          95%; smaller; 0.0454; 0.4100.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How would the width of the interval change if you increased the confidence level to 99%? Why?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Increase, because you are more confident you ‘caught’ the parameter in the interval.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How would the width of the interval change if you increased the sample size? Why?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Decrease, because with an increased sample size you have more precision.
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How would the width of the interval change if the variability of the number of close
+          friends increased for both males and females? Why?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Increase, because with increased variability you have decreased precision.
+        </p>
+      </solution>
+    </task>
+  </activity>
+
+  </subsection>
+
+  <subsection> 
+  <title>Step 6: Look back and ahead</title>
+  <activity>
+  <!--Question 20-->
+  <statement>
+  <p>Looking back: Did anything about the design and conclusions of this study concern
+  you? Issues you may want to critique include: the match between the research question and the study design, how the observational units were selected, how the measurements were recorded, the number of observational units in the study, whether what we observed is of practical value.</p>
+  </statement>
+  <solution>
+    <p>
+      Answers may vary.  Below is one good one:
+    </p>
+    <p>
+      Number of close friends was self-reported. Maybe find a more objective way to report number of close friends.
+    </p>
+  </solution>
+  </activity>
+
+  <activity>
+  <!--Question 20-->
+  <statement>
+  <p>Looking ahead: What should the researchers' next steps be to fix the limitations in this
+  study and/or build on this knowledge?</p>
+  </statement>
+  <solution>
+    <p>
+      Answers may vary.  Below is one good one:
+    </p>
+    <p>
+      Next steps could include different countries, to see if the same result is observed outside of the U.S.. Could also compare elderly men and women, or on the opposite side of the spectrum young boys and girls.
+    </p>
+  </solution>
+  </activity>
+
+</subsection>
+
+</section>

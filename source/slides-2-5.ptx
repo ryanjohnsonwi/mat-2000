@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>2-5 : Inference on a single proportion: Theory-based approach</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section xml:id="subsec-eye-dominance">
+      <title>Eye Dominance</title>
+      <slide>
+        <p>Just like handedness where people prefer to use one hand over another, eye dominance, sometimes called eyedness, is the tendency to prefer to see using one eye over the other. Interestingly though the side of the dominant eye does not always match that of the dominant hand. Let's investigate whether people are equally likely to have left-eye or right-eye dominance by collecting some data from you and your classmates.</p>
+      </slide>
+      <exploration>
+        <!--Question 1-->
+        <statement>
+          <p>To figure out which of your eyes is the dominant eye, carry out the following “dominant
+  eye test”:</p>
+          <p>
+            <ul>
+              <li>Extend both your arms in front of you and create a triangular opening using your
+      thumbs and pointer fingers.</li>
+              <li>With both eyes open, center your triangular opening on a distant object such as a
+      clock or a projector.</li>
+              <li>Close your left eye. If the object stays centered in your triangular opening, your right
+      eye (as that is the one that's open) is your dominant eye. If the object is no longer in
+      the triangular opening, your left eye is your dominant eye.</li>
+              <li>Double check this by closing your right eye. If the object stays centered in your
+      triangular opening, your left eye (as that is the one that's open) is your dominant
+      eye. If the object is no longer in the triangular opening, your right eye is your
+      dominant eye.</li>
+            </ul>
+          </p>
+        </statement>
+      </exploration>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Record whether you have left-eye or right-eye dominance.</p>
+      </slide>
+      <slide>
+        <p>Before we combine your data with the data from your classmates, let's think about what
+we want to test here. Conventional wisdom says that more often people are right-handed than
+left, so for now let's use our research hypothesis to be that more often people tend to have
+right-eye dominance than left-eye dominance.</p>
+      </slide>
+      <!--Question 2-->
+      <slide>
+        <title>Exercise 2</title>
+        <p>In this study with your class:</p>
+      </slide>
+      <slide>
+        <title>Exercise 2a: </title>
+        <p>
+      What are the observational units in this study?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 2b: </title>
+        <p>
+      What is the variable that is recorded?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 2c: </title>
+        <p>
+      Describe the parameter of interest in words. (Use the symbol π to represent
+      this parameter.)
+    </p>
+      </slide>
+      <slide xml:id="q-2-10-2-d">
+        <title>Exercise 2d: </title>
+        <p>
+      If right-eye and left-eye dominance are equally prevalent, what would you expect the
+      numerical value of the parameter to be? Is this the null hypothesis or the
+      alternative hypothesis?
+    </p>
+      </slide>
+      <slide xml:id="q-2-10-2-e">
+        <title>Exercise 2e: </title>
+        <p>
+      If people are more likely to be right-eye dominant than left, what can you say about
+      the numerical value of the parameter? Is this the null hypothesis or the
+      alternative hypothesis?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Including yourself and your classmates, how many people participated in this study? How many have right-eye dominance? Calculate the sample proportion who are right-eye dominant.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>To have a larger sample size to analyze, combine your class results with the results from
+some of the author's classes, in which 70 of 115 students had right-eye dominance. Now
+what are the sample size and the sample proportion that are right-eye dominant?</p>
+      </slide>
+      <!--Question 5-->
+      <slide>
+        <p>Use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">One Proportion</url>
+  applet to test the hypotheses from <xref ref="q-2-10-2-d" text="type-hybrid"/> and <xref ref="q-2-10-2-e" text="type-hybrid"/>.</p>
+      </slide>
+      <slide xml:id="q-2-10-5-a">
+        <title>Exercise 5a: </title>
+        <p>
+      Describe the shape of the null distribution of sample proportions. Does this shape
+      look familiar? Where is the null distribution centered? Does this make sense? Check
+      the Summary Stats box and report the mean and standard deviation as reported by
+      the applet.
+    </p>
+      </slide>
+      <slide xml:id="q-2-10-5-b">
+        <title>Exercise 5b: </title>
+        <p>
+      Approximate the p-value and summarize the strength of evidence that the sample
+      data provide regarding the research hypothesis.
+    </p>
+      </slide>
+      <slide xml:id="q-2-10-5-c">
+        <title>Exercise 5c: </title>
+        <p>
+      Determine the standardized statistic, z, and summarize the strength of evidence.
+      Confirm that the strength of evidence obtained using the standardized statistic is
+      similar to that obtained using the p-value.
+    </p>
+      </slide>
+    </section>
+    <section>
+      <title>Theory-Based Approach (One-Proportion z-test)</title>
+      <slide>
+        <p>In <xref ref="q-2-10-5-a" text="type-hybrid"/>, you probably described the shape of the null
+distribution using words such as bell-shaped, symmetric, or maybe even normal. You have seen many
+null distributions in this chapter that have had this same basic shape. You should have also noticed
+that the null distributions have all been centered at the hypothesized value of the long-run
+proportion used in the null hypotheses. You probably could have predicted that your null distribution
+was going to be somewhat bell-shaped and centered at 0.50. You probably would have a harder time
+predicting your null distribution's
+variability (standard deviation), but this too can be predicted in advance, as we will see shortly.
+We can use mathematical models known as normal distributions (bell-shaped curves) to
+approximate many of the null distributions we have generated so far in this text. When rules
+and theories are used to predict what the value of the standardized statistic and p-value would
+be if someone carried out a simulation, we call the approach a <em>theory-based approach</em>. The
+normal distribution provides a second way, in addition to simulation, to approximate a p-value.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Check the box next to Normal Approximation in the applet. Does the region shaded
+in blue seem to be a good description (model) of what we actually got in the simulation?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Validity Conditions for Theory-Based Approach</title>
+      <slide>
+        <p>The normal approximation to the null distribution is valid whenever the sample size is reasonably large. One convention is to consider the sample size to be large enough whenever there are at least 10 observations in each category.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>According to this convention, is the sample size large enough in this study to use the
+normal approximation and theory-based inference? Justify your answer.</p>
+      </slide>
+      <slide>
+        <title>Convention 1: </title>
+        <convention>
+          <p>The normal approximation can be thought of as a prediction of what would occur if
+a simulation-based analysis was carried out. Many times this prediction is valid, but
+not always. It is only valid when the condition (at least 10 successes and at least 10
+failures) is met.</p>
+        </convention>
+      </slide>
+    </section>
+    <section>
+      <title>Formulas</title>
+      <slide>
+        <p>The normal approximation will also give you values of the standardized sta-
+tistic and p-value based on its mathematical predictions. As you learned previously, the standardized score is calculated as</p>
+      </slide>
+      <me>\text{standardized statistic} = z = \dfrac{\text{statistic} - \text{mean of null distribution}}{\text{standard deviation of null distribution}} </me>
+      <slide>
+        <p> The mean of the null distribution is the hypothesized value of the long-run proportion (π). The standard deviation can be obtained in two ways: </p>
+      </slide>
+      <slide>
+        <p>First, find the standard deviation of the null distribution by simulating. </p>
+      </slide>
+      <slide>
+        <p>Second, predict the value of the standard deviation by substituting into this formula: </p>
+      </slide>
+      <me>\text{standard deviation of null distribution of single proportion} = \sqrt{\dfrac{\pi(1-\pi)}{n}}</me>
+      <slide xml:id="q-2-10-8">
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Use the formula to determine the (theoretical; predicted) standard deviation of
+the sample proportion. Then compare this to the SD from your simulated sample
+proportions, as recorded in <xref ref="q-2-10-5-a" text="type-hybrid"/>. Are they similar?</p>
+      </slide>
+      <slide>
+        <p>The predicted value of the standard deviation (using the formula) will be very close to
+the simulated standard deviation of the null distribution. The validity condition mentioned
+earlier says the shape will be approximately normal when the sample size is large enough
+where, a “large enough” sample size means at least 10 successes and at least 10 failures. This
+mathematical prediction is often called the “central limit theorem.”</p>
+      </slide>
+      <theorem>
+        <title> Central Limit Theorem </title>
+        <p>If the sample size (n) is large enough, the distribution of sample proportions will be
+bell-shaped (or normal), centered at the long-run proportion (π), with a standard
+deviation of  <m>\sqrt{\dfrac{\pi(1-\pi)}{n}}</m>
+.</p>
+      </theorem>
+      <slide xml:id="q-2-10-9">
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Use the predicted value of the standard deviation from <xref ref="q-2-10-8" text="type-hybrid"/> to calculate the standardized
+statistic (z) by hand and confirm that your answer is very close to what you found in <xref ref="q-2-10-5-c" text="type-hybrid"/>
+when using simulation.</p>
+      </slide>
+      <slide>
+        <p>In the applet, see that the predicted value of the standardized statistic, z, is given
+immediately below the button for “Normal approximation” in parentheses and should match your answer to
+<xref ref="q-2-10-9" text="type-hybrid"/>.</p>
+      </slide>
+      <slide xml:id="q-2-10-10">
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>The theory-based (normal approximation) p-value is also now displayed. Compare this
+p-value to the one you got from simulation <xref ref="q-2-10-5-b" text="type-hybrid"/>. Are they similar?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Why are the standard deviation (<xref ref="q-2-10-8" text="type-hybrid"/>), standardized statistic
+(<xref ref="q-2-10-9" text="type-hybrid"/>) and p-value (<xref ref="q-2-10-10" text="type-hybrid"/>)
+similar when using the theory-based (one-proportion z-test; normal approximation) to
+what you got in your simulation? When would they be different?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring Further</title>
+      <subsubsection>
+        <title>Follow-up Analysis #1</title>
+        <p>There are several research papers (see, for example, <url href="https://doi.org/10.1007/s00417-005-1128-7"> Ehrenstein et al., 2005</url>) on eye preference that say that the long-run proportion of right-eyed people is two-thirds.</p>
+        <slide>
+          <title>Exercise 12</title>
+          <!--Question 12-->
+          <p>Use the theory-based approach to test the claim that there is a two-thirds chance that
+a person will be right-eye dominant, using the sample data (your class combined with
+author's class) and a two-sided alternative. Report the null and alternative hypothesis,
+standardized statistic, and p-value. Summarize your conclusion and explain the
+reasoning process by which it follows from your analysis.</p>
+        </slide>
+      </subsubsection>
+      <subsubsection>
+        <title>Follow-up Analysis #2</title>
+        <p>In a small class of 14 students, nine students turned out to be
+right-eye dominant.</p>
+        <slide>
+          <title>Exercise 13</title>
+          <!--Question 13-->
+          <p>Use simulation to generate a two-sided p-value evaluating the strength of evidence that
+the long-run proportion of right-eyed students is different than 50% based on this small
+class's data alone.</p>
+        </slide>
+        <slide>
+          <title>Exercise 14</title>
+          <!--Question 14-->
+          <p>Why can't you use the normal approximation in this case?</p>
+        </slide>
+        <slide>
+          <title>Exercise 15</title>
+          <!--Question 15-->
+          <p>Use the normal approximation anyway. Compare and comment on the p-values
+obtained from the two methods.</p>
+        </slide>
+      </subsubsection>
+    </section>
+  </slideshow>
+</pretext>

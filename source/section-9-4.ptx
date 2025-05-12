@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_9-4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Chi-square goodness-of-fit test</title>
+
+<subsection> 
+ <title>Are birthdays equally distributed throughout the week?</title>
+<p>Are the days of the week that women give birth distributed equally throughout 
+  the week? Is someone just as likely to be born on a Tuesday as a Saturday? In 
+  this Exploration, you will investigate whether there is convincing evidence 
+  that birthdays are not distributed equally throughout the week. You will be 
+  using a chi-square goodness-of-fit test to help make your conclusion.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<activity>
+ <!-- Question 1 -->
+<statement>
+<p>State your research question.</p>
+</statement>
+<solution>
+  <p>
+    Are birthdays distributed equally across the days of the week?
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+<activity>
+ <!-- Question 2 -->
+<statement>
+<p>What's the categorical variable of interest, and what are the possible categories?</p>
+</statement>
+<solution>
+  <p>
+    Days of the week; Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!-- Question 3 -->
+<statement>
+<p>State the null and alternative hypotheses.</p>
+</statement>
+<solution>
+  <p>
+    Null: Birthdays are equally distributed over all seven days of the week (The proportion of birthdays is the same for each day of the week; <m>\pi_{\text{Mon}} = pi_{\text{Tues}} = pi_{\text{Wed}} = pi_{\text{Thurs}} = pi_{\text{Fri}} = pi_{\text{Sat}} = pi_{\text{Sun}} = \frac{1}{7}</m>).
+  </p>
+  <p>
+    Alternative: Birthdays are not equally distributed over all seven days of the week (The proportion of birthdays is not the same for each day of the week; at least one <m>\pi_i</m> is different from 1/7)
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!-- Question 4 -->
+<statement>
+<p>Write down your own birthday (month/day/year) and those of up to nine of your family members or friends. (Try not to write down a birthday that someone else in the class would write down.)</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.
+  </p>
+</solution>
+</activity>
+
+<activity>
+  <statement>
+    <p>
+      Do an Internet search for “day of birth calculator.” Use the calculator to find 
+      out on what day of the week each of your family members/friends was born. Summarize 
+      your results in a table.
+    </p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell right="minor"></cell>
+          <cell right="minor">Sun</cell>
+          <cell right="minor">Mon</cell>
+          <cell right="minor">Tue</cell>
+          <cell right="minor">Wed</cell>
+          <cell right="minor">Thurs</cell>
+          <cell right="minor">Fri</cell>
+          <cell right="minor">Sat</cell>
+          <cell right="minor">Total</cell>
+        </row>
+        <row header="yes">
+          <cell right="minor">Observed count</cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+        </row>
+      </tabular>
+    </table>
+  </statement>
+  <solution>
+    <p>
+      Answers will vary.
+    </p>
+  </solution>
+</activity>
+
+<activity>
+  <statement>
+    <p>
+      Combine your results with those for the rest of the class and enter those 
+      results in the table.
+    </p>
+    <table>
+      <tabular>
+        <row header="yes">
+          <cell right="minor"></cell>
+          <cell right="minor">Sun</cell>
+          <cell right="minor">Mon</cell>
+          <cell right="minor">Tue</cell>
+          <cell right="minor">Wed</cell>
+          <cell right="minor">Thurs</cell>
+          <cell right="minor">Fri</cell>
+          <cell right="minor">Sat</cell>
+          <cell right="minor">Total</cell>
+        </row>
+        <row header="yes">
+          <cell right="minor">Observed count</cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+          <cell right="minor"></cell>
+        </row>
+      </tabular>
+    </table>
+  </statement>
+  <solution>
+    <p>
+      Answers will vary.  The fall 2023 class at Grace College had the following data:
+    </p>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+            Sunday
+          </cell>
+          <cell>
+            Monday
+          </cell>
+          <cell>
+            Tuesday
+          </cell>
+          <cell>
+            Wednesday
+          </cell>
+          <cell>
+            Thursday
+          </cell>
+          <cell>
+            Friday
+          </cell>
+          <cell>
+            Saturday
+          </cell>
+        </row>
+        <row>
+          <cell>
+            12
+          </cell>
+          <cell>
+            16
+          </cell>
+          <cell>
+            22
+          </cell>
+          <cell>
+            16
+          </cell>
+          <cell>
+            16
+          </cell>
+          <cell>
+            21
+          </cell>
+          <cell>
+            24
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </solution>
+</activity>
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+ <activity>
+  <task>
+    <statement>
+      <p>
+        If the null hypothesis is true and birthdays are distributed equally over 
+        the seven days in a week, then the expected count for each day will just 
+        be the total number of birthdays divided by 7. Find the expected count 
+        for each day.
+      </p>
+      <table>
+        <tabular>
+          <row header="yes">
+            <cell right="minor"></cell>
+            <cell right="minor">Sun</cell>
+            <cell right="minor">Mon</cell>
+            <cell right="minor">Tue</cell>
+            <cell right="minor">Wed</cell>
+            <cell right="minor">Thurs</cell>
+            <cell right="minor">Fri</cell>
+            <cell right="minor">Sat</cell>
+            <cell right="minor">Total</cell>
+          </row>
+          <row header="yes">
+            <cell right="minor">Observed count</cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+          </row>
+        </tabular>
+      </table>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  Data from the fall 2023 class at Grace are provided below:
+      </p>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+              Sunday
+            </cell>
+            <cell>
+              Monday
+            </cell>
+            <cell>
+              Tuesday
+            </cell>
+            <cell>
+              Wednesday
+            </cell>
+            <cell>
+              Thursday
+            </cell>
+            <cell>
+              Friday
+            </cell>
+            <cell>
+              Saturday
+            </cell>
+          </row>
+          <row>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+            <cell>
+              18.14
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Is the validity condition of all observed cell counts being at least 10 met? 
+        If not, what can you do so it is met?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We can collect more data.
+      </p>
+    </solution>
+  </task>
+</activity>
+ 
+<definition>
+ <statement>
+<p>A <term>goodness-of-fit test</term> is used to compare observed counts for a categorical 
+  variable to hypothesized probabilities.</p>
+</statement>
+</definition>
+
+<activity>
+ <!-- Question 8 -->
+<statement>
+<p>Comparing the observed and expected counts, does it seem that the data gathered would 
+  be likely, assuming the birthdays are distributed equally?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  Regarding the data from fall 2023 at Grace College, the number of Sunday birthdays appears low and the number of Saturday birthdays appears high.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences</title>
+</subsection>
+
+<subsection> 
+ <title>Simulation-based Goodness-of-fit Test: Using the MAD Statistic</title>
+<activity xml:id="q-9-4-9"> 
+  <!-- Question 9 -->
+  <introduction>
+    <p>
+      You will now conduct a simulation analysis using the mean absolute difference 
+      (MAD) statistic to investigate whether the data provide evidence that birthdays 
+      are not equally likely on all seven days of the week.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        <em>Statistic</em>: Here, we will use a MAD-type statistic to compare the 
+        observed and expected counts. To find the MAD statistic value for your data, 
+        complete the table:
+      </p>
+      <table>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell right="minor"></cell>
+            <cell right="minor">Sun</cell>
+            <cell right="minor">Mon</cell>
+            <cell right="minor">Tue</cell>
+            <cell right="minor">Wed</cell>
+            <cell right="minor">Thurs</cell>
+            <cell right="minor">Fri</cell>
+            <cell right="minor">Sat</cell>
+            <cell right="minor">Total</cell>
+          </row>
+          <row header="yes" bottom="minor">
+            <cell right="minor"><m>|O-E|</m></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        Where <m>O</m> is the observed count and <m>E</m> is the expected count, and <m>|\cdot|</m> is the absolute value function.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  The fall 2023 class at Grace College had the following data:
+      </p>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+              Sunday
+            </cell>
+            <cell>
+              Monday
+            </cell>
+            <cell>
+              Tuesday
+            </cell>
+            <cell>
+              Wednesday
+            </cell>
+            <cell>
+              Thursday
+            </cell>
+            <cell>
+              Friday
+            </cell>
+            <cell>
+              Saturday
+            </cell>
+          </row>
+          <row>
+            <cell>
+              6.1429
+            </cell>
+            <cell>
+              2.1429
+            </cell>
+            <cell>
+              3.8571
+            </cell>
+            <cell>
+              2.1429
+            </cell>
+            <cell>
+              2.1429
+            </cell>
+            <cell>
+              2.8571
+            </cell>
+            <cell>
+              5.8571
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        The MAD statistic is obtained by finding the average of the absolute values of 
+        the differences in observed and expected counts. Calculate the MAD statistic.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  The fall 2023 data from Grace College had MAD = 3.591836735.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <em>Simulate</em>: You could spin a spinner with 7 equal sections to find 
+        out what values of the MAD statistic could happen by chance alone, or you can 
+        use an applet. Open the 
+        <url href="https://static-content.zybooks.com/applets/2021/gof/GOF.html?hideExtras=1">
+          Goodness of Fit applet</url>.
+      </p>
+      <p>
+        <ul>
+          <li>
+            Press the <em>Clear</em> button, enter two column names (e.g., category count), 
+            and then specify each day of the week followed by a space and the count from your 
+            sample (e.g., Mon 16). Hit return and repeat for each day of the week. Then press 
+            <em>Use Table</em>. This should update the bar graph under "Sample Data."
+          </li>
+          <li>
+            In the right panel, check the box next to <em>Show Sampling Options</em> and 
+            enter the hypothesized probabilities to three decimal places, separated by commas.
+          </li>
+          <li>
+            Set the <em>Number of Samples</em> to be 1 and push <em>Sample</em>.
+          </li>
+          <li>
+            What is the resulting “Most Recent Sample MAD”? Is this value more or less 
+            extreme than the one from the observed data? How are you deciding?
+          </li>
+          <li>
+            Now change the <em>Number of Samples</em> to be 999, for a total of 1000 samples, 
+            and push <em>Sample</em>. This will produce a simulated null distribution of 1,000 
+            MAD statistics.
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <term>Strength of evidence</term>:
+      </p>
+      <p>
+        <ul>
+          <li>
+            Where does your observed MAD statistic lie on the simulated null 
+            distribution of MAD statistics? Does the observed MAD statistic appear 
+            surprising and unlikely to have happened by chance alone, that is, if 
+            the null hypothesis of all days being equally likely were to be true? 
+            How are you deciding?
+          </li>
+          <li>
+            To find the p-value to quantify the strength of evidence against the 
+            null hypothesis, enter the observed value of the MAD statistic in the 
+            <term>Count Samples</term> box and press <term>Count</term>.
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary. The fall 2023 Grace College data yielded p-value of 0.3070.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<remark> 
+ <title> You may be thinking </title>
+<p>Earlier we subtracted proportions, and now we are using counts. Can we not use 
+  proportions anymore? </p>
+  <p>Sure, you can still work with proportions. If you used proportions, your MAD 
+    statistic would subtract the observed proportions from the hypothesized proportions 
+    (in this case, 1/7 or 0.143 for each day) for each day of the week and then average 
+    the absolute values of those differences.</p>
+</remark>
+
+<activity>
+ <!-- Question 10 -->
+<statement>
+<p>Based on the p-value you obtained in <xref ref="q-9-4-9"/> do you have strong evidence against the 
+  null hypothesis? How are you deciding?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  For the fall 2023 Grace College data, there is weak evidence against the null because the p-value is larger than 0.10. It is plausible     that birthdays are distributed equally over the seven days of the week.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Simulation-based Goodness-of-fit Test: Using the Chi-square Statistic</title>
+<activity> 
+ <!-- Question 11 -->
+  <introduction>
+    <p>
+      In this situation you can also conduct a simulation analysis using the chi-square 
+      statistic to investigate whether the data provide evidence that birthdays are not 
+      equally likely on all seven days of the week.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        <em>Statistic</em>: To find the chi-square statistic value for your data, complete the table:
+      </p>
+      <table>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell right="minor"></cell>
+            <cell right="minor">Sun</cell>
+            <cell right="minor">Mon</cell>
+            <cell right="minor">Tue</cell>
+            <cell right="minor">Wed</cell>
+            <cell right="minor">Thurs</cell>
+            <cell right="minor">Fri</cell>
+            <cell right="minor">Sat</cell>
+            <cell right="minor">Total</cell>
+          </row>
+          <row header="yes" bottom="minor">
+            <cell right="minor"><m>O-E</m></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+          </row>
+          <row header="yes" bottom="minor">
+            <cell right="minor"><m>(O-E)^2</m></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+          </row>
+          <row header="yes" bottom="minor">
+            <cell right="minor"><m>\frac{(O-E)^2}{E}</m></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+            <cell right="minor"></cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        Where <m>O</m> is the observed count and <m>E</m> is the expected count.  Recall that the chi-square statistic is given by the formula
+        <me>
+          \chi^2 = \sum \frac{ (\text{observed count} - \text{expected count} )^2}{\text{expected count}}
+        </me>
+        Thus, the chi-square statistic is the Total from the last row of the table.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  The fall 2023 Grace College data yields
+      </p>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+              Sunday
+            </cell>
+            <cell>
+              Monday
+            </cell>
+            <cell>
+              Tuesday
+            </cell>
+            <cell>
+              Wednesday
+            </cell>
+            <cell>
+              Thursday
+            </cell>
+            <cell>
+              Friday
+            </cell>
+            <cell>
+              Saturday
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              2.0799
+            </cell>
+            <cell>
+              0.25309
+            </cell>
+            <cell>
+              0.82002
+            </cell>
+            <cell>
+              0.25309
+            </cell>
+            <cell>
+              0.25309
+            </cell>
+            <cell>
+              0.4499
+            </cell>
+            <cell>
+              1.8909
+            </cell>
+            <cell>
+              5.994
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <em>Simulate</em>: Just as you ran the simulation using the MAD statistic, 
+        you can follow the same steps this time using the Statistic pull-down menu to 
+        select the chi-square statistic (<m> \chi^2 </m>). Create a null distribution 
+        for the chi-square statistic.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This is an intermediate task that does not ask a question.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <em>Strength of evidence</em>
+      </p>
+      <p>
+        <ul>
+          <li>
+            Where does the observed chi-square statistic lie on the simulated null 
+            distribution of the chi-square statistic? Does it appear surprising and 
+            unlikely to have happened by chance alone, that is, if the null hypothesis 
+            of all days being equally likely were to be true? How are you deciding? 
+          </li>
+          <li>
+            Find the corresponding p-value. How does it compare to what you found 
+            with the MAD statistic?
+          </li>
+        </ul>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  Using the fall 2023 Grace College data,
+        the observed statistic is towards the middle, with 414 of
+the simulated 1,000 values were as extreme or more extreme than the observed
+statistic, p-value = 0.4140.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!-- Question 12 -->
+<statement>
+<p>Based on the p-value reported in question 11c from the simulated null distribution for 
+  a chi-square statistic, do you have strong evidence against the null hypothesis? How are 
+  you deciding?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  The fall 2023 Grace College data yields: There is weak evidence against the null because the p-value is larger than 0.10. It is plausible
+    that birthdays are distributed equally over the seven days of the week.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions</title>
+<activity>
+ <!-- Question 13 -->
+<statement>
+<p>State your complete conclusions. In particular, to what population are you willing 
+  to generalize your conclusions?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  The fall 2023 Grace College data yields:
+    There is weak evidence against the null because the p-value is larger than 0.10. It is plausible
+that birthdays are distributed equally over the seven days of the week for people similar to the
+friends and family members of the students in the study.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!-- Question 14 -->
+<statement>
+<p>If you found convincing evidence that birthdays are not equally distributed throughout 
+  the week, which days seemed to be different than the others and why do you think that 
+  is the case?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  The fall 2023 Grace College data did not give convincing evidence.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead.</title>
+<activity>
+ <!-- Question 15 -->
+<statement>
+<p>If you did not find convincing evidence that birthdays are not distributed equally 
+  throughout the week, what could you do differently in a follow-up study to try to 
+  support your case?</p>
+</statement>
+<solution>
+  <p>
+    If more data were gathered, it might strengthen our evidence against the null.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Revisiting step 4: Draw inferences</title>
+</subsection>
+
+<subsection> 
+ <title>Theory-based Chi-square Goodness-of-fit Test</title>
+<p>Earlier, for Step 4, you used simulation to find a p-value using the chi-square 
+  statistic. Recall that one advantage of using the chi-square statistic (instead 
+  of the MAD) is that the distribution of the chi-square statistic can be predicted 
+  by a theory-based distribution called the chi-square distribution.</p>
+
+<activity>
+ <!-- Question 16 -->
+<statement>
+<p>Go back to the Goodness of Fit applet, and picking up where you left off, check 
+  the "Overlay chi-square distribution" box under the null distribution for the 
+  chi-square statistics. Report the "theory-based p-value."</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  The fall 2023 Grace College data gave p-value = 0.2012.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!-- Question 17a -->
+  <task>
+    <statement>
+      <p>
+        How does the theory-based p-value compare to the one from the simulation-based 
+        p-value using the chi-square test statistic? Do you still arrive at the same 
+        conclusion about whether there is convincing evidence that not all seven days 
+        of the week are equally likely to be birthdays?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The p-values are very similar and we arrive at the same conclusion.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Remember that there are always certain checks to be made before you can 
+        decide that it is valid to use a theory-based method to test hypotheses. 
+        In particular, are all observed cell counts at least 10?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Answers will vary.  The fall 2023 Grace College data did in fact have at least 10 counts for each observed cell.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!-- Question 18 -->
+  <statement>
+    <p>
+      Does the theory-based chi-square goodness-of-fit test appear to be valid in this context? 
+      Explain how you are deciding.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Answers will vary.  In the fall 2023 Grace College data, validity conditions are met for the theory-based Chi-square goodness of fit test.
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+<subsection xml:id="subsec-9-4-exploring-further">
+  <title>Exploring Further</title>
+
+<p>One of the authors collected data on which day of the week each of her 49 students was born. The data appear in the table.
+</p>
+<table>
+  <tabular>
+    <row header="yes">
+      <cell right="minor"></cell>
+      <cell right="minor">Sun</cell>
+      <cell right="minor">Mon</cell>
+      <cell right="minor">Tue</cell>
+      <cell right="minor">Wed</cell>
+      <cell right="minor">Thurs</cell>
+      <cell right="minor">Fri</cell>
+      <cell right="minor">Sat</cell>
+      <cell right="minor">Total</cell>
+    </row>
+    <row header="yes">
+      <cell right="minor">Observed count</cell>
+      <cell right="minor">4</cell>
+      <cell right="minor">7</cell>
+      <cell right="minor">7</cell>
+      <cell right="minor">7</cell>
+      <cell right="minor">8</cell>
+      <cell right="minor">6</cell>
+      <cell right="minor">10</cell>
+      <cell right="minor">49</cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ <!-- Question 19 -->
+<statement>
+<p>Do you think these data will provide more or less evidence against the null 
+  hypothesis than the data you collected? Explain your reasoning.</p>
+</statement>
+<solution>
+  <p>
+    Less, because the sample size is smaller.
+  </p>
+</solution>
+</activity>
+
+<p>We will use the data from this class to determine whether there is convincing 
+  evidence that not all seven days of the week are equally likely to be birthdays.</p>
+
+<activity> 
+  <!-- Question 20 -->
+  <introduction>
+    <p>
+      Using a significance level of <m>\alpha = 0.05</m>, do the data provide convincing 
+      evidence that the days of the week that women give birth are not equally 
+      distributed throughout the week?
+    </p>
+  </introduction>
+  <task>
+    <!-- Question 20a -->
+   <statement>
+   <p>State the hypotheses using either words or symbols</p>
+   </statement>
+   <solution>
+    <p>
+      <m>H_0: \pi_{\text{Mon}} = \pi_{\text{Tues}} = \pi_{\text{Wed}} = \pi_{\text{Thurs}} = \pi_{\text{Fri}} = \pi_{\text{Sat}} = \pi_{\text{Sun}} = \frac{1}{7}</m>
+    </p>
+    <p>
+      <m>H_a:</m> At least one <m>\pi_i</m> is different.
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20b -->
+   <statement>
+   <p>Name the theory-based test you will use and verify validity conditions for that test.</p>
+   </statement>
+   <solution>
+    <p>
+      The Chi-square goodness of fit test can be used, but only with simulation because
+validity conditions are not met to carry out a theory-based test.
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20c -->
+   <statement>
+   <p>Calculate the test statistic (standardized statistic) and corresponding p-value.</p>
+   </statement>
+   <solution>
+    <p>
+      2.854, p-value = 0.844
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20d -->
+   <statement>
+   <p>State your conclusion (with appropriate justification based on your p-value and stated significance level) in the context of the research question.</p>
+   </statement>
+   <solution>
+    <p>
+      There is weak evidence against the null because the p-value is much larger than the
+significance level of 0.05. It is plausible that birthdays are distributed equally over the
+seven days of the week.
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20e -->
+   <statement>
+   <p>If there is not sufficient evidence to support the research hypothesis that all seven days of the week are not equally likely to be birthdays, is this proof that birthdays are evenly distributed throughout the days of the week? Explain.</p>
+   </statement>
+   <solution>
+    <p>
+      No, that is one plausible explanation for the data.
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20f -->
+   <statement>
+   <p>Were these data stronger or weaker evidence against the null hypothesis than the data you observed? Is this what you predicted?</p>
+   </statement>
+   <solution>
+    <p>
+      Weaker; yes that is what was predicted.
+    </p>
+   </solution>
+   </task>
+   
+   <task>
+    <!-- Question 20g -->
+   <statement>
+   <p>Based on your conclusion in (d), are you potentially making a conclusion error? Explain 
+    the potential consequences of this type of error in this context.</p>
+   </statement>
+   <solution>
+    <p>
+      It is possible that a Type II error was made, that is a false negative, or missed
+opportunity.
+    </p>
+   </solution>
+   </task>
+  </activity>
+
+  </subsection>
+
+</section>

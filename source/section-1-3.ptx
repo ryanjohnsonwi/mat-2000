@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_1_3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Preliminary: Exploring random processes</title>
+
+
+
+<subsection> 
+ <title>Random processes</title>
+<p>  A <term>random process</term> is a repeatable process where the result for an 
+  individual attempt is not known in advance but there is a predictable pattern to 
+  the results in the long run. Playing <em>Let's Make a Deal</em> is an example of 
+  a random process: The result for the next round of the game is uncertain, but if 
+  the game is played many, many times, a predictable pattern is expected.  </p>
+</subsection>
+
+<subsection> 
+ <title>Long-run proportion</title>
+  <p>A <term>simulation</term> is an artificial re-creation of a random process.</p>
+
+</subsection>
+
+<subsection> 
+  <title>Interpretation of probability</title>
+  <p>
+    The <term>probability</term> of an outcome is the long-run proportion of times an 
+    outcome from a random process occurs if the process is repeated indefinitely under 
+    identical conditions. A probability can be written as a decimal (0.3333), a fraction 
+    (1/3), or a percentage (33.33%).
+  </p>
+<exercise>
+ <title> Switch or stay</title>
+<statement>
+<p>How do you think the probability of winning with the switch strategy will compare to the probability of winning with the stay strategy? Briefly explain your reasoning.</p>
+</statement>
+</exercise>
+
+<remark>
+  <p>
+    The sections in this chapter may have felt unrelated and brief, but they each 
+    contributed important components of drawing conclusions from data, including 
+    the six-step investigation process, variation in data, and exploring randomness 
+    and probability.
+  </p>
+</remark>
+</subsection>
+
+</section>

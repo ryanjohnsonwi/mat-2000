@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2019 Robert A. Beezer
+This file is part of PreTeXt.
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<pretext>
+
+    <docinfo>
+        <macros>
+          <!--Latex macros go here-->
+        </macros>
+        <rename element="abstract">Jesus Creed</rename>
+    </docinfo>
+
+    <slideshow>
+        <title>Chapter 1</title>
+        <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+
+        <frontmatter>
+            <titlepage>
+              <event>Grace College</event>
+              <date>Last updated <today/></date>
+            </titlepage>
+
+        </frontmatter>
+
+        <slide>
+          <title>The Jesus Creed</title>                         
+          <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+          <p>Love the Lord your God with all your heart and with all</p>
+          <p>your soul and with all your mind and with all your strength.</p>
+          <p>The second is this: Love your neighbor as yourself.</p>
+        </slide>
+
+        <section> 
+          <title>Section 1.1</title>
+
+          
+          <slide>
+            <p>
+              <term>Statistics</term> is a discipline that guides researchers in 
+              collecting, exploring, and drawing conclusions from data.  This course 
+              will demonstrate the statistical investigation process for a variety of 
+              fields of application.
+            </p>
+          </slide>
+        </section>
+
+        <section> 
+          <title>The six steps of a statistical investigation</title>
+        
+          <slide>
+            <p>
+              The <term>six steps of a statistical investigation</term> is a framework 
+              for learning from data.  The six steps are a guide for collecting and 
+              interpreting data in keeping with the scientific method. When research 
+              questions are investigated with the six-step method, conclusions are 
+              supported by systematic study rather than individual experiences. The six 
+              steps are described below.
+            </p>
+          </slide>
+
+          <slide>
+            <p>
+              <dl>
+                <li>
+                  <title>1. Ask a research question.</title>
+                  <p>
+                    Confirm the question can be addressed by collecting data. Typical 
+                    questions involve comparing groups, asking how two characteristics 
+                    are related, or surveying people's opinions.
+                  </p>
+                </li>
+                <li>
+                  <title>2. Design a study and collect data.</title>
+                  <p>
+                    Plan how to select the people or objects to be studied, decide how to 
+                    gather the relevant data, and carry out the data collection in a careful, 
+                    systematic manner.
+                  </p>
+                </li>
+                <li>
+                  <title>3. Explore the data.</title>
+                  <p>
+                    Look for patterns that relate to the research question or raise additional 
+                    questions.
+                  </p>
+                </li>
+              </dl>
+            </p>
+          </slide>
+
+          <slide> 
+            <p> 
+              <dl> 
+                <li>
+                  <title>4. Draw inferences beyond the data.</title>
+                  <p>
+                    Determine whether any findings in the data reflect a genuine tendency and 
+                    estimate the strength of that tendency.
+                  </p>
+                </li>
+                <li>
+                  <title>5. Formulate conclusions</title>
+                  <p>
+                    Consider whether inferences made in step 4 can be generalized to processes 
+                    or groups beyond those represented in the study. Identify whether a 
+                    cause-and-effect conclusion is warranted.
+                  </p>
+                </li>
+                <li>
+                  <title>6. Look back and ahead.</title>
+                  <p>
+                    Point out limitations of the study and suggest new studies to build on the findings.
+                  </p>
+                </li>
+              </dl>
+            </p>
+          </slide>
+
+          <slide>
+            <title> Asking a research question</title>
+            <p>State a research question you would be interested in answering.</p>
+          </slide>
+
+          <slide>
+            <title> What affects the choice to become an organ donor?</title>
+            <p>Researchers <url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">
+              Johnson and Goldstein</url> asked 161 volunteer participants to imagine moving to 
+              a new state and applying for a driver's license. One part of the application asked 
+              whether the participants would agree to be an organ donor. Participants were presented 
+              with one of three different forms of the question:
+            </p>
+            <p>
+              <ul>
+                <li> You will not be a donor unless you opt in.</li>
+                <li> You will be a donor unless you opt out.</li>
+                <li> Choose whether or not to be a donor (neutral).</li>
+              </ul>
+            </p>
+          </slide>
+        </section>
+
+        <section xml:id="sec-Basic-terminology">
+          <title>Basic Terminology</title>
+          
+          <slide>
+            <title>Basic Terminology</title>
+            <p>
+              <ul>
+                <li>
+                  <p>
+                    <term>Data</term> are the values measured or categories recorded on 
+                    individual objects of interest.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The <term>observational unit</term> is the individual object on which 
+                    data are recorded.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    A <term>variable</term> is a characteristic being recorded about the 
+                    observational units. 
+                  </p>
+                  <p>
+                    <ul>
+                      <li>
+                        <p>
+                          A <term>quantitative variable</term> has numeric values for which 
+                          ordinary arithmetic (addition, multiplication) makes sense. 
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          A <term>categorical variable</term> places observational units 
+                          into categories.
+                        </p>
+                      </li>
+                    </ul>
+                  </p>
+                </li>      
+                <li>
+                  <p>
+                    A <term>distribution</term> is the pattern of outcomes of a variable.
+                  </p>
+                </li>
+              </ul>      
+            </p>            
+          </slide>
+
+          <slide>
+            <p>
+              The best way to determine if a variable is quantitative or categorical is to ask the 
+              question, <q>Can I take the average of this? And would that make sense?</q> For example, 
+              I could ask a group of people to tell me what ZIP code they currently live in, and I 
+              could technically take the average of those numbers, but it wouldn't make sense to do 
+              so. That is because ZIP codes are categorical.
+            </p>
+          </slide>
+
+          <slide>
+            <title>Study design elements</title>
+            <p>For the research question you stated at the beginning of the section, identify the 
+              observational units and variable(s) you would use,  and describe how you would collect 
+              the data. For each variable, indicate whether the variable would be quantitative or 
+              categorical.</p>            
+          </slide>
+        </section>
+         
+        <section> 
+          <title>Section 1.2</title>
+          
+          <slide>
+            <p>In this section, step 3 of the Statistical Investigation Process is further explored. 
+              The goal is to describe, measure, and, if possible, explain the patterns of variation 
+              (the <em>distribution</em>) in the values of the variable.
+            </p>
+          </slide>
+
+          
+        </section>
+
+        <section xml:id="sec-graphs-quant">
+          <title>Graphs for quantitative variables</title>
+          
+          <slide>
+            <slide>
+              <p>
+                A <term>dotplot</term> is a graph with one dot representing the variable outcome 
+                for each observational unit. Dotplots, like the graph of the performance lengths 
+                in the animation above, are good for smaller datasets. Another common graph for a 
+                quantitative variable is a histogram. A <term>histogram</term> separates the 
+                quantitative variable into bins and displays the number of observations in each 
+                bin.
+              </p>
+            </slide>
+          </slide>
+        </section>
+
+        <section xml:id="sec-describing-distribution">
+          <title>Describing the distribution</title>
+          
+          <slide>
+            <p>
+              <ul>
+                <li>
+                  The <term>shape</term> of a distribution is described by the number of 
+                  peaks and whether one side of the distribution tends to stretch out longer 
+                  than the other.
+                </li>
+                <li>
+                  The <term>center</term> of a distribution is the middle or typical value.
+                </li>
+                <li>
+                  The <term>variability</term> of a distribution is the spread in the observations.
+                </li>
+                <li>
+                  <term>Unusual observations</term> are observations that do not follow the overall 
+                  pattern of the distribution.
+                </li>
+              </ul>
+            </p>
+          </slide>
+        </section>
+        
+        <section> 
+          <title>Section 1.3: Preliminary: Exploring random processes</title>
+         
+         </section>
+
+         <section xml:id="sec-Random-processes">
+          <title>Random processes</title>
+
+          <slide>
+            <p>  A <term>random process</term> is a repeatable process where the result for an 
+              individual attempt is not known in advance but there is a predictable pattern to 
+              the results in the long run. Playing <em>Let's Make a Deal</em> is an example of 
+              a random process: The result for the next round of the game is uncertain, but if 
+              the game is played many, many times, a predictable pattern is expected.  </p>
+          </slide>
+          
+          <slide>
+            <p>A <term>simulation</term> is an artificial re-creation of a random process.</p>
+
+          </slide>
+         </section>
+
+         <section xml:id="sec-Interpretation-probability">
+          <title>Interpretation of probability</title>
+          
+          <slide>
+            <p>
+              The <term>probability</term> of an outcome is the long-run proportion of times an 
+              outcome from a random process occurs if the process is repeated indefinitely under 
+              identical conditions. A probability can be written as a decimal (0.3333), a fraction 
+              (1/3), or a percentage (33.33%).
+            </p>
+          </slide>
+
+          <slide>
+            <title>Switch or Stay</title>
+            <p>How do you think the probability of winning with the switch strategy will compare to the probability of winning with the stay strategy? Briefly explain your reasoning.</p>
+           
+          </slide>
+
+          <slide>
+            <p>
+              The sections in this chapter may have felt unrelated and brief, but they each 
+              contributed important components of drawing conclusions from data, including 
+              the six-step investigation process, variation in data, and exploring randomness 
+              and probability.
+            </p>
+          </slide>
+         </section>
+
+
+    </slideshow>
+</pretext>

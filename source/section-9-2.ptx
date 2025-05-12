@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_9-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing multiple proportions: Theory-based approach (Part A)</title>
+
+<subsection> 
+ <title>Conserving hotel towels</title>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<p>If you have stayed at a hotel recently, you may have noticed how guests are increasingly 
+encouraged to practice conservation habits by not having their towels washed every day—instead 
+hanging them back on the rack to be reused. Are some "encouragement strategies" more effective 
+than others?
+</p>
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+<p>A recent study (<url href="https://doi.org/10.1086/586910">Goldstein et al., 2008</url>) 
+conducted a randomized experiment to investigate how different phrasings on signs placed on 
+bathroom towel racks impacted guests' towel reuse behavior. In particular, the researchers 
+were interested in evaluating how messages that communicated different types of social norms 
+impacted towel reuse. One week prior to a guest staying in the room, rooms at a particular 
+hotel were randomly assigned to receive one of the following five messages on a sign hung 
+on the towel bar in the room:
+</p>
+
+<dl>
+  <li>
+    <title>Message 1:</title>
+    <p>
+      HELP SAVE THE ENVIRONMENT. You can show your respect for nature
+      and help save the environment by reusing your towels during your stay. (No social norm)
+    </p>
+  </li>
+  <li>
+    <title>Message 2:</title>
+    <p>
+      JOIN YOUR FELLOW GUESTS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted in 
+      fall 2003, 75% of the guests participated in our new resource savings program by 
+      using their towels more than once. You can join your fellow  guests in this program 
+      to help save the environment by reusing your towels during your
+      stay. (Guest identity norm) 
+    </p>
+  </li>
+  <li>
+    <title>Message 3:</title>
+    <p>
+      JOIN YOUR FELLOW GUESTS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 75% of the guests who stayed in this room (#xxx) participated in 
+      our new resource savings program by using their towels more than once. You can 
+      join your fellow guests in this program to help save the environment by reusing 
+      your towels during your stay. (Same room norm)
+    </p>
+  </li>
+  <li>
+    <title>Message 4:</title>
+    <p>
+      JOIN YOUR FELLOW CITIZENS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 75% of the guests participated in our new resource savings program 
+      by using their towels more than once. You can join your fellow citizens in this 
+      program to help save the environment by reusing your towels during
+      your stay. (Citizens norm)
+    </p>
+  </li>
+  <li>
+    <title>Message 5:</title>
+    <p>
+      JOIN THE MEN AND WOMEN WHO ARE HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 76% of the women and 74% of the men participated in our new resource 
+      savings program by using their towels more than once. You can join the other men 
+      and women in this program to help save the environment by reusing your towels during 
+      your stay.” (Gender identity norm)
+    </p>
+  </li>
+</dl>
+
+<p>Data were collected on 1,595 instances of potential towel reuse. For each of the 1,595 
+instances, room attendants recorded whether the hotel guest reused their towels.</p>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>In your own words, state the research question of interest in this study.</p>
+</statement>
+<solution>
+  <p>
+    Do different socially normed signs produce different rates of towel reuse?
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Identify the explanatory and response variables in this study, along with 
+their types (categorical or quantitative). For the explanatory variable, 
+indicate how many categories it involves.</p>
+</statement>
+<solution>
+  <p>
+    Explanatory: message type, categorical with 5 categories
+  </p>
+  <p>
+    Response: towel reuse, categorical with 2 categories
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Did the study design make use of any pairing of subjects or are the subjects 
+who receive the different signs independent of each other?</p>
+</statement>
+<solution>
+  <p>
+    Study design did not use pairing, the subjects who received different signs were independent of each other.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>State the appropriate null and alternative hypotheses for testing the researchers' 
+conjecture using both words and symbols.</p>
+</statement>
+<solution>
+  <p>
+    <ul>
+      <li>
+        <p>
+          In words:
+        </p>
+        <p>
+          Ho: There is no association between type of message and towel reuse.
+        </p>
+        <p>
+          Ha: There is an association between message type and towel reuse
+        </p>
+      </li>
+      <li>
+        <p>
+          Or in symbols:
+        </p>
+        <p>
+          <m>H_0: \pi_{\text{none}} = \pi_{\text{room}}=\pi_{\text{citizen}}=\pi_{\text{gender}}</m> where <m>\pi</m> is the probability of towel reuse.
+        </p>
+        <p>
+          <m>H_a:</m> At least one <m>\pi</m> is different.
+        </p>
+      </li>
+    </ul>
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+<activity> 
+ <!--Question 5-->
+  <introduction>
+    <p>Paste the two-way table from the 
+    <url href="https://static-content2.zybooks.com/isi/data/chap8/Towels.txt">Towels</url> 
+    file into the 
+    <url href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1">
+    Multiple Proportions applet</url>, then in the <em>Sample Data</em> box and press 
+    <em>Use Table</em>.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Check the box next to Show Table in order to present the two-way table of counts 
+        and calculate conditional proportions of those who reused towels. (You can grab 
+        the bottom right corner of the table in the applet to extend it.) Report these 
+        five proportions.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+              Message type
+            </cell>
+            <cell>
+              None
+            </cell>
+            <cell>
+              Room
+            </cell>
+            <cell>
+              Citizen
+            </cell>
+            <cell>
+              Gender
+            </cell>
+            <cell>
+              Guest
+            </cell>
+          </row>
+          <row>
+            <cell>
+              Proportion reuse towel
+            </cell>
+            <cell>
+              0.37
+            </cell>
+            <cell>
+              0.493
+            </cell>
+            <cell>
+              0.434
+            </cell>
+            <cell>
+              0.41
+            </cell>
+            <cell>
+              0.441
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Looking at the segmented bar graph as well as the conditional proportions, 
+        conjecture on whether you think there will be a significant difference among 
+        the five groups with regard to towel reuse.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Yes, will probably find a significant difference in proportions of reuse for room and none (e.g., 0.370 and 0.493 seem to be very different and the sample sizes are fairly large).
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4:  Draw Inferences beyond the data</title>
+
+<activity> 
+ <!--Question 6-->
+  <introduction>
+    <p>
+      Let's apply the 3S strategy.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Statistic: Report the observed value of the Mean Group Diff (the differences in group 
+        means for all possible pairs of groups) statistic for this study, as given by the applet.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        MeanGroupDiff statistic = 0.055
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Simulate: Use the applet to conduct 1000 shuffles of the response variable. (First 
+        check Show Shuffle Options and then enter 1000 for the Number of Shuffles. Press 
+        Shuffle Responses.) Then enter the observed value of the Mean Group Diff statistic 
+        in the Count Samples box and press Count. Report the p-value.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        p-value <m>\approx 0.034</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Strength of evidence: Based on the p-value, evaluate the strength of evidence provided 
+        by the data against the null hypothesis. Summarize your conclusion in the context of 
+        this study.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        With a p-value of .034, we find strong evidence against the null and in favor of the alternative that at least one type of message results in a probability of towel reuse that is different from the others.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Another Choice of Statistic: Chi-square Statistic</title>
+
+<p>The Mean Group Diff statistic is fairly easy to understand but is not widely used in 
+part because it cannot be easily predicted theoretically. A more commonly used statistic 
+is called a chi-square (<m>\chi^2</m>) statistic. You can think of this statistic as 
+measuring how far the group proportions of success are from the overall proportion of 
+success. These (standardized) deviations from the overall proportion are then squared 
+and summed together across all of the explanatory variable groups. We'll do this calculation now.
+</p>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Determine the overall proportion, p̂, of rooms that reused towels.</p>
+</statement>
+<solution>
+  <p>
+    (113 + 151 + 145 + 127 + 150)/1595 = 686/1595 = 0.43
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 8-->
+<statement>
+<p>We will calculate the standard error of a group proportion by computing <m>\sqrt{\frac{\hat p(1 - \hat p)}{n_i}}</m>
+where <m>\hat p</m> is the overall proportion found in #7 and nᵢ is the sample size for the ith group. Find the standard error of the 
+group proportion for each of the five groups. </p>
+</statement>
+<solution>
+  <p>
+    None: 0.028, Same: 0.028, Citizen: 0.027, Gender: 0.028, Guest: 0.027
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>Create a standardized z-statistic for each conditional proportion compared to this overall proportion. To do 
+this take each of the five group proportions, subtract the overall proportion (question 7), and then divide the 
+result by the standard deviation you found for that group in question 8. </p>
+</statement>
+<solution>
+  <p>
+    (0.37 - 0.43)/0.028 = -2.14 (None), (0.493 - 0.43)/0.028 = 2.25 (Same), (0.434 - 0.43)/0.027 = 0.15
+(Citizen), (0.41 - 0.43)/0.028 = -0.71 (Gender), (0.44 - 0.43)/0.027 = 0.41 (Guest)
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>Which of the five standardized statistics are larger than 2 or smaller than -2, suggesting strong evidence 
+that the group proportion is significantly different than the overall proportion?</p>
+</statement>
+<solution>
+  <p>
+    None and Same Room
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Square each of these values and sum them to calculate the chi-square statistic.</p>
+</statement>
+<solution>
+  <p>
+    Chi-square = (-2.14)2 + (2.25)2 + (0.15)2 + (-0.71)2 + (0.41)2 = 10.34 (10.15 without rounding
+errors)
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>What kinds of values (large, small, positive, negative) will the chi-square statistic 
+have if the null hypothesis is true? What kinds of values will provide evidence against 
+the null hypothesis?</p>
+</statement>
+<solution>
+  <p>
+    Small/non-negative if null is true, Large/non-negative if alternative is true.
+  </p>
+</solution>
+</activity>
+
+<p>From the <em>Statistic</em> pull-down menu, select <m>\chi^2</m>. What does the applet 
+report for the observed value of the chi-square statistic? Confirm that this matches your 
+answer to question 11. (<em>Note</em>: You may be a bit different due to rounding.)
+</p>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>The applet will also now display the null distribution for the χ²  statistic rather 
+than the Mean Group Diff statistic. Determine the p-value based on the simulated χ²  
+statistics. (Hint: Change the value in the Count Samples box to the observed value of the χ²  statistic.)</p>
+</statement>
+<solution>
+  <p>
+    p-value <m>\approx 0.036</m>  (using 10.15)
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>How does the p-value based on the χ² statistic compare to the one based on the Mean Group Diff 
+statistic? Are they similar? Is your conclusion about strength of evidence provided by the data 
+against the null hypothesis similar?</p>
+</statement>
+<solution>
+  <p>
+    The p-values are similar. The conclusions regarding strength of evidence against the null are the same.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Theory-based approach</title>
+
+<p>The primary advantage of using the <m>\chi^2</m> statistic is that its null distribution can be 
+predicted well by a theoretical distribution. So, once again a theory-based approach could be 
+used without conducting a simulation in the first place.
+</p>
+
+<activity>
+ <!--Question 15-->
+<statement>
+<p>Below the graph of the simulated chi-square statistics, check the box to Overlay Chi-square 
+distribution. Does the theoretical distribution match the distribution of simulated statistics 
+reasonably well? How does the theory-based p-value compare to what you found in question 13? 
+Does it lead you to a similar conclusion about strength of evidence?</p>
+</statement>
+<solution>
+  <p>
+    Theory-based chi-square test p-value is 0.0380. The theory-based p-value is similar to the simulated p-value which leads to a similar conclusion.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Validity conditions</title>
+<p>Like all theory-based tests, this one also comes with the condition of having a large 
+sample size. We will (very conservatively) consider a sample size large if the sample 
+data include at least 10 observations in each cell of the two-way table.</p>
+
+<activity> 
+ <!--Question 16-->
+  <introduction>
+    <p>Go back to the applet and make sure the <em>Show Table</em> box is checked.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        How many cells are in this table? In other words, how many counts need to be checked that they are at least 10?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        There are 10 cells in the 2x2 table.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Is the validity condition for a theory-based chi-square test satisfied for these data? Justify your answer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        All ten cells have counts of at least 10, so validity conditions are met.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Follow-up analysis</title>
+
+<p>When a chi-square test produces a significant result, we conclude that at least one 
+probability or population proportion differs from at least one of the others. A sensible 
+next step is to try to identify which group proportion differs significantly from which 
+others. We can do this by producing confidence intervals for pairwise differences in 
+population proportions.</p>
+
+<activity> 
+ <!--Question 17-->
+  <introduction>
+    <p>Below the p-value output, check the box to <em>Compute 95% CI(s) for difference in
+    proportions</em>.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        How many intervals are produced?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        ten
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Which conditions are significantly different from each other? How are you deciding?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        none vs sameroom and sameroom vs gender show significant differences in the proportion who reuse towels. The decision is based on whether zero is in the interval. If zero is in the interval for the difference in proportion of re-users, then it is plausible the population proportions are the same.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        For one of the intervals you identified in part (b), write a one-sentence interpretation 
+        of the interval, being very clear what is supposed to be captured inside the interval 
+        and which condition has a more positive effect on towel use and by how much.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The population proportion of guests who reuse their towel from rooms with the sameroom social norm on the sign is 0.045 to 0.201 higher than the population proportion of guests who reuse their towels in rooms with no social norm on the sign.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Summarize conclusions</title>
+
+<activity>
+ <!--Question 18-->
+<statement>
+<p>Is this an observational study or a randomized experiment?</p>
+</statement>
+<solution>
+  <p>
+    Randomized experiment, causal conclusions can be made.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 19-->
+<statement>
+<p>Explain how the conclusions of this study are limited by conducting the study at a
+single hotel.</p>
+</statement>
+<solution>
+  <p>
+    Generalization is limited because not all hotels attract the same clientele (rural, urban, resort, business).
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead</title>
+
+<activity>
+ <!--Question 20-->
+<statement>
+<p>Summarize your conclusion for your analysis of the data from this study.
+  <ul>
+    <li>
+      <p>
+        Summarize the research question, the methods, and the data.
+      </p>
+    </li>
+    <li>
+      <p>
+        Refer to the p-values from the <m>\chi^2</m>-test and the confidence intervals to make a recommendation for the hotel manager about whether it matters what message is used, which message should be used, and how large of an impact the best message would be expected to have.
+      </p>
+    </li>
+    <li>
+      <p>
+        Think about the study and its design. Were there any limitations you feel need to be addressed? Did the design match the research question? Can you suggest a better sampling method of hotel guests—a better way to collect data on towel use? Share some ideas for a logical next study.
+      </p>
+    </li>
+  </ul>
+</p>
+</statement>
+<solution>
+  <p>
+    <ul>
+      <li>
+        <p>
+          Researchers wondered whether different socially normed messages led to different rates of towel reuse in hotels. Rooms were randomly assigned to have one of 5 socially-normed signs hung on the towel bar. Data were collected on 1595 instances of potential towel reuse. It was hypothesized that there would be an association between type of message and towel reuse. Data gathered showed 37.0% towel reuse in the no normed sign group, 44.1% reuse in the guest-normed group, 49.3% in the room-normed group, 43.4% in the citizen-normed group, and 41.0% in the gender-normed group.
+        </p>
+      </li>
+      <li>
+        <p>
+          A p-value of 0.0380 provided strong evidence against the null and in support of the alternative that there is an association between message type and towel reuse. Follow-up analysis comparing pairs of proportions and found that a significantly higher proportion of those in the room-normed group reused their towels than those in the no social norm group. Also a significantly higher proportion of those in the room-normed group reused their towels than those in the gender-normed group.
+        </p>
+      </li>
+      <li>
+        <p>
+          I would recommend to the hotel manager that they use the room-normed message to promote towel reuse in their hotel. Over the no-socially normed message, this would increase their towel reuse by 4.5 to 20.1 percentage points.
+        </p>
+      </li>
+      <li>
+        <p>
+          The study should be repeated in a number of different hotels to see whether similar results are obtained.
+        </p>
+      </li>
+    </ul>
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

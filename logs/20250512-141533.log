@@ -1,0 +1,24 @@
+WARNING : Using CLI version 2.18.0 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.18.0.
+INFO    : Building target web
+INFO    : XSL conversion of G:\Shared drives\MAT - 2000 Intro to Stats\code\source\main.ptx by C:\Users\johnsor\.ptx\2.18.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * runtime error, element 'variable'
+INFO    : * document() : failed to parse URI
+INFO    : * runtime error, element 'variable'
+INFO    : * document() : failed to parse URI
+INFO    : * runtime error, element 'variable'
+INFO    : * document() : failed to parse URI
+ERROR   : processing with C:\Users\johnsor\.ptx\2.18.0\core\xsl\utilities\pretext-enhanced-source.xsl has failed
+
+CRITICAL: document() : failed to parse URI
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

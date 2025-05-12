@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_2_8" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>What impacts strength of evidence?</title>
+
+<subsection xml:id="subsec-color-of-unifrom">
+  <title>Does Uniform Color Matter?</title>
+  <p>In this exploration, we are going to explore three factors that influence the strength of evidence
+  in a test of significance: (1) the difference between the observed sample statistic and the value
+  of the parameter used in the null hypothesis; (2) the sample size; and (3) one-sided tests versus
+  two-sided tests. To do this we will look at a study conducted by <url href="https://doi.org/10.1038/435293a">Hill and Barton (Nature, 2005)</url>
+  to investigate whether Olympic athletes in certain uniform colors have an advantage over
+  their competitors. They noticed that competitors in the combat sports of boxing, tae kwon do,
+  Greco-Roman wrestling, and freestyle wrestling are randomly assigned red or blue uniforms.
+  For each match in the 2004 Olympics, they recorded the uniform color of the winner.
+  </p>
+  <activity>
+    <statement>
+      <p>
+        What are the observational units? What is the variable measured? Is the variable categorical or quantitative?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The observational units in this study are the matches, and the variable is whether the
+        match was won by someone wearing red or someone wearing blue—a categorical variable.
+      </p>
+    </solution>
+  </activity>
+
+  <p>The observational units in this study are the matches, and the variable is whether the
+  match was won by someone wearing red or someone wearing blue—a categorical variable.
+  Let's suppose that going into this study, the researchers wanted to see whether the color red
+  had an advantage over blue. In other words, competitors that wear red uniforms will win a
+  majority of the time.</p>
+  <activity>
+  <!--Question 1-->
+  <statement>
+  <p>State the null and the alternative hypotheses in words.</p>
+  </statement>
+  <solution>
+    <p>
+      Null: The probability of the player wearing the red uniform winning is 0.50
+    </p>
+    <p>
+      Alt: The probability of the player wearing the red uniform winning is greater than 0.50
+    </p>
+  </solution>
+  </activity>
+
+  <activity>
+  <!--Question 2-->
+  <statement>
+  <p>We will let π represent the probability that a competitor wearing a red uniform wins.
+  Using this, restate the hypotheses using symbols.</p>
+  </statement>
+  <solution>
+    <p>
+      Null: π=0.50, Alt: π&gt;0.50
+    </p>
+  </solution>
+  </activity>
+
+  <activity> 
+  <!--Question 3-->
+  <introduction>
+    <p>Researchers Hill and Barton used data collected on the results of 457 matches and found
+    that the competitor wearing red won 248 times, whereas the competitor wearing blue
+    won 209 times. We will carry out a simulation to assess whether or not the observed data
+    provide evidence in support of the research conjecture. This simulation will employ the
+    <term>3S strategy</term>: Determine the <term>s</term>tatistic, <term>s</term>imulate could-have-been outcomes of the statistic
+    under the null model, and assess the <term>s</term>trength of evidence against the null model by
+    estimating the p-value or the standardized statistic.
+    </p>
+  </introduction>
+    <task>
+      <statement>
+        <p>
+          What is the statistic we will use? Calculate the observed value of the statistic in this
+    study.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          248/457=54.3%
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Describe how you could use a coin to develop a null distribution to test our
+          hypothesis.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let a coin flip represent a match, heads=red wins, tails=blue wins; flip a coin 457 times
+          keeping track of the number of heads; repeat 1000 times recording the number of heads
+          in each set of 457 flips
+        </p>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion applet</url> to test our hypothesis. Based on your simulation,
+          find the p-value and write a conclusion. Also write down the mean and standard
+          deviation from your null distribution when the proportion of successes is used for the
+          variable on the horizontal axis. You will need this later.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The p-value=0.03, which gives us strong evidence against the null and in favor of the
+          alternative that the probability of winning for competitors wearing red is greater than
+          0.50. mean=0.499, SD=0.024
+        </p>
+      </solution>
+    </task>
+  </activity>
+</subsection>
+
+<subsection> 
+ <title>One-Sided vs. Two-Sided Tests</title>
+<p>One factor that influences strength of evidence is whether we conduct a two-sided or a one-sided test. Up until now we have only done one-sided tests. In a one-sided test the alternative hypothesis is either &gt; or &lt;. In a two-sided test, the alternative hypothesis is ≠. So, why would you do a two-sided test and what are the implications?</p>
+<p> Suppose the researchers did not necessarily think that red would win more often, but
+they also didn't necessarily think that blue would win more often. They were just interested in
+whether one color would win more often than the other. A two-sided alternative hypothesis (red wins at a rate other than 50% of the time, or at a rate not equal to 50%) allows the researchers to be less sure of the anticipated value of the parameter than a one-sided test.</p>
+<activity>
+ <!--Question 4-->
+<statement>
+<p>If we let π equal the probability that a competitor wearing a red uniform wins, state the
+hypotheses for this study in symbols using a two-sided alternative.</p>
+</statement>
+<solution>
+  <p>
+    Null: π=0.50, Alt: π≠0.50 where π = The probability of the player wearing the red uniform winning
+  </p>
+</solution>
+</activity>
+
+<activity> 
+ <!--Question 5-->
+ <introduction>
+  <p>Return to the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion</url> applet to approximate the p-value for our original overall
+  proportion of red winning 248 times out of 457 matches, but now select the “Two-sided”
+  check box to find the “two-sided p-value.” </p>
+ </introduction>
+  <task>
+    <statement>
+      <p>
+        Describe how the portion of the null distribution that is shaded red is different than
+        our first test done in #3c.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Both tails are shaded, not just one
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Describe how the p-value is different from the p-value that was obtained in our
+        original test done in #3c.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        p-value=0.075 (about twice as large as before)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        To find the two-sided p-value, the applet is looking to see how often 0.543 or larger
+        occurs and how often the comparable value on the other side of the null distribution
+        (or smaller) occurs. To find this value, first compute how far 0.543 is from the center
+        of the null distribution and then go that same distance to the left (less than) the
+        center of the null distribution. What is the comparable value?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        0.543-0.50=0.043, 0.50-0.043=0.457, thus, 0.457 is the comparable value
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Complete the following sentence: The two-sided p-value of _____  is the
+        probability of obtaining _____ or larger plus the probability of obtaining
+        _____ or smaller if the _____ is true.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        0.075/0.543/0.457/null hypothesis
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        You should have seen that when the alternative hypothesis is two-sided, the p-value
+        is computed by looking at how extreme the observed data is in both tails on the null
+        distribution. This makes the p-value about twice as large. Because of this, explain
+        how switching from a one-sided to a two-sided test influences the strength of
+        evidence against the null.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Switching from a one-sided to two-sided test increases the p-value (by approximately
+        twice as much) and, thus, decreases the evidence against the null hypothesis
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<remark> 
+<p>Because the p-value for a two-sided test is about twice as large as that for a one-sided
+test, they provide less evidence against the null hypothesis. However, two-sided tests
+are used more often in scientific practice.</p>
+</remark>
+</subsection>
+
+<subsection> 
+ <title>Difference Between Statistic and Null Hypothesis Parameter Value</title>
+<activity> 
+ <!--Question 6-->
+ <introduction>
+  <p>A second factor that influences the strength of evidence against the null is how far apart
+  the observed sample statistic and the value of the parameter specified under the null
+  hypothesis are. For this study the null value was 0.50 and the observed sample statistic
+  was about 0.543 (or 54.3% of the competitors wearing red won their matches). Suppose a
+  larger proportion of competitors wearing red won their matches. In fact, suppose 57% of
+  the 457 matches were won by a competitor wearing red.</p>
+ </introduction>
+  <task>
+    <statement>
+      <p>
+        Go back to the One Proportion applet and approximate the (one-sided) p-value for
+        this situation where again we are testing to see whether the overall probability of
+        winning is more than 0.50.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        If we use 0.57 as the statistic, the p-value is 0.003
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Is your p-value larger or smaller than your original one? Explain why this
+        makes sense.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Smaller, because the statistic (57%) moved farther away from the null hypothesized
+        value (50%) than before (54.3%)
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Write a sentence explaining the relationship between the distance between the
+        observed sample statistic and the value of the parameter specified under the null
+        hypothesis to the strength of evidence against the null hypothesis.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The farther the statistic is from the null hypothesized value, the smaller the p-value will
+        be (strength of evidence increases).
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<remark> 
+<p>The farther away the observed statistic is from the average value of the null distribution,
+the more evidence there is against the null hypothesis.</p>
+</remark>
+</subsection>
+
+<subsection> 
+ <title>Sample Size</title>
+<activity> 
+ <!--Question 7-->
+ <introduction>
+  <p>The third factor we will look at that influences strength of evidence against the null
+  hypothesis is the sample size. As we said earlier, the data for this study came from four
+  combat sports in the 2004 Olympics. One of those sports was boxing. The researchers
+  found that out of the 272 boxing matches, 150 of them were won by competitors
+  wearing red. This proportion of 150/272 ≈ 0.551 is similar to the overall proportion of
+  times the competitor wearing red won. Let's see what the smaller sample size does to
+  the strength of evidence. Use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion</url> applet to test the same hypotheses as
+  we originally did, but with just the boxing matches as our sample.
+  </p>
+ </introduction>
+  <task>
+    <statement>
+      <p>
+        Compare the null distribution you generate in this case to that generated in #3. In
+        particular, how do the center (mean) and variability (standard deviation) compare?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Center=0.50 (similar to before), variability (SD=0.03) is larger
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        What is your new p-value? Is it larger or smaller than your original p-value from #3c?
+        Explain why this makes sense.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        p-value=0.058, larger than the original p-value because there is more variability in the
+        null distribution
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Write a sentence explaining the relationship between sample size and the strength of
+        evidence against the null hypothesis.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        All things being equal as the sample size increases, the strength of evidence increases
+        (p-value decreases).
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<remark> 
+<p>As the sample size increases (and the value of the observed sample statistic stays the
+same) the strength of evidence against the null hypothesis increases.</p>
+</remark>
+</subsection>
+
+</section>

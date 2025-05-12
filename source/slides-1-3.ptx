@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>1-3 : Preliminary: Exploring random processes</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Random processes</title>
+      <slide>
+        <p>  A <term>random process</term> is a repeatable process where the result for an 
+  individual attempt is not known in advance but there is a predictable pattern to 
+  the results in the long run. Playing <em>Let's Make a Deal</em> is an example of 
+  a random process: The result for the next round of the game is uncertain, but if 
+  the game is played many, many times, a predictable pattern is expected.  </p>
+      </slide>
+    </section>
+    <section>
+      <title>Long-run proportion</title>
+      <slide>
+        <p>A <term>simulation</term> is an artificial re-creation of a random process.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Interpretation of probability</title>
+      <slide>
+        <p>
+    The <term>probability</term> of an outcome is the long-run proportion of times an 
+    outcome from a random process occurs if the process is repeated indefinitely under 
+    identical conditions. A probability can be written as a decimal (0.3333), a fraction 
+    (1/3), or a percentage (33.33%).
+  </p>
+      </slide>
+      <exercise>
+        <title> Switch or stay</title>
+        <statement>
+          <p>How do you think the probability of winning with the switch strategy will compare to the probability of winning with the stay strategy? Briefly explain your reasoning.</p>
+        </statement>
+      </exercise>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <p>
+    The sections in this chapter may have felt unrelated and brief, but they each 
+    contributed important components of drawing conclusions from data, including 
+    the six-step investigation process, variation in data, and exploring randomness 
+    and probability.
+  </p>
+        </remark>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

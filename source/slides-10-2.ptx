@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>10-2 : Comparing multiple means: Theory-based approach</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Comparing popular diets</title>
+      <slide>
+        <p>Because about two-thirds of Americans are considered overweight, weight loss is big business. 
+There are many different types of diets, but do some work better than others? Is low fat better 
+than low carb or is some combination best? Researchers 
+(<url href="https://doi.org/10.1001/jama.297.9.969">Garnder et al. 2007</url>) conducted a study 
+involving four popular diets: Atkins (very low carb), Zone (40:30:30 ratio of carbs, protein, 
+fat), LEARN (high carbohydrate, low fat), and Ornish (low fat). They randomly assigned women aged 
+25-50 with a body mass index (BMI) of 27-40 (overweight and obese) to one of the four diets. The 
+311 women who volunteered for the program were educated on their assigned diet and were observed 
+periodically as they stayed on the diet for a year. At the end of the year, the researchers calculated 
+the change in BMI (e.g., negative means reduction in BMI) for each woman and compared the results 
+across the four diets.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>What is the overarching research question the researchers hoped to answer?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <!--Question 2a-->
+      <slide>
+        <title>Exercise 2a: </title>
+        <p>
+        What are the observational units in this study?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 2b: </title>
+        <!--Question 2b-->
+        <p>
+        Identify the explanatory and response variables. Classify them as categorical or quantitative. For categorical variables, indicate how many categories are used.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 3a: </title>
+        <!--Question 3a-->
+        <p>
+        Does this study make use of random sampling, random assignment, both, or neither? What are the implications of your answer with regard to scope of inference?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 3b: </title>
+        <!--Question 3b-->
+        <p>
+        Did the researchers collect the data as paired data or as independent samples? In other words, according to the study design, are the responses from one treatment group paired with or independent of the responses from other treatment groups?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>State the null and alternative hypotheses, both in words and symbols, for testing 
+    the research conjecture. (Recall that the response variable is change in BMI; positive 
+    values indicate an increase in BMI and negative values indicate a decrease in BMI 
+    from the beginning to the end of the study.)</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <title>Exercise 5</title>
+        <p>
+      The data for this investigation appear in a file called <url href="https://static-content2.zybooks.com/isi/data/chap9/Diets.txt">Diets</url>. Copy and paste the data into the <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2"> Multiple Means applet</url>. (Recall that the response variable is change in BMI.) Press <em>Use Data</em>, and the applet will produce dotplots and summary statistics.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 5a: </title>
+        <p>
+        Report the mean and standard deviation of the BMI values in this sample.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5b: </title>
+        <p>
+        Check the Show Groups box. You can also check the Boxplots box to overlay those as well. Report the means, standard deviations, and sample sizes for the change in BMI amounts for each diet.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5c: </title>
+        <p>
+        Describe what the graphs and statistics reveal about whether the diets appear to differ with regard to change in BMI amounts and, if so, which diet appears to be best and which worst.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences beyond the data</title>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>
+      Conduct a simulation-based randomization test, as was done in the last section, to compare the four group means using the mean of the absolute values of the group differences (Mean Group Diff) as the statistic. Report the observed value of this statistic. Then determine and report a p-value based on at least 1,000 shuffles.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Based on this p-value, evaluate the strength of evidence against the null hypothesis provided 
+    by the experimental data. In other words, do the data provide strong evidence that at least one 
+    of the four diets differs with regard to average change in BMI?</p>
+      </slide>
+      <slide>
+        <p>Although the Mean Group Diff statistic is fairly easy to understand and calculate, it is not 
+commonly used, in part because there is no theory-based model for the null distribution. Another 
+downside is that the Mean Group Diff statistic is not standardized so it is not comparable 
+across studies (e.g., a Mean Group Diff statistic of 1 in one study might be strong evidence but 
+in another study might not show convincing evidence against the null hypothesis).</p>
+      </slide>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <p>Instead of comparing only the differences in means, a statistic could standardize those differences 
+by comparing to the amount of within-group or natural variability in the response variable while also 
+taking sample sizes into account.</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>
+  A much more commonly used statistic for comparing multiple groups on a quantitative response, which does have a theory-based distribution, is called an <term>F-statistic</term>. As with the Mean Group Diff statistic, the F-statistic equals zero only when the group means are all identical. Otherwise the F-statistic is positive, with larger values indicating larger differences across the group means.
+</p>
+      </slide>
+      <slide>
+        <p>
+  The F-statistic (see Formula section at the end of Example 9.2 for details) is a ratio of <q>between-group</q> and <q>within-group</q> variability. Thus,
+  <me>
+    F = \frac{\textbf{Between-group variability}}{\textbf{Within-group variability}}
+  </me>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <p>
+      Select the <em>Statistic</em> pull-down menu above the null distribution to select <em>F-statistic</em>, and the null distribution changes from the Mean Group Diff statistic to the F-statistic.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 8a: </title>
+        <!--Question 8a-->
+        <p>
+        Report the observed value of the F-statistic, which appears on the left side of the applet.
+      </p>
+      </slide>
+      <slide xml:id="q-10-2-8-b">
+        <title>Exercise 8b: </title>
+        <!--Question 8b-->
+        <p>
+        Use the simulation results and the observed value of the F-statistic to estimate the p-value.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8c: </title>
+        <!--Question 8c-->
+        <p>
+        Is this p-value similar to the one based on the Mean Group Diff statistic? Is your conclusion about strength of evidence the same with both statistics?
+      </p>
+      </slide>
+      <slide>
+        <p>The F-statistic has a known theoretical distribution when the null hypothesis is true, 
+called (surprisingly enough) an <term>F-distribution</term>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <p>
+      Check the box to Overlay F distribution. 
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 9a: </title>
+        <!--Question 9a-->
+        <p>
+        Would you say there is good agreement between this theoretical prediction and your simulated null distribution?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 9b: </title>
+        <!--Question 9b-->
+        <p>
+        How does the theory-based p-value compare to what you found in <xref ref="q-10-2-8-b"/>
+        </p>
+      </slide>
+      <slide>
+        <p>But what does F = 3.80 really mean? Check the box by <em>Show ANOVA Table</em> to 
+see more output related to the calculation of the value of the F-statistic.</p>
+      </slide>
+      <slide xml:id="q-10-2-10">
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Confirm that the F-statistic is the ratio of the mean square for treatment 
+    to the mean square for error.  These are the numbers in the <c>MS</c> column of the ANOVA table.  The mean square for treatment is in the <c>Model</c> row, and the mean square for error is in the <c>Error</c> row.</p>
+      </slide>
+      <slide>
+        <p>
+  The next series of exercises will take a closer look at how the F-statistic is calculated.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <p>      
+      Use the <url href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm?hideExtras=1"> Descriptive Statistics applet</url> to find the standard deviation of the group averages:
+      <ul>
+            <li>
+              <p>
+            Type in the four group means for the original data. (Clear the existing data first and uncheck the Includes header box.)
+          </p>
+            </li>
+            <li>
+              <p>
+            Have the applet calculate the standard deviation of these four group means.
+          </p>
+            </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 11a: </title>
+        <p>
+        Report the number you found.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11b: </title>
+        <!--Question 11b-->
+        <p>
+        Write a one-sentence interpretation of this number you calculated.
+      </p>
+      </slide>
+      <!--Question 12-->
+      <slide>
+        <title>Exercise 12</title>
+        <p>
+    To estimate the natural variation in these BMI values, we want to basically average the <q>within-group</q> variability across the four groups. 
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 12a: </title>
+        <p>
+      Take the four group standard deviations and average them. (You can again use the Descriptive Statistics applet.)
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 12b: </title>
+        <p>
+      Write a one-sentence interpretation of this number.
+    </p>
+      </slide>
+      <!--Question 13-->
+      <slide>
+        <title>Exercise 13</title>
+        <p>
+    Now let <m>s_{\bar{x_i}}</m> be your answer to <xref ref="q-10-2-11"/> and let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>.  
+  </p>
+      </slide>
+      <slide>
+        <title>Exercise 13a: </title>
+        <p>
+      Calculate
+      <me>
+        77.75 \times \frac{s_{\bar{x_i}^2}}{\bar{s_i}^2}.
+      </me>
+      The 77.75 is the average of the group sizes.  Recall that variance is the squared of standard deviation.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 13b: </title>
+        <p>
+      Is your answer to part a above the approximately the same as your answer to <xref ref="q-10-2-10"/>?
+    </p>
+      </slide>
+      <slide>
+        <p>Another way to summarize the usefulness of the explanatory variable, is the “coefficient
+of determination,” or <m>R^2</m> value.</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>The proportion of the variation in the response variable which is explained (accounted for) 
+by the treatment (groups) is called 
+<me>  R^2 = 1 - \frac{ \text{within-group variability}  }{ \text{total variability} } </me>.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <p>
+      Again let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>, and let <m>s</m> be the standard deviation of all the BMI's.  
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 14a: </title>
+        <p>
+        Compute
+        <me>
+          R^2 \approx 1 - \frac{\bar{s_i}^2}{s^2}.
+        </me>
+        This approximation works when the sizes of the groups are almost the same.  Again recall that variance is the square of standard deviation.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14b: </title>
+        <p>
+          <m>R^2</m> is the proportion of the variability in BMI values that can be explained by diet type. Is the percentage of variation in BMI explained high (close to 100%) or low (close to 0%) in this case?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14c: </title>
+        <p>
+        How much variability in BMI is “left over” (not explained by the type of diet)?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14d: </title>
+        <p>
+        Even though we found our F-statistic to be statistically significant, what implications does our <m>R^2</m> have interpreting our conclusions about the impact of the diets?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 16-->
+        <p>You have now calculated a p-value in three different ways, two using a simulation-based 
+approach (but with different statistics: Mean Group Diff and F) and one using a theory-based 
+approach (using the F-statistic). Are they all similar? What is your conclusion about whether 
+the diets differ with regard to average BMI changes?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Follow-up analysis</title>
+      <slide>
+        <p>The ANOVA F-test is an overall test. A significant test result tells us that we have strong 
+evidence that at least one population mean is different from the others but does not tell us which 
+one(s) differ from which other one(s). To determine this we need to apply a follow-up procedure to 
+ANOVA. There are many different follow-up tests that can be done. We will use pairwise confidence 
+intervals for the difference in two means, as we did before.</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <p>If an ANOVA test finds evidence that there is at least one long-run or population mean that is 
+different, there are many different follow-up tests designed to help pinpoint where difference(s) 
+occur. One option is to look at all the pairwise theory-based confidence intervals for the 
+difference in long-run or population means.</p>
+        </remark>
+      </slide>
+      <!--Question 17-->
+      <slide>
+        <title>Exercise 16</title>
+        <p>When you have the F-statistic selected and the F-distribution overlaid (or are showing the ANOVA table) 
+    you can check the box to Compute 95% CI(s) for difference in means. Report the intervals for (a)-(f).</p>
+      </slide>
+      <slide>
+        <title>Exercise 16a: </title>
+        <p>
+        Atkins diet vs. Zone diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16b: </title>
+        <p>
+        Atkins diet vs. Ornish diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16c: </title>
+        <p>
+        Atkins diet vs. LEARN diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16d: </title>
+        <p>
+        Zone diet vs. Ornish diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16e: </title>
+        <p>
+        Zone diet vs. LEARN diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16f: </title>
+        <p>
+        Ornish diet vs. LEARN diet
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 18-->
+        <p>Which of the confidence intervals calculated in <xref ref="q-10-2-17"/> indicate a significant 
+difference between groups? How are you deciding?</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 19-->
+        <p>Based on your analysis, would you conclude that there is one diet that works significantly 
+better than the other three? If so, which one?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Validity conditions</title>
+      <slide>
+        <p>As with other theory-based approaches of conducting tests of significance, certain validity 
+conditions must be met in order to conduct an ANOVA F-test.</p>
+      </slide>
+      <slide>
+        <title>Convention 4: </title>
+        <convention>
+          <title> for the ANOVA F-test </title>
+          <p>The F-distribution is a good approximation to the null distribution of the F-statistic as long as:
+<ul>
+              <li>Either the sample size is at least 20 for all the groups, without strong skewness or 
+outliers; or if the sample size is less than 20, then the distribution of the response 
+variable is approximately symmetric in all the samples (examine the dotplots for skewness or 
+outliers).</li>
+              <li>The standard deviations of the samples are approximately equal to each other (largest 
+standard deviation is not more than twice the value of the smallest standard deviation).</li>
+            </ul>
+          </p>
+        </convention>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 20-->
+        <p>Do the sample data for the diet study appear to satisfy the validity conditions for conducting an
+ ANOVA F-test? How are you deciding?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions</title>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 21-->
+        <p>Are you comfortable with concluding from this study that the diet used causes a difference in 
+BMI change? Justify your answer.</p>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <!--Question 22-->
+        <p>To what population are you comfortable generalizing the results of this study? Justify your answer.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 22</title>
+        <!--Question 23-->
+        <p>Looking back: Did anything about the design and conclusions of this study concern
+you? Issues you may want to critique include: The match between the research question 
+and the study design, how the experimental units were selected, how the treatment was 
+assigned to the experimental units, how the measurements were recorded, the number of 
+experimental units in the study, whether what we observed is of practical value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <!--Question 24-->
+        <p>Looking ahead: What should the researchers' next steps be to fix the limitations or 
+  build on this knowledge?</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

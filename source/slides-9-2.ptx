@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>9-2 : Comparing multiple proportions: Theory-based approach (Part A)</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Conserving hotel towels</title>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <p>If you have stayed at a hotel recently, you may have noticed how guests are increasingly 
+encouraged to practice conservation habits by not having their towels washed every day—instead 
+hanging them back on the rack to be reused. Are some "encouragement strategies" more effective 
+than others?
+</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <p>A recent study (<url href="https://doi.org/10.1086/586910">Goldstein et al., 2008</url>) 
+conducted a randomized experiment to investigate how different phrasings on signs placed on 
+bathroom towel racks impacted guests' towel reuse behavior. In particular, the researchers 
+were interested in evaluating how messages that communicated different types of social norms 
+impacted towel reuse. One week prior to a guest staying in the room, rooms at a particular 
+hotel were randomly assigned to receive one of the following five messages on a sign hung 
+on the towel bar in the room:
+</p>
+      </slide>
+      <dl>
+        <li>
+          <title>Message 1:</title>
+          <p>
+      HELP SAVE THE ENVIRONMENT. You can show your respect for nature
+      and help save the environment by reusing your towels during your stay. (No social norm)
+    </p>
+        </li>
+        <li>
+          <title>Message 2:</title>
+          <p>
+      JOIN YOUR FELLOW GUESTS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted in 
+      fall 2003, 75% of the guests participated in our new resource savings program by 
+      using their towels more than once. You can join your fellow  guests in this program 
+      to help save the environment by reusing your towels during your
+      stay. (Guest identity norm) 
+    </p>
+        </li>
+        <li>
+          <title>Message 3:</title>
+          <p>
+      JOIN YOUR FELLOW GUESTS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 75% of the guests who stayed in this room (#xxx) participated in 
+      our new resource savings program by using their towels more than once. You can 
+      join your fellow guests in this program to help save the environment by reusing 
+      your towels during your stay. (Same room norm)
+    </p>
+        </li>
+        <li>
+          <title>Message 4:</title>
+          <p>
+      JOIN YOUR FELLOW CITIZENS IN HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 75% of the guests participated in our new resource savings program 
+      by using their towels more than once. You can join your fellow citizens in this 
+      program to help save the environment by reusing your towels during
+      your stay. (Citizens norm)
+    </p>
+        </li>
+        <li>
+          <title>Message 5:</title>
+          <p>
+      JOIN THE MEN AND WOMEN WHO ARE HELPING TO SAVE THE ENVIRONMENT. In a study conducted 
+      in fall 2003, 76% of the women and 74% of the men participated in our new resource 
+      savings program by using their towels more than once. You can join the other men 
+      and women in this program to help save the environment by reusing your towels during 
+      your stay.” (Gender identity norm)
+    </p>
+        </li>
+      </dl>
+      <slide>
+        <p>Data were collected on 1,595 instances of potential towel reuse. For each of the 1,595 
+instances, room attendants recorded whether the hotel guest reused their towels.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>In your own words, state the research question of interest in this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Identify the explanatory and response variables in this study, along with 
+their types (categorical or quantitative). For the explanatory variable, 
+indicate how many categories it involves.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Did the study design make use of any pairing of subjects or are the subjects 
+who receive the different signs independent of each other?</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>State the appropriate null and alternative hypotheses for testing the researchers' 
+conjecture using both words and symbols.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <!--Question 5-->
+      <slide>
+        <title>Exercise 5</title>
+        <p>Paste the two-way table from the 
+    <url href="https://static-content2.zybooks.com/isi/data/chap8/Towels.txt">Towels</url> 
+    file into the 
+    <url href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1">
+    Multiple Proportions applet</url>, then in the <em>Sample Data</em> box and press 
+    <em>Use Table</em>.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 5a: </title>
+        <p>
+        Check the box next to Show Table in order to present the two-way table of counts 
+        and calculate conditional proportions of those who reused towels. (You can grab 
+        the bottom right corner of the table in the applet to extend it.) Report these 
+        five proportions.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5b: </title>
+        <p>
+        Looking at the segmented bar graph as well as the conditional proportions, 
+        conjecture on whether you think there will be a significant difference among 
+        the five groups with regard to towel reuse.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4:  Draw Inferences beyond the data</title>
+      <!--Question 6-->
+      <slide>
+        <title>Exercise 6</title>
+        <p>
+      Let's apply the 3S strategy.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 6a: </title>
+        <p>
+        Statistic: Report the observed value of the Mean Group Diff (the differences in group 
+        means for all possible pairs of groups) statistic for this study, as given by the applet.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 6b: </title>
+        <p>
+        Simulate: Use the applet to conduct 1000 shuffles of the response variable. (First 
+        check Show Shuffle Options and then enter 1000 for the Number of Shuffles. Press 
+        Shuffle Responses.) Then enter the observed value of the Mean Group Diff statistic 
+        in the Count Samples box and press Count. Report the p-value.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 6c: </title>
+        <p>
+        Strength of evidence: Based on the p-value, evaluate the strength of evidence provided 
+        by the data against the null hypothesis. Summarize your conclusion in the context of 
+        this study.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Another Choice of Statistic: Chi-square Statistic</title>
+      <slide>
+        <p>The Mean Group Diff statistic is fairly easy to understand but is not widely used in 
+part because it cannot be easily predicted theoretically. A more commonly used statistic 
+is called a chi-square (<m>\chi^2</m>) statistic. You can think of this statistic as 
+measuring how far the group proportions of success are from the overall proportion of 
+success. These (standardized) deviations from the overall proportion are then squared 
+and summed together across all of the explanatory variable groups. We'll do this calculation now.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Determine the overall proportion, p̂, of rooms that reused towels.</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>We will calculate the standard error of a group proportion by computing <m>\sqrt{\frac{\hat p(1 - \hat p)}{n_i}}</m>
+where <m>\hat p</m> is the overall proportion found in #7 and nᵢ is the sample size for the ith group. Find the standard error of the 
+group proportion for each of the five groups. </p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Create a standardized z-statistic for each conditional proportion compared to this overall proportion. To do 
+this take each of the five group proportions, subtract the overall proportion (question 7), and then divide the 
+result by the standard deviation you found for that group in question 8. </p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Which of the five standardized statistics are larger than 2 or smaller than -2, suggesting strong evidence 
+that the group proportion is significantly different than the overall proportion?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Square each of these values and sum them to calculate the chi-square statistic.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>What kinds of values (large, small, positive, negative) will the chi-square statistic 
+have if the null hypothesis is true? What kinds of values will provide evidence against 
+the null hypothesis?</p>
+      </slide>
+      <slide>
+        <p>From the <em>Statistic</em> pull-down menu, select <m>\chi^2</m>. What does the applet 
+report for the observed value of the chi-square statistic? Confirm that this matches your 
+answer to question 11. (<em>Note</em>: You may be a bit different due to rounding.)
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>The applet will also now display the null distribution for the χ²  statistic rather 
+than the Mean Group Diff statistic. Determine the p-value based on the simulated χ²  
+statistics. (Hint: Change the value in the Count Samples box to the observed value of the χ²  statistic.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>How does the p-value based on the χ² statistic compare to the one based on the Mean Group Diff 
+statistic? Are they similar? Is your conclusion about strength of evidence provided by the data 
+against the null hypothesis similar?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Theory-based approach</title>
+      <slide>
+        <p>The primary advantage of using the <m>\chi^2</m> statistic is that its null distribution can be 
+predicted well by a theoretical distribution. So, once again a theory-based approach could be 
+used without conducting a simulation in the first place.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Below the graph of the simulated chi-square statistics, check the box to Overlay Chi-square 
+distribution. Does the theoretical distribution match the distribution of simulated statistics 
+reasonably well? How does the theory-based p-value compare to what you found in question 13? 
+Does it lead you to a similar conclusion about strength of evidence?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Validity conditions</title>
+      <slide>
+        <p>Like all theory-based tests, this one also comes with the condition of having a large 
+sample size. We will (very conservatively) consider a sample size large if the sample 
+data include at least 10 observations in each cell of the two-way table.</p>
+      </slide>
+      <!--Question 16-->
+      <slide>
+        <title>Exercise 16</title>
+        <p>Go back to the applet and make sure the <em>Show Table</em> box is checked.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16a: </title>
+        <p>
+        How many cells are in this table? In other words, how many counts need to be checked that they are at least 10?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16b: </title>
+        <p>
+        Is the validity condition for a theory-based chi-square test satisfied for these data? Justify your answer.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Follow-up analysis</title>
+      <slide>
+        <p>When a chi-square test produces a significant result, we conclude that at least one 
+probability or population proportion differs from at least one of the others. A sensible 
+next step is to try to identify which group proportion differs significantly from which 
+others. We can do this by producing confidence intervals for pairwise differences in 
+population proportions.</p>
+      </slide>
+      <!--Question 17-->
+      <slide>
+        <title>Exercise 17</title>
+        <p>Below the p-value output, check the box to <em>Compute 95% CI(s) for difference in
+    proportions</em>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 17a: </title>
+        <p>
+        How many intervals are produced?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17b: </title>
+        <p>
+        Which conditions are significantly different from each other? How are you deciding?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17c: </title>
+        <p>
+        For one of the intervals you identified in part (b), write a one-sentence interpretation 
+        of the interval, being very clear what is supposed to be captured inside the interval 
+        and which condition has a more positive effect on towel use and by how much.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Summarize conclusions</title>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>Is this an observational study or a randomized experiment?</p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 19-->
+        <p>Explain how the conclusions of this study are limited by conducting the study at a
+single hotel.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 20-->
+        <p>Summarize your conclusion for your analysis of the data from this study.
+  <ul>
+            <li>
+              <p>
+        Summarize the research question, the methods, and the data.
+      </p>
+            </li>
+            <li>
+              <p>
+        Refer to the p-values from the <m>\chi^2</m>-test and the confidence intervals to make a recommendation for the hotel manager about whether it matters what message is used, which message should be used, and how large of an impact the best message would be expected to have.
+      </p>
+            </li>
+            <li>
+              <p>
+        Think about the study and its design. Were there any limitations you feel need to be addressed? Did the design match the research question? Can you suggest a better sampling method of hotel guests—a better way to collect data on towel use? Share some ideas for a logical next study.
+      </p>
+            </li>
+          </ul>
+        </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

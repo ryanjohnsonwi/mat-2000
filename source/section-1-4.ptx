@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_1_4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Data and formulas</title>
+
+<subsection> 
+ <title>Data</title>
+
+<p>
+  Organ Donation
+</p>
+  <p><dl>
+    <li>
+      <title>Section</title>
+      <p>
+        Preliminary: Introduction to the six-step method
+      </p>
+    </li>
+    <li>
+      <title>Data</title>
+      <p>
+        <url href="https://static-resources.zybooks.com/ISI/Ch09/OrganDonation.csv">OrganDonation.csv</url>
+      </p>
+    </li>
+    <li>
+      <title>Reference</title>
+      <p>
+        <url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">Johnson and Goldstein (Science 2003)</url>
+      </p>
+    </li>
+  </dl></p>
+
+<p>
+  Super Bowl National Anthem Durations
+</p>
+ <p><dl>
+    <li>
+      <title>Section</title>
+      <p>
+        Preliminary: Exploring data
+      </p>
+    </li>
+    <li>
+      <title>Data</title>
+      <p>
+        <url href="https://static-resources.zybooks.com/ISI/Ch01/NationalAnthemTimes.csv">NationalAnthemTimes.csv</url>
+      </p>
+    </li>
+    <li>
+      <title>Reference</title>
+      <p>
+        <url href="https://www.covers.com/nfl/super-bowl/props/national-anthem">Grewal (Covers 2019)</url>
+      </p>
+    </li>
+  </dl></p>
+
+</subsection>
+
+<subsection> 
+ <title>Preliminary formulas</title>
+<p>
+<ul>
+<li><m>x_i </m> is the value of the <m>i</m>th observation for the variable of interest.</li>
+<li><m>n</m> is the sample size.</li>
+<li><m>\overline{x} = \frac{\text{sum of observations in the sample}}{n} = \frac{\sum x_i  }{n} = \frac{x_1 + \ldots + x_n }{n} </m> is the sample mean, which is a measure of center for a sample. The sample mean is sometimes called the average.</li>
+<li><m>\displaystyle s = \sqrt{ \frac{\sum (x_i - \overline{x})^2 }{n-1}  } = \sqrt{ \frac{ (x_1 - \overline{x})^2 + \ldots + (x_n - \overline{x})^2  }{n-1}  } </m> is the sample standard deviation, which is a measure of the typical deviation of the data values from the mean for a sample.</li>
+</ul>
+</p>
+</subsection>
+
+</section>

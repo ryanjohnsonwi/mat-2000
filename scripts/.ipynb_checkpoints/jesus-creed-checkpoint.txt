@@ -1,0 +1,7 @@
+<slide>
+<title>The Jesus Creed</title>                         
+<p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+<p>Love the Lord your God with all your heart and with all</p>
+<p>your soul and with all your mind and with all your strength.</p>
+<p>The second is this: Love your neighbor as yourself.</p>
+</slide>

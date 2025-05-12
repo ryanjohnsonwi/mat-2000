@@ -1,0 +1,12 @@
+WARNING : Using CLI version 2.18.0 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.18.0.
+ERROR   : A project already exists in `G:\Shared drives\MAT - 2000 Intro to Stats\code` (it contains the file `project.ptx`).
+ERROR   : No new project will be generated.
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

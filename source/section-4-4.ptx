@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_4_8" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Factors that affect the width of a confidence interval</title>
+
+<subsection> 
+ <title>Holiday spending habits</title>
+<p>An October 1-10, 2019, <url href="https://news.gallup.com/poll/267914/americans-plan-spend-generously-christmas.aspx">
+  An October 1-10 2019 Gallup poll</url> asked 1,526 U.S. adults how much they planned to personally spend on 
+  Christmas gifts this year. The report cited an average of $942.</p>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Identify the observational units and variable in this study. Classify the variable as 
+quantitative or categorical. </p>
+</statement>
+<solution>
+  <p>
+    Observational units: 1,526 U.S. adults, variable: How much they plan to spend on Christmas presents, a quantitative variable
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Define the parameter of interest in this study. (Hint: Do you want to estimate a mean
+ or a proportion? For what population?)</p>
+</statement>
+<solution>
+  <p>
+    The average amount all U.S. adults plan to spend on Christmas presents
+  </p>
+</solution>
+</activity>
+
+<p>Because our variable of interest (dollar amount intending to spend) is quantitative, 
+the parameter of interest here is the population mean for all adult Americans; call this
+ <m>\mu</m>. To construct a confidence interval for <m>\mu</m>, we need to know the sample
+ size, the sample mean, and the sample standard deviation.
+</p>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Which two of these three quantities do you know? What symbols can be used to represent 
+them?</p>
+</statement>
+<solution>
+  <p>
+    Sample size (n) = 1,526, sample mean (<m>\overline{x}</m>) = $942
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>What we are not told by Gallup is s, the sample standard deviation. Explain in your 
+own words what s represents in this context.</p>
+</statement>
+<solution>
+  <p>
+    The sample standard deviation represents (roughly) the average deviation (distance) of individual’s Christmas spending amounts from the sample mean of $942. In other words, it tells us how much the spending amounts tend to vary from adult to adult.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>Suppose s was equal to $150. Use the 2SD method (Hint: Reminder to consider the SD of 
+the sample mean) to approximate and interpret a 95% confidence interval for μ. (Hint: 
+You are 95% confident that what is between what two values?)</p>
+</statement>
+<solution>
+  <p>
+    <me>
+      \frac{942 \pm 2 \times 150}{\sqrt{1526}} = 942 \pm 7.68 = (\$934.32, \$949.68)
+    </me>    
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>Suppose s was equal to $300. Use the 2SD method to approximate the 95% confidence 
+interval for μ. How does this interval compare to the interval from #5 (examine both 
+the midpoint and the width of the interval)? Explain why the changes you observe 
+make intuitive sense.</p>
+</statement>
+<solution>
+  <p>
+    <m>942 \pm 15.36 = (\$926.64, \$957.36)</m>. The interval is twice as wide as the one from #5, which makes sense because s is twice as large. The interval is centered at the same value ($942).
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>The impact of sample size</title>
+<activity>
+ <!--Question 7-->
+<statement>
+<p>The poll involved 751 men and 775 women. Suppose we looked at only one of these 
+subgroups. How do you expect the width of the intervals to compare to the interval 
+based on the total sample (wider, narrower, or the same width as before)? Explain 
+briefly.</p>
+</statement>
+<solution>
+  <p>
+    Larger, because each subsample size is smaller
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 8-->
+<statement>
+<p>Suppose the women reported planning to spend an average of $942 with standard 
+deviation $150. Compare the margin of error of this interval (Hint: 2SD) to that 
+in Question 5. Was your prediction correct?</p>
+</statement>
+<solution>
+  <p>
+    The margin of error is
+    <me>
+      \frac{2\times 150}{\sqrt{i775}} = \$10.78.
+    </me>
+    The margin of error is larger as predicted.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>In general, how does the width of a confidence interval change as the sample 
+size increases? Why?</p>
+</statement>
+<solution>
+  <p>
+    As the sample size increases, the width of the confidence interval decreases. With increased sample size comes increased precision of the estimate.
+  </p>
+</solution>
+</activity>
+
+<p>You should have seen that a smaller sample size produced a wider confidence 
+interval. This makes sense because a smaller sample size conveys less information 
+and therefore leaves more uncertainty about the actual value of the population 
+mean. More directly, as we discussed before, increasing the sample size reduces 
+the variability in the sampling distribution; thus the SD of the sampling 
+distribution will be smaller, and so the confidence interval will also be narrower.</p>
+<p>You also saw previously that the confidence level will impact the width of the 
+interval as well. So with quantitative data, there are three main factors that 
+impact the width of the confidence interval, the sample standard deviation 
+(variability within the sample), the sample size (variability between samples), 
+and the confidence level.</p>
+
+<remark> 
+<p>The width of a confidence interval for a population mean, <m>\mu</m>, decreases
+<ul>
+<li> as the confidence level decreases (for a fixed sample size and fixed sample standard
+deviation), or</li>
+<li> as the sample size increases (for a fixed confidence level and fixed sample standard
+deviation), or</li>
+<li> as the sample standard deviation decreases (for a fixed confidence level and fixed
+sample size).</li>
+</ul>
+</p>
+</remark>
+
+<p>If you wanted to answer the question “Do U.S. adults spend significantly less 
+than $950 on average for Christmas gifts?,” a confidence interval could answer 
+that question. If we look at the confidence interval that was constructed assuming 
+the standard deviation of spending to be $150, we get a confidence interval entirely 
+below $ 950. So, yes, on average U.S. adults are spending significantly less than 
+$950 on Christmas gifts. While this may be a statistically significant finding 
+giving us strong evidence against the average being $950, it doesn't mean that 
+the average amount is far less than $950. The upper end of the confidence interval 
+is $949.53, only 47 cents below $950. The margin of error of the interval is about 
+$7 arguably less than would be spent on one additional gift. </p>
+
+<remark> 
+<p>Especially with large sample sizes, even a fairly small difference between 
+an observed and hypothesized value can be statistically significant. In such 
+cases a confidence interval for the parameter can help to decide whether the 
+difference is large.</p>
+</remark>
+
+<p>The Gallup poll did give us a bit more information;</p>
+<table>
+  <tabular>
+    <row>
+      <cell>
+      </cell>
+      <cell>
+        $1000 or more
+      </cell>
+      <cell>
+        $500-999
+      </cell>
+      <cell>
+        $250-499
+      </cell>
+      <cell>
+        $100-249
+      </cell>
+      <cell>
+        Under $100
+      </cell>
+      <cell>
+        No opinion
+      </cell>
+      <cell>
+        Median
+      </cell>
+      <cell>
+        Mean (with 0)
+      </cell>
+      <cell>
+        Mean (without 0)
+      </cell>
+    </row>
+    <row>
+      <cell>
+        2019Oct 1-10
+      </cell>
+      <cell>
+        37
+      </cell>
+      <cell>
+        21
+      </cell>
+      <cell>
+        12
+      </cell>
+      <cell>
+        15
+      </cell>
+      <cell>
+        3
+      </cell>
+      <cell>
+        10
+      </cell>
+      <cell>
+        $500
+      </cell>
+      <cell>
+        $942
+      </cell>
+      <cell>
+        $1,004
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>Based on this information, which appears to be a more reasonable guess ($150 or $300) for the sample standard deviation? Explain your reasoning.</p>
+</statement>
+<solution>
+  <p>
+    Of the 88 responses reported in the table (only a fraction of the total sample), a standard deviation of 300 seems more reasonable because too large a proportion of responses are more than 1 standard deviation from the mean if the standard deviation is only 150.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Based on this information, do you think the theory-based inference method is valid for these data? (Hint: Do you think the sample data are roughly symmetric? What is the sample size?)</p>
+</statement>
+<solution>
+  <p>
+    From the table the data looks to be quite skewed, but with a sample size of over 1500 the theory-based approach may still be valid.
+  </p>
+</solution>
+</activity>
+
+<p>The information provided in the table is enough to tell us that the sample distribution
+is skewed. We can consider the 2SD and theory-based approaches valid as long as the sample
+size is large. Our original sample size of 1,526 respondents should be sufficient to consider
+these methods valid. But with such a strong skewness in spending amounts, you may want to
+be cautious or consider first transforming your data.</p>
+<p>We have calculated 90%, 95%, and 99% confidence intervals, and we have seen that
+using a higher confidence level produces a larger margin of error and therefore a wider
+confidence interval. But what does it mean to say that we have “95% confidence” that an
+interval contains the parameter of interest? This next exploration leads you to investigate
+this question.</p>
+</subsection>
+
+</section>

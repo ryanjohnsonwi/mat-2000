@@ -1,0 +1,647 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>9-4 : Chi-square goodness-of-fit test</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Are birthdays equally distributed throughout the week?</title>
+      <slide>
+        <p>Are the days of the week that women give birth distributed equally throughout 
+  the week? Is someone just as likely to be born on a Tuesday as a Saturday? In 
+  this Exploration, you will investigate whether there is convincing evidence 
+  that birthdays are not distributed equally throughout the week. You will be 
+  using a chi-square goodness-of-fit test to help make your conclusion.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <title>Exercise 1</title>
+        <!-- Question 1 -->
+        <p>State your research question.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <title>Exercise 2</title>
+        <!-- Question 2 -->
+        <p>What's the categorical variable of interest, and what are the possible categories?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!-- Question 3 -->
+        <p>State the null and alternative hypotheses.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!-- Question 4 -->
+        <p>Write down your own birthday (month/day/year) and those of up to nine of your family members or friends. (Try not to write down a birthday that someone else in the class would write down.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <p>
+      Do an Internet search for “day of birth calculator.” Use the calculator to find 
+      out on what day of the week each of your family members/friends was born. Summarize 
+      your results in a table.
+    </p>
+        <slide>
+          <title>Table 1: </title>
+          <table>
+            <tabular>
+              <row header="yes">
+                <cell right="minor"/>
+                <cell right="minor">Sun</cell>
+                <cell right="minor">Mon</cell>
+                <cell right="minor">Tue</cell>
+                <cell right="minor">Wed</cell>
+                <cell right="minor">Thurs</cell>
+                <cell right="minor">Fri</cell>
+                <cell right="minor">Sat</cell>
+                <cell right="minor">Total</cell>
+              </row>
+              <row header="yes">
+                <cell right="minor">Observed count</cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <p>
+      Combine your results with those for the rest of the class and enter those 
+      results in the table.
+    </p>
+        <slide>
+          <title>Table 2: </title>
+          <table>
+            <tabular>
+              <row header="yes">
+                <cell right="minor"/>
+                <cell right="minor">Sun</cell>
+                <cell right="minor">Mon</cell>
+                <cell right="minor">Tue</cell>
+                <cell right="minor">Wed</cell>
+                <cell right="minor">Thurs</cell>
+                <cell right="minor">Fri</cell>
+                <cell right="minor">Sat</cell>
+                <cell right="minor">Total</cell>
+              </row>
+              <row header="yes">
+                <cell right="minor">Observed count</cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <title>Exercise 7a: </title>
+        <p>
+        If the null hypothesis is true and birthdays are distributed equally over 
+        the seven days in a week, then the expected count for each day will just 
+        be the total number of birthdays divided by 7. Find the expected count 
+        for each day.
+      </p>
+        <slide>
+          <title>Table 3: </title>
+          <table>
+            <tabular>
+              <row header="yes">
+                <cell right="minor"/>
+                <cell right="minor">Sun</cell>
+                <cell right="minor">Mon</cell>
+                <cell right="minor">Tue</cell>
+                <cell right="minor">Wed</cell>
+                <cell right="minor">Thurs</cell>
+                <cell right="minor">Fri</cell>
+                <cell right="minor">Sat</cell>
+                <cell right="minor">Total</cell>
+              </row>
+              <row header="yes">
+                <cell right="minor">Observed count</cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+      <slide>
+        <title>Exercise 7b: </title>
+        <p>
+        Is the validity condition of all observed cell counts being at least 10 met? 
+        If not, what can you do so it is met?
+      </p>
+      </slide>
+      <slide>
+        <title>Definition 4: </title>
+        <definition>
+          <statement>
+            <p>A <term>goodness-of-fit test</term> is used to compare observed counts for a categorical 
+  variable to hypothesized probabilities.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!-- Question 8 -->
+        <p>Comparing the observed and expected counts, does it seem that the data gathered would 
+  be likely, assuming the birthdays are distributed equally?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences</title>
+    </section>
+    <section>
+      <title>Simulation-based Goodness-of-fit Test: Using the MAD Statistic</title>
+      <!-- Question 9 -->
+      <slide>
+        <title>Exercise 9</title>
+        <p>
+      You will now conduct a simulation analysis using the mean absolute difference 
+      (MAD) statistic to investigate whether the data provide evidence that birthdays 
+      are not equally likely on all seven days of the week.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 9a: </title>
+        <p>
+          <em>Statistic</em>: Here, we will use a MAD-type statistic to compare the 
+        observed and expected counts. To find the MAD statistic value for your data, 
+        complete the table:
+      </p>
+        <slide>
+          <title>Table 5: </title>
+          <table>
+            <tabular>
+              <row header="yes" bottom="minor">
+                <cell right="minor"/>
+                <cell right="minor">Sun</cell>
+                <cell right="minor">Mon</cell>
+                <cell right="minor">Tue</cell>
+                <cell right="minor">Wed</cell>
+                <cell right="minor">Thurs</cell>
+                <cell right="minor">Fri</cell>
+                <cell right="minor">Sat</cell>
+                <cell right="minor">Total</cell>
+              </row>
+              <row header="yes" bottom="minor">
+                <cell right="minor">
+                  <m>|O-E|</m>
+                </cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+        <p>
+        Where <m>O</m> is the observed count and <m>E</m> is the expected count, and <m>|\cdot|</m> is the absolute value function.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 9b: </title>
+        <p>
+        The MAD statistic is obtained by finding the average of the absolute values of 
+        the differences in observed and expected counts. Calculate the MAD statistic.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 9c: </title>
+        <p>
+          <em>Simulate</em>: You could spin a spinner with 7 equal sections to find 
+        out what values of the MAD statistic could happen by chance alone, or you can 
+        use an applet. Open the 
+        <url href="https://static-content.zybooks.com/applets/2021/gof/GOF.html?hideExtras=1">
+          Goodness of Fit applet</url>.
+      </p>
+        <p>
+          <ul>
+            <li>
+            Press the <em>Clear</em> button, enter two column names (e.g., category count), 
+            and then specify each day of the week followed by a space and the count from your 
+            sample (e.g., Mon 16). Hit return and repeat for each day of the week. Then press 
+            <em>Use Table</em>. This should update the bar graph under "Sample Data."
+          </li>
+            <li>
+            In the right panel, check the box next to <em>Show Sampling Options</em> and 
+            enter the hypothesized probabilities to three decimal places, separated by commas.
+          </li>
+            <li>
+            Set the <em>Number of Samples</em> to be 1 and push <em>Sample</em>.
+          </li>
+            <li>
+            What is the resulting “Most Recent Sample MAD”? Is this value more or less 
+            extreme than the one from the observed data? How are you deciding?
+          </li>
+            <li>
+            Now change the <em>Number of Samples</em> to be 999, for a total of 1000 samples, 
+            and push <em>Sample</em>. This will produce a simulated null distribution of 1,000 
+            MAD statistics.
+          </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 9d: </title>
+        <p>
+          <term>Strength of evidence</term>:
+      </p>
+        <p>
+          <ul>
+            <li>
+            Where does your observed MAD statistic lie on the simulated null 
+            distribution of MAD statistics? Does the observed MAD statistic appear 
+            surprising and unlikely to have happened by chance alone, that is, if 
+            the null hypothesis of all days being equally likely were to be true? 
+            How are you deciding?
+          </li>
+            <li>
+            To find the p-value to quantify the strength of evidence against the 
+            null hypothesis, enter the observed value of the MAD statistic in the 
+            <term>Count Samples</term> box and press <term>Count</term>.
+          </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 6: </title>
+        <remark>
+          <title> You may be thinking </title>
+          <p>Earlier we subtracted proportions, and now we are using counts. Can we not use 
+  proportions anymore? </p>
+          <p>Sure, you can still work with proportions. If you used proportions, your MAD 
+    statistic would subtract the observed proportions from the hypothesized proportions 
+    (in this case, 1/7 or 0.143 for each day) for each day of the week and then average 
+    the absolute values of those differences.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!-- Question 10 -->
+        <p>Based on the p-value you obtained in <xref ref="q-9-4-9"/> do you have strong evidence against the 
+  null hypothesis? How are you deciding?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Simulation-based Goodness-of-fit Test: Using the Chi-square Statistic</title>
+      <!-- Question 11 -->
+      <slide>
+        <title>Exercise 11</title>
+        <p>
+      In this situation you can also conduct a simulation analysis using the chi-square 
+      statistic to investigate whether the data provide evidence that birthdays are not 
+      equally likely on all seven days of the week.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 11a: </title>
+        <p>
+          <em>Statistic</em>: To find the chi-square statistic value for your data, complete the table:
+      </p>
+        <slide>
+          <title>Table 7: </title>
+          <table>
+            <tabular>
+              <row header="yes" bottom="minor">
+                <cell right="minor"/>
+                <cell right="minor">Sun</cell>
+                <cell right="minor">Mon</cell>
+                <cell right="minor">Tue</cell>
+                <cell right="minor">Wed</cell>
+                <cell right="minor">Thurs</cell>
+                <cell right="minor">Fri</cell>
+                <cell right="minor">Sat</cell>
+                <cell right="minor">Total</cell>
+              </row>
+              <row header="yes" bottom="minor">
+                <cell right="minor">
+                  <m>O-E</m>
+                </cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+              <row header="yes" bottom="minor">
+                <cell right="minor">
+                  <m>(O-E)^2</m>
+                </cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+              <row header="yes" bottom="minor">
+                <cell right="minor">
+                  <m>\frac{(O-E)^2}{E}</m>
+                </cell>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+                <cell right="minor"/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+        <p>
+        Where <m>O</m> is the observed count and <m>E</m> is the expected count.  Recall that the chi-square statistic is given by the formula
+        <me>
+          \chi^2 = \sum \frac{ (\text{observed count} - \text{expected count} )^2}{\text{expected count}}
+        </me>
+        Thus, the chi-square statistic is the Total from the last row of the table.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11b: </title>
+        <p>
+          <em>Simulate</em>: Just as you ran the simulation using the MAD statistic, 
+        you can follow the same steps this time using the Statistic pull-down menu to 
+        select the chi-square statistic (<m> \chi^2 </m>). Create a null distribution 
+        for the chi-square statistic.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11c: </title>
+        <p>
+          <em>Strength of evidence</em>
+        </p>
+        <p>
+          <ul>
+            <li>
+            Where does the observed chi-square statistic lie on the simulated null 
+            distribution of the chi-square statistic? Does it appear surprising and 
+            unlikely to have happened by chance alone, that is, if the null hypothesis 
+            of all days being equally likely were to be true? How are you deciding? 
+          </li>
+            <li>
+            Find the corresponding p-value. How does it compare to what you found 
+            with the MAD statistic?
+          </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!-- Question 12 -->
+        <p>Based on the p-value reported in question 11c from the simulated null distribution for 
+  a chi-square statistic, do you have strong evidence against the null hypothesis? How are 
+  you deciding?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions</title>
+      <slide>
+        <title>Exercise 13</title>
+        <!-- Question 13 -->
+        <p>State your complete conclusions. In particular, to what population are you willing 
+  to generalize your conclusions?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!-- Question 14 -->
+        <p>If you found convincing evidence that birthdays are not equally distributed throughout 
+  the week, which days seemed to be different than the others and why do you think that 
+  is the case?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead.</title>
+      <slide>
+        <title>Exercise 15</title>
+        <!-- Question 15 -->
+        <p>If you did not find convincing evidence that birthdays are not distributed equally 
+  throughout the week, what could you do differently in a follow-up study to try to 
+  support your case?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Revisiting step 4: Draw inferences</title>
+    </section>
+    <section>
+      <title>Theory-based Chi-square Goodness-of-fit Test</title>
+      <slide>
+        <p>Earlier, for Step 4, you used simulation to find a p-value using the chi-square 
+  statistic. Recall that one advantage of using the chi-square statistic (instead 
+  of the MAD) is that the distribution of the chi-square statistic can be predicted 
+  by a theory-based distribution called the chi-square distribution.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!-- Question 16 -->
+        <p>Go back to the Goodness of Fit applet, and picking up where you left off, check 
+  the "Overlay chi-square distribution" box under the null distribution for the 
+  chi-square statistics. Report the "theory-based p-value."</p>
+      </slide>
+      <!-- Question 17a -->
+      <slide>
+        <title>Exercise 17a: </title>
+        <p>
+        How does the theory-based p-value compare to the one from the simulation-based 
+        p-value using the chi-square test statistic? Do you still arrive at the same 
+        conclusion about whether there is convincing evidence that not all seven days 
+        of the week are equally likely to be birthdays?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17b: </title>
+        <p>
+        Remember that there are always certain checks to be made before you can 
+        decide that it is valid to use a theory-based method to test hypotheses. 
+        In particular, are all observed cell counts at least 10?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!-- Question 18 -->
+        <p>
+      Does the theory-based chi-square goodness-of-fit test appear to be valid in this context? 
+      Explain how you are deciding.
+    </p>
+      </slide>
+    </section>
+    <section xml:id="subsec-9-4-exploring-further">
+      <title>Exploring Further</title>
+      <slide>
+        <p>One of the authors collected data on which day of the week each of her 49 students was born. The data appear in the table.
+</p>
+      </slide>
+      <slide>
+        <title>Table 8: </title>
+        <table>
+          <tabular>
+            <row header="yes">
+              <cell right="minor"/>
+              <cell right="minor">Sun</cell>
+              <cell right="minor">Mon</cell>
+              <cell right="minor">Tue</cell>
+              <cell right="minor">Wed</cell>
+              <cell right="minor">Thurs</cell>
+              <cell right="minor">Fri</cell>
+              <cell right="minor">Sat</cell>
+              <cell right="minor">Total</cell>
+            </row>
+            <row header="yes">
+              <cell right="minor">Observed count</cell>
+              <cell right="minor">4</cell>
+              <cell right="minor">7</cell>
+              <cell right="minor">7</cell>
+              <cell right="minor">7</cell>
+              <cell right="minor">8</cell>
+              <cell right="minor">6</cell>
+              <cell right="minor">10</cell>
+              <cell right="minor">49</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!-- Question 19 -->
+        <p>Do you think these data will provide more or less evidence against the null 
+  hypothesis than the data you collected? Explain your reasoning.</p>
+      </slide>
+      <slide>
+        <p>We will use the data from this class to determine whether there is convincing 
+  evidence that not all seven days of the week are equally likely to be birthdays.</p>
+      </slide>
+      <!-- Question 20 -->
+      <slide>
+        <title>Exercise 20</title>
+        <p>
+      Using a significance level of <m>\alpha = 0.05</m>, do the data provide convincing 
+      evidence that the days of the week that women give birth are not equally 
+      distributed throughout the week?
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 20a: </title>
+        <!-- Question 20a -->
+        <p>State the hypotheses using either words or symbols</p>
+      </slide>
+      <slide>
+        <title>Exercise 20b: </title>
+        <!-- Question 20b -->
+        <p>Name the theory-based test you will use and verify validity conditions for that test.</p>
+      </slide>
+      <slide>
+        <title>Exercise 20c: </title>
+        <!-- Question 20c -->
+        <p>Calculate the test statistic (standardized statistic) and corresponding p-value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 20d: </title>
+        <!-- Question 20d -->
+        <p>State your conclusion (with appropriate justification based on your p-value and stated significance level) in the context of the research question.</p>
+      </slide>
+      <slide>
+        <title>Exercise 20e: </title>
+        <!-- Question 20e -->
+        <p>If there is not sufficient evidence to support the research hypothesis that all seven days of the week are not equally likely to be birthdays, is this proof that birthdays are evenly distributed throughout the days of the week? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 20f: </title>
+        <!-- Question 20f -->
+        <p>Were these data stronger or weaker evidence against the null hypothesis than the data you observed? Is this what you predicted?</p>
+      </slide>
+      <slide>
+        <title>Exercise 20g: </title>
+        <!-- Question 20g -->
+        <p>Based on your conclusion in (d), are you potentially making a conclusion error? Explain 
+    the potential consequences of this type of error in this context.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

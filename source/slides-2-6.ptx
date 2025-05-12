@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <cross-references text="type-hybrid"/>
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>2-6 : Data and Formulas</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Tools</title>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <title> Table 2121: One-proportion relevant features by section </title>
+          <tabular>
+            <row header="yes">
+              <cell>Section</cell>
+              <cell>Feature</cell>
+            </row>
+            <row>
+              <cell>Introduction to chance models</cell>
+              <cell>Input chance model parameters and build repetitions.</cell>
+            </row>
+            <row>
+              <cell>Measuring strength of evidence</cell>
+              <cell>Calculate p-value.</cell>
+            </row>
+            <row>
+              <cell>Alternative measures of strength of evidence</cell>
+              <cell>Calculate standardized statistic.</cell>
+            </row>
+            <row>
+              <cell>What impacts strength of evidence?</cell>
+              <cell>Specify the sidedness of the alternative hypothesis.</cell>
+            </row>
+            <row>
+              <cell>Inference on a single proportion: <br/>theory-based approach</cell>
+              <cell>Overlay a normal distribution and calculate theory-based p-value and standardized statistic</cell>
+            </row>
+            <row>
+              <cell>Tools, data, and formulas</cell>
+              <cell>Specify statistic as "proportion of successes" or "number of successes".</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+    </section>
+    <section xml:id="subsec-Data">
+      <title>Data</title>
+      <slide>
+        <title>Table 2: </title>
+        <table>
+          <title> References </title>
+          <tabular>
+            <row header="yes">
+              <cell>Section</cell>
+              <cell>Data</cell>
+              <cell>Reference</cell>
+            </row>
+            <row>
+              <cell>Example: Introduction to chance models</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=16, <m>\hat{p}</m>=0.9375</cell>
+              <cell>
+                <url href="https://apps.dtic.mil/sti/citations/AD0646241">Bastian (1967)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Supplemental Exploration: Introduction to chance models</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=10, <m>\hat{p}</m>=0.9</cell>
+              <cell>
+                <url href="https://doi.org/10.1037/0735-7036.122.1.84">Udell et al. (J. Comp. Psychol. 2008)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Example: Measuring strength of evidence</cell>
+              <cell>
+                <m>\pi</m>=0.333, n=12, <m>\hat{p}</m>=0.833</cell>
+              <cell>
+                <url href="https://www.maa.org/programs/faculty-and-departments/classroom-capsules-and-notes/winning-at-rock-paper-scissors">Doumaux et al. (Coll. Math. J. 2009)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Supplemental Exploration: Measuring strength of evidence</cell>
+              <cell>
+                <m>\pi</m>=0.75, n=27, <m>\hat{p}</m>=0.8889</cell>
+              <cell>
+                <url href="https://doi.org/10.1080/10691898.2010.11889484">Lunsford et al. (JSE 2017)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Example: Alternative measures of strength of evidence</cell>
+              <cell>
+                <m>\pi</m>=0.15, n=361, <m>\hat{p}</m>=0.197</cell>
+              <cell>
+                <url href="https://doi.org/10.1136/bmj.37956.520567.44">Poloniecki et al. (BMJ 2004)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Supplemental Exploration: Alternative measures of strength of evidence</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=34, <m>\hat{p}</m>=0.705</cell>
+              <cell>
+                <url href="https://doi.org/10.3758/BF03194119">Lea et al. (Psychol. Bull. 2007)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Example: What impacts strength of evidence?</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=32, <m>\hat{p}</m>=0.719</cell>
+              <cell>
+                <url href="https://doi.org/10.1126/science.1110589">Todorov et al. (Science 2005)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Supplemental Exploration: What impacts strength of evidence?</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=32, <m>\hat{p}</m>=0.719</cell>
+              <cell>
+                <url href="https://doi.org/10.1038/435293a">Hill and Barton (Nature 2005)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Example: Inference on a single proportion: <br/>Theory-based approach</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=248, <m>\hat{p}</m>=0.543 <br/>
+                <m>\pi</m>=0.5, n=272, <m>\hat{p}</m>=0.551 <br/>
+              </cell>
+              <cell>
+                <url href="https://doi.org/10.1016/S1499-4046(06)60335-7">Schwartz et al. (JNEB 2003)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Supplemental Exploration: Inference on a single proportion: <br/>Theory-based approach</cell>
+              <cell>
+                <m>\pi</m>=0.5, n=116, <m>\hat{p}</m>=0.612</cell>
+              <cell>
+                <url href="https://doi.org/10.1007/s00417-005-1128-7">Ehrenstein et al.</url>
+                <br/>
+                <url href="https://doi.org/10.1007/s00417-005-1128-7">(Graefe's Arch Clin Exp Ophthalmol 2005)</url>
+              </cell>
+            </row>
+            <row>
+              <cell>Investigation: Tire story falls flat</cell>
+              <cell>
+                <m>\pi</m>=0.25, n=28, <m>\hat{p}</m>=0.5</cell>
+              <cell/>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+    </section>
+    <section>
+      <title>Formulas for one proportion</title>
+      <slide>
+        <p>
+          <ul>
+            <li>
+              <m>\pi</m> is the underlying process probability of success or population proportion of success.</li>
+            <li>
+              <m>n</m> is the sample size.</li>
+            <li>
+              <m>\hat{p} = \frac{\text{number of successes in the sample}}{n}</m> is the sample proportion.</li>
+            <li>
+              <m>SD = \sqrt{ \pi(1-\pi) / n } </m> is the theory-based standard deviation of the null distribution.</li>
+          </ul>
+          <ul>
+            <li>
+              <m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+            <ul>
+              <li>
+                <m> z = \frac{\hat{p} - \pi}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one proportion.</li>
+              <li>
+                <m> z = \frac{\hat{p} - \pi}{SD}  =  \frac{\hat{p} - \pi}{\sqrt{ \pi(1-\pi) / n } } </m> is the theory-based standardized statistic for one proportion.</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>
+              <m> z = \frac{\hat{p} - \pi}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one proportion.</li>
+            <li>
+              <m> z = \frac{\hat{p} - \pi}{SD}  =  \frac{\hat{p} - \pi}{\sqrt{ \pi(1-\pi) / n } } </m> is the theory-based standardized statistic for one proportion.</li>
+          </ul>
+        </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>8-2 : Simulation-based approach for analyzing paired data</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Exercise and heart rate</title>
+      <slide>
+        <p>Raising your heart rate is one of the major goals of exercise. Do some exercises 
+raise your heart rate more than others? Which common exercise, jumping jacks or 
+bicycle kicks, raises your heart rate more? In this exploration, you are going to 
+compare heart rates of you and your classmates doing jumping jacks and bicycle kicks. 
+If you don't want to collect your own data, you may use data already collected on a 
+class where jumping jacks were compared to bicycle kicks. The dataset is 
+<url href="https://static-content2.zybooks.com/isi/data/chap7/JJvsBicycle.txt">JJvsBicycle
+</url>. Below are links to YouTube videos explaining how to do each of these exercises.
+<ul>
+            <li>Jumping jack: <url href="http://www.youtube.com/watch?v=dmYwZH_BNd0">http://www.youtube.com/watch?v=dmYwZH_BNd0</url>
+            </li>
+            <li>Bicycle kicks: <url href="https://www.youtube.com/watch?v=9FGilxCbdz8">https://www.youtube.com/watch?v=9FGilxCbdz8</url>
+            </li>
+          </ul>
+        </p>
+      </slide>
+      <!--Question 1-->
+      <slide>
+        <title>Exercise 1</title>
+        <p>
+      You will first randomize the order (jumping jacks first or bicycle kicks first) 
+      in which you measure your heart rate.
+      If heads:
+      <ul>
+            <li>Do jumping jacks for 30 seconds. Then, measure your jumping jack heart rate.</li>
+            <li>Sit down and take a break for two minutes.</li>
+            <li>Now do bicycle kicks for 30 seconds. Then, measure your bicycle kick heart rate.</li>
+          </ul>
+      If tails:
+      <ul>
+            <li>Now do bicycle kicks for 30 seconds. Then, measure your bicycle kick heart rate.</li>
+            <li>Sit down and take a break for two minutes.</li>
+            <li>Do jumping jacks for 30 seconds. Then, measure your jumping jack heart rate.</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 1a: </title>
+        <p>
+        Report your heart rate for bicycle kicks and jumping jacks in beats per minute.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1b: </title>
+        <p>
+        Find the difference in your two heart rates (jumping jack heart rate-bicycle kick heart rate) in  beats per minute.
+      </p>
+      </slide>
+      <slide>
+        <p>Your instructor will give you and your classmates instructions on where to record your jumping jack heart rate, 
+    bicycle kick heart rate, and difference (jumping jacks-bicycle kick).</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Explain why it is reasonable to say that the two heart rates you collected should not be treated as independent data.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Why do you think we randomized the order of jumping jacks and bicycle kicks before measuring heart rates?</p>
+      </slide>
+      <slide>
+        <p>As seen in previous chapters, we can summarize the quantitative data on heart rates using averages 
+or means. But, because the data are paired, instead of comparing mean jumping jack heart rate to mean 
+bicycle kick heart rate, we will instead look at the mean difference in heart rate between doing 
+jumping jacks and bicycle kicks. Thus, we can define our parameter of interest to be
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>State the null and alternative hypotheses to test whether the mean difference in heart rate between 
+the two exercises is not 0.</p>
+      </slide>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <p>When the parameter of interest is the long-run mean difference or population mean difference, 
+the corresponding statistic is the sample mean difference.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Find the average of the differences between the two heart rates for the entire class. This is 
+the statistic we will use to summarize the data.</p>
+      </slide>
+      <slide>
+        <p>Your null hypothesis should essentially state that there is no difference in the heart rates 
+between the two exercises, on average. If that is the case, it doesn't really matter if we swap 
+someone's jumping jack heart rate with his or her bicycle kick heart rate. This is how we will 
+model the null to develop a null distribution. To randomly swap some of the values we can just 
+use a coin flip. If the coin lands heads you will swap the two heart rates. If the coin lands 
+tails you won't swap the heart rates.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Flip a coin for each pair of heart rates and switch the appropriate ones. Recalculate the difference 
+in heart rates and find the new simulated mean difference. Plot this value on the board in the 
+classroom along with those from the rest of the class. Where does the actual statistic you found 
+in question 5 fit in this null distribution? Is it out in the tail?</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>As you know, it would be better to have many more simulations than what your class just did. We will do this by using an applet.
+<ul>
+            <li>Go to the <url href="https://static-content.zybooks.com/applets/2021/matchedpairs/MatchedPairs.htm?hideExtras=1">Matched Pairs applet</url>.</li>
+            <li>Press <em>Clear</em> to erase the default data and then copy and paste the <url href="https://static-content2.zybooks.com/isi/data/chap7/JJvsBicycle.txt">JJvsBicycle</url> data (both columns—
+jacks and kicks) into the <em>Data</em> window. Then press <em>Use Data</em>.</li>
+            <li>Notice that the applet graphs the individual heart rates in each group, along with the
+means and standard deviations for the two groups.</li>
+            <li>Below that, the applet provides a dotplot of the differences in the heart rates in the sample. Please note that these difference values can be negative numbers because you are looking at <em>change or difference</em> in heart rates. The "Differences" graph also shows the mean of the differences and the standard deviation of the differences.</li>
+            <li>Write down these values in the following table:</li>
+          </ul>
+          <slide>
+            <title>Table 2: </title>
+            <table>
+              <tabular>
+                <row header="yes">
+                  <cell>Condition</cell>
+                  <cell>Sample mean <m>\overline{x}</m>
+                  </cell>
+                  <cell>Sample standard deviation <m>s</m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Jumping jacks</cell>
+                  <cell>
+                    <m> \overline{x}_{jj} =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_{jj} =  </m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Bicycle kicks</cell>
+                  <cell>
+                    <m> \overline{x}_{bicycle} =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_{bicycle} =  </m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Diff = JJ - BK</cell>
+                  <cell>
+                    <m> \overline{x}_d =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_d =  </m>
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </p>
+      </slide>
+      <!--Question 8-->
+      <slide>
+        <title>Exercise 8</title>
+        <p>The Matched Pairs applet will perform the simulation similar to what you did with
+    flipping a coin.
+    <ul>
+            <li>Check the <em>Randomize</em> box.</li>
+            <li>Set the number of times to <em>Randomize</em> to 1 and press <em>Randomize</em>.</li>
+            <li>Once the coin tosses have determined which heart rate will be in which column, the applet displays the rerandomized data (the colors show you the original column for each observation, so you should see a mix in each group now).</li>
+            <li>This could-have-been value for the mean difference is added to the Average Difference graph.
+    </li>
+            <li>Write down these could-have-been values for the re-randomized data:</li>
+          </ul>
+          <slide>
+            <title>Table 3: </title>
+            <table>
+              <tabular>
+                <row header="yes">
+                  <cell>Condition</cell>
+                  <cell>Rerandomized sample mean <m>\overline{x}</m>
+                  </cell>
+                  <cell>​​Rerandomized sample standard deviation <m>s</m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Jumping jacks</cell>
+                  <cell>
+                    <m> \overline{x}_{jj} =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_{jj} =  </m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Bicycle kicks</cell>
+                  <cell>
+                    <m> \overline{x}_{bicycle} =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_{bicycle} =  </m>
+                  </cell>
+                </row>
+                <row header="yes">
+                  <cell>Diff = JJ - BK</cell>
+                  <cell>
+                    <m> \overline{x}_d =  </m>
+                  </cell>
+                  <cell>
+                    <m> s_d =  </m>
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8a: </title>
+        <p>
+        How does the actual mean difference compare to your simulated mean difference: 
+        More extreme/Less extreme/Similar.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8b: </title>
+        <p>
+        How are you deciding?
+      </p>
+      </slide>
+      <!--Question 9-->
+      <slide>
+        <title>Exercise 9</title>
+        <p>Update the number of times to <em>Randomize</em> to 99 (for a total of 100 repetitions), 
+    and press <em>Randomize</em>. Consider the graph "Average Difference" that the applet has created</p>
+      </slide>
+      <slide>
+        <title>Exercise 9a: </title>
+        <p>
+        How many dots are in this graph?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 9b: </title>
+        <p>
+        What does each dot represent?
+      </p>
+      </slide>
+      <slide>
+        <p>The table below summarizes the key aspects of the simulation:</p>
+      </slide>
+      <!--Question 10-->
+      <slide>
+        <title>Exercise 10</title>
+        <p>
+      To see many more possible values of mean difference in sample means that could have been, 
+      If jumping jacks and bicycle kick rates were swappable, update the number of times to 
+      <em>Randomize</em> to 900 and press <em>Randomize</em> (for a total of 1,000 repetitions). 
+      Describe the updated "Average Difference" graph with the 1,000 samples or repetitions, with 
+      regard to the following features.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 10a: </title>
+        <p>
+        Shape:
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 10b: </title>
+        <p>
+        About what number is this graph centered? Explain why you were expecting this.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 10c: </title>
+        <p>
+        This graph also reports a value for standard deviation, SD. Report this value and 
+        give a simple interpretation of this value, as in, "What is this value measuring?"
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>You now should have generated 1,000 possible values of the mean difference in jumping 
+jacks and bicycle kick heart rates that were simulated assuming the null hypothesis was 
+true and these rates were the same, on average. How does the observed mean difference from 
+your data (as reported in question 5 and question 7) compare to these simulated values? 
+Is an average difference in heart rates like that observed in the actual study unlikely 
+to happen by chance alone if jumping jacks and bicycle kick heart rates are the same, 
+on average? How are you deciding?</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>To quantify the strength of evidence against the null hypothesis, you can find the 
+p-value. Go back to the Matched Pairs applet. In the Count Samples box, make an 
+appropriate selection from the drop-down menu. (Hint: In what direction does your 
+alternative hypothesis look?) and enter the appropriate number in the box (Hint: At 
+least as extreme as what number?). Report the approximate p-value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Use the p-value to state a conclusion in the context of the problem. Be sure to 
+comment on statistical significance. Can you conclude that there is strong evidence 
+that jumping jack heart rate and bicycle kick heart rate differ? Why or why not? 
+Can you draw a cause-and-effect conclusion? To what population are you willing 
+to generalize the results?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>Alternatively, you can summarize the strength of evidence using a standardized 
+statistic. Find the standardized statistic and confirm that the strength of evidence 
+you receive from the p-value is approximately the same as with the standardized statistic. </p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>We can again use the 2SD method to approximate a 95% confidence interval for the 
+mean difference in heart rates between those that do the two exercises. The overall 
+structure of the formula is the same:
+statistic ± 2 (SD),  where the statistic is the sample mean difference in heart 
+rates for your class and SD is the standard deviation of your null distribution 
+when you did 1,000 repetitions in the applet (not the standard deviation from the 
+data). Use these numbers to find an approximate 95% confidence interval for the 
+mean difference in heart rates for those that do the two exercises your class did.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Provide an interpretation of this confidence interval, being sure to explain 
+the parameter in this context.</p>
+      </slide>
+      <slide>
+        <p>As you may have already noticed, the strategy we used to find the p-value for this 
+study is the same 3S strategy that is found in Step 4 of our statistical investigation 
+method and has been used in analyses involving one or two groups:
+<ul>
+            <li>
+              <term>Statistic</term>: Compute the statistic in the sample. In this case, the 
+statistic you looked at was the observed mean difference in heart rates.</li>
+            <li>
+              <term>Simulate</term>: Identify a chance model that reflects the null hypothesis. 
+To simulate what could have been if the null hypothesis is true, you can toss a coin 
+for each student, and if it lands heads, swap the two heart rates recorded for that 
+student. If the coin lands tails, do not swap the heart rates. Repeat this process 
+1,000 times, recording the mean difference in heart rates each time and thus obtaining 
+a distribution of these mean differences that were simulated assuming the null hypothesis 
+were true.</li>
+            <li>
+              <term>Strength of evidence</term>: If your actual observed statistic falls in the 
+tail of the null distribution, then you have strong evidence that there is a genuine 
+difference in the average heart rates between the two exercises.
+</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <p>Let's check out how things would have worked had we ignored the pairing and analyzed 
+the data as if the jumping jacks heart rates and bicycle kicks heart rates had come 
+from two totally different samples that were independent of each other.
+</p>
+      </slide>
+      <!--Question 17-->
+      <slide>
+        <title>Exercise 17</title>
+        <p>Go to the <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+      Multiple Means applet</url> and analyze the data as though we have two independent samples, as you did in a previous 
+      chapter. (The heart rate data are unstacked, meaning the heart rates for the two exercises are given in two columns. 
+      Make sure you have the unstacked box checked before you paste in your data.)
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 17a: </title>
+        <p>
+        With regard to the graph of the distribution of "Shuffled Differences in Means":  
+        What are the mean and SD?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17b: </title>
+        <p>
+        Find and report the approximate p-value.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>Compare the SD of the null distribution obtained using the two-independent-samples method 
+to that obtained using the paired samples method. Which SD is larger? </p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 19-->
+        <p>Compare the p-value obtained using the two-independent-samples method to that obtained 
+using the paired samples method. Which p-value is smaller and hence provides stronger 
+evidence against the null hypothesis of no difference?</p>
+      </slide>
+      <slide>
+        <p>Note: Using a paired samples method will often give a smaller p-value and hence 
+stronger evidence against the null hypothesis than the two-independent-samples 
+method. Perhaps this is what you found in Question 19. This would happen if students 
+with high heart rates after doing jumping jacks tended to have high heart rates after 
+doing bicycles, and students with low heart rates after doing jumping jacks tended 
+to have low heart rates after doing bicycles. This would make the variability of the 
+differences in heart rates small. However this may not have happened for students in 
+your class. If the variability within your jumping jack data or within your bicycle 
+data is small but there is a lot of variability in the differences, you could get a 
+smaller p-value using the two-independent-samples method.
+</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

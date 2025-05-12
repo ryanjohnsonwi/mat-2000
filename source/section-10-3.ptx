@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_10-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Data and Formulas</title>
+
+<subsection> 
+ <title>Data</title>
+ 
+<table>
+ <title> References </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Data</cell>
+<cell>Reference</cell>
+</row>
+<row>
+<cell>Example: Comparing multiple means: <br/> Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch10/ProseComprehension.csv">ProseComprehension.csv</url></cell>
+<cell><url href="https://doi.org/10.1016/S0022-5371%2872%2980006-9">Bransford and Johnson</url> <br/> <url href="https://doi.org/10.1016/S0022-5371%2872%2980006-9">(J Verbal Learning Verbal Behav 1972)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Comparing multiple means: <br/> Simulation-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch10/Brain.csv">Brain.csv</url></cell>
+<cell><url href="http://doi.org/10.3233/JAD-2012-120079">Mortimer et al. (J. Alzheimer's Dis. 2012)</url></cell>
+</row>
+<row>
+<cell>Example: Comparing multiple means: <br/> Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch10/ProseRecall.csv">ProseRecall.csv</url></cell>
+<cell><url href="https://doi.org/10.1016/S0022-5371%2872%2980006-9">Bransford and Johnson</url> <br/> <url href="https://doi.org/10.1016/S0022-5371%2872%2980006-9">(J Verbal Learning Verbal Behav 1972)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Comparing multiple means: <br/> Theory-based approach</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch10/Diets.csv">Diets.csv</url></cell>
+<cell><url href="https://doi.org/10.1001/jama.297.9.969">Garnder et al. (JAMA 2007)</url></cell>
+</row>
+<row>
+<cell>Investigation: Aggression</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch10/Agression.csv">Agression.csv</url></cell>
+<cell><url href="https://doi.org/10.1177%2F1948550612436984">Muller et al. (Soc Psychol Personal Sci 2012)</url></cell>
+</row>
+</tabular>
+</table>
+
+</subsection>
+
+<subsection> 
+ <title>Formulas for multiple means</title>
+<p>
+Difference of means (two independent samples):
+<ul>
+<li><m>\mu_1</m> and <m>\mu_2</m> are the population means for the two groups.</li>
+<li><m>n_1</m> and <m>n_2</m> are the sample sizes for the two groups.</li>
+<li><m>\overline{x}_1</m> and <m>\overline{x}_2</m> are the sample means for the two groups.</li>
+<li><m>s_1</m> and <m>s_2</m> are the sample standard deviations for the two groups.</li>
+<li><m>SD(\overline{x}_1 - \overline{x}_2)</m> is the standard deviation of the statistic.</li>
+<li><m>\text{SE} = \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } </m> is the theory-based standard error that approximates SD of the null distribution and <m>SD(\overline{x}_1 - \overline{x}_2) </m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> t =  \frac{\big(\overline{x}_1 - \overline{x}_2 \big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two independent means.</li>
+<li><m> t =\frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{SE}  =  \frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{ \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } }  </m> is the theory-based standardized statistic for two independent means.</li></ul>
+</ul>
+<ul><li><m> t =  \frac{\big(\overline{x}_1 - \overline{x}_2 \big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two independent means.</li>
+<li><m> t =\frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{SE}  =  \frac{ \big(\overline{x}_1 - \overline{x}_2 \big) - 0 }{ \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  } }  </m> is the theory-based standardized statistic for two independent means.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m> (\overline{x}_1 - \overline{x}_2) \pm 2 \times SD(\overline{x}_1 - \overline{x}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_1 - \mu_2 </m>.</li>
+<li><m>(\overline{x}_1 - \overline{x}_2) \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_1 - \mu_2</m>, where the multiplier comes from a t distribution with 
+<m> \frac{ \big( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  \big)^2 }{ \frac{1}{n_1-1}\big( \frac{s_1^2}{n_1} \big)^2 + \frac{1}{n_2-1}\big( \frac{s_2^2}{n_2}  \big)^2  } </m> 
+
+degrees of freedom.</li></ul>
+</ul>
+<ul><li><m> (\overline{x}_1 - \overline{x}_2) \pm 2 \times SD(\overline{x}_1 - \overline{x}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_1 - \mu_2 </m>.</li>
+<li><m>(\overline{x}_1 - \overline{x}_2) \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_1 - \mu_2</m>, where the multiplier comes from a t distribution with 
+<m> \frac{ \big( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}  \big)^2 }{ \frac{1}{n_1-1}\big( \frac{s_1^2}{n_1} \big)^2 + \frac{1}{n_2-1}\big( \frac{s_2^2}{n_2}  \big)^2  } </m> 
+
+degrees of freedom.</li></ul>
+</p>
+<p>
+Mean difference (matched pairs):
+<ul>
+<li><m>d = (group \  1) - (group \ 2)</m> is the variable of differences for each matched pair.</li>
+<li><m>\mu_d</m> is the population mean difference.</li>
+<li><m>n</m> is the sample size (number of matched pairs).</li>
+<li><m>\overline{x}_d</m> is the sample mean of the differences.</li>
+<li><m>s_d</m> is the sample standard deviation of the differences.</li>
+<li><m>SD(\overline{x}_d)</m> is the standard deviation of the statistic.</li>
+<li><m>\text{SE} = s_d / \sqrt{n} </m> is the theory-based standard error that approximates SD of the null distribution and <m>SD(\overline{x}_d) </m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> t =  \frac{\overline{x}_d - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for matched pairs.</li>
+<li><m> t =\frac{ \overline{x}_d - 0 }{SE}  =  \frac{ \overline{x}_d - 0 }{ s_d/\sqrt{n} }  </m> is the theory-based standardized statistic for matched pairs.</li></ul>
+</ul>
+<ul><li><m> t =  \frac{\overline{x}_d - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for matched pairs.</li>
+<li><m> t =\frac{ \overline{x}_d - 0 }{SE}  =  \frac{ \overline{x}_d - 0 }{ s_d/\sqrt{n} }  </m> is the theory-based standardized statistic for matched pairs.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m> \overline{x}_d \pm 2 \times SD(\overline{x}_d) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_d </m>.</li>
+<li><m> \overline{x}_d \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_d</m>, where the multiplier comes from a t distribution with <m>n-1</m>
+degrees of freedom.</li></ul>
+</ul>
+<ul><li><m> \overline{x}_d \pm 2 \times SD(\overline{x}_d) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \mu_d </m>.</li>
+<li><m> \overline{x}_d \pm \text{(multiplier)} \times (SE) </m> is a theory-based confidence interval estimating <m>\mu_d</m>, where the multiplier comes from a t distribution with <m>n-1</m>
+degrees of freedom.</li></ul>
+</p>
+<p>
+Mean Group Diff:
+<ul>
+<li><m>\mu_i</m>  are the population means for the groups.</li>
+<li><m>n_i</m> are the sample sizes for the groups.</li>
+<li><m>\overline{x}_i</m> are the sample means for the groups.</li>
+<li><m>s_i</m> are the sample standard deviations for the groups.</li>
+<li>The Mean Group Diff is the mean of the absolute value of the differences of sample means, and can be computed directly as 
+<m> \displaystyle \frac{\sum_{\text{groups } i,j} |\overline{x}_i - \overline{x}_j | }{ (l-1)(l/2) }, </m> where <m>l </m> is the number of groups.
+</li>
+</ul>
+</p>
+<p>
+F-statistic (ANOVA test):
+<ul>
+<li><m>\mu_i</m>  are the population means for the groups.</li>
+<li><m>n_i</m> are the sample sizes for the groups with <m>n</m> as the overall sample size.</li>
+<li><m>\overline{x}_i</m> are the sample means for the groups.</li>
+<li><m>s_i</m> are the sample standard deviations for the groups.</li>
+<li><m>l</m> is the number of treatments (groups).</li>
+<li><m>df</m> are the degrees of freedom for the F-distribution.</li>
+<ul>
+<li> <m> df_{Treatment} = l - 1 </m></li>
+<li><m> df_{Error} = n - l </m></li>
+<li><m>df_{Total} = df_{Treatment} + df_{Error} = n -1 </m> </li>
+</ul>
+<li><m>SS</m> is the sum of squares.</li>
+<ul><li><m> SS_{Treatment} = \sum n_i(\bar{x}_i - \bar{x})^2 </m></li>
+<li><m> SS_{Error} = \sum (n_i-1)(s_i^2) </m></li>
+<li><m>SS_{Total} = SS_{Treatment} + SS_{Error} </m></li>
+</ul>
+<li><m>MS</m> is the mean squares.</li>
+<ul><li><m> MS_{Treatment} = \frac{SS_{Treatment}}{df_{Treatment}} = \frac{\sum n_i(\bar{x}_i - \bar{x})^2}{l-1} </m> </li>
+<li><m> MS_{Error} = \frac{SS_{Error}}{df_{Error}}  = \frac{\sum (n_i-1)(s_i^2)}{n-l} </m>. </li>
+</ul>
+<li><m>F</m> is calculated as the ratio <m> F = \frac{\text{between-group variability}}{\text{within-group variability}} = \frac{MS_{Treatment}}{MS_{Error}} </m>.</li>
+<li><m>R^2</m> is the "coefficient of determination" the proportion of the variation in the response variable which is explained by the treatment, calculated as  <m> R^2 = \frac{SS_{Treatment}}{SS_{Error}} </m>.</li>
+<li>The mean of an F-distribution is <m> \frac{df_{Error} }{ df_{Error} - 2} </m>.</li>
+<li>The SD of an F-distribution is <m> \sqrt{  \frac{2 (df_{Error})^2 (df_{Treatment} + df_{Error} - 2 )}{df_{Treatment} (df_{Error} -2)^2 (df_{Error} - 4)}   }   </m>.</li>
+</ul>
+<ul>
+<li> <m> df_{Treatment} = l - 1 </m></li>
+<li><m> df_{Error} = n - l </m></li>
+<li><m>df_{Total} = df_{Treatment} + df_{Error} = n -1 </m> </li>
+</ul>
+<ul><li><m> SS_{Treatment} = \sum n_i(\bar{x}_i - \bar{x})^2 </m></li>
+<li><m> SS_{Error} = \sum (n_i-1)(s_i^2) </m></li>
+<li><m>SS_{Total} = SS_{Treatment} + SS_{Error} </m></li>
+</ul>
+<ul><li><m> MS_{Treatment} = \frac{SS_{Treatment}}{df_{Treatment}} = \frac{\sum n_i(\bar{x}_i - \bar{x})^2}{l-1} </m> </li>
+<li><m> MS_{Error} = \frac{SS_{Error}}{df_{Error}}  = \frac{\sum (n_i-1)(s_i^2)}{n-l} </m>. </li>
+</ul>
+</p>
+</subsection>
+
+</section>

@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>6-1 : Comparing two groups: Categorical response</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Murderous nurse?</title>
+      <slide>
+        <p>For several years in the 1990s, Kristen Gilbert worked as a nurse in the intensive 
+care unit (ICU) of the Veterans Administration Hospital in Northampton, Massachusetts. 
+Over the course of her time there, other nurses came to suspect that she was killing 
+patients by injecting them with the heart stimulant epinephrine. Gilbert was eventually 
+arrested and charged with these murders. Part of the evidence presented against Gilbert 
+at her murder trial was <url href="https://api.semanticscholar.org/CorpusID%3A159468911">
+a statistical analysis of 1,641 eight-hour shifts during the time Gilbert worked in the ICU</url>. 
+For each of these shifts, researchers recorded two variables: whether Gilbert worked on 
+the shift and whether at least one patient died during the shift.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Identify the observational units in this study. (Hint: The observational units are 
+not people. Think about what the sample size is.) </p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Classify each variable as categorical or quantitative: whether Gilbert worked on the 
+shift and whether at least one patient died during the shift. </p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Which variable would you regard as explanatory and which as response?</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Is this an observational study or an experiment? Justify your answer.</p>
+      </slide>
+      <slide>
+        <p>So what did the researchers find when they analyzed the 1,641 eight-hour 
+shifts? They found that Gilbert worked on 257 of the shifts, and she did not 
+work on 1,384 of them. They also found that a patient died during 74 of the 
+shifts, and no deaths occurred on the other 1,567 shifts.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Explain why the information in the previous paragraph does not provide any 
+clues about whether there is an association between Gilbert working on a shift 
+and a patient dying during the shift. What additional information do you need 
+to know?</p>
+      </slide>
+      <slide>
+        <p>Here is some additional information: Among the 74 shifts during which a 
+patient died, 40 were shifts on which Gilbert worked and 34 were shifts on 
+which Gilbert did not work.</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Explain why simply comparing only the numbers 40 and 34 is not very informative.</p>
+      </slide>
+      <slide>
+        <p>When analyzing data on two categorical variables, a useful first step 
+is to organize the data into a <em>two-way table of counts</em>. In this 
+case both variables have only two categories, so we produce a <m>2 \times 2</m> table.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>
+    Fill in the missing counts in the two-way table. (Hint: Start by entering 40 and 34 into the appropriate cells. Then make sure that both rows and both columns add up to the indicated totals.)
+  </p>
+        <slide>
+          <title>Table 1: </title>
+          <table>
+            <tabular>
+              <row>
+                <cell/>
+                <cell>Gilbert working on shift</cell>
+                <cell>Gilbert not working on shift</cell>
+                <cell>Total</cell>
+              </row>
+              <row>
+                <cell>Patient died during shift</cell>
+                <cell/>
+                <cell/>
+                <cell>74</cell>
+              </row>
+              <row>
+                <cell>No patient died during shift</cell>
+                <cell/>
+                <cell/>
+                <cell>1,567</cell>
+              </row>
+              <row>
+                <cell>Total</cell>
+                <cell>257</cell>
+                <cell>1,384</cell>
+                <cell>1,641</cell>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Suggest a better way to compare the outcomes of the shifts on which Gilbert 
+worked and the shifts on which she did not work than simply comparing 40 to 34. 
+Explain why your answer is more informative.</p>
+      </slide>
+      <slide>
+        <p>A next step in analyzing categorical data in a two-way table is to calculate 
+<term>conditional proportions</term>. A conditional proportion simply means that 
+you consider the counts in only one category of the explanatory variable at a 
+time.</p>
+      </slide>
+      <!--Question 9-->
+      <slide>
+        <title>Exercise 9</title>
+        <p>Now let's calculate the conditional proportions.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9a: </title>
+        <p>
+        Calculate the conditional proportion of Gilbert shifts on which a patient died.
+        (Hint: Put the total number of Gilbert shifts in the denominator of your fraction.)
+      </p>
+      </slide>
+      <solution>
+        <p>
+      0.156 (40/257≈15.6%)
+    </p>
+      </solution>
+      <slide>
+        <title>Exercise 9b: </title>
+        <p>
+        Calculate the conditional proportion of non-Gilbert shifts on which a patient died.
+      </p>
+      </slide>
+      <slide>
+        <p>A <term>segmented bar graph</term> is an appropriate display for graphing data in a two-way table. 
+Such a graph contains rectangles of total height 100% for each category of the explanatory variable. 
+Then segments divide up each rectangle according to the conditional proportions of the response 
+variable categories. A <term>mosaic plot</term> also makes the widths of the rectangles proportional 
+to the sizes of the categories.</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Fill in a segmented bar graph or mosaic plot to display the data from this study. First draw two 
+    (separated) rectangles, one for Gilbert shifts and one for non-Gilbert shifts, each with total height 
+    100%. For the mosaic plot, first determine the proportion of shifts with Gilbert working. Then make 
+    the width of that rectangle smaller and the width of the Gilbert not working rectangle larger, to 
+    match those proportions. Then draw a line in each rectangle corresponding to the conditional proportion 
+    of shifts in which a patient died, as you calculated in #9.</p>
+        <image source="6-1/empty_graph.png" width="60%">
+          <description>Axes for a segmented bar chart
+    </description>
+        </image>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Do the conditional proportions and graph appear to provide evidence that at least one patient 
+was more likely to die on a Gilbert shift than on a non-Gilbert shift? In other words, does there 
+appear to be a tendency for Gilbert shifts to have at least one death more often than non-Gilbert 
+shifts? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Without doing any further analysis, do you consider the difference between the conditional 
+proportions to be striking, worth reporting to a jury?</p>
+      </slide>
+      <slide>
+        <p>A next step is to produce a single number (statistic) to summarize the data.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>What arithmetic operation might you perform on the two conditional proportions to 
+obtain a single statistic?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>Calculate the difference in conditional proportions of death between Gilbert and 
+non-Gilbert shifts. Does the value of this difference strike you as noteworthy?</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Now calculate a different statistic: the ratio of conditional proportions of death 
+between Gilbert and non-Gilbert shifts. This ratio is called a relative risk. Write a 
+sentence interpreting this ratio value, as the prosecution might present to a jury. 
+Does the value of this ratio strike you as noteworthy?</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>
+              <term>Relative risk</term> is the ratio of two conditional proportions. It indicates 
+how many times greater the risk of an outcome is for one group compared to another.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Even if the difference between these conditional proportions of death is found to be 
+highly statistically significant, can we absolutely conclude from this analysis that 
+Kristen Gilbert was responsible for (i.e., caused) the increased chance of death on her 
+shifts? Explain your answer. (Hint: Remember your answer to question 4 about what kind 
+of study this is.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>Suggest an alternative explanation that the defense attorneys might use to explain 
+the large difference in death proportions between the two groups.</p>
+      </slide>
+    </section>
+    <exercises>
+      <title>Exploring further</title>
+      <exercise>
+        <!--Question 18-->
+        <introduction>
+          <p>Suppose that the data had turned out as shown here:
+    </p>
+          <slide>
+            <title>Table 3: </title>
+            <table>
+              <tabular>
+                <row>
+                  <cell/>
+                  <cell>Gilbert working on shift</cell>
+                  <cell>Gilbert not working on shift</cell>
+                  <cell>Total</cell>
+                </row>
+                <row>
+                  <cell>Patient died during shift</cell>
+                  <cell>100</cell>
+                  <cell>357</cell>
+                  <cell>457</cell>
+                </row>
+                <row>
+                  <cell>No patient died during shift</cell>
+                  <cell>157</cell>
+                  <cell>1027</cell>
+                  <cell>1,184</cell>
+                </row>
+                <row>
+                  <cell>Total</cell>
+                  <cell>257</cell>
+                  <cell>1,384</cell>
+                  <cell>1,641</cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+        Calculate the conditional proportions of death for Gilbert shifts and for non-Gilbert shifts.
+      </p>
+          </statement>
+          <solution>
+            <p>
+        The proportion of deaths is 0.389 (38.9%) when Gilbert worked, and the proportion of deaths is 0.258 (25.8%) when Gilbert didn’t work.
+      </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+        Calculate the difference in these conditional proportions. How does this difference compare to the one in question 14? Are they very similar?
+      </p>
+          </statement>
+          <solution>
+            <p>
+        0.389 - 0.258 = 0.131 (13.1%) which is the same as we had before.
+      </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+        Calculate the relative risk of these conditional proportions. How does this ratio compare to the one in question 15? Are they very similar?
+      </p>
+          </statement>
+          <solution>
+            <p>
+        Ratio = 0.389/0.258= 1.51 times as much. This ratio is much different than the ratio we had before.
+      </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+        For which table of data, this new one or the original (real) data, would you consider the evidence against Gilbert to be more persuasive/incriminating? Explain.
+      </p>
+          </statement>
+          <solution>
+            <p>
+        Even though the differences are the same, the evidence is more convincing in the first table (original data) that had the overall lower death rate.
+      </p>
+          </solution>
+        </task>
+      </exercise>
+      <exercise>
+        <!--Question 19-->
+        <statement>
+          <p>Produce a hypothetical <m>2 \times 2</m> table with the same marginal totals, but with the 
+    property that the data reveal virtually no association between the variables. In other words, 
+    produce a table so that the conditional proportions are very similar between the two groups.
+    </p>
+          <slide>
+            <title>Table 4: </title>
+            <table>
+              <tabular>
+                <row>
+                  <cell/>
+                  <cell>Gilbert working on shift</cell>
+                  <cell>Gilbert not working on shift</cell>
+                  <cell>Total</cell>
+                </row>
+                <row>
+                  <cell>Patient died during shift</cell>
+                  <cell/>
+                  <cell/>
+                  <cell>457</cell>
+                </row>
+                <row>
+                  <cell>No patient died during shift</cell>
+                  <cell/>
+                  <cell/>
+                  <cell>1,184</cell>
+                </row>
+                <row>
+                  <cell>Total</cell>
+                  <cell>257</cell>
+                  <cell>1,384</cell>
+                  <cell>1,641</cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </statement>
+        <solution>
+          <p>
+    Ratio = 0.389/0.258= 1.51 times as much. This ratio is much different than the ratio we had before.
+  </p>
+          <slide>
+            <title>Table 5: </title>
+            <table>
+              <tabular>
+                <row>
+                  <cell/>
+                  <cell>Gilbert working on shift</cell>
+                  <cell>Gilbert not working on shift</cell>
+                  <cell>Total</cell>
+                </row>
+                <row>
+                  <cell>Patient died during shift</cell>
+                  <cell>72</cell>
+                  <cell>385</cell>
+                  <cell>457</cell>
+                </row>
+                <row>
+                  <cell>No patient died during shift</cell>
+                  <cell>185</cell>
+                  <cell>999</cell>
+                  <cell>1,184</cell>
+                </row>
+                <row>
+                  <cell>Total</cell>
+                  <cell>257</cell>
+                  <cell>1,384</cell>
+                  <cell>1,641</cell>
+                </row>
+              </tabular>
+            </table>
+          </slide>
+        </solution>
+      </exercise>
+      <exercise>
+        <!--Question 20-->
+        <statement>
+          <p>What would the segmented bar graph look like for a <m>2 \times 2</m> table with virtually no association between the variables? Explain your answer.</p>
+        </statement>
+        <solution>
+          <p>
+    The bar heights would be approximately equal.
+  </p>
+        </solution>
+      </exercise>
+    </exercises>
+  </slideshow>
+</pretext>

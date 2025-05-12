@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>5-2 : Observational studies versus experiments</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Have a nice trip</title>
+      <slide>
+        <p>An area of research in biomechanics and gerontology concerns falls and fall-related 
+injuries, especially for elderly people. Recent studies have focused on how individuals 
+respond to large postural disturbances (e.g., tripping, induced slips). One question is 
+whether subjects can be instructed to improve their recovery from such disturbances. </p>
+      </slide>
+      <slide>
+        <p>Suppose researchers want to compare two such recovery strategies, lowering (quickly 
+stepping down with front leg and then raising back leg over the object) and elevating 
+(lifting front leg over the object). Subjects will have first been trained on one of 
+these two recovery strategies, and they will be asked to apply it after they feel 
+themselves tripping. The researchers will then induce the subject to trip while walking 
+(but harnessed for safety) using a concealed mechanical obstacle.</p>
+      </slide>
+      <slide>
+        <p>Suppose the following 24 subjects have agreed to participate in such a study:
+<dl>
+            <li>
+              <title>Females</title>
+              <p>
+      Alisha, Alice, Betty, Martha, Audrey, Mary, Barbie, Anna
+    </p>
+            </li>
+            <li>
+              <title>Males</title>
+              <p>
+      Matt, Peter, Shawn, Brad, Michael, Kyle, Russ, Patrick, Bob, Kevin, Mitch,
+Marvin, Paul, Pedro, Roger, Sam
+    </p>
+            </li>
+          </dl>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>One way to design this study would be to assign the 8 females to use the elevating strategy 
+and the 16 males to use the lowering strategy. Would this be a reasonable strategy? Why not?</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>One way to deal with this issue is to assign 4 females and 8 males to each group. 
+Show how the proportion of males in each group is the same.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Now, if you saw a difference in the proportion of trips in the two groups, 
+could it be because of the sex of the subject? Why or why not? Could it be due 
+to other variables, distinct from the recovery strategy? Why or why not?</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Because there will always be more potential confounding variables which could 
+be distributed unevenly between the groups being compared, identify a better 
+method for deciding who uses which strategy.</p>
+      </slide>
+      <slide>
+        <title>Definition 1: </title>
+        <definition>
+          <statement>
+            <p>In an <term>observational study</term>, the groups you compare are 
+ "just there," that is, they are defined by what you see rather than by what you 
+ do. In an <term>experiment</term>, you actively create the groups by what you 
+ choose to do. More formally, you assign the conditions to be compared. These 
+ conditions may be one or more <term>treatments</term> or a <term>control</term> 
+ (a group you do nothing to).</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>Note our change in terminology: We now will sometimes call the individuals in the study
+experimental units instead of observational units, because they are in an experiment instead
+of an observational study.</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>In a <term>randomized experiment</term>, you use a chance device to make 
+ the assignments. The units in an experiment are often called experimental units. 
+ The role of the random assignment is to balance out potentially confounding variables 
+ among the explanatory variable groups, giving us the potential to draw cause-and-effect 
+ conclusions.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Let's explore the process of random assignment to determine whether it does "work." 
+First, let's focus on the sex (male vs. female) variable. Suppose we put each person's 
+name on a slip, put those slips in a hat and mix them up thoroughly, and then randomly 
+draw out 12 slips for names of people to assign to the elevating strategy. What proportion 
+of this group do you expect will be male? What proportion of the lowering strategy do you 
+expect will be male? Do you think we will always get an 8/8 split (8 males in each treatment 
+group)?</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>To repeat this random assignment a large number of times to observe the long-run behavior, 
+we will use the <url href="https://static-content.zybooks.com/applets/2021/randomassignment/Subjects.html?hideExtras=1">
+Randomizing Subjects applet</url>. Open the applet and press the <em>Randomize</em> button.</p>
+        <p>What proportion of subjects assigned to Group 1 are men? Of Group 2? What is the difference in these 
+two proportions?</p>
+      </slide>
+      <slide>
+        <p>You will notice that the difference in proportions of males is shown in the dotplot in the bottom 
+graph. In this graph, each dot represents one repetition of the random assignment process where we 
+are recording the difference in proportions of men between the two groups.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Press the <em>Randomize</em> button again.</p>
+        <p>Was the difference in proportions of men the same this time?</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Change the number of replications from 1 to 198 (for 200 total), uncheck the <em>Animate</em> option, 
+and press the <em>Randomize</em> button.</p>
+        <p>The dotplot will display the difference between the two proportions of men for each of the 200 repetitions 
+of the random assignment process. Where are these values centered?</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Does random assignment always equally distribute/balance the men and women between the two groups? Is there a tendency for there to be a similar proportion of men in the two groups? Explain. </p>
+      </slide>
+      <slide>
+        <title>Definition 3: </title>
+        <definition>
+          <statement>
+            <p>A comparative study is <term>balanced with respect to a possible confounding variable</term> 
+  if the distribution of the variable is the same for each group in the study.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Prior research has also shown that the likelihood of falling is related to variables such as walking 
+speed, stride rate, and height, so we would like the random assignment to distribute these variables 
+equally between the groups as well. In the applet, use the pull-down menu to switch from the sex-of-participant 
+variable to the height variable. The dotplot now displays the differences in average height between Group 1 
+and Group 2 for these 200 repetitions. In the long run, does random assignment tend to equally distribute 
+the height variable between the two groups? Explain how you are deciding.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Suppose there is a "balance gene" that is related to people's ability to recover from a trip. We didn't 
+know about this gene ahead of time, but if you select the <em>Reveal gene?</em> button and then select 
+gene from the pull-down menu, the applet shows you this gene information for each subject and also how the 
+proportions with the <em>gene</em> differ in the two groups.</p>
+        <p>Does this variable tend to equalize between the two groups in the long run? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Suppose there were other "x-variables" that we could not measure such as stride rate or walking speed. 
+Select the <em>Reveal both?</em> button and use the pull-down menu to display the results for the 
+x-variable (X-var).</p>
+        <p>Does random assignment generally succeed in equalizing this variable between the two groups or is 
+there a tendency for one group to always have higher results for the x-variable? Explain.</p>
+      </slide>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <p>Randomly assigning experimental units to groups tends to balance out all other variables between the 
+groups. Any variables that could have an effect on the response should be equalized between the two 
+groups and therefore should not be confounding. </p>
+        </remark>
+      </slide>
+      <slide>
+        <p>The diagram in the figure below illustrates the preceding key idea. The top panel shows the possible 
+confounding effect if the study design had not been randomized. We want to know whether differences in 
+the explanatory variable cause differences in the response (dotted arrow). However, a confounding 
+variable would affect both the explanatory and response variables, making it impossible to separate 
+the effects of explanatory and confounding variables on the response. The bottom panel shows how 
+randomization removes the effect of the potential confounders.</p>
+      </slide>
+      <slide>
+        <title>Figure 5: </title>
+        <figure>
+          <caption> Randomization creates approximate balance and tends to eliminate confounding effects </caption>
+          <image source="5-2/random.png" width="100%">
+            <description>Two flow charts: the top shows how a balance gene can confound the relationship between 
+recovery strategy and outcome, if not accounted for by randomization. The bottom chart has a big X 
+over the Balance gene (confounding variable) to illustrate how confounders are controlled for by 
+randomization, allowing researchers to isolate the impact of the explanatory variable (recovery 
+strategy)  on the response variable (response).
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide xml:id="q-5-2-13">
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Suppose this study finds a statistically significant difference between the two groups. 
+What conclusion would you draw? For what population? What additional information would you 
+need to know?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>As in <xref ref="q-5-2-13"/>, if you obtain a statistically significant result, what does that suggest 
+about the potential for a cause-and-effect relationship? Why?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Another Study: Cursive Handwriting</title>
+      <slide>
+        <p>An <url href="https://www.washingtonpost.com/wp-dyn/content/article/2006/10/10/AR2006101001475.html">
+  article about handwriting</url> appeared in the October 11, 2006, issue of the Washington Post. The 
+  article mentioned that among students who took the essay portion of the SAT exam in 2005-2006, 
+  those who wrote in cursive style scored significantly higher on the essay, on average, than 
+  students who used printed block letters.</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Identify the observational units in this study as well as the explanatory and response 
+variables. Also classify each variable as categorical or quantitative.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Explain how you know that this was an observational study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>Is it reasonable to conclude that using a cursive writing style caused higher scores on the essay, 
+or can you think of an alternative explanation for why students who wrote in cursive style scored 
+higher on average than students who write with block letters? In other words, can you think of 
+other ways in which the cursive and block letter groups might have systematically differed and 
+identify a potential confounding variable?</p>
+      </slide>
+      <slide>
+        <p>The same <em>Washington Post</em> article also mentioned a different study in which the identical 
+essay was shown to many graders, but some graders were randomly chosen to see a cursive version of 
+the essay and the other graders were shown a version with printed block letters. The average score 
+assigned to the essay with the cursive style was significantly higher than the average score assigned 
+to the essay with the printed block letters.</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>How does this study differ from the original one? Explain.</p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 19-->
+        <p>Would you be willing to draw a cause-and-effect conclusion from this study, as opposed to the 
+original study? Explain why.</p>
+      </slide>
+      <slide>
+        <p>The "placebo effect" has been found in numerous studies: When subjects are told something good is 
+going to happen, they often have a positive response even if nothing is actually done to them. For 
+this reason, subjects are often kept "blind" as to which treatment group they are placed in, for 
+example by giving one group the actual treatment and the other group a "fake" treatment, like a 
+placebo (an inert pill). Placebo treatments have even been used in studies about knee surgery!</p>
+      </slide>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 20-->
+        <p>Discuss why it was important in this second study for the scorers of the essays to not know that 
+there was no difference in the essays given to different individuals other than the writing style.</p>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <!--Question 21-->
+        <p>Discuss how this study also reveals that those evaluating the response variable in a study, if it 
+requires any subjective judgment, should be <q>blind</q> to which treatment group individuals are in.</p>
+      </slide>
+      <slide>
+        <title>Definition 6: </title>
+        <definition>
+          <statement>
+            <p>In <term>double-blind</term> studies, neither the subjects nor those evaluating the response
+variable know which treatment group the subject is in.</p>
+          </statement>
+        </definition>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring Further</title>
+      <slide>
+        <p>Recall at the beginning of the exploration when we explicitly controlled the number of females to 
+be the same in each group and the number of males to be the same in each group by randomly assigning 
+4 females to each treatment group and then randomly assigning 8 males to each treatment group. This 
+is a technique called <term>blocking</term>.</p>
+      </slide>
+      <slide>
+        <title>Definition 7: </title>
+        <definition>
+          <statement>
+            <p>A <term>block study</term> design creates <term>blocks</term> of experimental units that 
+ are similar to each other, randomly assigns the treatments within each block, and then analyzes the 
+ data in a way which accounts for block to block variations. When there are only two treatment groups 
+ being compared, a block study design is called a matched pairs design. The term block comes from the 
+ first block designs which were agricultural experiments in large fields where separate parts of the 
+ field were called blocks.
+</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 22</title>
+        <!--Question 22a-->
+        <p>In the <url href="https://static-content.zybooks.com/applets/2021/randomassignment/Subjects.html?hideExtras=1">
+  Randomizing Subjects applet</url>, select the <em>Randomized block</em> option on the
+left. Leave <em>Animate</em> checked and make sure that <em>sex</em> is the variable selected. Press the
+<em>Randomize</em> button.</p>
+        <p>What do you notice about the animated shuffling of cards to the two treatments?</p>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <!--Question 23-->
+        <p>Is the proportion of males the same in each group? Is the proportion of females the same in each group?</p>
+      </slide>
+      <slide>
+        <title>Exercise 24</title>
+        <!--Question 24-->
+        <p>Uncheck <em>Animate</em> and do 999 more random shuffles.</p>
+        <p>Describe the shape, center, and variability of the graph displaying the 
+differences in the proportions of males in each group for each of the 1,000 
+random shuffles.</p>
+      </slide>
+      <slide>
+        <p>We can see that blocking on sex has completely controlled sex as a confounding 
+variable; that is to say there will always be the same proportions of males in each 
+treatment and of females in each treatment, so sex could never account for any of 
+the differences in the treatment groups. Might there be added benefits to controlling 
+confounding variables when blocking is used?</p>
+      </slide>
+      <slide>
+        <title>Exercise 25</title>
+        <!--Question 25-->
+        <p>Use the pull-down menu to select the variable <em>height</em>.</p>
+        <p>Report the SD of the distribution of differences in average heights between 
+the two treatment groups.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26</title>
+        <!--Question 26-->
+        <p>Now select the <em>Completely Randomized</em> button to approximate the SD of 
+the distribution of differences in average heights when the proportion of males in 
+the treatment groups could differ by chance.</p>
+        <p>How does this SD compare to the SD of the distribution of differences in average 
+heights when blocking on the variable sex?</p>
+      </slide>
+      <slide>
+        <title>Remark 8: </title>
+        <remark>
+          <p>Why is the variability in the differences in average heights reduced in the block 
+design compared to the completely randomized design?</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>When other variables (like height) are associated with the blocking variable, we see 
+the added benefit that these variables are more evenly distributed across the treatments.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

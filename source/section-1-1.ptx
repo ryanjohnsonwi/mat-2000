@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_1_1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Preliminary: Introduction to the six-step method</title>
+
+<p>
+  <term>Statistics</term> is a discipline that guides researchers in 
+  collecting, exploring, and drawing conclusions from data.  This course 
+  will demonstrate the statistical investigation process for a variety of 
+  fields of application.
+</p>
+
+<subsection> 
+  <title>The six steps of a statistical investigation</title>
+  <p>
+    The <term>six steps of a statistical investigation</term> is a framework 
+    for learning from data.  The six steps are a guide for collecting and 
+    interpreting data in keeping with the scientific method. When research 
+    questions are investigated with the six-step method, conclusions are 
+    supported by systematic study rather than individual experiences. The six 
+    steps are described in the table below.
+  </p>
+  <p>
+    <dl>
+      <li>
+        <title>1. Ask a research question.</title>
+        <p>
+          Confirm the question can be addressed by collecting data. Typical 
+          questions involve comparing groups, asking how two characteristics 
+          are related, or surveying people's opinions.
+        </p>
+      </li>
+      <li>
+        <title>2. Design a study and collect data.</title>
+        <p>
+          Plan how to select the people or objects to be studied, decide how to 
+          gather the relevant data, and carry out the data collection in a careful, 
+          systematic manner.
+        </p>
+      </li>
+      <li>
+        <title>3. Explore the data.</title>
+        <p>
+          Look for patterns that relate to the research question or raise additional 
+          questions.
+        </p>
+      </li>
+      <li>
+        <title>4. Draw inferences beyond the data.</title>
+        <p>
+          Determine whether any findings in the data reflect a genuine tendency and 
+          estimate the strength of that tendency.
+        </p>
+      </li>
+      <li>
+        <title>5. Formulate conclusions</title>
+        <p>
+          Consider whether inferences made in step 4 can be generalized to processes 
+          or groups beyond those represented in the study. Identify whether a 
+          cause-and-effect conclusion is warranted.
+        </p>
+      </li>
+      <li>
+        <title>6. Look back and ahead.</title>
+        <p>
+          Point out limitations of the study and suggest new studies to build on the findings.
+        </p>
+      </li>
+    </dl>
+  </p>
+
+<activity>
+ <title> Asking a research question</title>
+<statement>
+<p>State a research question you would be interested in answering.</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title> What affects the choice to become an organ donor?</title>
+<p>Researchers <url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">
+  Johnson and Goldstein</url> asked 161 volunteer participants to imagine moving to 
+  a new state and applying for a driver's license. One part of the application asked 
+  whether the participants would agree to be an organ donor. Participants were presented 
+  with one of three different forms of the question:
+</p>
+<p>
+  <ul>
+    <li> You will not be a donor unless you opt in.</li>
+    <li> You will be a donor unless you opt out.</li>
+    <li> Choose whether or not to be a donor (neutral).</li>
+  </ul>
+</p>
+
+<p></p>
+
+</subsection>
+
+<subsection> 
+ <title> Basic terminology</title>
+  <p>Some basic terminology of data is required. </p>
+  <p>
+    <ul>
+      <li>
+        <p>
+          <term>Data</term> are the values measured or categories recorded on 
+          individual objects of interest.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <term>observational unit</term> is the individual object on which 
+          data are recorded.
+        </p>
+      </li>
+      <li>
+        <p>
+          A <term>variable</term> is a characteristic being recorded about the 
+          observational units. 
+        </p>
+        <p>
+          <ul>
+            <li>
+              <p>
+                A <term>quantitative variable</term> has numeric values for which 
+                ordinary arithmetic (addition, multiplication) makes sense. 
+              </p>
+            </li>
+            <li>
+              <p>
+                A <term>categorical variable</term> places observational units 
+                into categories.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>      
+      <li>
+        <p>
+          A <term>distribution</term> is the pattern of outcomes of a variable.
+        </p>
+      </li>
+    </ul>      
+  </p>
+
+  <remark>
+    <p>
+      The best way to determine if a variable is quantitative or categorical is to ask the 
+      question, <q>Can I take the average of this? And would that make sense?</q> For example, 
+      I could ask a group of people to tell me what ZIP code they currently live in, and I 
+      could technically take the average of those numbers, but it wouldn't make sense to do 
+      so. That is because ZIP codes are categorical.
+    </p>
+  </remark>
+
+
+
+<activity>
+ <title> Study design elements</title>
+<statement>
+<p>For the research question you stated at the beginning of the section, identify the 
+  observational units and variable(s) you would use,  and describe how you would collect 
+  the data. For each variable, indicate whether the variable would be quantitative or 
+  categorical.</p>
+</statement>
+</activity>
+
+</subsection>
+
+</section>

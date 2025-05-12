@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="ht//www.w3.org/2001/XInclude">
+    <title>2-1 : Introduction to chance models</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Can dogs understand human cues?</title>
+      <slide>
+        <p>Dogs have been domesticated for about 14,000 years. In that time, have they been able to develop an understanding of human gestures such as pointing or glancing? How about similar nonhuman cues? Researchers <url href="htt//doi.org/10.1037/0735-7036.122.1.84">Udell, Giglio, and Wynne</url> tested a small number of dogs in order to answer these questions.</p>
+      </slide>
+      <slide>
+        <p>In this exploration, we will first see whether dogs can understand human gestures as well as nonhuman gestures. To test this, the researchers positioned the dogs about 2.5 meters from the experimenter. Two cups were placed, one on each side of the experimenter. The experimenter would perform some sort of gesture (pointing, bowing, looking) toward one of the cups or there would be some other nonhuman gesture (a mechanical arm pointing, a doll pointing, or a stuffed animal looking) toward one of the cups. The researchers would then see whether the dog would go to the cup that was indicated. There were six dogs tested. We will look at one of the dogs in two of his sets of trials. This dog, a four-year-old mixed breed, was named Harley. Each trial involved one gesture and one pair of cups, with a total of 10 trials in a set. We will start out by looking at one set of trials where the experimenter bowed toward one of the cups to see whether Harley would go to that cup.
+</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 1: State the research question</title>
+      <slide>
+        <title>Exercise 1</title>
+        <p>Based on the description of the study, state the research question.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <p>Harley was tested 10 times and 9 of those times he chose the correct cup.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <p>What are the observational units?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <p>Identify the variable in the study. What are the possible outcomes of this variable? Is this variable quantitative or categorical?</p>
+      </slide>
+      <slide>
+        <title>Definition 1: </title>
+        <definition>
+          <statement>
+            <p>The set of observational units on which we collect data is called the <term>sample</term>. The number of observational units in the sample is the <term>sample size</term>. A <term>statistic</term> is a number summarizing the results in the sample.</p>
+          </statement>
+        </definition>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <p>With categorical data, we typically report the number of "successes" or the proportion of successes as the statistic.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <p>What is the number of observational units (sample size) in this study?</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <p>Determine the observed statistic and produce a simple bar graph of the data (have one bar for the proportion of times Harley picked the correct cup and another for the proportion of times he picked the wrong cup).</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <p>If the research conjecture is that Harley can understand what the experimenter means when they bow toward an object, is the statistic in the direction suggested by the research conjecture? </p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <p>Could Harley have gotten 9 out of 10 correct even if he really didn't understand the human gesture and so was randomly guessing between the two cups?</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <p>Do you think it is likely Harley would have gotten 9 out of 10 correct if he was just guessing randomly each time?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences beyond the data</title>
+      <slide>
+        <p>There are two possibilities for why Harley chose the correct cup 9 out of 10 times:
+  <ul>
+            <li>
+              <p>
+        He is merely picking a cup at random and in these 10 trials happened to guess correctly in 9 of them. That is, he got more than half correct just by random chance alone.
+      </p>
+            </li>
+            <li>
+              <p>
+        He is doing something other than merely guessing and perhaps understands what the experimenters mean when they bow towards the cup.
+      </p>
+            </li>
+          </ul>
+  The unknown long-run proportion (i.e., probability) that Harley will choose the correct cup is called a <term>parameter</term>.
+</p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>For a random process, a <term>parameter</term> is a long-run numerical property of the process.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>We don't know the value of the parameter, but the two possibilities listed above suggest two different possibilities.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <p>What is the value of the parameter if Harley is picking a cup at random? Give a specific value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <p>What is the possible range of values (greater than or less than some value) for the parameter if Harley is not just guessing and instead understands the experimenter?</p>
+      </slide>
+      <slide>
+        <p>We will show you how statisticians use simulation to make a statement about the strength of evidence for these two possible statements about the parameter's value.</p>
+      </slide>
+    </section>
+    <section>
+      <title>The chance model</title>
+      <slide>
+        <p>Statisticians often use chance models to generate data from random processes to help them investigate the process. In particular, they can see whether the observed statistic is consistent with the values of the statistic simulated by the chance model. If we determine that Harley's results are not consistent with the results from the chance model, we will consider this to be evidence against the chance model and in favor of the research conjecture, that he understands the bowing gesture. In this case, we would say Harley's results are statistically significant, meaning unlikely to have occurred by chance alone.</p>
+      </slide>
+      <slide>
+        <title>Definition 3: </title>
+        <definition>
+          <statement>
+            <p>A result is <term>statistically significant</term> if it is unlikely to occur just by random chance. If our observed result appears to be consistent with the chance model, we say that the chance model is <term>plausible</term> or believable.
+</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>We can't perform the actual study more times in order to assess the second possibility, but we can simulate the behavior of Harley's choices if we were to assume the first possibility (that he is simply guessing every time).
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <p>Explain how you could use a coin toss to represent Harley's choices if he is guessing between the two cups each time. How many times do you have to flip the coin to represent one set of Harley's attempts? What does heads represent?</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <p>If Harley was guessing randomly each time, on average, how many out of the 10 times would you expect him to choose the correct cup?</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <p>
+      Simulate one repetition of Harley guessing randomly by flipping a coin 10 times (why 10?) and letting heads represent selecting the correct cup ("success") and tails represent selecting the incorrect cup ("failure"). Count the number of heads in your 10 flips. Combine your results with the rest of the class to create a <em>dotplot</em> of the distribution for the number of heads out of 10 flips of a coin.
+    </p>
+      </slide>
+      <slide xml:id="q-2-1-13-a">
+        <title>Exercise 13a: </title>
+        <p>Where does 9 heads fall in the distribution? Would you consider it an unusual outcome or a fairly typical outcome for the number of heads in 10 flips?</p>
+      </slide>
+      <slide>
+        <title>Exercise 13b: </title>
+        <p>Based on your answer to <xref ref="q-2-1-13-a" text="phrase-hybrid"/> do you think it is plausible (believable) that Harley was just guessing which cup to choose?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Using an Applet to Simulate Flipping a Coin Many Times</title>
+      <slide>
+        <p>To really assess the typical values for the number of heads in 10 coin tosses (number of correct picks by Harley assuming he is guessing at random), we need to simulate many more outcomes of the chance model. Open the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion applet</url>.</p>
+      </slide>
+      <slide>
+        <p>Notice that the probability of heads has been set to be 0.50, representing Harley guessing between the two cups. Set the number of tosses to 10 and press the <term>Draw Samples</term> button. What was the resulting number of heads?</p>
+      </slide>
+      <slide>
+        <p>Notice that the number of heads in this set of 10 tosses is then displayed by a dot on the graph. Uncheck the <term>Animate</term> box and press the <term>Draw Samples</term> button 9 more times. This will demonstrate how the number of heads varies randomly across each set of 10 tosses. Nine more dots have been added to your dotplot. Is a pattern starting to emerge? </p>
+      </slide>
+      <slide>
+        <p>Now change the <term>Number of repetitions</term> from 1 to 990 and press <term>Draw Samples</term>. The applet will now show the results for the number of heads in 1,000 different sets of 10 coin tosses. So each dot represents the number of times Harley chooses the correct cup out of 10 attempts assuming he is just guessing.</p>
+      </slide>
+      <slide>
+        <p>Remember why we conducted this simulatito assess whether Harley's result (9 correct in 10 attempts) would be unlikely to occur by chance alone if he were just guessing between the pair of cups for each attempt.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <p>Locate the result of getting 9 heads in the dotplot created by the applet. Would you consider this an unlikely result in the tail of the distribution of the number of heads?</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <p>Based on the results of 1,000 simulated sets of 10 coin flips each, would you conclude that Harley would be very unlikely to have picked the correct cup 9 times in 10 attempts if he was randomly guessing between the two cups each time? Explain how your answer relates to the applet's dotplot.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <p>Do the results of this study appear to be statistically significant?</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <p>Do the results of this study suggest that Harley just guessing is a plausible explanation for Harley picking the correct cup 9 out of 10 times?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Summarizing Your Understanding</title>
+      <slide>
+        <title>Exercise 18</title>
+        <p>To make sure that you understand the coin-flipping chance model, what parts of the real study correspond to the physical (coin-flipping) simulation. Specifically, what do a coin flip, heads, tails, chance of heads, and one repetition represent.</p>
+      </slide>
+    </section>
+    <section>
+      <title>3S Strategy</title>
+      <slide>
+        <p>We will call the process of simulating could-have-been statistics under a specific chance model the <term>3S strategy</term>. After forming our research conjecture and collecting the sample data, we will use the 3S strategy to weigh the evidence against the chance model. This 3S strategy will serve as the foundation for addressing the question of statistical significance in Step 4 of the statistical investigation method.</p>
+      </slide>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <title> 3S Strategy for measuring strength of evidence. </title>
+          <p>
+            <ol>
+              <li>
+                <term>Statistic</term> Compute the statistic from the observed sample data.</li>
+              <li>
+                <term>Simulate</term> Identify a "by-chance-alone" explanation for the data. Repeatedly simulate
+    values of the statistic that could have happened when the chance model is true.</li>
+              <li>
+                <term>Strength of evidence</term> Consider whether the value of the observed statistic from the research study is unlikely to occur if the chance model is true. If we decide the observed statistic is unlikely to occur by chance alone, then we can conclude that the observed data provide strong evidence against the plausibility of the chance model. If not, then we consider the chance model to be a plausible (believable) explanation for the observed data; in other words what we observed could plausibly have happened just by random chance.</li>
+            </ol>
+          </p>
+        </remark>
+      </slide>
+      <slide>
+        <p>Let's review how we have already applied the 3S strategy to this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <p>Statistic: What is the statistic in this study?</p>
+      </slide>
+      <slide>
+        <title>Exercise 20</title>
+        <p>Simulate: Fill in the blanks to describe the simulation. We flipped a coin ______ times and kept track of how many times it came up heads. We then repeated this process ______  more times, each time keeping track of how many heads were obtained in each of the ______ flips.</p>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <p>Strength of evidence: Fill in the blanks to summarize how we are assessing the strength of evidence for this study. Because we rarely obtained a value of ______ heads when flipping the coin ______ times, this means that it is ______ (believable/unlikely) that Harley is just guessing, because if Harley was just guessing he ______ (rarely/often) would get a value like ______ correct out of ______ attempts.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions</title>
+      <slide>
+        <title>Exercise 22</title>
+        <p>
+      Based on this analysis, are you convinced that Harley can understand human cues? Why or why not?
+    </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 23</title>
+        <p>A single study will not provide all of the information needed to fully understand a broad, complex research question. Thinking back to the original research question, what additional studies would you suggest conducting next?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring further</title>
+      <slide>
+        <p>One important step in a statistical investigation is to consider other models and whether the results can be confirmed in other settings.
+</p>
+      </slide>
+      <slide>
+        <title>block 24: Mechangical Arm Study</title>
+        <p>
+      In a different study, the researchers used a mechanical arm (roughly the size of a human arm) to point at one of the two cups. The researchers tested this to see whether dogs understood nonhuman gestures. In 10 trials, Harley chose the correct cup 6 times.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 24a: </title>
+        <p>
+        Using the dotplot you obtained when you simulated 1,000 sets of 10 coin flips assuming Harley was just guessing, locate the result of getting 6 heads. Would you consider this an unlikely result in the tail of the distribution?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 24b: </title>
+        <p>Based on the results of 1,000 simulated sets of 10 coin flips each, would you conclude that Harley would be very unlikely to have picked the correct cup 6 times in 10 attempts if he was randomly guessing between the two cups each time? Explain how your answer relates to the applet's dotplot.</p>
+      </slide>
+      <slide>
+        <title>Exercise 24c: </title>
+        <p>Is this study's result statistically significant?</p>
+      </slide>
+      <slide>
+        <title>Exercise 24d: </title>
+        <p>Do the results of this study suggest that Harley just guessing is a plausible explanation for Harley picking the correct cup 6 out of 10 times?</p>
+      </slide>
+      <slide>
+        <title>Exercise 24e: </title>
+        <p>Does this study prove that Harley cannot understand the mechanical arm?</p>
+      </slide>
+      <slide>
+        <title>Exercise 25</title>
+        <p>
+      Compare the analyses between the two studies. How does the unusualness of the observed statistic compare between the two studies? Does this make sense based on the value of the observed statistic in the two studies? Does this make sense based on how the two studies were designed? Explain. (Hint: Why might the results differ for human and mechanical arms? Why would this matter?)
+    </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

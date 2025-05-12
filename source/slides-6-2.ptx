@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>6-2 : Comparing two proportions: Simulation-based approach</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Is yawning contagious?</title>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <p>Is yawning contagious? Conventional wisdom says yes: When we see someone else yawn, 
+we're prone to let out a yawn ourselves. Has this happened to you or have you noticed 
+it in others? Will data support this claim if we put it to a scientific test?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <p>The folks at <em>MythBusters</em>, a popular television program on the Discovery Channel, 
+<url href="https://mythresults.com/episode28">investigated this issue by using a hidden 
+camera</url>. Fifty people attending a local flea market were recruited to participate. 
+Subjects were ushered, one at a time, into one of three rooms by co-host Kari. She yawned 
+(planting a yawn "seed") as she ushered subjects into two of the rooms, and for the other 
+room she did not yawn. The researchers decided in advance, with a random mechanism, which 
+subjects went to which room. As time passed, the researchers watched to see which subjects 
+yawned.</p>
+      </slide>
+      <!--Question 1-->
+      <slide>
+        <title>Exercise 1</title>
+        <p>Think about why the researchers made the decisions they did.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1a: </title>
+        <p>
+        Why did the researchers include a group that didn't see the yawn seed in this study? 
+        In other words, why didn't they just see how many yawned when presented with a yawn seed?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1b: </title>
+        <p>
+        Why did the researchers use random assignment to determine which subjects went to the 
+        <q>yawn seed</q> group and which to the control group?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1c: </title>
+        <p>
+        Is this an observational study or a randomized experiment? Explain how you are deciding.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1d: </title>
+        <p>
+        The researchers clearly used random assignment to put subjects into groups. Do you suspect that they 
+        also use random sampling to select subjects in the first place? What would random sampling entail 
+        if the population was all flea market patrons?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Identify the explanatory and response variables in this study. Also classify them as categorical 
+or quantitative.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>The two competing hypotheses to be tested are: "Yawning is not contagious" and "Yawning is 
+contagious". Identify which is the null hypothesis and which is the alternative hypothesis 
+remembering that the null hypothesis is typically a statement of no effect. </p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>If yawning is not contagious, what does this say about whether there is an association 
+between the explanatory and response variables?</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>If yawning is contagious, what does this say about whether there is an association 
+between the explanatory and response variables?</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>State the null and alternative hypotheses in terms of association between the 
+explanatory and response variables in this study.</p>
+      </slide>
+      <slide>
+        <p>An equivalent option to stating the null and alternative hypotheses for this study in terms of 
+association is to talk about long-run probabilities.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>There are two long-run probabilities (parameters) in this study. What are they?</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>Write the null and alternative hypotheses in terms of the two long-run probabilities 
+in words and using appropriate symbols.</p>
+      </slide>
+      <slide>
+        <p>The researchers found that 11 of 34 subjects who had been given a yawn seed actually 
+yawned themselves, compared with 3 of 16 subjects who had not been given a yawn seed.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Organize the information into a <m>2\times 2</m> table:</p>
+        <slide>
+          <title>Table 1: </title>
+          <table>
+            <tabular>
+              <row header="yes">
+                <cell/>
+                <cell>Yawn seed planted</cell>
+                <cell>Yawn seed not planted</cell>
+                <cell>Total</cell>
+              </row>
+              <row header="yes">
+                <cell>Subject yawned</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+              <row header="yes">
+                <cell>Subject did not yawn</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+              <row header="yes">
+                <cell>Total</cell>
+                <cell/>
+                <cell/>
+                <cell/>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Calculate the conditional proportion of subjects who yawned in the "yawn seed" group,
+and then do the same for the control group. Then calculate the difference between these
+proportions, subtracting "yawn seed" - control.</p>
+      </slide>
+      <slide>
+        <p>Notice that the difference in conditional proportions is the statistic of interest 
+now that we are comparing two groups.</p>
+      </slide>
+      <slide>
+        <title>Remark 2: </title>
+        <remark>
+          <!--Question 11-->
+          <p>Produce a segmented bar graph or mosaic plot to compare the distributions of whether 
+the subject yawned between the treatment (yawn seed) and control group.</p>
+        </remark>
+      </slide>
+      <!--Question 12-->
+      <slide>
+        <title>Exercise 11</title>
+        <p>Comment on what the graph and calculations reveal about the research question.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11a: </title>
+        <p>
+        Did a larger proportion of subjects yawn who were exposed to the yawn seed, as compared to the control group?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 11b: </title>
+        <p>
+        Based on your analysis thus far, do you think these data provide much evidence that yawning is contagious? Explain.
+      </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences beyond the data</title>
+      <slide>
+        <p>We see that the proportion of subjects in the "yawn seed" group who yawned was greater 
+than the proportion who yawned in the control group. But does this provide convincing 
+evidence of a genuine difference in the long-run probabilities? To determine whether the 
+<em>MythBusters</em> results provide convincing evidence that yawning is contagious, we 
+will apply the same logic that we have used previously: We will use a simulation analysis 
+to determine whether their results are typical or surprising for what we would find if 
+yawning is not contagious.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 13-->
+        <p>As with earlier studies, there are two possible explanations for the MythBusters results. 
+What are they? (Hint: These correspond to the null and alternative hypotheses stated earlier.)</p>
+      </slide>
+      <slide>
+        <p>The key to our simulation analysis is to assume that if yawning is not contagious (null 
+hypothesis), then <em>the 14 yawners would have yawned regardless of whether they had seen 
+the yawn seed</em>. Similarly, we'll assume that the 36 nonyawners would not have yawned, 
+no matter which group they had been assigned. In other words, our simulation assumes the null 
+hypothesis is true—that there is no association, no connection, between the yawn seed and 
+actual yawning.
+</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <p>To evaluate the statistical significance of the observed difference in our groups, we 
+will investigate how large the difference in conditional proportions tends to be just 
+from the random assignment of response outcomes to the explanatory variable groups.</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>We cannot use coins to conduct this simulation analysis, because we have two variables 
+to consider: whether the yawn seed was planted and whether the subject yawned. Instead of 
+coins, we will use index cards. Here's our strategy:
+<ul>
+            <li>
+              <p>
+      Take a set of 50 cards, with 14 blue cards (to represent the yawners) and 36 green cards (to
+      represent those who did not yawn).
+    </p>
+            </li>
+            <li>Shuffle the cards well and randomly deal out 34 to be the yawn seed group (the rest go to
+the control group).</li>
+            <li>Count how many yawners (blue cards) you have in each group and how many nony-
+awners (green cards) you have in each group.</li>
+            <li>Construct the two-way table to show the number of yawners and nonyawners in each group. 
+(Shuffling and dealing the cards out into the two piles ensures that nothing different 
+happened between your Yawn-seed group and your Non-yawn-seed group—any differences between 
+the two groups that arise are due purely to the random assignment process.)</li>
+          </ul>
+        </p>
+      </slide>
+      <!--Question 14-->
+      <slide>
+        <title>Exercise 13</title>
+        <p>Do this shuffling and dealing once.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13a: </title>
+        <p>Report the (simulated) <m>2 \times 2</m> table that your shuffling and dealing produces:
+      </p>
+        <slide>
+          <title>Table 4: </title>
+          <table>
+            <tabular>
+              <row header="yes">
+                <cell/>
+                <cell>Yawn seed planted</cell>
+                <cell>Yawn seed not planted</cell>
+                <cell>Total</cell>
+              </row>
+              <row header="yes">
+                <cell>Subject yawned</cell>
+                <cell/>
+                <cell/>
+                <cell>14</cell>
+              </row>
+              <row header="yes">
+                <cell>Subject did not yawn</cell>
+                <cell/>
+                <cell/>
+                <cell>36</cell>
+              </row>
+              <row header="yes">
+                <cell>Total</cell>
+                <cell>34</cell>
+                <cell>16</cell>
+                <cell>50</cell>
+              </row>
+            </tabular>
+          </table>
+        </slide>
+      </slide>
+      <slide>
+        <title>Exercise 13b: </title>
+        <p>
+        Calculate the conditional proportions who yawned for your simulated data and the
+        difference in those proportions.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 13c: </title>
+        <p>
+        Is your simulated statistic (difference in conditional proportions) at least as large 
+        as the observed value of the statistic from the MythBusters study?
+      </p>
+      </slide>
+      <slide>
+        <p>We need to perform a large number of repetitions (say, 1,000 or more) in order to assess 
+whether the <em>MythBusters</em> result is typical or surprising when yawning is not contagious. 
+To do this we will use an applet specifically designed for this purpose: the 
+<url href="http://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?yawning=1&amp;hideExtras=2"> 
+Two Proportions applet</url>.</p>
+      </slide>
+      <!--Question 15-->
+      <slide>
+        <title>Exercise 14</title>
+        <p>Open this applet and verify that the two-way table, segmented bar graph, and observed difference in 
+  simulated proportions are the same as those you found earlier.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14a: </title>
+        <p>
+        Check the Show Shuffle Options box. Notice how the cards have been set up: 14 blue cards, 
+        with 11 in the yawners group. Press Shuffle to shuffle the cards and redistribute them to 
+        the two groups. How many yawners ended up in the seeded group? What is the corresponding 
+        difference in the conditional proportions for the shuffled data?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 14b: </title>
+        <p>
+        Press the Shuffle button four more times. Record the difference in proportions each time. Was it always the same number?
+      </p>
+      </slide>
+      <slide>
+        <p>Notice that each of these values has been added to the dotplot. (Technical detail: In this case, 
+it's equivalent to look at the number of blue cards in the yawn group or the difference in conditional 
+proportions as the statistic of interest.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 16-->
+        <p>Use this applet to conduct 1,000 repetitions of this simulation: Change the Number of Shuffles 
+from 1 to 995 (for a total of 1,000) and press Shuffle. The applet produces a dotplot showing the 
+null distribution for the difference in proportions of yawners between the two groups. Map this 
+simulation to the research study:
+What are the null hypothesis, one repetition, and the statistic?</p>
+      </slide>
+      <!--Question 17-->
+      <slide>
+        <title>Exercise 16</title>
+        <p>
+      Look more closely at the simulated null distribution for the difference in proportions of yawners 
+      between the two groups.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 16a: </title>
+        <p>
+        Is this null distribution centered around 0? Explain why this makes sense. (Hint: Think about 
+        the choice of statistic and about the null hypothesis, which was the basis of the simulation analysis.)
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16b: </title>
+        <p>
+        Is the observed value of the statistic from the MythBusters study (0.136) out in the tail of this 
+        null distribution or not so much? In other words, does the observed result appear to be typical 
+        or surprising when the null hypothesis (that yawning is not contagious) is true?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 16c: </title>
+        <p>
+        As you know, you can assess the strength of evidence against the null hypothesis by calculating a 
+        p-value. To calculate a p-value from this null distribution, you will count the number of 
+        repetitions that produced a simulated difference in proportions equal to ______  or ______ (
+          more/less).
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 18-->
+        <p>Enter the observed difference in the sample proportions in the Count Samples box and choose the 
+direction from the pull-down menu and press Count. Check whether the shaded region of the dotplot 
+corresponds with your answer to question 17c. Then report this approximate p-value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 19-->
+        <p>Interpret this p-value by filling in the blanks: Under the assumption that _____, if we repeatedly
+ ______ many, many times, the probability we would obtain a difference in conditional proportions as
+  or more extreme than ______ is about ______.</p>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 20-->
+        <p>Evaluate this p-value: Using guidelines for assessing the strength of evidence from p-values, 
+would you conclude that the MythBusters result provides much evidence that yawning is contagious?</p>
+      </slide>
+      <slide>
+        <p>We have a small confession to make. We fudged the data from this study a bit. The actual data 
+showed that 10 of the 34 subjects in the yawn seed group yawned themselves, and 4 of the 16 in 
+the control group yawned.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 21-->
+        <p>Recalculate the conditional proportions who yawned for these data: Proportion who yawned in 
+the "yawn seed" group, proportion who yawned in the control group, and difference in 
+conditional proportions ("yawn seed" - control).</p>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <!--Question 22-->
+        <p>How has your observed statistic changed from the originally presented data? Smaller, same, or larger?</p>
+      </slide>
+      <slide>
+        <title>Exercise 22</title>
+        <!--Question 23-->
+        <p>Before you carry out the inference using this postconfession observed statistic, let's make 
+some predictions: How do you expect the p-value and strength of evidence to change from your 
+earlier analysis? Is hte p-value smaller, the same, or larger? Is the strength of evidence 
+weaker, the same, or stronger? Explain why you answered what you did.</p>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <!--Question 24-->
+        <p>Conduct a simulation analysis to check your answer predictions from question 23. To do this, 
+enter the new values into the four boxes of the table and press Use Table. Then ask for 1,000 
+repetitions in your simulation analysis. Enter the new observed value of the statistic and 
+then press the Count button. Report the approximate p-value and summarize your conclusion 
+in terms of strength of evidence that yawning is contagious.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Estimation</title>
+      <slide>
+        <p>Because the MythBusters data did not reveal a significant difference between 
+the groups, it's less important than usual to estimate the parameter value. But 
+we can still use the simulation results to estimate a 95% confidence interval for 
+the relevant parameter. Keep in mind that the relevant parameter is now the difference 
+in the long-run probabilities between the yawn seed treatment and the no-yawn seed treatment.
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 24</title>
+        <!--Question 25-->
+        <p>The parameter of interest in this yawning study can be expressed in symbols as
+    <m>\pi_{\text{yawn seed}} - \pi_{\text{control}} </m>
+        </p>
+        <task>
+          <p>
+          Describe what this parameter means in words.
+        </p>
+        </task>
+        <task>
+          <p>
+          Report (again) the observed value of the statistic from the MythBusters actual data. 
+          (Hint: Recall that the statistic is the difference in conditional proportions 
+          between the two groups.)
+        </p>
+        </task>
+        <p>The observed value of this statistic is your best estimate of the unknown parameter value. But we should produce an interval estimate centered on this observed value. To do that we again need to consider the <em>chance variability</em> in the statistic.
+    </p>
+        <task>
+          <p>
+          From the simulation analysis that you just conducted on the postconfession MythBusters data, what was the standard deviation of the null distribution?
+        </p>
+        </task>
+        <task>
+          <p>
+          Determine endpoints of a 95% 2SD confidence interval for the difference by taking the observed value of the statistic ± 2 standard deviations.
+        </p>
+        </task>
+        <task>
+          <p>
+          Does this confidence interval include only positive values, only negative values, or zero as well as positive and negative values?
+        </p>
+        </task>
+        <task>
+          <p>
+          Explain the importance of your answer to part (e) in terms of whether the data provide evidence that 
+          subjects who experience a yawn seed are more likely to yawn than those who do not experience a yawn seed?
+        </p>
+        </task>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions</title>
+      <slide>
+        <title>Exercise 25</title>
+        <!--Question 26-->
+        <p>The MythBusters hosts concluded from their study that there is “little doubt, yawning seems to be contagious.” Based on your simulation analysis of their data, considering the issue of statistical significance, do you agree with this conclusion? Explain your answer, as if to the hosts, without using statistical jargon. Be sure to include in your answer an explanation for why you conducted the simulation analysis and what the analysis revealed about the research question.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26</title>
+        <!--Question 27-->
+        <p>If you had decided that the two groups differed significantly, would you have been justified in drawing a cause-and-effect conclusion between the yawn seed and an increased probability of yawning? Explain, based on how the study was conducted.</p>
+      </slide>
+      <slide>
+        <title>Exercise 27</title>
+        <!--Question 28-->
+        <p>Based on how the sample was selected, to what larger population would you feel comfortable generalizing the results of this study? Justify your answer.</p>
+      </slide>
+      <slide>
+        <title>Exercise 28</title>
+        <!--Question 29-->
+        <p>Think about the difference between these two possible conclusions: (i) The data strongly suggest that yawning is not contagious and (ii.) The data do not provide convincing evidence to suggest that yawning is contagious. Explain why these conclusions are not the same. Also indicate which one is the more appropriate conclusion from your analysis and explain why.</p>
+      </slide>
+      <slide>
+        <title>Exercise 29</title>
+        <!--Question 30-->
+        <p>As we discussed previously, in every statistical analysis it is possible to make a Type I or a Type II error. Identify which error you might be making here, describe it in context, and briefly identify the consequences.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 30</title>
+        <!--Question 31-->
+        <p>Critique the design and conclusion of this study. Were there any limitations, such as how the subjects were selected or how the measurements were recorded? Was the sample size large enough? Did you observe a result of practical value? Discuss how you might address a few of these limitations. Suggest how you might design a follow-up study to investigate whether yawning is contagious. Address details such as how to ensure that the yawn seed is noticed, how long to wait for the subject's yawn to be connected to the seed, and how to select/recruit subjects.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring further</title>
+      <slide>
+        <p>Now let's suppose that this yawning study had involved 500 people,
+10 times as many as the actual study. Let's also suppose that the conditional proportions
+who yawned in each group were identical to the actual study. The <m>2\times 2</m> table would
+therefore be:
+</p>
+      </slide>
+      <slide>
+        <p>Now let's suppose that this yawning study had involved 500 people,
+10 times as many as the actual study. Let's also suppose that the conditional proportions
+who yawned in each group were identical to the actual study. The <m>2\times 2</m> table would
+therefore be:
+</p>
+      </slide>
+      <!--Question 32-->
+      <slide>
+        <title>Exercise 31</title>
+        <p>Before you conduct a simulation analysis, indicate how you expect the information in (a)-(d) to change:</p>
+      </slide>
+      <slide>
+        <title>Exercise 31a: </title>
+        <p>
+        Difference in conditional proportions: smaller, the same, or larger?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 31b: </title>
+        <p>
+        p-value: smaller, the same, or larger?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 31c: </title>
+        <p>
+        Strength of evidence that yawning is contagious: weaker, the same, or stronger?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 31d: </title>
+        <p>
+        Test decision at the 0.05 significance level: Reject null (unlike before) Fail to reject null (as before)
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 32</title>
+        <!--Question 33-->
+        <p>Use the Two Proportions applet, again entering the appropriate table of data first, to conduct a simulation analysis. Report the approximate p-value and summarize your conclusion in terms of strength of evidence that yawning is contagious. Also indicate whether you would find strong evidence against the null hypothesis at the 0.05 significance level.</p>
+      </slide>
+      <slide>
+        <title>Exercise 33</title>
+        <!--Question 34-->
+        <p>Summarize how the 10-fold increase in the sample size has changed your conclusions. Do you have stronger evidence that yawning is contagious? Is the evidence now very strong that yawning is contagious?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Relative risk</title>
+      <slide>
+        <p>A previous section introduced you to the relative risk as an alternative statistic to summarize the relationship between two binary variables.</p>
+      </slide>
+      <slide>
+        <title>Exercise 34</title>
+        <!--Question 35-->
+        <p>What value of the relative risk indicates no association between the two variables in this study?</p>
+      </slide>
+      <slide>
+        <title>Exercise 35</title>
+        <!--Question 36-->
+        <p>State the null and alternative hypotheses for the yawning study in terms of the relative risk.</p>
+      </slide>
+      <slide>
+        <p>We will now apply the 3S strategy using the relative risk. Use the sample size of 500 people you used in questions 32-34 for questions 37 and 38.</p>
+      </slide>
+      <slide>
+        <title>Exercise 36</title>
+        <!--Question 37-->
+        <p>Statistic. Calculate, and then interpret, the observed value of the relative risk by dividing the conditional proportion of yawners in the yawn seed group compared to the conditional proportion of yawners in the no-yawn seed group.</p>
+      </slide>
+      <slide>
+        <p>In the <url href="http://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?yawning=1&amp;hideExtras=2"> Two Proportions applet</url>, change the statistic to "Relative risk" in the Statistic pull-down menu. Confirm that the statistic matches your answer to question 37.</p>
+      </slide>
+      <slide>
+        <title>Exercise 37</title>
+        <!--Question 38-->
+        <p>Simulate. If you still have your shuffles from question 33 use them; otherwise generate 1,000 new shuffles. Find the p-value using the relative risk. Compare this p-value to the p-value you obtained in question 33.</p>
+      </slide>
+      <slide>
+        <p>If you used the same simulated tables, you should have found that the p-value for the relative risk is exactly the same as for the difference in proportions! This is because there is a "one-to-one" correspondence between these statistics.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

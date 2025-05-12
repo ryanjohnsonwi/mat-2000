@@ -1,0 +1,317 @@
+# Section 2.2 - MAT 2000: Introduction to Statistics
+## Grace College
+
+
+### Can dogs understand human cues?
+
+Dogs have been domesticated for about 14,000 years. In that time, have they
+been able to develop an understanding of human gestures such as pointing or
+glancing? How about similar nonhuman cues? Researchers [Udell, Giglio, and
+Wynne](https://doi.org/10.1037/0735-7036.122.1.84) tested a small number of
+dogs in order to answer these questions.
+
+In this exploration, we will first see whether dogs can understand human
+gestures as well as nonhuman gestures. To test this, the researchers
+positioned the dogs about 2.5 meters from the experimenter. Two cups were
+placed, one on each side of the experimenter. The experimenter would perform
+some sort of gesture (pointing, bowing, looking) toward one of the cups or
+there would be some other nonhuman gesture (a mechanical arm pointing, a doll
+pointing, or a stuffed animal looking) toward one of the cups. The researchers
+would then see whether the dog would go to the cup that was indicated. There
+were six dogs tested. We will look at one of the dogs in two of his sets of
+trials. This dog, a four-year-old mixed breed, was named Harley. Each trial
+involved one gesture and one pair of cups, with a total of 10 trials in a set.
+We will start out by looking at one set of trials where the experimenter bowed
+toward one of the cups to see whether Harley would go to that cup.
+
+### Step 1: State the research question
+
+###  2.2.1: Question 1.
+
+Based on the description of the study, state the research question.
+
+### Step 2: Design a study and collect data
+
+Harley was tested 10 times and 9 of those times he chose the correct cup.
+
+###  2.2.2: Question 2.
+
+What are the observational units?
+
+###  2.2.3: Question 3.
+
+Identify the variable in the study. What are the possible outcomes of this
+variable? Is this variable quantitative or categorical?
+
+###  Definition.
+
+The set of observational units on which we collect data is called the
+**sample**. The number of observational units in the sample is the **sample
+size**. A **statistic** is a number summarizing the results in the sample.
+
+### Step 3: Explore the data
+
+With categorical data, we typically report the number of "successes" or the
+proportion of successes as the statistic.
+
+###  2.2.4: Question 4.
+
+What is the number of observational units (sample size) in this study?
+
+###  2.2.5: Question 5.
+
+Determine the observed statistic and produce a simple bar graph of the data
+(have one bar for the proportion of times Harley picked the correct cup and
+another for the proportion of times he picked the wrong cup).
+
+###  2.2.6: Question 6.
+
+If the research conjecture is that Harley can understand what the experimenter
+means when they bow toward an object, is the statistic in the direction
+suggested by the research conjecture?
+
+###  2.2.7: Question 7.
+
+Could Harley have gotten 9 out of 10 correct even if he really didn’t
+understand the human gesture and so was randomly guessing between the two
+cups?
+
+###  2.2.8: Question 8.
+
+Do you think it is likely Harley would have gotten 9 out of 10 correct if he
+was just guessing randomly each time?
+
+### Step 4: Draw inferences beyond the data
+
+There are two possibilities for why Harley chose the correct cup 9 out of 10
+times:
+
+###  Definition.
+
+For a random process, a **parameter** is a long-run numerical property of the
+process.
+
+We don’t know the value of the parameter, but the two possibilities listed
+above suggest two different possibilities.
+
+###  2.2.9: Question 9.
+
+What is the value of the parameter if Harley is picking a cup at random? Give
+a specific value.
+
+###  2.2.10: Question 10.
+
+What is the possible range of values (greater than or less than some value)
+for the parameter if Harley is not just guessing and instead understands the
+experimenter?
+
+We will show you how statisticians use simulation to make a statement about
+the strength of evidence for these two possible statements about the
+parameter’s value.
+
+### The chance model
+
+Statisticians often use chance models to generate data from random processes
+to help them investigate the process. In particular, they can see whether the
+observed statistic is consistent with the values of the statistic simulated by
+the chance model. If we determine that Harley’s results are not consistent
+with the results from the chance model, we will consider this to be evidence
+against the chance model and in favor of the research conjecture, that he
+understands the bowing gesture. In this case, we would say Harley’s results
+are statistically significant, meaning unlikely to have occurred by chance
+alone.
+
+###  Definition.
+
+A result is **statistically significant** if it is unlikely to occur just by
+random chance. If our observed result appears to be consistent with the chance
+model, we say that the chance model is **plausible** or believable.
+
+We can’t perform the actual study more times in order to assess the second
+possibility, but we can simulate the behavior of Harley’s choices if we were
+to assume the first possibility (that he is simply guessing every time).
+
+###  2.2.11: Question 11.
+
+Explain how you could use a coin toss to represent Harley’s choices if he is
+guessing between the two cups each time. How many times do you have to flip
+the coin to represent one set of Harley’s attempts? What does heads
+represent?
+
+###  2.2.12: Question 12.
+
+If Harley was guessing randomly each time, on average, how many out of the 10
+times would you expect him to choose the correct cup?
+
+###  Question 13.
+
+Simulate one repetition of Harley guessing randomly by flipping a coin 10
+times (why 10?) and letting heads represent selecting the correct cup
+("success") and tails represent selecting the incorrect cup ("failure"). Count
+the number of heads in your 10 flips. Combine your results with the rest of
+the class to create a _dotplot_ of the distribution for the number of heads
+out of 10 flips of a coin.
+
+###  2.2.13: Question 13a.
+
+Where does 9 heads fall in the distribution? Would you consider it an unusual
+outcome or a fairly typical outcome for the number of heads in 10 flips?
+
+###  2.2.14: Question 13b.
+
+Based on your answer to question 13a do you think it is plausible (believable)
+that Harley was just guessing which cup to choose?
+
+### Using an Applet to Simulate Flipping a Coin Many Times
+
+To really assess the typical values for the number of heads in 10 coin tosses
+(number of correct picks by Harley assuming he is guessing at random), we need
+to simulate many more outcomes of the chance model. Open the [ One Proportion
+applet](http://static-
+content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1).
+
+Notice that the probability of heads has been set to be 0.50, representing
+Harley guessing between the two cups. Set the number of tosses to 10 and press
+the **Draw Samples** button. What was the resulting number of heads?
+
+Notice that the number of heads in this set of 10 tosses is then displayed by
+a dot on the graph. Uncheck the **Animate** box and press the **Draw Samples**
+button 9 more times. This will demonstrate how the number of heads varies
+randomly across each set of 10 tosses. Nine more dots have been added to your
+dotplot. Is a pattern starting to emerge?
+
+Now change the **Number of repetitions** from 1 to 990 and press **Draw
+Samples**. The applet will now show the results for the number of heads in
+1,000 different sets of 10 coin tosses. So each dot represents the number of
+times Harley chooses the correct cup out of 10 attempts assuming he is just
+guessing.
+
+Remember why we conducted this simulation: to assess whether Harley’s result
+(9 correct in 10 attempts) would be unlikely to occur by chance alone if he
+were just guessing between the pair of cups for each attempt.
+
+###  2.2.15: Question 14.
+
+Locate the result of getting 9 heads in the dotplot created by the applet.
+Would you consider this an unlikely result in the tail of the distribution of
+the number of heads?
+
+###  2.2.16: Question 15.
+
+Based on the results of 1,000 simulated sets of 10 coin flips each, would you
+conclude that Harley would be very unlikely to have picked the correct cup 9
+times in 10 attempts if he was randomly guessing between the two cups each
+time? Explain how your answer relates to the applet’s dotplot.
+
+###  2.2.17: Question 16.
+
+Do the results of this study appear to be statistically significant?
+
+###  2.2.18: Question 17.
+
+Do the results of this study suggest that Harley just guessing is a plausible
+explanation for Harley picking the correct cup 9 out of 10 times?
+
+### Summarizing Your Understanding
+
+###  2.2.19: Question 18.
+
+To make sure that you understand the coin-flipping chance model, what parts of
+the real study correspond to the physical (coin-flipping) simulation.
+Specifically, what do a coin flip, heads, tails, chance of heads, and one
+repetition represent.
+
+### 3S Strategy
+
+We will call the process of simulating could-have-been statistics under a
+specific chance model the **3S strategy**. After forming our research
+conjecture and collecting the sample data, we will use the 3S strategy to
+weigh the evidence against the chance model. This 3S strategy will serve as
+the foundation for addressing the question of statistical significance in Step
+4 of the statistical investigation method.
+
+###  3S Strategy for measuring strength of evidence.
+
+Let’s review how we have already applied the 3S strategy to this study.
+
+###  2.2.20: Question 19.
+
+Statistic: What is the statistic in this study?
+
+###  2.2.21: Question 20.
+
+Simulate: Fill in the blanks to describe the simulation. We flipped a coin
+______ times and kept track of how many times it came up heads. We then
+repeated this process ______ more times, each time keeping track of how many
+heads were obtained in each of the ______ flips.
+
+###  2.2.22: Question 21.
+
+Strength of evidence: Fill in the blanks to summarize how we are assessing the
+strength of evidence for this study. Because we rarely obtained a value of
+______ heads when flipping the coin **___** times, this means that it is
+______ (believable/unlikely) that Harley is just guessing, because if Harley
+was just guessing he ______ (rarely/often) would get a value like ______
+correct out of ______ attempts.
+
+### Step 5: Formulate conclusions
+
+###  2.2.23: Question 22.
+
+Based on this analysis, are you convinced that Harley can understand human
+cues? Why or why not?
+
+### Step 6: Look back and ahead
+
+###  2.2.24: Question 23.
+
+A single study will not provide all of the information needed to fully
+understand a broad, complex research question. Thinking back to the original
+research question, what additional studies would you suggest conducting next?
+
+### Exploring further
+
+One important step in a statistical investigation is to consider other models
+and whether the results can be confirmed in other settings.
+
+###  Question 24.
+
+In a different study, the researchers used a mechanical arm (roughly the size
+of a human arm) to point at one of the two cups. The researchers tested this
+to see whether dogs understood nonhuman gestures. In 10 trials, Harley chose
+the correct cup 6 times.
+
+###  2.2.25: Question 24a.
+
+Using the dotplot you obtained when you simulated 1,000 sets of 10 coin flips
+assuming Harley was just guessing, locate the result of getting 6 heads. Would
+you consider this an unlikely result in the tail of the distribution?
+
+###  2.2.26: Question 24b.
+
+Based on the results of 1,000 simulated sets of 10 coin flips each, would you
+conclude that Harley would be very unlikely to have picked the correct cup 6
+times in 10 attempts if he was randomly guessing between the two cups each
+time? Explain how your answer relates to the applet’s dotplot.
+
+###  2.2.27: Question 24c.
+
+Is this study’s result statistically significant?
+
+###  2.2.28: Question 24d.
+
+Do the results of this study suggest that Harley just guessing is a plausible
+explanation for Harley picking the correct cup 6 out of 10 times?
+
+###  2.2.29: Question 24e.
+
+Does this study prove that Harley cannot understand the mechanical arm?
+
+###  2.2.30: Question 25.
+
+Compare the analyses between the two studies. How does the unusualness of the
+observed statistic compare between the two studies? Does this make sense based
+on the value of the observed statistic in the two studies? Does this make
+sense based on how the two studies were designed? Explain. (Hint: Why might
+the results differ for human and mechanical arms? Why would this matter?)
+

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_9-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing multiple proportions: Simulation-based approach</title>
+
+<subsection> 
+ <title>Recruiting organ donors</title>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<p>Previously we considered <url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">
+  a study</url> that investigated how to encourage people to be more likely to become organ donors. 
+  At the time, we did not formally analyze the data from the study. Now we are studying methods for 
+  comparing three groups, so we can further analyze the data and draw inferential conclusions from 
+  this study.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+<p>Recall that researchers asked volunteer subjects to imagine they moved to a new state, 
+applied for a driver's license, and needed to decide whether to become an organ donor. Researchers 
+created three different versions of the survey, each with a different donor recruiting strategy. 
+Subjects were randomly assigned to one of the
+three types of recruiting strategies:
+<ul>
+<li>The default option is to be an organ donor, and individuals have to opt out of organ donation (opt-out group)</li>
+<li>The default option is to not be an organ donor, and individuals have to opt in to organ
+donation (opt-in group)</li>
+<li>There is no default option, and individuals have to choose whether they will be an organ
+donor (neutral group)</li>
+</ul>
+</p>
+
+<activity>
+ <!-- Question 1 -->
+<statement>
+<p>What are the observational units? What are the variables? Are the variables categorical or 
+quantitative? If categorical, how many categories do they have? Also, identify the roles 
+(explanatory or response) of the variables.</p>
+</statement>
+</activity>
+
+<activity>
+ <!-- Question 2 -->
+<statement>
+<p>Did this study make use of random sampling, random assignment, both, or neither? Also 
+describe the implication of your answer in terms of scope of conclusions that can 
+potentially be drawn from this study.</p>
+</statement>
+</activity>
+
+<activity>
+ <!-- Question 3 -->
+<statement>
+<p>Did this study pair subjects in one group with subjects in another group or are the 
+subjects in the different recruiting groups independent of each other?</p>
+</statement>
+</activity>
+
+<activity> 
+ <!-- Question 4 -->
+  <introduction>
+    <p>Let's write out the hypotheses.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Write the appropriate null and alternative hypotheses (in words) using the 
+        language of association between the explanatory and response variables.        
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Express the null hypothesis in symbols. (Hint: Remember that hypotheses are 
+        always about parameters, so define and use appropriate symbols for parameters.)
+      </p>
+    </statement>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+<activity> 
+ <!-- Question 5 -->
+  <introduction>
+    <p>Researchers found that 23 of 55 subjects in the opt-in group chose to be organ donors, 
+    41 of 50 in the opt-out group chose to be organ donors, and 44 of 56 in the neutral group 
+    chose to be organ donors.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Based on these counts, produce a two-way table of counts, putting the explanatory variable in columns. (Hint: You have seen this table earlier!)
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        For each of the three groups, calculate the conditional proportion who agreed to become an organ donor.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Produce a segmented bar graph (by hand or with the 
+        <url href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1">
+        Multiple Proportions applet</url>) to compare these conditional proportions across the three groups.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Comment on what your calculations and graph reveal about whether the default option used in the question 
+        appears to affect how likely the person is to become an organ donor.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences beyond the data</title>
+<p>We see some differences in the sample proportions of individuals who chose to be organ donors across the 
+three treatments, but are these differences large enough to be statistically significant? In other words, 
+do these data provide strong evidence of an association between donor recruiting strategy (opt-in, opt-out, 
+neutral) and choosing to become an organ donor in the population?</p>
+
+<activity>
+ <!-- Question 6 -->
+<statement>
+<p>Suggest two possible explanations for how these observed proportions could have turned out to be as different 
+from each other as they are. (Hint: Think about what our null and alternative hypotheses are.)</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Applying the 3S Strategy</title>
+<p>To investigate, we will see how we can apply the 3S strategy to these data. Because researchers are 
+attempting to minimize (or at least control) the probability of Type I errors, in cases with multiple 
+groups they first do an overall test. However, this requires computing a single statistic and considering 
+the null distribution of that statistic. Let's look at this approach now.</p>
+
+<activity> 
+ <!-- Question 7 -->
+  <introduction>
+    <p>Statistic: What statistic would you propose?</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Propose a formula for a statistic that could be used to measure how different the three sample 
+        proportions are. (Hint: The key here is that the statistic needs to provide a single number that 
+        somehow focuses on differences between/among the observed sample proportions.)
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        For the statistic you propose, would a large value or small value give evidence for the 
+        alternative hypothesis that at least one recruiting strategy has a different probability of 
+        someone agreeing to be a donor?
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<p>When we compared two proportions, we used the difference in two proportions as the statistic. 
+Here there are multiple proportions. There are actually several reasonable ways of summarizing 
+the differences among the groups in one number. Once you have settled on a statistic, you apply 
+the 3S strategy as before—simulate the distribution of the statistic under the null hypothesis 
+and then see where the observed value of the statistic falls in that distribution.
+</p>
+
+<activity>
+ <!-- Question 8 -->
+<statement>
+<p>One possible statistic is p̂ (max) - p̂ (min). Review the conditional proportions you determined
+in question 5b and calculate the observed value of this statistic for these data. Why might this
+be a less than satisfactory choice?</p>
+</statement>
+</activity>
+
+<p>However, this statistic ignores some of the groups. Another reasonable statistic to calculate 
+is the mean of the absolute values of group differences for each pair of conditional proportions. 
+(We could call this statistic <term>Mean Group Diff</term> for the mean of group differences.)</p>
+
+<activity> 
+ <!-- Question 9 -->
+  <introduction>
+    <p>Let's construct the Mean Group Diff statistic for these data by going through the
+    following steps.</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Review the conditional proportions of organ donors you determined in question 5b and 
+        calculate the group differences in these proportions for each pair: Opt-out minus 
+        opt-in, opt-out minus neutral, and opt-in minus neutral.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Calculate the mean of the absolute values of these group differences.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<p>So which statistic should you use? And how can you use the statistic to estimate a 
+p-value? We'll consider those questions later.</p>
+<p>Simulation: We first saw how we can simulate a null hypothesis of no association by 
+shuffling the response variable outcomes across the explanatory variable groups. This 
+models the random assignment process used in the data collection process, and, assuming 
+the null hypothesis is true, “breaks any potential association” between the
+response and explanatory variables. We modeled this with playing cards previously.
+</p>
+
+<activity>
+ <!-- Question 10 -->
+<statement>
+<p>Describe how you would model a simulation of the null hypothesis with red and black playing cards now that there are three explanatory variable groups instead of two. Make sure to tell how many black cards you would need and how many red ones. Also tell what each color of cards would represent. How many cards would you deal out to each group? What would you calculate after dealing them out?</p>
+</statement>
+</activity>
+
+<activity> 
+ <!-- Question 11 -->
+  <introduction>
+    <p>
+      Now let's use the <url href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1">
+      Multiple Proportions applet</url> to simulate a null distribution of these Mean Group Diff statistics. This null 
+      distribution is again used to measure the strength of evidence provided by the observed statistic against the null 
+      hypothesis. Open the <url href="https://static-content2.zybooks.com/isi/data/prelim/OrganDonor.txt">Organ Donor 
+      data file</url> and paste the two columns (with column names) into the applet
+      and press <em>Use Data</em>. (Or enter/paste in the two-way table of counts in the <em>Sample data</em>
+      window and press <em>Use Table</em>.) Check the <em>Show table</em> box and verify that the sample
+      proportions of organ donors match your answers from #5(b) and the observed Mean
+      Group Diff statistic shown matches your answer from #9(b). If you cannot see the whole
+      table, click on the lower right corner and drag it to make the table larger.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Now check Show Shuffle Options and leave Number of Shuffles at 1. Press Shuffle Response to 
+        perform one shuffle of the response variable values. You should see  the shuffled response 
+        variable, the new two-way table for the simulated data, and the value of the simulated statistic 
+        (Most Recent Shuffled Mean Group Diff) which is
+        also placed in blue on the graph on the right. Select the Plot radio button to see the shuffled 
+        segmented bar graph. How does the distribution across the groups for the shuffled data compare 
+        to the original data? Is the simulated Mean Group Diff statistic value closer to zero than the 
+        observed value of the Mean Group Diff statistic?
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Now enter 999 for the Number of Shuffles and press Shuffle Responses. This repeats 
+        the shuffling of the response variable 999 more times for a total of 1000 repetitions. 
+        You should see a graph of a null distribution of the Mean Group Diff statistics. What 
+        is the shape of this distribution? Why is it not a bell-shaped curve centered at zero?
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<activity>
+ <!-- Question 12 -->
+<statement>
+<p>Strength of evidence: To estimate a p-value, determine how often the observed value 
+of the statistic, or something even larger, occurred in the null distribution. (Hint: 
+Enter the observed value for the Mean Group Diff statistic from the research study in 
+the Count Samples box and press Count.)</p>
+</statement>
+</activity>
+
+<activity>
+ <!-- Question 13 -->
+<statement>
+<p>Based on the p-value, summarize the strength of evidence that the sample data provide
+against the null hypothesis.</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions</title>
+
+<activity>
+ <!-- Question 14 -->
+<statement>
+<p>Generalization: Comment on how the sample was obtained and to which population your conclusion
+can be generalized.</p>
+</statement>
+</activity>
+
+<activity>
+ <!-- Question 15 -->
+<statement>
+<p>Causation: Comment on how the study was designed and whether a cause-and-effect conclusion is
+warranted from this study.</p>
+</statement>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead</title>
+
+<activity>
+ <!-- Question 16 -->
+<statement>
+<p>Summarize your conclusion for the researchers. Do you have any concerns about the study design? 
+Any comments on sample size? Are there other limitations that you feel need to be addressed? Are 
+there specific improvements you would suggest to make this study better? Based on what you concluded 
+from this study, can you suggest one or two follow-up studies that could be carried out?</p>
+</statement>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,8 @@
+(function(){const t=document.createElement("iframe")
+t.src="https://7pdrvq9vj4n5.statuspage.io/embed/frame",t.style.position="fixed",t.style.border="none",t.style.boxShadow="0 20px 32px -8px rgba(9,20,66,0.25)",t.style.zIndex="9999",t.style.transition="left 1s ease, bottom 1s ease, right 1s ease",t.title="zyBooks Status",t.ariaHidden=!0
+const e=screen.width<450
+e?(t.src+="?mobile=true",t.style.height="20vh",t.style.width="100vw",t.style.left="-9999px",t.style.bottom="-9999px",t.style.transition="bottom 1s ease"):(t.style.height="115px",t.style.width="320px",t.style.left="auto",t.style.right="-9999px",t.style.bottom="calc(100% - 175px)"),document.body.appendChild(t)
+const s={showFrame:function(){t.style.display="revert",e?(t.style.left="0",t.style.bottom="0"):(t.style.left="auto",t.style.right="60px")},dismissFrame:function(){t.style.left="-9999px",t.style.display="none"}}
+window.addEventListener("message",(t=>{t.data.action&&s.hasOwnProperty(t.data.action)&&s[t.data.action](t.data)}),!1),window.statusEmbedTest=s.showFrame})()
+
+//# sourceMappingURL=status-757662ddf0d94b9a612be12be3f345f7.map

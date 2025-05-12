@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file provides the overall configuration for your PreTeXt
+    project. To edit the content of your document, open `source/main.ptx`
+    (default location).
+-->
+<project>
+  <targets>
+    <!-- To build this target, run `pretext build web` -->
+    <target name="web">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>../worksheets-html</output-dir>
+    </target>
+    <target name="print" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>../worksheets-pdf</output-dir>
+    </target>
+    <target name="print-i" pdf-method="xelatex">
+      <format>pdf</format>
+      <source>source/main_investigations.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>../intestigations-pdf</output-dir>
+    </target>
+    <target name="print-latex">
+      <format>latex</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>../print-latex</output-dir>
+    </target>
+    <target name="solutions">
+      <format>pdf</format>
+      <source>source/main.ptx</source>
+      <publication>publication/pub-solutions.ptx</publication>
+      <output-dir>../ws-solutions</output-dir>
+    </target>
+    <target name="subset">
+      <format>html</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <output-dir>output/subset</output-dir>
+      <stringparam key="debug.skip-knowls" value="yes"/>
+      <!-- edit this to change the section/chapter/etc. to include
+           in your subset build -->
+      <xmlid-root>section_2_2</xmlid-root>
+    </target>
+    <target name="ch-1">
+      <format>custom</format>
+      <source>source/slides-1.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <xsl>xsl/pretext-revealjs.xsl</xsl>
+      <output-dir>../slides</output-dir>
+      <output-filename>ch-1.html</output-filename>
+    </target>
+    <target name="2-1">
+      <format>custom</format>
+      <source>source/slides-2-1.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <xsl>xsl/pretext-revealjs.xsl</xsl>
+      <output-dir>../slides</output-dir>
+      <output-filename>sec-2-1.html</output-filename>
+    </target>
+    <target name="2-2">
+      <format>custom</format>
+      <source>source/slides-2-2.ptx</source>
+      <publication>publication/publication.ptx</publication>
+      <xsl>xsl/pretext-revealjs.xsl</xsl>
+      <output-dir>../slides</output-dir>
+      <output-filename>sec-2-2.html</output-filename>
+    </target>
+  <target name="2-3">
+    <format>custom</format>
+    <source>source/slides-2-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-2-3.html</output-filename>
+  </target>
+  <target name="2-4">
+    <format>custom</format>
+    <source>source/slides-2-4.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-2-4.html</output-filename>
+  </target>
+  <target name="2-5">
+    <format>custom</format>
+    <source>source/slides-2-5.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-2-5.html</output-filename>
+  </target>
+  <target name="3-1">
+    <format>custom</format>
+    <source>source/slides-3-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-3-1.html</output-filename>
+  </target>
+  <target name="3-2">
+    <format>custom</format>
+    <source>source/slides-3-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-3-2.html</output-filename>
+  </target>
+  <target name="3-3">
+    <format>custom</format>
+    <source>source/slides-3-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-3-3.html</output-filename>
+  </target>
+  <target name="3-4">
+    <format>custom</format>
+    <source>source/slides-3-4.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-3-4.html</output-filename>
+  </target>
+
+  <target name="4-1">
+    <format>custom</format>
+    <source>source/slides-4-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-4-1.html</output-filename>
+  </target>
+
+  <target name="4-2">
+    <format>custom</format>
+    <source>source/slides-4-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-4-2.html</output-filename>
+  </target>
+
+  <target name="4-3">
+    <format>custom</format>
+    <source>source/slides-4-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-4-3.html</output-filename>
+  </target>
+
+  <target name="4-4">
+    <format>custom</format>
+    <source>source/slides-4-4.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-4-4.html</output-filename>
+  </target>
+
+  <target name="4-5">
+    <format>custom</format>
+    <source>source/slides-4-5.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-4-5.html</output-filename>
+  </target>
+
+  <target name="5-1">
+    <format>custom</format>
+    <source>source/slides-5-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-5-1.html</output-filename>
+  </target>
+
+  <target name="5-2">
+    <format>custom</format>
+    <source>source/slides-5-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-5-2.html</output-filename>
+  </target>
+
+  <target name="6-1">
+    <format>custom</format>
+    <source>source/slides-6-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-6-1.html</output-filename>
+  </target>
+
+  <target name="6-2">
+    <format>custom</format>
+    <source>source/slides-6-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-6-2.html</output-filename>
+  </target>
+
+  <target name="6-3">
+    <format>custom</format>
+    <source>source/slides-6-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-6-3.html</output-filename>
+  </target>
+
+  <target name="7-1">
+    <format>custom</format>
+    <source>source/slides-7-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-7-1.html</output-filename>
+  </target>
+
+  <target name="7-2">
+    <format>custom</format>
+    <source>source/slides-7-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-7-2.html</output-filename>
+  </target>
+
+  <target name="7-3">
+    <format>custom</format>
+    <source>source/slides-7-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-7-3.html</output-filename>
+  </target>
+
+  <target name="8-1">
+    <format>custom</format>
+    <source>source/slides-8-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-8-1.html</output-filename>
+  </target>
+
+  <target name="8-2">
+    <format>custom</format>
+    <source>source/slides-8-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-8-2.html</output-filename>
+  </target>
+
+  <target name="8-3">
+    <format>custom</format>
+    <source>source/slides-8-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-8-3.html</output-filename>
+  </target>
+
+  <target name="9-1">
+    <format>custom</format>
+    <source>source/slides-9-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-9-1.html</output-filename>
+  </target>
+
+  <target name="9-2">
+    <format>custom</format>
+    <source>source/slides-9-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-9-2.html</output-filename>
+  </target>
+
+  <target name="9-3">
+    <format>custom</format>
+    <source>source/slides-9-3.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-9-3.html</output-filename>
+  </target>
+
+  <target name="9-4">
+    <format>custom</format>
+    <source>source/slides-9-4.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-9-4.html</output-filename>
+  </target>
+
+  <target name="10-1">
+    <format>custom</format>
+    <source>source/slides-10-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-10-1.html</output-filename>
+  </target>
+
+  <target name="10-2">
+    <format>custom</format>
+    <source>source/slides-10-2.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-10-2.html</output-filename>
+  </target>
+
+  <target name="11-1">
+    <format>custom</format>
+    <source>source/slides-11-1.ptx</source>
+    <publication>publication/publication.ptx</publication>
+    <xsl>xsl/pretext-revealjs.xsl</xsl>
+    <output-dir>../slides</output-dir>
+    <output-filename>sec-11-1.html</output-filename>
+  </target>
+</targets>
+  <executables>
+      <latex>latex</latex>
+      <pdflatex>pdflatex</pdflatex>
+      <xelatex>xelatex</xelatex>
+      <pdfsvg>pdf2svg</pdfsvg>
+      <asy>asy</asy>
+      <sage>sage</sage>
+      <pdfpng>convert</pdfpng>
+      <pdfeps>pdftops</pdfeps>
+      <node>node</node>
+      <liblouis>file2brl</liblouis>
+    </executables>
+</project>

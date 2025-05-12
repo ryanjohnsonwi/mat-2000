@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>1-1 : Preliminary: Introduction to the six-step method</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <slide>
+      <p>
+        <term>Statistics</term> is a discipline that guides researchers in 
+  collecting, exploring, and drawing conclusions from data.  This course 
+  will demonstrate the statistical investigation process for a variety of 
+  fields of application.
+</p>
+    </slide>
+    <section>
+      <title>The six steps of a statistical investigation</title>
+      <slide>
+        <p>
+    The <term>six steps of a statistical investigation</term> is a framework 
+    for learning from data.  The six steps are a guide for collecting and 
+    interpreting data in keeping with the scientific method. When research 
+    questions are investigated with the six-step method, conclusions are 
+    supported by systematic study rather than individual experiences. The six 
+    steps are described in the table below.
+  </p>
+      </slide>
+      <slide>
+        <p>
+          <dl>
+            <li>
+              <title>1. Ask a research question.</title>
+              <p>
+          Confirm the question can be addressed by collecting data. Typical 
+          questions involve comparing groups, asking how two characteristics 
+          are related, or surveying people's opinions.
+        </p>
+            </li>
+            <li>
+              <title>2. Design a study and collect data.</title>
+              <p>
+          Plan how to select the people or objects to be studied, decide how to 
+          gather the relevant data, and carry out the data collection in a careful, 
+          systematic manner.
+        </p>
+            </li>
+            <li>
+              <title>3. Explore the data.</title>
+              <p>
+          Look for patterns that relate to the research question or raise additional 
+          questions.
+        </p>
+            </li>
+            <li>
+              <title>4. Draw inferences beyond the data.</title>
+              <p>
+          Determine whether any findings in the data reflect a genuine tendency and 
+          estimate the strength of that tendency.
+        </p>
+            </li>
+            <li>
+              <title>5. Formulate conclusions</title>
+              <p>
+          Consider whether inferences made in step 4 can be generalized to processes 
+          or groups beyond those represented in the study. Identify whether a 
+          cause-and-effect conclusion is warranted.
+        </p>
+            </li>
+            <li>
+              <title>6. Look back and ahead.</title>
+              <p>
+          Point out limitations of the study and suggest new studies to build on the findings.
+        </p>
+            </li>
+          </dl>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <title> Asking a research question</title>
+        <p>State a research question you would be interested in answering.</p>
+      </slide>
+    </section>
+    <section>
+      <title> What affects the choice to become an organ donor?</title>
+      <slide>
+        <p>Researchers <url href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1324774">
+  Johnson and Goldstein</url> asked 161 volunteer participants to imagine moving to 
+  a new state and applying for a driver's license. One part of the application asked 
+  whether the participants would agree to be an organ donor. Participants were presented 
+  with one of three different forms of the question:
+</p>
+      </slide>
+      <slide>
+        <p>
+          <ul>
+            <li> You will not be a donor unless you opt in.</li>
+            <li> You will be a donor unless you opt out.</li>
+            <li> Choose whether or not to be a donor (neutral).</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <p/>
+      </slide>
+    </section>
+    <section>
+      <title> Basic terminology</title>
+      <slide>
+        <p>Some basic terminology of data is required. </p>
+      </slide>
+      <slide>
+        <p>
+          <ul>
+            <li>
+              <p>
+                <term>Data</term> are the values measured or categories recorded on 
+          individual objects of interest.
+        </p>
+            </li>
+            <li>
+              <p>
+          The <term>observational unit</term> is the individual object on which 
+          data are recorded.
+        </p>
+            </li>
+            <li>
+              <p>
+          A <term>variable</term> is a characteristic being recorded about the 
+          observational units. 
+        </p>
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                A <term>quantitative variable</term> has numeric values for which 
+                ordinary arithmetic (addition, multiplication) makes sense. 
+              </p>
+                  </li>
+                  <li>
+                    <p>
+                A <term>categorical variable</term> places observational units 
+                into categories.
+              </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+          A <term>distribution</term> is the pattern of outcomes of a variable.
+        </p>
+            </li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Remark 1: </title>
+        <remark>
+          <p>
+      The best way to determine if a variable is quantitative or categorical is to ask the 
+      question, <q>Can I take the average of this? And would that make sense?</q> For example, 
+      I could ask a group of people to tell me what ZIP code they currently live in, and I 
+      could technically take the average of those numbers, but it wouldn't make sense to do 
+      so. That is because ZIP codes are categorical.
+    </p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <title> Study design elements</title>
+        <p>For the research question you stated at the beginning of the section, identify the 
+  observational units and variable(s) you would use,  and describe how you would collect 
+  the data. For each variable, indicate whether the variable would be quantitative or 
+  categorical.</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

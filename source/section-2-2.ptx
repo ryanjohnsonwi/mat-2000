@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_2_4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Measuring the strength of evidence</title>
+
+<subsection> 
+ <title>Tasting water</title>
+<p>People spend a lot of money on bottled water. But do they really prefer bottled water to ordinary tap water? Researchers at Longwood University (<url href="https://doi.org/10.1080/10691898.2010.11889484">Lunsford and Dowling Fink, 2010</url>) investigated this question by presenting people who came to a booth at a local festival with four cups of water. Three cups contained different brands of bottled water, and one cup was
+filled with tap water. Each subject (person) was asked which of the four cups of water they most preferred. Researchers kept track of how many people chose bottled water in order to see whether bottled water was chosen significantly more often than would be expected by random chance.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question:</title>
+<activity>
+  <statement>
+    <p>What is the research question that the researchers hoped to answer?</p>
+  </statement>
+  <solution>
+    <p>
+      Do people really prefer bottled water more than tap water?
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data:</title>
+<activity>
+  <statement>
+    <p>Identify the observational units in this study.</p>
+  </statement>
+  <solution>
+    <p>
+      Each subject (person)
+    </p>
+  </solution>
+</activity>
+
+<activity>
+  <statement>
+    <p>Identify the variable. Is the variable quantitative or categorical?</p>
+  </statement>
+  <solution>
+    <p>
+      The variable is which of the four cups was chosen as the best tasting. It is categorical.
+    </p>
+  </solution>
+</activity>
+
+<definition>
+ <statement><p>
+A <term>binary variable</term> is a categorical variable with only two outcomes. Often we convert
+categorical variables with more than two outcomes (e.g., four brands of water) into
+binary variables (e.g., tap water or not). In this case we also define one outcome to be a “success” and one to be a <q>failure.</q></p>
+</statement>
+</definition>
+<activity>
+  <statement>
+    <p>Rewrite the variable as a binary variable.</p>
+  </statement>
+  <solution>
+    <p>
+      Whether the person chose bottled water as the best tasting, or not
+    </p>
+  </solution>
+</activity>
+
+<activity>
+  <statement>
+    <p>Describe the parameter of interest (in words). (Hint: The parameter is the long-run proportion of …?)</p>
+  </statement>
+  <solution>
+    <p>
+      The parameter is the long-run proportion of subjects choosing bottled water as the best tasting when given a choice between 4 cups.
+    </p>
+  </solution>
+</activity>
+
+<activity xml:id="q-2-2-6"> 
+  <statement>
+    <p>
+      One possibility here is that subjects have an equal preference among all four waters and so are essentially selecting one of the four cups at random. In this case what is the long-run proportion (i.e., probability) that a subject in this study would select bottled water?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <m>\frac{3}{4}</m>
+    </p>
+  </solution>
+</activity>
+
+<activity xml:id="q-2-2-7"> 
+  <statement>
+    <p>
+      Another possibility is that the subjects are more likely to prefer bottled water than the tap water. In this case what can you say about the long-run proportion that a subject in this study would select bottled water? (Hint: You are not to specify a particular value this time; instead indicate a direction from a particular value.)
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Greater than <m>\frac{3}{4}.</m>
+    </p>
+  </solution>
+</activity>
+
+<definition>
+ <statement>
+  <p>
+    <ul>
+      <li><term>Null hypothesis</term> typically states the "by-random-chance-alone" explanation, which is used to create the chance model, also called the null model. A null hypothesis is expressed symbolically as <m> H_0</m>. </li>
+      <li> <term>Alternative hypothesis</term> typically states the "an-effect-exists" explanation that contradicts the null hypothesis. An alternative hypothesis is expressed symbolically as <m> H_a</m> .</li>
+    </ul>
+  </p>
+
+</statement>
+</definition>
+
+<activity>
+  <statement>
+    <p>Your answers to <xref ref="q-2-2-6"/> and <xref ref="q-2-2-7"/> should be the null and alternative hypotheses for this study.
+    Which is which?</p>
+  </statement>
+  <solution>
+    <p>
+      Null hypothesis: the long-run proportion of subjects choosing bottled water as the best tasting is <m>\frac{3}{4}</m> (\<xref ref="q-2-2-6"/>)
+    </p>
+    <p>
+      Alt hypothesis: the long-run proportion of subjects choosing bottled water as the best tasting is <m>&gt;\frac{3}{4}</m> (\<xref ref="q-2-2-7"/>)
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data:</title>
+
+<activity>
+  <statement>
+    <p>Researchers found that 24 of the 27 subjects selected bottled water. Calculate the value of the relevant statistic.</p>
+  </statement>
+  <solution>
+    <p>
+      24/27
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Use of symbols</title>
+<p>Mathematical symbols can be used to represent quantities and simplify your writing. 
+The Greek letter <m>\pi</m> (pronounced "pie") is used to represent a parameter that is a long-run proportion, such as the probability that a (future) subject in this study would choose bottled water as most preferred.
+The symbol <m>\hat{p}</m> (pronounced "p-hat") is used to represent a statistic that is the proportion of "successes" in a sample, such as the proportion of subjects in this study who did choose bottled water as the most preferred. The symbol <m>n</m> is used to represent the sample size.</p>
+
+<activity>
+  <statement>
+    <p>What is the value of <m>\hat{p}</m> in this study?</p>
+  </statement>
+  <solution>
+    <p>
+      0.889 or 24/27
+    </p>
+  </solution>
+</activity>
+
+<activity>
+<statement>
+<p>What is the value of n in this study?</p>
+</statement>
+<solution>
+  <p>
+    n = 27
+  </p>
+</solution>
+</activity>
+
+<activity>
+<statement>
+<p>Hypotheses are always conjectures about the unknown parameter π. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using π.</p>
+</statement>
+<solution>
+  <p>
+    <mdn>
+      <mrow>H_0 \amp = \pi = \frac{3}{4} </mrow>
+      <mrow>H_a \amp &gt; \frac{3}{4} </mrow>
+    </mdn>
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences:</title>
+
+ <activity>
+<statement>
+<p>Is the sample proportion who selected bottled water in this study more than the probability specified in the null hypothesis?</p>
+</statement>
+<solution>
+  <p>
+    Yes, 24/27=0.889 &gt; 0.75
+  </p>
+</solution>
+</activity>
+
+<activity> 
+<statement>
+<p>Is it possible that this proportion could turn out to be this large even if the null
+hypothesis was true (i.e., even if people did not really prefer bottled water and were
+essentially selecting at random from among the four cups)?</p>
+</statement>
+<solution>
+  <p>
+    Yes, it is possible.
+  </p>
+</solution>
+</activity>
+
+<p>As we did with Buzz and Doris previously, we will use simulation to investigate how surprising the observed sample result (24 of 27 selecting bottled water) would be if in fact subjects did not prefer bottled water and so each had a 3/4 probability of selecting bottled water. (Note also that our null model assumes the same probability for all subjects.)</p>
+
+<remark> 
+ <title> Think About It</title><p>Can we use a coin to represent the chance model specified by the null hypothesis like before? If not, can you suggest a different random device we could use? What needs to be different about our simulation this time?</p>
+</remark>
+
+<activity> 
+<statement>
+<p>Explain why we cannot use a simple coin toss to simulate the subjects' choices, as we did with the Buzz/Doris study.</p>
+</statement>
+<solution>
+  <p>
+    We can’t use a coin because the null hypothesis (by chance) probability is not 1/2.
+  </p>
+</solution>
+</activity>
+
+<activity> 
+<statement>
+<p>We could do the simulation using a set of four playing cards: one black and three red.
+Explain how the simulation would work in this case.</p>
+</statement>
+<solution>
+  <p>
+    One possible answer:
+  </p>
+  <p>
+    Shuffle the four cards. Randomly choose one. If the card is red, <q>success</q> if not red, <q>not success.</q> Keep track of how many times a red card is chosen when you randomly choose a card 27 times. Repeat this process 1000 times.
+  </p>
+</solution>
+</activity>
+
+<activity>
+  <title>Simulating with Spinners</title>
+  <introduction>
+    <p>
+      Another option would be to use a spinner like you would
+      use when playing a child's board game.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Explain how the simulation would work if you
+        were using a spinner. In particular:
+        What does each region represent?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Three quarters of the spinner is shaded to represent <q>success</q> (chose bottled water) and
+one quarter of the circle is shaded to represent <q>failure</q> (chose tap water).
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>How many spins of the spinner will you need to do in order to simulate one repetition of the experiment when there is equal preference between the four waters (null hypothesis is true)?</p>
+    </statement>
+    <solution>
+      <p>
+        Spin the spinner 27 times.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+  <title>Simulating with an applet</title>
+  <introduction>
+    <p>
+      We will now use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion applet</url> to conduct this simulation analysis. Notice that the applet will show us what it would be like if we were simulating with spinners.
+    </p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p>
+        First enter the <term>probability of heads/probability of success</term> value specified in the null hypothesis.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Do not grade this task.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Enter the appropriate <term>sample size</term> (number of subjects in this study) into the tool.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Do not grade this task.
+      </p>
+    </solution>
+  </task>
+
+<task> 
+<statement>
+<p>Enter 1 for the number of samples, and press Draw Samples. Report the number of
+“successes” in this simulated sample.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary. 
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Now, select the radio button for “Proportion of successes.” Report the proportion of
+successes in this simulated sample. Use your answer to “c” to verify how this value is
+calculated.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary. 
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Leaving the <q>Proportion of successes</q> radio button selected but unchecking the <q>Animate</q> box, click on Draw Samples four more times. Do you get the same results each time?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  (They will probably say <q>no</q>, but there is a slight chance that the results are exactly the same.)
+  </p>
+</solution>
+</task>
+
+<task>
+ 
+<statement>
+<p>Now enter 995 for the number of samples and click on Draw Samples, bringing
+the number of simulated samples to 1,000. Comment on the center, variability, and
+shape of the resulting distribution of sample proportions.</p>
+</statement>
+<solution>
+  <p>
+    Center: about 20 or 21 (three quarters of 27). Variability: most outcomes occur between 17 and 24. Shape: bell-shaped.
+  </p>
+</solution>
+</task>
+</activity>
+
+<p>This distribution of simulated sample proportions is called the <term>null distribution</term>, because it is based on assuming the null hypothesis to be true.</p>
+
+<activity xml:id="q2-2-19">
+<statement>
+<p>Recall that the observed value of the sample proportion who selected bottled water in
+this study was <m>\hat{p} = 24/27 \approx 0.8889</m>. Looking at the null distribution you have simulated,
+is this a very unlikely result when the null hypothesis is true? In other words, is this
+value far in the tail of the null distribution?</p>
+</statement>
+<solution>
+  <p>
+    The outcome is somewhat unlikely as it is near the tail of the distribution.
+  </p>
+</solution>
+</activity>
+
+<p>You might very well find that <xref ref="q2-2-19"/> is a bit of a tough call. The value 0.8889 is not far
+in the tail of the distribution, but it's also not near the middle of the distribution. To help
+make a judgment about strength of evidence in this case, we can count how many (and what
+proportion) of the simulated sample proportions are as extreme or more extreme than the
+observed value.</p>
+
+<activity xml:id="q2-2-20"> 
+<statement>
+<p>Use the applet to count how many (and what proportion) of the simulated sample
+proportions are as or more extreme than the observed value. Make sure that the
+≥ inequality symbol is selected (to match the alternative hypothesis). Then enter
+0.8889 (the observed sample proportion who chose bottled water) in the box to the
+left of the Count button. Then click on the Count button. Record the number and
+proportion of simulated sample proportions that are as extreme or more extreme than
+the observed value.</p>
+</statement>
+<solution>
+  <p>
+    An example answer is below.  Their answer should be fairly close.
+  </p>
+  <p>
+    Approximately 68/1000 (0.068) of the simulated sample proportions are 0.888 or greater.
+  </p>
+</solution>
+</activity>
+
+<definition>
+ <statement>
+  <p>
+    The <term>p-value</term> is estimated as the proportion of simulated statistics in the null distribution that are at least as extreme (in the direction of the alternative hypothesis) as the value of the statistic actually observed in the research study.
+  </p>
+</statement>
+</definition>
+<p>
+How do we evaluate this p-value as a judgment about strength of evidence provided by the
+sample data against the null hypothesis? One answer is: The smaller the p-value, the stronger
+the evidence against the null hypothesis and in favor of the alternative hypothesis. But how
+small is small enough to regard as convincing? There is no definitive answer, but here are
+some guidelines:
+</p>
+ 
+ 
+<table>
+  <title> Guidelines for evaluating strength of evidence from a p-value. </title>
+  <tabular>
+    <row header="yes">
+      <cell>Range</cell>
+      <cell>Strength of evidence</cell>
+    </row>
+    <row>
+      <cell>0.10 &lt; p-value</cell>
+      <cell>Little to no evidence against the null hypothesis.</cell>
+    </row>
+    <row>
+      <cell>0.05 &lt; p-value <m>\leq</m> 0.10</cell>
+      <cell>Moderate evidence against the null hypothesis.</cell>
+    </row>
+    <row>
+      <cell>0.01  &lt;  p-value <m>\leq</m>  0.05</cell>
+      <cell>Strong evidence against the null hypothesis.</cell>
+    </row>
+    <row>
+      <cell>p-value <m>\leq</m> 0.01</cell>
+      <cell>Very strong evidence against the null hypothesis.</cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ 
+<statement>
+<p>Is the approximate p-value from your simulation analysis (your answer to <xref ref="q2-2-20"/>) small
+enough to provide much evidence against the null hypothesis that subjects prefer bottled
+water equally to the tap water? If so, how strong is this evidence? Explain.</p>
+</statement>
+<solution>
+  <p>
+    The p-value (0.068) gives us moderate evidence that people prefer bottled water more than tap (equivalently: moderate evidence against the null hypothesis).
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions:</title>
+
+<activity>
+<statement>
+<p>When computing p-values, <q>more extreme</q> is always measured in the direction of the
+alternative hypothesis. Use this fact to explain why you counted ≥ 24 in <xref ref="q2-2-20"/>.</p>
+</statement>
+<solution>
+  <p>
+    The alternative hypothesis was greater than.
+  </p>
+</solution>
+</activity>
+
+<activity>
+<statement>
+<p>Do you consider the observed sample result to be statistically significant? Recall that this
+means that the observed result is unlikely to have occurred by chance alone.</p>
+</statement>
+<solution>
+  <p>
+    While we have moderate evidence against the null, it is not strong so I would not say it is
+statistically significant.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead:</title>
+
+<activity>
+<statement>
+<p>How broadly are you willing to generalize your conclusions? Would you be willing to
+generalize your conclusions to water drinkers beyond the subjects in this study? How
+broadly? Explain your reasoning.</p>
+</statement>
+<solution>
+  <p>
+    If it were significant, I wouldn't be too comfortable generalizing this result to that many more people because we don't know much about who these 27 people are and how they might be different from a larger population of interest. We also don't know much about the water sources.
+  </p>
+</solution>
+</activity>
+
+<activity>
+<statement>
+<p>Suggest a new research question that you might investigate next, building on what you
+learned in this study.</p>
+</statement>
+<solution>
+  <p>
+    An example answer is below:
+  </p>
+  <p>
+    Further studies are needed with a more representative set of individuals. Could use tap water from different areas of the country to see if some tap waters were more easily distinguished from bottled water than others.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Exploring further</title>
+<p>Instead of focusing on the subjects who chose bottled water, you could instead analyze the data based on the subjects who chose tap water. Because 24 of 27 subjects chose bottled water, we know  3 of the 27 subjects chose tap water. Now let the parameter of interest (denoted by <m>\pi</m>) be the probability that a subject will select tap water as most preferred.</p>
+
+<activity>
+  <title>Tap Water Investigation</title>
+  <introduction>
+    <p>
+      Conduct a simulation analysis to assess the strength of evidence provided by the sample Data.
+    </p>
+  </introduction>
+  
+  <task>
+    <statement>
+      <p>
+        The research conjecture is that subjects tend to select tap water (more or less) often
+        than bottled water.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        less
+      </p>
+    </solution>
+  </task>
+
+<task> 
+<statement>
+<p>State the null hypothesis in words and in terms of the (newly defined) parameter π.</p>
+</statement>
+<solution>
+  <p>
+    Null hypothesis: the long-run proportion of subjects choosing tap water as the best
+tasting is 1/4 or Null: π= 1/4
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>State the alternative hypothesis in words and in terms of the (new) parameter π.</p>
+</statement>
+<solution>
+  <p>
+    Alternative hypothesis: the long-run proportion of subjects choosing tap water as the
+best tasting is less than 1/4 or Alt: π &lt; 1/4
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Calculate the observed value of the relevant statistic.</p>
+</statement>
+<solution>
+  <p>
+    3/27=0.111,
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Before you use the One Proportion applet to analyze these data, indicate what values you will input for
+Probability of success, Sample size, and Number of samples.</p>
+</statement>
+<solution>
+  <p>
+    Prob=0.25, sample size=27, number of samples=1000,
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Use the applet to produce the null distribution of simulated sample proportions.  What is the center, variability, and shape of the null distribution?</p>
+</statement>
+<solution>
+  <p>
+    center: 6 or 7, variability: most outcomes are between 2 and 12, shape: bell-shaped
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>In order to approximate the p-value, you will count how many of the simulated pro-
+portions are ______ or ______ (larger/smaller) and then divide by ______.</p>
+</statement>
+<solution>
+  <p>
+    0.111 or SMALLER and then divide by 1000
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Estimate the p-value from your simulation results.</p>
+</statement>
+<solution>
+  <p>
+    The p-value is approximately 0.07 (mark anything 0.05 to 0.09 correct)
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Interpret this p-value. (Hint: This is the probability of what, assuming what?)</p>
+</statement>
+<solution>
+  <p>
+    Probability of obtaining 0.111 or smaller assuming null hypothesis is true
+  </p>
+</solution>
+</task>
+
+<task> 
+<statement>
+<p>Evaluate this p-value: How much evidence do the sample data provide against the
+null hypothesis?</p>
+</statement>
+<solution>
+  <p>
+    Moderate evidence against null hypothesis, concluding that, in a blind taste test, people
+are less likely to prefer tap water than what would be expected by random chance.
+  </p>
+</solution>
+</task>
+
+</activity>
+
+
+<activity> 
+<statement>
+<p>Does your analysis based on the number who chose tap water produce similar conclusions
+to your previous analysis based on the number who chose bottled water? Explain.</p>
+</statement>
+<solution>
+  <p>
+    Yes, same result---doesn't matter whether you focus on choose tap or choose bottled. Evidence
+level is still the same.
+
+  </p>
+</solution>
+</activity>
+
+<p>
+  You should have found that it does not matter whether you focus on the number/
+  proportion that chose tap water or the number/proportion that chose bottled water. In other
+  words, it does not matter which category you define to be a “success” for the preferred water
+  variable. Your findings should be very similar provided that you make the appropriate
+  adjustments in your analysis:
+<ul>
+<li>Using 0.25 instead of 0.75 as the null value of the parameter</li>
+<li>Changing the alternative hypothesis to “<m>\pi \lt 0.25</m>” rather than “<m>\pi \gt 0.75</m>”</li>
+<li>Calculating the p-value as the proportion of samples with <m>\hat{p} \leq 0.1111</m> rather than <m>\hat{p} \geq 0.8889</m></li>
+</ul>
+</p>
+
+</subsection>
+
+</section>

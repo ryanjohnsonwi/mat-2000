@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section-3-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Theory-based Inference for a Population Mean</title>
+
+<subsection> 
+ <title>STEP 1: Ask a research question.</title>
+<p>How much do students at your school sleep on a typical night? Let's make the question more
+specific and ask about <em>last</em> night. Is the average less than the recommended eight hours?
+How can we estimate this population average?</p>
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Based on these questions, what is the population of interest? What is the parameter?
+What symbol do we use for this parameter?</p>
+</statement>
+<solution>
+  <p>
+    Population: All students at your school, Parameter: population average amount of time all
+    students at your school slept last night, symbol: <m>\mu</m>
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>STEP 2: Design a study and collect data.</title>
+<p>Let's investigate whether the mean amount of
+sleep last night for the population of all students at your school was less than 8 hours.</p>
+<activity>
+ <!--Question 2-->
+<statement>
+<p>Express the null and alternative hypotheses for investigating this question.</p>
+</statement>
+<solution>
+  <p>
+    Null hypothesis: The average length of time all students at your school slept last night (<m>\mu</m>) was 8 hours
+  </p>
+  <p>
+    Alternative hypothesis: The average length of time all students at your school slept last night was less than 8 hours
+  </p>
+</solution>
+</activity>
+
+<p>To test these hypotheses we need to collect data.</p>
+<activity>
+ <!--Question 3-->
+<statement>
+<p>Ideally, how should you obtain a sample from the population of all students at
+your school?</p>
+</statement>
+<solution>
+  <p>
+    Take a simple random sample by getting a listing of all students at your school and using a
+    random device to randomly choose a sample of students.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>What variable would you measure on each student?</p>
+</statement>
+<solution>
+  <p>
+    The number of hours slept last night.
+  </p>
+</solution>
+</activity>
+
+<p>Whereas obtaining a simple random sample of students from your school is an ideal way
+to attempt to get a representative sample, there is no question that it would take a fair bit of
+work to make that happen. So much so, that we might not want to do the study anymore! This
+happens frequently in Statistics, and so researchers often opt to use a convenience sample
+instead. One choice of a convenience sample of students at your school is to use your class.</p>
+<activity>
+ <!--Question 5-->
+<statement>
+<p>Identify at least one reason that your class is likely a good representation of all students
+at your school in terms of hours slept last night.</p>
+</statement>
+<solution>
+  <p>
+    (Various answers are acceptable.) Statistics classes often represent many different majors and/or class standings.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>Identify at least one reason that your class is likely not a good representation of all
+students at your school in terms of hours slept last night.</p>
+</statement>
+<solution>
+  <p>
+    (Various answers are acceptable.) The time of day your class meets may be a way your class is
+    not a good representation (if your class is in the morning, you may tend to have students who
+    got less sleep; if in the afternoon, you may tend to have students who got more sleep).
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Recall that convenience sampling may be ____ (biased/
+unbiased) whereas simple random sampling is ____ (biased/unbiased).</p>
+</statement>
+<solution>
+  <p>
+    Biased, Unbiased
+  </p>
+</solution>
+</activity>
+
+<p>We will revisit the implications of using your class as a sample of students from your college later when we evaluate the study. For now, let's gather the data.</p>
+<activity>
+ <!--Question 8-->
+<statement>
+<p>How much sleep (to the nearest quarter hour) did you get last night? Combine your
+answer with those of your classmates.</p>
+</statement>
+<solution>
+  <p>
+    (Your answer will vary.) We’ll use 7.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 9-->
+<statement>
+<p>Did you report a number of hours or a number of minutes slept?</p>
+</statement>
+<solution>
+  <p>
+    (Various answers are acceptable.) We used hours.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>When describing a quantitative variable, you should always be aware of the
+<term>measurement units</term> of the variable. Measurement units indicate information
+about the context and scaling of the variable (e.g., hours vs. days). Always include
+measurement units when describing your variable.</p>
+
+</remark>
+</subsection>
+
+<subsection> 
+ <title>STEP 3: Explore the data.</title>
+<p>After you collect data, the next step is to explore the data. In the case of a quantitative variable
+(like we have here), exploring the data is a bit more involved than earlier. Recall from the Preliminaries
+that we can summarize a quantitative variable using a dotplot and then describe the shape, center, variability,
+and unusual observations.</p>
+<p>Use the <url href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm">Descriptive Statistics</url>
+  applet to examine a dotplot of the sample data. To do this, press <em>Clear</em> to delete the existing data in
+  the applet and then copy and paste your class data (with a one-word variable name) into the <em>Sample data</em>
+  box and press <em>Use Data</em>.</p>
+<image source="3-3/descr-stats.png" width="40%">
+  <description>A screen shot of the Descriptive Statistics applet. The scores are shown pasted into the sample
+  data box.</description>
+</image>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>Summarize the shape, center (mean with appropriate symbol and measurement units), and variability (standard deviation with appropriate symbol and measurement units) for the sample of sleep times for your class. Also be sure to discuss any unusual observations or outliers in the data.</p>
+</statement>
+<solution>
+  <p>
+    (Various answers; this is the dataset posted on the textbook data page from one of the
+    authors’ classes.) Fairly symmetric, <m>\bar{x}=6.705, s = 1.297</m>
+  </p>
+  <image source="3-3/exercise-10.png">
+  </image>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Do these data provide any preliminary evidence that students at your school tend to
+sleep less than 8 hours a night?</p>
+</statement>
+<solution>
+  <p>
+    Yes
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>STEP 4: Draw inference beyond the data.</title>
+<p>Let's now explore what the distribution of
+this sample tells us about the strength of evidence against the null hypothesis.</p>
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Suppose we had taken many, many samples of the same size from the population at
+your school. If the null hypothesis is true, how do you predict the distribution of sample
+means will behave? Be sure to discuss any information you do not know.</p>
+</statement>
+<solution>
+  <p>
+    The distribution of sample means will be more symmetric and compact than the distribution of
+    sleep hours in each sample. We don't know if these samples were gathered using an unbiased
+    method, so they may not be representative of the broader population.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Simulation-based Approach: Applying the 3S Strategy to Hypotheses
+about a Population Mean</title>
+<p>To evaluate the strength of evidence that your sample data provide against the null hypothesis
+we need to investigate how often a sample mean as small as the one observed in your sample would occur
+if you were selecting a random sample from a population in which the mean sleep time really is 8 hours
+(null hypothesis). In essence, we will apply the 3S strategy as we have done before. A previous section
+showed that the sample mean should fall within two standard deviations <m>\dfrac{2\sigma}{\sqrt{n}}</m>
+of the population mean. Let's now look at using the sample standard deviation(s) instead of <m>\sigma</m>.</p>
+<activity>
+ <!--Question 13-->
+<statement>
+<p>Calculate and interpret the equation for the standard deviation.</p>
+</statement>
+<solution>
+  <p>
+    <m>\frac{1.297}{\sqrt{22}} \approx 0.2765</m> which is the variability in the distribution of sample means.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>Based on your answer to #13, does it seem surprising to get a sample mean like the one
+in your class survey if the population mean is 8? Justify your answer.</p>
+</statement>
+<solution>
+  <p>
+    Yes, 6.705 is more than 2 standard deviations from 8.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>We can calculate a <em>standardized statistic</em> based on the observed sample data by
+computing</p>
+<me>\text{ standardized statistic} = \dfrac{\bar {x} - \mu_0}{s / \sqrt{n}}</me>
+<p>(where <m>\mu_0</m> is a symbol used to represent the hypothesized value of the population
+mean).</p>
+</remark>
+
+<p>Now let's explore whether "2" is still a reasonable cut-off for declaring this standardized statistic to be large.</p>
+</subsection>
+
+<subsection> 
+ <title>Let's Investigate</title>
+<p>Open the <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1">One Mean</url>
+  applet. Notice that "1" has been selected (this is the
+first of three hypothetical populations of sleep times pre-loaded into the applet) and a histogram
+displays this population distribution. For now we are <term>assuming</term> that the population distribution
+is normally distributed with mean very close to 8 hours and standard deviation about 1.5 hours.</p>
+<p>Check the <em>Show Sampling Options</em> box. Set the <em>Number of samples</em> to 10000 and set
+the <em>Sample size</em> to match your class survey. Press <em>Draw Samples</em>.</p>
+<activity>
+ <!--Question 15-->
+<statement>
+<p>Is the distribution of sample means centered around 8? Is the distribution approximately
+normal? (Why?) Is the standard deviation close to <m>\sigma/\sqrt{n}</m>? (Show calculation details.)</p>
+</statement>
+<solution>
+  <p>
+    Yes, the distribution of sample means is centered at 8 and is approximately normal. The
+    standard deviation is 0.322 which is about the same as <m>\frac{1.51}{\sqrt{22}} \approx 0.322</m>
+  </p>
+</solution>
+</activity>
+
+<p>The histogram should behave as expected, but this is the distribution of sample means.
+What we are interested in now is the distribution of standardized statistics.</p>
+<p>Above the distribution of sample means, select the radio button for <em>t-statistic</em>—the name
+for the standardized statistic we are using here—because if you now check the <em>Overlay t
+Distribution</em> box, you should see that these t-statistics are well modeled by something called
+the t-distribution.</p>
+<p>The shape of a t-distribution is still mound-shaped, but it is centered at zero. It looks a lot like
+a normal distribution, but it is a bit more spread out than a normal distribution (more observations in
+the "tails," fewer in the middle). These "heavier tails" are beneficial for us here, where we have sample
+to sample variation in the means plus additional uncertainty by using the sample standard deviation each
+time rather than one population standard deviation. For this reason, the theory-based p-value will be
+based on the t-distribution rather than a normal distribution. But if you instead check the
+<em>Overlay Normal Distribution</em> box, there is not much difference in the two distributions.
+In general, when the sample size is large (e.g., more than 20), there is not a very large difference
+between the two distributions.</p>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Use the applet, the t-statistic you calculated for your class survey, and the Count
+Samples box to estimate a p-value using the t-distribution (in the direction of the
+alternative hypothesis).</p>
+</statement>
+<solution>
+  <p>
+    Approximate p-value is 0.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 17-->
+<statement>
+<p>Based on this p-value do your sample data provide strong evidence that the population
+mean sleep time at your school last night was less than 8 hours? Justify your answer, as
+if to a friend who has not studied statistics.</p>
+</statement>
+<solution>
+  <p>
+    p&lt;0.001. We have very strong evidence that the population average sleep time at our school
+    was less than 8 hours last night. Our sample average hours slept last night was 6.705. In
+    repeated samples of 22 students, under the assumption that on average students are getting
+    the required 8 hours of sleep per night, not one sample had an average hours of sleep that was
+    the same as or even smaller than our sample average hours of sleep of 6.705.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>STEP 5: Formulate conclusions.</title>
+<activity>
+ <!--Question 18-->
+<statement>
+<p>Think again about how the sample was selected from the population. Do you feel
+comfortable generalizing the results of your analysis to the population of all students at
+your school? Explain.</p>
+</statement>
+<solution>
+  <p>
+    Since the class was a convenience sample, it would be better to take a random sample in order
+    to generalize to the entire population.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 19-->
+<statement>
+<p>Looking back: Did anything about the design and conclusions of this study concern
+you? Issues you may want to critique include: the match between the research question and the study design, how the observational units were selected, how the measurements were recorded, and whether what we observed is of practical value.</p>
+</statement>
+<solution>
+  <p>
+    It might make a difference if the night before was a weekend night, or a week night. It would
+    be better to take a random sample over a convenience sample.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 20-->
+<statement>
+<p>Looking ahead: What should the researchers' next steps be to fix the limitations or build
+on this knowledge?</p>
+</statement>
+<solution>
+  <p>
+    Taking a larger random sample of students and taking it mid-week, would probably yield
+    results that are better to generalize.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Exploring Further</title>
+<activity>
+ <!--Question 21-->
+<statement>
+<p>Suppose you rejected the null hypothesis in this study, does that mean you have proven
+that the population mean is not equal to 8 hours? If not, why not. (Hint: How does this
+relate to your p-value?)</p>
+</statement>
+<solution>
+  <p>
+    It does not mean we have proven the population mean is not 8 hours. It could be 8 hours, and
+    we just got an unusual sample.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 22-->
+<statement>
+<p>Suppose we do not reject the null hypothesis that <m>\mu = 7</m> hours. Does this mean you have
+proven that <m>\mu = 7</m> hours? If not, why not?</p>
+</statement>
+<solution>
+  <p>
+    No, it just means that 7 hours is a plausible value for the population hours slept based on our sample.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_3_10" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Tools, data, and formulas</title>
+
+<subsection> 
+ <title>Tools</title>
+ 
+<note>
+  <p>
+    In the tool samples are drawn without replacement. To carry out bootstrapping (sampling with replacement),
+    a bootstrap distribution made of many copies of a set of sample data should be loaded into the tool as a .csv
+    file and should then be used as the population distribution.
+  </p>
+</note>
+
+<note>
+  <p>
+    The tool bins data using the Freedman-Diaconis rule, which may produce different looking histograms when loading data from the sections.
+  </p>
+</note>
+
+<table>
+<title> Table 3101: One mean relevant features by section </title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Feature</cell>
+</row>
+<row>
+<cell>Sampling from a finite population</cell>
+<cell>Draw samples from a finite population</cell>
+</row>
+<row>
+<cell>Inference for a single quantitative variable</cell>
+<cell>Input parameters</cell>
+</row>
+<row>
+<cell>Theory-based Inference for a Population Mean</cell>
+<cell>
+  <line>Calculate simulation-based and theory-based p-value and standardized statistic for means</line>
+  <line>with specified alternative hypothesis</line>
+</cell>
+</row>
+<row>
+<cell>Other statistics</cell>
+<cell>Simulation-based analysis for medians</cell>
+</row>
+<row>
+<cell>Tools, data, and formulas</cell>
+<cell>
+  <line>Specify statistic as "means" or "medians"</line>
+  <line>Input hypothetical population by specifying shape, mean, and standard deviation</line>
+  <line>Input hypothetical population by uploading a .csv file</line>
+</cell>
+</row>
+</tabular>
+</table>
+</subsection>
+
+<subsection> 
+ <title>Data</title>
+ 
+<table>
+<title>References</title>
+<tabular>
+<row header="yes">
+<cell>Section</cell>
+<cell>Data</cell>
+<cell>Reference</cell>
+</row>
+<row>
+<cell>Example: Sampling from a finite population</cell>
+<cell><m>\pi</m>=0.592, n=2181, <m>\hat{p}</m>=0.698</cell>
+<cell><url href="http://www.electproject.org/2016g">US Elections Project (2016)</url><br/><url href="https://gss.norc.org/">General Social Survey (2018)</url></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Sampling from a finite population</cell>
+<cell><m>\pi</m>=0.41</cell>
+<cell><url href="https://www.loc.gov/exhibits/gettysburg-address/">US Library of Congress</url></cell>
+</row>
+<row>
+<cell>Example: Inference for a single quantitative variable</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/CollegeMidwestPopulation.csv">CollegeMidwestPopulation.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Inference for a single quantitative variable</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/Gettysburg.csv">Gettysburg.csv</url></cell>
+<cell><url href="https://www.loc.gov/exhibits/gettysburg-address/">US Library of Congress</url></cell>
+</row>
+<row>
+<cell>Example: Theory-based Inference for a Population Mean</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/SnippetEstimate.csv">SnippetEstimate.csv</url><br/>
+n=48, <m>\overline{x}</m>=13.71, <m>s</m>=6.5<br/><br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch03/SnippetEstimatePopulation.csv">SnippetEstimatePopulation.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Theory-based Inference for a Population Mean</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/SleepTimes.csv">SleepTimes.csv</url><br/>
+n=22, <m>\overline{x}</m>=6.705, <m>s</m>=1.267<br/><br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch03/SleepTimesPopulation.csv">SleepTimesPopulation.csv</url></cell>
+<cell></cell>
+</row>
+<row>
+<cell>Example: Other statistics</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/SnippetEstimatePopulation.csv">SnippetEstimatePopulation.csv</url><br/>
+Population: skewed right, <br/>mean=10, sd=6.5</cell>
+<cell></cell>
+</row>
+<row>
+<cell>Supplemental Exploration: Other statistics</cell>
+<cell><url href="https://static-resources.zybooks.com/ISI/Ch03/BackpackWeights.csv">BackpackWeights.csv</url><br/>
+n=100, <m>\overline{x}</m>=7.712, <m>s</m>=3.646<br/><br/>
+<url href="https://static-resources.zybooks.com/ISI/Ch03/BackpackWeightsPopulation.csv">BackpackWeightsPopulation.csv</url></cell>
+<cell><url href="https://www.causeweb.org/cause/filebrowser/download/356#page=17">STATS (2002)</url></cell>
+</row>
+<row>
+<cell>Investigation: Faking cell phone calls</cell>
+<cell><m>\pi</m>=0.10, n=1858, <m>\hat{p}</m>=0.13</cell>
+<cell><url href="https://www.pewresearch.org/internet/dataset/may-2011-mobile/">Pew (2011)</url><br/><url href="https://www.ibtimes.com/do-you-talk-cell-phone-avoid-interaction-others-302473">IBTimes (2011)</url></cell>
+</row>
+</tabular>
+</table>
+
+</subsection>
+
+<subsection> 
+ <title>Formulas for one mean</title>
+<p>
+<ul>
+<li><m>\mu</m> is the population mean.</li>
+<li><m>\sigma</m> is the population standard deviation.</li>
+<li><m>n</m> is the sample size.</li>
+<li><m>\overline{x}</m> is the sample mean.</li>
+<li><m>s</m> is the sample standard deviation.</li>
+<li><m>SD = \sigma/\sqrt{n} </m> is the theory-based standard deviation of the null distribution.</li>
+<li><m>SE = s / \sqrt{n} </m> is the theory-based standard error, which approximates <m>SD</m>.</li></ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> t = \frac{\overline{x} - \mu}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one mean.</li>
+<li><m> t = \frac{\overline{x} - \mu}{SE} =  \frac{\overline{x} - \mu}{s/\sqrt{n}} </m> is the theory-based standardized statistic for one mean.</li></ul>
+</ul>
+<ul><li><m> t = \frac{\overline{x} - \mu}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for one mean.</li>
+<li><m> t = \frac{\overline{x} - \mu}{SE} =  \frac{\overline{x} - \mu}{s/\sqrt{n}} </m> is the theory-based standardized statistic for one mean.</li></ul>
+</p>
+</subsection>
+
+</section>

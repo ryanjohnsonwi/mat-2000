@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_6-4" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Formulas</title>
+
+
+<subsection> 
+ <title>Formulas for two proportions</title>
+<p>
+</p>
+<ul>
+<li><m>n_1</m> and <m>n_2</m> are the sample sizes for the two groups.</li>
+<li><m>\hat{p}_2 = \frac{\text{number of successes in group 1}}{n_1}</m> is the sample proportion for group 1.</li>
+<li><m>\hat{p}_2 = \frac{\text{number of successes in group 2}}{n_2}</m> is the sample proportion for group 2.</li>
+<li><m> \hat{p}_1 - \hat{p}_2</m> is the difference in sample proportions.</li>
+<li><m>\hat{p} = \frac{\text{total number of successes}}{n_1 + n_2}</m> is the pooled sample proportion.</li>
+<li><m>SD(\hat{p}_1 - \hat{p}_2)</m> is the standard deviation of the statistic.</li>
+<li><m>\text{SE using pooled } \hat{p} =  \sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}</m> is a theory-based standard error that approximates SD of the null distribution.</li>
+<li><m>\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2 = \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_2(1-\hat{p}_2)}{n_2}} </m> is a theory-based standard error that approximates <m>SD(\hat{p}_1 - \hat{p}_2)</m>.</li>
+</ul>
+<ul>
+<li><m>\text{standardized statistic} = \frac{\text{statistic} - \text{mean of the null distribution}}{\text{SD of the null distribution}} </m> is the number of standard deviations away from the mean of the sampling distribution a statistic is.</li>
+<ul><li><m> z =  \frac{\big(\hat{p}_1 - \hat{p}_2\big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two proportions.</li>
+<li><m> z =\frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\text{SE using pooled } \hat{p}}  =  \frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}} </m> is the theory-based standardized statistic for two proportions.</li></ul>
+</ul>
+<ul><li><m> z =  \frac{\big(\hat{p}_1 - \hat{p}_2\big) - 0}{\text{Simulated SD of null distribution}} </m> is the simulation-based standardized statistic for two proportions.</li>
+<li><m> z =\frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\text{SE using pooled } \hat{p}}  =  \frac{ \big(\hat{p}_1 - \hat{p}_2\big) - 0 }{\sqrt{\frac{\hat{p}(1-\hat{p})}{n_1}+\frac{\hat{p}(1-\hat{p})}{n_2}}} </m> is the theory-based standardized statistic for two proportions.</li></ul>
+<ul>
+<li><m>\text{statistic} \pm \text{margin of error} =  \text{statistic} \pm \text{(multiplier)} \times \text{(SD of statistic)}</m> is a confidence interval.</li>
+<ul><li><m> (\hat{p}_1 - \hat{p}_2) \pm 2 \times SD(\hat{p}_1 - \hat{p}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \pi_1 - \pi_2 </m>.</li>
+<li><m>(\hat{p}_1 - \hat{p}_2) \pm \text{(multiplier)} \times (\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2) </m> is a theory-based confidence interval estimating <m> \pi_1 - \pi_2 </m>, where the multiplier comes from the standard normal distribution.</li></ul>
+</ul>
+<ul><li><m> (\hat{p}_1 - \hat{p}_2) \pm 2 \times SD(\hat{p}_1 - \hat{p}_2) </m> is a 2SD CI approximating a 95% confidence interval estimating <m> \pi_1 - \pi_2 </m>.</li>
+<li><m>(\hat{p}_1 - \hat{p}_2) \pm \text{(multiplier)} \times (\text{SE using } \hat{p}_1 \text{ and } \hat{p}_2) </m> is a theory-based confidence interval estimating <m> \pi_1 - \pi_2 </m>, where the multiplier comes from the standard normal distribution.</li></ul>
+<p></p>
+</subsection>
+
+</section>

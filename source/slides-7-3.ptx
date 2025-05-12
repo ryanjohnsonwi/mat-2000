@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>7-3 : Comparing two means: Theory-based approach</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <slide>
+      <p>A worksheet for Grace College from Zybooks</p>
+    </slide>
+    <section>
+      <title>Close Friends</title>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <p>How many close friends do you have? You know, the kind of people you like to talk 
+to about important personal matters. Do men and women tend to differ on the number of 
+close friends? And if so, by how much do men and women differ with regard to how many 
+close friends they have?
+</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <p>One of the questions asked of a random sample of adult Americans on the 2004 
+<url href="https://gss.norc.org/">General Social Survey (GSS)</url> was: "From 
+time to time, most people discuss important matters with other people. Looking 
+back over the last six months—who are the people with whom you discussed matters 
+important to you? Just tell me their first names or initials." The interviewer 
+then recorded how many names each person gave, along with keeping track of the 
+person's sex. The GSS is a survey of a representative sample of U.S. adults 
+who are not institutionalized.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Identify the variables recorded. Also classify each as either categorical 
+or quantitative, and identify each variable's role: explanatory or response.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Did this study make use of random assignment, random sampling, both, or 
+neither?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Was this an experiment or an observational study? Explain how you are 
+deciding.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>In words, state the null and the alternative hypotheses to test 
+whether American men and women differ with regard to how many friends they have.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Define the parameters of interest and assign symbols to them.</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>State the null and the alternative hypotheses in symbols.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <p>The survey responses are summarized in the table below (and the data can be found in expanded 
+form in the file <url href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt">
+CloseFriends</url>).</p>
+      </slide>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <title> Number of close friends reported by sex </title>
+          <tabular>
+            <row header="yes">
+              <cell>Number of close friends reported</cell>
+              <cell>0</cell>
+              <cell>1</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>5</cell>
+              <cell>6</cell>
+              <cell>Total</cell>
+            </row>
+            <row>
+              <cell>Men</cell>
+              <cell>196</cell>
+              <cell>135</cell>
+              <cell>108</cell>
+              <cell>100</cell>
+              <cell>42</cell>
+              <cell>40</cell>
+              <cell>33</cell>
+              <cell>654</cell>
+            </row>
+            <row>
+              <cell>Women</cell>
+              <cell>201</cell>
+              <cell>146</cell>
+              <cell>155</cell>
+              <cell>132</cell>
+              <cell>86</cell>
+              <cell>56</cell>
+              <cell>37</cell>
+              <cell>813</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <!--Question 7-->
+      <slide>
+        <title>Exercise 7</title>
+        <p>Now you will obtain numerical summaries (statistics, such as mean and SD) of the survey data using the 
+      <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+      Multiple Means applet</url>.
+      <ul>
+            <li>Open the data file <url href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt">
+        CloseFriends</url> to access the raw data. Copy the data (e.g., CTRL-A and CTRL-C).</li>
+            <li>Open the <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2">
+        Multiple Means applet</url> and press <em>Clear</em>. Click inside the <em>Sample data</em> box
+      and paste (e.g., CTRL-V). Then press <em>Use Data</em>.</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7a: </title>
+        <p>
+          Report the sample size, sample mean, and sample SD of the number of close friends reported for 
+          each sex. Based on the sample statistics, who tends to have more close friends, on average: 
+          men or women? How are you deciding?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7b: </title>
+        <p>
+          Based on the sample statistics, who tends to have more variability with respect to how many 
+          close friends they have: men or women? How are you deciding?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7c: </title>
+        <p>
+          Based on the data as presented in the table, are the distributions of number of close friends 
+          symmetric or skewed? If skewed, in which direction?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7d: </title>
+        <p>
+          Calculate the observed difference in the mean number of close friends between these two groups 
+          (men - women). (Verify your calculation by checking the Observed diff output.)
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7e: </title>
+        <p>
+          Notice that the value recorded in (d) is a negative number. Well, number of friends can only be 0 or more. Why is the number recorded in (d) less than 0?
+        </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences beyond the data</title>
+      <slide>
+        <p>
+    The question we want to answer is, Is the difference in mean number of close friends between men and 
+    women, as seen in the GSS sample data, something that could plausibly have happened by chance, by random 
+    sampling alone, if, on average, men and women have the same number of close friends?
+  </p>
+      </slide>
+      <!--Question 8-->
+      <slide>
+        <title>Exercise 8</title>
+        <p>
+        Using the same approach you did previously with the Multiple Means applet, you can use this applet 
+        to generate possible values of the difference in sample means under the null hypothesis by shuffling 
+        which response values go with which explanatory variable values. Check the <em>Show Shuffle Options</em> 
+        box and enter 1,000 for the <em>Number of Shuffles</em>. Press the <em>Shuffle Responses</em> button 
+        (there will be a pause; this is a large
+        dataset!). The histogram on the right is the simulated null distribution for the difference
+        in sample means. Enter the observed difference in sample means in the <em>Count Samples</em> box and press
+        <em>Count</em>.
+      </p>
+      </slide>
+      <slide xml:id="q-7-3-8-a">
+        <title>Exercise 8a: </title>
+        <p>
+          Record your estimated p-value.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8b: </title>
+        <p>
+          Fill in the blanks of the sentence, to complete the interpretation of the p-value: 
+          The p-value of ______ is the probability of observing ______ assuming______.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>If the difference in means was larger (more different than 0), how would this impact the size of the p-value?</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>How would increasing the sample size (all else remaining the same) change the p-value? Why?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>How would increasing the standard deviation of the number of close friends for both males and females (all else remaining the same) change the p-value? Why?  </p>
+      </slide>
+      <slide>
+        <p>As we saw earlier, another measure of the strength of evidence against the null hypothesis would be to standardize the statistic by subtracting the hypothesized value and dividing by the standard error of the statistic.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>On the left side of the applet (below the Sample data window) use the Statistic pull-
+down menu to select the t-statistic (again, there will be a pause). Record the value of the t-statistic that is computed for your data. Write a one-sentence interpretation of this value. </p>
+      </slide>
+      <slide>
+        <p>Notice that the standardized statistic uses the letter <m>t</m> instead of the <m>z</m> we saw when testing proportions. This is because the theoretical distribution used is now a t-distribution instead of a normal distribution. These t-distributions are very similar to normal distributions especially when sample sizes are large. The t-statistic, like the z-statistic, tells us how many standard deviations our sample difference is above or below the mean and it can be judged in the same manner.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>In light of the value of the standardized statistic, should you expect the p-value to be large or small? How are you deciding?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>The histogram on the far right now displays the null distribution of simulated t-statistics. Describe the behavior of this distribution.</p>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Below the null distribution check the box Overlay t distribution. Does the t-distribution appear to adequately predict the behavior of the shuffled t-statistics? What do you think this suggests about whether the validity conditions will be met for these data?</p>
+      </slide>
+      <slide xml:id="q-7-3-16">
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Enter the observed value of the t-statistic in the Count Samples box and 
+press Count. (Remember to use the pull-down menu to specify what direction(s) 
+you want to consider more extreme based on the alternative hypothesis.) How does 
+the p-value from the t-distribution (in orange) compare to the simulation-based 
+p-value (from <xref ref="q-7-3-8-a"/>)?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Validity Conditions</title>
+      <slide>
+        <p>The validity conditions required for this theory-based approach 
+(a "two-sample t-test") to be valid are shown in the box.</p>
+      </slide>
+      <slide>
+        <title>Convention 2: </title>
+        <convention>
+          <p>The quantitative variable should have a symmetric distribution in both 
+groups or you should have at least 20 observations in each group and the 
+sample distributions should not be strongly skewed.</p>
+        </convention>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>Do the validity conditions appear to be satisfied for these data? Justify your answer.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions</title>
+      <!--Question 18-->
+      <slide>
+        <title>Exercise 18</title>
+        <p>Based on the analysis you have just carried out, state your conclusion 
+      in the context of the study. Be sure to comment on the following:</p>
+      </slide>
+      <slide>
+        <title>Exercise 18a: </title>
+        <p>
+          Statistical significance: Do the data provide evidence that the mean number of 
+          close friends that men have is different from the mean number of friends women 
+          have? How are you deciding?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 18b: </title>
+        <p>
+          Causation: Do the data provide evidence that how many friends one has is caused by one's sex? How are you deciding?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 18c: </title>
+        <p>
+          Generalization: To whom can you apply the results of this study? All people? All adults? How are you deciding?
+        </p>
+      </slide>
+      <!--Question 19-->
+      <slide>
+        <title>Exercise 19</title>
+        <p>When you have selected the t-statistic and the theory-based overlay, you can also use this applet 
+      for estimating the parameter of interest. (You can also go directly to the 
+      <url href="http://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">
+      Theory-Based Inference applet</url> which will also allow you to change the confidence level.) 
+      Check the box next to <em>95% CI(s) for difference in means</em>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 19a: </title>
+        <p>
+          Identify, in words related to the context of this study, the relevant parameter to be
+          estimated here.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19b: </title>
+        <p>
+          Report the 95% confidence interval for this parameter.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19c: </title>
+        <p>
+          Does the 95% confidence interval calculated from the GSS sample data contain 
+          the value 0? What does that imply? (Hint: Recall that a confidence interval 
+          is an interval of plausible values for the parameter of interest, and the 
+          interval is calculated using the sample statistics.)
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19d: </title>
+        <p>
+          Does the 95% confidence interval agree with your conclusion in <xref ref="q-7-3-16"/>? How are you deciding?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19e: </title>
+        <p>
+          Fill in the blanks of the sentence to complete the interpretation of the 95% 
+          confidence interval:
+        </p>
+        <p>
+          We are ______% confident that the mean number of close friends
+          men have is ______ than the mean number of close friends
+          that women have, by between ______ and ______ friends.
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19f: </title>
+        <p>
+          How would the width of the interval change if you increased the confidence level to 99%? Why?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19g: </title>
+        <p>
+          How would the width of the interval change if you increased the sample size? Why?
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 19h: </title>
+        <p>
+          How would the width of the interval change if the variability of the number of close
+          friends increased for both males and females? Why?
+        </p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 20-->
+        <p>Looking back: Did anything about the design and conclusions of this study concern
+  you? Issues you may want to critique include: the match between the research question and the study design, how the observational units were selected, how the measurements were recorded, the number of observational units in the study, whether what we observed is of practical value.</p>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <!--Question 20-->
+        <p>Looking ahead: What should the researchers' next steps be to fix the limitations in this
+  study and/or build on this knowledge?</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>1-2 : Preliminary: Exploring Data</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <slide>
+      <p>In this section, step 3 of the Statistical Investigation Process is further explored. 
+  The goal is to describe, measure, and, if possible, explain the patterns of variation 
+  (the <em>distribution</em>) in the values of the variable.
+</p>
+    </slide>
+    <section>
+      <title>Graphs for quantitative variables</title>
+      <slide>
+        <p>
+    A <term>dotplot</term> is a graph with one dot representing the variable outcome 
+    for each observational unit. Dotplots, like the graph of the performance lengths 
+    in the animation above, are good for smaller datasets. Another common graph for a 
+    quantitative variable is a histogram. A <term>histogram</term> separates the 
+    quantitative variable into bins and displays the number of observations in each 
+    bin.
+  </p>
+      </slide>
+    </section>
+    <section>
+      <title>Describing the distribution</title>
+      <slide>
+        <p>
+    Four important features are discussed when describing the distribution of a 
+    quantitative variable:
+  </p>
+      </slide>
+      <slide>
+        <p>
+          <ul>
+            <li>
+        The <term>shape</term> of a distribution is described by the number of 
+        peaks and whether one side of the distribution tends to stretch out longer 
+        than the other.
+      </li>
+            <li>
+        The <term>center</term> of a distribution is the middle or typical value.
+      </li>
+            <li>
+        The <term>variability</term> of a distribution is the spread in the observations.
+      </li>
+            <li>
+              <term>Unusual observations</term> are observations that do not follow the overall 
+        pattern of the distribution.
+      </li>
+          </ul>
+        </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

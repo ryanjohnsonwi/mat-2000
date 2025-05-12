@@ -1,0 +1,6 @@
+<frontmatter>
+<titlepage>
+<event>Grace College</event>
+<date>Last updated <today/></date>
+</titlepage>
+</frontmatter>

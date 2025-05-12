@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>11-1 : Two quantitative variables: Scatterplot and correlation</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Height and winning at tennis</title>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question</title>
+      <slide>
+        <p>Based on trends observed in other sports, researchers were interested in exploring how heights of 
+  winning tennis players might be changing over time, given that height may be an advantage to winning at tennis.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data</title>
+      <slide>
+        <p>To investigate this question, <url href="https://www.topendsports.com/sport/tennis/anthropometry-wimbledon.htm">
+  researchers gathered data</url> on heights of the winning tennis players at Wimbledon, a prestigious tennis 
+  tournament held each year from the 1880s through 2019</p>
+      </slide>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Identify (be specific) the observational units in this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>What is the explanatory variable? Is it categorical or quantitative?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>What is the response variable? Is it categorical or quantitative?</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>In your own words, explain what it would mean for there to be an association between
+the explanatory and response variables in this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Is this study an experiment or an observational study? Why?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data</title>
+      <slide>
+        <p>The table below represents a subset of the data values reported in the article.
+</p>
+      </slide>
+      <slide>
+        <title>Table 1: </title>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+        Year
+      </cell>
+              <cell>
+        1881
+      </cell>
+              <cell>
+        1882
+      </cell>
+              <cell>
+        1883
+      </cell>
+              <cell>
+        1884
+      </cell>
+              <cell>
+        1885
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Height (cm)
+      </cell>
+              <cell>
+        177
+      </cell>
+              <cell>
+        177
+      </cell>
+              <cell>
+        177
+      </cell>
+              <cell>
+        177
+      </cell>
+              <cell>
+        177
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Table 2: </title>
+        <table>
+          <tabular>
+            <row>
+              <cell>
+        Year
+      </cell>
+              <cell>
+        2017
+      </cell>
+              <cell>
+        2018
+      </cell>
+              <cell>
+        2018
+      </cell>
+              <cell>
+        2019
+      </cell>
+              <cell>
+        2019
+      </cell>
+            </row>
+            <row>
+              <cell>
+        Height (cm)
+      </cell>
+              <cell>
+        185
+      </cell>
+              <cell>
+        188
+      </cell>
+              <cell>
+        173
+      </cell>
+              <cell>
+        188
+      </cell>
+              <cell>
+        168
+      </cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Name one possible reason some of the heights are the same for different years.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>Name one reason some years may have multiple heights.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Graphical summary of two quantitative variables: Scatterplots</title>
+      <slide>
+        <p>This study is different than studies we've looked at before because both of the variables of interest are 
+  quantitative. For this reason, the graphical and numerical techniques we will use to summarize the data 
+  are different from those we've seen before.</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <p>A <term>scatterplot</term> is a graph showing a dot for each observational unit, where the location of the dot indicates the values of the observational units for both the explanatory and response variables. Typically, the explanatory variable is placed on the <m>x</m>-axis, and the response variable is placed on the <m>y</m>-axis.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8a-->
+        <p>Paste the <url href="https://static-content2.zybooks.com/isi/data/chap10/Wimbledon.txt">Wimbledon </url> data into 
+    the <url href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2">
+      Corr/Regression applet</url>. </p>
+        <p>Which variable is on the x-(horizontal) axis? Which variable is on the y-(vertical) axis? If you want to reverse 
+  those roles, press the (Explanatory, Response) button above the data window.</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>
+    Create a rough sketch of the scatterplot from the applet. Be sure the axes are well labeled. Rather than drawing each dot, you could just draw an ellipse (oval) shape where most of the points lie. Show that you understand how a scatterplot is created by making a dot on the scatterplot corresponding to a Wimbledon winner in 2019 that is 188 cm tall.
+  </p>
+      </slide>
+      <slide>
+        <p>When describing a scatterplot, we look for three aspects of association: direction, form, and strength. 
+  The <term>direction</term> of association between two quantitative variables is either positive or negative, 
+  depending on whether the response variable (size) increases as the explanatory variable (year) tends to 
+  increase (positive association) or decrease (negative association).</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>Direction: Is the association between year and winning height positive or negative?
+Interpret what this means in context.</p>
+      </slide>
+      <slide>
+        <p>The <term>form</term> of association between two quantitative variables is described by indicating whether 
+  a line would do a reasonable job summarizing the overall pattern in the data or if a curve would be better. 
+  It is important to note that—especially when the sample size is small— you don't want to let one or two points 
+  on the scatterplot change your interpretation of whether the form of association is linear. In general, assume 
+  that the form is linear unless there is compelling (strong) evidence in the scatterplot that the form is not linear.</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>Form: Does the association between year and height appear to be linear, or is there strong evidence (over 
+  many observational units) suggesting the relationship is nonlinear?</p>
+      </slide>
+      <slide>
+        <p>In describing the <term>strength</term> of association revealed in a scatterplot, we see how closely the points 
+  follow the form; that is, how closely do the points follow a straight line or curve? If all of the points fall 
+  pretty close to this straight line or curve, we say the association is strong. Weak associations will show little 
+  pattern in the scatterplot, and moderate associations will be
+somewhere in the middle.</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Strength: In your opinion, would you say that the association between height and year appears to be strong, 
+  moderate, or weak? </p>
+      </slide>
+      <slide>
+        <p>It is also important to consider any <term>unusual observations</term> that do not follow the overall pattern.</p>
+      </slide>
+      <slide>
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Are there any observational units (dots on the scatterplot, representing individual Wimbledon champions) 
+  that seem to fall outside of the overall pattern? If yes, identify it/them on the graph you just made. If 
+  not, provide a hypothetical example of a year and height combination that would represent an unusual observation.</p>
+      </slide>
+      <slide>
+        <p>
+          <em>Note:</em> There are two kinds of unusual observations seen in scatterplots: influential observations 
+  and outliers. An observation is <em>influential</em> if removing it from the dataset dramatically changes our 
+  perception of the association. Typically influential observations are extreme in the explanatory variable. 
+  <em>Outliers</em> are observations that don't follow the overall pattern of the relationship. They may or may 
+  not be influential and they may or may not be extreme in either variable individually but are unusual in terms 
+  of the combination of values.</p>
+      </slide>
+      <slide>
+        <title>Remark 4: </title>
+        <remark>
+          <p>Association between quantitative variables can be described with direction, form, and strength.
+<ul>
+              <li>If above-average values of one variable tend to correspond to above-average values of the other variable, the <term>direction</term> is positive. If, however, above-average values of one variable are associated with below-average values of the other, the <term>direction</term> is negative.</li>
+              <li>The <term>form</term> of the association is whether the data follow a linear pattern or some more complicated pattern.</li>
+              <li>The <term>strength</term> of an association refers to how closely the data follow a particular pattern. When an association is strong, the value of one variable can be accurately predicted from the other.</li>
+              <li>Also look for, and investigate further, any <term>unusual observations</term> that do not fit the pattern of the rest.</li>
+            </ul>
+          </p>
+        </remark>
+      </slide>
+    </section>
+    <section>
+      <title>Numerical summaries</title>
+      <slide>
+        <p>Describing the direction, form, and strength of association based on a scatterplot, along with investigating 
+  unusual observations, is an important first step in summarizing the relationship between two quantitative 
+  variables. Another approach is to use a statistic. One of the statistics most commonly used for this purpose 
+  is the correlation coefficient.</p>
+      </slide>
+      <slide>
+        <p>The <term>correlation coefficient</term>, often denoted by the symbol r, is a single number that takes a 
+  value between -1 and 1, inclusive. Negative values of r indicate a negative association, whereas positive 
+  values of r indicate a positive association. The stronger the linear association is between the two variables, 
+  the closer the value of the correlation coefficient will be to either -1 or 1, whereas weaker linear associations 
+  will have correlation coefficient values closer to 0. Moderate linear associations will typically have correlation 
+  coefficients in the range of 0.3 to 0.7 or -0.3 to -0.7.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>Will the value of the correlation coefficient for the year and height data be negative or positive? Why?</p>
+      </slide>
+      <slide>
+        <title>Remark 5: </title>
+        <remark>
+          <p>The correlation coefficient uses a rather complex formula that is rarely computed by hand; instead, 
+  people almost always use a calculator or computer to calculate the value of the correlation coefficient. 
+  But you should be able to apply the above properties to interpret the correlation coefficient that is found.</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Without using the applet, give an estimated value of the correlation coefficient between year and height 
+  based on the scatterplot.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Now, check the Correlation coefficient box in the applet to reveal the actual value of the correlation 
+  coefficient. Report the value.</p>
+      </slide>
+      <slide>
+        <title>Remark 6: </title>
+        <remark>
+          <p>The correlation coefficient is only applicable for data which has a linear form; nonlinear data are not 
+  summarized well by the correlation coefficient. In fact, we could say that the correlation coefficient is a 
+  numerical summary of the strength and direction of a linear association between two quantitative variables.
+</p>
+        </remark>
+      </slide>
+      <slide>
+        <p>Another point about correlation is that it is sensitive to influential observations. Influential observations 
+  are unusual observations which substantially impact the value of the correlation coefficient based on whether 
+  or not they are included in the dataset.</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>In the Add/Remove Observations section of the applet, enter a year of 2020 and height of 140 cm and press Add. 
+  Note how this is an unusual observation on the scatterplot. How did the correlation coefficient change as a result?</p>
+      </slide>
+      <slide>
+        <title>Exercise 18</title>
+        <!--Question 18-->
+        <p>This correlation coefficient is not particularly strong because there is a lot of scatter/variation about 
+  the regression line. Suggest another variable we haven't considered yet that might explain some of this 
+  variability in heights, even in the same year.</p>
+      </slide>
+      <slide>
+        <p>Earlier, you brainstormed reasons there might be more than one winner in a given year. How can there be 
+  two winners in the same year? Although initially Wimbledon was a males-only tournament, since 1887, both 
+  a female and male winner have been crowned. (Note: A few years don't have data due to the championship 
+  not being played that year or height data not being available on the winner.)</p>
+      </slide>
+      <slide>
+        <p>The figure below color codes the scatterplot depending on whether the height corresponds to the Male or 
+  Female champion that year.
+</p>
+      </slide>
+      <slide>
+        <title>Figure 7: </title>
+        <figure>
+          <caption> Figure 1121: Scatterplot of height and year colored by event, males in blue and females in orange </caption>
+          <image source="11-1/fig-11-1-1.png">
+            <description>The males are systematically taller than the females.
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 19</title>
+        <!--Question 19-->
+        <p>How do the male heights tend to compare to the female heights?</p>
+      </slide>
+      <slide>
+        <title>Exercise 20</title>
+        <!--Question 20-->
+        <p>Does the association between height and year seem to be similar between males and females?</p>
+      </slide>
+      <slide>
+        <p>The figure below shows the separate scatterplot of only the female winners and only the
+male winners.</p>
+      </slide>
+      <slide>
+        <title>Figure 8: </title>
+        <figure>
+          <caption> Scatterplot of female champions of Wimbledon (1887-2019) and male champions of Wimbledon (1881-2019) </caption>
+          <image source="11-1/fig-11-1-2.png">
+            <description>Two scatterplots showing the Wimbledon champions heights plotted against year for the male and female champions separately.
+</description>
+          </image>
+        </figure>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <!--Question 21-->
+        <p>Describe the strength, form, and direction of the scatterplot for female Wimbledon champions. Are there any unusual observations?</p>
+      </slide>
+      <slide>
+        <title>Exercise 22</title>
+        <!--Question 22-->
+        <p>Describe the strength, form, and direction of the scatterplot for male Wimbledon champions. Are there any 
+  unusual observations?</p>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <!--Question 23-->
+        <p>What do you predict for the value of the correlation coefficient between height and year for female winners 
+  only? Why? What do you predict for male winners?</p>
+      </slide>
+      <slide>
+        <title>Exercise 24</title>
+        <!--Question 24-->
+        <p>The actual correlation coefficient for females is 0.40 and for males is 0.36. Explain to a nonstatistician 
+  why the correlation coefficients are different within the male/female groups as compared to the overall correlation of 0.19 based on the pattern of dots in the scatterplot.</p>
+      </slide>
+      <slide>
+        <p>Note, however, that the strength of the association is not directly impacted by the size of the sample, 
+  but by how closely the observations follow the (linear) pattern.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Steps 4 and 5: Draw inferences and formulate conclusions</title>
+      <slide>
+        <p>In a later section you will explore how to evaluate whether a correlation is statistically significant, 
+  but that's not necessarily needed/appropriate in this case. The data here represent the entire population 
+  of Wimbledon winners (a census).
+</p>
+      </slide>
+      <slide>
+        <title>Exercise 25</title>
+        <!--Question 25-->
+        <p>How does the strength and direction of association compare between men and women? What does this tell 
+  us about the pattern of height of Wimbledon winners over time?</p>
+      </slide>
+      <slide>
+        <title>Exercise 26</title>
+        <!--Question 26-->
+        <p>Can we say that year causes changes in the height of the Wimbledon winners? Why or why not? Can we say 
+  that being taller makes you more likely to win Wimbledon?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Steps 6: Look back and ahead</title>
+      <slide>
+        <title>Exercise 27</title>
+        <!--Question 27-->
+        <p>Name one additional variable you would like measured on each Wimbledon winner and
+explain why.</p>
+      </slide>
+      <slide>
+        <title>Exercise 28</title>
+        <!--Question 28-->
+        <p>Describe how you could do a similar study for another sport. What two variables would you collect? 
+  What would you expect to see? Why? What third variable could also be measured and be important to consider?</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

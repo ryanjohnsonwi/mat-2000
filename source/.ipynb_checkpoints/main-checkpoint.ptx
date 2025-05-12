@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- This is the main file of the pretext template book provided -->
+<!-- by the `pretext new book` command.  The main.ptx here always-->
+<!-- starts with <pretext> tags.  In this example, the main file -->
+<!-- just imports other .ptx files which contain content. Open   -->
+<!-- those files to see more pretext features                    -->
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./meta_docinfo.ptx" />
+
+  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
+  <!-- to some short (non-spaced) description of your book         -->
+  <book xml:id="mat-2000-ws">
+    <!-- The book needs a title and can have a subtitle  -->
+    <title>MAT 2000: Introduction to Statistics</title>
+    <subtitle>Worksheets for Grace College from Zybooks</subtitle>
+
+    <!-- Now we include files containing each main devision.       -->
+
+    <!-- First a frontmatter for prefaces and such. Maybe comment  -->
+    <!-- out for now and write this when the book is more complete -->
+    <xi:include href="./meta_frontmatter.ptx" />
+    
+    <xi:include href="./ch_1_preliminaries.ptx"/>
+    <xi:include href="./ch_2_significance.ptx"/>
+    <xi:include href="./ch_3_generalization.ptx"/>
+    <xi:include href="./ch_4_estimation.ptx"/>
+    <xi:include href="./ch_5_causation.ptx"/>
+    <xi:include href="./ch_6_two_props.ptx"/>
+    <xi:include href="./ch_7_two_means.ptx"/>
+    <xi:include href="./ch_8_paired_data.ptx"/>
+    <xi:include href="./ch_9_more_props.ptx"/>
+    <xi:include href="./ch_10_more_means.ptx"/>
+    <xi:include href="./ch_11_two_quants.ptx"/>
+
+    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <xi:include href="./meta_backmatter.ptx" />
+  </book>
+</pretext>

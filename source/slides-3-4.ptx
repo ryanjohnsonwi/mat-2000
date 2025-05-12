@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3-4 : Other Statistics</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Backpack weights</title>
+      <slide>
+        <p>Carrying a heavy backpack can be a source of “chronic, low-level trauma,” and can cause long-lasting shoulder, neck, and back pain. The American Academy of Orthopedic Surgeons recommends that a backpack not weigh more than 10 to 15% of the wearer's body weight. As the problem of overheavy backpacks has received more attention recently among primary and secondary school students, a student group decided to investigate the issue with students at their own university (approximately 20,000 enrolled students). Twenty-five students were sampled from each of four locations across the campus, during the course of four days, and four different times of the day (early morning, lunch time, evening, late afternoon). Scales were used to measure backpack weight to the nearest pound, and students were asked to report their body weight on a survey. One researcher was the designated talker and introduced the survey to the participants (survey questions included major, year in school, whether have back problems, and gender). Another person in the group was in charge of reading the scale, and another in charge of gathering the surveys.</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 1: Ask a research question</title>
+      <slide>
+        <title>Exercise 1</title>
+        <!--Question 1-->
+        <p>Based on the study description, phrase a research question that you would be interested in testing with these students' data. Be sure to identify the population and parameter of interest. What symbol could you use for this parameter?</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 2: Design  study and collect data.</title>
+      <slide>
+        <p>These data have already been collected, so now let us think about the students' data collection process.</p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>Was this a random sample? Is it likely to be representative of the population you
+identified in Question 1?</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>What other steps did the students take to minimize non-sampling concerns?</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 3: Explore the data</title>
+      <slide>
+        <p>The data in <url href="https://static-content2.zybooks.com/isi/data/chap2/Backpack.xlsx">backpack.xlsx</url> contain several variables of interest,
+including backpack weight. But the recommendation was stated in terms of “percentage of
+person's weight,” so we first convert this variable into the percentage of body weight for each
+individual in the dataset.</p>
+      </slide>
+      <slide>
+        <p>
+          <ol>
+            <li>In the Excel file, create this variable: Insert a column after B. (You may have to press the Enable Editing button first.)</li>
+            <li>Name this column “percentage” in the square below the C.</li>
+            <li>In C2, type = a2/b2*100, press Enter.</li>
+            <li>Now click on the cell, and then double click on the square in the lower right corner to fill
+down the column.</li>
+            <li>Copy and paste this column to your clipboard.</li>
+          </ol>
+        </p>
+      </slide>
+      <slide>
+        <image source="3-4/spreadsheet.png" width="50%">
+          <description>(for accessibility)</description>
+        </image>
+      </slide>
+      <slide>
+        <p>Once you have the column of ratios, open the <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1">One Mean applet</url>. Press <em>Clear</em> and then
+paste the percentages into the data window and press <em>Use Data.</em>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>Describe the distribution of the percentages for this sample of 100 students. Remember to focus on shape, center, and variability, and any unusual observations or outliers.</p>
+      </slide>
+      <slide>
+        <p>The applet reports the mean and the standard deviation. Of course, another way to measure the “center” of the distribution is the <term>median</term>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <!--Question 5-->
+        <p>Predict how the median percentage will compare to the mean percentage, keeping in
+mind that the median will divide the dataset in half, 50 students below the median and 50 students above the median.</p>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>In the applet, select the Show Sampling Options button and then Median radio
+button. Was your conjecture correct? Explain to someone why the mean and median
+have this relationship for this dataset.</p>
+      </slide>
+      <slide>
+        <title>Exercise 7</title>
+        <!--Question 7-->
+        <p>The largest percentage in this dataset is 18.1%. Suppose this had been incorrectly
+recorded as 181%! How will the mean change? How will the median change?</p>
+      </slide>
+      <slide>
+        <p>For this dataset, the difference between the mean and median is not large, but we still might consider the median a more appropriate statistic to focus on, as it would represent a typical percentage, rather than the mean which is being pulled to the right by a few large percentages. The problem is, all the theory you saw in previous sections only applies to means. So how can we get a sense for how much sample-to-sample variation there is in the sample medians?</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 4: Draw inferences beyond the data.</title>
+      <slide>
+        <p>Is it plausible that this sample came from a population with a population median of 10%?</p>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <!--Question 8-->
+        <p>State appropriate null and alternative hypotheses, in words, about the population
+median for this research question.</p>
+      </slide>
+      <slide>
+        <p>(Although inference for the median will follow the same logic as inference for the mean, we will not bother to define symbols for the sample or population medians.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>Outline a simulation strategy for this null hypothesis. Make sure you describe the population, parameter, sample, and statistic.</p>
+      </slide>
+      <slide>
+        <p>In a previous section, we created hypothetical populations from which to sample. We wanted the population to have similar characteristics as the observed sample, but also assuming the null hypothesis to be true. We could generate a population of 20,000 percentages, with a population median of 10, but what do we assume about the shape and the standard deviation of this population? Do they matter? Does the population size?</p>
+      </slide>
+      <slide>
+        <p>One method for generating a hypothetical population is to make many copies of the observed sample. Before, we suggested that as long as the population is more than 20 times the size of the sample, then the actual population size does not matter.</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <!--Question 10-->
+        <p>In the applet, choose the <m>\times</m>40 ratio button. This creates 40 copies of the observed
+sample and updates the “population distribution” in the first graph. How would you
+characterize the shape, center, and variability of this population compared to the
+actual sample?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <!--Question 11-->
+        <p>In the Sample size box, use a value of 100 (the number of students actually measured), and press Draw Samples. If you scroll through the window showing the sample data, is it possible that you will see the same ID number more than once?</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <!--Question 12-->
+        <p>Now change the Number of samples to 999 (for 1,000 total). Choose Mean as the
+statistic and press Draw Samples. Compare the generated distribution of sample
+means (far right graph) to the distribution you would predict as you have in previous sections.</p>
+      </slide>
+      <slide xml:id="q-3-8-13">
+        <title>Exercise 13</title>
+        <!--Question 13-->
+        <p>Now change the Statistic radio button to Median and produce a (well-labeled)
+representation of the distribution.</p>
+      </slide>
+      <slide>
+        <p>Notice that the distribution of medians does not follow a nice smooth bell-shaped curve
+like the distribution of means, but now we are able to see how the distribution behaves. This
+process, sampling from a large number of copies of the sample distribution, is equivalent to
+sampling from the original sample with replacement, a technique known as <term>bootstrapping</term>.
+The distributions you just generated are often called “bootstrap distributions.”</p>
+      </slide>
+      <slide>
+        <title>Definition 1: </title>
+        <definition>
+          <statement>
+            <p>
+              <term>Bootstrapping</term> randomly samples n observations from the original sample of n
+observations with replacement to estimate the sample-to-sample variation in a
+statistic. This is equivalent to considering the “population” from which you are
+sampling to be a very large number of copies of the sample.</p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Remark 2: </title>
+        <remark>
+          <p>
+Bootstrapping allows you to estimate the sample to sample variation in any statistic.</p>
+        </remark>
+      </slide>
+    </section>
+    <section>
+      <title>Null Distribution?</title>
+      <slide>
+        <p>We cannot use the bootstrap distribution directly to estimate
+a p-value because it will be centered at the observed sample statistic rather than at the
+hypothesized value for the parameter. However, the bootstrap distribution does tell us about
+the sample-to-sample variation in the statistic. In fact, with quantitative data, we can simply
+shift the “population distribution” over to center at the hypothesized parameter value without
+changing the shape or variability of the distribution.</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <!--Question 14-->
+        <p>In the applet, use the Shift mean/median slider to the right so that the “population
+distribution” centers at (approximately) 10. Now specify the observed sample median
+(7.20) in the Count Samples box. Is it plausible that the observed sample of 100
+percentages came from a population where the median percentage was 10? Explain
+your reasoning.</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 5: Formula conclusions.</title>
+      <slide>
+        <title>Exercise 15</title>
+        <!--Question 15-->
+        <p>Write a paragraph summarizing your conclusions from this study. Be sure to discuss
+both what you learned from the sample and what you believe to be plausible about
+the population.</p>
+      </slide>
+    </section>
+    <section>
+      <title>STEP 6: Look back and ahead.</title>
+      <slide>
+        <title>Exercise 16</title>
+        <!--Question 16-->
+        <p>Return to your critique of the study design. If you were to carry out such a study on your own campus, discuss what you would do differently and why.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring Further</title>
+      <slide>
+        <p>In the future, you can go directly to the link for Bootstrapping in the
+upper left corner of the applet.</p>
+      </slide>
+      <slide>
+        <title>Exercise 17</title>
+        <!--Question 17-->
+        <p>Paste the original sample of 100 percentages into the sample data box and press
+Use Data. Check the Show Sampling Options box. Enter 10,000 for the number
+of samples and 100 for the sample size. Press Draw Samples. Select Median as the
+Statistic. How does the bootstrap distribution compare to what you generated in
+<xref ref="q-3-8-13"/>?</p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

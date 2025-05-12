@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_11-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Two quantitative variables: Scatterplot and correlation</title>
+
+<subsection> 
+ <title>Height and winning at tennis</title>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+
+<p>Based on trends observed in other sports, researchers were interested in exploring how heights of 
+  winning tennis players might be changing over time, given that height may be an advantage to winning at tennis.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+
+<p>To investigate this question, <url href="https://www.topendsports.com/sport/tennis/anthropometry-wimbledon.htm">
+  researchers gathered data</url> on heights of the winning tennis players at Wimbledon, a prestigious tennis 
+  tournament held each year from the 1880s through 2019</p>
+
+<activity>
+ <!--Question 1-->
+<statement>
+<p>Identify (be specific) the observational units in this study.</p>
+</statement>
+<solution>
+  <p>
+    Observational units are winners of the Wimbledon championship matches.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 2-->
+<statement>
+<p>What is the explanatory variable? Is it categorical or quantitative?</p>
+</statement>
+<solution>
+  <p>
+    Explanatory: year of match, quantitative
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 3-->
+<statement>
+<p>What is the response variable? Is it categorical or quantitative?</p>
+</statement>
+<solution>
+  <p>
+    Response: height of winner, quantitative
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 4-->
+<statement>
+<p>In your own words, explain what it would mean for there to be an association between
+the explanatory and response variables in this study.</p>
+</statement>
+<solution>
+  <p>
+    An association would mean that heights of winners change over time, for example they could be trending upward with year.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 5-->
+<statement>
+<p>Is this study an experiment or an observational study? Why?</p>
+</statement>
+<solution>
+  <p>
+    This is an observational study because the investigators didn't manipulate the explanatory variable, they merely observed it.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+<p>The table below represents a subset of the data values reported in the article.
+</p>
+<table>
+  <tabular>
+    <row>
+      <cell>
+        Year
+      </cell>
+      <cell>
+        1881
+      </cell>
+      <cell>
+        1882
+      </cell>
+      <cell>
+        1883
+      </cell>
+      <cell>
+        1884
+      </cell>
+      <cell>
+        1885
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Height (cm)
+      </cell>
+      <cell>
+        177
+      </cell>
+      <cell>
+        177
+      </cell>
+      <cell>
+        177
+      </cell>
+      <cell>
+        177
+      </cell>
+      <cell>
+        177
+      </cell>
+    </row>
+  </tabular>
+</table>
+<table>
+  <tabular>
+    <row>
+      <cell>
+        Year
+      </cell>
+      <cell>
+        2017
+      </cell>
+      <cell>
+        2018
+      </cell>
+      <cell>
+        2018
+      </cell>
+      <cell>
+        2019
+      </cell>
+      <cell>
+        2019
+      </cell>
+    </row>
+    <row>
+      <cell>
+        Height (cm)
+      </cell>
+      <cell>
+        185
+      </cell>
+      <cell>
+        188
+      </cell>
+      <cell>
+        173
+      </cell>
+      <cell>
+        188
+      </cell>
+      <cell>
+        168
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+<activity>
+ <!--Question 6-->
+<statement>
+<p>Name one possible reason some of the heights are the same for different years.</p>
+</statement>
+<solution>
+  <p>
+    If the same player won in different years, the heights would be the same.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 7-->
+<statement>
+<p>Name one reason some years may have multiple heights.</p>
+</statement>
+<solution>
+  <p>
+    There could be both male and female champions, also could be recording the doubles championships as well.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Graphical summary of two quantitative variables: Scatterplots</title>
+<p>This study is different than studies we've looked at before because both of the variables of interest are 
+  quantitative. For this reason, the graphical and numerical techniques we will use to summarize the data 
+  are different from those we've seen before.</p>
+
+<remark> 
+<p>A <term>scatterplot</term> is a graph showing a dot for each observational unit, where the location of the dot indicates the values of the observational units for both the explanatory and response variables. Typically, the explanatory variable is placed on the <m>x</m>-axis, and the response variable is placed on the <m>y</m>-axis.
+</p>
+</remark>
+
+<activity>
+ <!--Question 8a-->
+<statement>
+  <p>Paste the <url href="https://static-content2.zybooks.com/isi/data/chap10/Wimbledon.txt">Wimbledon </url> data into 
+    the <url href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2">
+      Corr/Regression applet</url>. </p>
+<p>Which variable is on the x-(horizontal) axis? Which variable is on the y-(vertical) axis? If you want to reverse 
+  those roles, press the (Explanatory, Response) button above the data window.</p>
+</statement>
+<solution>
+  <p>
+    The year is on the x-axis and height (cm) is on the y-axis
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 9-->
+ <statement>
+  <p>
+    Create a rough sketch of the scatterplot from the applet. Be sure the axes are well labeled. Rather than drawing each dot, you could just draw an ellipse (oval) shape where most of the points lie. Show that you understand how a scatterplot is created by making a dot on the scatterplot corresponding to a Wimbledon winner in 2019 that is 188 cm tall.
+  </p>
+ </statement>
+ <solution>
+  <image source="11-1/a-11-1-9.png" width="60%">
+    <description>Scatter plot of the data.</description>
+  </image>
+ </solution>
+</activity>
+
+<p>When describing a scatterplot, we look for three aspects of association: direction, form, and strength. 
+  The <term>direction</term> of association between two quantitative variables is either positive or negative, 
+  depending on whether the response variable (size) increases as the explanatory variable (year) tends to 
+  increase (positive association) or decrease (negative association).</p>
+
+<activity>
+ <!--Question 10-->
+<statement>
+<p>Direction: Is the association between year and winning height positive or negative?
+Interpret what this means in context.</p>
+</statement>
+<solution>
+  <p>
+    The direction is positive: as year increases, so does the height of the winner (on average).
+  </p>
+</solution>
+</activity>
+
+<p>The <term>form</term> of association between two quantitative variables is described by indicating whether 
+  a line would do a reasonable job summarizing the overall pattern in the data or if a curve would be better. 
+  It is important to note that—especially when the sample size is small— you don't want to let one or two points 
+  on the scatterplot change your interpretation of whether the form of association is linear. In general, assume 
+  that the form is linear unless there is compelling (strong) evidence in the scatterplot that the form is not linear.</p>
+
+<activity>
+ <!--Question 11-->
+<statement>
+<p>Form: Does the association between year and height appear to be linear, or is there strong evidence (over 
+  many observational units) suggesting the relationship is nonlinear?</p>
+</statement>
+<solution>
+  <p>
+    The form is linear.
+  </p>
+</solution>
+</activity>
+
+<p>In describing the <term>strength</term> of association revealed in a scatterplot, we see how closely the points 
+  follow the form; that is, how closely do the points follow a straight line or curve? If all of the points fall 
+  pretty close to this straight line or curve, we say the association is strong. Weak associations will show little 
+  pattern in the scatterplot, and moderate associations will be
+somewhere in the middle.</p>
+
+<activity>
+ <!--Question 12-->
+<statement>
+<p>Strength: In your opinion, would you say that the association between height and year appears to be strong, 
+  moderate, or weak? </p>
+</statement>
+<solution>
+  <p>
+    The strength of the association is fairly weak.
+  </p>
+</solution>
+</activity>
+
+<p>It is also important to consider any <term>unusual observations</term> that do not follow the overall pattern.</p>
+
+<activity>
+ <!--Question 13-->
+<statement>
+<p>Are there any observational units (dots on the scatterplot, representing individual Wimbledon champions) 
+  that seem to fall outside of the overall pattern? If yes, identify it/them on the graph you just made. If 
+  not, provide a hypothetical example of a year and height combination that would represent an unusual observation.</p>
+</statement>
+<solution>
+  <p>
+    There do not seem to be any observational units (dots) that fall outside the overall pattern. A champion in 2020 of height 155 cm would be unusual.
+  </p>
+</solution>
+</activity>
+
+<p><em>Note:</em> There are two kinds of unusual observations seen in scatterplots: influential observations 
+  and outliers. An observation is <em>influential</em> if removing it from the dataset dramatically changes our 
+  perception of the association. Typically influential observations are extreme in the explanatory variable. 
+  <em>Outliers</em> are observations that don't follow the overall pattern of the relationship. They may or may 
+  not be influential and they may or may not be extreme in either variable individually but are unusual in terms 
+  of the combination of values.</p>
+
+<remark> 
+<p>Association between quantitative variables can be described with direction, form, and strength.
+<ul>
+<li>If above-average values of one variable tend to correspond to above-average values of the other variable, the <term>direction</term> is positive. If, however, above-average values of one variable are associated with below-average values of the other, the <term>direction</term> is negative.</li>
+<li>The <term>form</term> of the association is whether the data follow a linear pattern or some more complicated pattern.</li>
+<li>The <term>strength</term> of an association refers to how closely the data follow a particular pattern. When an association is strong, the value of one variable can be accurately predicted from the other.</li>
+<li>Also look for, and investigate further, any <term>unusual observations</term> that do not fit the pattern of the rest.</li>
+</ul>
+</p>
+</remark>
+
+</subsection>
+
+<subsection> 
+ <title>Numerical summaries</title>
+
+<p>Describing the direction, form, and strength of association based on a scatterplot, along with investigating 
+  unusual observations, is an important first step in summarizing the relationship between two quantitative 
+  variables. Another approach is to use a statistic. One of the statistics most commonly used for this purpose 
+  is the correlation coefficient.</p>
+<p>The <term>correlation coefficient</term>, often denoted by the symbol r, is a single number that takes a 
+  value between -1 and 1, inclusive. Negative values of r indicate a negative association, whereas positive 
+  values of r indicate a positive association. The stronger the linear association is between the two variables, 
+  the closer the value of the correlation coefficient will be to either -1 or 1, whereas weaker linear associations 
+  will have correlation coefficient values closer to 0. Moderate linear associations will typically have correlation 
+  coefficients in the range of 0.3 to 0.7 or -0.3 to -0.7.</p>
+
+<activity>
+ <!--Question 14-->
+<statement>
+<p>Will the value of the correlation coefficient for the year and height data be negative or positive? Why?</p>
+</statement>
+<solution>
+  <p>
+    Positive, because there was a positive association between the variables.
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>The correlation coefficient uses a rather complex formula that is rarely computed by hand; instead, 
+  people almost always use a calculator or computer to calculate the value of the correlation coefficient. 
+  But you should be able to apply the above properties to interpret the correlation coefficient that is found.</p>
+</remark>
+
+<activity>
+ <!--Question 15-->
+<statement>
+<p>Without using the applet, give an estimated value of the correlation coefficient between year and height 
+  based on the scatterplot.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>Now, check the Correlation coefficient box in the applet to reveal the actual value of the correlation 
+  coefficient. Report the value.</p>
+</statement>
+<solution>
+  <p>
+    0.189
+  </p>
+</solution>
+</activity>
+
+<remark> 
+<p>The correlation coefficient is only applicable for data which has a linear form; nonlinear data are not 
+  summarized well by the correlation coefficient. In fact, we could say that the correlation coefficient is a 
+  numerical summary of the strength and direction of a linear association between two quantitative variables.
+</p>
+</remark>
+
+<p>Another point about correlation is that it is sensitive to influential observations. Influential observations 
+  are unusual observations which substantially impact the value of the correlation coefficient based on whether 
+  or not they are included in the dataset.</p>
+
+<activity>
+ <!--Question 17-->
+<statement>
+<p>In the Add/Remove Observations section of the applet, enter a year of 2020 and height of 140 cm and press Add. 
+  Note how this is an unusual observation on the scatterplot. How did the correlation coefficient change as a result?</p>
+</statement>
+<solution>
+  <p>
+    This added point seems to be a short height for a champion in 2020. The correlation moved closer to zero (0.144).
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 18-->
+<statement>
+<p>This correlation coefficient is not particularly strong because there is a lot of scatter/variation about 
+  the regression line. Suggest another variable we haven't considered yet that might explain some of this 
+  variability in heights, even in the same year.</p>
+</statement>
+<solution>
+  <p>
+    The sex of the champion might explain some of the variation in height.
+  </p>
+</solution>
+</activity>
+
+<p>Earlier, you brainstormed reasons there might be more than one winner in a given year. How can there be 
+  two winners in the same year? Although initially Wimbledon was a males-only tournament, since 1887, both 
+  a female and male winner have been crowned. (Note: A few years don't have data due to the championship 
+  not being played that year or height data not being available on the winner.)</p>
+<p>The figure below color codes the scatterplot depending on whether the height corresponds to the Male or 
+  Female champion that year.
+</p>
+
+<figure> 
+ <caption> Figure 1121: Scatterplot of height and year colored by event, males in blue and females in orange </caption>
+<image source="11-1/fig-11-1-1.png">
+<description>The males are systematically taller than the females.
+</description>
+</image>
+</figure>
+
+<activity>
+ <!--Question 19-->
+<statement>
+<p>How do the male heights tend to compare to the female heights?</p>
+</statement>
+<solution>
+  <p>
+    The male heights tend to be taller than the female heights.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 20-->
+<statement>
+<p>Does the association between height and year seem to be similar between males and females?</p>
+</statement>
+<solution>
+  <p>
+    Yes, the association between height and year are similar for both males and females.
+  </p>
+</solution>
+</activity>
+
+<p>The figure below shows the separate scatterplot of only the female winners and only the
+male winners.</p>
+
+<figure> 
+ <caption> Scatterplot of female champions of Wimbledon (1887-2019) and male champions of Wimbledon (1881-2019) </caption>
+<image source="11-1/fig-11-1-2.png">
+<description>Two scatterplots showing the Wimbledon champions heights plotted against year for the male and female champions separately.
+</description>
+</image>
+</figure>
+
+<activity>
+ <!--Question 21-->
+<statement>
+<p>Describe the strength, form, and direction of the scatterplot for female Wimbledon champions. Are there any unusual observations?</p>
+</statement>
+<solution>
+  <p>
+    Females have a positive, linear, and moderately strong association. There are no unusual data points.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 22-->
+<statement>
+<p>Describe the strength, form, and direction of the scatterplot for male Wimbledon champions. Are there any 
+  unusual observations?</p>
+</statement>
+<solution>
+  <p>
+    Males have a positive, linear, and weak to moderately strong association. There are no unusual data points.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 23-->
+<statement>
+<p>What do you predict for the value of the correlation coefficient between height and year for female winners 
+  only? Why? What do you predict for male winners?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary: Females have correlation coefficient of about 0.40 and males of about 0.30.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 24-->
+<statement>
+<p>The actual correlation coefficient for females is 0.40 and for males is 0.36. Explain to a nonstatistician 
+  why the correlation coefficients are different within the male/female groups as compared to the overall correlation of 0.19 based on the pattern of dots in the scatterplot.</p>
+</statement>
+<solution>
+  <p>
+    Both correlations will be greater than the overall correlation of 0.189 because there is less variability in heights within each sex (and the overall trend is more clear), but females will have a higher correlation coefficient than males because their scatter plot is closer to a linear form than is the male scatterplot.
+  </p>
+</solution>
+</activity>
+
+<p>Note, however, that the strength of the association is not directly impacted by the size of the sample, 
+  but by how closely the observations follow the (linear) pattern.</p>
+</subsection>
+
+<subsection> 
+ <title>Steps 4 and 5: Draw inferences and formulate conclusions</title>
+<p>In a later section you will explore how to evaluate whether a correlation is statistically significant, 
+  but that's not necessarily needed/appropriate in this case. The data here represent the entire population 
+  of Wimbledon winners (a census).
+</p>
+
+<activity>
+ <!--Question 25-->
+<statement>
+<p>How does the strength and direction of association compare between men and women? What does this tell 
+  us about the pattern of height of Wimbledon winners over time?</p>
+</statement>
+<solution>
+  <p>
+    Because both have moderately strong positive associations, there is a trend of increasing height in the champions for both men and women over time.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 26-->
+<statement>
+<p>Can we say that year causes changes in the height of the Wimbledon winners? Why or why not? Can we say 
+  that being taller makes you more likely to win Wimbledon?</p>
+</statement>
+<solution>
+  <p>
+    We can't make any causal conclusions because this is observational data (no random assignment was used). Height is merely associated with the year.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Steps 6: Look back and ahead</title>
+<activity>
+ <!--Question 27-->
+<statement>
+<p>Name one additional variable you would like measured on each Wimbledon winner and
+explain why.</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  One example is:
+  </p>
+  <p> 
+    Are they a previous Wimbledon champion or not? What is their nationality? These could be good predictors of height.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 28-->
+<statement>
+<p>Describe how you could do a similar study for another sport. What two variables would you collect? 
+  What would you expect to see? Why? What third variable could also be measured and be important to consider?</p>
+</statement>
+<solution>
+  <p>
+    Answers will vary.  One example:
+  </p>
+  <p>
+    Use the sport of golf where the observational units are the PGA champions for each year and you also collect the height of the champion each year. Sex could be used as a third variable again as there are both male and female PGA winners each year.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_10-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Comparing multiple means: Theory-based approach</title>
+
+<subsection> 
+ <title>Comparing popular diets</title>
+<p>Because about two-thirds of Americans are considered overweight, weight loss is big business. 
+There are many different types of diets, but do some work better than others? Is low fat better 
+than low carb or is some combination best? Researchers 
+(<url href="https://doi.org/10.1001/jama.297.9.969">Garnder et al. 2007</url>) conducted a study 
+involving four popular diets: Atkins (very low carb), Zone (40:30:30 ratio of carbs, protein, 
+fat), LEARN (high carbohydrate, low fat), and Ornish (low fat). They randomly assigned women aged 
+25-50 with a body mass index (BMI) of 27-40 (overweight and obese) to one of the four diets. The 
+311 women who volunteered for the program were educated on their assigned diet and were observed 
+periodically as they stayed on the diet for a year. At the end of the year, the researchers calculated 
+the change in BMI (e.g., negative means reduction in BMI) for each woman and compared the results 
+across the four diets.</p>
+</subsection>
+
+<subsection> 
+ <title>Step 1: Ask a research question</title>
+<activity>
+
+ <!--Question 1-->
+<statement>
+<p>What is the overarching research question the researchers hoped to answer?</p>
+</statement>
+<solution>
+  <p>
+    Is there evidence of an association between change in BMI and type of diet used?
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 2: Design a study and collect data</title>
+
+<activity>
+  <!--Question 2a-->
+  <task>
+    <statement>
+      <p>
+        What are the observational units in this study?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Each of the 311 women in the study
+      </p>
+    </solution>
+  </task>
+  <task>
+    <!--Question 2b-->
+    <statement>
+      <p>
+        Identify the explanatory and response variables. Classify them as categorical or quantitative. For categorical variables, indicate how many categories are used.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Explanatory variable: diet (Atkins, Zone, Ornish, LEARN); categorical with 4 categories, Response: change in BMI; quantitative
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+  <task>
+    <!--Question 3a-->
+    <statement>
+      <p>
+        Does this study make use of random sampling, random assignment, both, or neither? What are the implications of your answer with regard to scope of inference?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Random assignment (yes), random sampling (no), Cause and effect is possible but not generalization to a population.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <!--Question 3b-->
+    <statement>
+      <p>
+        Did the researchers collect the data as paired data or as independent samples? In other words, according to the study design, are the responses from one treatment group paired with or independent of the responses from other treatment groups?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Responses from one treatment group are independent of the responses from another treatment group.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 4-->
+  <statement>
+    <p>State the null and alternative hypotheses, both in words and symbols, for testing 
+    the research conjecture. (Recall that the response variable is change in BMI; positive 
+    values indicate an increase in BMI and negative values indicate a decrease in BMI 
+    from the beginning to the end of the study.)</p>
+  </statement>
+  <solution>
+    <p>
+      Null hypothesis: The long-run mean change in BMI is the same for all three diets (<m>\mu_{\text{Atkins}}=\mu_{\text{Zone}}=\mu_{\text{Ornish}}=\mu_{\text{LEARN}}</m>)
+    </p>
+    <p>
+      Alternative hypothesis: At least one of the means (<m>\mu_{\text{Atkins}}, \mu_{\text{Zone}}=\mu_{\text{Ornish}}, \mu_{\text{LEARN}}</m>) is different than the others.
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 3: Explore the data</title>
+
+<activity>
+  <introduction>
+    <p>
+      The data for this investigation appear in a file called <url href="https://static-content2.zybooks.com/isi/data/chap9/Diets.txt">Diets</url>. Copy and paste the data into the <url href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2"> Multiple Means applet</url>. (Recall that the response variable is change in BMI.) Press <em>Use Data</em>, and the applet will produce dotplots and summary statistics.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Report the mean and standard deviation of the BMI values in this sample.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        total mean = -0.966, standard deviation = 2.209, n = 311
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Check the Show Groups box. You can also check the Boxplots box to overlay those as well. Report the means, standard deviations, and sample sizes for the change in BMI amounts for each diet.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Atkins: mean = -1.65, standard deviation = 2.54, n = 77;
+      </p>
+      <p>
+        Zone: mean = -0.53, standard deviation = 2.00, n = 79;
+      </p>
+      <p>
+        Ornish: mean = -0.77, standard deviation = 2.14, n = 76,
+      </p>
+      <p>
+        LEARN: mean = -0.92, standard deviation = 2.00, n=79.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Describe what the graphs and statistics reveal about whether the diets appear to differ with regard to change in BMI amounts and, if so, which diet appears to be best and which worst.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The greatest change in BMI occurs in the Atkins group (-1.65 average change in BMI), while the other three diets appear to have similar change (-0.92, -0.77, -0.53 for LEARN, Ornish and Zone, respectively).
+      </p>
+    </solution>
+  </task>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 4: Draw inferences beyond the data</title>
+
+<activity>
+ <!--Question 6-->
+  <statement>
+    <p>
+      Conduct a simulation-based randomization test, as was done in the last section, to compare the four group means using the mean of the absolute values of the group differences (Mean Group Diff) as the statistic. Report the observed value of this statistic. Then determine and report a p-value based on at least 1,000 shuffles.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Mean Group Diff = 0.585, p-value is around 0.008
+    </p>
+  </solution>
+</activity>
+
+<activity>
+ <!--Question 7-->
+  <statement>
+    <p>Based on this p-value, evaluate the strength of evidence against the null hypothesis provided 
+    by the experimental data. In other words, do the data provide strong evidence that at least one 
+    of the four diets differs with regard to average change in BMI?</p>
+  </statement>
+  <solution>
+    <p>
+      We have very strong evidence against the null and in support of an association between diet and average change in BMI.
+    </p>
+  </solution>
+</activity>
+
+<p>Although the Mean Group Diff statistic is fairly easy to understand and calculate, it is not 
+commonly used, in part because there is no theory-based model for the null distribution. Another 
+downside is that the Mean Group Diff statistic is not standardized so it is not comparable 
+across studies (e.g., a Mean Group Diff statistic of 1 in one study might be strong evidence but 
+in another study might not show convincing evidence against the null hypothesis).</p>
+
+<remark> 
+<p>Instead of comparing only the differences in means, a statistic could standardize those differences 
+by comparing to the amount of within-group or natural variability in the response variable while also 
+taking sample sizes into account.</p>
+</remark>
+
+<p>
+  A much more commonly used statistic for comparing multiple groups on a quantitative response, which does have a theory-based distribution, is called an <term>F-statistic</term>. As with the Mean Group Diff statistic, the F-statistic equals zero only when the group means are all identical. Otherwise the F-statistic is positive, with larger values indicating larger differences across the group means.
+</p>
+
+<p>
+  The F-statistic (see Formula section at the end of Example 9.2 for details) is a ratio of <q>between-group</q> and <q>within-group</q> variability. Thus,
+  <me>
+    F = \frac{\textbf{Between-group variability}}{\textbf{Within-group variability}}
+  </me>
+</p>
+
+<activity>
+  <introduction>
+    <p>
+      Select the <em>Statistic</em> pull-down menu above the null distribution to select <em>F-statistic</em>, and the null distribution changes from the Mean Group Diff statistic to the F-statistic.
+    </p>
+  </introduction>
+  <task>
+    <!--Question 8a-->
+    <statement>
+      <p>
+        Report the observed value of the F-statistic, which appears on the left side of the applet.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>F = 3.80</m>
+      </p>
+    </solution>
+  </task>
+  <task xml:id="q-10-2-8-b">
+    <!--Question 8b-->
+    <statement>
+      <p>
+        Use the simulation results and the observed value of the F-statistic to estimate the p-value.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        p-value <m>\approx 0.012</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <!--Question 8c-->
+    <statement>
+      <p>
+        Is this p-value similar to the one based on the Mean Group Diff statistic? Is your conclusion about strength of evidence the same with both statistics?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Yes, the p-value is similar and so the conclusion is also similar.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<p>The F-statistic has a known theoretical distribution when the null hypothesis is true, 
+called (surprisingly enough) an <term>F-distribution</term>.</p>
+
+<activity>
+  <introduction>
+    <p>
+      Check the box to Overlay F distribution. 
+    </p>
+  </introduction>
+  <task>
+    <!--Question 9a-->
+    <statement>
+      <p>
+        Would you say there is good agreement between this theoretical prediction and your simulated null distribution?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Yes.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <!--Question 9b-->
+    <statement>
+      <p>
+        How does the theory-based p-value compare to what you found in <xref ref="q-10-2-8-b"/>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Theory-based p-value=0.0106, the p-values are similar.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<p>But what does F = 3.80 really mean? Check the box by <em>Show ANOVA Table</em> to 
+see more output related to the calculation of the value of the F-statistic.</p>
+
+<activity xml:id="q-10-2-10">
+ <!--Question 10-->
+  <statement>
+    <p>Confirm that the F-statistic is the ratio of the mean square for treatment 
+    to the mean square for error.  These are the numbers in the <c>MS</c> column of the ANOVA table.  The mean square for treatment is in the <c>Model</c> row, and the mean square for error is in the <c>Error</c> row.</p>
+  </statement>
+  <solution>
+    <p>
+      <m>\frac{18.06}{4.75} = 3.80</m>
+    </p>
+  </solution>
+</activity>
+
+<p>
+  The next series of exercises will take a closer look at how the F-statistic is calculated.
+</p>
+
+<activity xml:id="q-10-2-11">
+  <introduction>
+    <p>      
+      Use the <url href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm?hideExtras=1"> Descriptive Statistics applet</url> to find the standard deviation of the group averages:
+      <ul>
+        <li>
+          <p>
+            Type in the four group means for the original data. (Clear the existing data first and uncheck the Includes header box.)
+          </p>
+        </li>
+        <li>
+          <p>
+            Have the applet calculate the standard deviation of these four group means.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Report the number you found.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Standard deviation = 0.483.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <!--Question 11b-->
+    <statement>
+      <p>
+        Write a one-sentence interpretation of this number you calculated.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The standard deviation of the four group mean weight losses is 0.483. This means that the average difference between each of the average group BMI values and the overall mean is 0.483.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity xml:id="q-10-2-12">
+ <!--Question 12-->
+ <introduction>
+  <p>
+    To estimate the natural variation in these BMI values, we want to basically average the <q>within-group</q> variability across the four groups. 
+  </p>
+ </introduction>
+ <task>
+  <statement>
+    <p>
+      Take the four group standard deviations and average them. (You can again use the Descriptive Statistics applet.)
+    </p>
+  </statement>
+  <solution>
+    <p>
+      2.17.
+    </p>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      Write a one-sentence interpretation of this number.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      This is the average difference between individual BMI values and the mean BMI within each of the four groups.
+    </p>
+  </solution>
+ </task>
+</activity>
+
+<activity>
+ <!--Question 13-->
+ <introduction>
+  <p>
+    Now let <m>s_{\bar{x_i}}</m> be your answer to <xref ref="q-10-2-11"/> and let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>.  
+  </p>
+ </introduction>
+ <task>
+  <statement>
+    <p>
+      Calculate
+      <me>
+        77.75 \times \frac{s_{\bar{x_i}^2}}{\bar{s_i}^2}.
+      </me>
+      The 77.75 is the average of the group sizes.  Recall that variance is the squared of standard deviation.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <me>
+        77.75 \times \frac{0.483}{2.17} = 3.85.
+      </me>
+    </p>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      Is your answer to part a above the approximately the same as your answer to <xref ref="q-10-2-10"/>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Yes, they are very close.
+    </p>
+  </solution>
+ </task>
+</activity>
+
+<p>Another way to summarize the usefulness of the explanatory variable, is the “coefficient
+of determination,” or <m>R^2</m> value.</p>
+
+<definition>
+ <statement>
+<p>The proportion of the variation in the response variable which is explained (accounted for) 
+by the treatment (groups) is called 
+<me>  R^2 = 1 - \frac{ \text{within-group variability}  }{ \text{total variability} } </me>.</p>
+</statement>
+</definition>
+
+<activity>
+  <introduction>
+    <p>
+      Again let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>, and let <m>s</m> be the standard deviation of all the BMI's.  
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Compute
+        <me>
+          R^2 \approx 1 - \frac{\bar{s_i}^2}{s^2}.
+        </me>
+        This approximation works when the sizes of the groups are almost the same.  Again recall that variance is the square of standard deviation.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        R2 = 1 – (4.7089/4.8841) = 1 – 0.964 = 0.036
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>R^2</m> is the proportion of the variability in BMI values that can be explained by diet type. Is the percentage of variation in BMI explained high (close to 100%) or low (close to 0%) in this case?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        3.6% is close to 0%.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        How much variability in BMI is “left over” (not explained by the type of diet)?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        96.4% of the variation in BMI is still unexplained.
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Even though we found our F-statistic to be statistically significant, what implications does our <m>R^2</m> have interpreting our conclusions about the impact of the diets?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        While the data may be found to be statistically significant, there is still a lot of variability in BMI that is not explained by the diet type and so the finding may not be of practical significance.
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 16-->
+<statement>
+<p>You have now calculated a p-value in three different ways, two using a simulation-based 
+approach (but with different statistics: Mean Group Diff and F) and one using a theory-based 
+approach (using the F-statistic). Are they all similar? What is your conclusion about whether 
+the diets differ with regard to average BMI changes?</p>
+</statement>
+<solution>
+  <p>
+    Yes, they are all similar. All provide strong evidence of an association between diet and average change in BMI.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Follow-up analysis</title>
+<p>The ANOVA F-test is an overall test. A significant test result tells us that we have strong 
+evidence that at least one population mean is different from the others but does not tell us which 
+one(s) differ from which other one(s). To determine this we need to apply a follow-up procedure to 
+ANOVA. There are many different follow-up tests that can be done. We will use pairwise confidence 
+intervals for the difference in two means, as we did before.</p>
+
+<remark> 
+<p>If an ANOVA test finds evidence that there is at least one long-run or population mean that is 
+different, there are many different follow-up tests designed to help pinpoint where difference(s) 
+occur. One option is to look at all the pairwise theory-based confidence intervals for the 
+difference in long-run or population means.</p>
+</remark>
+
+<activity xml:id="q-10-2-17"> 
+ <!--Question 17-->
+  <introduction>
+    <p>When you have the F-statistic selected and the F-distribution overlaid (or are showing the ANOVA table) 
+    you can check the box to Compute 95% CI(s) for difference in means. Report the intervals for (a)-(f).</p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        Atkins diet vs. Zone diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Atkins - Zone: <m>(-1.81, -0.43)</m>*
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Atkins diet vs. Ornish diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Atkins - Ornish: <m>(-1.57, -0.19)</m>*
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Atkins diet vs. LEARN diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Atkins - LEARN: <m>(-1.42, -0.04)</m>*
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Zone diet vs. Ornish diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Zone - Ornish: <m>(-0.4498, 0.9286)</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Zone diet vs. LEARN diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Zone - LEARN: <m>(-0.2914, 1.0736)</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Ornish diet vs. LEARN diet
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ornish - LEARN: <m>(-0.5374, 0.8410)</m>
+      </p>
+    </solution>
+  </task>
+</activity>
+
+<activity>
+ <!--Question 18-->
+<statement>
+<p>Which of the confidence intervals calculated in <xref ref="q-10-2-17"/> indicate a significant 
+difference between groups? How are you deciding?</p>
+</statement>
+<solution>
+  <p>
+    Atkins vs. Zone, Atkins vs. Ornish, and Atkins vs. LEARN because they do not include zero.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 19-->
+<statement>
+<p>Based on your analysis, would you conclude that there is one diet that works significantly 
+better than the other three? If so, which one?</p>
+</statement>
+<solution>
+  <p>
+    The Atkins diet is associated with a significantly greater decrease in BMI than the LEARN, Ornish, and Zone diets.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Validity conditions</title>
+<p>As with other theory-based approaches of conducting tests of significance, certain validity 
+conditions must be met in order to conduct an ANOVA F-test.</p>
+
+<convention> 
+ <title> for the ANOVA F-test </title>
+<p>The F-distribution is a good approximation to the null distribution of the F-statistic as long as:
+<ul><li>Either the sample size is at least 20 for all the groups, without strong skewness or 
+outliers; or if the sample size is less than 20, then the distribution of the response 
+variable is approximately symmetric in all the samples (examine the dotplots for skewness or 
+outliers).</li>
+<li>The standard deviations of the samples are approximately equal to each other (largest 
+standard deviation is not more than twice the value of the smallest standard deviation).</li></ul>
+</p>
+</convention>
+
+<activity>
+ <!--Question 20-->
+<statement>
+<p>Do the sample data for the diet study appear to satisfy the validity conditions for conducting an
+ ANOVA F-test? How are you deciding?</p>
+</statement>
+<solution>
+  <p>
+    There is not strong skewness in any of the four groups. The standard deviations are: 2.00, 2.14, 2.00 and 2.54. These standard deviations are similar---none of them is more than twice the size of any other.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 5: Formulate conclusions</title>
+<activity>
+ <!--Question 21-->
+<statement>
+<p>Are you comfortable with concluding from this study that the diet used causes a difference in 
+BMI change? Justify your answer.</p>
+</statement>
+<solution>
+  <p>
+    Yes, because this is a randomized experiment we can make causal conclusions.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 22-->
+<statement>
+<p>To what population are you comfortable generalizing the results of this study? Justify your answer.</p>
+</statement>
+<solution>
+  <p>
+    The data do not come from a random sample, so there is no obvious population to generalize to. Could possibly feel comfortable generalizing to women who are apt to volunteer for this type of a study.
+  </p>
+</solution>
+</activity>
+
+</subsection>
+
+<subsection> 
+ <title>Step 6: Look back and ahead</title>
+<activity>
+ <!--Question 23-->
+<statement>
+<p>Looking back: Did anything about the design and conclusions of this study concern
+you? Issues you may want to critique include: The match between the research question 
+and the study design, how the experimental units were selected, how the treatment was 
+assigned to the experimental units, how the measurements were recorded, the number of 
+experimental units in the study, whether what we observed is of practical value.</p>
+</statement>
+<solution>
+  <p>
+    Study design looks good, but it would have been nice to get a random sample to be able to generalize more broadly.
+  </p>
+</solution>
+</activity>
+
+<activity>
+ <!--Question 24-->
+  <statement>
+  <p>Looking ahead: What should the researchers' next steps be to fix the limitations or 
+  build on this knowledge?</p>
+  </statement>
+  <solution>
+    <p>
+      Answers will vary.  Some suggestions are
+      <ul>
+        <li>
+          <p>
+            Expand study to include males.
+          </p>
+        </li>
+        <li>
+          <p>
+            Monitor exercise as well.
+          </p>
+        </li>
+        <li>
+          <p>
+            Look at pre/post cholesterol measurements.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </solution>
+</activity>
+
+</subsection>
+
+</section>

@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>8-3 : Theory-based approach for analyzing paired data</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Comparing auction formats</title>
+      <slide>
+        <p>An economist at Vanderbilt University devised <url href="http://doi.org/10.1257/aer.89.5.1063">
+  a study</url> to compare different types of online auctions. In one experiment he compared a Dutch 
+  auction to a first-price sealed bid auction. In the Dutch auction the item for sale starts at a 
+  very high price and is lowered gradually until someone finds the price low enough to buy. In 
+  the first-price sealed bid auction each bidder submits a single sealed bid before a particular 
+  deadline. After the deadline, the person with the highest bid wins. The researcher auctioned 
+  off collectible trading cards from the game Magic: The Gathering. He placed pairs of identical 
+  cards up for auction; one would go into the Dutch auction and the other to the first-price 
+  sealed bid auction. He then looked at the difference in the prices he received on the pair. 
+  He repeated this for a total of 88 pairs.</p>
+      </slide>
+      <!--Question 1-->
+      <slide>
+        <title>Exercise 1</title>
+        <p>Before we look at the data that were collected and start the analysis, let's make sure 
+    you understand the study design.</p>
+      </slide>
+      <slide>
+        <title>Exercise 1a: </title>
+        <p>
+        Explain why the price data should be analyzed using paired samples as opposed to two independent samples.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1b: </title>
+        <p>
+        What makes a pair?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1c: </title>
+        <p>
+        What is the explanatory variable? Is it categorical or quantitative?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 1d: </title>
+        <p>
+        What is the response variable? Is it categorical or quantitative?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 2</title>
+        <!--Question 2-->
+        <p>State the relevant hypotheses in words. (Use a two-sided alternative.)</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <!--Question 3-->
+        <p>Define the parameter of interest and give the symbol that should be assigned to it.</p>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <!--Question 4-->
+        <p>State the relevant hypotheses in symbols.</p>
+      </slide>
+      <!--Question 5-->
+      <slide>
+        <title>Exercise 5</title>
+        <p>The data for the auction can be found in the file 
+    <url href="https://static-content2.zybooks.com/isi/data/chap7/Auction.txt">
+    Auction</url>. The selling prices for the Dutch auction are labeled Dutch 
+    and the prices for first-price sealed bid auction are labeled FP. Paste 
+    these data into the 
+    <url href="https://static-content.zybooks.com/applets/2021/matchedpairs/MatchedPairs.htm?hideExtras=1">
+    Matched Pairs applet</url>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5a: </title>
+        <p>
+        What is the sample mean price for the Dutch auction?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5b: </title>
+        <p>
+        What is the sample mean price for the first-price sealed bid auction?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5c: </title>
+        <p>
+        What are the mean and standard deviation for the difference in the two prices?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 5d: </title>
+        <p>
+        Determine a p-value using the applet. Explain how you did so.
+      </p>
+      </slide>
+      <slide>
+        <p>Notice that the simulated null distribution is bell-shaped. This is no coincidence. 
+A theory-based method exists that predicts this to occur when certain validity 
+conditions are met.</p>
+      </slide>
+      <slide>
+        <title>Convention 1: </title>
+        <convention>
+          <p>Validity conditions for theory-based analysis of paired data: Theory-based 
+methods of inference will work well for paired data if the distribution of 
+differences has a symmetric distribution, or you have at least 20 pairs (i.e., 
+at least 20 differences) and the distribution of the sample differences is not 
+strongly skewed. This test is known as <term>a paired t-test</term>.
+</p>
+        </convention>
+      </slide>
+      <slide>
+        <title>Exercise 6</title>
+        <!--Question 6-->
+        <p>Are the validity conditions met for these data? Explain.</p>
+      </slide>
+      <!--Question 7-->
+      <slide>
+        <title>Exercise 7</title>
+        <p>Because the sample is large enough without strong skewness in the distribution of differences, 
+    we can use a theory-based approach. We will do this by using the 
+    <url href="https://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">
+    Theory-Based Inference applet</url>. To do this:
+    <ul>
+            <li>Open the <url href="https://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">Theory-Based Inference applet</url>.</li>
+            <li>Choose <em>One mean</em> from the pull-down menu.</li>
+            <li>Enter the sample size, sample mean, and sample standard deviation for the differences
+    as you found in question 5.</li>
+            <li>Check the box for <em>Test of Significance</em>.</li>
+            <li>Enter the appropriate information for the hypotheses.</li>
+            <li>Make sure the appropriate sign for the alternative hypotheses is chosen.</li>
+            <li>Press <em>Calculate</em>.</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 7a: </title>
+        <p>
+        What is the value of the standardized statistic? What does that number tell you?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 7b: </title>
+        <p>
+        In the light of the value of the standardized statistic, do you expect the p-value to be small or not small? How are you deciding?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 7c: </title>
+        <p>
+        What is the value of the p-value? Is it similar to the p-value found using the simulation-based method?
+      </p>
+      </slide>
+      <!--Question 8-->
+      <slide>
+        <title>Exercise 8</title>
+        <p>Recall that the <url href="https://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1">
+      Theory-Based Inference applet</url> can also produce confidence intervals for the parameter of interest.
+    <ul>
+            <li>Go to the applet, check the <em>Confidence interval</em> box and let the confidence level
+    be 95%.</li>
+            <li>Press <em>Calculate CI</em>.</li>
+          </ul>
+        </p>
+      </slide>
+      <slide>
+        <title>Exercise 8a: </title>
+        <p>
+        Report the 95% confidence interval.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8b: </title>
+        <p>
+        Interpret the 95% confidence interval in context.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 8c: </title>
+        <p>
+        Does the 95% confidence interval agree with your conclusion when using the p-value? How are you deciding?
+      </p>
+      </slide>
+    </section>
+    <section xml:id="exercises-8-3">
+      <title>Exploring Further</title>
+      <slide>
+        <title>Exercise 9</title>
+        <!--Question 9-->
+        <p>
+  Based on the analysis in <xref ref="q-8-3-7"/> and <xref ref="q-8-3-8"/>, state your conclusion in the context of the study. Be sure to comment on:
+  <ul>
+            <li>
+              <p>
+        Statistical significance: Do the data provide evidence that selling cards in a Dutch auction differ than when sold in a first-price sealed bid auction on average? How are you deciding? 
+      </p>
+            </li>
+            <li>
+              <p>
+        Estimation: Find and interpret a 95% confidence interval.
+      </p>
+            </li>
+            <li>
+              <p>
+        Causation: Can you conclude causation? If yes, what causes what? If not, how are you deciding?
+      </p>
+            </li>
+            <li>
+              <p>
+        Generalization: Can you extend the results of this study? Other kinds of cards? Other types of items? Anything sold in an auction format on the Internet? How are you deciding?
+      </p>
+            </li>
+          </ul>
+        </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>

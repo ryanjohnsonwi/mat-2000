@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<section xml:id="section_1_2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Preliminary: Exploring Data</title>
+
+<p>In this section, step 3 of the Statistical Investigation Process is further explored. 
+  The goal is to describe, measure, and, if possible, explain the patterns of variation 
+  (the <em>distribution</em>) in the values of the variable.
+</p>
+
+<subsection> 
+  <title>Graphs for quantitative variables</title>
+  <p>
+    A <term>dotplot</term> is a graph with one dot representing the variable outcome 
+    for each observational unit. Dotplots, like the graph of the performance lengths 
+    in the animation above, are good for smaller datasets. Another common graph for a 
+    quantitative variable is a histogram. A <term>histogram</term> separates the 
+    quantitative variable into bins and displays the number of observations in each 
+    bin.
+  </p>
+</subsection>
+
+<subsection> 
+  <title>Describing the distribution</title>
+  <p>
+    Four important features are discussed when describing the distribution of a 
+    quantitative variable:
+  </p>
+  <p>
+    <ul>
+      <li>
+        The <term>shape</term> of a distribution is described by the number of 
+        peaks and whether one side of the distribution tends to stretch out longer 
+        than the other.
+      </li>
+      <li>
+        The <term>center</term> of a distribution is the middle or typical value.
+      </li>
+      <li>
+        The <term>variability</term> of a distribution is the spread in the observations.
+      </li>
+      <li>
+        <term>Unusual observations</term> are observations that do not follow the overall 
+        pattern of the distribution.
+      </li>
+    </ul>
+  </p>
+</subsection>
+
+</section>

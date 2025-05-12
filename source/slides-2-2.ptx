@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext>
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- The next three lines are likely for mature projects only: -->
+    <!-- <brandlogo url="" source="images/cover.png"/> -->
+    <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+    <!-- <document-id>unique-book-id</document-id> -->
+    <!-- macros for defining latex math shortcuts. It is good practice  -->
+    <!-- to define these semantically, so that the macro relates to what-->
+    <!-- it defines.                                                    -->
+    <macros>
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+</macros>
+    <!-- If you put any latex-image elements you can include preambles  -->
+    <!-- for those in the next element.                                 -->
+    <latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings}
+  \AddToHook{cmd/section/before}{\clearpage}
+</latex-image-preamble>
+    <!-- It is possible to rename elements using the tags below -->
+    <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+    <rename element="assemblage" xml:lang="en-US">Summary</rename>
+    <rename element="task" xml:lang="en-US">Part</rename>
+    <rename element="remark" xml:lang="en-US">Key Idea</rename>
+    <rename element="insight" xml:lang="en-US">Think About It</rename>
+    <rename element="convention" xml:lang="en-US">Validity Conditions</rename>
+    <rename element="activity" xml:lang="en-US">Exercise</rename>
+    <!-- Specify the default type of cross reference:           -->
+    <!--<cross-references text="type-hybrid" />-->
+  </docinfo>
+  <slideshow xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>2-2 : Measuring the strength of evidence</title>
+    <subtitle>MAT 2100: Introduction to Statistics</subtitle>
+    <frontmatter>
+      <titlepage>
+        <event>Grace College</event>
+        <date>Last updated <today/>
+        </date>
+      </titlepage>
+    </frontmatter>
+    <slide>
+      <title>The Jesus Creed</title>
+      <p>Hear, O Israel: The Lord our God, the Lord is one.</p>
+      <p>Love the Lord your God with all your heart and with all</p>
+      <p>your soul and with all your mind and with all your strength.</p>
+      <p>The second is this: Love your neighbor as yourself.</p>
+    </slide>
+    <section>
+      <title>Tasting water</title>
+      <slide>
+        <p>People spend a lot of money on bottled water. But do they really prefer bottled water to ordinary tap water? Researchers at Longwood University (<url href="https://doi.org/10.1080/10691898.2010.11889484">Lunsford and Dowling Fink, 2010</url>) investigated this question by presenting people who came to a booth at a local festival with four cups of water. Three cups contained different brands of bottled water, and one cup was
+filled with tap water. Each subject (person) was asked which of the four cups of water they most preferred. Researchers kept track of how many people chose bottled water in order to see whether bottled water was chosen significantly more often than would be expected by random chance.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 1: Ask a research question:</title>
+      <slide>
+        <title>Exercise 1</title>
+        <p>What is the research question that the researchers hoped to answer?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 2: Design a study and collect data:</title>
+      <slide>
+        <title>Exercise 2</title>
+        <p>Identify the observational units in this study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 3</title>
+        <p>Identify the variable. Is the variable quantitative or categorical?</p>
+      </slide>
+      <slide>
+        <title>Definition 1: </title>
+        <definition>
+          <statement>
+            <p>
+A <term>binary variable</term> is a categorical variable with only two outcomes. Often we convert
+categorical variables with more than two outcomes (e.g., four brands of water) into
+binary variables (e.g., tap water or not). In this case we also define one outcome to be a “success” and one to be a <q>failure.</q>
+            </p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 4</title>
+        <p>Rewrite the variable as a binary variable.</p>
+      </slide>
+      <slide>
+        <title>Exercise 5</title>
+        <p>Describe the parameter of interest (in words). (Hint: The parameter is the long-run proportion of …?)</p>
+      </slide>
+      <slide xml:id="q-2-2-6">
+        <title>Exercise 6</title>
+        <p>
+      One possibility here is that subjects have an equal preference among all four waters and so are essentially selecting one of the four cups at random. In this case what is the long-run proportion (i.e., probability) that a subject in this study would select bottled water?
+    </p>
+      </slide>
+      <slide xml:id="q-2-2-7">
+        <title>Exercise 7</title>
+        <p>
+      Another possibility is that the subjects are more likely to prefer bottled water than the tap water. In this case what can you say about the long-run proportion that a subject in this study would select bottled water? (Hint: You are not to specify a particular value this time; instead indicate a direction from a particular value.)
+    </p>
+      </slide>
+      <slide>
+        <title>Definition 2: </title>
+        <definition>
+          <statement>
+            <p>
+              <ul>
+                <li>
+                  <term>Null hypothesis</term> typically states the "by-random-chance-alone" explanation, which is used to create the chance model, also called the null model. A null hypothesis is expressed symbolically as <m> H_0</m>. </li>
+                <li>
+                  <term>Alternative hypothesis</term> typically states the "an-effect-exists" explanation that contradicts the null hypothesis. An alternative hypothesis is expressed symbolically as <m> H_a</m> .</li>
+              </ul>
+            </p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <title>Exercise 8</title>
+        <p>Your answers to <xref ref="q-2-2-6"/> and <xref ref="q-2-2-7"/> should be the null and alternative hypotheses for this study.
+    Which is which?</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 3: Explore the data:</title>
+      <slide>
+        <title>Exercise 9</title>
+        <p>Researchers found that 24 of the 27 subjects selected bottled water. Calculate the value of the relevant statistic.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Use of symbols</title>
+      <slide>
+        <p>Mathematical symbols can be used to represent quantities and simplify your writing. 
+The Greek letter <m>\pi</m> (pronounced "pie") is used to represent a parameter that is a long-run proportion, such as the probability that a (future) subject in this study would choose bottled water as most preferred.
+The symbol <m>\hat{p}</m> (pronounced "p-hat") is used to represent a statistic that is the proportion of "successes" in a sample, such as the proportion of subjects in this study who did choose bottled water as the most preferred. The symbol <m>n</m> is used to represent the sample size.</p>
+      </slide>
+      <slide>
+        <title>Exercise 10</title>
+        <p>What is the value of <m>\hat{p}</m> in this study?</p>
+      </slide>
+      <slide>
+        <title>Exercise 11</title>
+        <p>What is the value of n in this study?</p>
+      </slide>
+      <slide>
+        <title>Exercise 12</title>
+        <p>Hypotheses are always conjectures about the unknown parameter π. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using π.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 4: Draw inferences:</title>
+      <slide>
+        <title>Exercise 13</title>
+        <p>Is the sample proportion who selected bottled water in this study more than the probability specified in the null hypothesis?</p>
+      </slide>
+      <slide>
+        <title>Exercise 14</title>
+        <p>Is it possible that this proportion could turn out to be this large even if the null
+hypothesis was true (i.e., even if people did not really prefer bottled water and were
+essentially selecting at random from among the four cups)?</p>
+      </slide>
+      <slide>
+        <p>As we did with Buzz and Doris previously, we will use simulation to investigate how surprising the observed sample result (24 of 27 selecting bottled water) would be if in fact subjects did not prefer bottled water and so each had a 3/4 probability of selecting bottled water. (Note also that our null model assumes the same probability for all subjects.)</p>
+      </slide>
+      <slide>
+        <title>Remark 3: </title>
+        <remark>
+          <title> Think About It</title>
+          <p>Can we use a coin to represent the chance model specified by the null hypothesis like before? If not, can you suggest a different random device we could use? What needs to be different about our simulation this time?</p>
+        </remark>
+      </slide>
+      <slide>
+        <title>Exercise 15</title>
+        <p>Explain why we cannot use a simple coin toss to simulate the subjects' choices, as we did with the Buzz/Doris study.</p>
+      </slide>
+      <slide>
+        <title>Exercise 16</title>
+        <p>We could do the simulation using a set of four playing cards: one black and three red.
+Explain how the simulation would work in this case.</p>
+      </slide>
+      <slide>
+        <title>block 17: Simulating with Spinners</title>
+        <p>
+      Another option would be to use a spinner like you would
+      use when playing a child's board game.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 17a: </title>
+        <p>
+        Explain how the simulation would work if you
+        were using a spinner. In particular:
+        What does each region represent?
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 17b: </title>
+        <p>How many spins of the spinner will you need to do in order to simulate one repetition of the experiment when there is equal preference between the four waters (null hypothesis is true)?</p>
+      </slide>
+      <slide>
+        <title>block 18: Simulating with an applet</title>
+        <p>
+      We will now use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion applet</url> to conduct this simulation analysis. Notice that the applet will show us what it would be like if we were simulating with spinners.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 18a: </title>
+        <p>
+        First enter the <term>probability of heads/probability of success</term> value specified in the null hypothesis.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 18b: </title>
+        <p>
+        Enter the appropriate <term>sample size</term> (number of subjects in this study) into the tool.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 18c: </title>
+        <p>Enter 1 for the number of samples, and press Draw Samples. Report the number of
+“successes” in this simulated sample.</p>
+      </slide>
+      <slide>
+        <title>Exercise 18d: </title>
+        <p>Now, select the radio button for “Proportion of successes.” Report the proportion of
+successes in this simulated sample. Use your answer to “c” to verify how this value is
+calculated.</p>
+      </slide>
+      <slide>
+        <title>Exercise 18e: </title>
+        <p>Leaving the <q>Proportion of successes</q> radio button selected but unchecking the <q>Animate</q> box, click on Draw Samples four more times. Do you get the same results each time?</p>
+      </slide>
+      <slide>
+        <title>Exercise 18f: </title>
+        <p>Now enter 995 for the number of samples and click on Draw Samples, bringing
+the number of simulated samples to 1,000. Comment on the center, variability, and
+shape of the resulting distribution of sample proportions.</p>
+      </slide>
+      <slide>
+        <p>This distribution of simulated sample proportions is called the <term>null distribution</term>, because it is based on assuming the null hypothesis to be true.</p>
+      </slide>
+      <slide xml:id="q2-2-19">
+        <title>Exercise 19</title>
+        <p>Recall that the observed value of the sample proportion who selected bottled water in
+this study was <m>\hat{p} = 24/27 \approx 0.8889</m>. Looking at the null distribution you have simulated,
+is this a very unlikely result when the null hypothesis is true? In other words, is this
+value far in the tail of the null distribution?</p>
+      </slide>
+      <slide>
+        <p>You might very well find that <xref ref="q2-2-19"/> is a bit of a tough call. The value 0.8889 is not far
+in the tail of the distribution, but it's also not near the middle of the distribution. To help
+make a judgment about strength of evidence in this case, we can count how many (and what
+proportion) of the simulated sample proportions are as extreme or more extreme than the
+observed value.</p>
+      </slide>
+      <slide xml:id="q2-2-20">
+        <title>Exercise 20</title>
+        <p>Use the applet to count how many (and what proportion) of the simulated sample
+proportions are as or more extreme than the observed value. Make sure that the
+≥ inequality symbol is selected (to match the alternative hypothesis). Then enter
+0.8889 (the observed sample proportion who chose bottled water) in the box to the
+left of the Count button. Then click on the Count button. Record the number and
+proportion of simulated sample proportions that are as extreme or more extreme than
+the observed value.</p>
+      </slide>
+      <slide>
+        <title>Definition 4: </title>
+        <definition>
+          <statement>
+            <p>
+    The <term>p-value</term> is estimated as the proportion of simulated statistics in the null distribution that are at least as extreme (in the direction of the alternative hypothesis) as the value of the statistic actually observed in the research study.
+  </p>
+          </statement>
+        </definition>
+      </slide>
+      <slide>
+        <p>
+How do we evaluate this p-value as a judgment about strength of evidence provided by the
+sample data against the null hypothesis? One answer is: The smaller the p-value, the stronger
+the evidence against the null hypothesis and in favor of the alternative hypothesis. But how
+small is small enough to regard as convincing? There is no definitive answer, but here are
+some guidelines:
+</p>
+      </slide>
+      <slide>
+        <title>Table 5: </title>
+        <table>
+          <title> Guidelines for evaluating strength of evidence from a p-value. </title>
+          <tabular>
+            <row header="yes">
+              <cell>Range</cell>
+              <cell>Strength of evidence</cell>
+            </row>
+            <row>
+              <cell>0.10 &lt; p-value</cell>
+              <cell>Little to no evidence against the null hypothesis.</cell>
+            </row>
+            <row>
+              <cell>0.05 &lt; p-value <m>\leq</m> 0.10</cell>
+              <cell>Moderate evidence against the null hypothesis.</cell>
+            </row>
+            <row>
+              <cell>0.01  &lt;  p-value <m>\leq</m>  0.05</cell>
+              <cell>Strong evidence against the null hypothesis.</cell>
+            </row>
+            <row>
+              <cell>p-value <m>\leq</m> 0.01</cell>
+              <cell>Very strong evidence against the null hypothesis.</cell>
+            </row>
+          </tabular>
+        </table>
+      </slide>
+      <slide>
+        <title>Exercise 21</title>
+        <p>Is the approximate p-value from your simulation analysis (your answer to <xref ref="q2-2-20"/>) small
+enough to provide much evidence against the null hypothesis that subjects prefer bottled
+water equally to the tap water? If so, how strong is this evidence? Explain.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 5: Formulate conclusions:</title>
+      <slide>
+        <title>Exercise 22</title>
+        <p>When computing p-values, <q>more extreme</q> is always measured in the direction of the
+alternative hypothesis. Use this fact to explain why you counted ≥ 24 in <xref ref="q2-2-20"/>.</p>
+      </slide>
+      <slide>
+        <title>Exercise 23</title>
+        <p>Do you consider the observed sample result to be statistically significant? Recall that this
+means that the observed result is unlikely to have occurred by chance alone.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Step 6: Look back and ahead:</title>
+      <slide>
+        <title>Exercise 24</title>
+        <p>How broadly are you willing to generalize your conclusions? Would you be willing to
+generalize your conclusions to water drinkers beyond the subjects in this study? How
+broadly? Explain your reasoning.</p>
+      </slide>
+      <slide>
+        <title>Exercise 25</title>
+        <p>Suggest a new research question that you might investigate next, building on what you
+learned in this study.</p>
+      </slide>
+    </section>
+    <section>
+      <title>Exploring further</title>
+      <slide>
+        <p>Instead of focusing on the subjects who chose bottled water, you could instead analyze the data based on the subjects who chose tap water. Because 24 of 27 subjects chose bottled water, we know  3 of the 27 subjects chose tap water. Now let the parameter of interest (denoted by <m>\pi</m>) be the probability that a subject will select tap water as most preferred.</p>
+      </slide>
+      <slide>
+        <title>block 26: Tap Water Investigation</title>
+        <p>
+      Conduct a simulation analysis to assess the strength of evidence provided by the sample Data.
+    </p>
+      </slide>
+      <slide>
+        <title>Exercise 26a: </title>
+        <p>
+        The research conjecture is that subjects tend to select tap water (more or less) often
+        than bottled water.
+      </p>
+      </slide>
+      <slide>
+        <title>Exercise 26b: </title>
+        <p>State the null hypothesis in words and in terms of the (newly defined) parameter π.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26c: </title>
+        <p>State the alternative hypothesis in words and in terms of the (new) parameter π.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26d: </title>
+        <p>Calculate the observed value of the relevant statistic.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26e: </title>
+        <p>Before you use the One Proportion applet to analyze these data, indicate what values you will input for
+Probability of success, Sample size, and Number of samples.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26f: </title>
+        <p>Use the applet to produce the null distribution of simulated sample proportions.  What is the center, variability, and shape of the null distribution?</p>
+      </slide>
+      <slide>
+        <title>Exercise 26g: </title>
+        <p>In order to approximate the p-value, you will count how many of the simulated pro-
+portions are ______ or ______ (larger/smaller) and then divide by ______.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26h: </title>
+        <p>Estimate the p-value from your simulation results.</p>
+      </slide>
+      <slide>
+        <title>Exercise 26i: </title>
+        <p>Interpret this p-value. (Hint: This is the probability of what, assuming what?)</p>
+      </slide>
+      <slide>
+        <title>Exercise 26j: </title>
+        <p>Evaluate this p-value: How much evidence do the sample data provide against the
+null hypothesis?</p>
+      </slide>
+      <slide>
+        <title>Exercise 27</title>
+        <p>Does your analysis based on the number who chose tap water produce similar conclusions
+to your previous analysis based on the number who chose bottled water? Explain.</p>
+      </slide>
+      <slide>
+        <p>
+  You should have found that it does not matter whether you focus on the number/
+  proportion that chose tap water or the number/proportion that chose bottled water. In other
+  words, it does not matter which category you define to be a “success” for the preferred water
+  variable. Your findings should be very similar provided that you make the appropriate
+  adjustments in your analysis:
+<ul>
+            <li>Using 0.25 instead of 0.75 as the null value of the parameter</li>
+            <li>Changing the alternative hypothesis to “<m>\pi \lt 0.25</m>” rather than “<m>\pi \gt 0.75</m>”</li>
+            <li>Calculating the p-value as the proportion of samples with <m>\hat{p} \leq 0.1111</m> rather than <m>\hat{p} \geq 0.8889</m>
+            </li>
+          </ul>
+        </p>
+      </slide>
+    </section>
+  </slideshow>
+</pretext>
