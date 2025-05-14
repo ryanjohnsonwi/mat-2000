@@ -1,0 +1,10 @@
+WARNING : Using CLI version 2.18.0 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.18.0.
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Found server at localhost:8128
+INFO    : Server is already available at https://orange-enigma-pj9wr6qpv5rh7gw4-8128.app.github.dev
+INFO    : Now opening browser for target `web` at https://orange-enigma-pj9wr6qpv5rh7gw4-8128.app.github.dev/output/worksheets-html
+INFO    : 

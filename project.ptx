@@ -11,19 +11,19 @@
       <format>html</format>
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>../worksheets-html</output-dir>
+      <output-dir>output/worksheets-html</output-dir>
     </target>
     <target name="print" pdf-method="xelatex">
       <format>pdf</format>
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>../worksheets-pdf</output-dir>
+      <output-dir>output/worksheets-pdf</output-dir>
     </target>
     <target name="print-i" pdf-method="xelatex">
       <format>pdf</format>
       <source>source/main_investigations.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>../intestigations-pdf</output-dir>
+      <output-dir>output/intestigations-pdf</output-dir>
     </target>
     <target name="print-latex">
       <format>latex</format>

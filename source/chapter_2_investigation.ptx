@@ -37,22 +37,6 @@ Do students pick which tire went flat in equal proportions? A common conjecture 
 </tabular></table>
 </remark>
 
-<table>
-<tabular><row header="yes">
-<cell>Front left</cell>
-<cell>Front right</cell>
-<cell>Rear left</cell>
-<cell>Rear right</cell>
-</row>
-<row>
-<cell>6</cell>
-<cell>14</cell>
-<cell>4</cell>
-<cell>4</cell>
-</row>
-</tabular></table>
-</remark>
-
 <exercise>
  <title> Step 2: Design a study and collect data</title>
 <statement>
