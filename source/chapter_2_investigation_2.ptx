@@ -10,14 +10,16 @@
 <p>A legendary story on college campuses concerns two students who missed an exam because of excessive partying, but they blamed the absence on a flat tire. The professor allowed the students to take a make-up exam in separate rooms. On the exam, the students were asked which tire was flat.</p>
 
 
-<p>
-        Step 1: Ask a research question
-</p>
+<investigation>
+        <title>Ask a research question </title>
+</investigation>
+
 <p>
 Do students pick which tire went flat in equal proportions? A common conjecture is that students tend to answer "front right" more often than would be expected by chance.
 </p>
-
- <p> Step 2: Design a study and collect data </p>
+<investigation>
+        <title>Design a study and collect data </title>
+</investigation>
 <p>
 To test the conjecture, a professor asked 28 students to imagine being in the same situation as the students in the story and pick one of the four tires. The data is summarized in the table below.
           </p>
@@ -37,45 +39,46 @@ To test the conjecture, a professor asked 28 students to imagine being in the sa
 </tabular></table>
 
 <activity>
- <title> Step 2: Design a study and collect data</title>
+ 
 <statement>
 <p>What are the observational units?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 2: Design a study and collect data</title>
+ 
 <statement>
 <p>What is the variable that is measured and recorded on each observation?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 2: Design a study and collect data</title>
+ 
 <statement>
 <p>In words, what is the parameter of interest?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 2: Design a study and collect data</title>
+ 
 <statement>
 <p>In words, what are the null and alternative hypothesis?</p>
 </statement>
 </activity>
 
-        <p>Step 3: Explore the data</p>
-        
+<investigation>
+        <title>Explore the data </title>
+</investigation>        
 
 <activity>
- <title> Step 3: Explore the data</title>
+ 
 <statement>
 <p>What proportion of the students picked the right front tire? Is this more than you would expect if students randomly picked one of the four tires?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 3: Explore the data</title>
+ 
 <statement>
 <p>Is observing 14 out of 28 picking the front right tire possible if the students are randomly picking between the four tires?</p>
 </statement>
@@ -88,10 +91,12 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
         </p>
 </remark>
 
-        <p>Step 4: Draw inferences</p>
+<investigation>
+        <title>Draw inferences </title>
+</investigation>  
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Statistic: What is the statistic of interest and what is the symbol that is associated with that statistic called?</p>
 </statement>
@@ -102,7 +107,7 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </p>
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Simulate: What values for probability of success (<m>\pi</m>), sample size (n), and number of samples should be entered into the tool to simulate the study?</p>
 </statement>
@@ -110,60 +115,64 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Simulate: What is the center of your null distribution? Does the center you observed make sense? Explain.</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Strength of evidence: Using your simulation, what is the p-value? What does the p-value represent?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Strength of evidence: Using your simulation, what is the standardized statistic? What does this standardized statistic represent?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Strength of evidence: Using a theory-based z-test (normal approximation), what is the p-value? Are the validity conditions met?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 4: Draw inferences</title>
+ 
 <statement>
 <p>Strength of evidence: Do all three methods yield strong evidence against the null hypothesis that students pick the front right tire one-fourth of the time in the long run?</p>
 </statement>
 </activity>
 
-        <p>Step 5: Formulate conclusions</p>
+<investigation>
+        <title>Formulate conclusions </title>
+</investigation>  
 
 <activity>
- <title> Step 5: Formulate conclusions</title>
+ 
 <statement>
 <p>What conclusions can you draw from the study?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 5: Formulate conclusions</title>
+ 
 <statement>
 <p>What are the wider implications of the study? Do you think the conclusions hold true for people in general?</p>
 </statement>
 </activity>
 
-        <p>Step 6: Look back and ahead</p>
+<investigation>
+        <title>Look back and ahead </title>
+</investigation>  
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>If you were to repeat this study, what improvements  would you make? What further research would you propose related to this topic in the future? </p>
 </statement>
@@ -175,7 +184,7 @@ Another professor conducted a similar study with a smaller class and found that 
         </p>
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>Do you expect that this study will yield stronger, weaker, or the same evidence against the null hypothesis? Explain.</p>
 </statement>
@@ -186,7 +195,7 @@ Another professor conducted a similar study with a smaller class and found that 
 </p>
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>Conduct a simulation analysis and produce a p-value. How does this p-value compare to the p-value you calculated for the sample of 28 students?</p>
 </statement>
@@ -197,21 +206,21 @@ Suppose you didn't have a preconceived notion that the right front tire would be
         </p>
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>In words, what are the null and alternative hypotheses for this new question?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>Conduct a theory-based analysis and produce a p-value. How does this p-value compare to the theory-based p-value you calculated for the sample of 28 students using the original setup?</p>
 </statement>
 </activity>
 
 <activity>
- <title> Step 6: Look back and ahead</title>
+ 
 <statement>
 <p>Do you have strong evidence against the null hypothesis that students choose the right front tire one-fourth of the time in the long run?</p>
 </statement>
