@@ -6,19 +6,19 @@
 
 <article xml:id="chapter_2_investigation">
 <title>Chapter 2 Summative Assignment: Tire study</title>
-<remark> 
+<introduction> 
  <title> </title>
 <p>A legendary story on college campuses concerns two students who missed an exam because of excessive partying, but they blamed the absence on a flat tire. The professor allowed the students to take a make-up exam in separate rooms. On the exam, the students were asked which tire was flat.</p>
-</remark>
+</introduction>
 
-<remark> 
+<section> 
  <title> Step 1: Ask a research question </title>
 <p>
 Do students pick which tire went flat in equal proportions? A common conjecture is that students tend to answer "front right" more often than would be expected by chance.
         </p>
-</remark>
+</section>
 
-<remark> 
+<section> 
  <title> Step 2: Design a study and collect data </title>
 <p>
 To test the conjecture, a professor asked 28 students to imagine being in the same situation as the students in the story and pick one of the four tires. The data is summarized in the table below.
@@ -37,26 +37,6 @@ To test the conjecture, a professor asked 28 students to imagine being in the sa
 <cell>4</cell>
 </row>
 </tabular></table>
-</remark>
-
-<p>
-To test the conjecture, a professor asked 28 students to imagine being in the same situation as the students in the story and pick one of the four tires. The data is summarized in the table below.
-          </p>
-<table>
-<tabular><row header="yes">
-<cell>Front left</cell>
-<cell>Front right</cell>
-<cell>Rear left</cell>
-<cell>Rear right</cell>
-</row>
-<row>
-<cell>6</cell>
-<cell>14</cell>
-<cell>4</cell>
-<cell>4</cell>
-</row>
-</tabular></table>
-</remark>
 
 <activity>
  <title> Step 2: Design a study and collect data</title>
@@ -86,6 +66,12 @@ To test the conjecture, a professor asked 28 students to imagine being in the sa
 </statement>
 </activity>
 
+</section>
+
+<section xml:id="chap-2-step-3">
+        <title>Step 3: Explore the data</title>
+        
+
 <activity>
  <title> Step 3: Explore the data</title>
 <statement>
@@ -107,6 +93,11 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
         </p>
 </remark>
 
+</section>
+
+<section xml:id="chap-2-step-4">
+        <title>Step 4: Draw inferences</title>
+
 <activity>
  <title> Step 4: Draw inferences</title>
 <statement>
@@ -114,15 +105,18 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </statement>
 </activity>
 
+<p>
+        Now we will use the One proportion simulator at <url href="https://www.rossmanchance.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" />
+</p>
+
 <activity>
  <title> Step 4: Draw inferences</title>
 <statement>
-<p>Simulate: What values for probability of success (π), sample size (n), and number of repetitions should be entered into the tool to simulate the study?</p>
+<p>Simulate: What values for probability of success (<m>\pi</m>), sample size (n), and number of samples should be entered into the tool to simulate the study?</p>
 </statement>
 </activity>
 
-<activity>
- <title> One proportion simulator</title>
+
 <activity>
  <title> Step 4: Draw inferences</title>
 <statement>
@@ -158,6 +152,11 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </statement>
 </activity>
 
+</section>
+
+<section xml:id="chap-2-step-5">
+        <title>Step 5: Formulate conclusions</title>
+
 <activity>
  <title> Step 5: Formulate conclusions</title>
 <statement>
@@ -171,6 +170,11 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 <p>What are the wider implications of the study? Do you think the conclusions hold true for people in general?</p>
 </statement>
 </activity>
+
+</section>
+
+<section xml:id="chap-2-step-6">
+        <title>Step 6: Look back and ahead</title>
 
 <activity>
  <title> Step 6: Look back and ahead</title>
@@ -193,8 +197,10 @@ Another professor conducted a similar study with a smaller class and found that 
 </statement>
 </activity>
 
-<activity>
- <title> One proportion simulator</title>
+<p>
+        Again we will use the One proportion simulator at <url href="https://www.rossmanchance.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" />
+</p>
+
 <activity>
  <title> Step 6: Look back and ahead</title>
 <statement>
@@ -217,8 +223,6 @@ Suppose you didn't have a preconceived notion that the right front tire would be
 </activity>
 
 <activity>
- <title> One proportion simulator</title>
-<activity>
  <title> Step 6: Look back and ahead</title>
 <statement>
 <p>Conduct a theory-based analysis and produce a p-value. How does this p-value compare to the theory-based p-value you calculated for the sample of 28 students using the original setup?</p>
@@ -232,7 +236,7 @@ Suppose you didn't have a preconceived notion that the right front tire would be
 </statement>
 </activity>
 
-
+</section>
 
 </article>
 
