@@ -22,7 +22,7 @@
     <target name="print-ch-2" pdf-method="xelatex">
       <format>pdf</format>
       <source>source/chapter_2_investigation_2.ptx</source>
-      <publication>publication/publication.ptx</publication>
+      <publication>publication/publication-inv.ptx</publication>
       <output-dir>output/intestigations-pdf</output-dir>
     </target>
     <target name="print-latex">

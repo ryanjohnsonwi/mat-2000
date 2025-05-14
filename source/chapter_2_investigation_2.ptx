@@ -6,20 +6,18 @@
 
 <article xml:id="chapter_2_investigation">
 <title>Chapter 2 Summative Assignment: Tire study</title>
-<introduction> 
- <title> </title>
-<p>A legendary story on college campuses concerns two students who missed an exam because of excessive partying, but they blamed the absence on a flat tire. The professor allowed the students to take a make-up exam in separate rooms. On the exam, the students were asked which tire was flat.</p>
-</introduction>
 
-<section> 
- <title> Step 1: Ask a research question </title>
+<p>A legendary story on college campuses concerns two students who missed an exam because of excessive partying, but they blamed the absence on a flat tire. The professor allowed the students to take a make-up exam in separate rooms. On the exam, the students were asked which tire was flat.</p>
+
+
+<p>
+        Step 1: Ask a research question
+</p>
 <p>
 Do students pick which tire went flat in equal proportions? A common conjecture is that students tend to answer "front right" more often than would be expected by chance.
-        </p>
-</section>
+</p>
 
-<section> 
- <title> Step 2: Design a study and collect data </title>
+ <p> Step 2: Design a study and collect data </p>
 <p>
 To test the conjecture, a professor asked 28 students to imagine being in the same situation as the students in the story and pick one of the four tires. The data is summarized in the table below.
           </p>
@@ -66,10 +64,7 @@ To test the conjecture, a professor asked 28 students to imagine being in the sa
 </statement>
 </activity>
 
-</section>
-
-<section xml:id="chap-2-step-3">
-        <title>Step 3: Explore the data</title>
+        <p>Step 3: Explore the data</p>
         
 
 <activity>
@@ -93,10 +88,7 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
         </p>
 </remark>
 
-</section>
-
-<section xml:id="chap-2-step-4">
-        <title>Step 4: Draw inferences</title>
+        <p>Step 4: Draw inferences</p>
 
 <activity>
  <title> Step 4: Draw inferences</title>
@@ -152,10 +144,7 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </statement>
 </activity>
 
-</section>
-
-<section xml:id="chap-2-step-5">
-        <title>Step 5: Formulate conclusions</title>
+        <p>Step 5: Formulate conclusions</p>
 
 <activity>
  <title> Step 5: Formulate conclusions</title>
@@ -171,10 +160,7 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </statement>
 </activity>
 
-</section>
-
-<section xml:id="chap-2-step-6">
-        <title>Step 6: Look back and ahead</title>
+        <p>Step 6: Look back and ahead</p>
 
 <activity>
  <title> Step 6: Look back and ahead</title>
@@ -183,12 +169,10 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </statement>
 </activity>
 
-<remark> 
- <title> </title>
+
 <p>
 Another professor conducted a similar study with a smaller class and found that 7 out of 14 students picked the front right tire.
         </p>
-</remark>
 
 <activity>
  <title> Step 6: Look back and ahead</title>
@@ -208,12 +192,9 @@ Another professor conducted a similar study with a smaller class and found that 
 </statement>
 </activity>
 
-<remark> 
- <title> </title>
 <p>
 Suppose you didn't have a preconceived notion that the right front tire would be chosen more often, but instead just wanted to find out if the front right tire was chosen at a rate that was different than one-fourth. Consider the original sample of 28 students.
         </p>
-</remark>
 
 <activity>
  <title> Step 6: Look back and ahead</title>
@@ -235,8 +216,6 @@ Suppose you didn't have a preconceived notion that the right front tire would be
 <p>Do you have strong evidence against the null hypothesis that students choose the right front tire one-fourth of the time in the long run?</p>
 </statement>
 </activity>
-
-</section>
 
 </article>
 

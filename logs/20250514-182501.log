@@ -1,0 +1,128 @@
+WARNING : Using CLI version 2.18.0 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.18.0.
+INFO    : Building target print-ch-2
+INFO    : XSL conversion of /workspaces/mat-2000/source/chapter_2_investigation_2.ptx by /root/.ptx/2.18.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : successful application of /root/.ptx/2.18.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /workspaces/mat-2000/output/intestigations-pdf.
+INFO    : discovering source file's directory name: /workspaces/mat-2000/source
+INFO    : verifying and expanding input directory: /workspaces/mat-2000/source/../generated-assets
+INFO    : input directory expanded to absolute path: /workspaces/mat-2000/generated-assets
+INFO    : verifying and expanding input directory: /workspaces/mat-2000/source/../assets
+INFO    : input directory expanded to absolute path: /workspaces/mat-2000/assets
+INFO    : XSL conversion of /workspaces/mat-2000/source/chapter_2_investigation_2.ptx by /root/.ptx/2.18.0/core/xsl/utilities/report-publisher-variables.xsl
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : successful application of /root/.ptx/2.18.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /workspaces/mat-2000/source/chapter_2_investigation_2.ptx to LaTeX as /tmp/ptx-aipskn8a/chapter_2_investigation_2.tex
+INFO    : XSL conversion of /workspaces/mat-2000/source/chapter_2_investigation_2.ptx by /root/.ptx/2.18.0/core/xsl/pretext-latex.xsl
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+WARNING : * PTX:DEPRECATE: (2024-07-12) the html/css/@style publication file entry has been deprecated for replacement by @theme. See the Guide for theme options.
+INFO    : * --------------
+INFO    : successful application of /root/.ptx/2.18.0/core/xsl/pretext-latex.xsl
+ERROR   : * PTX:ERROR:   numbering level set for divisions ("2") is greater than the maximum possible ("0") for this document type.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for blocks ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for projects ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for equations ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+ERROR   : * PTX:ERROR:   numbering level set for footnotes ("2") is greater than the maximum possible levels ("0") configured.  The default value will be used instead
+INFO    : Removing temporary directory /tmp/ptx-aipskn8a
+INFO    : Removing temporary directory /tmp/ptx-d3u4ikgy
+INFO    : Removing temporary directory /tmp/ptx-sznzasky
+INFO    : 
+Success! The output is in /workspaces/mat-2000/output/intestigations-pdf.
+
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
