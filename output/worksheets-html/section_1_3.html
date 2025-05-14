@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Preliminary: Exploring random processes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MAT 2000: Introduction to Statistics">
+<meta property="book:author" content="Compiled by Dr. Ryan Johnson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="mat-2000-ws.html"><span class="title">MAT 2000: Introduction to Statistics:</span> <span class="subtitle">Worksheets for Grace College from Zybooks</span></a></h1>
+<p class="byline">Compiled by Dr. Ryan Johnson</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section_1_2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_1_preliminaries.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section_1_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="meta_frontmatter-preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_1_preliminaries.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Preliminary: Introduction to the six-step method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-3" class="internal"><span class="title">The six steps of a statistical investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-4" class="internal"><span class="title">What affects the choice to become an organ donor?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-5" class="internal"><span class="title">Basic terminology</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Preliminary: Exploring Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_2.html#section_1_2-3" class="internal"><span class="title">Graphs for quantitative variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_2.html#section_1_2-4" class="internal"><span class="title">Describing the distribution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section_1_3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Preliminary: Exploring random processes</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-2" class="internal"><span class="title">Random processes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-3" class="internal"><span class="title">Long-run proportion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-4" class="internal"><span class="title">Interpretation of probability</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Data and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_4.html#section_1_4-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_4.html#section_1_4-3" class="internal"><span class="title">Preliminary formulas</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_2_significance.html" class="internal"><span class="codenumber">2</span> <span class="title">Significance</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to chance models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-2" class="internal"><span class="title">Can dogs understand human cues?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-3" class="internal"><span class="title">Step 1: State the research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-7" class="internal"><span class="title">The chance model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-8" class="internal"><span class="title">Using an Applet to Simulate Flipping a Coin Many Times</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-9" class="internal"><span class="title">Summarizing Your Understanding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-10" class="internal"><span class="title">3S Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-11" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-12" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-13" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_4.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Measuring the strength of evidence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-2" class="internal"><span class="title">Tasting water</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-3" class="internal"><span class="title">Step 1: Ask a research question:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-4" class="internal"><span class="title">Step 2: Design a study and collect data:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-5" class="internal"><span class="title">Step 3: Explore the data:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-6" class="internal"><span class="title">Use of symbols</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-7" class="internal"><span class="title">Step 4: Draw inferences:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-8" class="internal"><span class="title">Step 5: Formulate conclusions:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-9" class="internal"><span class="title">Step 6: Look back and ahead:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-10" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-2-3.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Alternative measure of strength of evidence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-3" class="internal"><span class="title">STEP 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-4" class="internal"><span class="title">STEP 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-5" class="internal"><span class="title">STEP 4: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-6" class="internal"><span class="title">STEP 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-7" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-8" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-9" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_8.html" class="internal"><span class="codenumber">2.4</span> <span class="title">What impacts strength of evidence?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#subsec-color-of-unifrom" class="internal"><span class="title">Does Uniform Color Matter?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-3" class="internal"><span class="title">One-Sided vs. Two-Sided Tests</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-4" class="internal"><span class="title">Difference Between Statistic and Null Hypothesis Parameter Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-5" class="internal"><span class="title">Sample Size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_10.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Inference on a single proportion: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#subsec-eye-dominance" class="internal"><span class="title">Eye Dominance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-3" class="internal"><span class="title">Theory-Based Approach (One-Proportion z-test)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-4" class="internal"><span class="title">Validity Conditions for Theory-Based Approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-5" class="internal"><span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="section_2_10.html#section_2_10-6" class="internal"><span class="title">Exploring Further</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-6-2" class="internal"><span class="title">Follow-up Analysis #1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-6-3" class="internal"><span class="title">Follow-up Analysis #2</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_12.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#section_2_12-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#subsec-Data" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#section_2_12-4" class="internal"><span class="title">Formulas for one proportion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_3_generalization.html" class="internal"><span class="codenumber">3</span> <span class="title">Generalization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Sampling from a finite population</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#subsec-literary-computing" class="internal"><span class="title">Literary Computing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-3" class="internal"><span class="title">Taking a Simple Random Sample</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-4" class="internal"><span class="title">Sampling Distribution of Sample Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-5" class="internal"><span class="title">Other Considerations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-6" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Inference for a single quantitative variable</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-2.html#section-3-2-2" class="internal"><span class="title">Sampling words (cont.)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Theory-based Inference for a Population Mean</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-2" class="internal"><span class="title">STEP 1: Ask a research question.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-3" class="internal"><span class="title">STEP 2: Design a study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-4" class="internal"><span class="title">STEP 3: Explore the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-5" class="internal"><span class="title">STEP 4: Draw inference beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-6" class="internal"><span class="title">Simulation-based Approach: Applying the 3S Strategy to Hypotheses about a Population Mean</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-7" class="internal"><span class="title">Let’s Investigate</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-8" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-9" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3_8.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Other Statistics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-2" class="internal"><span class="title">Backpack weights</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-3" class="internal"><span class="title">STEP 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-4" class="internal"><span class="title">STEP 2: Design  study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-5" class="internal"><span class="title">STEP 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-6" class="internal"><span class="title">STEP 4: Draw inferences beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-7" class="internal"><span class="title">Null Distribution?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-8" class="internal"><span class="title">STEP 5: Formula conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-9" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-10" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3_10.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Tools, data, and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-4" class="internal"><span class="title">Formulas for one mean</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_4_estimation.html" class="internal"><span class="codenumber">4</span> <span class="title">Estimation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_2.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Statistical inference: Confidence intervals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_2.html#section_4_2-3" class="internal"><span class="title">Kissing right?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">2SD and theory-based confidence intervals for a single proportion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-2" class="internal"><span class="title">How mobile are we?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-3" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">2SD and theory-based confidence intervals for a single mean</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_6.html#section_4_6-2" class="internal"><span class="title">Sleepless Nights (cont.)?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_6.html#section_4_6-3" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_8.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Factors that affect the width of a confidence interval</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_8.html#section_4_8-2" class="internal"><span class="title">Holiday spending habits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_8.html#section_4_8-3" class="internal"><span class="title">The impact of sample size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_9.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Factors that affect the width of a confidence interval (continued)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_9.html#section_4_9-2" class="internal"><span class="title">Reese’s Pieces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_11.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Tools, data, and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-4" class="internal"><span class="title">Formulas for one proportion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-5" class="internal"><span class="title">Formulas for one mean</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_5_causation.html" class="internal"><span class="codenumber">5</span> <span class="title">Causation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Association and confounding</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-1.html#section_5-1-2" class="internal"><span class="title">Home court disadvantage?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Observational studies versus experiments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-2" class="internal"><span class="title">Have a nice trip</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-3" class="internal"><span class="title">Another Study: Cursive Handwriting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-4" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_6_two_props.html" class="internal"><span class="codenumber">6</span> <span class="title">Comparing Two Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Comparing two groups: Categorical response</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_6-1.html#section_6-1-2" class="internal"><span class="title">Murderous nurse?</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section_6-1.html#section_6-1-3" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Comparing two proportions: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-2" class="internal"><span class="title">Is yawning contagious?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-7" class="internal"><span class="title">Estimation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-8" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-9" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-10" class="internal"><span class="title">Exploring further</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-11" class="internal"><span class="title">Relative risk</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Comparing two proportions: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-2" class="internal"><span class="title">Donating blood</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-3" class="internal"><span class="title">Validity Conditions for Theory-Based Approach (Two Proportions)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_6-4.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Formulas</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_6-4.html#section_6-4-2" class="internal"><span class="title">Formulas for two proportions</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_7_two_means.html" class="internal"><span class="codenumber">7</span> <span class="title">Comparing Two Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Comparing two groups: Quantitative response</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-1.html#section_7-1-3" class="internal"><span class="title">Cancer Pamphlets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_7-2.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Comparing two means: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-3" class="internal"><span class="title">Lingering effects of sleep deprivation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-4" class="internal"><span class="title">STEP 1: Ask a research question.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-5" class="internal"><span class="title">STEP 2: Design a study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-6" class="internal"><span class="title">STEP 3: Explore the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-7" class="internal"><span class="title">STEP 4: Draw inferences beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-8" class="internal"><span class="title">1. Statistic:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-9" class="internal"><span class="title">2. Simulate:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-10" class="internal"><span class="title">3. Strength of evidence:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-11" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-12" class="internal"><span class="title">Exploring Further: Another Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-13" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7-3.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Comparing two means: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-3" class="internal"><span class="title">Close Friends</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-4" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-5" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-6" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-7" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-8" class="internal"><span class="title">Validity Conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-10" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7-4.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#subsec-Learning-Goals" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#section-7-4-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#section-7-4-4" class="internal"><span class="title">Formulas for two means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_8_paired_data.html" class="internal"><span class="codenumber">8</span> <span class="title">Paired Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Paired designs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-1.html#section-8-1-2" class="internal"><span class="title">Rounding first base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-1.html#section-8-1-3" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8-2.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Simulation-based approach for analyzing paired data</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-2.html#section-8-2-2" class="internal"><span class="title">Exercise and heart rate</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_8-3.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Theory-based approach for analyzing paired data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-3.html#section_8-3-2" class="internal"><span class="title">Comparing auction formats</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-3.html#exercises-8-3" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_8-4.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-2" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-4" class="internal"><span class="title">Formulas for two means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_9_more_props.html" class="internal"><span class="codenumber">9</span> <span class="title">Comparing More Than Two Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Comparing multiple proportions: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-2" class="internal"><span class="title">Recruiting organ donors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-7" class="internal"><span class="title">Applying the 3S Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-8" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-9" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-2.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Comparing multiple proportions: Theory-based approach (Part A)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-2" class="internal"><span class="title">Conserving hotel towels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-6" class="internal"><span class="title">Step 4:  Draw Inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-7" class="internal"><span class="title">Another Choice of Statistic: Chi-square Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-8" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-9" class="internal"><span class="title">Validity conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-10" class="internal"><span class="title">Follow-up analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-11" class="internal"><span class="title">Step 5: Summarize conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-12" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-3.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Comparing multiple proportions: Theory-based approach (Part B)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-3.html#section_9-3-2" class="internal"><span class="title">Nearsightedness and nightlights revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-3.html#section_9-3-3" class="internal"><span class="title">Alternative Formula for Chi-square Statistic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-4.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Chi-square goodness-of-fit test</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-2" class="internal"><span class="title">Are birthdays equally distributed throughout the week?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-6" class="internal"><span class="title">Step 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-7" class="internal"><span class="title">Simulation-based Goodness-of-fit Test: Using the MAD Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-8" class="internal"><span class="title">Simulation-based Goodness-of-fit Test: Using the Chi-square Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-10" class="internal"><span class="title">Step 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-11" class="internal"><span class="title">Revisiting step 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-12" class="internal"><span class="title">Theory-based Chi-square Goodness-of-fit Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#subsec-9-4-exploring-further" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-5.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-5.html#section_9-5-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-5.html#section_9-5-3" class="internal"><span class="title">Formulas for multiple proportions and goodness-of-fit</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_10_more_means.html" class="internal"><span class="codenumber">10</span> <span class="title">Comparing More Than Two Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Comparing multiple means: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-2" class="internal"><span class="title">Exercise and brain volume</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-6" class="internal"><span class="title">Step 4: Draw inferences (3S Strategy)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-7" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-8" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-2.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Comparing multiple means: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-2" class="internal"><span class="title">Comparing popular diets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-7" class="internal"><span class="title">Follow-up analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-8" class="internal"><span class="title">Validity conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-10" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-3.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-3.html#section_10-3-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-3.html#section_10-3-3" class="internal"><span class="title">Formulas for multiple means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_11_two_quants.html" class="internal"><span class="codenumber">11</span> <span class="title">Two Quantitative Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_11-1.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Two quantitative variables: Scatterplot and correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-2" class="internal"><span class="title">Height and winning at tennis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-6" class="internal"><span class="title">Graphical summary of two quantitative variables: Scatterplots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-7" class="internal"><span class="title">Numerical summaries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-8" class="internal"><span class="title">Steps 4 and 5: Draw inferences and formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-9" class="internal"><span class="title">Steps 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_11_2.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Inference for correlation coefficient</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_2.html#section_11_2-2" class="internal"><span class="title">Draft lottery</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_2.html#subsection-11-2-exploring-further" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_11_6.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Least squares regression</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-2" class="internal"><span class="title">Predicting height from footprints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-3" class="internal"><span class="title">Coefficient of Determination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section_1_3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Preliminary: Exploring random processes</span>
+</h2>
+<section class="subsection" id="section_1_3-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Random processes</span>
+</h3>
+<div class="para" id="section_1_3-2-2">A <dfn class="terminology">random process</dfn> is a repeatable process where the result for an individual attempt is not known in advance but there is a predictable pattern to the results in the long run. Playing <em class="emphasis">Let’s Make a Deal</em> is an example of a random process: The result for the next round of the game is uncertain, but if the game is played many, many times, a predictable pattern is expected.</div></section><section class="subsection" id="section_1_3-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Long-run proportion</span>
+</h3>
+<div class="para" id="section_1_3-3-2">A <dfn class="terminology">simulation</dfn> is an artificial re-creation of a random process.</div></section><section class="subsection" id="section_1_3-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Interpretation of probability</span>
+</h3>
+<div class="para" id="section_1_3-4-2">The <dfn class="terminology">probability</dfn> of an outcome is the long-run proportion of times an outcome from a random process occurs if the process is repeated indefinitely under identical conditions. A probability can be written as a decimal (0.3333), a fraction (1/3), or a percentage (33.33%).</div>
+<article class="exercise exercise-like" id="section_1_3-4-3"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Switch or stay.</span>
+</h4>
+<div class="para" id="section_1_3-4-3-2-1">How do you think the probability of winning with the switch strategy will compare to the probability of winning with the stay strategy? Briefly explain your reasoning.</div></article><article class="remark remark-like" id="section_1_3-4-4"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="section_1_3-4-4-1">The sections in this chapter may have felt unrelated and brief, but they each contributed important components of drawing conclusions from data, including the six-step investigation process, variation in data, and exploring randomness and probability.</div></article></section></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section_1_2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section_1_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
