@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inference for correlation coefficient</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MAT 2000: Introduction to Statistics">
+<meta property="book:author" content="Compiled by Dr. Ryan Johnson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.6.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.1dbf799015a9933a.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="mat-2000-ws.html"><span class="title">MAT 2000: Introduction to Statistics:</span> <span class="subtitle">Worksheets for Grace College from Zybooks</span></a></h1>
+<p class="byline">Compiled by Dr. Ryan Johnson</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="meta_backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section_11-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_11_two_quants.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section_11_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="meta_frontmatter-preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_1_preliminaries.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Preliminary: Introduction to the six-step method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-3" class="internal"><span class="title">The six steps of a statistical investigation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-4" class="internal"><span class="title">What affects the choice to become an organ donor?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_1.html#section_1_1-5" class="internal"><span class="title">Basic terminology</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Preliminary: Exploring Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_2.html#section_1_2-3" class="internal"><span class="title">Graphs for quantitative variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_2.html#section_1_2-4" class="internal"><span class="title">Describing the distribution</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Preliminary: Exploring random processes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-2" class="internal"><span class="title">Random processes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-3" class="internal"><span class="title">Long-run proportion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_3.html#section_1_3-4" class="internal"><span class="title">Interpretation of probability</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_1_4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Data and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_4.html#section_1_4-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_1_4.html#section_1_4-3" class="internal"><span class="title">Preliminary formulas</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_2_significance.html" class="internal"><span class="codenumber">2</span> <span class="title">Significance</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to chance models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-2" class="internal"><span class="title">Can dogs understand human cues?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-3" class="internal"><span class="title">Step 1: State the research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-7" class="internal"><span class="title">The chance model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-8" class="internal"><span class="title">Using an Applet to Simulate Flipping a Coin Many Times</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-9" class="internal"><span class="title">Summarizing Your Understanding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-10" class="internal"><span class="title">3S Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-11" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-12" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_2.html#section_2_2-13" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_4.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Measuring the strength of evidence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-2" class="internal"><span class="title">Tasting water</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-3" class="internal"><span class="title">Step 1: Ask a research question:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-4" class="internal"><span class="title">Step 2: Design a study and collect data:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-5" class="internal"><span class="title">Step 3: Explore the data:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-6" class="internal"><span class="title">Use of symbols</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-7" class="internal"><span class="title">Step 4: Draw inferences:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-8" class="internal"><span class="title">Step 5: Formulate conclusions:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-9" class="internal"><span class="title">Step 6: Look back and ahead:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_4.html#section_2_4-10" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-2-3.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Alternative measure of strength of evidence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-3" class="internal"><span class="title">STEP 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-4" class="internal"><span class="title">STEP 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-5" class="internal"><span class="title">STEP 4: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-6" class="internal"><span class="title">STEP 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-7" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-8" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2-3.html#section-2-3-9" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_8.html" class="internal"><span class="codenumber">2.4</span> <span class="title">What impacts strength of evidence?</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#subsec-color-of-unifrom" class="internal"><span class="title">Does Uniform Color Matter?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-3" class="internal"><span class="title">One-Sided vs. Two-Sided Tests</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-4" class="internal"><span class="title">Difference Between Statistic and Null Hypothesis Parameter Value</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_8.html#section_2_8-5" class="internal"><span class="title">Sample Size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_10.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Inference on a single proportion: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#subsec-eye-dominance" class="internal"><span class="title">Eye Dominance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-3" class="internal"><span class="title">Theory-Based Approach (One-Proportion z-test)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-4" class="internal"><span class="title">Validity Conditions for Theory-Based Approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-5" class="internal"><span class="title">Formulas</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="section_2_10.html#section_2_10-6" class="internal"><span class="title">Exploring Further</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-6-2" class="internal"><span class="title">Follow-up Analysis #1</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="section_2_10.html#section_2_10-6-3" class="internal"><span class="title">Follow-up Analysis #2</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_2_12.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#section_2_12-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#subsec-Data" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_2_12.html#section_2_12-4" class="internal"><span class="title">Formulas for one proportion</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_3_generalization.html" class="internal"><span class="codenumber">3</span> <span class="title">Generalization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3-1.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Sampling from a finite population</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#subsec-literary-computing" class="internal"><span class="title">Literary Computing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-3" class="internal"><span class="title">Taking a Simple Random Sample</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-4" class="internal"><span class="title">Sampling Distribution of Sample Proportions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-5" class="internal"><span class="title">Other Considerations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3-1.html#section_3-1-6" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-3-2.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Inference for a single quantitative variable</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-2.html#section-3-2-2" class="internal"><span class="title">Sampling words (cont.)</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-3-3.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Theory-based Inference for a Population Mean</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-2" class="internal"><span class="title">STEP 1: Ask a research question.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-3" class="internal"><span class="title">STEP 2: Design a study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-4" class="internal"><span class="title">STEP 3: Explore the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-5" class="internal"><span class="title">STEP 4: Draw inference beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-6" class="internal"><span class="title">Simulation-based Approach: Applying the 3S Strategy to Hypotheses about a Population Mean</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-7" class="internal"><span class="title">Let’s Investigate</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-8" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3-3.html#section-3-3-9" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3_8.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Other Statistics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-2" class="internal"><span class="title">Backpack weights</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-3" class="internal"><span class="title">STEP 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-4" class="internal"><span class="title">STEP 2: Design  study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-5" class="internal"><span class="title">STEP 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-6" class="internal"><span class="title">STEP 4: Draw inferences beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-7" class="internal"><span class="title">Null Distribution?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-8" class="internal"><span class="title">STEP 5: Formula conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-9" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_8.html#section_3_8-10" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_3_10.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Tools, data, and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_3_10.html#section_3_10-4" class="internal"><span class="title">Formulas for one mean</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_4_estimation.html" class="internal"><span class="codenumber">4</span> <span class="title">Estimation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_2.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Statistical inference: Confidence intervals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_2.html#section_4_2-3" class="internal"><span class="title">Kissing right?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_4.html" class="internal"><span class="codenumber">4.2</span> <span class="title">2SD and theory-based confidence intervals for a single proportion</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-2" class="internal"><span class="title">How mobile are we?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-3" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_4.html#section_4_4-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">2SD and theory-based confidence intervals for a single mean</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_6.html#section_4_6-2" class="internal"><span class="title">Sleepless Nights (cont.)?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_6.html#section_4_6-3" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_8.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Factors that affect the width of a confidence interval</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_8.html#section_4_8-2" class="internal"><span class="title">Holiday spending habits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_8.html#section_4_8-3" class="internal"><span class="title">The impact of sample size</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_9.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Factors that affect the width of a confidence interval (continued)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_9.html#section_4_9-2" class="internal"><span class="title">Reese’s Pieces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_4_11.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Tools, data, and formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-2" class="internal"><span class="title">Tools</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-4" class="internal"><span class="title">Formulas for one proportion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_4_11.html#section_4_11-5" class="internal"><span class="title">Formulas for one mean</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_5_causation.html" class="internal"><span class="codenumber">5</span> <span class="title">Causation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_5-1.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Association and confounding</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-1.html#section_5-1-2" class="internal"><span class="title">Home court disadvantage?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_5-2.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Observational studies versus experiments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-2" class="internal"><span class="title">Have a nice trip</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-3" class="internal"><span class="title">Another Study: Cursive Handwriting</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_5-2.html#section_5-2-4" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_6_two_props.html" class="internal"><span class="codenumber">6</span> <span class="title">Comparing Two Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_6-1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Comparing two groups: Categorical response</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_6-1.html#section_6-1-2" class="internal"><span class="title">Murderous nurse?</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section_6-1.html#section_6-1-3" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6-2.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Comparing two proportions: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-2" class="internal"><span class="title">Is yawning contagious?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-7" class="internal"><span class="title">Estimation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-8" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-9" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-10" class="internal"><span class="title">Exploring further</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-2.html#section-6-2-11" class="internal"><span class="title">Relative risk</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6-3.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Comparing two proportions: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-2" class="internal"><span class="title">Donating blood</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-3" class="internal"><span class="title">Validity Conditions for Theory-Based Approach (Two Proportions)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6-3.html#section-6-3-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_6-4.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Formulas</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_6-4.html#section_6-4-2" class="internal"><span class="title">Formulas for two proportions</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_7_two_means.html" class="internal"><span class="codenumber">7</span> <span class="title">Comparing Two Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_7-1.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Comparing two groups: Quantitative response</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-1.html#section_7-1-3" class="internal"><span class="title">Cancer Pamphlets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_7-2.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Comparing two means: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-3" class="internal"><span class="title">Lingering effects of sleep deprivation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-4" class="internal"><span class="title">STEP 1: Ask a research question.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-5" class="internal"><span class="title">STEP 2: Design a study and collect data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-6" class="internal"><span class="title">STEP 3: Explore the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-7" class="internal"><span class="title">STEP 4: Draw inferences beyond the data.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-8" class="internal"><span class="title">1. Statistic:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-9" class="internal"><span class="title">2. Simulate:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-10" class="internal"><span class="title">3. Strength of evidence:</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-11" class="internal"><span class="title">STEP 5: Formulate conclusions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-12" class="internal"><span class="title">Exploring Further: Another Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_7-2.html#section_7-2-13" class="internal"><span class="title">STEP 6: Look back and ahead.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7-3.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Comparing two means: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-3" class="internal"><span class="title">Close Friends</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-4" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-5" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-6" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-7" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-8" class="internal"><span class="title">Validity Conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-3.html#section-7-3-10" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7-4.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#subsec-Learning-Goals" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#section-7-4-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7-4.html#section-7-4-4" class="internal"><span class="title">Formulas for two means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_8_paired_data.html" class="internal"><span class="codenumber">8</span> <span class="title">Paired Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8-1.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Paired designs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-1.html#section-8-1-2" class="internal"><span class="title">Rounding first base</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-1.html#section-8-1-3" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8-2.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Simulation-based approach for analyzing paired data</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8-2.html#section-8-2-2" class="internal"><span class="title">Exercise and heart rate</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_8-3.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Theory-based approach for analyzing paired data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-3.html#section_8-3-2" class="internal"><span class="title">Comparing auction formats</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-3.html#exercises-8-3" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_8-4.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-2" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-3" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_8-4.html#section_8-4-4" class="internal"><span class="title">Formulas for two means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_9_more_props.html" class="internal"><span class="codenumber">9</span> <span class="title">Comparing More Than Two Proportions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-1.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Comparing multiple proportions: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-2" class="internal"><span class="title">Recruiting organ donors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-7" class="internal"><span class="title">Applying the 3S Strategy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-8" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-1.html#section_9-1-9" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-2.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Comparing multiple proportions: Theory-based approach (Part A)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-2" class="internal"><span class="title">Conserving hotel towels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-6" class="internal"><span class="title">Step 4:  Draw Inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-7" class="internal"><span class="title">Another Choice of Statistic: Chi-square Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-8" class="internal"><span class="title">Theory-based approach</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-9" class="internal"><span class="title">Validity conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-10" class="internal"><span class="title">Follow-up analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-11" class="internal"><span class="title">Step 5: Summarize conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-2.html#section_9-2-12" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-3.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Comparing multiple proportions: Theory-based approach (Part B)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-3.html#section_9-3-2" class="internal"><span class="title">Nearsightedness and nightlights revisited</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-3.html#section_9-3-3" class="internal"><span class="title">Alternative Formula for Chi-square Statistic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-4.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Chi-square goodness-of-fit test</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-2" class="internal"><span class="title">Are birthdays equally distributed throughout the week?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-6" class="internal"><span class="title">Step 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-7" class="internal"><span class="title">Simulation-based Goodness-of-fit Test: Using the MAD Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-8" class="internal"><span class="title">Simulation-based Goodness-of-fit Test: Using the Chi-square Statistic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-10" class="internal"><span class="title">Step 6: Look back and ahead.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-11" class="internal"><span class="title">Revisiting step 4: Draw inferences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#section_9-4-12" class="internal"><span class="title">Theory-based Chi-square Goodness-of-fit Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-4.html#subsec-9-4-exploring-further" class="internal"><span class="title">Exploring Further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_9-5.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-5.html#section_9-5-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_9-5.html#section_9-5-3" class="internal"><span class="title">Formulas for multiple proportions and goodness-of-fit</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_10_more_means.html" class="internal"><span class="codenumber">10</span> <span class="title">Comparing More Than Two Means</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-1.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Comparing multiple means: Simulation-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-2" class="internal"><span class="title">Exercise and brain volume</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-6" class="internal"><span class="title">Step 4: Draw inferences (3S Strategy)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-7" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-1.html#section_10-1-8" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-2.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Comparing multiple means: Theory-based approach</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-2" class="internal"><span class="title">Comparing popular diets</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-6" class="internal"><span class="title">Step 4: Draw inferences beyond the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-7" class="internal"><span class="title">Follow-up analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-8" class="internal"><span class="title">Validity conditions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-9" class="internal"><span class="title">Step 5: Formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-2.html#section_10-2-10" class="internal"><span class="title">Step 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_10-3.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Data and Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-3.html#section_10-3-2" class="internal"><span class="title">Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_10-3.html#section_10-3-3" class="internal"><span class="title">Formulas for multiple means</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_11_two_quants.html" class="internal"><span class="codenumber">11</span> <span class="title">Two Quantitative Variables</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_11-1.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Two quantitative variables: Scatterplot and correlation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-2" class="internal"><span class="title">Height and winning at tennis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-3" class="internal"><span class="title">Step 1: Ask a research question</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-4" class="internal"><span class="title">Step 2: Design a study and collect data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-5" class="internal"><span class="title">Step 3: Explore the data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-6" class="internal"><span class="title">Graphical summary of two quantitative variables: Scatterplots</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-7" class="internal"><span class="title">Numerical summaries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-8" class="internal"><span class="title">Steps 4 and 5: Draw inferences and formulate conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11-1.html#section_11-1-9" class="internal"><span class="title">Steps 6: Look back and ahead</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section_11_2.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Inference for correlation coefficient</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_2.html#section_11_2-2" class="internal"><span class="title">Draft lottery</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_2.html#subsection-11-2-exploring-further" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_11_6.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Least squares regression</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-2" class="internal"><span class="title">Predicting height from footprints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-3" class="internal"><span class="title">Coefficient of Determination</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_11_6.html#section_11_6-4" class="internal"><span class="title">Exploring further</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="meta_backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="meta_backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="meta_backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section_11_2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">11.2</span><span class="space"> </span><span class="title">Inference for correlation coefficient</span>
+</h2>
+<section class="subsection" id="section_11_2-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Draft lottery</span>
+</h3>
+<div class="para" id="section_11_2-2-2">In 1970, the U.S. Selective Service conducted a lottery to decide which young men would be drafted into the armed forces (<a class="external" href="https://doi.org/10.1126/science.171.3968.255" target="_blank">Fienberg, 1971</a><details class="ptx-footnote" aria-live="polite" id="section_11_2-2-2-2"><summary class="ptx-footnote__number" title="Footnote 11.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="section_11_2-2-2-2"><code class="code-inline tex2jax_ignore">doi.org/10.1126/science.171.3968.255</code></div></details>). Each of the 366 birthdays in a year (including February 29) was assigned a draft number. Young men born on days assigned low draft numbers were drafted.</div>
+<div class="para" id="section_11_2-2-3">We will regard the 366 dates of the year as observational units. We will consider two variables recorded on each date: <em class="emphasis">draft number</em> assigned to the date and <em class="emphasis">sequential date</em> in the year (so January 31 is sequential date 31, February 1 is sequential date 32, and so on).</div>
+<article class="activity project-like" id="section_11_2-2-4"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="section_11_2-2-4-1-1">In a perfectly fair, random lottery, what should be the value of the correlation coefficient between draft number and sequential date of birthday?</div></article><div class="para" id="section_11_2-2-5">The figure below displays a scatterplot of the assigned draft numbers and the sequential dates. There are 366 dots, one for each day of the (leap) year.</div>
+<figure class="figure figure-like" id="fig-11-2-draft-numbers"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/11-2/draft_numbers.png" class="contained" alt="The scatterplot shows slightly higher concentration of points in the top-left and bottom-right of the graph."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.2.1<span class="period">.</span></span><span class="space"> </span>A scatterplot of the draft numbers by sequential days of the year</figcaption></figure><article class="activity project-like" id="section_11_2-2-7"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="section_11_2-2-7-1"><div class="para" id="section_11_2-2-7-1-1">Let’s take a look at the scatterplot in the figure.</div></div>
+<article class="task exercise-like" id="section_11_2-2-7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="section_11_2-2-7-2-1-1">Does the scatterplot reveal much of an association between draft number and sequential date?</div></article><article class="task exercise-like" id="section_11_2-2-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="section_11_2-2-7-3-1-1">Based on the scatterplot, guess the value of the correlation coefficient.</div></article><article class="task exercise-like" id="section_11_2-2-7-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="section_11_2-2-7-4-1-1">Does it appear that this was a fair, random lottery?</div></article></article><div class="para" id="section_11_2-2-8">It’s difficult to see much of a pattern or association in the scatterplot, so it seems reasonable to conclude that this was a fair, random lottery with a correlation coefficient near zero. But let’s dig a little deeper:</div>
+<article class="activity project-like" id="section_11_2-2-9"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="section_11_2-2-9-1">
+<div class="para" id="section_11_2-2-9-1-1">The 1970 Draft Lottery data sheet below shows the draft number assigned to each of the 366 birthdays.</div>
+<figure class="table table-like" id="section_11_2-2-9-1-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">11.2.2<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Date</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jan</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Feb</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Mar</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Apr</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">May</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jun</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jul</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Aug</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Sep</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Oct</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Nov</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Dec</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">305</td>
+<td class="l m b0 r0 l0 t0 lines">86</td>
+<td class="l m b0 r0 l0 t0 lines">108</td>
+<td class="l m b0 r0 l0 t0 lines">32</td>
+<td class="l m b0 r0 l0 t0 lines">330</td>
+<td class="l m b0 r0 l0 t0 lines">249</td>
+<td class="l m b0 r0 l0 t0 lines">93</td>
+<td class="l m b0 r0 l0 t0 lines">111</td>
+<td class="l m b0 r0 l0 t0 lines">225</td>
+<td class="l m b0 r0 l0 t0 lines">359</td>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">129</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">159</td>
+<td class="l m b0 r0 l0 t0 lines">144</td>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">271</td>
+<td class="l m b0 r0 l0 t0 lines">298</td>
+<td class="l m b0 r0 l0 t0 lines">228</td>
+<td class="l m b0 r0 l0 t0 lines">350</td>
+<td class="l m b0 r0 l0 t0 lines">45</td>
+<td class="l m b0 r0 l0 t0 lines">161</td>
+<td class="l m b0 r0 l0 t0 lines">125</td>
+<td class="l m b0 r0 l0 t0 lines">34</td>
+<td class="l m b0 r0 l0 t0 lines">328</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">251</td>
+<td class="l m b0 r0 l0 t0 lines">297</td>
+<td class="l m b0 r0 l0 t0 lines">267</td>
+<td class="l m b0 r0 l0 t0 lines">83</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">301</td>
+<td class="l m b0 r0 l0 t0 lines">115</td>
+<td class="l m b0 r0 l0 t0 lines">261</td>
+<td class="l m b0 r0 l0 t0 lines">49</td>
+<td class="l m b0 r0 l0 t0 lines">244</td>
+<td class="l m b0 r0 l0 t0 lines">348</td>
+<td class="l m b0 r0 l0 t0 lines">157</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">215</td>
+<td class="l m b0 r0 l0 t0 lines">210</td>
+<td class="l m b0 r0 l0 t0 lines">275</td>
+<td class="l m b0 r0 l0 t0 lines">81</td>
+<td class="l m b0 r0 l0 t0 lines">276</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">279</td>
+<td class="l m b0 r0 l0 t0 lines">145</td>
+<td class="l m b0 r0 l0 t0 lines">232</td>
+<td class="l m b0 r0 l0 t0 lines">202</td>
+<td class="l m b0 r0 l0 t0 lines">266</td>
+<td class="l m b0 r0 l0 t0 lines">165</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">101</td>
+<td class="l m b0 r0 l0 t0 lines">214</td>
+<td class="l m b0 r0 l0 t0 lines">293</td>
+<td class="l m b0 r0 l0 t0 lines">269</td>
+<td class="l m b0 r0 l0 t0 lines">364</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">54</td>
+<td class="l m b0 r0 l0 t0 lines">82</td>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">310</td>
+<td class="l m b0 r0 l0 t0 lines">56</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">224</td>
+<td class="l m b0 r0 l0 t0 lines">347</td>
+<td class="l m b0 r0 l0 t0 lines">139</td>
+<td class="l m b0 r0 l0 t0 lines">253</td>
+<td class="l m b0 r0 l0 t0 lines">155</td>
+<td class="l m b0 r0 l0 t0 lines">110</td>
+<td class="l m b0 r0 l0 t0 lines">327</td>
+<td class="l m b0 r0 l0 t0 lines">114</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">87</td>
+<td class="l m b0 r0 l0 t0 lines">76</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">306</td>
+<td class="l m b0 r0 l0 t0 lines">91</td>
+<td class="l m b0 r0 l0 t0 lines">122</td>
+<td class="l m b0 r0 l0 t0 lines">147</td>
+<td class="l m b0 r0 l0 t0 lines">35</td>
+<td class="l m b0 r0 l0 t0 lines">85</td>
+<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines">168</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">234</td>
+<td class="l m b0 r0 l0 t0 lines">51</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">199</td>
+<td class="l m b0 r0 l0 t0 lines">181</td>
+<td class="l m b0 r0 l0 t0 lines">213</td>
+<td class="l m b0 r0 l0 t0 lines">312</td>
+<td class="l m b0 r0 l0 t0 lines">321</td>
+<td class="l m b0 r0 l0 t0 lines">366</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">48</td>
+<td class="l m b0 r0 l0 t0 lines">184</td>
+<td class="l m b0 r0 l0 t0 lines">283</td>
+<td class="l m b0 r0 l0 t0 lines">97</td>
+<td class="l m b0 r0 l0 t0 lines">105</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">194</td>
+<td class="l m b0 r0 l0 t0 lines">338</td>
+<td class="l m b0 r0 l0 t0 lines">317</td>
+<td class="l m b0 r0 l0 t0 lines">219</td>
+<td class="l m b0 r0 l0 t0 lines">197</td>
+<td class="l m b0 r0 l0 t0 lines">335</td>
+<td class="l m b0 r0 l0 t0 lines">277</td>
+<td class="l m b0 r0 l0 t0 lines">106</td>
+<td class="l m b0 r0 l0 t0 lines">263</td>
+<td class="l m b0 r0 l0 t0 lines">342</td>
+<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines">43</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">325</td>
+<td class="l m b0 r0 l0 t0 lines">216</td>
+<td class="l m b0 r0 l0 t0 lines">323</td>
+<td class="l m b0 r0 l0 t0 lines">218</td>
+<td class="l m b0 r0 l0 t0 lines">65</td>
+<td class="l m b0 r0 l0 t0 lines">206</td>
+<td class="l m b0 r0 l0 t0 lines">284</td>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">71</td>
+<td class="l m b0 r0 l0 t0 lines">220</td>
+<td class="l m b0 r0 l0 t0 lines">282</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">329</td>
+<td class="l m b0 r0 l0 t0 lines">150</td>
+<td class="l m b0 r0 l0 t0 lines">136</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">37</td>
+<td class="l m b0 r0 l0 t0 lines">134</td>
+<td class="l m b0 r0 l0 t0 lines">248</td>
+<td class="l m b0 r0 l0 t0 lines">324</td>
+<td class="l m b0 r0 l0 t0 lines">158</td>
+<td class="l m b0 r0 l0 t0 lines">237</td>
+<td class="l m b0 r0 l0 t0 lines">46</td>
+<td class="l m b0 r0 l0 t0 lines">39</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">221</td>
+<td class="l m b0 r0 l0 t0 lines">68</td>
+<td class="l m b0 r0 l0 t0 lines">300</td>
+<td class="l m b0 r0 l0 t0 lines">346</td>
+<td class="l m b0 r0 l0 t0 lines">133</td>
+<td class="l m b0 r0 l0 t0 lines">272</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">142</td>
+<td class="l m b0 r0 l0 t0 lines">242</td>
+<td class="l m b0 r0 l0 t0 lines">72</td>
+<td class="l m b0 r0 l0 t0 lines">66</td>
+<td class="l m b0 r0 l0 t0 lines">314</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">318</td>
+<td class="l m b0 r0 l0 t0 lines">152</td>
+<td class="l m b0 r0 l0 t0 lines">259</td>
+<td class="l m b0 r0 l0 t0 lines">124</td>
+<td class="l m b0 r0 l0 t0 lines">295</td>
+<td class="l m b0 r0 l0 t0 lines">69</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+<td class="l m b0 r0 l0 t0 lines">307</td>
+<td class="l m b0 r0 l0 t0 lines">175</td>
+<td class="l m b0 r0 l0 t0 lines">138</td>
+<td class="l m b0 r0 l0 t0 lines">126</td>
+<td class="l m b0 r0 l0 t0 lines">163</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">238</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">354</td>
+<td class="l m b0 r0 l0 t0 lines">231</td>
+<td class="l m b0 r0 l0 t0 lines">178</td>
+<td class="l m b0 r0 l0 t0 lines">356</td>
+<td class="l m b0 r0 l0 t0 lines">331</td>
+<td class="l m b0 r0 l0 t0 lines">198</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">294</td>
+<td class="l m b0 r0 l0 t0 lines">127</td>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">89</td>
+<td class="l m b0 r0 l0 t0 lines">169</td>
+<td class="l m b0 r0 l0 t0 lines">273</td>
+<td class="l m b0 r0 l0 t0 lines">130</td>
+<td class="l m b0 r0 l0 t0 lines">180</td>
+<td class="l m b0 r0 l0 t0 lines">322</td>
+<td class="l m b0 r0 l0 t0 lines">102</td>
+<td class="l m b0 r0 l0 t0 lines">113</td>
+<td class="l m b0 r0 l0 t0 lines">171</td>
+<td class="l m b0 r0 l0 t0 lines">131</td>
+<td class="l m b0 r0 l0 t0 lines">320</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">121</td>
+<td class="l m b0 r0 l0 t0 lines">212</td>
+<td class="l m b0 r0 l0 t0 lines">166</td>
+<td class="l m b0 r0 l0 t0 lines">148</td>
+<td class="l m b0 r0 l0 t0 lines">55</td>
+<td class="l m b0 r0 l0 t0 lines">274</td>
+<td class="l m b0 r0 l0 t0 lines">120</td>
+<td class="l m b0 r0 l0 t0 lines">44</td>
+<td class="l m b0 r0 l0 t0 lines">207</td>
+<td class="l m b0 r0 l0 t0 lines">254</td>
+<td class="l m b0 r0 l0 t0 lines">107</td>
+<td class="l m b0 r0 l0 t0 lines">96</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">235</td>
+<td class="l m b0 r0 l0 t0 lines">189</td>
+<td class="l m b0 r0 l0 t0 lines">33</td>
+<td class="l m b0 r0 l0 t0 lines">260</td>
+<td class="l m b0 r0 l0 t0 lines">112</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">98</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">255</td>
+<td class="l m b0 r0 l0 t0 lines">288</td>
+<td class="l m b0 r0 l0 t0 lines">143</td>
+<td class="l m b0 r0 l0 t0 lines">304</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">140</td>
+<td class="l m b0 r0 l0 t0 lines">292</td>
+<td class="l m b0 r0 l0 t0 lines">332</td>
+<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines">278</td>
+<td class="l m b0 r0 l0 t0 lines">341</td>
+<td class="l m b0 r0 l0 t0 lines">190</td>
+<td class="l m b0 r0 l0 t0 lines">141</td>
+<td class="l m b0 r0 l0 t0 lines">246</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">146</td>
+<td class="l m b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">58</td>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">200</td>
+<td class="l m b0 r0 l0 t0 lines">336</td>
+<td class="l m b0 r0 l0 t0 lines">75</td>
+<td class="l m b0 r0 l0 t0 lines">104</td>
+<td class="l m b0 r0 l0 t0 lines">227</td>
+<td class="l m b0 r0 l0 t0 lines">311</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">241</td>
+<td class="l m b0 r0 l0 t0 lines">203</td>
+<td class="l m b0 r0 l0 t0 lines">240</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">280</td>
+<td class="l m b0 r0 l0 t0 lines">302</td>
+<td class="l m b0 r0 l0 t0 lines">239</td>
+<td class="l m b0 r0 l0 t0 lines">345</td>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">360</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">344</td>
+<td class="l m b0 r0 l0 t0 lines">63</td>
+<td class="l m b0 r0 l0 t0 lines">192</td>
+<td class="l m b0 r0 l0 t0 lines">185</td>
+<td class="l m b0 r0 l0 t0 lines">135</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">186</td>
+<td class="l m b0 r0 l0 t0 lines">363</td>
+<td class="l m b0 r0 l0 t0 lines">334</td>
+<td class="l m b0 r0 l0 t0 lines">62</td>
+<td class="l m b0 r0 l0 t0 lines">250</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">291</td>
+<td class="l m b0 r0 l0 t0 lines">204</td>
+<td class="l m b0 r0 l0 t0 lines">243</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">70</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">337</td>
+<td class="l m b0 r0 l0 t0 lines">290</td>
+<td class="l m b0 r0 l0 t0 lines">265</td>
+<td class="l m b0 r0 l0 t0 lines">316</td>
+<td class="l m b0 r0 l0 t0 lines">326</td>
+<td class="l m b0 r0 l0 t0 lines">247</td>
+<td class="l m b0 r0 l0 t0 lines">153</td>
+<td class="l m b0 r0 l0 t0 lines">339</td>
+<td class="l m b0 r0 l0 t0 lines">160</td>
+<td class="l m b0 r0 l0 t0 lines">117</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">53</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">118</td>
+<td class="l m b0 r0 l0 t0 lines">57</td>
+<td class="l m b0 r0 l0 t0 lines">256</td>
+<td class="l m b0 r0 l0 t0 lines">252</td>
+<td class="l m b0 r0 l0 t0 lines">319</td>
+<td class="l m b0 r0 l0 t0 lines">109</td>
+<td class="l m b0 r0 l0 t0 lines">172</td>
+<td class="l m b0 r0 l0 t0 lines">116</td>
+<td class="l m b0 r0 l0 t0 lines">119</td>
+<td class="l m b0 r0 l0 t0 lines">201</td>
+<td class="l m b0 r0 l0 t0 lines">182</td>
+<td class="l m b0 r0 l0 t0 lines">162</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">59</td>
+<td class="l m b0 r0 l0 t0 lines">236</td>
+<td class="l m b0 r0 l0 t0 lines">258</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">358</td>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+<td class="l m b0 r0 l0 t0 lines">195</td>
+<td class="l m b0 r0 l0 t0 lines">196</td>
+<td class="l m b0 r0 l0 t0 lines">230</td>
+<td class="l m b0 r0 l0 t0 lines">95</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">52</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">343</td>
+<td class="l m b0 r0 l0 t0 lines">351</td>
+<td class="l m b0 r0 l0 t0 lines">361</td>
+<td class="l m b0 r0 l0 t0 lines">137</td>
+<td class="l m b0 r0 l0 t0 lines">67</td>
+<td class="l m b0 r0 l0 t0 lines">286</td>
+<td class="l m b0 r0 l0 t0 lines">149</td>
+<td class="l m b0 r0 l0 t0 lines">176</td>
+<td class="l m b0 r0 l0 t0 lines">132</td>
+<td class="l m b0 r0 l0 t0 lines">84</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+<td class="l m b0 r0 l0 t0 lines">92</td>
+<td class="l m b0 r0 l0 t0 lines">365</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">340</td>
+<td class="l m b0 r0 l0 t0 lines">357</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">303</td>
+<td class="l m b0 r0 l0 t0 lines">245</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">309</td>
+<td class="l m b0 r0 l0 t0 lines">173</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">355</td>
+<td class="l m b0 r0 l0 t0 lines">205</td>
+<td class="l m b0 r0 l0 t0 lines">268</td>
+<td class="l m b0 r0 l0 t0 lines">74</td>
+<td class="l m b0 r0 l0 t0 lines">296</td>
+<td class="l m b0 r0 l0 t0 lines">64</td>
+<td class="l m b0 r0 l0 t0 lines">289</td>
+<td class="l m b0 r0 l0 t0 lines">352</td>
+<td class="l m b0 r0 l0 t0 lines">233</td>
+<td class="l m b0 r0 l0 t0 lines">264</td>
+<td class="l m b0 r0 l0 t0 lines">47</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">77</td>
+<td class="l m b0 r0 l0 t0 lines">299</td>
+<td class="l m b0 r0 l0 t0 lines">223</td>
+<td class="l m b0 r0 l0 t0 lines">262</td>
+<td class="l m b0 r0 l0 t0 lines">308</td>
+<td class="l m b0 r0 l0 t0 lines">222</td>
+<td class="l m b0 r0 l0 t0 lines">88</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">257</td>
+<td class="l m b0 r0 l0 t0 lines">94</td>
+<td class="l m b0 r0 l0 t0 lines">281</td>
+<td class="l m b0 r0 l0 t0 lines">123</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">349</td>
+<td class="l m b0 r0 l0 t0 lines">285</td>
+<td class="l m b0 r0 l0 t0 lines">362</td>
+<td class="l m b0 r0 l0 t0 lines">191</td>
+<td class="l m b0 r0 l0 t0 lines">226</td>
+<td class="l m b0 r0 l0 t0 lines">353</td>
+<td class="l m b0 r0 l0 t0 lines">270</td>
+<td class="l m b0 r0 l0 t0 lines">61</td>
+<td class="l m b0 r0 l0 t0 lines">151</td>
+<td class="l m b0 r0 l0 t0 lines">229</td>
+<td class="l m b0 r0 l0 t0 lines">99</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">164</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">217</td>
+<td class="l m b0 r0 l0 t0 lines">208</td>
+<td class="l m b0 r0 l0 t0 lines">103</td>
+<td class="l m b0 r0 l0 t0 lines">209</td>
+<td class="l m b0 r0 l0 t0 lines">287</td>
+<td class="l m b0 r0 l0 t0 lines">333</td>
+<td class="l m b0 r0 l0 t0 lines">315</td>
+<td class="l m b0 r0 l0 t0 lines">38</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">211</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">313</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">193</td>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">79</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+</tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like" id="section_11_2-2-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="section_11_2-2-9-2-1-1">Find and report the draft number assigned to your birthday.</div></article><article class="task exercise-like" id="section_11_2-2-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="section_11_2-2-9-3-1-1">Is your draft number in the bottom third (1-122), middle third (123-244), or top third (245-366)?</div></article></article><article class="activity project-like" id="section_11_2-2-10"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.4</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="section_11_2-2-10-1">
+<div class="para" id="section_11_2-2-10-1-1">This second table has the draft numbers in order for each month.</div>
+<figure class="table table-like" id="section_11_2-2-10-1-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">11.2.3<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b0 r0 l0 t0 lines">Rank</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jan</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Feb</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Mar</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Apr</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">May</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jun</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Jul</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Aug</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Sep</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Oct</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Nov</th>
+<th scope="col" class="l m b0 r0 l0 t0 lines">Dec</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">52</td>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">35</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">58</td>
+<td class="l m b0 r0 l0 t0 lines">57</td>
+<td class="l m b0 r0 l0 t0 lines">33</td>
+<td class="l m b0 r0 l0 t0 lines">32</td>
+<td class="l m b0 r0 l0 t0 lines">37</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">34</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">59</td>
+<td class="l m b0 r0 l0 t0 lines">68</td>
+<td class="l m b0 r0 l0 t0 lines">108</td>
+<td class="l m b0 r0 l0 t0 lines">62</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">44</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">38</td>
+<td class="l m b0 r0 l0 t0 lines">46</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">77</td>
+<td class="l m b0 r0 l0 t0 lines">86</td>
+<td class="l m b0 r0 l0 t0 lines">122</td>
+<td class="l m b0 r0 l0 t0 lines">74</td>
+<td class="l m b0 r0 l0 t0 lines">55</td>
+<td class="l m b0 r0 l0 t0 lines">64</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+<td class="l m b0 r0 l0 t0 lines">45</td>
+<td class="l m b0 r0 l0 t0 lines">49</td>
+<td class="l m b0 r0 l0 t0 lines">72</td>
+<td class="l m b0 r0 l0 t0 lines">47</td>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">92</td>
+<td class="l m b0 r0 l0 t0 lines">89</td>
+<td class="l m b0 r0 l0 t0 lines">136</td>
+<td class="l m b0 r0 l0 t0 lines">81</td>
+<td class="l m b0 r0 l0 t0 lines">65</td>
+<td class="l m b0 r0 l0 t0 lines">69</td>
+<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines">48</td>
+<td class="l m b0 r0 l0 t0 lines">63</td>
+<td class="l m b0 r0 l0 t0 lines">79</td>
+<td class="l m b0 r0 l0 t0 lines">51</td>
+<td class="l m b0 r0 l0 t0 lines">39</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">101</td>
+<td class="l m b0 r0 l0 t0 lines">91</td>
+<td class="l m b0 r0 l0 t0 lines">139</td>
+<td class="l m b0 r0 l0 t0 lines">83</td>
+<td class="l m b0 r0 l0 t0 lines">75</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">67</td>
+<td class="l m b0 r0 l0 t0 lines">54</td>
+<td class="l m b0 r0 l0 t0 lines">71</td>
+<td class="l m b0 r0 l0 t0 lines">87</td>
+<td class="l m b0 r0 l0 t0 lines">66</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">118</td>
+<td class="l m b0 r0 l0 t0 lines">144</td>
+<td class="l m b0 r0 l0 t0 lines">166</td>
+<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines">103</td>
+<td class="l m b0 r0 l0 t0 lines">85</td>
+<td class="l m b0 r0 l0 t0 lines">88</td>
+<td class="l m b0 r0 l0 t0 lines">61</td>
+<td class="l m b0 r0 l0 t0 lines">82</td>
+<td class="l m b0 r0 l0 t0 lines">94</td>
+<td class="l m b0 r0 l0 t0 lines">76</td>
+<td class="l m b0 r0 l0 t0 lines">43</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">121</td>
+<td class="l m b0 r0 l0 t0 lines">150</td>
+<td class="l m b0 r0 l0 t0 lines">169</td>
+<td class="l m b0 r0 l0 t0 lines">124</td>
+<td class="l m b0 r0 l0 t0 lines">112</td>
+<td class="l m b0 r0 l0 t0 lines">104</td>
+<td class="l m b0 r0 l0 t0 lines">93</td>
+<td class="l m b0 r0 l0 t0 lines">102</td>
+<td class="l m b0 r0 l0 t0 lines">113</td>
+<td class="l m b0 r0 l0 t0 lines">117</td>
+<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines">53</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">140</td>
+<td class="l m b0 r0 l0 t0 lines">152</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">147</td>
+<td class="l m b0 r0 l0 t0 lines">130</td>
+<td class="l m b0 r0 l0 t0 lines">109</td>
+<td class="l m b0 r0 l0 t0 lines">98</td>
+<td class="l m b0 r0 l0 t0 lines">106</td>
+<td class="l m b0 r0 l0 t0 lines">119</td>
+<td class="l m b0 r0 l0 t0 lines">125</td>
+<td class="l m b0 r0 l0 t0 lines">97</td>
+<td class="l m b0 r0 l0 t0 lines">56</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">159</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">200</td>
+<td class="l m b0 r0 l0 t0 lines">148</td>
+<td class="l m b0 r0 l0 t0 lines">133</td>
+<td class="l m b0 r0 l0 t0 lines">110</td>
+<td class="l m b0 r0 l0 t0 lines">115</td>
+<td class="l m b0 r0 l0 t0 lines">111</td>
+<td class="l m b0 r0 l0 t0 lines">149</td>
+<td class="l m b0 r0 l0 t0 lines">138</td>
+<td class="l m b0 r0 l0 t0 lines">99</td>
+<td class="l m b0 r0 l0 t0 lines">70</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">164</td>
+<td class="l m b0 r0 l0 t0 lines">181</td>
+<td class="l m b0 r0 l0 t0 lines">213</td>
+<td class="l m b0 r0 l0 t0 lines">191</td>
+<td class="l m b0 r0 l0 t0 lines">155</td>
+<td class="l m b0 r0 l0 t0 lines">134</td>
+<td class="l m b0 r0 l0 t0 lines">120</td>
+<td class="l m b0 r0 l0 t0 lines">114</td>
+<td class="l m b0 r0 l0 t0 lines">151</td>
+<td class="l m b0 r0 l0 t0 lines">171</td>
+<td class="l m b0 r0 l0 t0 lines">107</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">186</td>
+<td class="l m b0 r0 l0 t0 lines">189</td>
+<td class="l m b0 r0 l0 t0 lines">217</td>
+<td class="l m b0 r0 l0 t0 lines">208</td>
+<td class="l m b0 r0 l0 t0 lines">178</td>
+<td class="l m b0 r0 l0 t0 lines">137</td>
+<td class="l m b0 r0 l0 t0 lines">153</td>
+<td class="l m b0 r0 l0 t0 lines">116</td>
+<td class="l m b0 r0 l0 t0 lines">158</td>
+<td class="l m b0 r0 l0 t0 lines">176</td>
+<td class="l m b0 r0 l0 t0 lines">126</td>
+<td class="l m b0 r0 l0 t0 lines">84</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">194</td>
+<td class="l m b0 r0 l0 t0 lines">205</td>
+<td class="l m b0 r0 l0 t0 lines">223</td>
+<td class="l m b0 r0 l0 t0 lines">218</td>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">180</td>
+<td class="l m b0 r0 l0 t0 lines">172</td>
+<td class="l m b0 r0 l0 t0 lines">141</td>
+<td class="l m b0 r0 l0 t0 lines">160</td>
+<td class="l m b0 r0 l0 t0 lines">192</td>
+<td class="l m b0 r0 l0 t0 lines">127</td>
+<td class="l m b0 r0 l0 t0 lines">95</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">199</td>
+<td class="l m b0 r0 l0 t0 lines">210</td>
+<td class="l m b0 r0 l0 t0 lines">239</td>
+<td class="l m b0 r0 l0 t0 lines">219</td>
+<td class="l m b0 r0 l0 t0 lines">197</td>
+<td class="l m b0 r0 l0 t0 lines">206</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">142</td>
+<td class="l m b0 r0 l0 t0 lines">161</td>
+<td class="l m b0 r0 l0 t0 lines">196</td>
+<td class="l m b0 r0 l0 t0 lines">131</td>
+<td class="l m b0 r0 l0 t0 lines">96</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">211</td>
+<td class="l m b0 r0 l0 t0 lines">212</td>
+<td class="l m b0 r0 l0 t0 lines">256</td>
+<td class="l m b0 r0 l0 t0 lines">231</td>
+<td class="l m b0 r0 l0 t0 lines">226</td>
+<td class="l m b0 r0 l0 t0 lines">209</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">145</td>
+<td class="l m b0 r0 l0 t0 lines">175</td>
+<td class="l m b0 r0 l0 t0 lines">201</td>
+<td class="l m b0 r0 l0 t0 lines">132</td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">215</td>
+<td class="l m b0 r0 l0 t0 lines">214</td>
+<td class="l m b0 r0 l0 t0 lines">258</td>
+<td class="l m b0 r0 l0 t0 lines">252</td>
+<td class="l m b0 r0 l0 t0 lines">250</td>
+<td class="l m b0 r0 l0 t0 lines">222</td>
+<td class="l m b0 r0 l0 t0 lines">190</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">202</td>
+<td class="l m b0 r0 l0 t0 lines">143</td>
+<td class="l m b0 r0 l0 t0 lines">105</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">221</td>
+<td class="l m b0 r0 l0 t0 lines">216</td>
+<td class="l m b0 r0 l0 t0 lines">259</td>
+<td class="l m b0 r0 l0 t0 lines">253</td>
+<td class="l m b0 r0 l0 t0 lines">276</td>
+<td class="l m b0 r0 l0 t0 lines">228</td>
+<td class="l m b0 r0 l0 t0 lines">193</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">184</td>
+<td class="l m b0 r0 l0 t0 lines">220</td>
+<td class="l m b0 r0 l0 t0 lines">146</td>
+<td class="l m b0 r0 l0 t0 lines">123</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">224</td>
+<td class="l m b0 r0 l0 t0 lines">236</td>
+<td class="l m b0 r0 l0 t0 lines">265</td>
+<td class="l m b0 r0 l0 t0 lines">260</td>
+<td class="l m b0 r0 l0 t0 lines">278</td>
+<td class="l m b0 r0 l0 t0 lines">247</td>
+<td class="l m b0 r0 l0 t0 lines">227</td>
+<td class="l m b0 r0 l0 t0 lines">168</td>
+<td class="l m b0 r0 l0 t0 lines">195</td>
+<td class="l m b0 r0 l0 t0 lines">229</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">235</td>
+<td class="l m b0 r0 l0 t0 lines">285</td>
+<td class="l m b0 r0 l0 t0 lines">267</td>
+<td class="l m b0 r0 l0 t0 lines">262</td>
+<td class="l m b0 r0 l0 t0 lines">295</td>
+<td class="l m b0 r0 l0 t0 lines">249</td>
+<td class="l m b0 r0 l0 t0 lines">248</td>
+<td class="l m b0 r0 l0 t0 lines">198</td>
+<td class="l m b0 r0 l0 t0 lines">204</td>
+<td class="l m b0 r0 l0 t0 lines">234</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">129</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">238</td>
+<td class="l m b0 r0 l0 t0 lines">290</td>
+<td class="l m b0 r0 l0 t0 lines">268</td>
+<td class="l m b0 r0 l0 t0 lines">269</td>
+<td class="l m b0 r0 l0 t0 lines">296</td>
+<td class="l m b0 r0 l0 t0 lines">272</td>
+<td class="l m b0 r0 l0 t0 lines">270</td>
+<td class="l m b0 r0 l0 t0 lines">245</td>
+<td class="l m b0 r0 l0 t0 lines">207</td>
+<td class="l m b0 r0 l0 t0 lines">237</td>
+<td class="l m b0 r0 l0 t0 lines">182</td>
+<td class="l m b0 r0 l0 t0 lines">135</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">251</td>
+<td class="l m b0 r0 l0 t0 lines">292</td>
+<td class="l m b0 r0 l0 t0 lines">275</td>
+<td class="l m b0 r0 l0 t0 lines">271</td>
+<td class="l m b0 r0 l0 t0 lines">298</td>
+<td class="l m b0 r0 l0 t0 lines">274</td>
+<td class="l m b0 r0 l0 t0 lines">277</td>
+<td class="l m b0 r0 l0 t0 lines">261</td>
+<td class="l m b0 r0 l0 t0 lines">225</td>
+<td class="l m b0 r0 l0 t0 lines">241</td>
+<td class="l m b0 r0 l0 t0 lines">185</td>
+<td class="l m b0 r0 l0 t0 lines">157</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">280</td>
+<td class="l m b0 r0 l0 t0 lines">297</td>
+<td class="l m b0 r0 l0 t0 lines">293</td>
+<td class="l m b0 r0 l0 t0 lines">273</td>
+<td class="l m b0 r0 l0 t0 lines">308</td>
+<td class="l m b0 r0 l0 t0 lines">301</td>
+<td class="l m b0 r0 l0 t0 lines">279</td>
+<td class="l m b0 r0 l0 t0 lines">286</td>
+<td class="l m b0 r0 l0 t0 lines">232</td>
+<td class="l m b0 r0 l0 t0 lines">243</td>
+<td class="l m b0 r0 l0 t0 lines">203</td>
+<td class="l m b0 r0 l0 t0 lines">162</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">305</td>
+<td class="l m b0 r0 l0 t0 lines">299</td>
+<td class="l m b0 r0 l0 t0 lines">300</td>
+<td class="l m b0 r0 l0 t0 lines">312</td>
+<td class="l m b0 r0 l0 t0 lines">313</td>
+<td class="l m b0 r0 l0 t0 lines">335</td>
+<td class="l m b0 r0 l0 t0 lines">284</td>
+<td class="l m b0 r0 l0 t0 lines">291</td>
+<td class="l m b0 r0 l0 t0 lines">233</td>
+<td class="l m b0 r0 l0 t0 lines">244</td>
+<td class="l m b0 r0 l0 t0 lines">230</td>
+<td class="l m b0 r0 l0 t0 lines">163</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">306</td>
+<td class="l m b0 r0 l0 t0 lines">302</td>
+<td class="l m b0 r0 l0 t0 lines">317</td>
+<td class="l m b0 r0 l0 t0 lines">316</td>
+<td class="l m b0 r0 l0 t0 lines">319</td>
+<td class="l m b0 r0 l0 t0 lines">341</td>
+<td class="l m b0 r0 l0 t0 lines">287</td>
+<td class="l m b0 r0 l0 t0 lines">307</td>
+<td class="l m b0 r0 l0 t0 lines">242</td>
+<td class="l m b0 r0 l0 t0 lines">254</td>
+<td class="l m b0 r0 l0 t0 lines">266</td>
+<td class="l m b0 r0 l0 t0 lines">165</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+<td class="l m b0 r0 l0 t0 lines">318</td>
+<td class="l m b0 r0 l0 t0 lines">338</td>
+<td class="l m b0 r0 l0 t0 lines">323</td>
+<td class="l m b0 r0 l0 t0 lines">336</td>
+<td class="l m b0 r0 l0 t0 lines">321</td>
+<td class="l m b0 r0 l0 t0 lines">353</td>
+<td class="l m b0 r0 l0 t0 lines">289</td>
+<td class="l m b0 r0 l0 t0 lines">311</td>
+<td class="l m b0 r0 l0 t0 lines">246</td>
+<td class="l m b0 r0 l0 t0 lines">264</td>
+<td class="l m b0 r0 l0 t0 lines">281</td>
+<td class="l m b0 r0 l0 t0 lines">173</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">325</td>
+<td class="l m b0 r0 l0 t0 lines">347</td>
+<td class="l m b0 r0 l0 t0 lines">332</td>
+<td class="l m b0 r0 l0 t0 lines">340</td>
+<td class="l m b0 r0 l0 t0 lines">326</td>
+<td class="l m b0 r0 l0 t0 lines">356</td>
+<td class="l m b0 r0 l0 t0 lines">303</td>
+<td class="l m b0 r0 l0 t0 lines">324</td>
+<td class="l m b0 r0 l0 t0 lines">255</td>
+<td class="l m b0 r0 l0 t0 lines">283</td>
+<td class="l m b0 r0 l0 t0 lines">282</td>
+<td class="l m b0 r0 l0 t0 lines">240</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">329</td>
+<td class="l m b0 r0 l0 t0 lines">363</td>
+<td class="l m b0 r0 l0 t0 lines">334</td>
+<td class="l m b0 r0 l0 t0 lines">345</td>
+<td class="l m b0 r0 l0 t0 lines">330</td>
+<td class="l m b0 r0 l0 t0 lines">358</td>
+<td class="l m b0 r0 l0 t0 lines">322</td>
+<td class="l m b0 r0 l0 t0 lines">333</td>
+<td class="l m b0 r0 l0 t0 lines">257</td>
+<td class="l m b0 r0 l0 t0 lines">288</td>
+<td class="l m b0 r0 l0 t0 lines">309</td>
+<td class="l m b0 r0 l0 t0 lines">304</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">337</td>
+<td class="l m b0 r0 l0 t0 lines">365</td>
+<td class="l m b0 r0 l0 t0 lines">343</td>
+<td class="l m b0 r0 l0 t0 lines">346</td>
+<td class="l m b0 r0 l0 t0 lines">357</td>
+<td class="l m b0 r0 l0 t0 lines">360</td>
+<td class="l m b0 r0 l0 t0 lines">327</td>
+<td class="l m b0 r0 l0 t0 lines">339</td>
+<td class="l m b0 r0 l0 t0 lines">263</td>
+<td class="l m b0 r0 l0 t0 lines">294</td>
+<td class="l m b0 r0 l0 t0 lines">310</td>
+<td class="l m b0 r0 l0 t0 lines">314</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">349</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">354</td>
+<td class="l m b0 r0 l0 t0 lines">351</td>
+<td class="l m b0 r0 l0 t0 lines">361</td>
+<td class="l m b0 r0 l0 t0 lines">366</td>
+<td class="l m b0 r0 l0 t0 lines">331</td>
+<td class="l m b0 r0 l0 t0 lines">344</td>
+<td class="l m b0 r0 l0 t0 lines">315</td>
+<td class="l m b0 r0 l0 t0 lines">342</td>
+<td class="l m b0 r0 l0 t0 lines">348</td>
+<td class="l m b0 r0 l0 t0 lines">320</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">355</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">362</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">364</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">350</td>
+<td class="l m b0 r0 l0 t0 lines">352</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">359</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">328</td>
+</tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like" id="section_11_2-2-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="section_11_2-2-10-2-1-1">Use this table to determine the median draft number for your birth month.</div></article><article class="task exercise-like" id="section_11_2-2-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="section_11_2-2-10-3-1-1">Collaborate with your classmates to determine and report the median draft number for all 12 months.</div></article><article class="task exercise-like" id="section_11_2-2-10-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="section_11_2-2-10-4-1-1">Do you notice any pattern or trend in the median draft numbers over the course of the year? (Hint: If you do not see a trend, compare the six medians from January to June with the six medians from July to December.)</div></article></article><article class="activity project-like" id="section_11_2-2-11"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="section_11_2-2-11-1-1">The correlation coefficient for the full dataset is <span class="process-math">\(r = -0.226\text{.}\)</span> What does this number reveal? Is it consistent with the scatterplot?</div></article><article class="activity project-like" id="section_11_2-2-12"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="section_11_2-2-12-1"><div class="para" id="section_11_2-2-12-1-1">Let’s think about how we would complete a test of significance for correlation.</div></div>
+<article class="task exercise-like" id="section_11_2-2-12-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="section_11_2-2-12-2-1-1">Suggest two possible explanations (hypotheses) which could have generated the value of the nonzero correlation coefficient.</div></article><article class="task exercise-like" id="section_11_2-2-12-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="section_11_2-2-12-3-1-1">In your own words, how could we go about determining whether random chance is a plausible explanation for the observed correlation value between sequential date and draft number? Explain how the 3S strategy could be applied here, in particular identifying a simulation strategy you could conduct “by hand.” Note: You do not need to actually carry out a simulation analysis.</div></article><article class="task exercise-like" id="section_11_2-2-12-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="section_11_2-2-12-4-1-1">What is the statistic? How would you simulate? How would you evaluate the strength of evidence?</div></article></article><div class="para" id="section_11_2-2-13">The null hypothesis to be tested is that the lottery was conducted with a fair, random process. The null hypothesis would therefore imply that there is <em class="emphasis">no</em> association between sequential date and draft number for this process. The alternative hypothesis is that this lottery was <em class="emphasis">not</em> conducted with a fair, random process, so there is an association between sequential date and draft number.</div>
+<div class="para" id="section_11_2-2-14">How can we assess whether the observed correlation coefficient of <span class="process-math">\(r = -0.226\)</span> is far enough from zero to provide convincing evidence that the lottery process was not random? Like always, we ask how unlikely it would be for a fair, random lottery to produce a correlation value as far from zero as −0.226. Also like always, we answer that question by simulating a large number of fair random lotteries (a true null hypothesis), calculating the correlation coefficient for each one, and seeing how often we obtain a correlation coefficient as or more extreme (as far from zero) as -0.226.</div>
+<article class="activity project-like" id="section_11_2-2-15"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.7</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="section_11_2-2-15-1"><div class="para" id="section_11_2-2-15-1-1">Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2" target="_blank">Corr/Regression applet</a><details class="ptx-footnote" aria-live="polite" id="section_11_2-2-15-1-1-2"><summary class="ptx-footnote__number" title="Footnote 11.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="section_11_2-2-15-1-1-2"><code class="code-inline tex2jax_ignore">static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2</code></div></details>. Copy the data from <a class="external" href="https://static-content2.zybooks.com/isi/data/chap10/DraftLottery.txt" target="_blank">DraftLottery</a><details class="ptx-footnote" aria-live="polite" id="section_11_2-2-15-1-1-4"><summary class="ptx-footnote__number" title="Footnote 11.2.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="section_11_2-2-15-1-1-4"><code class="code-inline tex2jax_ignore">static-content2.zybooks.com/isi/data/chap10/DraftLottery.txt</code></div></details> into the applet (remember to include the column titles). Check the Correlation Coefficient box and confirm that the correlation coefficient is -0.226.</div></div>
+<article class="task exercise-like" id="section_11_2-2-15-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="section_11_2-2-15-2-1-1">Check the Show Shuffle Options box and select Correlation from the Statistic pull-down menu to the right to keep track of that statistic. Then press Shuffle Y-values to simulate one fair, random lottery. Record the value of the correlation coefficient between the shuffled draft numbers and sequential date.</div></article><article class="task exercise-like" id="section_11_2-2-15-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="section_11_2-2-15-3-1-1">Press Shuffle Y-values four more times to generate results of four more fair, random lotteries. Record the values of the shuffled correlation coefficients in a table.</div></article><article class="task exercise-like" id="section_11_2-2-15-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="section_11_2-2-15-4-1-1">Did any of your simulated statistics from fair, random lotteries produce a correlation coefficient as extreme (far from zero) as the observed -0.226?</div></article><article class="task exercise-like" id="section_11_2-2-15-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="section_11_2-2-15-5-1-1">Change the Number of Shuffles from 1 to 995 and press Shuffle Y-values to simulate 995 more fair, random lotteries. Look at the null distribution of these 1,000 correlation coefficients. Where is this distribution centered? Why does this make sense?</div></article><article class="task exercise-like" id="section_11_2-2-15-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="section_11_2-2-15-6-1-1">Next to the Count Samples box choose Beyond from the pull-down menu. Specify the observed correlation coefficient (-0.226) and press Count. What proportion, of the 1,000 simulated random lotteries produced a correlation coefficient as extreme (as far from zero in either direction) as -0.226? Report the approximate p-value.</div></article><article class="task exercise-like" id="section_11_2-2-15-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="section_11_2-2-15-7-1-1">Interpret this p-value: This is the probability of what, assuming what?</div></article><article class="task exercise-like" id="section_11_2-2-15-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="section_11_2-2-15-8-1-1">What conclusion would you draw from this p-value? Do you have strong evidence that the 1970 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion.</div></article></article></section><section class="subsection" id="subsection-11-2-exploring-further"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exploring further</span>
+</h3>
+<div class="para" id="subsection-11-2-exploring-further-2">Once they saw these results, statisticians were quick to point out that something fishy happened with the 1970 draft lottery. The irregularity can be attributed to improper mixing of the balls used in the lottery drawing process. (Balls with birthdays early in the year were placed in the bin first, and balls with birthdays late in the year were placed in the bin last. Without thorough mixing, balls with birthdays late in the year settled near the top of the bin and so tended to be selected earlier.) The mixing process was changed for the 1971 draft lottery (e.g., two bins, one for the draft numbers and one for the birthdays), for which the correlation coefficient turned out to be r = 0.014.</div>
+<article class="activity project-like" id="subsection-11-2-exploring-further-3"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">11.2.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsection-11-2-exploring-further-3-1-1">Use your simulation results to approximate the p-value for the 1971 draft lottery. Is there any reason to suspect that this 1971 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion. Also explain why you don’t need to paste in the data from the 1971 lottery first.</div></article></section></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="section_11-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section_11_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
