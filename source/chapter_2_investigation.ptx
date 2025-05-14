@@ -54,42 +54,42 @@ Do students pick which tire went flat in equal proportions? A common conjecture 
 </remark>
 
 <exercise>
- <title> SteDesign a study and collect data</title>
+ <title> Step 2: Design a study and collect data</title>
 <statement>
 <p>What are the observational units?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDesign a study and collect data</title>
+ <title> Step 2: Design a study and collect data</title>
 <statement>
 <p>What is the variable that is measured and recorded on each observation?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDesign a study and collect data</title>
+ <title> Step 2: Design a study and collect data</title>
 <statement>
 <p>In words, what is the parameter of interest?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDesign a study and collect data</title>
+ <title> Step 2: Design a study and collect data</title>
 <statement>
 <p>In words, what are the null and alternative hypothesis?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteExplore the data</title>
+ <title> Step 3: Explore the data</title>
 <statement>
 <p>What proportion of the students picked the right front tire? Is this more than you would expect if students randomly picked one of the four tires?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteExplore the data</title>
+ <title> Step 3: Explore the data</title>
 <statement>
 <p>Is observing 14 out of 28 picking the front right tire possible if the students are randomly picking between the four tires?</p>
 </statement>
@@ -103,14 +103,14 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 </remark>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Statistic: What is the statistic of interest and what is the symbol that is associated with that statistic called?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Simulate: What values for probability of success (π), sample size (n), and number of repetitions should be entered into the tool to simulate the study?</p>
 </statement>
@@ -119,56 +119,56 @@ The 3S Strategy will help you investigate how much evidence the sample data prov
 <exercise>
  <title> One proportion simulator</title>
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Simulate: What is the center of your null distribution? Does the center you observed make sense? Explain.</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Strength of evidence: Using your simulation, what is the p-value? What does the p-value represent?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Strength of evidence: Using your simulation, what is the standardized statistic? What does this standardized statistic represent?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Strength of evidence: Using a theory-based z-test (normal approximation), what is the p-value? Are the validity conditions met?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteDraw inferences</title>
+ <title> Step 4: Draw inferences</title>
 <statement>
 <p>Strength of evidence: Do all three methods yield strong evidence against the null hypothesis that students pick the front right tire one-fourth of the time in the long run?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteFormulate conclusions</title>
+ <title> Step 5: Formulate conclusions</title>
 <statement>
 <p>What conclusions can you draw from the study?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteFormulate conclusions</title>
+ <title> Step 5: Formulate conclusions</title>
 <statement>
 <p>What are the wider implications of the study? Do you think the conclusions hold true for people in general?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>If you were to repeat this study, what improvements  would you make? What further research would you propose related to this topic in the future? </p>
 </statement>
@@ -186,7 +186,7 @@ Another professor conducted a similar study with a smaller class and found that 
 </remark>
 
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>Do you expect that this study will yield stronger, weaker, or the same evidence against the null hypothesis? Explain.</p>
 </statement>
@@ -195,7 +195,7 @@ Another professor conducted a similar study with a smaller class and found that 
 <exercise>
  <title> One proportion simulator</title>
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>Conduct a simulation analysis and produce a p-value. How does this p-value compare to the p-value you calculated for the sample of 28 students?</p>
 </statement>
@@ -213,7 +213,7 @@ Suppose you didn't have a preconceived notion that the right front tire would be
 </remark>
 
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>In words, what are the null and alternative hypotheses for this new question?</p>
 </statement>
@@ -222,14 +222,14 @@ Suppose you didn't have a preconceived notion that the right front tire would be
 <exercise>
  <title> One proportion simulator</title>
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>Conduct a theory-based analysis and produce a p-value. How does this p-value compare to the theory-based p-value you calculated for the sample of 28 students using the original setup?</p>
 </statement>
 </exercise>
 
 <exercise>
- <title> SteLook back and ahead</title>
+ <title> Step 6: Look back and ahead</title>
 <statement>
 <p>Do you have strong evidence against the null hypothesis that students choose the right front tire one-fourth of the time in the long run?</p>
 </statement>
