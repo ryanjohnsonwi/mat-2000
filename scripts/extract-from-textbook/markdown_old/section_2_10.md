@@ -41,7 +41,7 @@ What is the variable that is recorded?
 
 ###  2.10.4: Question 2c.
 
-Describe the parameter of interest in words. (Use the symbol π to represent
+Describe the parameter of interest in words. (Use the symbol <m>\pi</m> to represent
 this parameter.)
 
 ###  2.10.5: Question 2d.
@@ -144,7 +144,7 @@ previously, the standardized score is calculated as
 $$\text{standardized statistic}=z=\frac{\text{statistic}−\text{mean of null distribution}}{\text{standard deviation of null distribution}}$$
 
 The mean of the null distribution is the hypothesized value of the long-run
-proportion (π). The standard deviation can be obtained in two ways:
+proportion (<m>\pi</m>). The standard deviation can be obtained in two ways:
 
 First, find the standard deviation of the null distribution by simulating.
 
@@ -169,8 +169,8 @@ prediction is often called the “central limit theorem.”
 ###  Central Limit Theorem.
 
 If the sample size (n) is large enough, the distribution of sample proportions
-will be bell-shaped (or normal), centered at the long-run proportion (π), with
-a standard deviation of π(1−π)n .
+will be bell-shaped (or normal), centered at the long-run proportion (<m>\pi</m>), with
+a standard deviation of <m>\pi</m>(1−<m>\pi</m>)n .
 
 ###  2.10.15: Question 9.
 

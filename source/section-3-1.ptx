@@ -528,7 +528,7 @@ standard deviation of sample proportions, <m>\sqrt{\dfrac{\pi(1 - \pi)}{n}}</m>,
 <solution>
   <p>
     The standard deviation of the 10,000 samples is 0.219 which is very close to what the
-    theory-based formula gives when π = 0.41 and n = 5 which is 0.220.
+    theory-based formula gives when <m>\pi</m> = 0.41 and n = 5 which is 0.220.
   </p>
 </solution>
 </activity>

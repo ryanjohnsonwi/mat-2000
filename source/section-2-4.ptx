@@ -51,12 +51,12 @@
   <activity>
   <!--Question 2-->
   <statement>
-  <p>We will let π represent the probability that a competitor wearing a red uniform wins.
+  <p>We will let <m>\pi</m> represent the probability that a competitor wearing a red uniform wins.
   Using this, restate the hypotheses using symbols.</p>
   </statement>
   <solution>
     <p>
-      Null: π=0.50, Alt: π&gt;0.50
+      Null: <m>\pi</m>=0.50, Alt: <m>\pi</m>&gt;0.50
     </p>
   </solution>
   </activity>
@@ -130,12 +130,12 @@ whether one color would win more often than the other. A two-sided alternative h
 <activity>
  <!--Question 4-->
 <statement>
-<p>If we let π equal the probability that a competitor wearing a red uniform wins, state the
+<p>If we let <m>\pi</m> equal the probability that a competitor wearing a red uniform wins, state the
 hypotheses for this study in symbols using a two-sided alternative.</p>
 </statement>
 <solution>
   <p>
-    Null: π=0.50, Alt: π≠0.50 where π = The probability of the player wearing the red uniform winning
+    Null: <m>\pi</m>=0.50, Alt: <m>\pi</m>≠0.50 where <m>\pi</m> = The probability of the player wearing the red uniform winning
   </p>
 </solution>
 </activity>

@@ -8,7 +8,7 @@ Reese's Pieces candies come in three colors: orange, yellow, and brown.
 Suppose that you take a random sample of candies and want to estimate the
 long-run proportion of candies that is orange. Let’s assume for now (although
 we would not know this when conducting the study) that this long-run
-proportion, symbolized by π, is equal to 0.50.
+proportion, symbolized by <m>\pi</m>, is equal to 0.50.
 
 ###  4.9.1: Question 1.
 
@@ -36,7 +36,7 @@ samples with a sample size of 100 from the same population with 50% orange,
 open the [Simulating Confidence Intervals applet](https://static-content.zybooks.com/applets/2021/confsim/ConfSim.html?hideExtras=1).
 
   * Make sure that **Proportions** and **Wald** are selected from the pull-down menus.
-  * Set π to be 0.50 and **n** to be 100.
+  * Set <m>\pi</m> to be 0.50 and **n** to be 100.
   * Let **Intervals** be set to 1.
   * Make sure that **Conf level** is set to 95%.
   * Press **Sample**.
@@ -59,16 +59,16 @@ not surprise you.
 
 ###  4.9.7: Question 4d.
 
-Is the specified long-run proportion (π = 0.50) within the confidence
+Is the specified long-run proportion (<m>\pi</m> = 0.50) within the confidence
 interval?
 
 Notice that 0.50 is either in the interval reported in Question 4b or not.
 Suppose the interval turned out to be (0.473, 0.537). It's not like 0.50 is
 sometimes between 0.473 and 0.537 and sometimes not between those two values.
-Similarly, even if we didn't know the value of π, the long-run proportion is
+Similarly, even if we didn't know the value of <m>\pi</m>, the long-run proportion is
 still some value, it doesn't change if you take a different sample. Therefore,
 it’s technically incorrect to make a statement like "there is a 95%
-probability that π is between 0.473 and 0.537." This doesn’t fit our "long-run
+probability that <m>\pi</m> is between 0.473 and 0.537." This doesn’t fit our "long-run
 proportion" interpretation of probability. So what is happening 95% of the
 time?
 
@@ -76,7 +76,7 @@ time?
 
 Return to the [Simulating Confidence Intervals applet](https://static-content.zybooks.com/applets/2021/confsim/ConfSim.html?hideExtras=1).
 
-  * Change **Intervals** from 1 to 99 for a total of 100 random samples from a process where π = 0.50.
+  * Change **Intervals** from 1 to 99 for a total of 100 random samples from a process where <m>\pi</m> = 0.50.
   * Press **Sample**. 
   * Notice that this produces a total of 100 possible values of a sample proportion which are graphed in the graph labeled “Sample Proportions” and the 100 confidence intervals (with 95% confidence) that are based on these sample proportions.
 
@@ -109,7 +109,7 @@ Is the sample proportion within the confidence interval?
 
 ###  4.9.12: Question 5b iv (red).
 
-Is the probability you set for the overall process (π = 0.50) within the
+Is the probability you set for the overall process (<m>\pi</m> = 0.50) within the
 confidence interval?
 
 ###  Question 5b (continued).
@@ -132,17 +132,17 @@ Is the sample proportion within the confidence interval?
 
 ###  4.9.16: Question 5b iv (green).
 
-Is the long-run proportion of orange (π = 0.50) within the confidence
+Is the long-run proportion of orange (<m>\pi</m> = 0.50) within the confidence
 interval?
 
 ###  Question 5 (continued).
 
-  * The graph in the middle displays the 100 different 95% confidence intervals, depicting in green the ones that succeed in capturing the actual value of the long-run proportion (which, you’ll recall, we assumed to be π = 0.50) and in red the intervals that fail to capture the actual value of π.
+  * The graph in the middle displays the 100 different 95% confidence intervals, depicting in green the ones that succeed in capturing the actual value of the long-run proportion (which, you’ll recall, we assumed to be <m>\pi</m> = 0.50) and in red the intervals that fail to capture the actual value of <m>\pi</m>.
 
 ###  4.9.17: Question 5c.
 
 In the bottom left corner, the applet maintains a “Running total” for the
-percentage of the intervals produced so far that contain π = 0.50. Report this
+percentage of the intervals produced so far that contain <m>\pi</m> = 0.50. Report this
 percentage here. That is, what percentage of the 100 random intervals you have
 generated succeeded in capturing the value of 0.50 inside the interval?
 

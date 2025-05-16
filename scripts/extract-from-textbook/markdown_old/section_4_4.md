@@ -47,9 +47,9 @@ why not.
 
 ###  4.4.6: Question 6A.
 
-Although we expect π to be close to 0.362, we realize there may be other
+Although we expect <m>\pi</m> to be close to 0.362, we realize there may be other
 plausible values for the population proportion as well. First consider the
-value of 0.382. Is this a plausible value for π?
+value of 0.382. Is this a plausible value for <m>\pi</m>?
 
 ###  Question 6b.
 
@@ -70,7 +70,7 @@ this null distribution.
 
 ###  4.4.9: Question 8.
 
-Now consider 0.50. Is this a plausible value for π? Repeat #6 and record the
+Now consider 0.50. Is this a plausible value for <m>\pi</m>? Repeat #6 and record the
 mean and standard deviation for this null distribution as well.
 
 Clearly 0.50 is going to be "too far" from $\hat p=0.362$ to be plausible. But how
@@ -82,13 +82,13 @@ approaches.
 
 ###  4.4.10: Question 9.
 
-Reconsider our first guess of π = 0.382. How many standard deviations is 0.362
+Reconsider our first guess of <m>\pi</m> = 0.382. How many standard deviations is 0.362
 from 0.382? (Hint: Standardize the value by looking at the difference between
 0.382 and 0.362 and divide by the standard deviation you found in #7.)
 
 You should notice that 0.382 and 0.362 are about 2 standard deviations apart
 and that the two-sided p-value is around 0.05, so this value (0.382) is close
-to the edge of values that can be considered plausible for π. Values between
+to the edge of values that can be considered plausible for <m>\pi</m>. Values between
 0.362 and 0.382 are considered plausible and values larger than 0.382, or more
 than 2 standard deviations above 0.362, will not be plausible values for the
 population proportion.
@@ -99,7 +99,7 @@ When a sampling distribution is bell-shaped, as your null distribution should
 be for this study, approximately 95% of the statistics in the sampling
 distribution will fall within 2 standard deviations of the mean. This implies
 that 95% of sample proportions will fall within 2 standard deviations of the
-parameter (π), which means that π is within 2 standard deviations of the
+parameter (<m>\pi</m>), which means that <m>\pi</m> is within 2 standard deviations of the
 observed sample proportion for 95% of all samples.
 
 We can then extend this idea to construct a 95% confidence interval.
@@ -111,7 +111,7 @@ by including all values that fall within 2 standard deviations of the sample
 statistic. This method is only valid when the sampling distribution follows a
 bell-shaped, symmetric distribution. We call this the **2SD method**. Thus we
 can present the 95% confidence interval for the long-run proportion (or
-population proportion), π, in symbols as
+population proportion), <m>\pi</m>, in symbols as
 
 $$\hat p \pm 2 \times SD(\hat p)$$
 
@@ -123,13 +123,13 @@ So how do we find the standard deviation to use for the 2SD method?
 
 ###  4.4.11: Question 10.
 
-How did the standard deviations you found in #7 (with π = 0.382) and in #8
-(with π = 0.50) compare?
+How did the standard deviations you found in #7 (with <m>\pi</m> = 0.382) and in #8
+(with <m>\pi</m> = 0.50) compare?
 
-You should see that the standard deviation changes slightly when we change π,
+You should see that the standard deviation changes slightly when we change <m>\pi</m>,
 but not by much. We saw before that the variability in the sample proportions
-is in fact largest when π=0.50. So one approach would be to carry out one
-simulation (with lots of trials) using π=0.50 and use that value of the
+is in fact largest when <m>\pi</m>=0.50. So one approach would be to carry out one
+simulation (with lots of trials) using <m>\pi</m>=0.50 and use that value of the
 standard deviation to calculate the margin of error.
 
 ###  Question 11.
@@ -144,7 +144,7 @@ the margin of error.)
 
 ###  4.4.13: Question 11b.
 
-Use this SD to produce a 95% confidence interval for π. (Hint: Subtract the
+Use this SD to produce a 95% confidence interval for <m>\pi</m>. (Hint: Subtract the
 margin of error from $\hat p$ to determine the lower endpoint of the interval and
 then add the margin of error to $\hat p$ to determine the upper endpoint of the
 interval.)
@@ -164,7 +164,7 @@ As we saw previously, we don’t always need to simulate a sampling
 distribution—not if we can accurately predict what would happen if we were to
 simulate. Instead, we can predict the standard deviation by the formula
 $\sqrt{\pi(1-\pi)/n}$. But when constructing a confidence interval, we don’t have a
-hypothesized value of π, so to estimate this standard deviation, we will
+hypothesized value of <m>\pi</m>, so to estimate this standard deviation, we will
 substitute the observed sample proportion.
 
 ###  Definition.
@@ -203,7 +203,7 @@ the 2SD method?
 
 ###  Validity conditions.
 
-The theory-based approach for finding a confidence interval for π (called a
+The theory-based approach for finding a confidence interval for <m>\pi</m> (called a
 **one-sample z-interval** ) is considered valid if there are at least 10
 observational units ineach category of the categorical variable (i.e., at
 least 10 successes and at least 10 failures).

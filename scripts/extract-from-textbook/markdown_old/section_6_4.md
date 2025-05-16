@@ -330,7 +330,7 @@ treatment and the no-yawn seed treatment.
 ###  Question 25.
 
 The parameter of interest in this yawning study can be expressed in symbols as
-πyawn seed−πcontrol
+<m>\pi</m>yawn seed−<m>\pi</m>control
 
 ###  6.4.31: Question 25a.
 

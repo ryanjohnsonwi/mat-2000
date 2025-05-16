@@ -178,13 +178,13 @@ The symbol <m>\hat{p}</m> (pronounced "p-hat") is used to represent a statistic 
 
 <activity>
 <statement>
-<p>Hypotheses are always conjectures about the unknown parameter π. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using π.</p>
+<p>Hypotheses are always conjectures about the unknown parameter <m>\pi</m>. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using <m>\pi</m>.</p>
 </statement>
 <solution>
   <p>
     <mdn>
-      <mrow>H_0 \amp = \pi = \frac{3}{4} </mrow>
-      <mrow>H_a \amp &gt; \frac{3}{4} </mrow>
+      <mrow>H_0 : \amp \pi = \frac{3}{4} </mrow>
+      <mrow>H_a : \amp &gt; \frac{3}{4} </mrow>
     </mdn>
   </p>
 </solution>
@@ -562,24 +562,24 @@ learned in this study.</p>
 
 <task> 
 <statement>
-<p>State the null hypothesis in words and in terms of the (newly defined) parameter π.</p>
+<p>State the null hypothesis in words and in terms of the (newly defined) parameter <m>\pi</m>.</p>
 </statement>
 <solution>
   <p>
     Null hypothesis: the long-run proportion of subjects choosing tap water as the best
-tasting is 1/4 or Null: π= 1/4
+tasting is 1/4 or Null: <m>\pi</m>= 1/4
   </p>
 </solution>
 </task>
 
 <task> 
 <statement>
-<p>State the alternative hypothesis in words and in terms of the (new) parameter π.</p>
+<p>State the alternative hypothesis in words and in terms of the (new) parameter <m>\pi</m>.</p>
 </statement>
 <solution>
   <p>
     Alternative hypothesis: the long-run proportion of subjects choosing tap water as the
-best tasting is less than 1/4 or Alt: π &lt; 1/4
+best tasting is less than 1/4 or Alt: <m>\pi</m> &lt; 1/4
   </p>
 </solution>
 </task>

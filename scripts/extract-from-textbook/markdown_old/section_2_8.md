@@ -31,7 +31,7 @@ State the null and the alternative hypotheses in words.
 
 ###  2.8.2: Question 2.
 
-We will let π represent the probability that a competitor wearing a red
+We will let <m>\pi</m> represent the probability that a competitor wearing a red
 uniform wins. Using this, restate the hypotheses using symbols.
 
 ###  Question 3.
@@ -81,7 +81,7 @@ sure of the anticipated value of the parameter than a one-sided test.
 
 ###  2.8.6: Question 4.
 
-If we let π equal the probability that a competitor wearing a red uniform
+If we let <m>\pi</m> equal the probability that a competitor wearing a red uniform
 wins, state the hypotheses for this study in symbols using a two-sided
 alternative.
 

@@ -95,8 +95,8 @@ that year, 36.2% replied that they do currently live in a different state from w
       <!--Question 6-->
       <slide>
         <title>Exercise 6a: </title>
-        <p>Although we expect π to be close to 0.362, we realize there may be other plausible values for the
-    population proportion as well. First consider the value of 0.382. Is this a plausible value for π?</p>
+        <p>Although we expect <m>\pi</m> to be close to 0.362, we realize there may be other plausible values for the
+    population proportion as well. First consider the value of 0.382. Is this a plausible value for <m>\pi</m>?</p>
       </slide>
       <slide>
         <title>Exercise 6b: </title>
@@ -118,7 +118,7 @@ that year, 36.2% replied that they do currently live in a different state from w
       <slide xml:id="q-4-4-8">
         <title>Exercise 8</title>
         <!--Question 8-->
-        <p>Now consider 0.50. Is this a plausible value for π? Repeat #6 and record the mean and standard deviation for
+        <p>Now consider 0.50. Is this a plausible value for <m>\pi</m>? Repeat #6 and record the mean and standard deviation for
 this null distribution as well.</p>
       </slide>
       <slide>
@@ -130,7 +130,7 @@ cumbersome and time-intensive, so we'll now learn some shortcut approaches.</p>
       <slide>
         <title>Exercise 9</title>
         <!--Question 9-->
-        <p>Reconsider our first guess of π = 0.382. How many standard deviations is 0.362 from 0.382? (Hint: Standardize
+        <p>Reconsider our first guess of <m>\pi</m> = 0.382. How many standard deviations is 0.362 from 0.382? (Hint: Standardize
 the value by looking at the difference between 0.382 and 0.362 and divide by the standard deviation you found in
 <xref ref="q-4-4-7"/>.)</p>
       </slide>
@@ -180,8 +180,8 @@ interval for the long-run proportion (or population proportion), <m>\pi</m>, in 
       <slide>
         <title>Exercise 10</title>
         <!--Question 10-->
-        <p>How did the standard deviations you found in <xref ref="q-4-4-7"/> (with π = 0.382) and in <xref ref="q-4-4-8"/>
-  (with π = 0.50) compare? </p>
+        <p>How did the standard deviations you found in <xref ref="q-4-4-7"/> (with <m>\pi</m> = 0.382) and in <xref ref="q-4-4-8"/>
+  (with <m>\pi</m> = 0.50) compare? </p>
       </slide>
       <slide>
         <p>You should see that the standard deviation changes slightly when we change <m>\pi</m>, but not by much. We saw
@@ -203,7 +203,7 @@ standard deviation to calculate the margin of error.</p>
       <slide>
         <title>Exercise 11b: </title>
         <p>
-      Use this SD to produce a 95% confidence interval for π. (Hint: Subtract the margin of error from p̂ to
+      Use this SD to produce a 95% confidence interval for <m>\pi</m>. (Hint: Subtract the margin of error from p̂ to
       determine the lower endpoint of the interval and then add the margin of error to p̂ to determine the upper
       endpoint of the interval.)
     </p>
@@ -226,7 +226,7 @@ or 99% confident instead? We can extend this 2SD method to a more general theory
         <p>As we saw previously, we don't always need to simulate a sampling distribution—not if we can accurately
 predict what would happen if we were to simulate. Instead, we can predict the standard deviation by the
 formula <m> \sqrt{\pi(1-\pi)/n} </m>. But when constructing a confidence interval, we don't have a
-hypothesized value of π, so to estimate this standard deviation, we will substitute the observed sample proportion.
+hypothesized value of <m>\pi</m>, so to estimate this standard deviation, we will substitute the observed sample proportion.
 </p>
       </slide>
       <slide>
@@ -275,7 +275,7 @@ is the standard error of a sample proportion <m>\hat{p}</m>.</p>
       <slide>
         <title>Convention 5: </title>
         <convention>
-          <p>The theory-based approach for finding a confidence interval for π (called a <term>one-sample z-interval</term>)
+          <p>The theory-based approach for finding a confidence interval for <m>\pi</m> (called a <term>one-sample z-interval</term>)
 is considered valid if there are at least 10 observational units ineach category of the categorical variable (i.e.,
 at least 10 successes and at least 10 failures).
 </p>

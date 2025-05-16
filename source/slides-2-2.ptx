@@ -152,7 +152,7 @@ The symbol <m>\hat{p}</m> (pronounced "p-hat") is used to represent a statistic 
       </slide>
       <slide>
         <title>Exercise 12</title>
-        <p>Hypotheses are always conjectures about the unknown parameter π. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using π.</p>
+        <p>Hypotheses are always conjectures about the unknown parameter <m>\pi</m>. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using <m>\pi</m>.</p>
       </slide>
     </section>
     <section>
@@ -372,11 +372,11 @@ learned in this study.</p>
       </slide>
       <slide>
         <title>Exercise 26b: </title>
-        <p>State the null hypothesis in words and in terms of the (newly defined) parameter π.</p>
+        <p>State the null hypothesis in words and in terms of the (newly defined) parameter <m>\pi</m>.</p>
       </slide>
       <slide>
         <title>Exercise 26c: </title>
-        <p>State the alternative hypothesis in words and in terms of the (new) parameter π.</p>
+        <p>State the alternative hypothesis in words and in terms of the (new) parameter <m>\pi</m>.</p>
       </slide>
       <slide>
         <title>Exercise 26d: </title>

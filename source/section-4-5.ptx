@@ -81,7 +81,7 @@ will differ?</p>
 <task>
   <statement>
     <p>
-      Is the specified long-run proportion (π = 0.50) within the confidence interval?
+      Is the specified long-run proportion (<m>\pi</m> = 0.50) within the confidence interval?
     </p>
   </statement>
 </task>
@@ -151,7 +151,7 @@ So what is happening 95% of the time?
   <task>
     <statement>
       <p>
-        Is the probability you set for the overall process (π = 0.50) within the confidence interval?
+        Is the probability you set for the overall process (<m>\pi</m> = 0.50) within the confidence interval?
       </p>
     </statement>
   </task>
@@ -186,7 +186,7 @@ So what is happening 95% of the time?
   <task>
     <statement>
       <p>
-        Is the long-run proportion of orange (π = 0.50) within the confidence interval?
+        Is the long-run proportion of orange (<m>\pi</m> = 0.50) within the confidence interval?
       </p>
     </statement>
   </task>
@@ -202,7 +202,7 @@ So what is happening 95% of the time?
       </p>
       <p>
         In the bottom left corner, the applet maintains a “Running total” for the percentage 
-        of the intervals produced so far that contain π = 0.50. Report this percentage here. 
+        of the intervals produced so far that contain <m>\pi</m> = 0.50. Report this percentage here. 
         That is, what percentage of the 100 random intervals you have generated succeeded in 
         capturing the value of 0.50 inside the interval?
       </p>

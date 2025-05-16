@@ -79,13 +79,13 @@ right-eye dominance than left-eye dominance.</p>
 <task>
   <statement>
     <p>
-      Describe the parameter of interest in words. (Use the symbol π to represent
+      Describe the parameter of interest in words. (Use the symbol <m>\pi</m> to represent
       this parameter.)
     </p>
   </statement>
   <solution>
     <p>
-      parameter = π = long-run proportion of students who are right-eye dominant
+      parameter = <m>\pi</m> = long-run proportion of students who are right-eye dominant
     </p>
   </solution>
 </task>
@@ -257,7 +257,7 @@ failures) is met.</p>
 <p>The normal approximation will also give you values of the standardized sta-
 tistic and p-value based on its mathematical predictions. As you learned previously, the standardized score is calculated as</p>
 <me>\text{standardized statistic} = z = \dfrac{\text{statistic} - \text{mean of null distribution}}{\text{standard deviation of null distribution}} </me>
-<p> The mean of the null distribution is the hypothesized value of the long-run proportion (π). The standard deviation can be obtained in two ways: </p>
+<p> The mean of the null distribution is the hypothesized value of the long-run proportion (<m>\pi</m>). The standard deviation can be obtained in two ways: </p>
 <p>First, find the standard deviation of the null distribution by simulating. </p>
 <p>Second, predict the value of the standard deviation by substituting into this formula: </p>
 <me>\text{standard deviation of null distribution of single proportion} = \sqrt{\dfrac{\pi(1-\pi)}{n}}</me>
@@ -286,7 +286,7 @@ mathematical prediction is often called the “central limit theorem.”</p>
 <theorem> 
  <title> Central Limit Theorem </title>
 <p>If the sample size (n) is large enough, the distribution of sample proportions will be
-bell-shaped (or normal), centered at the long-run proportion (π), with a standard
+bell-shaped (or normal), centered at the long-run proportion (<m>\pi</m>), with a standard
 deviation of  <m>\sqrt{\dfrac{\pi(1-\pi)}{n}}</m>
 .</p>
 </theorem>

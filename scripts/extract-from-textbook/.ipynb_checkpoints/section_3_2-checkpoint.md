@@ -42,7 +42,7 @@ The passage is, of course, Lincoln’s Gettysburg Address, given November 19,
 1863, on the battlefield near Gettysburg, Pennsylvania. We are considering
 this passage a **population** of 268 words, and the 10 words you selected are
 a **sample** from this population. As before, we can use p^ to refer to a
-sample proportion and π to refer to the parameter, this time the proportion of
+sample proportion and <m>\pi</m> to refer to the parameter, this time the proportion of
 short words in the population.
 
 ![The Gettysburg Address of Abraham Lincoln is shown.](images/3_2/gettysburg_2.png)
@@ -50,7 +50,7 @@ short words in the population.
 ###  3.2.1: Question 4.
 
 Do you think the sample proportion of short words you found will be a good
-estimate of the population proportion, π = 0.41? Why or why not?
+estimate of the population proportion, <m>\pi</m> = 0.41? Why or why not?
 
 ###  3.2.2: Question 5.
 
@@ -241,12 +241,12 @@ from the Gettysburg Address.
 Term | Instance in our example
 ---|---  
 Population | All 268 words in the Gettysburg Address  
-Parameter | Proportion of words in the population that are short (π = 0.41)  
+Parameter | Proportion of words in the population that are short (<m>\pi</m> = 0.41)  
 Sample | 5 randomly selected words  
 Statistic | Proportion of sampled words that are short ($\hat p$ varies from sample to sample)  
   
 One big change between the random samples and the previous convenience samples
-is the center of the sampling distribution should now be close to π, the
+is the center of the sampling distribution should now be close to <m>\pi</m>, the
 population proportion. In other words, simple random sampling is an unbiased
 sampling method because there is no tendency to over- or underestimate the
 parameter.
@@ -260,7 +260,7 @@ _As we saw, this sampling method (taking 5 randomly selected words) is better
 
 Based on what you learned about sample proportions previously, you should not
 be too surprised that the distribution of sample proportions you produced in
-#17 is somewhat symmetric (because π is close to 0.50), with a mean close to
+#17 is somewhat symmetric (because <m>\pi</m> is close to 0.50), with a mean close to
 0.41 (because the sampling method is unbiased). In fact, our previous formula
 for the standard deviation of sample proportions, $\sigma = \sqrt{\frac{\pi(1-\pi)}{n}}$, still works as
 well!
@@ -269,13 +269,13 @@ well!
 
 Verify that the standard deviation of your 10,000 sample proportions is close
 to the standard deviation of sample proportions defined above. (Hint: What
-values are you using for π and n?)
+values are you using for <m>\pi</m> and n?)
 
 ###  Key Idea:
 
 Notice one new aspect here compared to earlier: _When we are sampling from a
 finite population rather than from an infinite random process, we want the
-population to be large in order to assume π represents a constant probability
+population to be large in order to assume <m>\pi</m> represents a constant probability
 of success._ In this case, 268>200(=20×10), and the formula should apply. In
 which case, we can use the same theory-based methods we used before.
 
@@ -371,11 +371,11 @@ Mean? Standard deviation? Shape?
 ###  3.2.26: Question 24e.
 
 Based on the observed sample proportion, is it plausible that the observed
-sample came from a population with π = 0.50? Be clear how you are deciding.
+sample came from a population with <m>\pi</m> = 0.50? Be clear how you are deciding.
 
 ###  3.2.27: Question 24f.
 
-Is it plausible that the observed sample came from a population with π = 0.40?
+Is it plausible that the observed sample came from a population with <m>\pi</m> = 0.40?
 Explain how you are deciding.
 
 ###  3.2.28: Question 24g.

@@ -64,7 +64,7 @@ in the countries where the data were collected that lean their heads to the righ
 </statement>
 <solution>
   <p>
-    No, we don't know the exact value of π based on the observed data. The parameter value is a fixed but unknown quantity. Our statistic from our observed data is the best guess of the value for the parameter.
+    No, we don't know the exact value of <m>\pi</m> based on the observed data. The parameter value is a fixed but unknown quantity. Our statistic from our observed data is the best guess of the value for the parameter.
   </p>
 </solution>
 </activity>
@@ -72,7 +72,7 @@ in the countries where the data were collected that lean their heads to the righ
 <activity>
  <!--Question 5-->
 <statement>
-<p>State the appropriate null and alternative hypotheses, both in words and in terms of the parameter π, for
+<p>State the appropriate null and alternative hypotheses, both in words and in terms of the parameter <m>\pi</m>, for
 testing the conjecture that kissing couples tend to lean their heads to the right more often than by random chance.</p>
 </statement>
 <solution>
@@ -83,7 +83,7 @@ testing the conjecture that kissing couples tend to lean their heads to the righ
     Alternative: More than 50% of couples in the population lean their heads to the right while kissing
   </p>
   <p>
-    Null: π = 0.50; Alternative: π &gt; 0.50
+    Null: <m>\pi</m> = 0.50; Alternative: <m>\pi</m> &gt; 0.50
   </p>
 </solution>
 </activity>
@@ -348,12 +348,12 @@ parameter value is larger than the level of significance.</p>
 <activity>
  <!--Question 12-->
 <statement>
-<p>Using a 0.05 significance level and your results from question 11, provide a list of plausible values for π,
+<p>Using a 0.05 significance level and your results from question 11, provide a list of plausible values for <m>\pi</m>,
 the long-run proportion of kissing couples who lean their heads to the right.</p>
 </statement>
 <solution>
   <p>
-    95% confidence interval for π is approximately 0.56 to 0.72.
+    95% confidence interval for <m>\pi</m> is approximately 0.56 to 0.72.
   </p>
 </solution>
 </activity>
@@ -387,7 +387,7 @@ and <xref ref="q-4-2-8"/>.</p>
  <!--Question 14-->
 <statement>
 <p>Now suppose we were to use a significance level of 0.01 instead of 0.05 to decide whether or not to reject the
-corresponding null hypothesis for each listed value of π. How would you expect the interval of plausible values to
+corresponding null hypothesis for each listed value of <m>\pi</m>. How would you expect the interval of plausible values to
 change: wider, narrower, or no change? Explain your reasoning.</p>
 </statement>
 <solution>
@@ -408,7 +408,7 @@ interval of plausible values.</p>
 </statement>
 <solution>
   <p>
-    Needed to test probabilities of success π =0.52 (p-value=0.004), and π =0.53 (p-value=0.012), to determine the interval of plausible values at 0.01 significance level to be 0.53 to 0.74
+    Needed to test probabilities of success <m>\pi</m> =0.52 (p-value=0.004), and <m>\pi</m> =0.53 (p-value=0.012), to determine the interval of plausible values at 0.01 significance level to be 0.53 to 0.74
   </p>
 </solution>
 </activity>

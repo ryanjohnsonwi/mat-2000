@@ -98,10 +98,10 @@ What is the value of n in this study?
 
 ###  2.4.12: Question 12.
 
-Hypotheses are always conjectures about the unknown parameter π. You can also
+Hypotheses are always conjectures about the unknown parameter <m>\pi</m>. You can also
 use H0 and HA as short-hand notation for the null and alternative hypotheses,
 respectively. A colon ":" is used to represent the word "is". Restate the null
-and alternative hypotheses using π.
+and alternative hypotheses using <m>\pi</m>.
 
 ### Step 4: Draw inferences:
 
@@ -275,7 +275,7 @@ what you learned in this study.
 Instead of focusing on the subjects who chose bottled water, you could instead
 analyze the data based on the subjects who chose tap water. Because 24 of 27
 subjects chose bottled water,we know 3 of the 27 subjects chose tap water. Now
-let the parameter of interest (denoted by π) be the probability that a subject
+let the parameter of interest (denoted by <m>\pi</m>) be the probability that a subject
 will select tap water as most preferred.
 
 ###  2.4.30: Question 27a.
@@ -289,12 +289,12 @@ less) often than bottled water.
 ###  2.4.31: Question 27b.
 
 State the null hypothesis in words and in terms of the (newly defined)
-parameter π.
+parameter <m>\pi</m>.
 
 ###  2.4.32: Question 27c.
 
 State the alternative hypothesis in words and in terms of the (new) parameter
-π.
+<m>\pi</m>.
 
 ###  2.4.33: Question 27d.
 
@@ -343,6 +343,6 @@ water. In other words, it does not matter which category you define to be a
 similar provided that you make the appropriate adjust- ments in your analysis:
 
   * Using 0.25 instead of 0.75 as the null value of the parameter
-  * Changing the alternative hypothesis to “π<0.25” rather than “π>0.75”
+  * Changing the alternative hypothesis to “<m>\pi</m><0.25” rather than “<m>\pi</m>>0.75”
   * Calculating the p-value as the proportion of samples with $\hat p \leq 0.1111$ rather than $\hat p \geq 0.8889$.
 

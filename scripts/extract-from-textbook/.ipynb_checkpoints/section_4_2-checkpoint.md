@@ -25,22 +25,22 @@ Identify the variable recorded in this study. Classify it as categorical or
 quantitative.
 
 You will first use Güntürkün’s data to test his conjecture that kissing
-couples tend to lean their heads to the right. Use the symbol π to denote the
+couples tend to lean their heads to the right. Use the symbol <m>\pi</m> to denote the
 proportion of all kissing couples in the countries where the data were
 collected that lean their heads to the right.
 
 ###  4.2.3: Question 3.
 
-Is π a parameter or a statistic? Explain how you are deciding.
+Is <m>\pi</m> a parameter or a statistic? Explain how you are deciding.
 
 ###  4.2.4: Question 4.
 
-Do we know the exact value of π based on the observed data? Explain.
+Do we know the exact value of <m>\pi</m> based on the observed data? Explain.
 
 ###  4.2.5: Question 5.
 
 State the appropriate null and alternative hypotheses, both in words and in
-terms of the parameter π, for testing the conjecture that kissing couples tend
+terms of the parameter <m>\pi</m>, for testing the conjecture that kissing couples tend
 to lean their heads to the right more often than by random chance.
 
 Of the 124 couples observed, 80 leaned their heads to the right while kissing.
@@ -76,7 +76,7 @@ that a couple leans to the right when kissing.
 ###  Question 8a.
 
 Now test whether the data provide evidence that the probability that a couple
-leans their heads to the right while kissing (π) is different from 0.60. Use
+leans their heads to the right while kissing (<m>\pi</m>) is different from 0.60. Use
 the [ One Proportion applet](http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1) to
 determine the p-value for testing the null value of 0.60.
 
@@ -125,7 +125,7 @@ that a couple leans their heads to the right while kissing?
 
 The p-value you found in #9 should not have been smaller than 0.05. Hence, you
 do not reject the null hypothesis at the 0.05 level of significance and
-therefore you do not reject 0.60 as a plausible value for π. Thus, it is
+therefore you do not reject 0.60 as a plausible value for <m>\pi</m>. Thus, it is
 plausible (i.e., believable) that the probability a kissing couple leans their
 heads to the right is 0.60.
 
@@ -139,7 +139,7 @@ right? Why or why not?
 Use the applet to test the probability values given in the following table.
 
   * Each time, change the **Probability of success** to match the value that you are testing (keeping the observed sample proportion that you count beyond the same). 
-  * Everything else should stay the same; press **Draw Samples** and then **Count** to see the new two-sided p-value (with the **Two-sided** box checked). You can also check the **Show sliders** box and double click on the orange value to change the value of π and press **Enter**.
+  * Everything else should stay the same; press **Draw Samples** and then **Count** to see the new two-sided p-value (with the **Two-sided** box checked). You can also check the **Show sliders** box and double click on the orange value to change the value of <m>\pi</m> and press **Enter**.
 
 Probability under H0 | 0.54 | 0.55 | 0.56 | 0.57 | 0.58 | 0.59 | 0.60  
 ---|---|---|---|---|---|---|---  
@@ -154,7 +154,7 @@ Reject or plausible? |  |  |  |  |  |  |
 ###  4.2.11: Question 12.
 
 Using a 0.05 significance level and your results from question 11, provide a
-list of plausible values for π, the long-run proportion of kissing couples who
+list of plausible values for <m>\pi</m>, the long-run proportion of kissing couples who
 lean their heads to the right.
 
 This list of values represents an interval containing all values between two
@@ -163,7 +163,7 @@ endpoints.
 ###  Key idea.
 
 _The interval of plausible values that you found in question 12 is also called
-a **95% confidence interval for π**._
+a **95% confidence interval for <m>\pi</m>**._
 
 Why is this called 95% confidence? This
 corresponds to the 5% (0.05) significance level that was used to decide
@@ -184,7 +184,7 @@ significance tests and p-values that you calculated in questions 7 and 8.
 
 Now suppose we were to use a significance level of 0.01 instead of 0.05 to
 decide whether or not to reject the corresponding null hypothesis for each
-listed value of π. How would you expect the interval of plausible values to
+listed value of <m>\pi</m>. How would you expect the interval of plausible values to
 change: wider, narrower, or no change? Explain your reasoning.
 
 ###  4.2.14: Question 15.
