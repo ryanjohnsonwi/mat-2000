@@ -184,7 +184,7 @@ The symbol <m>\hat{p}</m> (pronounced "p-hat") is used to represent a statistic 
   <p>
     <mdn>
       <mrow>H_0 : \amp \pi = \frac{3}{4} </mrow>
-      <mrow>H_a : \amp &gt; \frac{3}{4} </mrow>
+      <mrow>H_a : \amp \pi &gt; \frac{3}{4} </mrow>
     </mdn>
   </p>
 </solution>
