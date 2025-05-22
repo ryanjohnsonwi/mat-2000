@@ -145,14 +145,12 @@ what are the sample size and the sample proportion that are right-eye dominant?<
 </solution>
 </activity>
 
-<p>
-  Return to the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">One Proportion</url> applet to approximate the p-value for our original overall proportion of red winning 248 times out of 457 matches, but now select the <q>Two-sided</q> check box to find the <q>two-sided p-value.</q>
-</p>
+<p>Use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">One Proportion</url>
+  applet to test the hypotheses from <xref ref="q-2-10-2-d" text="type-hybrid"/> and <xref ref="q-2-10-2-e" text="type-hybrid"/>.</p>
 
 <activity> 
  <!--Question 5-->
-<p>Use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1">One Proportion</url>
-  applet to test the hypotheses from <xref ref="q-2-10-2-d" text="type-hybrid"/> and <xref ref="q-2-10-2-e" text="type-hybrid"/>.</p>
+
 <task xml:id="q-2-10-5-a">
   <statement>
     <p>
