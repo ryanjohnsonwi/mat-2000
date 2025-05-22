@@ -69,7 +69,7 @@ later.
 One factor that influences strength of evidence is whether we conduct a two-
 sided or a one-sided test. Up until now we have only done one-sided tests. In
 a one-sided test the alternative hypothesis is either > or <. In a two-sided
-test, the alternative hypothesis is ≠. So, why would you do a two-sided test
+test, the alternative hypothesis is <m>\neq</m>. So, why would you do a two-sided test
 and what are the implications?
 
 Suppose the researchers did not necessarily think that red would win more

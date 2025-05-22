@@ -123,7 +123,7 @@
 
 <subsection> 
  <title>One-Sided vs. Two-Sided Tests</title>
-<p>One factor that influences strength of evidence is whether we conduct a two-sided or a one-sided test. Up until now we have only done one-sided tests. In a one-sided test the alternative hypothesis is either &gt; or &lt;. In a two-sided test, the alternative hypothesis is ≠. So, why would you do a two-sided test and what are the implications?</p>
+<p>One factor that influences strength of evidence is whether we conduct a two-sided or a one-sided test. Up until now we have only done one-sided tests. In a one-sided test the alternative hypothesis is either &gt; or &lt;. In a two-sided test, the alternative hypothesis is <m>\neq</m>. So, why would you do a two-sided test and what are the implications?</p>
 <p> Suppose the researchers did not necessarily think that red would win more often, but
 they also didn't necessarily think that blue would win more often. They were just interested in
 whether one color would win more often than the other. A two-sided alternative hypothesis (red wins at a rate other than 50% of the time, or at a rate not equal to 50%) allows the researchers to be less sure of the anticipated value of the parameter than a one-sided test.</p>
@@ -135,7 +135,7 @@ hypotheses for this study in symbols using a two-sided alternative.</p>
 </statement>
 <solution>
   <p>
-    Null: <m>\pi</m>=0.50, Alt: <m>\pi</m>≠0.50 where <m>\pi</m> = The probability of the player wearing the red uniform winning
+    Null: <m>\pi</m>=0.50, Alt: <m>\pi</m><m>\neq</m>0.50 where <m>\pi</m> = The probability of the player wearing the red uniform winning
   </p>
 </solution>
 </activity>
