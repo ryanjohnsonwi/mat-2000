@@ -582,7 +582,7 @@ To measure how much the regression line decreases the "unexplained variability" 
     </statement>
     <solution>
       <p>
-        <m>R^2 = 0.506 = 50.6/%</m>
+        <m>R^2 = 0.506 = 50.6\%</m>
       </p>
     </solution>
    </task>
