@@ -35,7 +35,7 @@
       <format>pdf</format>
       <source>source/main.ptx</source>
       <publication>publication/pub-solutions.ptx</publication>
-      <output-dir>../ws-solutions</output-dir>
+      <output-dir>output/ws-solutions</output-dir>
     </target>
     <target name="subset">
       <format>html</format>
