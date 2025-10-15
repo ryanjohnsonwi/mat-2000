@@ -19,7 +19,7 @@ a mean or a proportion? For what population?)
 
 Because our variable of interest (dollar amount intending to spend) is
 quantitative, the parameter of interest here is the population mean for all
-adult Americans; call this μ. To construct a confidence interval for μ, we
+adult Americans; call this <m>\mu</m>. To construct a confidence interval for <m>\mu</m>, we
 need to know the sample size, the sample mean, and the sample standard
 deviation.
 
@@ -37,13 +37,13 @@ your own words what s represents in this context.
 
 Suppose s was equal to \\$150. Use the 2SD method (Hint: Reminder to consider
 the SD of the sample mean) to approximate and interpret a 95% confidence
-interval for μ. (Hint: You are 95% confident that what is between what two
+interval for <m>\mu</m>. (Hint: You are 95% confident that what is between what two
 values?)
 
 ###  4.8.6: Question 6.
 
 Suppose s was equal to \\$300. Use the 2SD method to approximate the 95%
-confidence interval for μ. How does this interval compare to the interval from
+confidence interval for <m>\mu</m>m>\mu</m>. How does this interval compare to the interval from
 #5 (examine both the midpoint and the width of the interval)? Explain why the
 changes you observe make intuitive sense.
 
@@ -83,7 +83,7 @@ samples), and the confidence level.
 
 ###  Key Idea.
 
-The width of a confidence interval for a population mean, μ, decreases
+The width of a confidence interval for a population mean, <m>\mu</m>, decreases
 
   * as the confidence level decreases (for a fixed sample size and fixed sample standard deviation), or
   * as the sample size increases (for a fixed confidence level and fixed sample standard deviation), or

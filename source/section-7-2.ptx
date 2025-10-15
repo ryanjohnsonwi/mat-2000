@@ -76,8 +76,8 @@ categorical or quantitative.</p>
 <activity>
  <!--Question 4-->
 <statement>
-<p>Let μ(unrestricted) be the long-run mean improvement on this task three days later
-when someone has had unrestricted sleep and let μ(deprived) denote the long-run mean
+<p>Let <m>\mu_u</m> (u for unrestricted) be the long-run mean improvement on this task three days later
+when someone has had unrestricted sleep and let <m>\mu_d</m>(d for deprived) denote the long-run mean
 improvement when someone is sleep deprived on the first night. In words and symbols, 
 state the null and the alternative hypotheses to investigate whether sleep deprivation 
 has a negative effect on improvement in performance on visual discrimination tasks. 

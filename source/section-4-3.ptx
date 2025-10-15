@@ -21,7 +21,7 @@ will use the same data to estimate the average number of hours of sleep students
 <task>
   <statement>
     <p>
-      Sample size, n = ?
+      Sample size, <m>n =</m> ?
     </p>
   </statement>
   <solution>
@@ -33,7 +33,7 @@ will use the same data to estimate the average number of hours of sleep students
 <task>
   <statement>
     <p>
-      Sample mean, x̄ = ?
+      Sample mean, <m>\bar x = </m> ?
     </p>
   </statement>
   <solution>
@@ -45,7 +45,7 @@ will use the same data to estimate the average number of hours of sleep students
 <task>
   <statement>
     <p>
-      Sample SD, s = ?
+      Sample SD, <m>s = </m>?
     </p>
   </statement>
   <solution>
@@ -58,7 +58,7 @@ will use the same data to estimate the average number of hours of sleep students
 
 <p>Similar to what you did in a previous exploration, we could conduct a simulation to
 generate a sampling distribution of the sample mean number of hours of sleep, assuming
-different values for μ to determine which are plausible. (In the
+different values for <m>\mu</m> to determine which are plausible. (In the
 <url href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1">
 One Mean applet</url>, you can use a slider below the population to quickly change the
 value of the population mean.) Recall that such an interval is called a confidence interval.
@@ -68,7 +68,7 @@ estimating a confidence interval for <m> \mu </m></p>
 <activity>
  <!--Question 2-->
 <statement>
-<p>Based on your sample data, what is your best guess or estimate for the value of μ, that
+<p>Based on your sample data, what is your best guess or estimate for the value of <m>\mu</m>, that
 is, the average number of hours of sleep students at your school got the previous night?</p>
 </statement>
   <solution>
@@ -159,7 +159,7 @@ symmetric distribution.</p>
  <!--Question 6-->
 <statement>
 <p>Use the value of s/√n you found in #5 and the 2SD method to approximate a 95%
-confidence interval for μ in the context of the sleep study, and then interpret
+confidence interval for <m>\mu</m> in the context of the sleep study, and then interpret
 this interval. (Hint: When interpreting the interval, be clear about what the
 interval estimates. You are estimating not the individual sleep times of students
 but how much sleep students at your school get on …)</p>

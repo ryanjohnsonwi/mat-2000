@@ -233,6 +233,6 @@ have proven that the population mean is not equal to 8 hours? If not, why not.
 
 ###  3.6.22: Question 22.
 
-Suppose we do not reject the null hypothesis that μ = 7 hours. Does this mean
-you have proven that μ = 7 hours? If not, why not?
+Suppose we do not reject the null hypothesis that <m>\mu</m> = 7 hours. Does this mean
+you have proven that <m>\mu</m> = 7 hours? If not, why not?
 

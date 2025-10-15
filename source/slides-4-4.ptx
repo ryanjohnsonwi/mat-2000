@@ -93,14 +93,14 @@ own words what s represents in this context.</p>
         <title>Exercise 5</title>
         <!--Question 5-->
         <p>Suppose s was equal to $150. Use the 2SD method (Hint: Reminder to consider the SD of 
-the sample mean) to approximate and interpret a 95% confidence interval for μ. (Hint: 
+the sample mean) to approximate and interpret a 95% confidence interval for <m>\mu</m>. (Hint: 
 You are 95% confident that what is between what two values?)</p>
       </slide>
       <slide>
         <title>Exercise 6</title>
         <!--Question 6-->
         <p>Suppose s was equal to $300. Use the 2SD method to approximate the 95% confidence 
-interval for μ. How does this interval compare to the interval from #5 (examine both 
+interval for <m>\mu</m>. How does this interval compare to the interval from #5 (examine both 
 the midpoint and the width of the interval)? Explain why the changes you observe 
 make intuitive sense.</p>
       </slide>

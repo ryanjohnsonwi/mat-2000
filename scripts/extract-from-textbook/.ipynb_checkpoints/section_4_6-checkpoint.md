@@ -13,7 +13,7 @@ number of hours of sleep students at your school get.
 
 ###  Question 1.
 
-Let μ represent the average number of hours of sleep all the students at your
+Let <m>\mu</m> represent the average number of hours of sleep all the students at your
 school got the previous night. The question we asked in a previous exploration
 was, "How much sleep (to the nearest quarter hour) did you get last night?" If
 you still have the data from that exploration, give the summary statistics
@@ -34,17 +34,17 @@ Sample SD, s = ?
 
 Similar to what you did in a previous exploration, we could conduct a
 simulation to generate a sampling distribution of the sample mean number of
-hours of sleep, assuming different values for μ to determine which are
+hours of sleep, assuming different values for <m>\mu</m> to determine which are
 plausible. (In the [One Mean applet](https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1), you
 can use a slider below the population to quickly change the value of the
 population mean.) Recall that such an interval is called a confidence
 interval. But this would be rather tedious, so in this exploration we will
-consider some shortcuts to estimating a confidence interval for μ
+consider some shortcuts to estimating a confidence interval for <m>\mu</m>
 
 ###  4.6.4: Question 2.
 
 Based on your sample data, what is your best guess or estimate for the value
-of μ, that is, the average number of hours of sleep students at your school
+of <m>\mu</m>, that is, the average number of hours of sleep students at your school
 got the previous night?
 
 ###  4.6.5: Question 3.
@@ -54,16 +54,16 @@ your school. Will the average for this new sample be exactly the same as the
 original sample average reported in question 2? Why or why not?
 
 A natural guess or estimate for the population average number of hours of
-sleep students at your school got the previous night (μ) is the observed value
+sleep students at your school got the previous night (<m>\mu</m>) is the observed value
 of the sample average sleep time. But, we know that if we were to conduct this
 study again we would most likely observe a different value for the sample
 average due to sampling variability—we need to account for this in our
-estimate for μ. To do so, we create a confidence interval for μ by using the
+estimate for <m>\mu</m>. To do so, we create a confidence interval for <m>\mu</m> by using the
 formula
 $$\text{sample mean} \pm \text{multiplier} \times (\text{SD of sample mean})$$
 where the "SD of sample mean" accounts for the sample-to-sample variability that we expect in the sample average, the "multiplier" accounts for the confidence level, and the "$\pm$" allows us to create an interval around the sample mean (these are the plausible parameter values that are not too far from the observed sample mean). Recall that when the confidence level is 95%, the multiplier is approximately 2.
 
-To find a 95% confidence interval for μ we can use the 2SD method that you saw
+To find a 95% confidence interval for <m>\mu</m> we can use the 2SD method that you saw
 previously, but we need to know what to use for the SD of the sample mean.
 
 ###  4.6.6: Question 4.
@@ -93,7 +93,7 @@ bell-shaped, symmetric distribution.
 ###  4.6.8: Question 6.
 
 Use the value of s/√n you found in #5 and the 2SD method to approximate a 95%
-confidence interval for μ in the context of the sleep study, and then
+confidence interval for <m>\mu</m> in the context of the sleep study, and then
 interpret this interval. (Hint: When interpreting the interval, be clear about
 what the interval estimates. You are estimating not the individual sleep times
 of students but how much sleep students at your school get on …)
@@ -143,6 +143,6 @@ Are the validity conditions for using the 2SD or t-distribution based method
 to find a confidence interval met for your class data? Explain why or why not.
 
 In summary, the formula for a theory-based confidence interval for a
-population mean (μ) is given by
+population mean (<m>\mu</m>) is given by
 $$\bar x \pm (\text{multiplier}) \times \frac{s}{\sqrt{n}}$$
 where $\bar x$ denotes the sample mean, $s$ denotes the sample standard deviation, and $n$ is the sample size. We will rely on technology to find the appropriate multiplier for our sample size and our confidence level. Keep in mind that the multiplier is approximately 2 for 95% confidence and increases if we increase the confidence level.

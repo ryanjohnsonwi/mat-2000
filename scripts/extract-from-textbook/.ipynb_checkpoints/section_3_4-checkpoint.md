@@ -77,7 +77,7 @@ Note that we are focusing on the mean and the standard deviation.
 
 ###  3.4.7: Question 7.
 
-Identify the values of μ and σ for the length of words in the Gettysburg
+Identify the values of <m>\mu</m> and σ for the length of words in the Gettysburg
 Address.
 
 To evaluate our sampling method for a quantitative variable, we want to see

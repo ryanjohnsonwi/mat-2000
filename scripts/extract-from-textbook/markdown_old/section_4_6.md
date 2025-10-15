@@ -13,7 +13,7 @@ number of hours of sleep students at your school get.
 
 ###  Question 1.
 
-Let μ represent the average number of hours of sleep all the students at your
+Let <m>\mu</m> represent the average number of hours of sleep all the students at your
 school got the previous night. The question we asked in a previous exploration
 was, "How much sleep (to the nearest quarter hour) did you get last night?" If
 you still have the data from that exploration, give the summary statistics

@@ -66,8 +66,8 @@ deciding.
 
 ###  7.4.4: Question 4.
 
-Let μ(unrestricted) be the long-run mean improvement on this task three days
-later when someone has had unrestricted sleep and let μ(deprived) denote the
+Let <m>\mu</m>(unrestricted) be the long-run mean improvement on this task three days
+later when someone has had unrestricted sleep and let <m>\mu</m>(deprived) denote the
 long-run mean improvement when someone is sleep deprived on the first night.
 In words and symbols, state the null and the alternative hypotheses to
 investigate whether sleep deprivation has a negative effect on improvement in
