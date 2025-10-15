@@ -194,68 +194,78 @@ difference is large.</p>
 <p>The Gallup poll did give us a bit more information;</p>
 <table>
   <tabular>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
     <row>
-      <cell>
-      </cell>
-      <cell>
+      <cell><p>
+      </p></cell>
+      <cell><p>
         $1000 or more
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $500-999
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $250-499
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $100-249
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         Under $100
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         No opinion
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         Median
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         Mean (with 0)
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         Mean (without 0)
-      </cell>
+      </p></cell>
     </row>
     <row>
-      <cell>
-        2019Oct 1-10
-      </cell>
-      <cell>
+      <cell><p>
+        2019 Oct 1-10
+      </p></cell>
+      <cell><p>
         37
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         21
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         12
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         15
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         3
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         10
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $500
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $942
-      </cell>
-      <cell>
+      </p></cell>
+      <cell><p>
         $1,004
-      </cell>
+      </p></cell>
     </row>
   </tabular>
 </table>
