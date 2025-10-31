@@ -151,7 +151,7 @@ hypotheses for this study in symbols using a two-sided alternative.</p>
     <statement>
       <p>
         Describe how the portion of the null distribution that is shaded red is different than
-        our first test done in #3c.
+        our first test done in #4c.
       </p>
     </statement>
     <solution>
@@ -164,7 +164,7 @@ hypotheses for this study in symbols using a two-sided alternative.</p>
     <statement>
       <p>
         Describe how the p-value is different from the p-value that was obtained in our
-        original test done in #3c.
+        original test done in #4c.
       </p>
     </statement>
     <solution>
@@ -310,7 +310,7 @@ the more evidence there is against the null hypothesis.</p>
   <task>
     <statement>
       <p>
-        Compare the null distribution you generate in this case to that generated in #3. In
+        Compare the null distribution you generate in this case to that generated in #4. In
         particular, how do the center (mean) and variability (standard deviation) compare?
       </p>
     </statement>
@@ -323,7 +323,7 @@ the more evidence there is against the null hypothesis.</p>
   <task>
     <statement>
       <p>
-        What is your new p-value? Is it larger or smaller than your original p-value from #3c?
+        What is your new p-value? Is it larger or smaller than your original p-value from #4c?
         Explain why this makes sense.
       </p>
     </statement>
