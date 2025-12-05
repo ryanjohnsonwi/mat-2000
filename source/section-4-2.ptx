@@ -221,8 +221,8 @@ standard deviation to calculate the margin of error.</p>
 <task>
   <statement>
     <p>
-      Use this SD to produce a 95% confidence interval for <m>\pi</m>. (Hint: Subtract the margin of error from p̂ to
-      determine the lower endpoint of the interval and then add the margin of error to p̂ to determine the upper
+      Use this SD to produce a 95% confidence interval for <m>\pi</m>. (Hint: Subtract the margin of error from <m>\hat{p}</m> to
+      determine the lower endpoint of the interval and then add the margin of error to <m>\hat{p}</m> to determine the upper
       endpoint of the interval.)
     </p>
   </statement>
