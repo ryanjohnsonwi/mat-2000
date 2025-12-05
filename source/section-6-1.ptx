@@ -117,58 +117,66 @@ case both variables have only two categories, so we produce a <m>2 \times 2</m> 
   </p>
   <table>
     <tabular>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
     <row>
-      <cell></cell>
-      <cell>Gilbert working on shift</cell>
-      <cell>Gilbert not working on shift</cell>
-      <cell>Total</cell>
+      <cell><p></p></cell>
+      <cell><p>Gilbert working on shift</p></cell>
+      <cell><p>Gilbert not working on shift</p></cell>
+      <cell><p>Total</p></cell>
     </row>
     <row>
-      <cell>Patient died during shift</cell>
-      <cell></cell>
-      <cell></cell>
-      <cell>74</cell>
+      <cell><p>Patient died during shift</p></cell>
+      <cell><p></p></cell>
+      <cell><p></p></cell>
+      <cell><p>74</p></cell>
     </row>
     <row>
-      <cell>No patient died during shift</cell>
-      <cell></cell>
-      <cell></cell>
-      <cell>1,567</cell>
+      <cell><p>No patient died during shift</p></cell>
+      <cell><p></p></cell>
+      <cell><p></p></cell>
+      <cell><p>1,567</p></cell>
     </row>
     <row>
-      <cell>Total</cell>
-      <cell>257</cell>
-      <cell>1,384</cell>
-      <cell>1,641</cell>
+      <cell><p>Total</p></cell>
+      <cell><p>257</p></cell>
+      <cell><p>1,384</p></cell>
+      <cell><p>1,641</p></cell>
     </row>
     </tabular></table>
  </statement>
  <solution>
   <table>
     <tabular>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
     <row>
-      <cell></cell>
-      <cell>Gilbert working on shift</cell>
-      <cell>Gilbert not working on shift</cell>
-      <cell>Total</cell>
+      <cell><p></p></cell>
+      <cell><p>Gilbert working on shift</p></cell>
+      <cell><p>Gilbert not working on shift</p></cell>
+      <cell><p>Total</p></cell>
     </row>
     <row>
-      <cell>Patient died during shift</cell>
-      <cell>40</cell>
-      <cell>34</cell>
-      <cell>74</cell>
+      <cell><p>Patient died during shift</p></cell>
+      <cell><p>40</p></cell>
+      <cell><p>34</p></cell>
+      <cell><p>74</p></cell>
     </row>
     <row>
-      <cell>No patient died during shift</cell>
-      <cell>217</cell>
-      <cell>1350</cell>
-      <cell>1,567</cell>
+      <cell><p>No patient died during shift</p></cell>
+      <cell><p>217</p></cell>
+      <cell><p>1350</p></cell>
+      <cell><p>1,567</p></cell>
     </row>
     <row>
-      <cell>Total</cell>
-      <cell>257</cell>
-      <cell>1,384</cell>
-      <cell>1,641</cell>
+      <cell><p>Total</p></cell>
+      <cell><p>257</p></cell>
+      <cell><p>1,384</p></cell>
+      <cell><p>1,641</p></cell>
     </row>
     </tabular></table>
  </solution>
@@ -367,16 +375,20 @@ the large difference in death proportions between the two groups.</p>
 
 </subsection>
 
-<exercises> 
+<subsection> 
  <title>Exploring further</title>
 
-<exercise> 
+<activity> 
  <!--Question 18-->
   <introduction>
     <p>Suppose that the data had turned out as shown here:
     </p>
     <table>
     <tabular>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
       <row>
         <cell></cell>
         <cell>Gilbert working on shift</cell>
@@ -452,9 +464,9 @@ the large difference in death proportions between the two groups.</p>
       </p>
     </solution>
   </task>
-</exercise>
+</activity>
 
-<exercise> 
+<activity> 
  <!--Question 19-->
  <statement>
     <p>Produce a hypothetical <m>2 \times 2</m> table with the same marginal totals, but with the 
@@ -462,11 +474,16 @@ the large difference in death proportions between the two groups.</p>
     produce a table so that the conditional proportions are very similar between the two groups.
     </p>
     <table>
-    <tabular><row> <cell></cell> <cell>Gilbert working on shift</cell> <cell>Gilbert not working on shift</cell> <cell>Total</cell> </row>
-    <row> <cell>Patient died during shift</cell> <cell></cell> <cell></cell> <cell>457</cell> </row>
-    <row> <cell>No patient died during shift</cell> <cell></cell> <cell></cell> <cell>1,184</cell> </row>
-    <row> <cell>Total</cell> <cell>257</cell> <cell>1,384</cell> <cell>1,641</cell>
-    </row>
+    <tabular>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <row> <cell><p></p></cell> <cell><p>Gilbert working on shift</p></cell> <cell><p>Gilbert not working on shift</p></cell> <cell><p>Total</p></cell> </row>
+      <row> <cell><p>Patient died during shift</p></cell> <cell><p></p></cell> <cell><p></p></cell> <cell><p>457</p></cell> </row>
+      <row> <cell><p>No patient died during shift</p></cell> <cell><p></p></cell> <cell><p></p></cell> <cell><p>1,184</p></cell> </row>
+      <row> <cell><p>Total</p></cell> <cell><p>257</p></cell> <cell><p>1,384</p></cell> <cell><p>1,641</p></cell>
+      </row>
     </tabular></table>
  </statement>
  <solution>
@@ -474,26 +491,32 @@ the large difference in death proportions between the two groups.</p>
     Ratio = 0.389/0.258= 1.51 times as much. This ratio is much different than the ratio we had before.
   </p>
   <table>
-    <tabular><row> <cell></cell> <cell>Gilbert working on shift</cell> <cell>Gilbert not working on shift</cell> <cell>Total</cell> </row>
+    <tabular>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <col width="20%"/>
+      <row>
+        <cell><p></p></cell> <cell><p>Gilbert working on shift</p></cell> <cell><p>Gilbert not working on shift</p></cell> <cell><p>Total</p></cell> </row>
     <row>
-      <cell>Patient died during shift</cell>
-      <cell>72</cell>
-      <cell>385</cell>
-      <cell>457</cell>
+      <cell><p>Patient died during shift</p></cell>
+      <cell><p>72</p></cell>
+      <cell><p>385</p></cell>
+      <cell><p>457</p></cell>
     </row>
     <row>
-      <cell>No patient died during shift</cell>
-      <cell>185</cell>
-      <cell>999</cell>
-      <cell>1,184</cell>
+      <cell><p>No patient died during shift</p></cell>
+      <cell><p>185</p></cell>
+      <cell><p>999</p></cell>
+      <cell><p>1,184</p></cell>
     </row>
-    <row> <cell>Total</cell> <cell>257</cell> <cell>1,384</cell> <cell>1,641</cell>
+    <row> <cell><p>Total</p></cell> <cell><p>257</p></cell> <cell><p>1,384</p></cell> <cell><p>1,641</p></cell>
     </row>
     </tabular></table>
  </solution>
-</exercise>
+</activity>
 
-<exercise>
+<activity>
  <!--Question 20-->
 <statement>
 <p>What would the segmented bar graph look like for a <m>2 \times 2</m> table with virtually no association between the variables? Explain your answer.</p>
@@ -503,8 +526,8 @@ the large difference in death proportions between the two groups.</p>
     The bar heights would be approximately equal.
   </p>
 </solution>
-</exercise>
+</activity>
 
-</exercises>
+</subsection>
 
 </section>
