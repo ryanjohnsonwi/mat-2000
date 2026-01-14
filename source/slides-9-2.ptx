@@ -276,14 +276,14 @@ answer to question 11. (<em>Note</em>: You may be a bit different due to roundin
       <slide>
         <title>Exercise 13</title>
         <!--Question 13-->
-        <p>The applet will also now display the null distribution for the χ²  statistic rather 
-than the Mean Group Diff statistic. Determine the p-value based on the simulated χ²  
-statistics. (Hint: Change the value in the Count Samples box to the observed value of the χ²  statistic.)</p>
+        <p>The applet will also now display the null distribution for the <m>chi^2</m>  statistic rather 
+than the Mean Group Diff statistic. Determine the p-value based on the simulated <m>chi^2</m>  
+statistics. (Hint: Change the value in the Count Samples box to the observed value of the <m>chi^2</m>  statistic.)</p>
       </slide>
       <slide>
         <title>Exercise 14</title>
         <!--Question 14-->
-        <p>How does the p-value based on the χ² statistic compare to the one based on the Mean Group Diff 
+        <p>How does the p-value based on the <m>chi^2</m> statistic compare to the one based on the Mean Group Diff 
 statistic? Are they similar? Is your conclusion about strength of evidence provided by the data 
 against the null hypothesis similar?</p>
       </slide>

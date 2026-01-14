@@ -329,49 +329,426 @@ see more output related to the calculation of the value of the F-statistic.</p>
 </activity>
 
 <p>
-  The next series of exercises will take a closer look at how the F-statistic is calculated.
+  The next series of exercises will take a closer look at how the F-statistic is calculated.  It will be easiest to do this with a spreadsheet, but a calculator will still work.
 </p>
 
 <activity xml:id="q-10-2-11">
   <introduction>
     <p>      
-      Use the <url href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm?hideExtras=1"> Descriptive Statistics applet</url> to find the standard deviation of the group averages:
-      <ul>
-        <li>
-          <p>
-            Type in the four group means for the original data. (Clear the existing data first and uncheck the Includes header box.)
-          </p>
-        </li>
-        <li>
-          <p>
-            Have the applet calculate the standard deviation of these four group means.
-          </p>
-        </li>
-      </ul>
+      We will first compute the sum squared error of each of the four groups.
     </p>
   </introduction>
   <task>
     <statement>
       <p>
-        Report the number you found.
+        Fill in the first three rows of the table below using the statistics given from the Multiple Means App.
       </p>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+            </cell>
+            <cell>
+              Total
+            </cell>
+            <cell>
+              Atkins
+            </cell>
+            <cell>
+              Zone
+            </cell>
+            <cell>
+              Ornish
+            </cell>
+            <cell>
+              LEARN
+            </cell>
+          </row>
+          <row>
+            <cell>
+              n
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <m>\bar{x}</m>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              s
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+        </tabular>
+      </table>
     </statement>
     <solution>
-      <p>
-        Standard deviation = 0.483.
-      </p>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+            </cell>
+            <cell>
+              Total
+            </cell>
+            <cell>
+              Atkins
+            </cell>
+            <cell>
+              Zone
+            </cell>
+            <cell>
+              Ornish
+            </cell>
+            <cell>
+              LEARN
+            </cell>
+          </row>
+          <row>
+            <cell>
+              n
+            </cell>
+            <cell>
+              311
+            </cell>
+            <cell>
+              77
+            </cell>
+            <cell>
+              79
+            </cell>
+            <cell>
+              76
+            </cell>
+            <cell>
+              79
+            </cell>
+          </row>
+          <row>
+            <cell>
+              x<underscore />i
+            </cell>
+            <cell>
+              -0.966
+            </cell>
+            <cell>
+              -1.651
+            </cell>
+            <cell>
+              -0.530
+            </cell>
+            <cell>
+              -0.770
+            </cell>
+            <cell>
+              -0.922
+            </cell>
+          </row>
+          <row>
+            <cell>
+              s
+            </cell>
+            <cell>
+              2.209
+            </cell>
+            <cell>
+              2.542
+            </cell>
+            <cell>
+              2.001
+            </cell>
+            <cell>
+              2.138
+            </cell>
+            <cell>
+              2.002
+            </cell>
+          </row>
+        </tabular>
+      </table>
     </solution>
   </task>
   <task>
     <!--Question 11b-->
     <statement>
       <p>
-        Write a one-sentence interpretation of this number you calculated.
+        Add another row that calculates <m>(\bar{x_i}-\bar{x})^2</m> for each of the four groups.  In other words, calculate the difference between each of the group means and the total mean, and then square each of those four numbers.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+            </cell>
+            <cell>
+              Total
+            </cell>
+            <cell>
+              Atkins
+            </cell>
+            <cell>
+              Zone
+            </cell>
+            <cell>
+              Ornish
+            </cell>
+            <cell>
+              LEARN
+            </cell>
+          </row>
+          <row>
+            <cell>
+              n
+            </cell>
+            <cell>
+              311
+            </cell>
+            <cell>
+              77
+            </cell>
+            <cell>
+              79
+            </cell>
+            <cell>
+              76
+            </cell>
+            <cell>
+              79
+            </cell>
+          </row>
+          <row>
+            <cell>
+              x<underscore />i
+            </cell>
+            <cell>
+              -0.966
+            </cell>
+            <cell>
+              -1.651
+            </cell>
+            <cell>
+              -0.530
+            </cell>
+            <cell>
+              -0.770
+            </cell>
+            <cell>
+              -0.922
+            </cell>
+          </row>
+          <row>
+            <cell>
+              s
+            </cell>
+            <cell>
+              2.209
+            </cell>
+            <cell>
+              2.542
+            </cell>
+            <cell>
+              2.001
+            </cell>
+            <cell>
+              2.138
+            </cell>
+            <cell>
+              2.002
+            </cell>
+          </row>
+          <row>
+            <cell>
+              (x<underscore />i-x)<circumflex />2
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+              0.4693
+            </cell>
+            <cell>
+              0.1894
+            </cell>
+            <cell>
+              0.0384
+            </cell>
+            <cell>
+              0.0019
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Create another row that takes each of the four <m>(\bar{x_i}-\bar{x})^2</m> you calculated in the last part and multiply them by the sample size of each group.  This row is your Squared Error (SE) row.
+      </p>
+    </statement>
+    <solution>
+      <table>
+        <tabular>
+          <row>
+            <cell>
+            </cell>
+            <cell>
+              Total
+            </cell>
+            <cell>
+              Atkins
+            </cell>
+            <cell>
+              Zone
+            </cell>
+            <cell>
+              Ornish
+            </cell>
+            <cell>
+              LEARN
+            </cell>
+          </row>
+          <row>
+            <cell>
+              n
+            </cell>
+            <cell>
+              311
+            </cell>
+            <cell>
+              77
+            </cell>
+            <cell>
+              79
+            </cell>
+            <cell>
+              76
+            </cell>
+            <cell>
+              79
+            </cell>
+          </row>
+          <row>
+            <cell>
+              x<underscore />i
+            </cell>
+            <cell>
+              -0.966
+            </cell>
+            <cell>
+              -1.651
+            </cell>
+            <cell>
+              -0.530
+            </cell>
+            <cell>
+              -0.770
+            </cell>
+            <cell>
+              -0.922
+            </cell>
+          </row>
+          <row>
+            <cell>
+              s
+            </cell>
+            <cell>
+              2.209
+            </cell>
+            <cell>
+              2.542
+            </cell>
+            <cell>
+              2.001
+            </cell>
+            <cell>
+              2.138
+            </cell>
+            <cell>
+              2.002
+            </cell>
+          </row>
+          <row>
+            <cell>
+              (x<underscore />i-x)<circumflex />2
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+              0.4693
+            </cell>
+            <cell>
+              0.1894
+            </cell>
+            <cell>
+              0.0384
+            </cell>
+            <cell>
+              0.0019
+            </cell>
+          </row>
+          <row>
+            <cell>
+              Squared Error (SE)
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+              36.136
+            </cell>
+            <cell>
+              14.964
+            </cell>
+            <cell>
+              2.915
+            </cell>
+            <cell>
+              0.153
+            </cell>
+          </row>
+        </tabular>
+      </table>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Write down something you notice (i.e. a statement) or something you wonder (i.e. a question) about the Squared Error (SE) row you calculated above.
       </p>
     </statement>
     <solution>
       <p>
-        The standard deviation of the four group mean weight losses is 0.483. This means that the average difference between each of the average group BMI values and the overall mean is 0.483.
+        Answers will vary.  Give credit to any valid statement or any on-task question.
       </p>
     </solution>
   </task>
@@ -381,74 +758,576 @@ see more output related to the calculation of the value of the F-statistic.</p>
  <!--Question 12-->
  <introduction>
   <p>
-    To estimate the natural variation in these BMI values, we want to basically average the <q>within-group</q> variability across the four groups. 
+    Now we'll use the Squared Error (SE) terms from the last exercise to compute the ANOVA table. 
   </p>
+  <table>
+    <tabular>
+      <row>
+        <cell>
+        </cell>
+        <cell>
+          df
+        </cell>
+        <cell>
+          SS (SSE)
+        </cell>
+        <cell>
+          MS (MSE)
+        </cell>
+        <cell>
+          F
+        </cell>
+        <cell>
+          p-value
+        </cell>
+        <cell>
+          R<circumflex />2
+        </cell>
+      </row>
+      <row>
+        <cell>
+          Model
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          Error
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          Total
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+      </row>
+    </tabular>
+  </table>
  </introduction>
  <task>
   <statement>
     <p>
-      Take the four group standard deviations and average them. (You can again use the Descriptive Statistics applet.)
+      First, we'll fill in the <c>df</c> column, which stands for <q>degrees of freedom</q>.  For the first entry, corresponding to the <c>Model</c> row, input the number of groups we have minus 1.  For the last entry, corresponding to the <c>Total</c> row, input the sample size minus 1.  For the middle entry, corresponding to the <c>Error</c> row, input <m>\text{df}_{\text{Total}} - \text{df}_{\text{Model}}</m>, in other words, the last number from the column minus the first number from this column.
+    </p>
+    <p>
+      Your three numbers should be such that the number from the <c>Model</c> row plus the number from the <c>Error</c> row add up to the number from the <c>Total</c> row.
+    </p>
+  </statement>
+  <solution>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+          </cell>
+          <cell>
+            df
+          </cell>
+          <cell>
+            SS (SSE)
+          </cell>
+          <cell>
+            MS (MSE)
+          </cell>
+          <cell>
+            F
+          </cell>
+          <cell>
+            p-value
+          </cell>
+          <cell>
+            R<circumflex />2
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Model
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Error
+          </cell>
+          <cell>
+            307
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            310
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      Now we'll fill in the SS (SSE) column, the Sum Squared Error.  For the first number, the <c>Model</c> row, compute the sum of four Squared Error (SE) numbers from the last exercise.  For the last number, the <c>Total</c> row, compute <m>s^2 \times n</m>, in other words, the standard deviation of the entire sample times the sample size of the whole sample.  For the middle entry, corresponding to the <c>Error</c> row, compute <m>\text{SS}_{\text{Total}}-\text{SS}_{\text{Model}}</m>, in other words, the last entry of this column minus the first entry.
+    </p>
+    <p>
+      Just like part a, your three numbers should be such that the number from the <c>Model</c> row plus the number from the <c>Error</c> row add up to the number from the <c>Total</c> row.
+    </p>
+  </statement>
+  <solution>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+          </cell>
+          <cell>
+            df
+          </cell>
+          <cell>
+            SS (SSE)
+          </cell>
+          <cell>
+            MS (MSE)
+          </cell>
+          <cell>
+            F
+          </cell>
+          <cell>
+            p-value
+          </cell>
+          <cell>
+            R<circumflex />2
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Model
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+            54.17
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Error
+          </cell>
+          <cell>
+            307
+          </cell>
+          <cell>
+            1458.71
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            310
+          </cell>
+          <cell>
+            1512.88
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      Now we'll fill in the MS (MSE) column, the mean squared error column.  For the <c>Model</c> and the <c>Error</c> columns, take the SS (SSE) number to the left divided by the df number further left, i.e. <m>\text{MS} = \frac{\text{SS}}{\text{df}}</m>.  Leave the bottom cell empty because there is no mean squared error for the <c>Total</c> row.
+    </p>
+  </statement>
+  <solution>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+          </cell>
+          <cell>
+            df
+          </cell>
+          <cell>
+            SS (SSE)
+          </cell>
+          <cell>
+            MS (MSE)
+          </cell>
+          <cell>
+            F
+          </cell>
+          <cell>
+            p-value
+          </cell>
+          <cell>
+            R<circumflex />2
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Model
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+            54.17
+          </cell>
+          <cell>
+            18.056
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Error
+          </cell>
+          <cell>
+            307
+          </cell>
+          <cell>
+            1458.71
+          </cell>
+          <cell>
+            4.752
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            310
+          </cell>
+          <cell>
+            1512.88
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      We're finally read to compute <m>F</m>.  We just need the two numbers from the MS (MSE) column.  Take the first number, i.e. the <c>Model</c> number, and divide by the second number, i.e. the <c>Error</c> number.
+    </p>
+  </statement>
+  <solution>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+          </cell>
+          <cell>
+            df
+          </cell>
+          <cell>
+            SS (SSE)
+          </cell>
+          <cell>
+            MS (MSE)
+          </cell>
+          <cell>
+            F
+          </cell>
+          <cell>
+            p-value
+          </cell>
+          <cell>
+            R<circumflex />2
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Model
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+            54.17
+          </cell>
+          <cell>
+            18.056
+          </cell>
+          <cell>
+            3.800
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Error
+          </cell>
+          <cell>
+            307
+          </cell>
+          <cell>
+            1458.71
+          </cell>
+          <cell>
+            4.752
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            310
+          </cell>
+          <cell>
+            1512.88
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+  </solution>
+ </task>
+ <task>
+  <statement>
+    <p>
+      The F-statistic computes the between-group-variability divided by the within-group-variability.  Write something you notice (i.e. a statement) or something you wonder (i.e. a question) about how it is computed or what it represents.
     </p>
   </statement>
   <solution>
     <p>
-      2.17.
+      Answers will vary.  Give credit for any true statement or on-task question.
     </p>
   </solution>
  </task>
  <task>
   <statement>
     <p>
-      Write a one-sentence interpretation of this number.
+      Now we'll compute the last number, the <m>R^2</m> number.  We just need the first and last numbers of the SS (SSE) column.  <m>R^2</m> is simply the first number divided by the last number from the SS (SSE) column.
+    </p>
+    <p>
+      The p-value takes a more complicated computation than is necessary for this exercise.  In this case, it is approximately 0.0106.
     </p>
   </statement>
   <solution>
-    <p>
-      This is the average difference between individual BMI values and the mean BMI within each of the four groups.
-    </p>
+    <table>
+      <tabular>
+        <row>
+          <cell>
+          </cell>
+          <cell>
+            df
+          </cell>
+          <cell>
+            SS (SSE)
+          </cell>
+          <cell>
+            MS (MSE)
+          </cell>
+          <cell>
+            F
+          </cell>
+          <cell>
+            p-value
+          </cell>
+          <cell>
+            R<circumflex />2
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Model
+          </cell>
+          <cell>
+            3
+          </cell>
+          <cell>
+            54.17
+          </cell>
+          <cell>
+            18.056
+          </cell>
+          <cell>
+            3.800
+          </cell>
+          <cell>
+            0.0106
+          </cell>
+          <cell>
+            0.0358
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Error
+          </cell>
+          <cell>
+            307
+          </cell>
+          <cell>
+            1458.71
+          </cell>
+          <cell>
+            4.752
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            310
+          </cell>
+          <cell>
+            1512.88
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+          <cell>
+          </cell>
+        </row>
+      </tabular>
+    </table>
   </solution>
  </task>
-</activity>
 
-<activity>
- <!--Question 13-->
- <introduction>
-  <p>
-    Now let <m>s_{\bar{x_i}}</m> be your answer to <xref ref="q-10-2-11"/> and let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>.  
-  </p>
- </introduction>
- <task>
-  <statement>
-    <p>
-      Calculate
-      <me>
-        77.75 \times \frac{s_{\bar{x_i}^2}}{\bar{s_i}^2}.
-      </me>
-      The 77.75 is the average of the group sizes.  Recall that variance is the squared of standard deviation.
-    </p>
-  </statement>
-  <solution>
-    <p>
-      <me>
-        77.75 \times \frac{0.483}{2.17} = 3.85.
-      </me>
-    </p>
-  </solution>
- </task>
- <task>
-  <statement>
-    <p>
-      Is your answer to part a above the approximately the same as your answer to <xref ref="q-10-2-10"/>?
-    </p>
-  </statement>
-  <solution>
-    <p>
-      Yes, they are very close.
-    </p>
-  </solution>
- </task>
 </activity>
-
 <p>Another way to summarize the usefulness of the explanatory variable, is the “coefficient
 of determination,” or <m>R^2</m> value.</p>
 
@@ -461,27 +1340,6 @@ by the treatment (groups) is called
 </definition>
 
 <activity>
-  <introduction>
-    <p>
-      Again let <m>\bar{s_i}</m> be your answer to <xref ref="q-10-2-12"/>, and let <m>s</m> be the standard deviation of all the BMI's.  
-    </p>
-  </introduction>
-  <task>
-    <statement>
-      <p>
-        Compute
-        <me>
-          R^2 \approx 1 - \frac{\bar{s_i}^2}{s^2}.
-        </me>
-        This approximation works when the sizes of the groups are almost the same.  Again recall that variance is the square of standard deviation.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        R2 = 1 – (4.7089/4.8841) = 1 – 0.964 = 0.036
-      </p>
-    </solution>
-  </task>
   <task>
     <statement>
       <p>
