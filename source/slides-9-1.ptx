@@ -214,7 +214,7 @@ and then see where the observed value of the statistic falls in that distributio
       <slide>
         <title>Exercise 8</title>
         <!-- Question 8 -->
-        <p>One possible statistic is p̂ (max) - p̂ (min). Review the conditional proportions you determined
+        <p>One possible statistic is <m>\hat{p}</m> (max) - <m>\hat{p}</m> (min). Review the conditional proportions you determined
 in question 5b and calculate the observed value of this statistic for these data. Why might this
 be a less than satisfactory choice?</p>
       </slide>

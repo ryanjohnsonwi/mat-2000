@@ -18,6 +18,7 @@
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/worksheets-pdf</output-dir>
+      <output-filename>worksheets-mat-2000.pdf</output-filename>
     </target>
     <target name="print-ch-2" pdf-method="xelatex">
       <format>pdf</format>

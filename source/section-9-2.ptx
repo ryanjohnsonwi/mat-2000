@@ -318,7 +318,7 @@ and summed together across all of the explanatory variable groups. We'll do this
 <activity>
  <!--Question 7-->
 <statement>
-<p>Determine the overall proportion, p̂, of rooms that reused towels.</p>
+<p>Determine the overall proportion, <m>\hat{p}</m>, of rooms that reused towels.</p>
 </statement>
 <solution>
   <p>
@@ -404,9 +404,9 @@ answer to question 11. (<em>Note</em>: You may be a bit different due to roundin
 <activity>
  <!--Question 13-->
 <statement>
-<p>The applet will also now display the null distribution for the <m>chi^2</m>  statistic rather 
-than the Mean Group Diff statistic. Determine the p-value based on the simulated <m>chi^2</m>  
-statistics. (Hint: Change the value in the Count Samples box to the observed value of the <m>chi^2</m>  statistic.)</p>
+<p>The applet will also now display the null distribution for the <m>\chi^2</m>  statistic rather 
+than the Mean Group Diff statistic. Determine the p-value based on the simulated <m>\chi^2</m>  
+statistics. (Hint: Change the value in the Count Samples box to the observed value of the <m>\chi^2</m>  statistic.)</p>
 </statement>
 <solution>
   <p>
@@ -418,7 +418,7 @@ statistics. (Hint: Change the value in the Count Samples box to the observed val
 <activity>
  <!--Question 14-->
 <statement>
-<p>How does the p-value based on the <m>chi^2</m> statistic compare to the one based on the Mean Group Diff 
+<p>How does the p-value based on the <m>\chi^2</m> statistic compare to the one based on the Mean Group Diff 
 statistic? Are they similar? Is your conclusion about strength of evidence provided by the data 
 against the null hypothesis similar?</p>
 </statement>
