@@ -1,0 +1,209 @@
+WARNING : Using CLI version 2.29.2 but project's `requirements.txt`
+WARNING : is configured to use 1.8.1. Consider either installing
+WARNING : CLI version 1.8.1 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.29.2.
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ryan/mat-2000/code/../worksheets-html.
+INFO    : discovering source file's directory name: /Users/ryan/mat-2000/code/source
+INFO    : verifying and expanding input directory: /Users/ryan/mat-2000/code/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ryan/mat-2000/code/generated-assets
+INFO    : verifying and expanding input directory: /Users/ryan/mat-2000/code/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ryan/mat-2000/code/assets
+INFO    : discovering source file's directory name: /Users/ryan/mat-2000/code/source
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.11.9
+INFO    : Downloading Runestone Services, version 7.11.9
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /Users/ryan/mat-2000/code/source/main.ptx to HTML in /var/folders/78/xfmcb5xn3jn0mwphfbvqw1gr0000gn/T/ptx-wzp90a2t
+INFO    : XSL conversion of /Users/ryan/mat-2000/code/source/main.ptx by /Users/ryan/.ptx/2.29.2/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+WARNING : * PTX:WARNING: The "oscarlevin" style requested in publication/html/css is deprecated. Your book will be built with theme="denver". See the PreTeXt Guide for options for the newer HTML themes and their specification .
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section_1_1" (xml:id), "Preliminary: Introduction to the six-step method" (title)
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section_1_2" (xml:id), "Preliminary: Exploring Data" (title)
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section_4_2" (xml:id), "Statistical inference: Confidence intervals" (title)
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section_7-1" (xml:id), "Comparing two groups: Quantitative response" (title)
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section_7-2" (xml:id), "Comparing two means: Simulation-based approach" (title)
+WARNING : * PTX:WARNING: In a section containing subsections, any content that is not inside a subsection needs to be inside an <introduction> and/or  <conclusion>.
+INFO    : *              located within: "section-7-3" (xml:id), "Comparing two means: Theory-based approach" (title)
+INFO    : * PTX:INFO:   checking all deprecated elements.
+WARNING : * PTX:DEPRECATE: (2016-05-23) <br> can no longer be used to create multiline output; you may use <line> elements in select situations (59 times)
+INFO    : *              located within: " Table 2121: One-proportion relevant features by section " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: "References" (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " Table 4114: References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : *              located within: " References " (title)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2019-02-06) the "circumflex" element is no longer necessary, simply replace with a bare "^" character (8 times)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : *              located within: "q-10-2-12" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2019-02-06) the "underscore" element is no longer necessary, simply replace with a bare "_" character (5 times)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : *              located within: "q-10-2-11" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "titlepage" element inside the "frontmatter" (author, editor, credit, date, and event) should now be placed in "frontmatter/bibinfo".  To ensure a title page is created, put only the empty element "titlepage-items" inside "titlepage".  Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "meta_frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "colophon" element inside the "frontmatter" (credit, copyright, edition, and website) should now be placed in "frontmatter/bibinfo". To produce a "colophon", include only the empty element "colophon-items" inside "colophon" Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "meta_frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-07-12) the html/css/@style publication file entry has been deprecated for replacement by @theme. See the Guide for theme options.
+INFO    : * --------------
+INFO    : successful application of /Users/ryan/.ptx/2.29.2/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/78/xfmcb5xn3jn0mwphfbvqw1gr0000gn/T/ptx-wzp90a2t
+INFO    : Removing temporary directory /var/folders/78/xfmcb5xn3jn0mwphfbvqw1gr0000gn/T/ptx-9rebvf3i
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 
