@@ -274,10 +274,12 @@ or among the typical values we see when the null hypothesis is true.
       in your class put Tim's name on the left?)
       <m>\hat p =</m>
     </p>
+  </statement>
+  <solution>
     <p>
       0.72
     </p>
-  </statement>
+  </solution>
 </task>
 <task xml:id="q-2-3-8-e">
   <statement>
@@ -288,10 +290,12 @@ or among the typical values we see when the null hypothesis is true.
       other words, calculate:
       <me>\frac{\text{observed statistic} (\hat p) - 0.50}{\text{SD of null distribution}}</me>.
     </p>
+  </statement>
+  <solution>
     <p>
       (0.72-0.496)/0.099 = 2.26
     </p>
-  </statement>
+  </solution>
 </task>
 </activity>
 
