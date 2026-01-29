@@ -292,38 +292,26 @@ one quarter of the circle is shaded to represent <q>failure</q> (chose tap water
     <p>
       We will now use the <url href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1"> One Proportion applet</url> to conduct this simulation analysis. Notice that the applet will show us what it would be like if we were simulating with spinners.
     </p>
+    <p>
+      <ol>
+        <li>
+          <p>
+            First enter the <term>probability of heads/probability of success</term> value specified in the null hypothesis.
+          </p>
+        </li>
+        <li>
+          <p>
+            Enter the appropriate <term>sample size</term> (number of subjects in this study) into the tool.
+          </p>
+        </li>
+      </ol>
+    </p>
   </introduction>
-
-  <task>
-    <statement>
-      <p>
-        First enter the <term>probability of heads/probability of success</term> value specified in the null hypothesis.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Do not grade this task.
-      </p>
-    </solution>
-  </task>
-
-  <task>
-    <statement>
-      <p>
-        Enter the appropriate <term>sample size</term> (number of subjects in this study) into the tool.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Do not grade this task.
-      </p>
-    </solution>
-  </task>
 
 <task> 
 <statement>
 <p>Enter 1 for the number of samples, and press Draw Samples. Report the number of
-“successes” in this simulated sample.</p>
+<q>successes</q> in this simulated sample.</p>
 </statement>
 <solution>
   <p>
@@ -334,8 +322,8 @@ one quarter of the circle is shaded to represent <q>failure</q> (chose tap water
 
 <task> 
 <statement>
-<p>Now, select the radio button for “Proportion of successes.” Report the proportion of
-successes in this simulated sample. Use your answer to “c” to verify how this value is
+<p>Now, select the radio button for <q>Proportion of successes.</q> Report the proportion of
+successes in this simulated sample. Use your answer to (c) to verify how this value is
 calculated.</p>
 </statement>
 <solution>
@@ -477,7 +465,7 @@ water equally to the tap water? If so, how strong is this evidence? Explain.</p>
 <activity>
 <statement>
 <p>When computing p-values, <q>more extreme</q> is always measured in the direction of the
-alternative hypothesis. Use this fact to explain why you counted ≥ 24 in <xref ref="q2-2-20"/>.</p>
+alternative hypothesis. Use this fact to explain why you counted <m>\geq 24</m> in <xref ref="q2-2-20"/>.</p>
 </statement>
 <solution>
   <p>
