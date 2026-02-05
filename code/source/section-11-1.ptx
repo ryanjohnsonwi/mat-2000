@@ -318,9 +318,9 @@ somewhere in the middle.</p>
 </activity>
 
 <p><em>Note:</em> There are two kinds of unusual observations seen in scatterplots: influential observations 
-  and outliers. An observation is <em>influential</em> if removing it from the dataset dramatically changes our 
+  and outliers. An observation is <term>influential</term> if removing it from the dataset dramatically changes our 
   perception of the association. Typically influential observations are extreme in the explanatory variable. 
-  <em>Outliers</em> are observations that don't follow the overall pattern of the relationship. They may or may 
+  <term>Outliers</term> are observations that don't follow the overall pattern of the relationship. They may or may 
   not be influential and they may or may not be extreme in either variable individually but are unusual in terms 
   of the combination of values.</p>
 
