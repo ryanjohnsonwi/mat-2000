@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-11-25T14:05:31-05:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>9-4 : Chi-square goodness-of-fit test</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>9-4 : Chi-square goodness-of-fit test</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated November 25, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Are birthdays equally distributed throughout the week?</h1></section><section><h3></h3>
+<div align="left"><p>Are the days of the week that women give birth distributed equally throughout the week? Is someone just as likely to be born on a Tuesday as a Saturday? In this Exploration, you will investigate whether there is convincing evidence that birthdays are not distributed equally throughout the week. You will be using a chi-square goodness-of-fit test to help make your conclusion.</p></div></section></section><section><section><h1>Step 1: Ask a research question</h1></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>State your research question.</p>
+</div></section></section><section><section><h1>Step 2: Design a study and collect data</h1></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>What’s the categorical variable of interest, and what are the possible categories?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>State the null and alternative hypotheses.</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Write down your own birthday (month/day/year) and those of up to nine of your family members or friends. (Try not to write down a birthday that someone else in the class would write down.)</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Do an Internet search for “day of birth calculator.” Use the calculator to find out on what day of the week each of your family members/friends was born. Summarize your results in a table.</p> <section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col">Observed count</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Combine your results with those for the rest of the class and enter those results in the table.</p> <section><h3>Table 2:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col">Observed count</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section></section><section><section><h1>Step 3: Explore the data</h1></section><section><h3>Exercise 7a:</h3>
+<div align="left"> <p>If the null hypothesis is true and birthdays are distributed equally over the seven days in a week, then the expected count for each day will just be the total number of birthdays divided by 7. Find the expected count for each day.</p> <section><h3>Table 3:</h3>
+<div align="left"> <figure class="table table-like" id="table-3"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col">Observed count</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section><section><h3>Exercise 7b:</h3>
+<div align="left"> <p>Is the validity condition of all observed cell counts being at least 10 met? If not, what can you do so it is met?</p>
+</div></section><section><h3>Definition 4:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A <dfn class="terminology">goodness-of-fit test</dfn> is used to compare observed counts for a categorical variable to hypothesized probabilities.</p>
+</div>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Comparing the observed and expected counts, does it seem that the data gathered would be likely, assuming the birthdays are distributed equally?</p>
+</div></section></section><section><section><h1>Step 4: Draw inferences</h1></section></section><section><section><h1>Simulation-based Goodness-of-fit Test: Using the MAD Statistic</h1></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>You will now conduct a simulation analysis using the mean absolute difference (MAD) statistic to investigate whether the data provide evidence that birthdays are not equally likely on all seven days of the week.</p>
+</div></section><section><h3>Exercise 9a:</h3>
+<div align="left"> <p><em class="emphasis">Statistic</em>: Here, we will use a MAD-type statistic to compare the observed and expected counts. To find the MAD statistic value for your data, complete the table:</p> <section><h3>Table 5:</h3>
+<div align="left"> <figure class="table table-like" id="table-4"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"><span class="process-math">\(|O-E|\)</span></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section> <p>Where <span class="process-math">\(O\)</span> is the observed count and <span class="process-math">\(E\)</span> is the expected count, and <span class="process-math">\(|\cdot|\)</span> is the absolute value function.</p>
+</div></section><section><h3>Exercise 9b:</h3>
+<div align="left"> <p>The MAD statistic is obtained by finding the average of the absolute values of the differences in observed and expected counts. Calculate the MAD statistic.</p>
+</div></section><section><h3>Exercise 9c:</h3>
+<div align="left"> <p><em class="emphasis">Simulate</em>: You could spin a spinner with 7 equal sections to find out what values of the MAD statistic could happen by chance alone, or you can use an applet. Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/gof/GOF.html?hideExtras=1" target="_blank">Goodness of Fit applet</a>.</p> <p><ul class="disc">
+<li>Press the <em class="emphasis">Clear</em> button, enter two column names (e.g., category count), and then specify each day of the week followed by a space and the count from your sample (e.g., Mon 16). Hit return and repeat for each day of the week. Then press <em class="emphasis">Use Table</em>. This should update the bar graph under "Sample Data."</li>
+<li>In the right panel, check the box next to <em class="emphasis">Show Sampling Options</em> and enter the hypothesized probabilities to three decimal places, separated by commas.</li>
+<li>Set the <em class="emphasis">Number of Samples</em> to be 1 and push <em class="emphasis">Sample</em>.</li>
+<li>What is the resulting “Most Recent Sample MAD”? Is this value more or less extreme than the one from the observed data? How are you deciding?</li>
+<li>Now change the <em class="emphasis">Number of Samples</em> to be 999, for a total of 1000 samples, and push <em class="emphasis">Sample</em>. This will produce a simulated null distribution of 1,000 MAD statistics.</li>
+</ul></p>
+</div></section><section><h3>Exercise 9d:</h3>
+<div align="left"> <p><dfn class="terminology">Strength of evidence</dfn>:</p> <p><ul class="disc">
+<li>Where does your observed MAD statistic lie on the simulated null distribution of MAD statistics? Does the observed MAD statistic appear surprising and unlikely to have happened by chance alone, that is, if the null hypothesis of all days being equally likely were to be true? How are you deciding?</li>
+<li>To find the p-value to quantify the strength of evidence against the null hypothesis, enter the observed value of the MAD statistic in the <dfn class="terminology">Count Samples</dfn> box and press <dfn class="terminology">Count</dfn>.</li>
+</ul></p>
+</div></section><section><h3>Remark 6:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span><span class="space"> </span><span class="title">You may be thinking.</span>
+</h4> <p>Earlier we subtracted proportions, and now we are using counts. Can we not use proportions anymore?</p> <p>Sure, you can still work with proportions. If you used proportions, your MAD statistic would subtract the observed proportions from the hypothesized proportions (in this case, 1/7 or 0.143 for each day) for each day of the week and then average the absolute values of those differences.</p></article>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Based on the p-value you obtained in 
+  [REF=TODO]
+ do you have strong evidence against the null hypothesis? How are you deciding?</p>
+</div></section></section><section><section><h1>Simulation-based Goodness-of-fit Test: Using the Chi-square Statistic</h1></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>In this situation you can also conduct a simulation analysis using the chi-square statistic to investigate whether the data provide evidence that birthdays are not equally likely on all seven days of the week.</p>
+</div></section><section><h3>Exercise 11a:</h3>
+<div align="left"> <p><em class="emphasis">Statistic</em>: To find the chi-square statistic value for your data, complete the table:</p> <section><h3>Table 7:</h3>
+<div align="left"> <figure class="table table-like" id="table-5"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"><span class="process-math">\(O-E\)</span></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"><span class="process-math">\((O-E)^2\)</span></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col"><span class="process-math">\(\frac{(O-E)^2}{E}\)</span></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section> <p>Where <span class="process-math">\(O\)</span> is the observed count and <span class="process-math">\(E\)</span> is the expected count.  Recall that the chi-square statistic is given by the formula<div class="displaymath process-math">
+\begin{equation*}
+\chi^2 = \sum \frac{ (\text{observed count} - \text{expected count} )^2}{\text{expected count}}
+\end{equation*}
+</div>Thus, the chi-square statistic is the Total from the last row of the table.</p>
+</div></section><section><h3>Exercise 11b:</h3>
+<div align="left"> <p><em class="emphasis">Simulate</em>: Just as you ran the simulation using the MAD statistic, you can follow the same steps this time using the Statistic pull-down menu to select the chi-square statistic (<span class="process-math">\(\chi^2 \)</span>). Create a null distribution for the chi-square statistic.</p>
+</div></section><section><h3>Exercise 11c:</h3>
+<div align="left"> <p><em class="emphasis">Strength of evidence</em></p> <p><ul class="disc">
+<li>Where does the observed chi-square statistic lie on the simulated null distribution of the chi-square statistic? Does it appear surprising and unlikely to have happened by chance alone, that is, if the null hypothesis of all days being equally likely were to be true? How are you deciding?</li>
+<li>Find the corresponding p-value. How does it compare to what you found with the MAD statistic?</li>
+</ul></p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Based on the p-value reported in question 11c from the simulated null distribution for a chi-square statistic, do you have strong evidence against the null hypothesis? How are you deciding?</p>
+</div></section></section><section><section><h1>Step 5: Formulate conclusions</h1></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>State your complete conclusions. In particular, to what population are you willing to generalize your conclusions?</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>If you found convincing evidence that birthdays are not equally distributed throughout the week, which days seemed to be different than the others and why do you think that is the case?</p>
+</div></section></section><section><section><h1>Step 6: Look back and ahead.</h1></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>If you did not find convincing evidence that birthdays are not distributed equally throughout the week, what could you do differently in a follow-up study to try to support your case?</p>
+</div></section></section><section><section><h1>Revisiting step 4: Draw inferences</h1></section></section><section><section><h1>Theory-based Chi-square Goodness-of-fit Test</h1></section><section><h3></h3>
+<div align="left"><p>Earlier, for Step 4, you used simulation to find a p-value using the chi-square statistic. Recall that one advantage of using the chi-square statistic (instead of the MAD) is that the distribution of the chi-square statistic can be predicted by a theory-based distribution called the chi-square distribution.</p></div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Go back to the Goodness of Fit applet, and picking up where you left off, check the "Overlay chi-square distribution" box under the null distribution for the chi-square statistics. Report the "theory-based p-value."</p>
+</div></section><section><h3>Exercise 17a:</h3>
+<div align="left"> <p>How does the theory-based p-value compare to the one from the simulation-based p-value using the chi-square test statistic? Do you still arrive at the same conclusion about whether there is convincing evidence that not all seven days of the week are equally likely to be birthdays?</p>
+</div></section><section><h3>Exercise 17b:</h3>
+<div align="left"> <p>Remember that there are always certain checks to be made before you can decide that it is valid to use a theory-based method to test hypotheses. In particular, are all observed cell counts at least 10?</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Does the theory-based chi-square goodness-of-fit test appear to be valid in this context? Explain how you are deciding.</p>
+</div></section></section><section><section><h1>Exploring Further</h1></section><section><h3></h3>
+<div align="left"><p>One of the authors collected data on which day of the week each of her 49 students was born. The data appear in the table.</p></div></section><section><h3>Table 8:</h3>
+<div align="left"> <figure class="table table-like" id="table-6"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sun</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Mon</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Tue</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Wed</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Thurs</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Fri</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Sat</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r1 l0 t0 lines" scope="col">Observed count</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">7</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">7</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">7</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">8</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">6</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">10</th>
+<th class="l m b0 r1 l0 t0 lines" scope="col">49</th>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Do you think these data will provide more or less evidence against the null hypothesis than the data you collected? Explain your reasoning.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>We will use the data from this class to determine whether there is convincing evidence that not all seven days of the week are equally likely to be birthdays.</p></div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Using a significance level of <span class="process-math">\(\alpha = 0.05\text{,}\)</span> do the data provide convincing evidence that the days of the week that women give birth are not equally distributed throughout the week?</p>
+</div></section><section><h3>Exercise 20a:</h3>
+<div align="left"> <p>State the hypotheses using either words or symbols</p>
+</div></section><section><h3>Exercise 20b:</h3>
+<div align="left"> <p>Name the theory-based test you will use and verify validity conditions for that test.</p>
+</div></section><section><h3>Exercise 20c:</h3>
+<div align="left"> <p>Calculate the test statistic (standardized statistic) and corresponding p-value.</p>
+</div></section><section><h3>Exercise 20d:</h3>
+<div align="left"> <p>State your conclusion (with appropriate justification based on your p-value and stated significance level) in the context of the research question.</p>
+</div></section><section><h3>Exercise 20e:</h3>
+<div align="left"> <p>If there is not sufficient evidence to support the research hypothesis that all seven days of the week are not equally likely to be birthdays, is this proof that birthdays are evenly distributed throughout the days of the week? Explain.</p>
+</div></section><section><h3>Exercise 20f:</h3>
+<div align="left"> <p>Were these data stronger or weaker evidence against the null hypothesis than the data you observed? Is this what you predicted?</p>
+</div></section><section><h3>Exercise 20g:</h3>
+<div align="left"> <p>Based on your conclusion in (d), are you potentially making a conclusion error? Explain the potential consequences of this type of error in this context.</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

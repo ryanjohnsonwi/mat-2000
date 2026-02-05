@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:26:45-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>3-3 : Theory-based Inference for a Population Mean</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>3-3 : Theory-based Inference for a Population Mean</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>STEP 1: Ask a research question.</h1></section><section><h3></h3>
+<div align="left"><p>How much do students at your school sleep on a typical night? Let’s make the question more specific and ask about <em class="emphasis">last</em> night. Is the average less than the recommended eight hours? How can we estimate this population average?</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Based on these questions, what is the population of interest? What is the parameter? What symbol do we use for this parameter?</p>
+</div></section></section><section><section><h1>STEP 2: Design a study and collect data.</h1></section><section><h3></h3>
+<div align="left"><p>Let’s investigate whether the mean amount of sleep last night for the population of all students at your school was less than 8 hours.</p></div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Express the null and alternative hypotheses for investigating this question.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>To test these hypotheses we need to collect data.</p></div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Ideally, how should you obtain a sample from the population of all students at your school?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>What variable would you measure on each student?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Whereas obtaining a simple random sample of students from your school is an ideal way to attempt to get a representative sample, there is no question that it would take a fair bit of work to make that happen. So much so, that we might not want to do the study anymore! This happens frequently in Statistics, and so researchers often opt to use a convenience sample instead. One choice of a convenience sample of students at your school is to use your class.</p></div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Identify at least one reason that your class is likely a good representation of all students at your school in terms of hours slept last night.</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Identify at least one reason that your class is likely not a good representation of all students at your school in terms of hours slept last night.</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Recall that convenience sampling may be ____ (biased/ unbiased) whereas simple random sampling is ____ (biased/unbiased).</p>
+</div></section><section><h3></h3>
+<div align="left"><p>We will revisit the implications of using your class as a sample of students from your college later when we evaluate the study. For now, let’s gather the data.</p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>How much sleep (to the nearest quarter hour) did you get last night? Combine your answer with those of your classmates.</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Did you report a number of hours or a number of minutes slept?</p>
+</div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>When describing a quantitative variable, you should always be aware of the <dfn class="terminology">measurement units</dfn> of the variable. Measurement units indicate information about the context and scaling of the variable (e.g., hours vs. days). Always include measurement units when describing your variable.</p></article>
+</div></section></section><section><section><h1>STEP 3: Explore the data.</h1></section><section><h3></h3>
+<div align="left"><p>After you collect data, the next step is to explore the data. In the case of a quantitative variable (like we have here), exploring the data is a bit more involved than earlier. Recall from the Preliminaries that we can summarize a quantitative variable using a dotplot and then describe the shape, center, variability, and unusual observations.</p></div></section><section><h3></h3>
+<div align="left"><p>Use the <a class="external" href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm" target="_blank">Descriptive Statistics</a> applet to examine a dotplot of the sample data. To do this, press <em class="emphasis">Clear</em> to delete the existing data in the applet and then copy and paste your class data (with a one-word variable name) into the <em class="emphasis">Sample data</em> box and press <em class="emphasis">Use Data</em>.</p></div></section><section><h3></h3>
+<div align="left"><img height="800" src="../code/assets/3-3/descr-stats.png"/></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Summarize the shape, center (mean with appropriate symbol and measurement units), and variability (standard deviation with appropriate symbol and measurement units) for the sample of sleep times for your class. Also be sure to discuss any unusual observations or outliers in the data.</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Do these data provide any preliminary evidence that students at your school tend to sleep less than 8 hours a night?</p>
+</div></section></section><section><section><h1>STEP 4: Draw inference beyond the data.</h1></section><section><h3></h3>
+<div align="left"><p>Let’s now explore what the distribution of this sample tells us about the strength of evidence against the null hypothesis.</p></div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Suppose we had taken many, many samples of the same size from the population at your school. If the null hypothesis is true, how do you predict the distribution of sample means will behave? Be sure to discuss any information you do not know.</p>
+</div></section></section><section><section><h1>Simulation-based Approach: Applying the 3S Strategy to Hypotheses about a Population Mean</h1></section><section><h3></h3>
+<div align="left"><p>To evaluate the strength of evidence that your sample data provide against the null hypothesis we need to investigate how often a sample mean as small as the one observed in your sample would occur if you were selecting a random sample from a population in which the mean sleep time really is 8 hours (null hypothesis). In essence, we will apply the 3S strategy as we have done before. A previous section showed that the sample mean should fall within two standard deviations <span class="process-math">\(\dfrac{2\sigma}{\sqrt{n}}\)</span> of the population mean. Let’s now look at using the sample standard deviation(s) instead of <span class="process-math">\(\sigma\text{.}\)</span></p></div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Calculate and interpret the equation for the standard deviation.</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Based on your answer to #13, does it seem surprising to get a sample mean like the one in your class survey if the population mean is 8? Justify your answer.</p>
+</div></section><section><h3>Remark 2:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>We can calculate a <em class="emphasis">standardized statistic</em> based on the observed sample data by computing</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{ standardized statistic} = \dfrac{\bar {x} - \mu_0}{s / \sqrt{n}}
+\end{equation*}
+</div>
+<p>(where <span class="process-math">\(\mu_0\)</span> is a symbol used to represent the hypothesized value of the population mean).</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>Now let’s explore whether "2" is still a reasonable cut-off for declaring this standardized statistic to be large.</p></div></section></section><section><section><h1>Let’s Investigate</h1></section><section><h3></h3>
+<div align="left"><p>Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?hideExtras=1" target="_blank">One Mean</a> applet. Notice that "1" has been selected (this is the first of three hypothetical populations of sleep times pre-loaded into the applet) and a histogram displays this population distribution. For now we are <dfn class="terminology">assuming</dfn> that the population distribution is normally distributed with mean very close to 8 hours and standard deviation about 1.5 hours.</p></div></section><section><h3></h3>
+<div align="left"><p>Check the <em class="emphasis">Show Sampling Options</em> box. Set the <em class="emphasis">Number of samples</em> to 10000 and set the <em class="emphasis">Sample size</em> to match your class survey. Press <em class="emphasis">Draw Samples</em>.</p></div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Is the distribution of sample means centered around 8? Is the distribution approximately normal? (Why?) Is the standard deviation close to <span class="process-math">\(\sigma/\sqrt{n}\text{?}\)</span> (Show calculation details.)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The histogram should behave as expected, but this is the distribution of sample means. What we are interested in now is the distribution of standardized statistics.</p></div></section><section><h3></h3>
+<div align="left"><p>Above the distribution of sample means, select the radio button for <em class="emphasis">t-statistic</em>—the name for the standardized statistic we are using here—because if you now check the <em class="emphasis">Overlay t Distribution</em> box, you should see that these t-statistics are well modeled by something called the t-distribution.</p></div></section><section><h3></h3>
+<div align="left"><p>The shape of a t-distribution is still mound-shaped, but it is centered at zero. It looks a lot like a normal distribution, but it is a bit more spread out than a normal distribution (more observations in the "tails," fewer in the middle). These "heavier tails" are beneficial for us here, where we have sample to sample variation in the means plus additional uncertainty by using the sample standard deviation each time rather than one population standard deviation. For this reason, the theory-based p-value will be based on the t-distribution rather than a normal distribution. But if you instead check the <em class="emphasis">Overlay Normal Distribution</em> box, there is not much difference in the two distributions. In general, when the sample size is large (e.g., more than 20), there is not a very large difference between the two distributions.</p></div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Use the applet, the t-statistic you calculated for your class survey, and the Count Samples box to estimate a p-value using the t-distribution (in the direction of the alternative hypothesis).</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Based on this p-value do your sample data provide strong evidence that the population mean sleep time at your school last night was less than 8 hours? Justify your answer, as if to a friend who has not studied statistics.</p>
+</div></section></section><section><section><h1>STEP 5: Formulate conclusions.</h1></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Think again about how the sample was selected from the population. Do you feel comfortable generalizing the results of your analysis to the population of all students at your school? Explain.</p>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Looking back: Did anything about the design and conclusions of this study concern you? Issues you may want to critique include: the match between the research question and the study design, how the observational units were selected, how the measurements were recorded, and whether what we observed is of practical value.</p>
+</div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Looking ahead: What should the researchers’ next steps be to fix the limitations or build on this knowledge?</p>
+</div></section></section><section><section><h1>Exploring Further</h1></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Suppose you rejected the null hypothesis in this study, does that mean you have proven that the population mean is not equal to 8 hours? If not, why not. (Hint: How does this relate to your p-value?)</p>
+</div></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>Suppose we do not reject the null hypothesis that <span class="process-math">\(\mu = 7\)</span> hours. Does this mean you have proven that <span class="process-math">\(\mu = 7\)</span> hours? If not, why not?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

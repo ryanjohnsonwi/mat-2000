@@ -1,0 +1,96 @@
+\documentclass{exam}
+
+
+\RequirePackage{amssymb, amsfonts, amsmath, setspace, graphicx}
+\usepackage[margin=1in]{geometry}
+
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\classnum}{MAT 2000}
+\newcommand{\classname}{Introduction to Statistics}
+\newcommand{\examname}{Quiz: Section 2.5}
+\newcommand{\school}{Grace College}
+
+%Shortcuts:
+\newcommand{\nn}{\mathbf{N}}
+\newcommand{\zz}{\mathbf{Z}}
+\newcommand{\qq}{\mathbf{Q}}
+\newcommand{\rr}{\mathbf{R}}
+\newcommand{\cc}{\mathbf{C}}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document}
+	
+	\pagestyle{head}
+	\firstpageheader{}{}{}
+	\runningheader{\classnum}{\examname\ - Page \thepage\ of \numpages}{\school}
+	\runningheadrule
+	
+	\begin{flushright}
+		\begin{tabular}{p{2.8in} r l}
+			\textbf{\examname} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+			\textbf{\classnum} &&\\
+			\textbf{\classname} &&\\
+			\textbf{\school}
+			%\textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+		\end{tabular}\\
+	\end{flushright}
+	\rule[1ex]{\textwidth}{.1pt}
+	
+	\begin{questions}
+		\question The official four-year graduation rate among US colleges and universities is 57.6\%. Suppose a researcher takes a random sample of 100 college students and tracks their progress through school to determine whether each student graduates in four years or not.
+		
+		Which of the following is known to be true? Select the option that does NOT apply.
+						
+		\begin{choices}
+			\choice If many samples of 100 students were taken, the distribution of the sample proportions will be bell-shaped and symmetric.
+			\choice If many samples of 100 students were taken, the distribution of the sample proportions will be centered at 0.576.
+			\correctchoice The sample proportion collected by the researcher would be 0.576.
+			\choice If many samples of 100 students were taken, the standard deviation of the sample proportions would be 0.049.
+		\end{choices}
+		
+		\uplevel{A study conducted by the National Center for Health Statistics as part of the Center for Disease Control and Prevention (CDC) found that, as of 2015-2016, 39.6\% of Americans over the age of 20 fit the medical definition of being obese (BMI of 30 or higher). A city known for plentiful outdoor opportunities believes that number is lower among residents. A representative sample of 80 city residents is collected and the BMI calculated for each (based on reported height and weight). The variable of interest is whether the resident fit the medical definition of obese. The study found 22 people in the sample fit the medical definition of obese.
+			
+		Use this scenario for the following two questions:}
+		
+		\question Select the appropriate method of calculating the standard deviation of the sample proportions under the null hypothesis.
+		
+		\begin{oneparchoices}
+			\correctchoice \(\sqrt{\dfrac{0.396 \times (1-0.396)}{80}}\)
+			\choice \(\sqrt{\dfrac{0.275 \times (1-0.275)}{80}}\)
+			\choice \(\sqrt{\dfrac{22 \times (1-22)}{80}}\)
+			\choice \(\sqrt{\dfrac{80 \times (1-80)}{0.396}}\)
+		\end{oneparchoices}
+		
+		\question The standard deviation for this study is 0.055. Which of the following displays the correct method of calculating the standardized statistic?
+		
+		\begin{oneparchoices}
+			\choice \(\dfrac{22-31.7}{80\times0.055}\)
+			\choice \(\dfrac{0.396-0.275}{0.055}\)
+			\correctchoice \(\dfrac{0.0275-0.0396}{0.055}\)
+			\choice \(\dfrac{0.055-0.396}{0.5}\)
+		\end{oneparchoices}
+		
+		\question The World Health Organization reports that the SARS (Severe Acute Respiratory Syndrome) outbreak in 2003 resulted in 8098 probable cases reported, 774 of which were fatalities. A student who is planning to travel to Vietnam is concerned about another virus outbreak and would like to use data on how Vietnam handled SARS cases as a gauge for how well Vietnam's health care system would handle another virus outbreak. The student plans to test if the fatality rate in Vietnam from SARS is different from the global fatality rate. Of the 89 SARS cases reported in Vietnam in 2003, 5 people died. The student analyzes these data in two ways:
+		\begin{itemize}
+			\item[Method 1:]  The theory-based p-value was calculated to be 0.2061.
+			\item[Method 2:]  The simulation-based p-value was calculated to be 0.2797
+		\end{itemize}
+		Which p-value is most valid?
+		
+		\begin{choices}
+			\choice The theory-based p-value, since the p-value is calculated by finding the exact area under a Normal distribution.
+			\choice The theory-based p-value, since there are over 10 "failures" (people who survived SARS).
+			\correctchoice The simulation-based p-value, since there are only 5 "successes" (people who died from SARS).
+			\choice The simulation-based p-value, since thousands of samples are simulated.
+		\end{choices}
+				
+	\end{questions}
+\end{document}

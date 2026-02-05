@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:29:19-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>7-3 : Comparing two means: Theory-based approach</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>7-3 : Comparing two means: Theory-based approach</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>A worksheet for Grace College from Zybooks</p></div></section><section><section><h1>Close Friends</h1></section></section><section><section><h1>Step 1: Ask a research question</h1></section><section><h3></h3>
+<div align="left"><p>How many close friends do you have? You know, the kind of people you like to talk to about important personal matters. Do men and women tend to differ on the number of close friends? And if so, by how much do men and women differ with regard to how many close friends they have?</p></div></section></section><section><section><h1>Step 2: Design a study and collect data</h1></section><section><h3></h3>
+<div align="left"><p>One of the questions asked of a random sample of adult Americans on the 2004 <a class="external" href="https://gss.norc.org/" target="_blank">General Social Survey (GSS)</a> was: "From time to time, most people discuss important matters with other people. Looking back over the last six months—who are the people with whom you discussed matters important to you? Just tell me their first names or initials." The interviewer then recorded how many names each person gave, along with keeping track of the person’s sex. The GSS is a survey of a representative sample of U.S. adults who are not institutionalized.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Identify the variables recorded. Also classify each as either categorical or quantitative, and identify each variable’s role: explanatory or response.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Did this study make use of random assignment, random sampling, both, or neither?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Was this an experiment or an observational study? Explain how you are deciding.</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>In words, state the null and the alternative hypotheses to test whether American men and women differ with regard to how many friends they have.</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Define the parameters of interest and assign symbols to them.</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>State the null and the alternative hypotheses in symbols.</p>
+</div></section></section><section><section><h1>Step 3: Explore the data</h1></section><section><h3></h3>
+<div align="left"><p>The survey responses are summarized in the table below (and the data can be found in expanded form in the file <a class="external" href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt" target="_blank">CloseFriends</a>).</p></div></section><section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption>Number of close friends reported by sex</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Number of close friends reported</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">0</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">1</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">2</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">3</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">5</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">6</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Men</td>
+<td class="l m b0 r0 l0 t0 lines">196</td>
+<td class="l m b0 r0 l0 t0 lines">135</td>
+<td class="l m b0 r0 l0 t0 lines">108</td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">33</td>
+<td class="l m b0 r0 l0 t0 lines">654</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Women</td>
+<td class="l m b0 r0 l0 t0 lines">201</td>
+<td class="l m b0 r0 l0 t0 lines">146</td>
+<td class="l m b0 r0 l0 t0 lines">155</td>
+<td class="l m b0 r0 l0 t0 lines">132</td>
+<td class="l m b0 r0 l0 t0 lines">86</td>
+<td class="l m b0 r0 l0 t0 lines">56</td>
+<td class="l m b0 r0 l0 t0 lines">37</td>
+<td class="l m b0 r0 l0 t0 lines">813</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Now you will obtain numerical summaries (statistics, such as mean and SD) of the survey data using the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a>.<ul class="disc">
+<li>Open the data file <a class="external" href="https://static-content2.zybooks.com/isi/data/chap6/CloseFriends.txt" target="_blank">CloseFriends</a> to access the raw data. Copy the data (e.g., CTRL-A and CTRL-C).</li>
+<li>Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a> and press <em class="emphasis">Clear</em>. Click inside the <em class="emphasis">Sample data</em> box and paste (e.g., CTRL-V). Then press <em class="emphasis">Use Data</em>.</li>
+</ul></p>
+</div></section><section><h3>Exercise 7a:</h3>
+<div align="left"> <p>Report the sample size, sample mean, and sample SD of the number of close friends reported for each sex. Based on the sample statistics, who tends to have more close friends, on average: men or women? How are you deciding?</p>
+</div></section><section><h3>Exercise 7b:</h3>
+<div align="left"> <p>Based on the sample statistics, who tends to have more variability with respect to how many close friends they have: men or women? How are you deciding?</p>
+</div></section><section><h3>Exercise 7c:</h3>
+<div align="left"> <p>Based on the data as presented in the table, are the distributions of number of close friends symmetric or skewed? If skewed, in which direction?</p>
+</div></section><section><h3>Exercise 7d:</h3>
+<div align="left"> <p>Calculate the observed difference in the mean number of close friends between these two groups (men - women). (Verify your calculation by checking the Observed diff output.)</p>
+</div></section><section><h3>Exercise 7e:</h3>
+<div align="left"> <p>Notice that the value recorded in (d) is a negative number. Well, number of friends can only be 0 or more. Why is the number recorded in (d) less than 0?</p>
+</div></section></section><section><section><h1>Step 4: Draw inferences beyond the data</h1></section><section><h3></h3>
+<div align="left"><p>The question we want to answer is, Is the difference in mean number of close friends between men and women, as seen in the GSS sample data, something that could plausibly have happened by chance, by random sampling alone, if, on average, men and women have the same number of close friends?</p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Using the same approach you did previously with the Multiple Means applet, you can use this applet to generate possible values of the difference in sample means under the null hypothesis by shuffling which response values go with which explanatory variable values. Check the <em class="emphasis">Show Shuffle Options</em> box and enter 1,000 for the <em class="emphasis">Number of Shuffles</em>. Press the <em class="emphasis">Shuffle Responses</em> button (there will be a pause; this is a large dataset!). The histogram on the right is the simulated null distribution for the difference in sample means. Enter the observed difference in sample means in the <em class="emphasis">Count Samples</em> box and press <em class="emphasis">Count</em>.</p>
+</div></section><section><h3>Exercise 8a:</h3>
+<div align="left"> <p>Record your estimated p-value.</p>
+</div></section><section><h3>Exercise 8b:</h3>
+<div align="left"> <p>Fill in the blanks of the sentence, to complete the interpretation of the p-value: The p-value of ______ is the probability of observing ______ assuming______.</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>If the difference in means was larger (more different than 0), how would this impact the size of the p-value?</p>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>How would increasing the sample size (all else remaining the same) change the p-value? Why?</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>How would increasing the standard deviation of the number of close friends for both males and females (all else remaining the same) change the p-value? Why?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>As we saw earlier, another measure of the strength of evidence against the null hypothesis would be to standardize the statistic by subtracting the hypothesized value and dividing by the standard error of the statistic.</p></div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>On the left side of the applet (below the Sample data window) use the Statistic pull- down menu to select the t-statistic (again, there will be a pause). Record the value of the t-statistic that is computed for your data. Write a one-sentence interpretation of this value.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Notice that the standardized statistic uses the letter <span class="process-math">\(t\)</span> instead of the <span class="process-math">\(z\)</span> we saw when testing proportions. This is because the theoretical distribution used is now a t-distribution instead of a normal distribution. These t-distributions are very similar to normal distributions especially when sample sizes are large. The t-statistic, like the z-statistic, tells us how many standard deviations our sample difference is above or below the mean and it can be judged in the same manner.</p></div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>In light of the value of the standardized statistic, should you expect the p-value to be large or small? How are you deciding?</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>The histogram on the far right now displays the null distribution of simulated t-statistics. Describe the behavior of this distribution.</p>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Below the null distribution check the box Overlay t distribution. Does the t-distribution appear to adequately predict the behavior of the shuffled t-statistics? What do you think this suggests about whether the validity conditions will be met for these data?</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Enter the observed value of the t-statistic in the Count Samples box and press Count. (Remember to use the pull-down menu to specify what direction(s) you want to consider more extreme based on the alternative hypothesis.) How does the p-value from the t-distribution (in orange) compare to the simulation-based p-value (from 
+  [REF=TODO]
+)?</p>
+</div></section></section><section><section><h1>Validity Conditions</h1></section><section><h3></h3>
+<div align="left"><p>The validity conditions required for this theory-based approach (a "two-sample t-test") to be valid are shown in the box.</p></div></section><section><h3>Convention 2:</h3>
+<div align="left"> <article class="convention remark-like" id="convention-1"><h4 class="heading">
+<span class="type">Validity Conditions</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The quantitative variable should have a symmetric distribution in both groups or you should have at least 20 observations in each group and the sample distributions should not be strongly skewed.</p></article>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Do the validity conditions appear to be satisfied for these data? Justify your answer.</p>
+</div></section></section><section><section><h1>Step 5: Formulate conclusions</h1></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Based on the analysis you have just carried out, state your conclusion in the context of the study. Be sure to comment on the following:</p>
+</div></section><section><h3>Exercise 18a:</h3>
+<div align="left"> <p>Statistical significance: Do the data provide evidence that the mean number of close friends that men have is different from the mean number of friends women have? How are you deciding?</p>
+</div></section><section><h3>Exercise 18b:</h3>
+<div align="left"> <p>Causation: Do the data provide evidence that how many friends one has is caused by one’s sex? How are you deciding?</p>
+</div></section><section><h3>Exercise 18c:</h3>
+<div align="left"> <p>Generalization: To whom can you apply the results of this study? All people? All adults? How are you deciding?</p>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>When you have selected the t-statistic and the theory-based overlay, you can also use this applet for estimating the parameter of interest. (You can also go directly to the <a class="external" href="http://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1" target="_blank">Theory-Based Inference applet</a> which will also allow you to change the confidence level.) Check the box next to <em class="emphasis">95% CI(s) for difference in means</em>.</p>
+</div></section><section><h3>Exercise 19a:</h3>
+<div align="left"> <p>Identify, in words related to the context of this study, the relevant parameter to be estimated here.</p>
+</div></section><section><h3>Exercise 19b:</h3>
+<div align="left"> <p>Report the 95% confidence interval for this parameter.</p>
+</div></section><section><h3>Exercise 19c:</h3>
+<div align="left"> <p>Does the 95% confidence interval calculated from the GSS sample data contain the value 0? What does that imply? (Hint: Recall that a confidence interval is an interval of plausible values for the parameter of interest, and the interval is calculated using the sample statistics.)</p>
+</div></section><section><h3>Exercise 19d:</h3>
+<div align="left"> <p>Does the 95% confidence interval agree with your conclusion in 
+  [REF=TODO]
+? How are you deciding?</p>
+</div></section><section><h3>Exercise 19e:</h3>
+<div align="left"> <p>Fill in the blanks of the sentence to complete the interpretation of the 95% confidence interval:</p> <p>We are ______% confident that the mean number of close friends men have is ______ than the mean number of close friends that women have, by between ______ and ______ friends.</p>
+</div></section><section><h3>Exercise 19f:</h3>
+<div align="left"> <p>How would the width of the interval change if you increased the confidence level to 99%? Why?</p>
+</div></section><section><h3>Exercise 19g:</h3>
+<div align="left"> <p>How would the width of the interval change if you increased the sample size? Why?</p>
+</div></section><section><h3>Exercise 19h:</h3>
+<div align="left"> <p>How would the width of the interval change if the variability of the number of close friends increased for both males and females? Why?</p>
+</div></section></section><section><section><h1>Step 6: Look back and ahead</h1></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Looking back: Did anything about the design and conclusions of this study concern you? Issues you may want to critique include: the match between the research question and the study design, how the observational units were selected, how the measurements were recorded, the number of observational units in the study, whether what we observed is of practical value.</p>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Looking ahead: What should the researchers’ next steps be to fix the limitations in this study and/or build on this knowledge?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

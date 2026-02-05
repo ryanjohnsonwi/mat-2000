@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:30:25-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>9-3 : Comparing multiple proportions: Theory-based approach (Part B)</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>9-3 : Comparing multiple proportions: Theory-based approach (Part B)</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Nearsightedness and nightlights revisited</h1></section><section><h3></h3>
+<div align="left"><p>Recall that a previous example described <a class="external" href="https://doi.org/10.1038/20094" target="_blank">a study</a> investigating whether there is a relationship between use of night lights in a child’s room before age 2 and the child’s eyesight condition a few years later. Before, we presented a two-way table of counts from the study examining whether the child was nearsighted as the response variable:</p></div></section><section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Observed</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Darkness</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Near light</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Room light</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Nearsighted</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Not nearsighted</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">34</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Total</td>
+<td class="l m b0 r0 l0 t0 lines">172</td>
+<td class="l m b0 r0 l0 t0 lines">232</td>
+<td class="l m b0 r0 l0 t0 lines">75</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>The conditional proportions of nearsightedness in the three lighting groups are 0.105, 0.336, and 0.547, respectively, which suggest that the more light used in the child’s room, the more likely the child is to become nearsighted. Now we know how to calculate a standardized statistic and estimate a p-value to measure the strength of evidence provided by these sample data for the conjecture that eyesight is associated with the type of lighting used in the child’s room.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>State null and alternative hypotheses in terms of population proportions.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>State null and alternative hypotheses in terms of association between variables.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Are the validity conditions necessary for a chi-square test met for these data? Explain.</p>
+</div></section></section><section><section><h1>Alternative Formula for Chi-square Statistic</h1></section><section><h3></h3>
+<div align="left"><p>Another popular and more general way to formulate the chi-square statistic is in terms of observed and expected cell counts. The <dfn class="terminology">observed counts</dfn> are what you actually observed in the study. The <em class="emphasis">expected cell counts</em> are what you would expect for the count in a cell if the null hypothesis were true.</p></div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>To find out how many children we expect to be in the (darkness, nearsighted) cell of the table, answer (a)-(d):</p>
+</div></section><section><h3>Exercise 4a:</h3>
+<div align="left"> <p>Find the overall proportion of children who were nearsighted in the sample.</p>
+</div></section><section><h3>Exercise 4b:</h3>
+<div align="left"> <p>How many children in the sample slept in darkness?</p>
+</div></section><section><h3>Exercise 4c:</h3>
+<div align="left"> <p>Multiply these two numbers together to find the “expected” number of children who would be nearsighted in the “slept in darkness” group if the null hypothesis were true (the probability of nearsightedness is the same in each condition).</p>
+</div></section><section><h3>Exercise 4d:</h3>
+<div align="left"> <p>How different is this expected cell count from what was observed for that cell? What does this suggest about the strength of evidence against the null hypothesis?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>A similar calculation is performed to find the expected cell count for each of the six cells of the table. The chi-square statistic is obtained by squaring the differences in the observed and expected counts, dividing by the expected count (a form of standardizing), and then summing the six values. This can be thought of as <span class="process-math">\((O - E)^2 / E\text{,}\)</span> where where <span class="process-math">\(O\)</span> = observed count and <span class="process-math">\(E\)</span> = expected count.</p></div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Enter the two-way table of counts into the <a class="external" href="https://static-content.zybooks.com/applets/2021/chisqshuffle/ChiSqShuffle.htm?hideExtras=1" target="_blank">Multiple Proportions applet</a> (remember to use one-word variable names and to not include the totals). Press <em class="emphasis">Use Table</em> and check the box to <em class="emphasis">Show <span class="process-math">\(\chi^2 \)</span> output</em>.</p> <p>Report the chi-square statistic and theory-based p-value. What conclusion do you draw about the statistical significance of the sample results?</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Examine the Chisq Cell Contributions (remember you can expand that table by pulling out the lower right corner). (Verify that the first term in the table is the square of [18 -the number you calculated in #4(c)]/number from #4(c).) These six values are added together to yield the chi-square statistic; in other words, they are the six <span class="process-math">\((O-E)^2/E\)</span> values. Which cell contributions are largest and so are contributing the most to the chi-square statistic value? According to the segmented bar graph, how are the observed counts in these cells deviating from what the null hypothesis would predict? (In other words, which is larger, the observed count or the expected count? How does that relate to our research question?)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The original research study actually classified the response variable into three categories of eyesight, as shown in the following table:</p></div></section><section><h3>Table 2:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Observed</td>
+<td class="l m b0 r0 l0 t0 lines">Darkness</td>
+<td class="l m b0 r0 l0 t0 lines">Near light</td>
+<td class="l m b0 r0 l0 t0 lines">Room light</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Nearsighted</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Normal refraction</td>
+<td class="l m b0 r0 l0 t0 lines">114</td>
+<td class="l m b0 r0 l0 t0 lines">115</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Farsighted</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">39</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>One advantage to the more general chi-square statistic formula using observed and expected counts is that it works for any size table (any number of categories for the explanatory variable and the response variable).</p></div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Create a segmented bar graph to summarize this table. Discuss what the graph reveals, including what this graph tells you that we did not learn from the initial table showing only nearsighted vs. not nearsighted.</p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>With this new table, do you need to change your null and alternative hypotheses from question 2?</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Are the validity conditions for the chi-square test met for this table?</p>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Enter this table into the Multiple Proportions applet and carry out the chi-square test. Report the chi-square statistic and p-value. Is the strength of evidence of a genuine association between the variables in the population stronger, weaker, or essentially the same as before? Explain your answer.</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Carry out a randomization test (shuffling) for this table using the chi-square statistic. Overlay the chi-square distribution on the simulated null distribution of chi-square statistic values. Does it appear to be a reasonable model for the null distribution?</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Examine the cell contributions. Is the pattern of deviations from the null similar to before?</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Does this study suggest that use of night lights and room lights causes an increase to the chance that a child is nearsighted? Why or why not?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:27:50-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>4-5 : Factors that affect the width of a confidence interval (continued)</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>4-5 : Factors that affect the width of a confidence interval (continued)</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Reese’s Pieces</h1></section><section><h3></h3>
+<div align="left"><p>Reese’s Pieces candies come in three colors: orange, yellow, and brown. Suppose that you take a random sample of candies and want to estimate the long-run proportion of candies that is orange. Let’s assume for now (although we would not know this when conducting the study) that this long-run proportion, symbolized by <span class="process-math">\(\pi \text{,}\)</span> is equal to 0.50.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Suppose that you take a random sample of 100 Reese’s Pieces candies and find the sample proportion of orange. Is there any guarantee that the sample proportion will equal 0.50?</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Suppose we calculate a confidence interval from this sample proportion. Is there any guarantee that the interval will contain the value 0.50?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Suppose that you select another random sample of 100 Reese’s Pieces candies. Is there any guarantee that the sample proportion will be the same as for the first sample? Will the confidence interval based on the new sample necessarily be the same as the confidence interval based on the first sample? How do you think they will differ?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>To explore the behavior of confidence intervals arising from different random samples with a sample size of 100 from the same population with 50% orange, open the <a class="external" href="https://static-content.zybooks.com/applets/2021/confsim/ConfSim.html?hideExtras=1" target="_blank">Simulating Confidence Intervals applet</a>.<ul class="disc">
+<li>Make sure that <em class="emphasis">Proportions</em> and <em class="emphasis">Wald</em> are selected from the pull-down menus.</li>
+<li>Set <span class="process-math">\(\pi\)</span> to be 0.50 and <em class="emphasis">n</em> to be 100.</li>
+<li>Let <em class="emphasis">Intervals</em> be set to 1.</li>
+<li>Make sure that <em class="emphasis">Conf level</em> is set to 95%.</li>
+<li>Press <em class="emphasis">Sample</em>.</li>
+<li>Notice that this adds an interval (depicted by a horizontal line) to the graph in the middle with a dot corresponding to the observed sample proportion value to the graph labeled "Sample Statistics." Click on this interval. Doing this reveals the value of the midpoint (<span class="process-math">\(\hat{p} \)</span>) (at the bottom) and the endpoints of the 95% confidence interval based on the sample proportion.</li>
+</ul>Record the following:</p>
+</div></section><section><h3>Exercise 4a:</h3>
+<div align="left"> <p>Sample proportion.</p>
+</div></section><section><h3>Exercise 4b:</h3>
+<div align="left"> <p>Endpoints of the 95% confidence interval.</p>
+</div></section><section><h3>Exercise 4c:</h3>
+<div align="left"> <p>Is the sample proportion within the confidence interval? Explain why this does not surprise you.</p>
+</div></section><section><h3>Exercise 4d:</h3>
+<div align="left"> <p>Is the specified long-run proportion (π = 0.50) within the confidence interval?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Notice that 0.50 is either in the interval reported in Question 4b or not. Suppose the interval turned out to be (0.473, 0.537). It’s not like 0.50 is sometimes between 0.473 and 0.537 and sometimes not between those two values. Similarly, even if we didn’t know the value of <span class="process-math">\(\pi\text{,}\)</span> the long-run proportion is still some value, it doesn’t change if you take a different sample. Therefore, it’s technically incorrect to make a statement like "there is a 95% probability that <span class="process-math">\(\pi\)</span> is between 0.473 and 0.537." This doesn’t fit our "long-run proportion" interpretation of probability. So what is happening 95% of the time?</p></div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Return to the <a class="external" href="https://static-content.zybooks.com/applets/2021/confsim/ConfSim.html?hideExtras=1" target="_blank">Simulating Confidence Intervals applet</a>.<ul class="disc">
+<li>Change <em class="emphasis">Intervals</em> from 1 to 99 for a total of 100 random samples from a process where <span class="process-math">\(\pi\)</span> = 0.50.</li>
+<li>Press <em class="emphasis">Sample</em>.</li>
+<li>Notice that this produces a total of 100 possible values of a sample proportion which are graphed in the graph labeled “Sample Proportions” and the 100 confidence intervals (with 95% confidence) that are based on these sample proportions.</li>
+</ul></p> <article class="task exercise-like" id="task-1"><h4 class="heading"></h4>
+<p>Study the graph labeled “Sample Proportions” closely. At about what number is this graph of sample proportions centered? Were you expecting this? Why or why not?</p></article> <p>Notice that some of the dots on the "Sample Proportions" graph are colored red and some are colored green. <p><ul class="disc"><li>Click on any one of the red dots. Doing this will reveal the value of the sample propor- tion and the corresponding 95% confidence interval.</li></ul></p> Record the following:</p> <article class="task exercise-like" id="task-2"><h4 class="heading"></h4>
+<p>Sample proportion.</p></article> <article class="task exercise-like" id="task-3"><h4 class="heading"></h4>
+<p>Endpoints of the 95% confidence interval.</p></article> <article class="task exercise-like" id="task-4"><h4 class="heading"></h4>
+<p>Is the sample proportion within the confidence interval?</p></article> <article class="task exercise-like" id="task-5"><h4 class="heading"></h4>
+<p>Is the probability you set for the overall process (π = 0.50) within the confidence interval?</p></article> <p><ul class="disc"><li>Now click on any one of the green dots. Doing this will reveal the value of the sample proportion and the corresponding 95% confidence interval.</li></ul>Record the following:</p> <article class="task exercise-like" id="task-6"><h4 class="heading"></h4>
+<p>Sample proportion.</p></article> <article class="task exercise-like" id="task-7"><h4 class="heading"></h4>
+<p>Endpoints of the 95% confidence interval.</p></article> <article class="task exercise-like" id="task-8"><h4 class="heading"></h4>
+<p>Is the sample proportion within the confidence interval?</p></article> <article class="task exercise-like" id="task-9"><h4 class="heading"></h4>
+<p>Is the long-run proportion of orange (π = 0.50) within the confidence interval?</p></article> <article class="task exercise-like" id="task-10"><h4 class="heading"></h4>
+<p><ul class="disc"><li>The graph in the middle displays the 100 different 95% confidence intervals, depicting in green the ones that succeed in capturing the actual value of the long-run proportion (which, you’ll recall, we assumed to be <span class="process-math">\(\pi\)</span> = 0.50) and in red the intervals that fail to capture the actual value of <span class="process-math">\(\pi\text{.}\)</span>
+</li></ul></p>
+<p>In the bottom left corner, the applet maintains a “Running total” for the percentage of the intervals produced so far that contain π = 0.50. Report this percentage here. That is, what percentage of the 100 random intervals you have generated succeeded in capturing the value of 0.50 inside the interval?</p></article> <article class="task exercise-like" id="task-11"><h4 class="heading"></h4>
+<p>Now press the Sample button a few times and watch how, if at all, the percentage reported under “Running total” changes. Now record what you think the percentage would be if you were to repeat this process forever.</p></article> <article class="task exercise-like" id="task-12"><h4 class="heading"></h4>
+<p>Based on your observations from the earlier parts, fill in the blanks: Thus, 95% confidence means that if we repeatedly sampled from a process and used the sample statistic to construct a 95% confidence interval, in the long run, roughly ______ % of all those intervals would manage to capture the actual value of the long-run proportion, and the remaining ______ % would not.</p></article>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Now consider changing the confidence level to 90%.</p> <p>Before you make this change, first predict what will happen to the resulting confidence intervals:</p> <article class="task exercise-like" id="task-13"><h4 class="heading"></h4>
+<p>How will the widths of the confidence intervals change (if at all)?</p></article> <article class="task exercise-like" id="task-14"><h4 class="heading"></h4>
+<p>How will the breakdown of successful/unsuccessful (green/red) intervals change? (What percentage of intervals do you suspect will be green in the long run?)</p></article> <p>Now change <em class="emphasis">Conf level</em> to 90% and (watch what happens as you) press <em class="emphasis">Recalculate</em> and then <em class="emphasis">Sample</em>.</p> <article class="task exercise-like" id="task-15"><h4 class="heading"></h4>
+<p>How do the widths of the intervals change? Why does this make sense?</p></article> <article class="task exercise-like" id="task-16"><h4 class="heading"></h4>
+<p>How does the running total change? Why does this make sense?</p></article> <p>Now consider making the sample size four times as large, that is, 400 candies, while keeping the confidence level at 90%. Before you make this change, first predict what will happen to the resulting confidence intervals:</p> <article class="task exercise-like" id="task-17"><h4 class="heading"></h4>
+<p>How will the widths of the confidence intervals change (if at all)?</p></article> <article class="task exercise-like" id="task-18"><h4 class="heading"></h4>
+<p>How will the percentage of successful (green) intervals change?</p></article> <article class="task exercise-like" id="task-19"><h4 class="heading"></h4>
+<p></p></article> <p>Now change <em class="emphasis">n</em> to 400 and watch what happens as you press <em class="emphasis">Sample</em>.</p> <article class="task exercise-like" id="task-20"><h4 class="heading"></h4>
+<p>How do the widths of the intervals change? Why does this make sense?</p></article> <article class="task exercise-like" id="task-21"><h4 class="heading"></h4>
+<p>How does the running total change? Why does this make sense?</p></article> <p>To check your understanding about what 99% confidence means, suppose that you calculate a 99% confidence interval for the long-run proportion of orange to be (0.461, 0.589). For each of the following statements, indicate whether or not it is valid. If you think it is invalid, explain why.</p> <article class="task exercise-like" id="task-22"><h4 class="heading"></h4>
+<p>There is a 99% chance that the long-run proportion of Reese’s Pieces candy that is orange is between 0.461 and 0.589.</p></article> <article class="task exercise-like" id="task-23"><h4 class="heading"></h4>
+<p>We are 99% confident that the long-run proportion of Reese’s Pieces candy that is orange is between 0.514 and 0.566.</p></article> <article class="task exercise-like" id="task-24"><h4 class="heading"></h4>
+<p>If we were to repeat the process of taking random samples of 100 Reese’s Pieces and then calculate a 99% confidence interval from the sample data for each of those samples, then in the long run, 99% of all those confidence intervals would contain the long-run proportion of Reese’s Pieces candy that is orange.</p></article>
+</div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The <dfn class="terminology">confidence level</dfn> indicates the long-run percentage of confidence intervals that would succeed in capturing the (unknown) value of the parameter if random samples were to be taken repeatedly from the population/process and a confidence interval produced from each sample. So, a 95% confidence level means that 95% of all samples would produce an interval that succeeded in capturing the unknown value of the parameter.</p></article>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

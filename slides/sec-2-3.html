@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:25:53-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>2-3 : Alternative measure of strength of evidence</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>2-3 : Alternative measure of strength of evidence</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>STEP 1: Ask a research question</h1></section><section><h3></h3>
+<div align="left"><p>We will gather data from your class to investigate the research question of whether students have a tendency to associate certain facial features with a name.</p></div></section></section><section><section><h1>STEP 2: Design a study and collect data</h1></section><section><h3></h3>
+<div align="left"><p>Each student in your class will be shown the same two pictures of men’s faces used in the research study. You will be asked to assign the name Bob to one photo and the name Tim to the other. Each student will then submit the name that he or she assigned to the picture on the left. Then the name that the researchers identify with the face on the left will be revealed.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Identify the observational units in this study.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Identify the variable. Is the variable categorical or quantitative?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The parameter of interest here is the probability that a student in your class would assign the same name to the face on the left.</p></div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>State the null and alternative hypotheses to be tested when the data are collected. Express these both in words and symbols. (Hint: Think about the parameter and the research question of interest here.)</p>
+</div></section><section><h3>Figure 1:</h3>
+<div align="left"> <figure class="figure figure-like" id="bob-and-tim"><img height="800" src="../code/assets/2-3/bob_and_tim.png"/><figcaption>Consider these two photos:</figcaption></figure>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Do you think the face on the left is Bob or Tim?</p>
+</div></section></section><section><section><h1>STEP 4: Explore the data</h1></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Collect the responses (data) for all the students in your class. How many students put Tim as the name on the left? How many students participated in this study (sample size)? What proportion put Tim’s name on the left?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>When we conduct analyses with binary variables, we often call one of the outcomes a “success” and the other a “failure” and then focus the analysis on the “success” outcome. It is arbitrary which outcome is defined to be a success, but you need to make sure you do so consistently throughout the analysis. In this case we’ll call “Tim on left” a success because that’s what previous studies have found to be a popular choice.</p></div></section></section><section><section><h1>STEP 4: Draw inferences</h1></section><section><h3></h3>
+<div align="left"><p>You will use the <a class="external" href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank">One Proportion</a> applet to investigate how surprising the observed class statistic would be if students were just randomly selecting which name to put with which face.</p></div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Before you use the applet, indicate what you will enter for the following values:</p>
+</div></section><section><h3>Exercise 6a:</h3>
+<div align="left"> <p>Probability of success:</p>
+</div></section><section><h3>Exercise 6b:</h3>
+<div align="left"> <p>Sample size:</p>
+</div></section><section><h3>Exercise 6c:</h3>
+<div align="left"> <p>Number of repetitions:</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Conduct this simulation analysis. Make sure the Proportion of heads button is selected in the applet and not Number of heads.</p>
+</div></section><section><h3>Exercise 7a:</h3>
+<div align="left"> <p>Indicate how to calculate the approximate p-value (count the number of simulated statistics that equal ____ or ____).</p>
+</div></section><section><h3>Exercise 7b:</h3>
+<div align="left"> <p>Report the approximate p-value.</p>
+</div></section><section><h3>Exercise 7c:</h3>
+<div align="left"> <p>Use the p-value to evaluate the strength of evidence provided by the sample data against the null hypothesis, in favor of the alternative that students really do tend to assign the name Tim (as the researchers predicted) to the face on the left.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The p-value is the most common way to evaluate strength of evidence against the null hypothesis, but now we will explore a common alternative way to evaluate strength of evidence. The goal of any measure of strength of evidence is to use a number to assess whether the observed statistic falls in the tail of the null distribution (and is therefore surprising when the null hypothesis is true) or among the typical values we see when the null hypothesis is true.</p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Check the <dfn class="terminology">Summary Stats</dfn> box in the applet.</p>
+</div></section><section><h3>Exercise 8a:</h3>
+<div align="left"> <p>Report the mean (average) value of the simulated statistics.</p>
+</div></section><section><h3>Exercise 8b:</h3>
+<div align="left"> <p>Explain why it makes sense that this mean is close to 0.50.</p>
+</div></section><section><h3>Exercise 8c:</h3>
+<div align="left"> <p>Report the standard deviation (SD) of the simulated statistics.</p>
+</div></section><section><h3>Exercise 8d:</h3>
+<div align="left"> <p>Report (again) the observed class value of the statistic. (What proportion of students in your class put Tim’s name on the left?) <span class="process-math">\(\hat p =\)</span></p> <p>0.72</p>
+</div></section><section><h3>Exercise 8e:</h3>
+<div align="left"> <p>Calculate how many standard deviations the observed class value of the statistic is from the hypothesized mean of the null distribution, 0.50. In other words, subtract the 0.50 from the observed value and then divide by the standard deviation. In still other words, calculate:<div class="displaymath process-math">
+\begin{equation*}
+\frac{\text{observed statistic} (\hat p) - 0.50}{\text{SD of null distribution}}\text{.}
+\end{equation*}
+</div></p> <p>(0.72-0.496)/0.099 = 2.26</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Your calculation in 
+  [REF=TODO]
+ is called “standardizing the statistic.” It is telling us how far above the mean the observed statistic is in terms of the “how many standard deviations.”</p></div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>To <dfn class="terminology">standardize</dfn> a statistic, compute the distance of the statistic from the (hypothesized) mean of the null distribution and divide by the standard deviation of the null distribution.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{standardized statistic} = z = \dfrac{\text{statistic} - \text{mean of null distribution}}{\text{standard deviation of null distribution}} 
+\end{equation*}
+</div>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>Once you calculate this value, you interpret it as “how many standard deviations the observed statistic falls from the hypothesized parameter value.”</p></div></section><section><h3></h3>
+<div align="left"><p>The next question is how to evaluate strength of evidence against the null hypothesis based on a standardized value. Here are some guidelines:</p></div></section><section><h3></h3>
+<div align="left"><p>Standardizing gives us a quick, informal way to evaluate the strength of evidence against the null hypothesis. For standardized statistics:</p></div></section><section><h3>Table 3:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption>Guidelines for evaluating strength of evidence from standardized values of statistics</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">between -1.5 and 1.5</td>
+<td class="l m b0 r0 l0 t0 lines">
+<dfn class="terminology">little or no evidence</dfn> against the null hypothesis</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">below -1.5 or above 1.5</td>
+<td class="l m b0 r0 l0 t0 lines">
+<dfn class="terminology">moderate</dfn> evidence against the null hypothesis</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">below -2 or above 2</td>
+<td class="l m b0 r0 l0 t0 lines">
+<dfn class="terminology">strong</dfn> evidence against the null hypothesis</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">below -3 or above 3</td>
+<td class="l m b0 r0 l0 t0 lines">
+<dfn class="terminology">very strong</dfn> evidence against the null hypothesis</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>The diagram in the figure below illustrates the basis for using a standardized statistic to assess strength of evidence against the null hypothesis for a mound-shaped, symmetric distribution.</p></div></section><section><h3>Figure 4:</h3>
+<div align="left"> <figure class="figure figure-like" id="fig-2-3_bell_curve"><img src="../code/assets/2-3/bell_curve.png" width="1800"/><figcaption>Positions of standardized statistics for a bell-shaped distribution.</figcaption></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>The figure can be summarized by the following key idea.</p></div></section><section><h3>Remark 5:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>Observations that fall more than 2 or 3 standard deviations from the mean can be considered in the tail of the distribution.</p></article>
+</div></section></section><section><section><h1>STEP 5: Formulate conclusions.</h1></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Let’s examine the strength of evidence against the null.</p>
+</div></section><section><h3>Exercise 9a:</h3>
+<div align="left"> <p>Based on the value of the standardized statistic, z, in 
+  [REF=TODO]
+ and the guidelines shown above, how much evidence do the class data provide against the null hypothesis?</p>
+</div></section><section><h3>Exercise 9b:</h3>
+<div align="left"> <p>How closely does your evaluation of strength of evidence based on the standardized statistic compare to the strength of evidence based on the p-value in 
+  [REF=TODO]
+?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Now, let’s step back a bit further and think about the scope of inference. We have found that in most classes, the observed data provide strong evidence that students do better than random guessing which face is Tim’s and which is Bob’s. In that case, do you think that most students at your school would agree on which face is Tim’s? Do you think this means that most people can agree on which face belongs to Tim? Furthermore, does this mean that all people do ascribe to the same facial prototyping?</p></div></section></section><section><section><h1>STEP 6: Look back and ahead.</h1></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Based on the limitations of this study, suggest a new research question that you would investigate next.</p>
+</div></section></section><section><section><h1>Exploring Further</h1></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>In 
+  [REF=TODO]
+ you recorded the proportion of students in your class who put Tim’s name with the photo on the left. Imagine that the proportion was actually larger than that (e.g., if your class was 60%, imagine it was 70%).</p>
+</div></section><section><h3>Exercise 11a:</h3>
+<div align="left"> <p>How would this have affected the p-value?</p>
+</div></section><section><h3>Exercise 11b:</h3>
+<div align="left"> <p>How would this have affected the absolute value of the standardized statistic?</p>
+</div></section><section><h3>Exercise 11c:</h3>
+<div align="left"> <p>How would this have affected the strength of evidence against the null hypothesis?</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Suppose that less than half of the students in your class had put Tim’s name on the left, so your class result was in the opposite direction of the research conjecture and the alternative hypothesis.</p>
+</div></section><section><h3>Exercise 12a:</h3>
+<div align="left"> <p>What can you say about the standardized value of the statistic in this case? Explain. (Hint: You cannot give a value for the standardized statistic, but you can say something specific about its value.)</p>
+</div></section><section><h3>Exercise 12b:</h3>
+<div align="left"> <p>What can you say about the strength of evidence against the null hypothesis and in favor of the alternative hypothesis in this case?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

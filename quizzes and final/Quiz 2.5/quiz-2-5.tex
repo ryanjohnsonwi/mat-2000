@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{etoolbox}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 2.5 Version \fbox{\myversion} \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%\mcifoutput{exam}{
+%	\AtEndDocument{\ifodd\value{page}
+%		\newpage\thispagestyle{empty}\hbox{This page intentionally left blank.}\newpage\thispagestyle{empty}\hbox{}
+%		\else
+%		\newpage\thispagestyle{empty}\hbox{}
+%		\fi}
+%}
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	\begin{mcquestions}
+		\question The official four-year graduation rate among US colleges and universities is 57.6\%. Suppose a researcher takes a random sample of 100 college students and tracks their progress through school to determine whether each student graduates in four years or not.
+		
+		Which of the following is known to be true? Select the option that does NOT apply.
+		
+		\begin{mcanswerslist}
+			\answer If many samples of 100 students were taken, the distribution of the sample proportions will be bell-shaped and symmetric.
+			\answer If many samples of 100 students were taken, the distribution of the sample proportions will be centered at 0.576.
+			\answer[correct] The sample proportion collected by the researcher would be 0.576.
+			\answer If many samples of 100 students were taken, the standard deviation of the sample proportions would be 0.049.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			A study conducted by the National Center for Health Statistics as part of the Center for Disease Control and Prevention (CDC) found that, as of 2015-2016, 39.6\% of Americans over the age of 20 fit the medical definition of being obese (BMI of 30 or higher). A city known for plentiful outdoor opportunities believes that number is lower among residents. A representative sample of 80 city residents is collected and the BMI calculated for each (based on reported height and weight). The variable of interest is whether the resident fit the medical definition of obese. The study found 22 people in the sample fit the medical definition of obese.
+			
+			Use this scenario for the following two questions:
+		\end{mcquestioninstruction}
+		
+		\question[follow] Select the appropriate method of calculating the standard deviation of the sample proportions under the null hypothesis.
+		
+		\begin{mcanswerslist}
+			\answer[correct] \(\sqrt{\frac{0.396 \times (1-0.396)}{80}}\)\\[0.1cm]
+			\answer \(\sqrt{\frac{0.275 \times (1-0.275)}{80}}\)\\[0.1cm]
+			\answer \(\sqrt{\frac{22 \times (1-22)}{80}}\)\\[0.1cm]
+			\answer \(\sqrt{\frac{80 \times (1-80)}{0.396}}\)\\[0.1cm]
+		\end{mcanswerslist}
+		
+		\question[follow] The standard deviation for this study is 0.055. Which of the following displays the correct method of calculating the standardized statistic?
+		
+		\begin{mcanswerslist}
+			\answer \(\frac{22-31.7}{80\times0.055}\)\\[0.1cm]
+			\answer \(\frac{0.396-0.275}{0.055}\)\\[0.1cm]
+			\answer[correct] \(\frac{0.275-0.396}{0.055}\)\\[0.1cm]
+			\answer \(\frac{0.055-0.396}{0.5}\)\\[0.1cm]
+		\end{mcanswerslist}
+		
+		\question The World Health Organization reports that the SARS (Severe Acute Respiratory Syndrome) outbreak in 2003 resulted in 8098 probable cases reported, 774 of which were fatalities. A student who is planning to travel to Vietnam is concerned about another virus outbreak and would like to use data on how Vietnam handled SARS cases as a gauge for how well Vietnam's health care system would handle another virus outbreak. The student plans to test if the fatality rate in Vietnam from SARS is different from the global fatality rate. Of the 89 SARS cases reported in Vietnam in 2003, 5 people died. The student analyzes these data in two ways:
+		\begin{itemize}
+			\item[Method 1:]  The theory-based p-value was calculated to be 0.2061.
+			\item[Method 2:]  The simulation-based p-value was calculated to be 0.2797
+		\end{itemize}
+		Which p-value is most valid?
+		
+		\begin{mcanswerslist}
+			\answer The theory-based p-value, since the p-value is calculated by finding the exact area under a Normal distribution.
+			\answer The theory-based p-value, since there are over 10 "failures" (people who survived SARS).
+			\answer[correct] The simulation-based p-value, since there are only 5 "successes" (people who died from SARS).
+			\answer The simulation-based p-value, since thousands of samples are simulated.
+		\end{mcanswerslist}
+		
+	\end{mcquestions}
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass{exam}
+
+
+\RequirePackage{amssymb, amsfonts, amsmath, setspace, graphicx}
+\usepackage[margin=1in]{geometry}
+
+
+% Here's where you edit the Class, Exam, Date, etc.
+\newcommand{\classnum}{MAT 2000}
+\newcommand{\classname}{Introduction to Statistics}
+\newcommand{\examname}{Quiz: Section 3.1}
+\newcommand{\school}{Grace College}
+
+%Shortcuts:
+\newcommand{\nn}{\mathbf{N}}
+\newcommand{\zz}{\mathbf{Z}}
+\newcommand{\qq}{\mathbf{Q}}
+\newcommand{\rr}{\mathbf{R}}
+\newcommand{\cc}{\mathbf{C}}
+
+% For an exam, single spacing is most appropriate
+\singlespacing
+% \onehalfspacing
+% \doublespacing
+
+% For an exam, we generally want to turn off paragraph indentation
+\parindent 0ex
+
+\begin{document}
+	
+	\pagestyle{head}
+	\firstpageheader{}{}{}
+	\runningheader{\classnum}{\examname\ - Page \thepage\ of \numpages}{\school}
+	\runningheadrule
+	
+	\begin{flushright}
+		\begin{tabular}{p{2.8in} r l}
+			\textbf{\examname} & \textbf{Name (Print):} & \makebox[2in]{\hrulefill}\\
+			\textbf{\classnum} &&\\
+			\textbf{\classname} &&\\
+			\textbf{\school}
+			%\textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+		\end{tabular}\\
+	\end{flushright}
+	\rule[1ex]{\textwidth}{.1pt}
+	
+	\begin{questions}
+		\uplevel{In June of 2012, New York City Mayor Michael Bloomberg proposed banning the sale of any regular soda or other sugary drinks in containers larger than 16 oz. A fast food chain polled a random sample of 2500 regular customers and found that 63\% opposed the ban, 28\% supported the ban, and 9\% had no opinion.}
+		
+		\question The value 63 is a \_\_\_.
+		
+		\begin{oneparchoices}
+			\choice population
+			\choice sample
+			\choice parameter
+			\correctchoice statistic
+		\end{oneparchoices}
+		
+		\question The 2500 regular fast food chain customers surveyed are the \_\_\_.
+		
+		\begin{oneparchoices}
+			\choice population
+			\correctchoice sample
+			\choice parameter
+			\choice statistic
+		\end{oneparchoices}
+				
+	\end{questions}
+\end{document}

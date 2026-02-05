@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 2.3-4 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print: \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%\mcifoutput{exam}{
+%	\AtEndDocument{\ifodd\value{page}
+%		\newpage\thispagestyle{empty}\hbox{This page intentionally left blank.}\newpage\thispagestyle{empty}\hbox{}
+%		\else
+%		\newpage\thispagestyle{empty}\hbox{}
+%		\fi}
+%}
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	\begin{mcquestions}
+		
+	\question The first iPhone became available for public purchase in 2007.  By 2010, approximately 30\% of smartphone users in the US owned an iPhone.  Several new companies have entered the smartphone market since then and the folks at Apple want to know how they are stacking up against their competition.  In 2019, a representative sample of 529 smartphone users in the US showed that 47.4\% use an Apple iOS device.  Does Apple's share of the US smartphone market appear to have increased since 2010?
+	
+	The standardized test statistic for this study is 8.7. Select the best contextual interpretation of the test statistic.
+	
+	\begin{mcanswerslist}
+		\answer On average, each simulated proportion of the US smartphone market which uses Apple iOS devices is 8.7 away from 0.299.
+		\answer The probability of obtaining a sample proportion of 0.474 or something more extreme, assuming 30\% of all US smartphone users use an Apple iOS device, is 8.7.
+		\answer The proportion of the US smartphone market that uses an Apple iOS device is 8.7.
+		\answer[correct] The 0.474 proportion of the US smartphone users sampled who use Apple iOS devices is 8.7 standard deviations above the 2010 Apple US market-share of 0.30.
+	\end{mcanswerslist}
+	
+	\question A standardized test statistic close to zero provides what level of evidence against a null hypothesis?
+	\begin{mcanswerslist}
+		\answer[correct] Little to no evidence
+		\answer Moderate evidence
+		\answer Strong evidence
+		\answer Very strong evidence
+	\end{mcanswerslist}
+	
+	\question Use your intuition to estimate and match the three standardized statistics value with their corresponding p-values.
+	
+	\begin{tabular}{lp{1in}cp{1in}r}
+		i. $z=0.45$ && ii. $z=3.31$ && iii. $z=1.72$
+	\end{tabular}
+	
+	\begin{mcanswerslist}
+		\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+			i. p-value$=0.0005$ && ii. p-value$=0.3264$ && iii. p-value$=0.0427$
+		\end{tabular}
+		\answer[correct] \begin{tabular}{lp{0.75in}cp{0.75in}r}
+			i. p-value$=0.3264$ && ii. p-value$=0.0005$ && iii. p-value$=0.0427$
+		\end{tabular}
+		\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+			i. p-value$=0.0005$ && ii. p-value$=0.0427$ && iii. p-value$=0.3264$
+		\end{tabular}
+		\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+			i. p-value$=0.0427$ && ii. p-value$=0.3264$ && iii. p-value$=0.0005$
+		\end{tabular}
+	\end{mcanswerslist}
+	
+	\question \question Research done in the mid 1980s indicated that 80\% of grizzly bears in the greater ecosystem of Yellowstone National Park entered their den for hibernation by the last day of November. This has come into question as of late. Researchers have hypothesized that climate change has postponed bears entering hibernation until later in the season; that is, researchers believe that a smaller percentage of bears are entering their den for hibernation by the last day of November. 
+	Sixty-two Yellowstone grizzly bears were tracked via radio monitors, which allow scientists to pinpoint when the bears enter their dens with a high degree of accuracy. Of the 62 Yellowstone grizzly bears being tracked, 42 entered their den for hibernation by the last day of November.
+	
+	If, instead, 45 of 62 bears had entered their den for hibernation by the last day of November, how would the p-value be affected?
+	
+	\begin{mcanswerslist}
+		\answer[correct] Increase
+		\answer Decrease
+		\answer Remain the same
+		\answer Unknown
+	\end{mcanswerslist}
+	
+	\begin{mcquestioninstruction}
+		An environmental science teacher at a high school with a large population of students was curious whether the majority (more than half) of students at the school regularly recycle plastic bottles. The teacher selected a random sample of 146 students at the school to interview, then asked each student: "Do you recycle plastic bottles more often than you throw them in the trash?" (Yes/No). Suppose that 89 of the students answered "Yes".
+		
+		Use this scenario to answer questions \ref{r1} and \ref{r2}
+	\end{mcquestioninstruction}
+	
+	\question  How would the strength of evidence against the null hypothesis change of the teacher wanted to know whether the proportion of students at the school that would have said "Yes" differed from 0.5 rather than was greater than 0.5.\label{r1}
+	
+		\begin{mcanswerslist}
+		\answer Stronger evidence against the null hypothesis
+		\answer[correct] Weaker evidence against the null hypothesis
+		\answer The same amount of evidence against the null hypothesis
+		\answer Cannot be determined from the information given
+	\end{mcanswerslist}
+	
+	\question[follow]  If all other aspects of the study remained the same, how would the strength of evidence against the null hypothesis change if the teacher sampled 300 students instead of 146.\label{r2}
+	
+	\begin{mcanswerslist}
+		\answer[correct] Stronger evidence against the null hypothesis
+		\answer Weaker evidence against the null hypothesis
+		\answer The same amount of evidence against the null hypothesis
+		\answer Cannot be determined from the information given
+	\end{mcanswerslist}
+	
+	\question A study conducted by the National Center for Health Statistics as part of the Center for Disease Control and Prevention (CDC) found that, as of 2015-2016, 39.6\% of Americans over the age of 20 fit the medical definition of being obese (BMI of 30 or higher). A city known for plentiful outdoor opportunities believes that number is lower among residents. A representative sample of 80 city residents is collected and the BMI calculated for each (based on reported height and weight). The variable of interest is whether the resident fit the medical definition of obese. The study found 22 people in the sample fit the medical definition of obese.
+	
+	Identify the correct alternative hypothesis.
+	
+	\begin{mcanswerslist}
+		\answer \(H_A: \pi \neq 0.396\)
+		\answer \(H_A: \pi > 0.396\)
+		\answer[correct] \(H_A: \pi < 0.396\)
+		\answer \(H_A: \hat p = 0.275\)
+	\end{mcanswerslist}
+		
+	\end{mcquestions}
+\end{document}

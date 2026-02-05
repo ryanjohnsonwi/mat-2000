@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:30:58-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>11-1 : Two quantitative variables: Scatterplot and correlation</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>11-1 : Two quantitative variables: Scatterplot and correlation</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Height and winning at tennis</h1></section></section><section><section><h1>Step 1: Ask a research question</h1></section><section><h3></h3>
+<div align="left"><p>Based on trends observed in other sports, researchers were interested in exploring how heights of winning tennis players might be changing over time, given that height may be an advantage to winning at tennis.</p></div></section></section><section><section><h1>Step 2: Design a study and collect data</h1></section><section><h3></h3>
+<div align="left"><p>To investigate this question, <a class="external" href="https://www.topendsports.com/sport/tennis/anthropometry-wimbledon.htm" target="_blank">researchers gathered data</a> on heights of the winning tennis players at Wimbledon, a prestigious tennis tournament held each year from the 1880s through 2019</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Identify (be specific) the observational units in this study.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>What is the explanatory variable? Is it categorical or quantitative?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>What is the response variable? Is it categorical or quantitative?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>In your own words, explain what it would mean for there to be an association between the explanatory and response variables in this study.</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Is this study an experiment or an observational study? Why?</p>
+</div></section></section><section><section><h1>Step 3: Explore the data</h1></section><section><h3></h3>
+<div align="left"><p>The table below represents a subset of the data values reported in the article.</p></div></section><section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Year</td>
+<td class="l m b0 r0 l0 t0 lines">1881</td>
+<td class="l m b0 r0 l0 t0 lines">1882</td>
+<td class="l m b0 r0 l0 t0 lines">1883</td>
+<td class="l m b0 r0 l0 t0 lines">1884</td>
+<td class="l m b0 r0 l0 t0 lines">1885</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Height (cm)</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Table 2:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Year</td>
+<td class="l m b0 r0 l0 t0 lines">2017</td>
+<td class="l m b0 r0 l0 t0 lines">2018</td>
+<td class="l m b0 r0 l0 t0 lines">2018</td>
+<td class="l m b0 r0 l0 t0 lines">2019</td>
+<td class="l m b0 r0 l0 t0 lines">2019</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Height (cm)</td>
+<td class="l m b0 r0 l0 t0 lines">185</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">173</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">168</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Name one possible reason some of the heights are the same for different years.</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Name one reason some years may have multiple heights.</p>
+</div></section></section><section><section><h1>Graphical summary of two quantitative variables: Scatterplots</h1></section><section><h3></h3>
+<div align="left"><p>This study is different than studies we’ve looked at before because both of the variables of interest are quantitative. For this reason, the graphical and numerical techniques we will use to summarize the data are different from those we’ve seen before.</p></div></section><section><h3>Remark 3:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>A <dfn class="terminology">scatterplot</dfn> is a graph showing a dot for each observational unit, where the location of the dot indicates the values of the observational units for both the explanatory and response variables. Typically, the explanatory variable is placed on the <span class="process-math">\(x\)</span>-axis, and the response variable is placed on the <span class="process-math">\(y\)</span>-axis.</p></article>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Paste the <a class="external" href="https://static-content2.zybooks.com/isi/data/chap10/Wimbledon.txt" target="_blank">Wimbledon</a> data into the <a class="external" href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2" target="_blank">Corr/Regression applet</a>.</p> <p>Which variable is on the x-(horizontal) axis? Which variable is on the y-(vertical) axis? If you want to reverse those roles, press the (Explanatory, Response) button above the data window.</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Create a rough sketch of the scatterplot from the applet. Be sure the axes are well labeled. Rather than drawing each dot, you could just draw an ellipse (oval) shape where most of the points lie. Show that you understand how a scatterplot is created by making a dot on the scatterplot corresponding to a Wimbledon winner in 2019 that is 188 cm tall.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>When describing a scatterplot, we look for three aspects of association: direction, form, and strength. The <dfn class="terminology">direction</dfn> of association between two quantitative variables is either positive or negative, depending on whether the response variable (size) increases as the explanatory variable (year) tends to increase (positive association) or decrease (negative association).</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Direction: Is the association between year and winning height positive or negative? Interpret what this means in context.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The <dfn class="terminology">form</dfn> of association between two quantitative variables is described by indicating whether a line would do a reasonable job summarizing the overall pattern in the data or if a curve would be better. It is important to note that—especially when the sample size is small— you don’t want to let one or two points on the scatterplot change your interpretation of whether the form of association is linear. In general, assume that the form is linear unless there is compelling (strong) evidence in the scatterplot that the form is not linear.</p></div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Form: Does the association between year and height appear to be linear, or is there strong evidence (over many observational units) suggesting the relationship is nonlinear?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>In describing the <dfn class="terminology">strength</dfn> of association revealed in a scatterplot, we see how closely the points follow the form; that is, how closely do the points follow a straight line or curve? If all of the points fall pretty close to this straight line or curve, we say the association is strong. Weak associations will show little pattern in the scatterplot, and moderate associations will be somewhere in the middle.</p></div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Strength: In your opinion, would you say that the association between height and year appears to be strong, moderate, or weak?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>It is also important to consider any <dfn class="terminology">unusual observations</dfn> that do not follow the overall pattern.</p></div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Are there any observational units (dots on the scatterplot, representing individual Wimbledon champions) that seem to fall outside of the overall pattern? If yes, identify it/them on the graph you just made. If not, provide a hypothetical example of a year and height combination that would represent an unusual observation.</p>
+</div></section><section><h3></h3>
+<div align="left"><p><em class="emphasis">Note:</em> There are two kinds of unusual observations seen in scatterplots: influential observations and outliers. An observation is <em class="emphasis">influential</em> if removing it from the dataset dramatically changes our perception of the association. Typically influential observations are extreme in the explanatory variable. <em class="emphasis">Outliers</em> are observations that don’t follow the overall pattern of the relationship. They may or may not be influential and they may or may not be extreme in either variable individually but are unusual in terms of the combination of values.</p></div></section><section><h3>Remark 4:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>Association between quantitative variables can be described with direction, form, and strength.<ul class="disc">
+<li>If above-average values of one variable tend to correspond to above-average values of the other variable, the <dfn class="terminology">direction</dfn> is positive. If, however, above-average values of one variable are associated with below-average values of the other, the <dfn class="terminology">direction</dfn> is negative.</li>
+<li>The <dfn class="terminology">form</dfn> of the association is whether the data follow a linear pattern or some more complicated pattern.</li>
+<li>The <dfn class="terminology">strength</dfn> of an association refers to how closely the data follow a particular pattern. When an association is strong, the value of one variable can be accurately predicted from the other.</li>
+<li>Also look for, and investigate further, any <dfn class="terminology">unusual observations</dfn> that do not fit the pattern of the rest.</li>
+</ul></p></article>
+</div></section></section><section><section><h1>Numerical summaries</h1></section><section><h3></h3>
+<div align="left"><p>Describing the direction, form, and strength of association based on a scatterplot, along with investigating unusual observations, is an important first step in summarizing the relationship between two quantitative variables. Another approach is to use a statistic. One of the statistics most commonly used for this purpose is the correlation coefficient.</p></div></section><section><h3></h3>
+<div align="left"><p>The <dfn class="terminology">correlation coefficient</dfn>, often denoted by the symbol r, is a single number that takes a value between -1 and 1, inclusive. Negative values of r indicate a negative association, whereas positive values of r indicate a positive association. The stronger the linear association is between the two variables, the closer the value of the correlation coefficient will be to either -1 or 1, whereas weaker linear associations will have correlation coefficient values closer to 0. Moderate linear associations will typically have correlation coefficients in the range of 0.3 to 0.7 or -0.3 to -0.7.</p></div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Will the value of the correlation coefficient for the year and height data be negative or positive? Why?</p>
+</div></section><section><h3>Remark 5:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-3"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The correlation coefficient uses a rather complex formula that is rarely computed by hand; instead, people almost always use a calculator or computer to calculate the value of the correlation coefficient. But you should be able to apply the above properties to interpret the correlation coefficient that is found.</p></article>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Without using the applet, give an estimated value of the correlation coefficient between year and height based on the scatterplot.</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Now, check the Correlation coefficient box in the applet to reveal the actual value of the correlation coefficient. Report the value.</p>
+</div></section><section><h3>Remark 6:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-4"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The correlation coefficient is only applicable for data which has a linear form; nonlinear data are not summarized well by the correlation coefficient. In fact, we could say that the correlation coefficient is a numerical summary of the strength and direction of a linear association between two quantitative variables.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>Another point about correlation is that it is sensitive to influential observations. Influential observations are unusual observations which substantially impact the value of the correlation coefficient based on whether or not they are included in the dataset.</p></div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>In the Add/Remove Observations section of the applet, enter a year of 2020 and height of 140 cm and press Add. Note how this is an unusual observation on the scatterplot. How did the correlation coefficient change as a result?</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>This correlation coefficient is not particularly strong because there is a lot of scatter/variation about the regression line. Suggest another variable we haven’t considered yet that might explain some of this variability in heights, even in the same year.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Earlier, you brainstormed reasons there might be more than one winner in a given year. How can there be two winners in the same year? Although initially Wimbledon was a males-only tournament, since 1887, both a female and male winner have been crowned. (Note: A few years don’t have data due to the championship not being played that year or height data not being available on the winner.)</p></div></section><section><h3></h3>
+<div align="left"><p>The figure below color codes the scatterplot depending on whether the height corresponds to the Male or Female champion that year.</p></div></section><section><h3>Figure 7:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-1"><img height="800" src="../code/assets/11-1/fig-11-1-1.png"/><figcaption>Figure 1121: Scatterplot of height and year colored by event, males in blue and females in orange</figcaption></figure>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>How do the male heights tend to compare to the female heights?</p>
+</div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Does the association between height and year seem to be similar between males and females?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The figure below shows the separate scatterplot of only the female winners and only the male winners.</p></div></section><section><h3>Figure 8:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-2"><img height="800" src="../code/assets/11-1/fig-11-1-2.png"/><figcaption>Scatterplot of female champions of Wimbledon (1887-2019) and male champions of Wimbledon (1881-2019)</figcaption></figure>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Describe the strength, form, and direction of the scatterplot for female Wimbledon champions. Are there any unusual observations?</p>
+</div></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>Describe the strength, form, and direction of the scatterplot for male Wimbledon champions. Are there any unusual observations?</p>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>What do you predict for the value of the correlation coefficient between height and year for female winners only? Why? What do you predict for male winners?</p>
+</div></section><section><h3>Exercise 24</h3>
+<div align="left"> <p>The actual correlation coefficient for females is 0.40 and for males is 0.36. Explain to a nonstatistician why the correlation coefficients are different within the male/female groups as compared to the overall correlation of 0.19 based on the pattern of dots in the scatterplot.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Note, however, that the strength of the association is not directly impacted by the size of the sample, but by how closely the observations follow the (linear) pattern.</p></div></section></section><section><section><h1>Steps 4 and 5: Draw inferences and formulate conclusions</h1></section><section><h3></h3>
+<div align="left"><p>In a later section you will explore how to evaluate whether a correlation is statistically significant, but that’s not necessarily needed/appropriate in this case. The data here represent the entire population of Wimbledon winners (a census).</p></div></section><section><h3>Exercise 25</h3>
+<div align="left"> <p>How does the strength and direction of association compare between men and women? What does this tell us about the pattern of height of Wimbledon winners over time?</p>
+</div></section><section><h3>Exercise 26</h3>
+<div align="left"> <p>Can we say that year causes changes in the height of the Wimbledon winners? Why or why not? Can we say that being taller makes you more likely to win Wimbledon?</p>
+</div></section></section><section><section><h1>Steps 6: Look back and ahead</h1></section><section><h3>Exercise 27</h3>
+<div align="left"> <p>Name one additional variable you would like measured on each Wimbledon winner and explain why.</p>
+</div></section><section><h3>Exercise 28</h3>
+<div align="left"> <p>Describe how you could do a similar study for another sport. What two variables would you collect? What would you expect to see? Why? What third variable could also be measured and be important to consider?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

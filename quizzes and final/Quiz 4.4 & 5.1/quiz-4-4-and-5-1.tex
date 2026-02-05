@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 4.4 and 5.1 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	
+	\begin{mcquestions}
+		\begin{mcquestioninstruction}
+			Suppose a random sample of 100 students is taken at a university, asking the students how many hours they slept last night. The sample has a mean of 7.1 hours and a standard deviation of 1.2 hours. A 95\% confidence interval is then constructed for the mean number of hours all students from that university slept last night.  Use this to answer the following three questions:
+		\end{mcquestioninstruction}
+		\question Suppose, instead, that a 90\% confidence interval is constructed with the data. How would the 90\% confidence interval compare to your 95\% confidence interval?  The 90\% confidence interval would be:
+		\begin{mcanswerslist}
+			\answer  Wider
+			\answer[correct] Narrower
+			\answer Same width
+			\answer Cannot be determined with the information provided
+		\end{mcanswerslist}
+		
+		\question[follow] Suppose another random sample is taken with 150 students, and has the same sample mean and standard deviation as the original sample. How would the new 95\% confidence interval compare to the original? The the new interval would be:
+		\begin{mcanswerslist}
+			\answer  Wider
+			\answer[correct] Narrower
+			\answer Same width
+			\answer Cannot be determined with the information provided
+		\end{mcanswerslist}
+		
+		\question[follow] Suppose another sample of 100 students is taken and this time the mean is 7.1 with a standard deviation of 1.4 for the hours slept. These new statistics are used to create another 95\% confidence interval for the mean hours slept. How would the new 95\% confidence interval compare to the original? The new 95\% confidence interval would be:
+		\begin{mcanswerslist}
+			\answer[correct]  Wider
+			\answer Narrower
+			\answer Same width
+			\answer Cannot be determined with the information provided
+		\end{mcanswerslist}
+		
+		\question A 2012 survey of 1,254 American cell phone owners indicates that 17\% of those surveyed do browsing on their phone rather than a computer or other device.
+		
+		Suppose another survey was done on 1,254 American cell phone owners, but this time, 23\% of cell phone owners surveyed do browsing on their phone rather than a computer or other device.  How would the 95\% confidence interval from this survey compare to the original? The new survey's interval would be:
+		\begin{mcanswerslist}
+			\answer[correct]  Wider
+			\answer Narrower
+			\answer Same width
+			\answer Cannot be determined with the information provided
+		\end{mcanswerslist}
+		
+		\question Suppose data is collected on the heights of all students at a college.  Each of the 250 people taking a statistics course randomly takes a sample of 40 of these heights and constructs a 95\% confidence interval for mean height of all students at the college.
+		
+		Which of the following statements about the confidence intervals is most accurate?
+		\begin{mcanswerslist}
+			\answer About 95\% of the heights of all students at the college will be contained in these intervals.
+			\answer About 95\% of the time, a student's sample mean height will be contained in the interval the student found.
+			\answer[correct] About 95\% of the intervals will contain the population mean height.
+			\answer About 95\% of the intervals will be identical.
+		\end{mcanswerslist}
+		
+		\question Researchers are studying a new weight-loss program. Using a sample of 9,812 volunteers with a desire to lose weight, a 95\% confidence interval is constructed for the true mean amount of weight loss after six months on the program, and found to be (0.12, 0.20) pounds.
+		
+		Based on this interval, does statistically significant evidence exist that the weight-loss program works?
+		\begin{mcanswerslist}
+			\answer[correct] Yes, since the entire interval is positive.
+			\answer Yes, since the sample size was large.
+			\answer No, since the true mean amount of weight loss after six months on the program is less than a pound.
+			\answer The question cannot be answered without the p-value.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			The following table shows the responses from a sample of 680 people in the General Social Survey to the question, "Do you sometimes drink more than you think you should?"\\
+			
+			\begin{tabular}{llll}
+				Gender & Yes                     & No  & Total  \\
+				Male   & 151                     & 177 & 328    \\
+				Female & 92                      & 260 & 352    \\
+				Total  & 243                     & 437 & 680   
+			\end{tabular}
+		\end{mcquestioninstruction}
+		\question What proportion of males responded that they drink more than they should?
+		\begin{mcanswerslist}
+			\answer 151/243
+			\answer[correct] 151/328
+			\answer 243/680
+			\answer 151/680
+		\end{mcanswerslist}
+		
+		\question[follow] Does there appear to be an association between gender and whether a person responds that they drink more than they should?
+		\begin{mcanswerslist}
+			\answer Yes, since a different number of people of each gender are in the sample.
+			\answer Yes, since the percent that responded that they drink more than they should differs from 50%.
+			\answer[correct] Yes, since the proportion who responded they drink more than they should differs between males and females.
+			\answer No, there does not appear to be an association between these two variables.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			A study published in 2007 by Christopher Johnson, professor of music education and music therapy at the University of Kansas, revealed that students in elementary schools who took private music lessons scored around 20 percent higher in math scores on standardized tests, compared to students who did not take private music lessons.  Use this to answer the following three questions:
+		\end{mcquestioninstruction}
+		
+		\question What is the explanatory variable?
+		\begin{mcanswerslist}
+			\answer Music therapy
+			\answer[correct] Whether a student took private music lessons
+			\answer Math score on standardized test
+			\answer Grade level
+		\end{mcanswerslist}
+		
+		\question[follow] What is the response variable?
+		\begin{mcanswerslist}
+			\answer Music therapy
+			\answer Whether a student took private music lessons
+			\answer[correct] Math score on standardized test
+			\answer Grade level
+		\end{mcanswerslist}
+		
+		
+		\question[follow] Which of the following could be a potential confounding variable?
+		\begin{mcanswerslist}
+			\answer Household income
+			\answer Socio-economic status
+			\answer Whether the parents hired a math tutor
+			\answer[correct] All of these
+		\end{mcanswerslist}
+
+		
+	\end{mcquestions}
+\end{document}

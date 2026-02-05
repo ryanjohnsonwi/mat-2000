@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-12-03T15:41:40-05:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>11-2 : Introduction to Statistics</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>11-2 : Introduction to Statistics</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated December 3, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Draft lottery</h1></section><section><h3></h3>
+<div align="left"><p>In 1970, the U.S. Selective Service conducted a lottery to decide which young men would be drafted into the armed forces (<a class="external" href="https://doi.org/10.1126/science.171.3968.255" target="_blank">Fienberg, 1971</a>). Each of the 366 birthdays in a year (including February 29) was assigned a draft number. Young men born on days assigned low draft numbers were drafted.</p></div></section><section><h3></h3>
+<div align="left"><p>We will regard the 366 dates of the year as observational units. We will consider two variables recorded on each date: <em class="emphasis">draft number</em> assigned to the date and <em class="emphasis">sequential date</em> in the year (so January 31 is sequential date 31, February 1 is sequential date 32, and so on).</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>In a perfectly fair, random lottery, what should be the value of the correlation coefficient between draft number and sequential date of birthday?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The figure below displays a scatterplot of the assigned draft numbers and the sequential dates. There are 366 dots, one for each day of the (leap) year.</p></div></section><section><h3>Figure 1:</h3>
+<div align="left"> <figure class="figure figure-like" id="fig-11-2-draft-numbers"><img height="800" src="../code/assets/11-2/draft_numbers.png"/><figcaption>A scatterplot of the draft numbers by sequential days of the year</figcaption></figure>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Let’s take a look at the scatterplot in the figure.</p>
+</div></section><section><h3>Exercise 2a:</h3>
+<div align="left"> <p>Does the scatterplot reveal much of an association between draft number and sequential date?</p>
+</div></section><section><h3>Exercise 2b:</h3>
+<div align="left"> <p>Based on the scatterplot, guess the value of the correlation coefficient.</p>
+</div></section><section><h3>Exercise 2c:</h3>
+<div align="left"> <p>Does it appear that this was a fair, random lottery?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>It’s difficult to see much of a pattern or association in the scatterplot, so it seems reasonable to conclude that this was a fair, random lottery with a correlation coefficient near zero. But let’s dig a little deeper:</p></div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>The 1970 Draft Lottery data sheet below shows the draft number assigned to each of the 366 birthdays.</p> <section><h3>Table 2:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Date</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jan</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Feb</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Mar</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Apr</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">May</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jun</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jul</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Aug</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Sep</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Oct</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Nov</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Dec</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">305</td>
+<td class="l m b0 r0 l0 t0 lines">86</td>
+<td class="l m b0 r0 l0 t0 lines">108</td>
+<td class="l m b0 r0 l0 t0 lines">32</td>
+<td class="l m b0 r0 l0 t0 lines">330</td>
+<td class="l m b0 r0 l0 t0 lines">249</td>
+<td class="l m b0 r0 l0 t0 lines">93</td>
+<td class="l m b0 r0 l0 t0 lines">111</td>
+<td class="l m b0 r0 l0 t0 lines">225</td>
+<td class="l m b0 r0 l0 t0 lines">359</td>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">129</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">159</td>
+<td class="l m b0 r0 l0 t0 lines">144</td>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">271</td>
+<td class="l m b0 r0 l0 t0 lines">298</td>
+<td class="l m b0 r0 l0 t0 lines">228</td>
+<td class="l m b0 r0 l0 t0 lines">350</td>
+<td class="l m b0 r0 l0 t0 lines">45</td>
+<td class="l m b0 r0 l0 t0 lines">161</td>
+<td class="l m b0 r0 l0 t0 lines">125</td>
+<td class="l m b0 r0 l0 t0 lines">34</td>
+<td class="l m b0 r0 l0 t0 lines">328</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">251</td>
+<td class="l m b0 r0 l0 t0 lines">297</td>
+<td class="l m b0 r0 l0 t0 lines">267</td>
+<td class="l m b0 r0 l0 t0 lines">83</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">301</td>
+<td class="l m b0 r0 l0 t0 lines">115</td>
+<td class="l m b0 r0 l0 t0 lines">261</td>
+<td class="l m b0 r0 l0 t0 lines">49</td>
+<td class="l m b0 r0 l0 t0 lines">244</td>
+<td class="l m b0 r0 l0 t0 lines">348</td>
+<td class="l m b0 r0 l0 t0 lines">157</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">215</td>
+<td class="l m b0 r0 l0 t0 lines">210</td>
+<td class="l m b0 r0 l0 t0 lines">275</td>
+<td class="l m b0 r0 l0 t0 lines">81</td>
+<td class="l m b0 r0 l0 t0 lines">276</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">279</td>
+<td class="l m b0 r0 l0 t0 lines">145</td>
+<td class="l m b0 r0 l0 t0 lines">232</td>
+<td class="l m b0 r0 l0 t0 lines">202</td>
+<td class="l m b0 r0 l0 t0 lines">266</td>
+<td class="l m b0 r0 l0 t0 lines">165</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">101</td>
+<td class="l m b0 r0 l0 t0 lines">214</td>
+<td class="l m b0 r0 l0 t0 lines">293</td>
+<td class="l m b0 r0 l0 t0 lines">269</td>
+<td class="l m b0 r0 l0 t0 lines">364</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">54</td>
+<td class="l m b0 r0 l0 t0 lines">82</td>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">310</td>
+<td class="l m b0 r0 l0 t0 lines">56</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">224</td>
+<td class="l m b0 r0 l0 t0 lines">347</td>
+<td class="l m b0 r0 l0 t0 lines">139</td>
+<td class="l m b0 r0 l0 t0 lines">253</td>
+<td class="l m b0 r0 l0 t0 lines">155</td>
+<td class="l m b0 r0 l0 t0 lines">110</td>
+<td class="l m b0 r0 l0 t0 lines">327</td>
+<td class="l m b0 r0 l0 t0 lines">114</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">87</td>
+<td class="l m b0 r0 l0 t0 lines">76</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">306</td>
+<td class="l m b0 r0 l0 t0 lines">91</td>
+<td class="l m b0 r0 l0 t0 lines">122</td>
+<td class="l m b0 r0 l0 t0 lines">147</td>
+<td class="l m b0 r0 l0 t0 lines">35</td>
+<td class="l m b0 r0 l0 t0 lines">85</td>
+<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines">168</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">234</td>
+<td class="l m b0 r0 l0 t0 lines">51</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">199</td>
+<td class="l m b0 r0 l0 t0 lines">181</td>
+<td class="l m b0 r0 l0 t0 lines">213</td>
+<td class="l m b0 r0 l0 t0 lines">312</td>
+<td class="l m b0 r0 l0 t0 lines">321</td>
+<td class="l m b0 r0 l0 t0 lines">366</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">48</td>
+<td class="l m b0 r0 l0 t0 lines">184</td>
+<td class="l m b0 r0 l0 t0 lines">283</td>
+<td class="l m b0 r0 l0 t0 lines">97</td>
+<td class="l m b0 r0 l0 t0 lines">105</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">194</td>
+<td class="l m b0 r0 l0 t0 lines">338</td>
+<td class="l m b0 r0 l0 t0 lines">317</td>
+<td class="l m b0 r0 l0 t0 lines">219</td>
+<td class="l m b0 r0 l0 t0 lines">197</td>
+<td class="l m b0 r0 l0 t0 lines">335</td>
+<td class="l m b0 r0 l0 t0 lines">277</td>
+<td class="l m b0 r0 l0 t0 lines">106</td>
+<td class="l m b0 r0 l0 t0 lines">263</td>
+<td class="l m b0 r0 l0 t0 lines">342</td>
+<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines">43</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">325</td>
+<td class="l m b0 r0 l0 t0 lines">216</td>
+<td class="l m b0 r0 l0 t0 lines">323</td>
+<td class="l m b0 r0 l0 t0 lines">218</td>
+<td class="l m b0 r0 l0 t0 lines">65</td>
+<td class="l m b0 r0 l0 t0 lines">206</td>
+<td class="l m b0 r0 l0 t0 lines">284</td>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">71</td>
+<td class="l m b0 r0 l0 t0 lines">220</td>
+<td class="l m b0 r0 l0 t0 lines">282</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">329</td>
+<td class="l m b0 r0 l0 t0 lines">150</td>
+<td class="l m b0 r0 l0 t0 lines">136</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">37</td>
+<td class="l m b0 r0 l0 t0 lines">134</td>
+<td class="l m b0 r0 l0 t0 lines">248</td>
+<td class="l m b0 r0 l0 t0 lines">324</td>
+<td class="l m b0 r0 l0 t0 lines">158</td>
+<td class="l m b0 r0 l0 t0 lines">237</td>
+<td class="l m b0 r0 l0 t0 lines">46</td>
+<td class="l m b0 r0 l0 t0 lines">39</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">221</td>
+<td class="l m b0 r0 l0 t0 lines">68</td>
+<td class="l m b0 r0 l0 t0 lines">300</td>
+<td class="l m b0 r0 l0 t0 lines">346</td>
+<td class="l m b0 r0 l0 t0 lines">133</td>
+<td class="l m b0 r0 l0 t0 lines">272</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">142</td>
+<td class="l m b0 r0 l0 t0 lines">242</td>
+<td class="l m b0 r0 l0 t0 lines">72</td>
+<td class="l m b0 r0 l0 t0 lines">66</td>
+<td class="l m b0 r0 l0 t0 lines">314</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">318</td>
+<td class="l m b0 r0 l0 t0 lines">152</td>
+<td class="l m b0 r0 l0 t0 lines">259</td>
+<td class="l m b0 r0 l0 t0 lines">124</td>
+<td class="l m b0 r0 l0 t0 lines">295</td>
+<td class="l m b0 r0 l0 t0 lines">69</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+<td class="l m b0 r0 l0 t0 lines">307</td>
+<td class="l m b0 r0 l0 t0 lines">175</td>
+<td class="l m b0 r0 l0 t0 lines">138</td>
+<td class="l m b0 r0 l0 t0 lines">126</td>
+<td class="l m b0 r0 l0 t0 lines">163</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">238</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">354</td>
+<td class="l m b0 r0 l0 t0 lines">231</td>
+<td class="l m b0 r0 l0 t0 lines">178</td>
+<td class="l m b0 r0 l0 t0 lines">356</td>
+<td class="l m b0 r0 l0 t0 lines">331</td>
+<td class="l m b0 r0 l0 t0 lines">198</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">294</td>
+<td class="l m b0 r0 l0 t0 lines">127</td>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">89</td>
+<td class="l m b0 r0 l0 t0 lines">169</td>
+<td class="l m b0 r0 l0 t0 lines">273</td>
+<td class="l m b0 r0 l0 t0 lines">130</td>
+<td class="l m b0 r0 l0 t0 lines">180</td>
+<td class="l m b0 r0 l0 t0 lines">322</td>
+<td class="l m b0 r0 l0 t0 lines">102</td>
+<td class="l m b0 r0 l0 t0 lines">113</td>
+<td class="l m b0 r0 l0 t0 lines">171</td>
+<td class="l m b0 r0 l0 t0 lines">131</td>
+<td class="l m b0 r0 l0 t0 lines">320</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">121</td>
+<td class="l m b0 r0 l0 t0 lines">212</td>
+<td class="l m b0 r0 l0 t0 lines">166</td>
+<td class="l m b0 r0 l0 t0 lines">148</td>
+<td class="l m b0 r0 l0 t0 lines">55</td>
+<td class="l m b0 r0 l0 t0 lines">274</td>
+<td class="l m b0 r0 l0 t0 lines">120</td>
+<td class="l m b0 r0 l0 t0 lines">44</td>
+<td class="l m b0 r0 l0 t0 lines">207</td>
+<td class="l m b0 r0 l0 t0 lines">254</td>
+<td class="l m b0 r0 l0 t0 lines">107</td>
+<td class="l m b0 r0 l0 t0 lines">96</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">235</td>
+<td class="l m b0 r0 l0 t0 lines">189</td>
+<td class="l m b0 r0 l0 t0 lines">33</td>
+<td class="l m b0 r0 l0 t0 lines">260</td>
+<td class="l m b0 r0 l0 t0 lines">112</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">98</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">255</td>
+<td class="l m b0 r0 l0 t0 lines">288</td>
+<td class="l m b0 r0 l0 t0 lines">143</td>
+<td class="l m b0 r0 l0 t0 lines">304</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">140</td>
+<td class="l m b0 r0 l0 t0 lines">292</td>
+<td class="l m b0 r0 l0 t0 lines">332</td>
+<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines">278</td>
+<td class="l m b0 r0 l0 t0 lines">341</td>
+<td class="l m b0 r0 l0 t0 lines">190</td>
+<td class="l m b0 r0 l0 t0 lines">141</td>
+<td class="l m b0 r0 l0 t0 lines">246</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">146</td>
+<td class="l m b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">58</td>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">200</td>
+<td class="l m b0 r0 l0 t0 lines">336</td>
+<td class="l m b0 r0 l0 t0 lines">75</td>
+<td class="l m b0 r0 l0 t0 lines">104</td>
+<td class="l m b0 r0 l0 t0 lines">227</td>
+<td class="l m b0 r0 l0 t0 lines">311</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">241</td>
+<td class="l m b0 r0 l0 t0 lines">203</td>
+<td class="l m b0 r0 l0 t0 lines">240</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">280</td>
+<td class="l m b0 r0 l0 t0 lines">302</td>
+<td class="l m b0 r0 l0 t0 lines">239</td>
+<td class="l m b0 r0 l0 t0 lines">345</td>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">360</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">344</td>
+<td class="l m b0 r0 l0 t0 lines">63</td>
+<td class="l m b0 r0 l0 t0 lines">192</td>
+<td class="l m b0 r0 l0 t0 lines">185</td>
+<td class="l m b0 r0 l0 t0 lines">135</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">186</td>
+<td class="l m b0 r0 l0 t0 lines">363</td>
+<td class="l m b0 r0 l0 t0 lines">334</td>
+<td class="l m b0 r0 l0 t0 lines">62</td>
+<td class="l m b0 r0 l0 t0 lines">250</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">291</td>
+<td class="l m b0 r0 l0 t0 lines">204</td>
+<td class="l m b0 r0 l0 t0 lines">243</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">70</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">337</td>
+<td class="l m b0 r0 l0 t0 lines">290</td>
+<td class="l m b0 r0 l0 t0 lines">265</td>
+<td class="l m b0 r0 l0 t0 lines">316</td>
+<td class="l m b0 r0 l0 t0 lines">326</td>
+<td class="l m b0 r0 l0 t0 lines">247</td>
+<td class="l m b0 r0 l0 t0 lines">153</td>
+<td class="l m b0 r0 l0 t0 lines">339</td>
+<td class="l m b0 r0 l0 t0 lines">160</td>
+<td class="l m b0 r0 l0 t0 lines">117</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">53</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">118</td>
+<td class="l m b0 r0 l0 t0 lines">57</td>
+<td class="l m b0 r0 l0 t0 lines">256</td>
+<td class="l m b0 r0 l0 t0 lines">252</td>
+<td class="l m b0 r0 l0 t0 lines">319</td>
+<td class="l m b0 r0 l0 t0 lines">109</td>
+<td class="l m b0 r0 l0 t0 lines">172</td>
+<td class="l m b0 r0 l0 t0 lines">116</td>
+<td class="l m b0 r0 l0 t0 lines">119</td>
+<td class="l m b0 r0 l0 t0 lines">201</td>
+<td class="l m b0 r0 l0 t0 lines">182</td>
+<td class="l m b0 r0 l0 t0 lines">162</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">59</td>
+<td class="l m b0 r0 l0 t0 lines">236</td>
+<td class="l m b0 r0 l0 t0 lines">258</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">358</td>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+<td class="l m b0 r0 l0 t0 lines">195</td>
+<td class="l m b0 r0 l0 t0 lines">196</td>
+<td class="l m b0 r0 l0 t0 lines">230</td>
+<td class="l m b0 r0 l0 t0 lines">95</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">52</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">343</td>
+<td class="l m b0 r0 l0 t0 lines">351</td>
+<td class="l m b0 r0 l0 t0 lines">361</td>
+<td class="l m b0 r0 l0 t0 lines">137</td>
+<td class="l m b0 r0 l0 t0 lines">67</td>
+<td class="l m b0 r0 l0 t0 lines">286</td>
+<td class="l m b0 r0 l0 t0 lines">149</td>
+<td class="l m b0 r0 l0 t0 lines">176</td>
+<td class="l m b0 r0 l0 t0 lines">132</td>
+<td class="l m b0 r0 l0 t0 lines">84</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+<td class="l m b0 r0 l0 t0 lines">92</td>
+<td class="l m b0 r0 l0 t0 lines">365</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">340</td>
+<td class="l m b0 r0 l0 t0 lines">357</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">303</td>
+<td class="l m b0 r0 l0 t0 lines">245</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">309</td>
+<td class="l m b0 r0 l0 t0 lines">173</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">355</td>
+<td class="l m b0 r0 l0 t0 lines">205</td>
+<td class="l m b0 r0 l0 t0 lines">268</td>
+<td class="l m b0 r0 l0 t0 lines">74</td>
+<td class="l m b0 r0 l0 t0 lines">296</td>
+<td class="l m b0 r0 l0 t0 lines">64</td>
+<td class="l m b0 r0 l0 t0 lines">289</td>
+<td class="l m b0 r0 l0 t0 lines">352</td>
+<td class="l m b0 r0 l0 t0 lines">233</td>
+<td class="l m b0 r0 l0 t0 lines">264</td>
+<td class="l m b0 r0 l0 t0 lines">47</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">77</td>
+<td class="l m b0 r0 l0 t0 lines">299</td>
+<td class="l m b0 r0 l0 t0 lines">223</td>
+<td class="l m b0 r0 l0 t0 lines">262</td>
+<td class="l m b0 r0 l0 t0 lines">308</td>
+<td class="l m b0 r0 l0 t0 lines">222</td>
+<td class="l m b0 r0 l0 t0 lines">88</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">257</td>
+<td class="l m b0 r0 l0 t0 lines">94</td>
+<td class="l m b0 r0 l0 t0 lines">281</td>
+<td class="l m b0 r0 l0 t0 lines">123</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">349</td>
+<td class="l m b0 r0 l0 t0 lines">285</td>
+<td class="l m b0 r0 l0 t0 lines">362</td>
+<td class="l m b0 r0 l0 t0 lines">191</td>
+<td class="l m b0 r0 l0 t0 lines">226</td>
+<td class="l m b0 r0 l0 t0 lines">353</td>
+<td class="l m b0 r0 l0 t0 lines">270</td>
+<td class="l m b0 r0 l0 t0 lines">61</td>
+<td class="l m b0 r0 l0 t0 lines">151</td>
+<td class="l m b0 r0 l0 t0 lines">229</td>
+<td class="l m b0 r0 l0 t0 lines">99</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">164</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">217</td>
+<td class="l m b0 r0 l0 t0 lines">208</td>
+<td class="l m b0 r0 l0 t0 lines">103</td>
+<td class="l m b0 r0 l0 t0 lines">209</td>
+<td class="l m b0 r0 l0 t0 lines">287</td>
+<td class="l m b0 r0 l0 t0 lines">333</td>
+<td class="l m b0 r0 l0 t0 lines">315</td>
+<td class="l m b0 r0 l0 t0 lines">38</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">211</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">313</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">193</td>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">79</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section><section><h3>Exercise 3a:</h3>
+<div align="left"> <p>Find and report the draft number assigned to your birthday.</p>
+</div></section><section><h3>Exercise 3b:</h3>
+<div align="left"> <p>Is your draft number in the bottom third (1–122), middle third (123–244), or top third (245–366)?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>This second table has the draft numbers in order for each month.</p> <section><h3>Table 3:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Rank</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jan</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Feb</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Mar</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Apr</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">May</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jun</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jul</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Aug</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Sep</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Oct</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Nov</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Dec</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">52</td>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">35</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">58</td>
+<td class="l m b0 r0 l0 t0 lines">57</td>
+<td class="l m b0 r0 l0 t0 lines">33</td>
+<td class="l m b0 r0 l0 t0 lines">32</td>
+<td class="l m b0 r0 l0 t0 lines">37</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">34</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">59</td>
+<td class="l m b0 r0 l0 t0 lines">68</td>
+<td class="l m b0 r0 l0 t0 lines">108</td>
+<td class="l m b0 r0 l0 t0 lines">62</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">44</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">38</td>
+<td class="l m b0 r0 l0 t0 lines">46</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">77</td>
+<td class="l m b0 r0 l0 t0 lines">86</td>
+<td class="l m b0 r0 l0 t0 lines">122</td>
+<td class="l m b0 r0 l0 t0 lines">74</td>
+<td class="l m b0 r0 l0 t0 lines">55</td>
+<td class="l m b0 r0 l0 t0 lines">64</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+<td class="l m b0 r0 l0 t0 lines">45</td>
+<td class="l m b0 r0 l0 t0 lines">49</td>
+<td class="l m b0 r0 l0 t0 lines">72</td>
+<td class="l m b0 r0 l0 t0 lines">47</td>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">92</td>
+<td class="l m b0 r0 l0 t0 lines">89</td>
+<td class="l m b0 r0 l0 t0 lines">136</td>
+<td class="l m b0 r0 l0 t0 lines">81</td>
+<td class="l m b0 r0 l0 t0 lines">65</td>
+<td class="l m b0 r0 l0 t0 lines">69</td>
+<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines">48</td>
+<td class="l m b0 r0 l0 t0 lines">63</td>
+<td class="l m b0 r0 l0 t0 lines">79</td>
+<td class="l m b0 r0 l0 t0 lines">51</td>
+<td class="l m b0 r0 l0 t0 lines">39</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">101</td>
+<td class="l m b0 r0 l0 t0 lines">91</td>
+<td class="l m b0 r0 l0 t0 lines">139</td>
+<td class="l m b0 r0 l0 t0 lines">83</td>
+<td class="l m b0 r0 l0 t0 lines">75</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">67</td>
+<td class="l m b0 r0 l0 t0 lines">54</td>
+<td class="l m b0 r0 l0 t0 lines">71</td>
+<td class="l m b0 r0 l0 t0 lines">87</td>
+<td class="l m b0 r0 l0 t0 lines">66</td>
+<td class="l m b0 r0 l0 t0 lines">41</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">118</td>
+<td class="l m b0 r0 l0 t0 lines">144</td>
+<td class="l m b0 r0 l0 t0 lines">166</td>
+<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines">103</td>
+<td class="l m b0 r0 l0 t0 lines">85</td>
+<td class="l m b0 r0 l0 t0 lines">88</td>
+<td class="l m b0 r0 l0 t0 lines">61</td>
+<td class="l m b0 r0 l0 t0 lines">82</td>
+<td class="l m b0 r0 l0 t0 lines">94</td>
+<td class="l m b0 r0 l0 t0 lines">76</td>
+<td class="l m b0 r0 l0 t0 lines">43</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">121</td>
+<td class="l m b0 r0 l0 t0 lines">150</td>
+<td class="l m b0 r0 l0 t0 lines">169</td>
+<td class="l m b0 r0 l0 t0 lines">124</td>
+<td class="l m b0 r0 l0 t0 lines">112</td>
+<td class="l m b0 r0 l0 t0 lines">104</td>
+<td class="l m b0 r0 l0 t0 lines">93</td>
+<td class="l m b0 r0 l0 t0 lines">102</td>
+<td class="l m b0 r0 l0 t0 lines">113</td>
+<td class="l m b0 r0 l0 t0 lines">117</td>
+<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines">53</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">140</td>
+<td class="l m b0 r0 l0 t0 lines">152</td>
+<td class="l m b0 r0 l0 t0 lines">170</td>
+<td class="l m b0 r0 l0 t0 lines">147</td>
+<td class="l m b0 r0 l0 t0 lines">130</td>
+<td class="l m b0 r0 l0 t0 lines">109</td>
+<td class="l m b0 r0 l0 t0 lines">98</td>
+<td class="l m b0 r0 l0 t0 lines">106</td>
+<td class="l m b0 r0 l0 t0 lines">119</td>
+<td class="l m b0 r0 l0 t0 lines">125</td>
+<td class="l m b0 r0 l0 t0 lines">97</td>
+<td class="l m b0 r0 l0 t0 lines">56</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">159</td>
+<td class="l m b0 r0 l0 t0 lines">179</td>
+<td class="l m b0 r0 l0 t0 lines">200</td>
+<td class="l m b0 r0 l0 t0 lines">148</td>
+<td class="l m b0 r0 l0 t0 lines">133</td>
+<td class="l m b0 r0 l0 t0 lines">110</td>
+<td class="l m b0 r0 l0 t0 lines">115</td>
+<td class="l m b0 r0 l0 t0 lines">111</td>
+<td class="l m b0 r0 l0 t0 lines">149</td>
+<td class="l m b0 r0 l0 t0 lines">138</td>
+<td class="l m b0 r0 l0 t0 lines">99</td>
+<td class="l m b0 r0 l0 t0 lines">70</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">164</td>
+<td class="l m b0 r0 l0 t0 lines">181</td>
+<td class="l m b0 r0 l0 t0 lines">213</td>
+<td class="l m b0 r0 l0 t0 lines">191</td>
+<td class="l m b0 r0 l0 t0 lines">155</td>
+<td class="l m b0 r0 l0 t0 lines">134</td>
+<td class="l m b0 r0 l0 t0 lines">120</td>
+<td class="l m b0 r0 l0 t0 lines">114</td>
+<td class="l m b0 r0 l0 t0 lines">151</td>
+<td class="l m b0 r0 l0 t0 lines">171</td>
+<td class="l m b0 r0 l0 t0 lines">107</td>
+<td class="l m b0 r0 l0 t0 lines">78</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">186</td>
+<td class="l m b0 r0 l0 t0 lines">189</td>
+<td class="l m b0 r0 l0 t0 lines">217</td>
+<td class="l m b0 r0 l0 t0 lines">208</td>
+<td class="l m b0 r0 l0 t0 lines">178</td>
+<td class="l m b0 r0 l0 t0 lines">137</td>
+<td class="l m b0 r0 l0 t0 lines">153</td>
+<td class="l m b0 r0 l0 t0 lines">116</td>
+<td class="l m b0 r0 l0 t0 lines">158</td>
+<td class="l m b0 r0 l0 t0 lines">176</td>
+<td class="l m b0 r0 l0 t0 lines">126</td>
+<td class="l m b0 r0 l0 t0 lines">84</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">194</td>
+<td class="l m b0 r0 l0 t0 lines">205</td>
+<td class="l m b0 r0 l0 t0 lines">223</td>
+<td class="l m b0 r0 l0 t0 lines">218</td>
+<td class="l m b0 r0 l0 t0 lines">183</td>
+<td class="l m b0 r0 l0 t0 lines">180</td>
+<td class="l m b0 r0 l0 t0 lines">172</td>
+<td class="l m b0 r0 l0 t0 lines">141</td>
+<td class="l m b0 r0 l0 t0 lines">160</td>
+<td class="l m b0 r0 l0 t0 lines">192</td>
+<td class="l m b0 r0 l0 t0 lines">127</td>
+<td class="l m b0 r0 l0 t0 lines">95</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">199</td>
+<td class="l m b0 r0 l0 t0 lines">210</td>
+<td class="l m b0 r0 l0 t0 lines">239</td>
+<td class="l m b0 r0 l0 t0 lines">219</td>
+<td class="l m b0 r0 l0 t0 lines">197</td>
+<td class="l m b0 r0 l0 t0 lines">206</td>
+<td class="l m b0 r0 l0 t0 lines">187</td>
+<td class="l m b0 r0 l0 t0 lines">142</td>
+<td class="l m b0 r0 l0 t0 lines">161</td>
+<td class="l m b0 r0 l0 t0 lines">196</td>
+<td class="l m b0 r0 l0 t0 lines">131</td>
+<td class="l m b0 r0 l0 t0 lines">96</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">211</td>
+<td class="l m b0 r0 l0 t0 lines">212</td>
+<td class="l m b0 r0 l0 t0 lines">256</td>
+<td class="l m b0 r0 l0 t0 lines">231</td>
+<td class="l m b0 r0 l0 t0 lines">226</td>
+<td class="l m b0 r0 l0 t0 lines">209</td>
+<td class="l m b0 r0 l0 t0 lines">188</td>
+<td class="l m b0 r0 l0 t0 lines">145</td>
+<td class="l m b0 r0 l0 t0 lines">175</td>
+<td class="l m b0 r0 l0 t0 lines">201</td>
+<td class="l m b0 r0 l0 t0 lines">132</td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">17</td>
+<td class="l m b0 r0 l0 t0 lines">215</td>
+<td class="l m b0 r0 l0 t0 lines">214</td>
+<td class="l m b0 r0 l0 t0 lines">258</td>
+<td class="l m b0 r0 l0 t0 lines">252</td>
+<td class="l m b0 r0 l0 t0 lines">250</td>
+<td class="l m b0 r0 l0 t0 lines">222</td>
+<td class="l m b0 r0 l0 t0 lines">190</td>
+<td class="l m b0 r0 l0 t0 lines">154</td>
+<td class="l m b0 r0 l0 t0 lines">177</td>
+<td class="l m b0 r0 l0 t0 lines">202</td>
+<td class="l m b0 r0 l0 t0 lines">143</td>
+<td class="l m b0 r0 l0 t0 lines">105</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">221</td>
+<td class="l m b0 r0 l0 t0 lines">216</td>
+<td class="l m b0 r0 l0 t0 lines">259</td>
+<td class="l m b0 r0 l0 t0 lines">253</td>
+<td class="l m b0 r0 l0 t0 lines">276</td>
+<td class="l m b0 r0 l0 t0 lines">228</td>
+<td class="l m b0 r0 l0 t0 lines">193</td>
+<td class="l m b0 r0 l0 t0 lines">167</td>
+<td class="l m b0 r0 l0 t0 lines">184</td>
+<td class="l m b0 r0 l0 t0 lines">220</td>
+<td class="l m b0 r0 l0 t0 lines">146</td>
+<td class="l m b0 r0 l0 t0 lines">123</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">224</td>
+<td class="l m b0 r0 l0 t0 lines">236</td>
+<td class="l m b0 r0 l0 t0 lines">265</td>
+<td class="l m b0 r0 l0 t0 lines">260</td>
+<td class="l m b0 r0 l0 t0 lines">278</td>
+<td class="l m b0 r0 l0 t0 lines">247</td>
+<td class="l m b0 r0 l0 t0 lines">227</td>
+<td class="l m b0 r0 l0 t0 lines">168</td>
+<td class="l m b0 r0 l0 t0 lines">195</td>
+<td class="l m b0 r0 l0 t0 lines">229</td>
+<td class="l m b0 r0 l0 t0 lines">156</td>
+<td class="l m b0 r0 l0 t0 lines">128</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">235</td>
+<td class="l m b0 r0 l0 t0 lines">285</td>
+<td class="l m b0 r0 l0 t0 lines">267</td>
+<td class="l m b0 r0 l0 t0 lines">262</td>
+<td class="l m b0 r0 l0 t0 lines">295</td>
+<td class="l m b0 r0 l0 t0 lines">249</td>
+<td class="l m b0 r0 l0 t0 lines">248</td>
+<td class="l m b0 r0 l0 t0 lines">198</td>
+<td class="l m b0 r0 l0 t0 lines">204</td>
+<td class="l m b0 r0 l0 t0 lines">234</td>
+<td class="l m b0 r0 l0 t0 lines">174</td>
+<td class="l m b0 r0 l0 t0 lines">129</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">21</td>
+<td class="l m b0 r0 l0 t0 lines">238</td>
+<td class="l m b0 r0 l0 t0 lines">290</td>
+<td class="l m b0 r0 l0 t0 lines">268</td>
+<td class="l m b0 r0 l0 t0 lines">269</td>
+<td class="l m b0 r0 l0 t0 lines">296</td>
+<td class="l m b0 r0 l0 t0 lines">272</td>
+<td class="l m b0 r0 l0 t0 lines">270</td>
+<td class="l m b0 r0 l0 t0 lines">245</td>
+<td class="l m b0 r0 l0 t0 lines">207</td>
+<td class="l m b0 r0 l0 t0 lines">237</td>
+<td class="l m b0 r0 l0 t0 lines">182</td>
+<td class="l m b0 r0 l0 t0 lines">135</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">251</td>
+<td class="l m b0 r0 l0 t0 lines">292</td>
+<td class="l m b0 r0 l0 t0 lines">275</td>
+<td class="l m b0 r0 l0 t0 lines">271</td>
+<td class="l m b0 r0 l0 t0 lines">298</td>
+<td class="l m b0 r0 l0 t0 lines">274</td>
+<td class="l m b0 r0 l0 t0 lines">277</td>
+<td class="l m b0 r0 l0 t0 lines">261</td>
+<td class="l m b0 r0 l0 t0 lines">225</td>
+<td class="l m b0 r0 l0 t0 lines">241</td>
+<td class="l m b0 r0 l0 t0 lines">185</td>
+<td class="l m b0 r0 l0 t0 lines">157</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">23</td>
+<td class="l m b0 r0 l0 t0 lines">280</td>
+<td class="l m b0 r0 l0 t0 lines">297</td>
+<td class="l m b0 r0 l0 t0 lines">293</td>
+<td class="l m b0 r0 l0 t0 lines">273</td>
+<td class="l m b0 r0 l0 t0 lines">308</td>
+<td class="l m b0 r0 l0 t0 lines">301</td>
+<td class="l m b0 r0 l0 t0 lines">279</td>
+<td class="l m b0 r0 l0 t0 lines">286</td>
+<td class="l m b0 r0 l0 t0 lines">232</td>
+<td class="l m b0 r0 l0 t0 lines">243</td>
+<td class="l m b0 r0 l0 t0 lines">203</td>
+<td class="l m b0 r0 l0 t0 lines">162</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+<td class="l m b0 r0 l0 t0 lines">305</td>
+<td class="l m b0 r0 l0 t0 lines">299</td>
+<td class="l m b0 r0 l0 t0 lines">300</td>
+<td class="l m b0 r0 l0 t0 lines">312</td>
+<td class="l m b0 r0 l0 t0 lines">313</td>
+<td class="l m b0 r0 l0 t0 lines">335</td>
+<td class="l m b0 r0 l0 t0 lines">284</td>
+<td class="l m b0 r0 l0 t0 lines">291</td>
+<td class="l m b0 r0 l0 t0 lines">233</td>
+<td class="l m b0 r0 l0 t0 lines">244</td>
+<td class="l m b0 r0 l0 t0 lines">230</td>
+<td class="l m b0 r0 l0 t0 lines">163</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">25</td>
+<td class="l m b0 r0 l0 t0 lines">306</td>
+<td class="l m b0 r0 l0 t0 lines">302</td>
+<td class="l m b0 r0 l0 t0 lines">317</td>
+<td class="l m b0 r0 l0 t0 lines">316</td>
+<td class="l m b0 r0 l0 t0 lines">319</td>
+<td class="l m b0 r0 l0 t0 lines">341</td>
+<td class="l m b0 r0 l0 t0 lines">287</td>
+<td class="l m b0 r0 l0 t0 lines">307</td>
+<td class="l m b0 r0 l0 t0 lines">242</td>
+<td class="l m b0 r0 l0 t0 lines">254</td>
+<td class="l m b0 r0 l0 t0 lines">266</td>
+<td class="l m b0 r0 l0 t0 lines">165</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">26</td>
+<td class="l m b0 r0 l0 t0 lines">318</td>
+<td class="l m b0 r0 l0 t0 lines">338</td>
+<td class="l m b0 r0 l0 t0 lines">323</td>
+<td class="l m b0 r0 l0 t0 lines">336</td>
+<td class="l m b0 r0 l0 t0 lines">321</td>
+<td class="l m b0 r0 l0 t0 lines">353</td>
+<td class="l m b0 r0 l0 t0 lines">289</td>
+<td class="l m b0 r0 l0 t0 lines">311</td>
+<td class="l m b0 r0 l0 t0 lines">246</td>
+<td class="l m b0 r0 l0 t0 lines">264</td>
+<td class="l m b0 r0 l0 t0 lines">281</td>
+<td class="l m b0 r0 l0 t0 lines">173</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">27</td>
+<td class="l m b0 r0 l0 t0 lines">325</td>
+<td class="l m b0 r0 l0 t0 lines">347</td>
+<td class="l m b0 r0 l0 t0 lines">332</td>
+<td class="l m b0 r0 l0 t0 lines">340</td>
+<td class="l m b0 r0 l0 t0 lines">326</td>
+<td class="l m b0 r0 l0 t0 lines">356</td>
+<td class="l m b0 r0 l0 t0 lines">303</td>
+<td class="l m b0 r0 l0 t0 lines">324</td>
+<td class="l m b0 r0 l0 t0 lines">255</td>
+<td class="l m b0 r0 l0 t0 lines">283</td>
+<td class="l m b0 r0 l0 t0 lines">282</td>
+<td class="l m b0 r0 l0 t0 lines">240</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">329</td>
+<td class="l m b0 r0 l0 t0 lines">363</td>
+<td class="l m b0 r0 l0 t0 lines">334</td>
+<td class="l m b0 r0 l0 t0 lines">345</td>
+<td class="l m b0 r0 l0 t0 lines">330</td>
+<td class="l m b0 r0 l0 t0 lines">358</td>
+<td class="l m b0 r0 l0 t0 lines">322</td>
+<td class="l m b0 r0 l0 t0 lines">333</td>
+<td class="l m b0 r0 l0 t0 lines">257</td>
+<td class="l m b0 r0 l0 t0 lines">288</td>
+<td class="l m b0 r0 l0 t0 lines">309</td>
+<td class="l m b0 r0 l0 t0 lines">304</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">29</td>
+<td class="l m b0 r0 l0 t0 lines">337</td>
+<td class="l m b0 r0 l0 t0 lines">365</td>
+<td class="l m b0 r0 l0 t0 lines">343</td>
+<td class="l m b0 r0 l0 t0 lines">346</td>
+<td class="l m b0 r0 l0 t0 lines">357</td>
+<td class="l m b0 r0 l0 t0 lines">360</td>
+<td class="l m b0 r0 l0 t0 lines">327</td>
+<td class="l m b0 r0 l0 t0 lines">339</td>
+<td class="l m b0 r0 l0 t0 lines">263</td>
+<td class="l m b0 r0 l0 t0 lines">294</td>
+<td class="l m b0 r0 l0 t0 lines">310</td>
+<td class="l m b0 r0 l0 t0 lines">314</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">349</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">354</td>
+<td class="l m b0 r0 l0 t0 lines">351</td>
+<td class="l m b0 r0 l0 t0 lines">361</td>
+<td class="l m b0 r0 l0 t0 lines">366</td>
+<td class="l m b0 r0 l0 t0 lines">331</td>
+<td class="l m b0 r0 l0 t0 lines">344</td>
+<td class="l m b0 r0 l0 t0 lines">315</td>
+<td class="l m b0 r0 l0 t0 lines">342</td>
+<td class="l m b0 r0 l0 t0 lines">348</td>
+<td class="l m b0 r0 l0 t0 lines">320</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">31</td>
+<td class="l m b0 r0 l0 t0 lines">355</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">362</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">364</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">350</td>
+<td class="l m b0 r0 l0 t0 lines">352</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">359</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">328</td>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section><section><h3>Exercise 4a:</h3>
+<div align="left"> <p>Use this table to determine the median draft number for your birth month.</p>
+</div></section><section><h3>Exercise 4b:</h3>
+<div align="left"> <p>Collaborate with your classmates to determine and report the median draft number for all 12 months.</p>
+</div></section><section><h3>Exercise 4c:</h3>
+<div align="left"> <p>Do you notice any pattern or trend in the median draft numbers over the course of the year? (Hint: If you do not see a trend, compare the six medians from January to June with the six medians from July to December.)</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>The correlation coefficient for the full dataset is <span class="process-math">\(r = -0.226\text{.}\)</span> What does this number reveal? Is it consistent with the scatterplot?</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Let’s think about how we would complete a test of significance for correlation.</p>
+</div></section><section><h3>Exercise 6a:</h3>
+<div align="left"> <p>Suggest two possible explanations (hypotheses) which could have generated the value of the nonzero correlation coefficient.</p>
+</div></section><section><h3>Exercise 6b:</h3>
+<div align="left"> <p>In your own words, how could we go about determining whether random chance is a plausible explanation for the observed correlation value between sequential date and draft number? Explain how the 3S strategy could be applied here, in particular identifying a simulation strategy you could conduct “by hand.” Note: You do not need to actually carry out a simulation analysis.</p>
+</div></section><section><h3>Exercise 6c:</h3>
+<div align="left"> <p>What is the statistic? How would you simulate? How would you evaluate the strength of evidence?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The null hypothesis to be tested is that the lottery was conducted with a fair, random process. The null hypothesis would therefore imply that there is <em class="emphasis">no</em> association between sequential date and draft number for this process. The alternative hypothesis is that this lottery was <em class="emphasis">not</em> conducted with a fair, random process, so there is an association between sequential date and draft number.</p></div></section><section><h3></h3>
+<div align="left"><p>How can we assess whether the observed correlation coefficient of <span class="process-math">\(r = -0.226\)</span> is far enough from zero to provide convincing evidence that the lottery process was not random? Like always, we ask how unlikely it would be for a fair, random lottery to produce a correlation value as far from zero as −0.226. Also like always, we answer that question by simulating a large number of fair random lotteries (a true null hypothesis), calculating the correlation coefficient for each one, and seeing how often we obtain a correlation coefficient as or more extreme (as far from zero) as -0.226.</p></div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2" target="_blank">Corr/Regression applet</a>. Copy the data from <a class="external" href="https://static-content2.zybooks.com/isi/data/chap10/DraftLottery.txt" target="_blank">DraftLottery</a> into the applet (remember to include the column titles). Check the Correlation Coefficient box and confirm that the correlation coefficient is -0.226.</p>
+</div></section><section><h3>Exercise 7a:</h3>
+<div align="left"> <p>Check the Show Shuffle Options box and select Correlation from the Statistic pull-down menu to the right to keep track of that statistic. Then press Shuffle Y-values to simulate one fair, random lottery. Record the value of the correlation coefficient between the shuffled draft numbers and sequential date.</p>
+</div></section><section><h3>Exercise 7b:</h3>
+<div align="left"> <p>Press Shuffle Y-values four more times to generate results of four more fair, random lotteries. Record the values of the shuffled correlation coefficients in a table.</p>
+</div></section><section><h3>Exercise 7c:</h3>
+<div align="left"> <p>Did any of your simulated statistics from fair, random lotteries produce a correlation coefficient as extreme (far from zero) as the observed -0.226?</p>
+</div></section><section><h3>Exercise 7d:</h3>
+<div align="left"> <p>Change the Number of Shuffles from 1 to 995 and press Shuffle Y-values to simulate 995 more fair, random lotteries. Look at the null distribution of these 1,000 correlation coefficients. Where is this distribution centered? Why does this make sense?</p>
+</div></section><section><h3>Exercise 7e:</h3>
+<div align="left"> <p>Next to the Count Samples box choose Beyond from the pull-down menu. Specify the observed correlation coefficient (-0.226) and press Count. What proportion, of the 1,000 simulated random lotteries produced a correlation coefficient as extreme (as far from zero in either direction) as -0.226? Report the approximate p-value.</p>
+</div></section><section><h3>Exercise 7f:</h3>
+<div align="left"> <p>Interpret this p-value: This is the probability of what, assuming what?</p>
+</div></section><section><h3>Exercise 7g:</h3>
+<div align="left"> <p>What conclusion would you draw from this p-value? Do you have strong evidence that the 1970 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion.</p>
+</div></section></section><section><section><h1>Exploring further</h1></section><section><h3></h3>
+<div align="left"><p>Once they saw these results, statisticians were quick to point out that something fishy happened with the 1970 draft lottery. The irregularity can be attributed to improper mixing of the balls used in the lottery drawing process. (Balls with birthdays early in the year were placed in the bin first, and balls with birthdays late in the year were placed in the bin last. Without thorough mixing, balls with birthdays late in the year settled near the top of the bin and so tended to be selected earlier.) The mixing process was changed for the 1971 draft lottery (e.g., two bins, one for the draft numbers and one for the birthdays), for which the correlation coefficient turned out to be r = 0.014.</p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Use your simulation results to approximate the p-value for the 1971 draft lottery. Is there any reason to suspect that this 1971 draft lottery was not conducted with a fair, random process? Explain the reasoning behind your conclusion. Also explain why you don’t need to paste in the data from the 1971 lottery first.</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:30:46-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>10-2 : Comparing multiple means: Theory-based approach</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>10-2 : Comparing multiple means: Theory-based approach</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Comparing popular diets</h1></section><section><h3></h3>
+<div align="left"><p>Because about two-thirds of Americans are considered overweight, weight loss is big business. There are many different types of diets, but do some work better than others? Is low fat better than low carb or is some combination best? Researchers (<a class="external" href="https://doi.org/10.1001/jama.297.9.969" target="_blank">Garnder et al. 2007</a>) conducted a study involving four popular diets: Atkins (very low carb), Zone (40:30:30 ratio of carbs, protein, fat), LEARN (high carbohydrate, low fat), and Ornish (low fat). They randomly assigned women aged 25-50 with a body mass index (BMI) of 27-40 (overweight and obese) to one of the four diets. The 311 women who volunteered for the program were educated on their assigned diet and were observed periodically as they stayed on the diet for a year. At the end of the year, the researchers calculated the change in BMI (e.g., negative means reduction in BMI) for each woman and compared the results across the four diets.</p></div></section></section><section><section><h1>Step 1: Ask a research question</h1></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>What is the overarching research question the researchers hoped to answer?</p>
+</div></section></section><section><section><h1>Step 2: Design a study and collect data</h1></section><section><h3>Exercise 2a:</h3>
+<div align="left"> <p>What are the observational units in this study?</p>
+</div></section><section><h3>Exercise 2b:</h3>
+<div align="left"> <p>Identify the explanatory and response variables. Classify them as categorical or quantitative. For categorical variables, indicate how many categories are used.</p>
+</div></section><section><h3>Exercise 3a:</h3>
+<div align="left"> <p>Does this study make use of random sampling, random assignment, both, or neither? What are the implications of your answer with regard to scope of inference?</p>
+</div></section><section><h3>Exercise 3b:</h3>
+<div align="left"> <p>Did the researchers collect the data as paired data or as independent samples? In other words, according to the study design, are the responses from one treatment group paired with or independent of the responses from other treatment groups?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>State the null and alternative hypotheses, both in words and symbols, for testing the research conjecture. (Recall that the response variable is change in BMI; positive values indicate an increase in BMI and negative values indicate a decrease in BMI from the beginning to the end of the study.)</p>
+</div></section></section><section><section><h1>Step 3: Explore the data</h1></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>The data for this investigation appear in a file called <a class="external" href="https://static-content2.zybooks.com/isi/data/chap9/Diets.txt" target="_blank">Diets</a>. Copy and paste the data into the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a>. (Recall that the response variable is change in BMI.) Press <em class="emphasis">Use Data</em>, and the applet will produce dotplots and summary statistics.</p>
+</div></section><section><h3>Exercise 5a:</h3>
+<div align="left"> <p>Report the mean and standard deviation of the BMI values in this sample.</p>
+</div></section><section><h3>Exercise 5b:</h3>
+<div align="left"> <p>Check the Show Groups box. You can also check the Boxplots box to overlay those as well. Report the means, standard deviations, and sample sizes for the change in BMI amounts for each diet.</p>
+</div></section><section><h3>Exercise 5c:</h3>
+<div align="left"> <p>Describe what the graphs and statistics reveal about whether the diets appear to differ with regard to change in BMI amounts and, if so, which diet appears to be best and which worst.</p>
+</div></section></section><section><section><h1>Step 4: Draw inferences beyond the data</h1></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Conduct a simulation-based randomization test, as was done in the last section, to compare the four group means using the mean of the absolute values of the group differences (Mean Group Diff) as the statistic. Report the observed value of this statistic. Then determine and report a p-value based on at least 1,000 shuffles.</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Based on this p-value, evaluate the strength of evidence against the null hypothesis provided by the experimental data. In other words, do the data provide strong evidence that at least one of the four diets differs with regard to average change in BMI?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Although the Mean Group Diff statistic is fairly easy to understand and calculate, it is not commonly used, in part because there is no theory-based model for the null distribution. Another downside is that the Mean Group Diff statistic is not standardized so it is not comparable across studies (e.g., a Mean Group Diff statistic of 1 in one study might be strong evidence but in another study might not show convincing evidence against the null hypothesis).</p></div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>Instead of comparing only the differences in means, a statistic could standardize those differences by comparing to the amount of within-group or natural variability in the response variable while also taking sample sizes into account.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>A much more commonly used statistic for comparing multiple groups on a quantitative response, which does have a theory-based distribution, is called an <dfn class="terminology">F-statistic</dfn>. As with the Mean Group Diff statistic, the F-statistic equals zero only when the group means are all identical. Otherwise the F-statistic is positive, with larger values indicating larger differences across the group means.</p></div></section><section><h3></h3>
+<div align="left"><p>The F-statistic (see Formula section at the end of Example 9.2 for details) is a ratio of “between-group” and “within-group” variability. Thus,<div class="displaymath process-math">
+\begin{equation*}
+F = \frac{\textbf{Between-group variability}}{\textbf{Within-group variability}}
+\end{equation*}
+</div></p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Select the <em class="emphasis">Statistic</em> pull-down menu above the null distribution to select <em class="emphasis">F-statistic</em>, and the null distribution changes from the Mean Group Diff statistic to the F-statistic.</p>
+</div></section><section><h3>Exercise 8a:</h3>
+<div align="left"> <p>Report the observed value of the F-statistic, which appears on the left side of the applet.</p>
+</div></section><section><h3>Exercise 8b:</h3>
+<div align="left"> <p>Use the simulation results and the observed value of the F-statistic to estimate the p-value.</p>
+</div></section><section><h3>Exercise 8c:</h3>
+<div align="left"> <p>Is this p-value similar to the one based on the Mean Group Diff statistic? Is your conclusion about strength of evidence the same with both statistics?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The F-statistic has a known theoretical distribution when the null hypothesis is true, called (surprisingly enough) an <dfn class="terminology">F-distribution</dfn>.</p></div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Check the box to Overlay F distribution.</p>
+</div></section><section><h3>Exercise 9a:</h3>
+<div align="left"> <p>Would you say there is good agreement between this theoretical prediction and your simulated null distribution?</p>
+</div></section><section><h3>Exercise 9b:</h3>
+<div align="left"> <p>How does the theory-based p-value compare to what you found in 
+  [REF=TODO]
+</p>
+</div></section><section><h3></h3>
+<div align="left"><p>But what does F = 3.80 really mean? Check the box by <em class="emphasis">Show ANOVA Table</em> to see more output related to the calculation of the value of the F-statistic.</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Confirm that the F-statistic is the ratio of the mean square for treatment to the mean square for error.  These are the numbers in the <code class="code-inline tex2jax_ignore">MS</code> column of the ANOVA table.  The mean square for treatment is in the <code class="code-inline tex2jax_ignore">Model</code> row, and the mean square for error is in the <code class="code-inline tex2jax_ignore">Error</code> row.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The next series of exercises will take a closer look at how the F-statistic is calculated.</p></div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Use the <a class="external" href="https://static-content.zybooks.com/applets/2021/descstats/Dotplot.htm?hideExtras=1" target="_blank">Descriptive Statistics applet</a> to find the standard deviation of the group averages:<ul class="disc">
+<li><p>Type in the four group means for the original data. (Clear the existing data first and uncheck the Includes header box.)</p></li>
+<li><p>Have the applet calculate the standard deviation of these four group means.</p></li>
+</ul></p>
+</div></section><section><h3>Exercise 11a:</h3>
+<div align="left"> <p>Report the number you found.</p>
+</div></section><section><h3>Exercise 11b:</h3>
+<div align="left"> <p>Write a one-sentence interpretation of this number you calculated.</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>To estimate the natural variation in these BMI values, we want to basically average the “within-group” variability across the four groups.</p>
+</div></section><section><h3>Exercise 12a:</h3>
+<div align="left"> <p>Take the four group standard deviations and average them. (You can again use the Descriptive Statistics applet.)</p>
+</div></section><section><h3>Exercise 12b:</h3>
+<div align="left"> <p>Write a one-sentence interpretation of this number.</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Now let <span class="process-math">\(s_{\bar{x_i}}\)</span> be your answer to 
+  [REF=TODO]
+ and let <span class="process-math">\(\bar{s_i}\)</span> be your answer to 
+  [REF=TODO]
+.</p>
+</div></section><section><h3>Exercise 13a:</h3>
+<div align="left"> <p>Calculate<div class="displaymath process-math">
+\begin{equation*}
+77.75 \times \frac{s_{\bar{x_i}^2}}{\bar{s_i}^2}.
+\end{equation*}
+</div>The 77.75 is the average of the group sizes.  Recall that variance is the squared of standard deviation.</p>
+</div></section><section><h3>Exercise 13b:</h3>
+<div align="left"> <p>Is your answer to part a above the approximately the same as your answer to 
+  [REF=TODO]
+?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Another way to summarize the usefulness of the explanatory variable, is the “coefficient of determination,” or <span class="process-math">\(R^2\)</span> value.</p></div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>The proportion of the variation in the response variable which is explained (accounted for) by the treatment (groups) is called<div class="displaymath process-math">
+\begin{equation*}
+R^2 = 1 - \frac{ \text{within-group variability}  }{ \text{total variability} } \text{.}
+\end{equation*}
+</div></p>
+</div>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Again let <span class="process-math">\(\bar{s_i}\)</span> be your answer to 
+  [REF=TODO]
+, and let <span class="process-math">\(s\)</span> be the standard deviation of all the BMI’s.</p>
+</div></section><section><h3>Exercise 14a:</h3>
+<div align="left"> <p>Compute<div class="displaymath process-math">
+\begin{equation*}
+R^2 \approx 1 - \frac{\bar{s_i}^2}{s^2}.
+\end{equation*}
+</div>This approximation works when the sizes of the groups are almost the same.  Again recall that variance is the square of standard deviation.</p>
+</div></section><section><h3>Exercise 14b:</h3>
+<div align="left"> <p><span class="process-math">\(R^2\)</span> is the proportion of the variability in BMI values that can be explained by diet type. Is the percentage of variation in BMI explained high (close to 100%) or low (close to 0%) in this case?</p>
+</div></section><section><h3>Exercise 14c:</h3>
+<div align="left"> <p>How much variability in BMI is “left over” (not explained by the type of diet)?</p>
+</div></section><section><h3>Exercise 14d:</h3>
+<div align="left"> <p>Even though we found our F-statistic to be statistically significant, what implications does our <span class="process-math">\(R^2\)</span> have interpreting our conclusions about the impact of the diets?</p>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>You have now calculated a p-value in three different ways, two using a simulation-based approach (but with different statistics: Mean Group Diff and F) and one using a theory-based approach (using the F-statistic). Are they all similar? What is your conclusion about whether the diets differ with regard to average BMI changes?</p>
+</div></section></section><section><section><h1>Follow-up analysis</h1></section><section><h3></h3>
+<div align="left"><p>The ANOVA F-test is an overall test. A significant test result tells us that we have strong evidence that at least one population mean is different from the others but does not tell us which one(s) differ from which other one(s). To determine this we need to apply a follow-up procedure to ANOVA. There are many different follow-up tests that can be done. We will use pairwise confidence intervals for the difference in two means, as we did before.</p></div></section><section><h3>Remark 3:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>If an ANOVA test finds evidence that there is at least one long-run or population mean that is different, there are many different follow-up tests designed to help pinpoint where difference(s) occur. One option is to look at all the pairwise theory-based confidence intervals for the difference in long-run or population means.</p></article>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>When you have the F-statistic selected and the F-distribution overlaid (or are showing the ANOVA table) you can check the box to Compute 95% CI(s) for difference in means. Report the intervals for (a)-(f).</p>
+</div></section><section><h3>Exercise 16a:</h3>
+<div align="left"> <p>Atkins diet vs. Zone diet</p>
+</div></section><section><h3>Exercise 16b:</h3>
+<div align="left"> <p>Atkins diet vs. Ornish diet</p>
+</div></section><section><h3>Exercise 16c:</h3>
+<div align="left"> <p>Atkins diet vs. LEARN diet</p>
+</div></section><section><h3>Exercise 16d:</h3>
+<div align="left"> <p>Zone diet vs. Ornish diet</p>
+</div></section><section><h3>Exercise 16e:</h3>
+<div align="left"> <p>Zone diet vs. LEARN diet</p>
+</div></section><section><h3>Exercise 16f:</h3>
+<div align="left"> <p>Ornish diet vs. LEARN diet</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Which of the confidence intervals calculated in 
+  [REF=TODO]
+ indicate a significant difference between groups? How are you deciding?</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Based on your analysis, would you conclude that there is one diet that works significantly better than the other three? If so, which one?</p>
+</div></section></section><section><section><h1>Validity conditions</h1></section><section><h3></h3>
+<div align="left"><p>As with other theory-based approaches of conducting tests of significance, certain validity conditions must be met in order to conduct an ANOVA F-test.</p></div></section><section><h3>Convention 4:</h3>
+<div align="left"> <article class="convention remark-like" id="convention-1"><h4 class="heading">
+<span class="type">Validity Conditions</span><span class="space"> </span><span class="period">.</span><span class="space"> </span><span class="title">for the ANOVA F-test.</span>
+</h4> <p>The F-distribution is a good approximation to the null distribution of the F-statistic as long as:<ul class="disc">
+<li>Either the sample size is at least 20 for all the groups, without strong skewness or outliers; or if the sample size is less than 20, then the distribution of the response variable is approximately symmetric in all the samples (examine the dotplots for skewness or outliers).</li>
+<li>The standard deviations of the samples are approximately equal to each other (largest standard deviation is not more than twice the value of the smallest standard deviation).</li>
+</ul></p></article>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Do the sample data for the diet study appear to satisfy the validity conditions for conducting an ANOVA F-test? How are you deciding?</p>
+</div></section></section><section><section><h1>Step 5: Formulate conclusions</h1></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Are you comfortable with concluding from this study that the diet used causes a difference in BMI change? Justify your answer.</p>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>To what population are you comfortable generalizing the results of this study? Justify your answer.</p>
+</div></section></section><section><section><h1>Step 6: Look back and ahead</h1></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>Looking back: Did anything about the design and conclusions of this study concern you? Issues you may want to critique include: The match between the research question and the study design, how the experimental units were selected, how the treatment was assigned to the experimental units, how the measurements were recorded, the number of experimental units in the study, whether what we observed is of practical value.</p>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>Looking ahead: What should the researchers’ next steps be to fix the limitations or build on this knowledge?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

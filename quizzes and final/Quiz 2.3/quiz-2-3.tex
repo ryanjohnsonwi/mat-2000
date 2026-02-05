@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{etoolbox}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 2.3 Version \fbox{\myversion} \\ MAT 2000: Introduction to Statistics \\ Grace College}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%\mcifoutput{exam}{
+%	\AtEndDocument{\ifodd\value{page}
+%		\newpage\thispagestyle{empty}\hbox{This page intentionally left blank.}\newpage\thispagestyle{empty}\hbox{}
+%		\else
+%		\newpage\thispagestyle{empty}\hbox{}
+%		\fi}
+%}
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	\begin{mcquestions}
+		\question The first iPhone became available for public purchase in 2007.  By 2010, approximately 30\% of smartphone users in the US owned an iPhone.  Several new companies have entered the smartphone market since then and the folks at Apple want to know how they are stacking up against their competition.  In 2019, a representative sample of 529 smartphone users in the US showed that 47.4\% use an Apple iOS device.  Does Apple's share of the US smartphone market appear to have increased since 2010?
+		
+		The standardized test statistic for this study is 8.7. Select the best contextual interpretation of the test statistic.
+
+		\begin{mcanswerslist}
+			\answer On average, each simulated proportion of the US smartphone market which uses Apple iOS devices is 8.7 away from 0.299.
+			\answer The probability of obtaining a sample proportion of 0.474 or something more extreme, assuming 30\% of all US smartphone users use an Apple iOS device, is 8.7.
+			\answer The proportion of the US smartphone market that uses an Apple iOS device is 8.7.
+			\answer[correct] The 0.474 proportion of the US smartphone users sampled who use Apple iOS devices is 8.7 standard deviations above the 2010 Apple US market-share of 0.30.
+		\end{mcanswerslist}
+		
+		\question A standardized test statistic close to zero provides what level of evidence against a null hypothesis?
+		\begin{mcanswerslist}
+			\answer[correct] Little to no evidence
+			\answer Moderate evidence
+			\answer Strong evidence
+			\answer Very strong evidence
+		\end{mcanswerslist}
+		
+		\question Use your intuition to estimate and match the three standardized statistics value with their corresponding p-values.
+		
+		\begin{tabular}{lp{1in}cp{1in}r}
+			i. $z=0.45$ && ii. $z=3.31$ && iii. $z=1.72$
+		\end{tabular}
+		
+		\begin{mcanswerslist}
+			\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+				i. p-value$=0.0005$ && ii. p-value$=0.3264$ && iii. p-value$=0.0427$
+			\end{tabular}
+			\answer[correct] \begin{tabular}{lp{0.75in}cp{0.75in}r}
+				i. p-value$=0.3264$ && ii. p-value$=0.0005$ && iii. p-value$=0.0427$
+			\end{tabular}
+			\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+				i. p-value$=0.0005$ && ii. p-value$=0.0427$ && iii. p-value$=0.3264$
+			\end{tabular}
+			\answer \begin{tabular}{lp{0.75in}cp{0.75in}r}
+				i. p-value$=0.0427$ && ii. p-value$=0.3264$ && iii. p-value$=0.0005$
+			\end{tabular}
+		\end{mcanswerslist}
+	\end{mcquestions}
+\end{document}

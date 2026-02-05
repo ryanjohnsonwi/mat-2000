@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-12-03T15:58:36-05:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>11-3 : Least squares regression</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>11-3 : Least squares regression</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated December 3, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Predicting height from footprints</h1></section><section><h3></h3>
+<div align="left"><p>Can a footprint taken at the scene of a crime help to predict the height of the criminal? In other words, is there an association between height and foot length? To investigate this question, a sample of 20 statistics students measured their height (in inches) and their foot length (in centimeters).</p></div></section><section><h3>Exercise 1a:</h3>
+<div align="left"> <p>What are the observational units in this study?</p>
+</div></section><section><h3>Exercise 1b:</h3>
+<div align="left"> <p>Identify the two variables recorded for each observational unit. Which is the explanatory variable, and which is the response? Also classify these variables as categorical or quantitative.</p>
+</div></section><section><h3>Exercise 1c:</h3>
+<div align="left"> <p>Is this an observational study or a randomized experiment?</p>
+</div></section><section><h3>Exercise 1d:</h3>
+<div align="left"> <p>The sample data for the 20 students appear in the <a class="external" href="https://static-content.zybooks.com/applets/2021/regshuffle/regshuffle.htm?hideExtras=2" target="_blank">Corr/Regression applet</a></p> <p>Open the applet and look at the scatterplot for the data already there. Describe the association between the variables as revealed in the scatterplot. (Hint: Remember to comment on direction, strength, and form of association as well as unusual observations.)</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Would you say that a straight line could summarize the relationship between height and foot length reasonably well?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Check the <dfn class="terminology">Show Movable Line</dfn> box to add a blue line to the scatterplot. If you place your mouse over one of the green squares at the ends of the line and drag, you can change the slope of the line. You can also use the mouse to move the green dot up and down vertically to change the intercept of the line.</p>
+</div></section><section><h3>Exercise 3a:</h3>
+<div align="left"> <p>Move the line until you believe your line "best" summarizes the relationship between height and foot length for these data. Write down the resulting equation for your line (using traditional statistical notation).</p>
+</div></section><section><h3>Exercise 3b:</h3>
+<div align="left"> <p>Why do you believe that your line is "best"?</p>
+</div></section><section><h3>Exercise 3c:</h3>
+<div align="left"> <p>Did all students in your class obtain the same line/equation?</p>
+</div></section><section><h3>Exercise 3d:</h3>
+<div align="left"> <p>How can we decide whether your line provides a better fit to the data than other students’ lines? Suggest a criterion for deciding which line "best" summarizes the relationship.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>One way to draw the best fit line is to minimize the distance of the points to the line (these distances are called <em class="emphasis">residuals</em>).</p></div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Would points above the line have a positive or negative residual, or is it impossible to tell? What about points below the line?</p>
+</div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>A <dfn class="terminology">residual</dfn> is the difference between an observed response and the corresponding prediction made by the least squares regression line (residual = observed − predicted). Thus, negative residuals occur when points are below the best fit line and positive residuals occur when points are above the best fit line.</p></article>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Check the <dfn class="terminology">Show Residuals</dfn> box to visually represent these residuals for your line on the scatterplot. The applet also reports the sum of the values of the residuals (<dfn class="terminology">SAE</dfn>). SAE stands for "sum of the absolute errors." The acronym indicates that we need to make residuals positive before we add them up and that sometimes people call residuals "errors."</p>
+</div></section><section><h3>Exercise 5a:</h3>
+<div align="left"> <p>Record the SAE value for your line. What is the best (lowest) SAE in the class?</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>It turns out that a more common criterion for determining the “best” line is to instead look at the sum of the squared residuals (<dfn class="terminology">SSE</dfn>). This approach is similar to simply adding up the residuals but is even more strict in not letting individual residuals get too large. Check the <dfn class="terminology">Show Squared Residuals</dfn> box to visually represent the squared residual for each observation. Note that we can visually represent the squared residual as the area of a square where each side of the square has length equal to the residual.</p>
+</div></section><section><h3>Exercise 6a:</h3>
+<div align="left"> <p>What is the SSE (sum of squared residuals) for your line? What is the best (lowest) SSE in the class?</p>
+</div></section><section><h3>Exercise 6b:</h3>
+<div align="left"> <p>Now continue to adjust your line until you think you have minimized the sum of the squared residuals. Report your new equation and your new SSE value. What is the best SSE in the class?</p>
+</div></section><section><h3>Remark 2:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>The least squares regression line minimizes the sum of squared residuals.</p></article>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Now check the <dfn class="terminology">Show Regression Line</dfn> box to determine and display the equation for the line that actually does minimize (as can be shown using calculus) the sum of the squared residuals.</p>
+</div></section><section><h3>Exercise 7a:</h3>
+<div align="left"> <p>Record the equation of the least squares regression line by indicating the appropriate slope and intercept of the line. Note that we’ve used variable names in the equation, not generic x and y. And put a caret ("hat") over the y variable name to emphasize that the line gives predicted values of the y (response) variable.</p>
+</div></section><section><h3>Exercise 7b:</h3>
+<div align="left"> <p>Did everyone in your class obtain the same equation?</p>
+</div></section><section><h3>Exercise 7c:</h3>
+<div align="left"> <p>Is the slope positive or negative? Explain how the sign of the slope tells you about whether your data display a positive or a negative association.</p>
+</div></section><section><h3>Remark 3:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-3"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>The equation of the best fit line is written as <span class="process-math">\(\hat{y} = a + bx\text{,}\)</span> where<ul class="disc">
+<li><p><span class="process-math">\(a\)</span> is the y-intercept</p></li>
+<li><p><span class="process-math">\(b\)</span> is the slope</p></li>
+<li><p><span class="process-math">\(x\)</span> is a value of the explanatory variable</p></li>
+<li><p><span class="process-math">\(\hat{y}\)</span> is the predicted value for the response variable</p></li>
+</ul></p></article>
+</div></section><section><h3>Remark 4:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-4"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>For a given dataset, the signs (positive or negative) for the correlation coefficient and the slope of the regression line must be the same.</p></article>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Let’s investigate what the slope means in the context of height and foot length.</p>
+</div></section><section><h3>Exercise 8a:</h3>
+<div align="left"> <p>Use the least squares regression line to predict the height of someone whose foot length is 28 cm. (Simply plug in the value of 28 cm for foot length in the equation of the line.)</p>
+</div></section><section><h3>Exercise 8b:</h3>
+<div align="left"> <p>Use the least squares regression line to predict the height of someone whose foot length is 29 cm.</p>
+</div></section><section><h3>Exercise 8c:</h3>
+<div align="left"> <p>By how much do your predictions in (a) and (b) differ? Does this number look familiar? Explain.</p>
+</div></section><section><h3>Exercise 8d:</h3>
+<div align="left"> <p>Interpret the slope in context: The slope of the regression line predicting height based on foot length is ______, meaning that for every additional ______ cm increase in foot length, the predicted height increases by ______ inches.</p>
+</div></section><section><h3>Remark 5:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-5"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>The <dfn class="terminology">slope</dfn> coefficient of a least squares regression model is interpreted as the predicted change in the response (<span class="process-math">\(y\)</span>) variable for a one-unit change in the explanatory (<span class="process-math">\(x\)</span>) variable.</p></article>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Let’s investigate the meaning of the y-intercept in the context of height and foot length.</p>
+</div></section><section><h3>Exercise 9a:</h3>
+<div align="left"> <p>Use the least squares regression line to predict the height of someone who has a foot length of 0 cm.</p>
+</div></section><section><h3>Exercise 9b:</h3>
+<div align="left"> <p>Your answer to (a) should look familiar. What is this value?</p>
+</div></section><section><h3>Exercise 9c:</h3>
+<div align="left"> <p>Explain how your prediction of the height of someone whose foot length is 0 cm is an example of extrapolation.</p>
+</div></section><section><h3>Remark 6:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-6"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>The <dfn class="terminology">y-intercept</dfn> of a regression line is interpreted as the predicted value of the response variable when the explanatory variable has a value of zero (though be wary of extrapolation (see the next Key Idea) in interpreting the intercept or other values outside the original data range).</p></article>
+</div></section><section><h3>Remark 7:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-7"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>Predicting values for the response variable for values of the explanatory variable that are outside of the range of the original data is known as <dfn class="terminology">extrapolation</dfn> and can give very misleading predictions.</p></article>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Earlier, we explored the notion of a residual as the distance of a point to a line.</p>
+</div></section><section><h3>Exercise 10a:</h3>
+<div align="left"> <p>Using the equation for the best fit line that you reported in question 8, find the residual for the person whose foot length is 32 centimeters and height is 74 inches. Note: Find this value by taking the actual height and subtracting the person’s predicted height from the equation.</p>
+</div></section><section><h3>Exercise 10b:</h3>
+<div align="left"> <p>Is this person’s dot on the scatterplot above or below the line? How does the residual tell you this?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Residuals are helpful for identifying unusual observations. But not all observations of interest have large residuals.</p></div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Uncheck the <dfn class="terminology">Show Movable Line</dfn> box to remove it from the display and check the <dfn class="terminology">Move observations</dfn> box.</p>
+</div></section><section><h3>Exercise 11a:</h3>
+<div align="left"> <p>Now click on one student’s point in the scatterplot and drag the point up and down (changing the height, without changing the foot length, the original regression line will remain in grey). Does the regression line change much as you change this student’s height?</p>
+</div></section><section><h3>Exercise 11b:</h3>
+<div align="left"> <p>Press Revert and repeat (a) using a student with a very small x (foot size) value and then a point with an x value near the middle and then a point with a very large x value. Which of these seem(s) to have the most influence on the least squares regression line? Explain.</p>
+</div></section><section><h3>Remark 8:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-8"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>An observation or set of observations is considered <dfn class="terminology">influential</dfn> if removing the observation from the dataset substantially changes the values of the correlation coefficient and/or the least squares regression equation. Typically, observations that have extreme explanatory variable values (far below or far above <span class="process-math">\(\bar{x}\)</span>) are potentially influential. They may not have large residuals, having pulled the line close to them.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>Residuals also help us measure how accurate our predictions are from using the regression line. In particular, we can compare the “prediction errors” from the regression line to the prediction errors if we made no use of the explanatory variable.</p></div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Press the <dfn class="terminology">Revert</dfn> button to reload the original dataset. Recheck the <dfn class="terminology">Show Movable Line</dfn> box to redisplay the blue line. Notice that this line is flat at the mean of the <span class="process-math">\(y\)</span> (height) values.</p>
+</div></section><section><h3>Exercise 12a:</h3>
+<div align="left"> <p>Check the Show Squared Residuals box (under the Movable Line information) to determine the SSE if we were to use the average height as the predicted value for every x (foot size). Record this value.</p>
+</div></section><section><h3>Exercise 12b:</h3>
+<div align="left"> <p>What is the slope of this line?</p>
+</div></section><section><h3>Exercise 12c:</h3>
+<div align="left"> <p>If the slope of the best fit line is zero, our data shows ______ (positive/negative/no) association between the explanatory and response variables.</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Now compare this to the SSE value from the regression line. Which is smaller? Why does that make sense?</p>
+</div></section></section><section><section><h1>Coefficient of Determination</h1></section><section><h3>Remark 9:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-9"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>A quantity related to the correlation coefficient is called the coefficient of determination, or R-squared (R²). To measure how much the regression line decreases the "unexplained variability" in the response variable, we can calculate the percentage reduction in SSE:<div class="displaymath process-math">
+\begin{equation*}
+R^2 = \frac{\operatorname{SSE}(\bar{y}) - \operatorname{SSE}(\text{regression line})}{\operatorname{SSE}(\bar{y})}
+\end{equation*}
+</div></p> <p>The <dfn class="terminology">coefficient of determination</dfn> (<span class="process-math">\(R^2\)</span>) is the percentage of total observed variation in the response variable (height) that is accounted for by changes (variability) in the explanatory variable (foot length).</p></article>
+</div></section><section><h3>Exercise 14a:</h3>
+<div align="left"> <p>Find <span class="process-math">\(R^2\)</span> and report it.</p>
+</div></section><section><h3>Exercise 14b:</h3>
+<div align="left"> <p>Complete the following statement: The coefficient of determination is ____​​_ ; this means that ______ % of the variation in people’s ______ is attributable to changes in their ______.</p>
+</div></section><section><h3>Exercise 14c:</h3>
+<div align="left"> <p>Find the value of the correlation coefficient using the applet and confirm that when you square the correlation coefficient you get the same number as the applet reports for the coefficient of determination.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>If we think of <span class="process-math">\(\hat{y} = \bar{y}\)</span> as the "worst" line (no association with <span class="process-math">\(x\)</span>), then we are seeing how much better the actual line is than this worst line. The best possible line would have zeros for all of the residuals and would have an <span class="process-math">\(R^2\)</span> of 100%.</p></div></section></section><section><section><h1>Exploring further</h1></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>What other variables could explain variation in height?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The figure below illustrates which people in the sample are men and which are women and then plots the least squares regression line separately for men and women.</p></div></section><section><h3>Figure 10:</h3>
+<div align="left"> <figure class="figure figure-like" id="fig-11-3"><img height="800" src="../code/assets/11-3/height-vs-foot.png"/><figcaption></figcaption></figure>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>How do the female foot lengths tend to compare to the male foot lengths? How do the female heights tend to compare to the male height?</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>What do you notice about the slopes and intercepts for the two lines? How do you interpret these differences in this context?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The least squares regression line for men is <span class="process-math">\(\text{predicted height} = 44.03 + 0.8561(\text{foot length})\text{,}\)</span> and the least squares regression line for women is <span class="process-math">\(\text{predicted height} = 45.90 + 0.7152(\text{foot length})\)</span> .</p></div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>What do you think the R² will be just for the men? Just for the women? How do you think these values will compare to the overall R² of 0.506? Why?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>In this case, the <span class="process-math">\(R^2\)</span> for the female-only data is 0.116 and for the male-only data is 0.267. Both groups have lower <span class="process-math">\(R^2\)</span> values than the overall <span class="process-math">\(R^2\text{.}\)</span> <span class="process-math">\(R^2\)</span> measures how close the observations are to their respective lines. When we examine only the female data, the residuals are large relative to the smaller variation in female heights. Whereas the combined line (ignoring sex) has similar residuals, they are smaller compared to the larger total variation in heights.</p></div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

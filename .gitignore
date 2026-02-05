@@ -89,3 +89,5 @@ GitHub.sublime-settings
 .dropbox.attr
 .dropbox.cache
 
+*.gsheet
+*.gdoc

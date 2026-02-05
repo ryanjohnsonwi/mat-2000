@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:29:29-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>8-1 : Paired designs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>8-1 : Paired designs</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Rounding first base</h1></section><section><h3></h3>
+<div align="left"><p>Imagine you are at the plate in baseball and have hit a hard line drive. You want to try to stretch your hit from a single to a double. Does the path that you take to “round” first base make much of a difference? For example (see the figure below), is it better to take a "narrow angle" or a "wide angle" around first base? (This exploration is based on an actual study reported in <a class="external" href="https://fsu.catalog.fcla.edu/permalink.jsp?23FS027575641" target="_blank">a master’s thesis by W. F. Woodward in 1970.</a>)</p></div></section><section><h3>Figure 1:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-1"><img height="800" src="../code/assets/8-1/first_base.png"/><figcaption>Narrow angle versus wide angle</figcaption></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>Think about designing a study to investigate this question.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Identify the explanatory and response variables in this study.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>How would you design an observational study to investigate this question? Explain why an observational study would not allow you to decide which base-running angle is better than the other.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Suppose 20 baseball players volunteered to participate in an experiment. Suppose that you also plan to assign a single angle, either wide or narrow, to each player. How would you decide which player ran with which base-running angle?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>A reasonable experimental design would be to randomly assign 10 of the 20 players to run with the wide angle and the other 10 to run with the narrow angle.</p></div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Some runners are faster than others. Explain how random assignment controls for this, so that speed is not likely to be a confounding variable in this study.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Even though random assignment tends to balance out other variables (such as speed) between the two groups, there’s still a chance that most of the fast runners could be in one group and most of the slow runners in the other group. More importantly, there’s likely to be a good bit of variability in the runners’ speeds, and that variability would make it harder to spot a difference between the base-running angles even if one angle really is superior to the other.</p></div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Suggest a different way of conducting the experiment to make sure that speed is completely balanced between the two groups.</p>
+</div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>For a <dfn class="terminology">paired design</dfn>, response values come in pairs, with one response value in the pair for Group 1 and the other for Group 2. Sometimes the pairs come from matching individuals to create groups of two (we call this <dfn class="terminology">paired design using matching</dfn>); sometimes the pairs come from measuring the same individual twice, once under each condition (we call this <dfn class="terminology">paired design using repeated measures</dfn>). For an <dfn class="terminology">independent groups design</dfn>, each individual in a group is unrelated to all the other individuals in the study. Each individual provides only one response value.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>In this study each runner can use both base-running angles. That way we can be sure that neither treatment has more of the fast or slow runners, and we can also expect that differences in times for each runner will show considerably less variability than individual running times.</p></div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>What aspect of this experiment should be determined randomly? (Hint: The treatment is not determined randomly, because each runner experiences both treatments. But what other factor could still have an effect on the response unless it was randomized?)</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>What do you suggest using as the variable to be analyzed with this paired-design experiment? (Hint: Think of a better option than simply analyzing the set of times with the wide angle and the set of times with the narrow angle separately the way you would for an independent groups design of the sort described in #3 and #4.)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>With a paired design, we analyze the differences in the response between the two treatments. In this case we would calculate the difference in running times between the wide and narrow angles for each player and then analyze the sample of differences. You will learn how to do this in future sections.</p></div></section><section><h3></h3>
+<div align="left"><p>The order in which the players run with the two angles should be determined randomly; otherwise, the order could be a confounding variable. Perhaps players would be slower with their second angle because of fatigue or perhaps they would be faster with their second angle if they were slow to get warmed up. Randomizing the order takes away any worries about an order effect.</p></div></section><section><h3></h3>
+<div align="left"><p>So far you have seen three designs for this study. The first (
+  [REF=TODO]
+) was observational. The second (
+  [REF=TODO]
+ and 
+  [REF=TODO]
+) was a randomized experiment with independent groups. The third (
+  [REF=TODO]
+ and 
+  [REF=TODO]
+) used a paired design with pairs created by repeated measures.</p></div></section></section><section><section><h1>Exploring Further</h1></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Consider a fourth design: Suppose you have 20 players, as before, and you have the time for each player in a 100-yard dash. Explain how you could use this information to create pairs of runners that you expect to be similar and how you would assign one runner in each pair to the narrow angle and the other to a wide angle.</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Of the four designs (observational with independent groups, experimental with independent groups, paired design using repeated measures, and paired design using matching), which do you think is best for this context? Explain why. (Hint: Pairing works best when the units in a pair are as similar to each other as possible.)</p>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>As noted in 
+  [REF=TODO]
+, pairing works best when the two units in a pair are as similar as possible. When the units in a pair are not similar, pairing will not be effective. Invent and describe an example where you think pairing will be effective. Give the response and explanatory variable, how you would create the pairs, and why you think pairing will be effective.</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Invent and describe an example where you think pairing will not be effective. Again, give the response and explanatory variable, how you would create the pairs, and this time why you think pairing will not be effective.</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>For some contexts, the strategy of using repeated measures to create pairs is either impossible or a bad idea. Invent and describe such a context.</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Pairing can also be used in the design of an observational study. Revisit the observational study in #2, and suppose also that you have times in the hundred yard dash for each of the 20 players. Explain how you could use those times to create pairs. (Suppose that, of the 20 players, 12 used the wide angle and only 8 used the narrow angle. This means you can create only 8 pairs.)</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

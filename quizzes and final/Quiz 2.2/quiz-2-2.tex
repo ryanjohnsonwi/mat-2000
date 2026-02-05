@@ -1,0 +1,78 @@
+\documentclass[10pt]{examdesign}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{graphicx}
+\SectionFont{\large\sffamily}
+\Fullpages
+\ContinuousNumbering
+%\ShortKey
+\setrandomseed{8282023}
+
+\DefineAnswerWrapper{}{}
+\NumberOfVersions{3}
+\NoRearrange
+\class{MAT 2000: Introduction to Statistics \\ Grace College}
+\examname{Quiz 2.2}
+\def\namedata{Name : \hrulefill}
+
+\begin{document}
+		
+	\begin{multiplechoice}
+		A survey on 1,500 high school seniors who took the SAT and who completed an optional web survey shows that 55\% of high school seniors are fairly certain that they will participate in a study abroad program in college. Does this survey provide convincing evidence that the majority (more than 50\%) of all high school seniors who take the SAT are fairly certain they will participate in a study abroad program in college?
+		
+		Use this scenario to answer questions \ref{sa1}-\ref{sa3}
+		\begin{question}
+			What is the value of the statistic and proper notation in this study? \label{sa1} 
+				\choice{\(\pi=0.55\)}
+				\choice[!]{\(\hat p=0.55\)}
+				\choice{\(\mu=825\)}
+				\choice{\(\pi=825\)}
+		\end{question}
+		
+		\begin{question}
+			 State the null and alternative hypotheses in proper notation. \label{sa2} 
+			 	\choice{\(H_0: \pi = 0.50\) versus \(H_A: \pi = 0.55 \)}
+			 	\choice{\(H_0: \pi = 0.55\) versus \(H_A: \pi > 0.55\)}
+			 	\choice[!]{\(H_0: \pi = 0.50\) versus \(H_A: \pi > 0.50\)}
+			 	\choice{\(H_0: \hat p = 0.50\) versus \(H_A: \hat p > 0.50\)}
+		\end{question}
+		
+		\begin{question}
+			The p-value for this study is less than 0.001. Interpret this value in context of the problem. \label{sa3}
+				\choice{There is less than a 0.1\% chance that 50\% of all high school seniors who take the SAT are fairly certain they will participate in a study abroad program in college.}
+				\choice[!]{In less than 0.1\% of all samples of 1,500 high school seniors who take the SAT, 55\% or more would respond that they are fairly certain they will participate in a study abroad program in college, if the true probability is 0.50.}
+				\choice{In less than 0.1\% of all samples of 1,500 high school seniors who take the SAT, 50\% or more would respond that they are fairly certain they will participate in a study abroad program in college, if the true probability is 0.55.}
+				\choice{There is less than a 0.1\% chance that more than 50\% of all high school seniors who take the SAT are fairly certain they will participate in a study abroad program in college.}			
+		\end{question}
+	\end{multiplechoice}
+	
+	\pagebreak
+	
+	\begin{multiplechoice}
+		Research done in the mid 1980s indicated that 80\% of grizzly bears in the greater ecosystem of Yellowstone National Park entered their den for hibernation by the last day of November. This has come into question as of late. Researchers have hypothesized that climate change has postponed bears entering hibernation until later in the season; that is, researchers believe that a smaller percentage of bears are entering their den for hibernation by the last day of November. Sixty-two Yellowstone grizzly bears were tracked via radio monitors, which allow scientists to pinpoint when the bears enter their dens with a high degree of accuracy. Of the sixty-two Yellowstone grizzly bears being tracked, forty-two entered their den for hibernation by the last day of November.
+		
+		Use this scenario to answer questions \ref{gb1}-\ref{gb2}
+		
+		\begin{question}
+			What values would be entered for each of the following in the One Proportion applet to conduct a simulation-based hypothesis test with these data? \label{gb1}
+			\begin{itemize}
+				\item Probability of success: \_\_\_(1)\_\_\_\_
+				\item Sample size: \_\_\_(2)\_\_\_\_
+				\item Number of samples: Any integer at least 1000
+			\end{itemize}
+				\choice{0.5, 80}
+				\choice{0.5, 62}
+				\choice{0.8, 80}
+				\choice[!]{0.8, 62}		
+		\end{question}
+		
+		\begin{question}
+			The simulation-based p-value for this test is 0.0153. Which of the following conclusions are correct? \label{gb2} 
+				\choice{Little to no evidence exists against the null hypothesis.}
+				\choice{Strong evidence exists in favor of the null hypothesis.}
+				\choice{Little to no evidence exists against the alternative hypothesis.}
+				\choice{Strong evidence exists in favor of the alternative hypothesis.}
+		\end{question}
+	\end{multiplechoice}
+	
+\end{document}

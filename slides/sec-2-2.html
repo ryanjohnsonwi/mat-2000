@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:25:42-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>2-2 : Measuring the strength of evidence</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>2-2 : Measuring the strength of evidence</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Tasting water</h1></section><section><h3></h3>
+<div align="left"><p>People spend a lot of money on bottled water. But do they really prefer bottled water to ordinary tap water? Researchers at Longwood University (<a class="external" href="https://doi.org/10.1080/10691898.2010.11889484" target="_blank">Lunsford and Dowling Fink, 2010</a>) investigated this question by presenting people who came to a booth at a local festival with four cups of water. Three cups contained different brands of bottled water, and one cup was filled with tap water. Each subject (person) was asked which of the four cups of water they most preferred. Researchers kept track of how many people chose bottled water in order to see whether bottled water was chosen significantly more often than would be expected by random chance.</p></div></section></section><section><section><h1>Step 1: Ask a research question:</h1></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>What is the research question that the researchers hoped to answer?</p>
+</div></section></section><section><section><h1>Step 2: Design a study and collect data:</h1></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Identify the observational units in this study.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Identify the variable. Is the variable quantitative or categorical?</p>
+</div></section><section><h3>Definition 1:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A <dfn class="terminology">binary variable</dfn> is a categorical variable with only two outcomes. Often we convert categorical variables with more than two outcomes (e.g., four brands of water) into binary variables (e.g., tap water or not). In this case we also define one outcome to be a “success” and one to be a “failure.”</p>
+</div>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Rewrite the variable as a binary variable.</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Describe the parameter of interest (in words). (Hint: The parameter is the long-run proportion of …?)</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>One possibility here is that subjects have an equal preference among all four waters and so are essentially selecting one of the four cups at random. In this case what is the long-run proportion (i.e., probability) that a subject in this study would select bottled water?</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Another possibility is that the subjects are more likely to prefer bottled water than the tap water. In this case what can you say about the long-run proportion that a subject in this study would select bottled water? (Hint: You are not to specify a particular value this time; instead indicate a direction from a particular value.)</p>
+</div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p><ul class="disc">
+<li>
+<dfn class="terminology">Null hypothesis</dfn> typically states the "by-random-chance-alone" explanation, which is used to create the chance model, also called the null model. A null hypothesis is expressed symbolically as <span class="process-math">\(H_0\text{.}\)</span>
+</li>
+<li>
+<dfn class="terminology">Alternative hypothesis</dfn> typically states the "an-effect-exists" explanation that contradicts the null hypothesis. An alternative hypothesis is expressed symbolically as <span class="process-math">\(H_a\)</span> .</li>
+</ul></p>
+</div>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Your answers to 
+  [REF=TODO]
+ and 
+  [REF=TODO]
+ should be the null and alternative hypotheses for this study. Which is which?</p>
+</div></section></section><section><section><h1>Step 3: Explore the data:</h1></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Researchers found that 24 of the 27 subjects selected bottled water. Calculate the value of the relevant statistic.</p>
+</div></section></section><section><section><h1>Use of symbols</h1></section><section><h3></h3>
+<div align="left"><p>Mathematical symbols can be used to represent quantities and simplify your writing. The Greek letter <span class="process-math">\(\pi\)</span> (pronounced "pie") is used to represent a parameter that is a long-run proportion, such as the probability that a (future) subject in this study would choose bottled water as most preferred. The symbol <span class="process-math">\(\hat{p}\)</span> (pronounced "p-hat") is used to represent a statistic that is the proportion of "successes" in a sample, such as the proportion of subjects in this study who did choose bottled water as the most preferred. The symbol <span class="process-math">\(n\)</span> is used to represent the sample size.</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>What is the value of <span class="process-math">\(\hat{p}\)</span> in this study?</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>What is the value of n in this study?</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Hypotheses are always conjectures about the unknown parameter π. You can also use H0 and HA as short-hand notation for the null and alternative hypotheses, respectively. A colon ":" is used to represent the word "is". Restate the null and alternative hypotheses using π.</p>
+</div></section></section><section><section><h1>Step 4: Draw inferences:</h1></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Is the sample proportion who selected bottled water in this study more than the probability specified in the null hypothesis?</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Is it possible that this proportion could turn out to be this large even if the null hypothesis was true (i.e., even if people did not really prefer bottled water and were essentially selecting at random from among the four cups)?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>As we did with Buzz and Doris previously, we will use simulation to investigate how surprising the observed sample result (24 of 27 selecting bottled water) would be if in fact subjects did not prefer bottled water and so each had a 3/4 probability of selecting bottled water. (Note also that our null model assumes the same probability for all subjects.)</p></div></section><section><h3>Remark 3:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span><span class="space"> </span><span class="title">Think About It.</span>
+</h4> <p>Can we use a coin to represent the chance model specified by the null hypothesis like before? If not, can you suggest a different random device we could use? What needs to be different about our simulation this time?</p></article>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Explain why we cannot use a simple coin toss to simulate the subjects’ choices, as we did with the Buzz/Doris study.</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>We could do the simulation using a set of four playing cards: one black and three red. Explain how the simulation would work in this case.</p>
+</div></section><section><h3>block 17: Simulating with Spinners</h3>
+<div align="left"> <p>Another option would be to use a spinner like you would use when playing a child’s board game.</p>
+</div></section><section><h3>Exercise 17a:</h3>
+<div align="left"> <p>Explain how the simulation would work if you were using a spinner. In particular: What does each region represent?</p>
+</div></section><section><h3>Exercise 17b:</h3>
+<div align="left"> <p>How many spins of the spinner will you need to do in order to simulate one repetition of the experiment when there is equal preference between the four waters (null hypothesis is true)?</p>
+</div></section><section><h3>block 18: Simulating with an applet</h3>
+<div align="left"> <p>We will now use the <a class="external" href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank">One Proportion applet</a> to conduct this simulation analysis. Notice that the applet will show us what it would be like if we were simulating with spinners.</p>
+</div></section><section><h3>Exercise 18a:</h3>
+<div align="left"> <p>First enter the <dfn class="terminology">probability of heads/probability of success</dfn> value specified in the null hypothesis.</p>
+</div></section><section><h3>Exercise 18b:</h3>
+<div align="left"> <p>Enter the appropriate <dfn class="terminology">sample size</dfn> (number of subjects in this study) into the tool.</p>
+</div></section><section><h3>Exercise 18c:</h3>
+<div align="left"> <p>Enter 1 for the number of samples, and press Draw Samples. Report the number of “successes” in this simulated sample.</p>
+</div></section><section><h3>Exercise 18d:</h3>
+<div align="left"> <p>Now, select the radio button for “Proportion of successes.” Report the proportion of successes in this simulated sample. Use your answer to “c” to verify how this value is calculated.</p>
+</div></section><section><h3>Exercise 18e:</h3>
+<div align="left"> <p>Leaving the “Proportion of successes” radio button selected but unchecking the “Animate” box, click on Draw Samples four more times. Do you get the same results each time?</p>
+</div></section><section><h3>Exercise 18f:</h3>
+<div align="left"> <p>Now enter 995 for the number of samples and click on Draw Samples, bringing the number of simulated samples to 1,000. Comment on the center, variability, and shape of the resulting distribution of sample proportions.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>This distribution of simulated sample proportions is called the <dfn class="terminology">null distribution</dfn>, because it is based on assuming the null hypothesis to be true.</p></div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Recall that the observed value of the sample proportion who selected bottled water in this study was <span class="process-math">\(\hat{p} = 24/27 \approx 0.8889\text{.}\)</span> Looking at the null distribution you have simulated, is this a very unlikely result when the null hypothesis is true? In other words, is this value far in the tail of the null distribution?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>You might very well find that 
+  [REF=TODO]
+ is a bit of a tough call. The value 0.8889 is not far in the tail of the distribution, but it’s also not near the middle of the distribution. To help make a judgment about strength of evidence in this case, we can count how many (and what proportion) of the simulated sample proportions are as extreme or more extreme than the observed value.</p></div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Use the applet to count how many (and what proportion) of the simulated sample proportions are as or more extreme than the observed value. Make sure that the ≥ inequality symbol is selected (to match the alternative hypothesis). Then enter 0.8889 (the observed sample proportion who chose bottled water) in the box to the left of the Count button. Then click on the Count button. Record the number and proportion of simulated sample proportions that are as extreme or more extreme than the observed value.</p>
+</div></section><section><h3>Definition 4:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>The <dfn class="terminology">p-value</dfn> is estimated as the proportion of simulated statistics in the null distribution that are at least as extreme (in the direction of the alternative hypothesis) as the value of the statistic actually observed in the research study.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>How do we evaluate this p-value as a judgment about strength of evidence provided by the sample data against the null hypothesis? One answer is: The smaller the p-value, the stronger the evidence against the null hypothesis and in favor of the alternative hypothesis. But how small is small enough to regard as convincing? There is no definitive answer, but here are some guidelines:</p></div></section><section><h3>Table 5:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption>Guidelines for evaluating strength of evidence from a p-value.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Range</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Strength of evidence</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.10 &lt; p-value</td>
+<td class="l m b0 r0 l0 t0 lines">Little to no evidence against the null hypothesis.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.05 &lt; p-value <span class="process-math">\(\leq\)</span> 0.10</td>
+<td class="l m b0 r0 l0 t0 lines">Moderate evidence against the null hypothesis.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0.01  &lt;  p-value <span class="process-math">\(\leq\)</span>  0.05</td>
+<td class="l m b0 r0 l0 t0 lines">Strong evidence against the null hypothesis.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">p-value <span class="process-math">\(\leq\)</span> 0.01</td>
+<td class="l m b0 r0 l0 t0 lines">Very strong evidence against the null hypothesis.</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Is the approximate p-value from your simulation analysis (your answer to 
+  [REF=TODO]
+) small enough to provide much evidence against the null hypothesis that subjects prefer bottled water equally to the tap water? If so, how strong is this evidence? Explain.</p>
+</div></section></section><section><section><h1>Step 5: Formulate conclusions:</h1></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>When computing p-values, “more extreme” is always measured in the direction of the alternative hypothesis. Use this fact to explain why you counted ≥ 24 in 
+  [REF=TODO]
+.</p>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>Do you consider the observed sample result to be statistically significant? Recall that this means that the observed result is unlikely to have occurred by chance alone.</p>
+</div></section></section><section><section><h1>Step 6: Look back and ahead:</h1></section><section><h3>Exercise 24</h3>
+<div align="left"> <p>How broadly are you willing to generalize your conclusions? Would you be willing to generalize your conclusions to water drinkers beyond the subjects in this study? How broadly? Explain your reasoning.</p>
+</div></section><section><h3>Exercise 25</h3>
+<div align="left"> <p>Suggest a new research question that you might investigate next, building on what you learned in this study.</p>
+</div></section></section><section><section><h1>Exploring further</h1></section><section><h3></h3>
+<div align="left"><p>Instead of focusing on the subjects who chose bottled water, you could instead analyze the data based on the subjects who chose tap water. Because 24 of 27 subjects chose bottled water, we know  3 of the 27 subjects chose tap water. Now let the parameter of interest (denoted by <span class="process-math">\(\pi\)</span>) be the probability that a subject will select tap water as most preferred.</p></div></section><section><h3>block 26: Tap Water Investigation</h3>
+<div align="left"> <p>Conduct a simulation analysis to assess the strength of evidence provided by the sample Data.</p>
+</div></section><section><h3>Exercise 26a:</h3>
+<div align="left"> <p>The research conjecture is that subjects tend to select tap water (more or less) often than bottled water.</p>
+</div></section><section><h3>Exercise 26b:</h3>
+<div align="left"> <p>State the null hypothesis in words and in terms of the (newly defined) parameter π.</p>
+</div></section><section><h3>Exercise 26c:</h3>
+<div align="left"> <p>State the alternative hypothesis in words and in terms of the (new) parameter π.</p>
+</div></section><section><h3>Exercise 26d:</h3>
+<div align="left"> <p>Calculate the observed value of the relevant statistic.</p>
+</div></section><section><h3>Exercise 26e:</h3>
+<div align="left"> <p>Before you use the One Proportion applet to analyze these data, indicate what values you will input for Probability of success, Sample size, and Number of samples.</p>
+</div></section><section><h3>Exercise 26f:</h3>
+<div align="left"> <p>Use the applet to produce the null distribution of simulated sample proportions.  What is the center, variability, and shape of the null distribution?</p>
+</div></section><section><h3>Exercise 26g:</h3>
+<div align="left"> <p>In order to approximate the p-value, you will count how many of the simulated pro- portions are ______ or ______ (larger/smaller) and then divide by ______.</p>
+</div></section><section><h3>Exercise 26h:</h3>
+<div align="left"> <p>Estimate the p-value from your simulation results.</p>
+</div></section><section><h3>Exercise 26i:</h3>
+<div align="left"> <p>Interpret this p-value. (Hint: This is the probability of what, assuming what?)</p>
+</div></section><section><h3>Exercise 26j:</h3>
+<div align="left"> <p>Evaluate this p-value: How much evidence do the sample data provide against the null hypothesis?</p>
+</div></section><section><h3>Exercise 27</h3>
+<div align="left"> <p>Does your analysis based on the number who chose tap water produce similar conclusions to your previous analysis based on the number who chose bottled water? Explain.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>You should have found that it does not matter whether you focus on the number/ proportion that chose tap water or the number/proportion that chose bottled water. In other words, it does not matter which category you define to be a “success” for the preferred water variable. Your findings should be very similar provided that you make the appropriate adjustments in your analysis:<ul class="disc">
+<li>Using 0.25 instead of 0.75 as the null value of the parameter</li>
+<li>Changing the alternative hypothesis to “<span class="process-math">\(\pi \lt 0.25\)</span>” rather than “<span class="process-math">\(\pi \gt 0.75\)</span>”</li>
+<li>Calculating the p-value as the proportion of samples with <span class="process-math">\(\hat{p} \leq 0.1111\)</span> rather than <span class="process-math">\(\hat{p} \geq 0.8889\)</span>
+</li>
+</ul></p></div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

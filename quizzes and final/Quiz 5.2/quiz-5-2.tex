@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 5.2 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	
+	\begin{mcquestions}
+		\begin{mcquestioninstruction}
+			A study published in 2007 by Christopher Johnson, professor of music education and music therapy at the University of Kansas, revealed that students in elementary schools who took private music lessons scored around 20 percent higher in math scores on standardized tests, compared to  students who did not take private music lessons.
+		\end{mcquestioninstruction}
+		\question Is this a randomized experiment or an observational study?
+		\begin{mcanswerslist}
+			\answer Randomized experiment, since researchers gave students standardized tests.
+			\answer[correct] Observational study, since whether the student took private music lessons was not randomly assigned.
+			\answer Observational study, since math scores were not randomly assigned.
+			\answer Observational study, since this was not a random sample.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			Researchers randomly assigned patients with severe acne to one of two treatments: the standard topical antibiotic (the control) or a new antibiotic taken orally (the treatment). Six months later an evaluation of skin problems was made by a doctor who did not know which medication subjects had been given.
+		\end{mcquestioninstruction}
+		
+		\question What is the primary advantage of random assignment of the treatment?
+		\begin{mcanswerslist}
+			\answer Random assignment ensures that the study participants are representative of the larger population.
+			\answer Random assignment allows inference back to a population of patients with acne.
+			\answer[correct] Random assignment allows the researchers to infer that any difference in outcome was due to the treatments.
+			\answer Random assignment ensures that the subject doesn't know which treatment they are getting.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			Recently, a Montana newspaper asked people to go to the newspaper's website and respond yes or no to the question: "Should federal protections on grizzly bears be lifted?" Of 933 opinions, 58.1\% said "Yes", and 41.9\% said either "No" or "Uncertain".
+		\end{mcquestioninstruction}
+		\question Is it valid to conclude from the poll that over half of all Montana residents favor lifting the protections?
+		\begin{mcanswerslist}
+			\answer Yes, because 58.1% is far enough above 50% to conclude that the true proportion is more than one-half.
+			\answer Yes, because the sample size is large enough to represent all 75,000 Montana residents.
+			\answer[correct] No, because the sample is not likely to be representative of the population.
+			\answer No, because the sample is too small given the population of 75,000 Montana residents.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			In a study on treatments for anorexia, researchers recruited 30 teenage girls with anorexia. The girls were ranked by weight prior to the study. Of the heaviest three girls, one was randomly assigned to a "family" therapy, one to a "cognitive/behavioral" therapy, and one to a control group. The same was done for the next three heaviest girls, down to the three lightest girls. After five weeks of treatment, researchers weighed the participants. Researchers would like to determine which, if any, of the treatments are most effective in treating anorexia. Use this scenario to answer questions \ref{anorexia-1} and \ref{anorexia-2}.
+		\end{mcquestioninstruction}
+		\question  If the researchers found that there were statistically significant differences in average weight across the three treatments, would the researchers be justified in concluding that the treatments caused the changes in weights? \label{anorexia-1}
+		\begin{mcanswerslist}
+			\answer No, since the researchers do not know which treatment was most effective.
+			\answer No, since weight was not randomly assigned.
+			\answer[correct] Yes, since the therapy group was randomly assigned.
+			\answer Yes, since this was an observational study.
+		\end{mcanswerslist}
+		
+		\question[follow]  What type of study design did the researchers use? \label{anorexia-2}
+		\begin{mcanswerslist}
+			\answer Completely randomized design
+			\answer Matched pairs design
+			\answer[correct] Blocking study design
+			\answer Observational study
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			Sickle-cell disease is a painful disorder of the red blood cells. To investigate whether drug A can reduce the pain associated with sickle-cell disease, a study by the National Institutes of Health randomly assigned 150 sickle-cell sufferers to receive the drug. Placebos were given to another 150 sickle-cell sufferers. Great care was used to ensure that the 300 participants did not know if their pill contained the drug. At the end of the treatment period, the researchers counted the number of episodes of pain reported by each subject.
+		\end{mcquestioninstruction}
+		\question Which of the following principles was NOT used in this study?
+		\begin{mcanswerslist}
+			\answer Control group
+			\answer Blinding
+			\answer Randomization
+			\answer[correct] Blocking
+		\end{mcanswerslist}
+		
+	\end{mcquestions}
+\end{document}

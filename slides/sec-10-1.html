@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:30:35-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>10-1 : Comparing multiple means: Simulation-based approach</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>10-1 : Comparing multiple means: Simulation-based approach</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Exercise and brain volume</h1></section><section><h3></h3>
+<div align="left"><p>Brain size typically shrinks as people age past adulthood, and such shrinkage may be linked to dementia. Therefore, any intervention that can protect against brain shrinkage could help to protect the elderly against dementia and Alzheimer’s disease. Researchers in China recently investigated whether different kinds of exercise/activity might help to prevent brain shrinkage or perhaps even lead to an increase in brain size (<a class="external" href="http://doi.org/10.3233/JAD-2012-120079" target="_blank">Mortimer et al., 2012</a>).</p></div></section><section><h3></h3>
+<div align="left"><p>The researchers randomly assigned elderly adult volunteers into four activity groups: tai chi, walking, social interaction, and no intervention. Except for the group with no intervention, each group met for about an hour three times a week for 40 weeks to participate in their assigned activity. The tai chi group was led by a tai chi master and an assistant, the walking group walked around a track, the social interaction group met at a community center and discussed topics that interested them, and the no-intervention group just received four phone calls during the study period. A total of 120 participants started the study, and 13 dropped out along the way, so 107 completed the study.</p></div></section><section><h3></h3>
+<div align="left"><p>Each participant had an MRI to determine brain size before the study began and again at its end. The researchers measured the percentage increase or decrease in brain size during that time. They thought that physical activity would help increase brain size; hence they anticipated that the tai chi and walking groups would tend to show larger increases in brain size during the study than the other activity groups.</p></div></section></section><section><section><h1>Step 1: Ask a research question</h1></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>What is the main research question that the researchers hoped to answer?</p>
+</div></section></section><section><section><h1>Step 2: Design a study and collect data</h1></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Identify the observational units in this study.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Identify the explanatory and response variables in this study. Indicate whether they are quantitative or categorical. If they are categorical, indicate how many categories.</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>What type of study was this: an experiment or an observational study? Are the responses of the participants in one treatment group paired with or independent of the responses of the participants in other treatment groups?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>We need a procedure that considers information from across all four groups to allow for comparing all four groups simultaneously. When we compared two groups, the null hypothesis can be written in terms of no association between the explanatory and response variables, whereas the alternative asserts that there is an association between the explanatory and response variables. More specifically, the null hypothesis asserts that all four long-run means are equal, and the alternative states that at least one long-run mean differs from the others.</p></div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>State the null and the alternative hypotheses, in symbols and in words, in the context of this study.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The researchers calculated the percentage change in size of each participant’s brain. If a person’s brain size increased, then this percentage change was positive; if brain size decreased, then this percentage change was negative. These data can be found in the file <a class="external" href="https://static-content2.zybooks.com/isi/data/chap9/Brain.txt" target="_blank">Brain</a>.</p></div></section></section><section><section><h1>Step 3: Explore the data</h1></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Paste the data into the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a> and press <em class="emphasis">Use Data</em>. The applet will produce a dotplot and descriptive statistics. Then check the <em class="emphasis">Show Groups</em> box. Check the <em class="emphasis">Boxplots</em> box to overlay those as well.</p>
+</div></section><section><h3>Exercise 6a:</h3>
+<div align="left"> <p>Record the means and standard deviations in the table and provide estimates of the five-number summaries of each group from the boxplots.</p> <section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col">Group</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Sample size</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Mean</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">SD</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Minimum</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Lower quartile</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Median</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Upper quartile</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col">Maximum</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col">No interaction</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col">Social</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col">Walking</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b1 r1 l0 t0 lines" scope="col">Tai chi</th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+<th class="l m b1 r1 l0 t0 lines" scope="col"></th>
+</tr>
+</table></div></figure>
+</div></section>
+</div></section><section><h3>Exercise 6b:</h3>
+<div align="left"> <p>Which activity group tended to have the largest increase in brain size percentage change? Which tended to have the smallest increase (i.e., largest decrease)?</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Describe what the graphs and statistics reveal about whether the four activities appear to differ with regard to percentage change in brain size for the participants in this study.</p>
+</div></section><section><h3>Remark 2:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4> <p>Suppose for the moment that there really is no effect of the different activities on percentage change in brain size.</p></article>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Would it be possible to obtain sample means as far apart as these four are in this sample?</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Describe a general process for assessing how unlikely it would be, when the null hypothesis is true, to obtain sample means as far apart as these four are.</p>
+</div></section></section><section><section><h1>Step 4: Draw inferences (3S Strategy)</h1></section><section><h3></h3>
+<div align="left"><p><dfn class="terminology">Statistic</dfn>: To minimize the chance of making a Type I error, we won’t run six different tests comparing each group to each other. So, instead we need a single statistic to help test the overall null hypothesis of no association.</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>The first step in applying the 3S strategy is to decide on a statistic that measures how far apart the sample means are. We could focus on the difference between the max x̄ and the min x̄ values that you identified in question 6b. Why might this not be the best statistic to use?</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Propose an alternative statistic to use for this purpose. In other words, come up with a formula based on the four sample means that will result in a single number that summarizes how far apart the four sample means are. (Hint: You should be able to calculate the value of your statistic from the observed sample data.)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>When we compared means between two groups in Chapter 6 using simulation-based approaches, we used the difference between the two means for the statistic. But in this study involving four groups, there are six different pairs of groups for which we could take the differences in means.</p></div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Suggest how you might combine those six differences into one statistic.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>One suggestion for this statistic is to calculate the mean of the absolute values of the differences in means (called Mean Group Diff, for mean group differences):</p></div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Explain why it’s important to take the absolute values before averaging the six differences.</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>What is the value of the Mean Group Diff statistic for the exercise data, as shown in the applet?</p>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>What types of values will the Mean Group Diff statistic have if the null hypothesis is true (large, small, positive, negative)? If there is strong evidence against the null hypothesis?</p>
+</div></section><section><h3></h3>
+<div align="left"><p><dfn class="terminology">Simulate</dfn></p></div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Suppose that you were to conduct a tactile simulation to generate many possible values of the Mean Group Diff statistic that could have happened if the null hypothesis were true, that is, by random chance alone. As you didin the simpler case with comparing just two means, you can use index cards here. Answer (a)-(f) about what else needs to be kept in mind:</p>
+</div></section><section><h3>Exercise 16a:</h3>
+<div align="left"> <p>How many cards will you need?</p>
+</div></section><section><h3>Exercise 16b:</h3>
+<div align="left"> <p>Do the cards just need to be certain colors, or do they need something written on them, and if so, what?</p>
+</div></section><section><h3>Exercise 16c:</h3>
+<div align="left"> <p>When you shuffle and deal, how many piles will you make?</p>
+</div></section><section><h3>Exercise 16d:</h3>
+<div align="left"> <p>How many cards will you place in each pile?</p>
+</div></section><section><h3>Exercise 16e:</h3>
+<div align="left"> <p>What should you be recording after the completion of each shuffle and deal?</p>
+</div></section><section><h3>Exercise 16f:</h3>
+<div align="left"> <p>What else do you need to do to find the p-value?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Instead of doing the tactile simulation (which would be fun, of course, but time consuming) let us use the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a> to run the simulation with the <a class="external" href="https://static-content2.zybooks.com/isi/data/chap9/Brain.txt" target="_blank">Brain</a> data. Check the <em class="emphasis">Show Shuffle Options</em> box in the applet. Enter 1 for <em class="emphasis">Number of Shuffles</em> and press <em class="emphasis">Shuffle Responses</em>. Notice in the <em class="emphasis">Most Recent Shuffle</em> data window, the <em class="emphasis">Treatment</em> column has not changed, but the <em class="emphasis">BrainChange</em> column has mixed up all its values. If you select the <em class="emphasis">Plot</em> radio button, you will see the new dotplots.</p></div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Notice that the new dotplots and statistics are produced for the shuffled data. The individual with the smallest percentage change, originally in the walking group, is now in which group? Report the value of the Mean Group Diff statistic for the shuffled data. Is this value more extreme than the observed value of the Mean Group Diff statistic from the observed data?</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Press Shuffle Responses again, with the Plot option selected. Notice the applet pooling all the responses together and then randomly reassigning them to their new groups. What did you get for the Mean Group Diff value for these shuffled responses?</p>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Press Shuffle Responses three more times. Record the three new values of the Mean Group Diff statistic for the shuffled data. Are these all the same? Are any of them more extreme than the observed value of the Mean Group Diff statistic from the experimental data?</p>
+</div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Now enter 995 for the <em class="emphasis">Number of Shuffles</em>, producing a total of 1,000 shuffles.</p>
+</div></section><section><h3>Exercise 20a:</h3>
+<div align="left"> <p>Describe the shape of the null distribution of the Mean Group Diff statistic. Is it symmetric or skewed? If it is skewed, in which direction is it skewed?</p>
+</div></section><section><h3>Exercise 20b:</h3>
+<div align="left"> <p>Is the null distribution centered at zero? Explain why your answer makes sense.</p>
+</div></section><section><h3></h3>
+<div align="left"><p><dfn class="terminology">Strength of evidence</dfn></p></div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Now you will calculate a p-value, as you have done from simulated null distributions many times before, in order to assess the strength of evidence that the experimental data provide against the null hypothesis that activity has no effect on change in brain size.</p>
+</div></section><section><h3>Exercise 21a:</h3>
+<div align="left"> <p>To calculate the p-value, you will count how many of the simulated Mean Group Diff statistics are equal to ______ or (larger/smaller). (Review your answer to question 14 to consider what values are “more extreme” than those observed.)</p>
+</div></section><section><h3>Exercise 21b:</h3>
+<div align="left"> <p>Check the Count Samples box in the applet and then enter the observed value of the Mean Group Diff statistic. Report the p-value.</p>
+</div></section><section><h3>Exercise 21c:</h3>
+<div align="left"> <p>You should find that the p-value is fairly close to a common cutoff value for assessing statistical significance. So, go ahead and produce 9,000 more shuffles to produce a more accurate estimate of the p-value (there will be a pause). Report this p-value.</p>
+</div></section><section><h3>Exercise 21d:</h3>
+<div align="left"> <p>Interpret this p-value: It is the probability of obtaining a Mean Group Diff statistic of ______ or ______, assuming that ______.</p>
+</div></section><section><h3>Exercise 21e:</h3>
+<div align="left"> <p>Based on this p-value, evaluate the strength of evidence: The experimental data provide ______ evidence against the null hypothesis that the activity group has no effect on percentage change in brain size.</p>
+</div></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>Significance:</p>
+</div></section><section><h3>Exercise 22a:</h3>
+<div align="left"> <p>Summarize your conclusion based on the p-value.</p>
+</div></section><section><h3>Exercise 22b:</h3>
+<div align="left"> <p>Does this analysis allow you to determine which activities differ significantly from which others with regard to percentage change in brain size? Explain why or why not.</p>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>Estimation: Based on what you learned in earlier chapters, suggest how you might go about estimating the magnitude of the difference in the long-run average percentage change in brain size between the tai chi and no-intervention groups. (You will see a method for doing this later)</p>
+</div></section></section><section><section><h1>Step 5: Formulate conclusions</h1></section><section><h3>Exercise 24</h3>
+<div align="left"> <p>Generalization: To what population would you feel comfortable generalizing these results?</p>
+</div></section><section><h3>Exercise 25</h3>
+<div align="left"> <p>Causation: Would you feel comfortable with drawing a cause-and-effect conclusion from this study? Between what two variables? Explain why or why not.</p>
+</div></section></section><section><section><h1>Step 6: Look back and ahead</h1></section><section><h3>Exercise 26</h3>
+<div align="left"> <p>Looking back: Did anything about the design and conclusions of this study concern you? Issues you may want to critique include: The match between the research question and the study design, how the experimental units were selected, how the treatments were assigned to the experimental units, how the measurements were recorded, the number of experimental units in the study, whether what we observed is of practical value.</p>
+</div></section><section><h3>Exercise 27</h3>
+<div align="left"> <p>Looking ahead: What should the researchers’ next steps be to fix the limitations or build on this knowledge?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

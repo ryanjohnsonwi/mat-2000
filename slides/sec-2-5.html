@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:26:15-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>2-5 : Inference on a single proportion: Theory-based approach</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>2-5 : Inference on a single proportion: Theory-based approach</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Eye Dominance</h1></section><section><h3></h3>
+<div align="left"><p>Just like handedness where people prefer to use one hand over another, eye dominance, sometimes called eyedness, is the tendency to prefer to see using one eye over the other. Interestingly though the side of the dominant eye does not always match that of the dominant hand. Let’s investigate whether people are equally likely to have left-eye or right-eye dominance by collecting some data from you and your classmates.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Record whether you have left-eye or right-eye dominance.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Before we combine your data with the data from your classmates, let’s think about what we want to test here. Conventional wisdom says that more often people are right-handed than left, so for now let’s use our research hypothesis to be that more often people tend to have right-eye dominance than left-eye dominance.</p></div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>In this study with your class:</p>
+</div></section><section><h3>Exercise 2a:</h3>
+<div align="left"> <p>What are the observational units in this study?</p>
+</div></section><section><h3>Exercise 2b:</h3>
+<div align="left"> <p>What is the variable that is recorded?</p>
+</div></section><section><h3>Exercise 2c:</h3>
+<div align="left"> <p>Describe the parameter of interest in words. (Use the symbol π to represent this parameter.)</p>
+</div></section><section><h3>Exercise 2d:</h3>
+<div align="left"> <p>If right-eye and left-eye dominance are equally prevalent, what would you expect the numerical value of the parameter to be? Is this the null hypothesis or the alternative hypothesis?</p>
+</div></section><section><h3>Exercise 2e:</h3>
+<div align="left"> <p>If people are more likely to be right-eye dominant than left, what can you say about the numerical value of the parameter? Is this the null hypothesis or the alternative hypothesis?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Including yourself and your classmates, how many people participated in this study? How many have right-eye dominance? Calculate the sample proportion who are right-eye dominant.</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>To have a larger sample size to analyze, combine your class results with the results from some of the author’s classes, in which 70 of 115 students had right-eye dominance. Now what are the sample size and the sample proportion that are right-eye dominant?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Use the <a class="external" href="http://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank">One Proportion</a> applet to test the hypotheses from 
+  [REF=TODO]
+ and 
+  [REF=TODO]
+.</p></div></section><section><h3>Exercise 5a:</h3>
+<div align="left"> <p>Describe the shape of the null distribution of sample proportions. Does this shape look familiar? Where is the null distribution centered? Does this make sense? Check the Summary Stats box and report the mean and standard deviation as reported by the applet.</p>
+</div></section><section><h3>Exercise 5b:</h3>
+<div align="left"> <p>Approximate the p-value and summarize the strength of evidence that the sample data provide regarding the research hypothesis.</p>
+</div></section><section><h3>Exercise 5c:</h3>
+<div align="left"> <p>Determine the standardized statistic, z, and summarize the strength of evidence. Confirm that the strength of evidence obtained using the standardized statistic is similar to that obtained using the p-value.</p>
+</div></section></section><section><section><h1>Theory-Based Approach (One-Proportion z-test)</h1></section><section><h3></h3>
+<div align="left"><p>In 
+  [REF=TODO]
+, you probably described the shape of the null distribution using words such as bell-shaped, symmetric, or maybe even normal. You have seen many null distributions in this chapter that have had this same basic shape. You should have also noticed that the null distributions have all been centered at the hypothesized value of the long-run proportion used in the null hypotheses. You probably could have predicted that your null distribution was going to be somewhat bell-shaped and centered at 0.50. You probably would have a harder time predicting your null distribution’s variability (standard deviation), but this too can be predicted in advance, as we will see shortly. We can use mathematical models known as normal distributions (bell-shaped curves) to approximate many of the null distributions we have generated so far in this text. When rules and theories are used to predict what the value of the standardized statistic and p-value would be if someone carried out a simulation, we call the approach a <em class="emphasis">theory-based approach</em>. The normal distribution provides a second way, in addition to simulation, to approximate a p-value.</p></div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Check the box next to Normal Approximation in the applet. Does the region shaded in blue seem to be a good description (model) of what we actually got in the simulation?</p>
+</div></section></section><section><section><h1>Validity Conditions for Theory-Based Approach</h1></section><section><h3></h3>
+<div align="left"><p>The normal approximation to the null distribution is valid whenever the sample size is reasonably large. One convention is to consider the sample size to be large enough whenever there are at least 10 observations in each category.</p></div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>According to this convention, is the sample size large enough in this study to use the normal approximation and theory-based inference? Justify your answer.</p>
+</div></section><section><h3>Convention 1:</h3>
+<div align="left"> <article class="convention remark-like" id="convention-1"><h4 class="heading">
+<span class="type">Validity Conditions</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The normal approximation can be thought of as a prediction of what would occur if a simulation-based analysis was carried out. Many times this prediction is valid, but not always. It is only valid when the condition (at least 10 successes and at least 10 failures) is met.</p></article>
+</div></section></section><section><section><h1>Formulas</h1></section><section><h3></h3>
+<div align="left"><p>The normal approximation will also give you values of the standardized sta- tistic and p-value based on its mathematical predictions. As you learned previously, the standardized score is calculated as</p></div></section><section><h3></h3>
+<div align="left"><p>The mean of the null distribution is the hypothesized value of the long-run proportion (π). The standard deviation can be obtained in two ways:</p></div></section><section><h3></h3>
+<div align="left"><p>First, find the standard deviation of the null distribution by simulating.</p></div></section><section><h3></h3>
+<div align="left"><p>Second, predict the value of the standard deviation by substituting into this formula:</p></div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Use the formula to determine the (theoretical; predicted) standard deviation of the sample proportion. Then compare this to the SD from your simulated sample proportions, as recorded in 
+  [REF=TODO]
+. Are they similar?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The predicted value of the standard deviation (using the formula) will be very close to the simulated standard deviation of the null distribution. The validity condition mentioned earlier says the shape will be approximately normal when the sample size is large enough where, a “large enough” sample size means at least 10 successes and at least 10 failures. This mathematical prediction is often called the “central limit theorem.”</p></div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Use the predicted value of the standard deviation from 
+  [REF=TODO]
+ to calculate the standardized statistic (z) by hand and confirm that your answer is very close to what you found in 
+  [REF=TODO]
+ when using simulation.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>In the applet, see that the predicted value of the standardized statistic, z, is given immediately below the button for “Normal approximation” in parentheses and should match your answer to 
+  [REF=TODO]
+.</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>The theory-based (normal approximation) p-value is also now displayed. Compare this p-value to the one you got from simulation 
+  [REF=TODO]
+. Are they similar?</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Why are the standard deviation (
+  [REF=TODO]
+), standardized statistic (
+  [REF=TODO]
+) and p-value (
+  [REF=TODO]
+) similar when using the theory-based (one-proportion z-test; normal approximation) to what you got in your simulation? When would they be different?</p>
+</div></section></section><section><section><h1>Exploring Further</h1></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{etoolbox}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 3.1 Version \fbox{\myversion} \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%\mcifoutput{exam}{
+%	\AtEndDocument{\ifodd\value{page}
+%		\newpage\thispagestyle{empty}\hbox{This page intentionally left blank.}\newpage\thispagestyle{empty}\hbox{}
+%		\else
+%		\newpage\thispagestyle{empty}\hbox{}
+%		\fi}
+%}
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	
+	In June of 2012, New York City Mayor Michael Bloomberg proposed banning the sale of any regular soda or other sugary drinks in containers larger than 16 oz. A fast food chain polled a random sample of 2500 regular customers and found that 63\% opposed the ban, 28\% supported the ban, and 9\% had no opinion.
+	\begin{mcquestions}		
+		\question The value 63 is a \_\_\_.
+		
+		\begin{mcanswerslist}
+			\answer population
+			\answer sample
+			\answer parameter
+			\answer[correct] statistic
+		\end{mcanswerslist}
+		
+		\question The 2500 regular fast food chain customers surveyed are the \_\_\_.
+		
+		\begin{mcanswerslist}
+			\answer population
+			\answer[correct] sample
+			\answer parameter
+			\answer statistic
+		\end{mcanswerslist}
+		
+	\end{mcquestions}
+\end{document}

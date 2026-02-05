@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 8.1 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.  Questions refer to the nonindented paragraph above unless otherwise stated.\\[.5cm]
+	
+	\begin{mcquestions}
+		\question A 1997 study described in the European Journal of Clinical Nutrition compares the growth of a random sample of vegetarian and omnivorous children, ages 7 - 11, in Northwest England. One of the aspects on which the children were compared was their body mass index (BMI). Of the 50 vegetarian children in the study, the average BMI was 16.76 and the standard deviation was 1.91. Among the 30 omnivorous children in the study, the average BMI was 17.12 and the standard deviation was 2.23.
+			
+		Which best describes this study design?
+		\begin{mcanswerslist}
+			\answer Paired using repeated measures
+			\answer Paired using matching
+			\answer[correct] Independent groups
+			\answer None of the above
+		\end{mcanswerslist}
+		
+		\question A random sample of medical records from 28 heart attack patients at a Boston hospital was used to better understand the relationship between cholesterol and heart failure.  The cholesterol levels of heart attack patients were recorded at 2 days and at 14 days after the patient had a heart attack.
+		
+		Which best describes this study design?
+		\begin{mcanswerslist}
+			\answer[correct] Paired using repeated measures
+			\answer Paired using matching
+			\answer Independent groups
+			\answer None of the above
+		\end{mcanswerslist}
+		
+		\question Researchers randomly selected 36 children who had been identified as gifted from a large city. The IQ of each child and the IQ of the child's mother were measured. A statistical analysis will be performed to determine if IQs of gifted children tend to be higher than their mothers' IQ on average.
+		
+		Which best describes this study design?
+		
+		\begin{mcanswerslist}
+			\answer Paired using repeated measures
+			\answer[correct] Paired using matching
+			\answer Independent groups
+			\answer None of the above
+		\end{mcanswerslist}
+		
+		
+	\end{mcquestions}
+\end{document}

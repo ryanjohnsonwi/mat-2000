@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-10-07T14:17:27-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>4-2 : 2SD and theory-based confidence intervals for a single proportion</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>4-2 : 2SD and theory-based confidence intervals for a single proportion</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated October 7, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>How mobile are we?</h1></section><section><h3></h3>
+<div align="left"><p>Did you move around a lot when you were younger? Suppose you wanted to estimate the proportion of students at your school that currently live in a different state from where they were born. How would you come up with an estimate? Do you think the students in your class are representative of students at your school on this issue? How would you estimate the proportion of adult Americans who currently live in a different state from where they were born?</p></div></section><section><h3></h3>
+<div align="left"><p>The <a class="external" href="https://gss.norc.org/" target="_blank">General Social Survey</a>  (GSS) is a survey administered every two years to a random sample of adult Americans aged 18 and older. The survey asks a battery of questions focused on different social aspects of the population. In 2018, one of the questions was whether or not the adult lived in a different state from where they were born. Of the 2,348 surveyed that year, 36.2% replied that they do currently live in a different state from where they were born.</p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Identify the population and sample in this survey.</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Is it reasonable to believe that the sample of 2,348 adult Americans is representative of the larger population? Explain why or why not.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Explain why 36.2% is a statistic and not a parameter. What symbol would you use to represent it?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Identify (in words) the parameter that the Gallup organization was interested in estimating.</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Is it reasonable to conclude that exactly 36.2% of all adult Americans currently live in a different state from where they were born? Explain why or why not.</p>
+</div></section><section><h3>Exercise 6a:</h3>
+<div align="left"> <p>Although we expect π to be close to 0.362, we realize there may be other plausible values for the population proportion as well. First consider the value of 0.382. Is this a plausible value for π?</p>
+</div></section><section><h3>Exercise 6b:</h3>
+<div align="left"> <p>Use the <a class="external" href="https://static-content.zybooks.com/applets/2021/oneprop/OneProp.htm?hideExtras=1" target="_blank">One Proportion applet</a> to simulate random samples of 2,348 people from such a population. (Hint: Keep in mind that 0.382 is what we are assuming for the population proportion and 0.362 is the observed sample proportion.)</p> <p>What do you estimate for the two-sided p-value? Would you reject or fail to reject the null hypothesis at the 5% level of significance?</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Also check the Summary Stats box and report the mean and standard deviation of this null distribution.</p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Now consider 0.50. Is this a plausible value for π? Repeat #6 and record the mean and standard deviation for this null distribution as well.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Clearly 0.50 is going to be "too far" from <span class="process-math">\(\hat{p} = 0.362 \)</span> to be plausible. But how far is too far? We could use the plausible values method to produce a confidence interval for the proportion of all adult Americans who currently live in a different state from where they were born. But that approach is somewhat cumbersome and time-intensive, so we’ll now learn some shortcut approaches.</p></div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Reconsider our first guess of π = 0.382. How many standard deviations is 0.362 from 0.382? (Hint: Standardize the value by looking at the difference between 0.382 and 0.362 and divide by the standard deviation you found in 
+  [REF=TODO]
+.)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>You should notice that 0.382 and 0.362 are about 2 standard deviations apart and that the two-sided p-value is around 0.05, so this value (0.382) is close to the edge of values that can be considered plausible for <span class="process-math">\(\pi\text{.}\)</span> Values between 0.362 and 0.382 are considered plausible and values larger than 0.382, or more than 2 standard deviations above 0.362, will not be plausible values for the population proportion.</p></div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>When a sampling distribution is bell-shaped, as your null distribution should be for this study, approximately 95% of the statistics in the sampling distribution will fall within 2 standard deviations of the mean. This implies that 95% of sample proportions will fall within 2 standard deviations of the parameter (<span class="process-math">\(\pi\)</span>), which means that <span class="process-math">\(\pi\)</span> is within 2 standard deviations of the observed sample proportion for 95% of all samples.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>We can then extend this idea to construct a 95% confidence interval.</p></div></section><section><h3>Remark 2:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>We can construct a 95% confidence interval of plausible values for a parameter by including all values that fall within 2 standard deviations of the sample statistic. This method is only valid when the sampling distribution follows a bell-shaped, symmetric distribution. We call this the <dfn class="terminology">2SD method</dfn>. Thus we can present the 95% confidence interval for the long-run proportion (or population proportion), <span class="process-math">\(\pi\text{,}\)</span> in symbols as</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\hat p \pm 2 \times SD(\hat p)
+\end{equation*}
+</div>
+<p>where <span class="process-math">\(\hat p\)</span> is the sample proportion and <span class="process-math">\(SD(\hat p)\)</span> is the standard deviation of the sampling distribution of sample proportions. The value of <span class="process-math">\(2 \times SD(\hat p)\text{,}\)</span> which represents half the width of the confidence interval for 95% confidence, is called the <dfn class="terminology">margin of error</dfn>.</p></article>
+</div></section><section><h3>Insight 3:</h3>
+<div align="left"> <article class="insight remark-like" id="insight-1"><h4 class="heading">
+<span class="type">Think About It</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>So how do we find the standard deviation to use for the 2SD method?</p></article>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>How did the standard deviations you found in 
+  [REF=TODO]
+ (with π = 0.382) and in 
+  [REF=TODO]
+ (with π = 0.50) compare?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>You should see that the standard deviation changes slightly when we change <span class="process-math">\(\pi\text{,}\)</span> but not by much. We saw before that the variability in the sample proportions is in fact largest when <span class="process-math">\(\pi = 0.50\text{.}\)</span> So one approach would be to carry out one simulation (with lots of trials) using <span class="process-math">\(\pi = 0.50 \)</span> and use that value of the standard deviation to calculate the margin of error.</p></div></section><section><h3>block 11:  Question 11</h3>
+<div align="left"> <p>Determine a 95% confidence interval using the 2SD method:</p>
+</div></section><section><h3>Exercise 11a:</h3>
+<div align="left"> <p>First calculate 2 <span class="process-math">\(\times\)</span> (standard deviation for your sampling distribution of sample proportions) using 0.5 in the simulation to estimate the SD. (This is the margin of error.)</p>
+</div></section><section><h3>Exercise 11b:</h3>
+<div align="left"> <p>Use this SD to produce a 95% confidence interval for π. (Hint: Subtract the margin of error from p̂ to determine the lower endpoint of the interval and then add the margin of error to p̂ to determine the upper endpoint of the interval.)</p>
+</div></section><section><h3>Exercise 11c:</h3>
+<div align="left"> <p>Interpret the confidence interval: You are 95% confident that what is between what two values?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>One limitation to this method is that it only applies for 95% confidence. What if we wanted to be 90% or 99% confident instead? We can extend this 2SD method to a more general theory-based approach.</p></div></section></section><section><section><h1>Theory-based approach</h1></section><section><h3></h3>
+<div align="left"><p>As we saw previously, we don’t always need to simulate a sampling distribution—not if we can accurately predict what would happen if we were to simulate. Instead, we can predict the standard deviation by the formula <span class="process-math">\(\sqrt{\pi(1-\pi)/n} \text{.}\)</span> But when constructing a confidence interval, we don’t have a hypothesized value of π, so to estimate this standard deviation, we will substitute the observed sample proportion.</p></div></section><section><h3>Definition 4:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>An estimate of the standard deviation of a statistic, based on sample data, is called the <dfn class="terminology">standard error</dfn> (SE) of the statistic. In this case <span class="process-math">\(\sqrt{ \hat{p}(1-\hat{p}) / n}  \)</span> is the standard error of a sample proportion <span class="process-math">\(\hat{p}\text{.}\)</span></p>
+</div>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Calculate the standard error for this study. How does it compare to the standard deviations you found in 
+  [REF=TODO]
+ and 
+  [REF=TODO]
+?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>So a more general formula for using the 2SD method to estimate a population proportion would be<div class="displaymath process-math">
+\begin{equation*}
+\text{CI} = \hat{p} \pm 2 \times \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+\end{equation*}
+</div></p></div></section><section><h3></h3>
+<div align="left"><p>But then how do we change the confidence level? The 2SD method was justified by saying 95% of samples yield a sample proportion within 2 standard deviations of the population proportion. If we want to be more confident that the parameter is within our margin of error, we can create a larger margin of error by increasing the multiplier. In fact a multiplier of 2.576 gives us a 99% confidence level, whereas a multiplier of 1.645 gives us only 90% confidence.</p></div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>In the <a class="external" href="https://static-content.zybooks.com/applets/2021/tbia/TBIA.html?hideExtras=1" target="_blank">Theory-Based Inference applet</a>, specify the sample size (n) of 2,348 and the sample proportion of 0.362 and press <dfn class="terminology">Calculate</dfn>. (The applet will fill in the count or specify the count of 850 and the applet will fill in the sample proportion.)</p> <p>Check the box for Confidence interval, confirm the confidence level is 95% and press Calculate CI to generate a theory-based confidence interval. Report the 95% theory-based confidence interval.</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Is this theory-based confidence interval similar to the one you obtained using the 2SD method?</p>
+</div></section><section><h3>Convention 5:</h3>
+<div align="left"> <article class="convention remark-like" id="convention-1"><h4 class="heading">
+<span class="type">Validity Conditions</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The theory-based approach for finding a confidence interval for π (called a <dfn class="terminology">one-sample z-interval</dfn>) is considered valid if there are at least 10 observational units ineach category of the categorical variable (i.e., at least 10 successes and at least 10 failures).</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>Because we have a large sample size here, the theory-based approach should produce very similar results to the plausible values method and the 2SD method. In such a case, the theory-based approach is often the most convenient, especially if our confidence level is not 95%.</p></div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Change the confidence level in the applet from 95% to 99% and press the Calculate CI button again. Report the 99% confidence interval given by the applet. How does it compare to the 95% interval? (Compare both the midpoint of the interval = (lower endpoint + upper endpoint)/2 and the margin of error = (upper endpoint − lower endpoint)/2.)</p>
+</div></section></section><section><section><h1>Exploring further</h1></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Let’s look back at your class data. Determine a theory-based confidence interval for the proportion of students at your school who currently live in a state different from where they were born. Do you think this interval is valid?</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>How does your interval compare to the interval you found from the GSS survey?</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Based on characteristics of your sample and your school, does it make sense that the two intervals compare as you described in #17? Explain.</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

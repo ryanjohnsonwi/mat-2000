@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 9.2 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.  Questions refer to the nonindented paragraph above unless otherwise stated.\\[.5cm]
+	
+	\begin{mcquestions}
+		\question Suppose the chi-square statistic for a test was 6.991. If instead, the chi-square statistic had been 5.332, would the p-value be smaller, larger, or remain the same?
+		\begin{mcanswerslist}
+			\answer Smaller
+			\answer[correct] Larger
+			\answer Remain the same
+			\answer Cannot be determined
+		\end{mcanswerslist}
+		
+	\begin{mcquestioninstruction}
+			Hope student researchers want to determine if students yawning (when being yawned at) is associated with the time of day (morning, afternoon, and evening). The students found the following results from yawning in front of people around campus:
+		\begin{itemize}
+			\item Morning: 25 of the 39 people yawned back
+			\item Afternoon: 15 of the 38 people yawned back
+			\item Evening: 29 of the 44 people yawned back
+		\end{itemize}
+	\end{mcquestioninstruction}
+		\question When this test is run, a p-value of 0.03 is found. What would be an appropriate conclusion?
+		\begin{mcanswerslist}
+			\answer Strong evidence exists that the probability a person yawns is different between all three times of day: morning, afternoon, and evening.
+			\answer[correct] Strong evidence exists of an association between time of day and whether a person yawns.
+			\answer Strong evidence of no association between time of day and whether a person yawns.
+			\answer Strong evidence does not exist of an association between time of day and whether a person yawns.
+		\end{mcanswerslist}
+		
+		\question[follow] After a chi-square test, follow-up confidence intervals for all pairwise differences in proportions are found as follows:
+		\begin{itemize}
+			\item 0.0299 to 0.4627:  Morning – Afternoon
+			\item -0.2237 to 0.1876:  Morning – Evening
+			\item -0.4736 to -0.0551:  Afternoon – Evening
+		\end{itemize}
+		Based off of these intervals, which of the following conclusions are correct?
+		\begin{mcanswerslist}
+			\answer The probability of yawning in the morning differs significantly from the probability of yawning in the evening.
+			\answer[correct] The probability of yawning in the morning differs significantly from the probability of yawning the afternoon.
+			\answer The probability of yawning in the afternoon does not differ significantly from the probability of yawning in the evening.
+			\answer The probability of yawning in the morning does not differ significantly from the probability of yawning in the afternoon.
+		\end{mcanswerslist}
+		
+		
+		\question 3) Why do we do overall tests when comparing multiple proportions and not just do the follow-up confidence intervals?
+		\begin{mcanswerslist}
+			\answer[correct] Doing an overall test will more likely lead to significant results than just doing the follow-up confidence intervals.
+			\answer Doing an overall test allows us to see exactly which group is significantly different from which other groups.
+			\answer Doing an overall test allows us to quickly get our results, while the follow-up confidence intervals are very time-consuming.
+			\answer Doing an overall test allows us to keep the probability of a type I error at 5\% or whatever significance level we would like.
+		\end{mcanswerslist}
+		
+		
+		\question Can telling a joke affect whether or not a customer in a coffee bar leaves a tip for the waiter? A study investigated this question at a coffee bar in France. The waiter randomly assigned coffee-ordering customers into three groups: one received a card telling a joke with their bill, another group received a card containing an advertisement for a local restaurant, and the third received no card. The results are shown below.
+		\begin{center}
+			\begin{tabular}{| l | l | l | l | l |}
+				\hline
+				& \textbf{Joke Card} & \textbf{Ad Card} & \textbf{No Card} & \textbf{Total} \\
+				\hline
+				\textbf{Left Tip} & 32 (0.40) & 16 (0.20) & 24 (0.30) & 72 \\
+				\hline
+				\textbf{No Tip} & 48 & 64 & 56 & 168 \\
+				\hline
+				\textbf{Total} & 80 & 80 & 80 & 240 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\begin{mcanswerslist}
+			\answer Yes, since 80 is larger than 20.
+			\answer Yes, since 240 is larger than 20.
+			\answer[correct] Yes, since each cell in the table has at least 10 observations.
+			\answer No, the sample is not a random sample of customers.
+		\end{mcanswerslist}
+		
+		
+		
+	\end{mcquestions}
+\end{document}

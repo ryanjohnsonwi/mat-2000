@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 6.1 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	
+	\begin{mcquestions}
+		\begin{mcquestioninstruction}
+			Whirling disease is a deadly disease that affects trout in Montana rivers. In a follow-up to a 2006 study conducted by the Montana Department of Fish, Wildlife and Parks (FWP), researchers sought to determine if the proportion of trout afflicted by whirling disease in the Gallatin river differs between rainbow trout and brown trout. To test this theory, researchers collected a representative sample of 527 rainbow trout and 459 brown trout. Of the 527 rainbow trout collected, 120 had developed whirling disease; of the 459 brown trout collected, 74 had developed whirling disease.
+		\end{mcquestioninstruction}
+		\question Does whether a trout develops whirling disease appear to be associated with the species of trout (rainbow or brown)?
+		\begin{mcanswerslist}
+			\answer No, since approximately the same number of trout in each species were used.
+			\answer Yes, since the number of trout who developed whirling disease differed from the number of trout who did not develop whirling disease.
+			\answer[correct] Yes, since the conditional proportion of trout that developed the disease differed between rainbow and brown trout.
+			\answer Yes, since the proportion of trout that developed the disease was not equal to 0.5.
+		\end{mcanswerslist}
+		
+		\begin{mcquestioninstruction}
+			The Women's Health Study included 39,876 female health professionals aged 45 years and older who were followed for an average of 10 years (Ridker et al., 2005). At the beginning of the study, participants were randomly assigned to take either a daily low-dose aspirin or a daily placebo pill for the duration of the study. At the end of the study, researchers measured the number of participants that suffered from a heart attack during the study. Data are summarized in the following table.
+			\begin{center}
+				\begin{tabular}{| l | l | l | l |}
+					\hline
+					& \textbf{Low-dose Aspirin} & \textbf{Placebo} & \textbf{Total} \\
+					\hline
+					\textbf{Heart Attack} & 198 & 193 & 391 \\
+					\hline
+					\textbf{No Heart Attack} & 19,736 & 19,749 & 39,485 \\
+					\hline
+					\textbf{Total} & 19,934 & 19,942 & 39,876 \\
+					\hline
+				\end{tabular}
+			\end{center}
+			Use this scenario to answer questions \ref{women-health-1}, \ref{women-health-2}, and \ref{women-health-3}.
+		\end{mcquestioninstruction}
+		\question What type of plot could be used to plot these data? \label{women-health-1}
+		\begin{mcanswerslist}
+			\answer Scatterplot
+			\answer[correct] Segmented bar chart
+			\answer Dotplot
+			\answer Histogram
+		\end{mcanswerslist}
+		
+		\question[follow] Calculate the relative risk of heart attack for the low-dose aspirin group compared to the placebo group. \label{women-health-2}
+		\begin{mcanswerslist}
+			\answer[correct] 1.026
+			\answer 0.974
+			\answer 0.00993
+			\answer 0.000255
+		\end{mcanswerslist}
+		
+		\question[follow] Do the data suggest an association exists between whether a woman takes low-dose Aspirin or placebo and if the woman suffers from a heart attack in this sample? \label{women-health-3}
+		\begin{mcanswerslist}
+			\answer[correct] No, since approximately the same proportion of women suffered from a heart attack in each group.
+			\answer Yes, women who took low-dose Aspirin were less likely to suffer from a heart attack.
+			\answer Yes, women who took low-dose Aspirin were more likely to suffer from a heart attack.
+			\answer We cannot determine whether an association exists without a plot.
+		\end{mcanswerslist}
+		
+	\end{mcquestions}
+\end{document}

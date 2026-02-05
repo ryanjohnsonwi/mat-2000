@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 4.3 \mctheversion \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	
+	Researchers are interested in investigating the effect of a drug used in the treatment of patients with glaucoma (an eye disorder associated with high eye pressure). In a volunteer sample of 35 patients with glaucoma in both eyes, one eye of each patient was randomly assigned to this drug, and the other eye was given a placebo. After one week, the eye pressure was measured on each eye. The difference in eye pressure between the two eyes (drug – placebo) was measured for each patient. The sample mean difference in eye pressure was –1.21 mmHg (millimeters of mercury), and the sample standard deviation of the differences was 4.67 mmHg.
+	\begin{mcquestions}
+		\question Use the 2SD method to find a 95\% confidence interval for the population mean difference in eye pressure (drug – placebo).
+		\begin{mcanswerslist}
+			\answer  (-2.51, 0.09)
+			\answer  (-2.00, -0.42)
+			\answer[correct]  (-2.79, 0.37)
+			\answer  Not enough information exists.
+		\end{mcanswerslist}
+		
+		\question Suppose a 95\% confidence interval for the population mean difference in eye pressure is (L, U). How would you interpret this interval?
+		\begin{mcanswerslist}
+			\answer  95\% confidence exists that each patient's difference in eye pressure (drug – placebo) will be between L and U mmHg.
+			\answer[correct]  95\% confidence exists that the population mean difference in eye pressure (drug – placebo) if treated would be between L and U mmHg.
+			\answer  Approximately 95\% of patients will have a difference in eye pressure (drug – placebo) between L and U mmHg.
+			\answer  In the long run, 95\% of samples will produce a confidence interval of L to U mmH.
+		\end{mcanswerslist}
+		
+		\question A 95\% confidence interval is computed to estimate the mean household income for a city. Which of the following values will definitely be within the limits of this confidence interval?
+		\begin{mcanswerslist}
+			\answer  The population mean
+			\answer[correct]  The sample mean
+			\answer  The sample standard deviation
+			\answer  The p-value
+		\end{mcanswerslist}
+		
+		\question On October 5, 2005, a tour boat named the Ethan Allen capsized on Lake George in New York with 47 passengers aboard. In the inquiries that followed, one suggestion was that the tour operators should have realized that the combined weight of so many passengers was likely to exceed the weight capacity of the boat, 7500 lbs.
+		Based on this information, how surprising should the inquirers be for a sample of 47 passengers to have an average weight of at least 7500/47 = 159.57 lbs?
+		\begin{mcanswerslist}
+			\answer[correct]  Not surprising at all – the probability is over 90\%.
+			\answer  Not surprising – the probability is between 50\% and 60\%.
+			\answer  Somewhat surprising – the probability is between 20\% and 30\%.
+			\answer  Very surprising – the probability is less than 5\%.
+		\end{mcanswerslist}
+	\end{mcquestions}
+\end{document}

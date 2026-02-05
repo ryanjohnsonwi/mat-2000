@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:28:56-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>7-1 : Comparing two groups: Quantitative response</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>7-1 : Comparing two groups: Quantitative response</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>A worksheet for Grace College from Zybooks</p></div></section><section><section><h1>Cancer Pamphlets</h1></section><section><h3></h3>
+<div align="left"><p>Researchers in Philadelphia investigated whether pamphlets containing informa- tion for cancer patients are written at a level that the cancer patients can compre- hend (<a class="external" href="https://doi.org/10.1080/10691898.1995.11910492" target="_blank">Short, Moriarty, and Cooley, 1995</a>). First, they measured the readability of a sample of cancer pamphlets based on factors such as the length of sentences and the number of polysyllabic words, assigning each pamphlet a grade level. The results shown below are presented as a frequency table, reporting the number of pamphlets at each grade level.</p></div></section><section><h3>Table 1:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption>Readability measures (grade level) for pamphlets aimed at cancer patients.</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Pamphlets’ readability levels</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">11</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">15</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Count (number of pamphlets)</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>What are the observational units in the table above? How many observational units were measured?</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Use the information in the table above to construct a histogram of the pamphlets’ readability levels. How would you summarize the behavior of this histogram?</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Using the information in the table above, calculate the mean pamphlet readability level. (Hint: Add up the values, 6 + 6 + 6 + 7 + … + 15 + 15 + 16 and divide by the number of observational units.)</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Using the information in the table above, calculate the median pamphlet readability level. How many observations are on each side of this median value (including the repeat values)? (Hint: What is the position of the median?)</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>How do the mean and median compare? Is this what you would have predicted from the histogram? Explain briefly.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>While the mean and median tell us about the center of the distribution, one way to sum- marize the behavior of the distribution of a quantitative variable is by dividing the distribution into four pieces of roughly equal size (number of observations). In other words, summarize the distribution by determining where the bottom 25% of the data are, the next 25%, the next 25%, and then the top 25%.</p></div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>The value for which 25% of the data lie below that value is called the <dfn class="terminology">lower quartile</dfn> (or 25th percentile). Similarly, the value for which 25% of the data lie above that value is called the <dfn class="terminology">upper quartile</dfn> (or 75th percentile). Quartiles can be calculated by determining the median of the values above/below the location of the overall median. The difference between the quartiles is called the <dfn class="terminology">inter-quartile range (IQR)</dfn>, another measure of variability along with standard deviation.</div>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Take the 15 values below the position of the median, and find the median of those 15 values. This is the lower quartile.</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Repeat for the 15 values above the position of the median. This is the upper quartile.</p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Calculate and interpret the inter-quartile range.</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Explain why the inter-quartile range might be preferred to the standard deviation to summarize the variability in the pamphlet reading levels.</p>
+</div></section><section><h3>Remark 3:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The minimum, lower quartile, median, upper quartile, and maximum comprise the <dfn class="terminology">five-number summary</dfn>. A visual representation of the five-number summary is a boxplot. The figure below shows a boxplot for these data.</p></article>
+</div></section><section><h3>Figure 4:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-1"><img height="800" src="../code/assets/7-1/boxplot.png"/><figcaption>Boxplot of cancer pamphlet reading levels</figcaption></figure>
+</div></section><section><h3>Definition 5:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>A <dfn class="terminology">boxplot</dfn> is a visual display of the five-number summary. The box displays the middle 50% of the distribution, and its width (the IQR) helps us visualize the spread of the distribution; the whiskers extend to the smallest and largest values in the dataset.</div>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>How does the boxplot match up to the five-number summary? (Endpoint of lower whisker, lower edge of box, line within the box, upper edge of box, upper whisker).</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The boxplot illustrates that there is some variability in the pamphlet reading levels. What the researchers wanted to know was how these different reading levels matched up to the reading ability of the cancer patients. The table below shows a frequency table for the reading level (again a grade level) for 63 cancer patients. Note that patient reading levels of under 3rd grade and above 12th grade are not determined exactly.</p></div></section><section><h3>Table 6:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption>Comparing pamphlet readability scores and patient reading levels</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Patients’ reading levels</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">&lt;3</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">3</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">5</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">6</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">7</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">8</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">9</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">10</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">11</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">12</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">&gt;12</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Total</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Count (number of patients)</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">6</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">3</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">3</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">2</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">6</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">5</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">4</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">7</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">2</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">17</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">63</th>
+</tr>
+</table></div></figure>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Explain why it is not possible to calculate the mean reading ability for these patients.</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Explain why it is possible to calculate the median reading ability for these patients and do so.</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>How does the median reading level of the patients compare to the median reading level of the pamphlets? Does this indicate that the pamphlets are a good match to the cancer patients? Explain.</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Determine and interpret the lower quartile for the patient reading levels.</p>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>How does the lower quartile of patient reading levels compare to the lower quartile of the reading level of the cancer pamphlets? How does the lower quartile of patient reading levels compare to the minimum reading level of the cancer pamphlets?</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Use your answer to question 
+  [REF=TODO]
+ to decide whether the cancer pamphlets are a good match to patient reading levels. (Hint: Interpret the second comparison in 
+  [REF=TODO]
+ in context.)</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Later in this chapter, you will learn formal methods for assessing whether the centers of two distributions are statistically significantly different. But notice how such analysis may not be valid for a study like this:<ul class="disc">
+<li>Means are not the most important feature to be comparing. For example, means will be influenced by outliers, and these data were not presented in a way to allow for calculation of means.</li>
+<li>We could focus on comparing the medians instead, but only comparing the centers of these distributions ignores the variability in the distributions, which is perhaps of more interest to these research questions.</li>
+<li>We don’t know whether the pamphlets or patients are randomly sampled from larger populations.</li>
+</ul></p></div></section><section><h3></h3>
+<div align="left"><p>This exploration reveals that measures of center do not always tell the whole story when you are analyzing data to address a particular research question. In this case, the research question of whether pamphlets’ readability levels are well aligned with patients’ reading lev- els requires looking at the entire distributions, not simply at measures of center. Examining displays of the distributions would be a better place to begin. In addition to dotplots and histograms, boxplots are another potential type of display that is especially useful for comparing distributions. But keep in mind, as shown in a previous exploration, that they can sometimes mask important features of distributions. Many software packages now allow you to overlay a boxplot on top of a histogram or dotplot to help see the entire distribution while highlighting key features like the quartiles.</p></div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

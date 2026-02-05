@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+
+\ifdef{\myoutput}{}{\def\myoutput{concept}}
+\ifdef{\myversion}{}{\def\myversion{1}}
+
+\usepackage[output=\myoutput
+,numberofversions=4
+,version=\myversion
+,seed=4
+,randomizequestions=true
+,randomizeanswers=true
+,writeRfile=true
+]{mcexam}
+
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt} 
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{\mctheversion}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lhead{Quiz 4.1 Version \fbox{\myversion} \\ MAT 2000: Introduction to Statistics}
+\rhead{Name Print): \hspace{2.5 in}}
+
+\usepackage{calc}
+\renewenvironment{setmcquestion}
+{\begin{minipage}[t]{\linewidth-\labelwidth}}
+	{\end{minipage}\par}
+	
+\renewenvironment{setmcquestioninstruction}
+{\begin{minipage}{\textwidth}}
+	{\end{minipage}}
+	
+\renewenvironment{setmcanswers}{}{}
+\setlist[setmcquestions]{label=\mcquestionlabelfmt{*}.
+	,ref=\mcquestionlabelfmt{*}
+	,itemsep=0.5\baselineskip
+	,topsep=1\baselineskip
+}
+
+\renewcommand\mcversionlabelfmt[1]{\arabic{#1}}
+
+%copy-pasting from MS Word, use regex to find [\*]*[a-d]\. and replace with \answer 
+
+\raggedbottom
+
+\begin{document}
+	Circle the correct answer for each question.  If you're unsure, you can write numbers 1, 2, 3, etc. next to the choices to get partial credit.\\[.5cm]
+	\begin{mcquestions}
+		\question Suppose a confidence interval is constructed using repeated tests of significance to develop an interval of plausible values.  Two-sided tests are used each time with the following null hypotheses and resulting p-values.
+		\begin{center}
+			\begin{tabular}{llp{.75in}ll}
+				Null              & p-value & & Null              & p-value  \\
+				$\pi = 0.45$ & 0.009   &                                 & $\pi = 0.53$ & 0.787    \\
+				$\pi = 0.46$ & 0.032   &                                 & $\pi = 0.54$ & 0.572    \\
+				$\pi = 0.47$ & 0.062   &                                 & $\pi = 0.55$ & 0.373    \\
+				$\pi = 0.48$ & 0.126   &                                 & $\pi = 0.56$ & 0.142    \\
+				$\pi = 0.49$ & 0.371   &                                 & $\pi = 0.57$ & 0.077    \\
+				$\pi = 0.50$ & 0.598   &                                 & $\pi = 0.58$ & 0.042    \\
+				$\pi = 0.51$ & 0.733   &                                 & $\pi = 0.59$ & 0.021    \\
+				$\pi = 0.52$ & 0.986   &                                 & $\pi = 0.60$ & 0.003   
+			\end{tabular}
+		\end{center}
+		Using the results, give a 95\% confidence interval.
+		\begin{mcanswerslist}
+			\answer (0.50, 0.54)
+			\answer[correct] (0.47, 0.57)
+			\answer (0.45, 0.60)
+			\answer (0.46, 0.58)
+		\end{mcanswerslist}
+		
+		\question Commercial fisherman working certain parts of the Atlantic Ocean sometimes find efforts being hindered by the presence of whales. Ideally, the whales could be scared away without frightening the fish. Experience has shown that whales leave the sight of a fishing boat 40\% of the time. One of the strategies being experimented with is to transmit underwater sounds of a killer whale. On the 52 occasions that this technique has been tried, the technique worked 24 times (that is, the whales immediately left the area).
+		A 99\% confidence interval for $\pi$ is $(0.29, 0.65)$. How would you interpret this interval?
+		\begin{mcanswerslist}
+			\answer When underwater sounds of killer whales are transmitted, fishermen can be are 99\% confident that whales leave the sight of a fishing boat 46\% of the time.
+			\answer[correct] When underwater sounds of killer whales are transmitted, fishermen can be 99\% confident that whales leave the sight of a fishing boat between 29\% and 65\% of the time.
+			\answer 99\% of whales will leave the sight of a fishing boat if the whales hear sounds of a killer whale.
+			\answer If another sample of 52 occasions is collected, a 99\% chance exists that the sample proportion of whales who leave the sight of a fishing boat will be between 0.29 and 0.65.
+		\end{mcanswerslist}
+		
+		\question Let $\pi$ be some population proportion of interest and suppose a 99\% confidence interval for $\pi$ is calculated to be (0.32, 0.41) and a 95\% confidence interval is calculated to be (0.34, 0.39). Also, suppose the hypothesis test is $H_0: \pi = 0.33$ and $H_A: \pi \neq 0.33$. What can be said about the corresponding p-value for this test?
+		\begin{mcanswerslist}
+			\answer The corresponding p-value will be less than 0.01.
+			\answer[correct] The corresponding p-value will be between 0.01 and 0.05.
+			\answer The corresponding p-value will be between 0.05 and 0.10.
+			\answer The corresponding p-value will be greater than 0.10.
+		\end{mcanswerslist}
+		
+		\question Suppose a test of significance is conducted with $H_0: \pi = 0.50$ and $H_A: \pi \neq 0.50$ with a resulting p-value of 0.07.  Also, 99\% and 95\% confidence intervals are constructed from the data.
+		What will be true about the confidence intervals?
+		\begin{mcanswerslist}
+			\answer Both the 99\% and the 95\% intervals will contain 0.50.
+			\answer[correct] Neither the 99\% nor the 95\% intervals will contain 0.50.
+			\answer The 99\% interval will contain 0.50, but the 95\% interval will not contain 0.50.
+			\answer The 99\% interval will not contain 0.50, but the 95\% interval will contain 0.50.
+		\end{mcanswerslist}
+		
+		
+	\end{mcquestions}
+\end{document}

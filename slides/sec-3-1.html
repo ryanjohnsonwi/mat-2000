@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:26:25-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>3-1 : Sampling from a finite population</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>3-1 : Sampling from a finite population</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Literary Computing</h1></section><section><h3>Figure 1:</h3>
+<div align="left"> <figure class="figure figure-like" id="gettysburg-1"><img height="800" src="../code/assets/3-1/gettysburg_1.png"/><figcaption></figcaption></figure>
+</div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>Select a representative set of 10 words from the passage above by circling them with your pen or pencil.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The authorship of literary works is often a topic for debate. For example, researchers have tried to determine whether some of the works attributed to Shakespeare were actually written by Bacon or Marlow. The field of “literary computing” examines ways of numerically analyzing authors’ works, looking at variables such as sentence length and rates of occurrence of specific words.</p></div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Complete the following data table by recording each word from your sample and then indicate the length of the word (number of letters) and whether or not the word is "short" (3 or fewer letters).</p> <img height="700" src="../code/assets/3-1/word_length_1.png"/>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Identify the observational units and the variables you have recorded on these observational units (Keep in mind that observational units do not have to be people!)</p>
+</div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>The <dfn class="terminology">population</dfn> is the entire collection of observational units of interest, and the <dfn class="terminology">sample</dfn> is a subset of the population on which we record data.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>The passage is, of course, Lincoln’s Gettysburg Address, given November 19, 1863, on the battlefield near Gettysburg, Pennsylvania. We are considering this passage a <dfn class="terminology">population</dfn> of 268 words, and the 10 words you selected are a <dfn class="terminology">sample</dfn> from this population. As before, we can use <span class="process-math">\(\hat{p}\)</span> to refer to a sample proportion and <span class="process-math">\(\pi \)</span> to refer to the parameter, this time the proportion of short words in the population.</p></div></section><section><h3></h3>
+<div align="left"><img height="800" src="../code/assets/3-1/gettysburg_2.png"/></div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Do you think the sample proportion of short words you found will be a good estimate of the population proportion, <span class="process-math">\(\pi= 0.41 \)</span> ? Why or why not?</p>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Suggest a method for deciding whether the sample proportion of short words is likely to be close to the population proportion of short words. (Hint: Whereas any one sample may not produce a statistic that exactly equals the population parameter, what would we like to be true in general?)</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Combine your results with your classmates’ by producing a dotplot of the distribution of the proportion of short words in your samples.</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>What label should be along the horizontal axis of this graph? How many dots do you have? In other words, clarify what each dot represents. (Hint: If you wanted to add another dot to the graph, what would you need to do?)</p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Based on the class dotplot, does this sampling method tend to produce sample proportions close to the population proportion, 0.41? Justify your answer.</p>
+</div></section><section><h3>Definition 3:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A sampling method is <dfn class="terminology">biased</dfn> if, when using that sampling method, statistics from different samples <em class="emphasis">consistently</em> overestimate or consistently underestimate the population parameter of interest.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>Note that bias is a property of a sampling <em class="emphasis">method</em>, not a property of an individual sample. Also note that the sampling method must <em class="emphasis">consistently</em> produce nonrepresentative results in the same direction in order to be considered biased</p></div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Does asking you to quickly select 10 representative words appear to be a biased or unbiased sampling method? If biased, what is the direction of the bias (tendency to overestimate or underestimate the proportion of short words)?</p>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Explain why we might have expected this sampling method (asking you to quickly pick 10 representative words) to be biased for this variable.</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Do you think that if we’d asked each of you to take 20 words instead of 10 words it would have helped with this issue? Explain.</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Suggest another technique for selecting 10 words from this population in order for the sampling method to be unbiased and likely to produce samples that are representative of the population proportion of short words.</p>
+</div></section></section><section><section><h1>Taking a Simple Random Sample</h1></section><section><h3>Remark 4:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>A <dfn class="terminology">simple random</dfn> sample ensures that every sample of size <em class="emphasis">n</em> is equally likely to be the sample selected from the population. In particular, each observational unit has the same chance of being selected as every other observational unit.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>The key to obtaining a representative sample is using some type of <em class="emphasis">random</em> mechanism to select the observational units from the population, rather than relying on <dfn class="terminology">convenience samples</dfn> or any type of human judgment.</p></div></section><section><h3>Definition 5:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A <dfn class="terminology">convenience sample</dfn> is a nonrandom sample of a population.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>Instead of having you choose “random” words using your own judgment, we will now ask you to take a simple random sample of words and evaluate your results. The first step is to obtain a <dfn class="terminology">sampling frame</dfn>—a complete list of every member of the population where each member of the population can be assigned a number. Below is a copy of the Gettysburg Address that includes numbers in front of every word. For example, the 43rd word is “nation”. <em class="emphasis">Note</em>: In this sampling frame, “four score” is listed as two words.</p></div></section><section><h3>Exercise 13a:</h3>
+<div align="left"> <p>Go to the <dfn class="terminology"><a class="external" href="https://static-content.zybooks.com/applets/2021/randomnumbers/GenRandom01.htm?hideExtras=1" target="_blank">Random Numbers</a></dfn> applet (or <a class="external" href="http://www.random.org/" target="_blank">random.org</a>).</p> <div style="display:table;margin-left:0%;margin-right:0%;">
+<div style="display:table-cell;width:50%;vertical-align:top;"><p><ul class="disc">
+<li><p>Specify that you want 5 <em class="emphasis">Numbers per replication</em> in the range from 1 to 268.</p></li>
+<li><p>Press <em class="emphasis">Generate</em> to view the 5 random numbers.</p></li>
+<li><p><em class="emphasis">Enter</em> the random numbers in the table below:</p></li>
+</ul></p></div>
+<div style="display:table-cell;width:50%;vertical-align:top;"><img height="300" src="../code/assets/3-1/random_num_app.png"/></div>
+</div> <p>Randomly generated five ID values from 1 to 268:</p> <img src="../code/assets/3-1/five_nums.png" width="1800"/>
+</div></section><section><h3>Exercise 13b:</h3>
+<div align="left"> <p>Using your randomly generated numbers, look up the corresponding word from the sampling frame. Fill in the <dfn class="terminology"><em class="emphasis">data table</em></dfn> below.</p> <img height="800" src="../code/assets/3-1/word_length_2.png"/>
+</div></section><section><h3>Figure 6:</h3>
+<div align="left"> <figure class="figure figure-like" id="fig-gettysburg-frame-1"><img height="800" src="../code/assets/3-1/gettysburg_3.png"/><figcaption>Gettysburg Address Sampling Frame</figcaption></figure>
+</div></section><section><h3>Figure 7:</h3>
+<div align="left"> <figure class="figure figure-like" id="fig-gettysburg-frame-2"><img height="800" src="../code/assets/3-1/gettysburg_4.png"/><figcaption></figcaption></figure>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Let’s examine your sample of five words, as well as those of your classmates.</p>
+</div></section><section><h3>Exercise 14a:</h3>
+<div align="left"> <p>Calculate the proportion of short words in your random sample.</p>
+</div></section><section><h3>Exercise 14b:</h3>
+<div align="left"> <p>Again, produce a dotplot of the distribution of proportions of short words for your sample and those of your classmates. Make sure you label the horizontal axis appropriately.</p>
+</div></section><section><h3>Exercise 14c:</h3>
+<div align="left"> <p>Comment on how this distribution compares to your class’ dotplot of sample proportions from 
+  [REF=TODO]
+ which used nonrandom sampling.</p>
+</div></section><section><h3>Exercise 14d:</h3>
+<div align="left"> <p>Does this second method appear to be an unbiased sampling method? How are you deciding?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Let’s use technology to take even more random samples.<ul class="disc">
+<li>Open the <a class="external" href="https://static-content.zybooks.com/applets/2021/sampling/OneSample.html?population=gettysburg" target="_blank">Sampling Words</a> applet.</li>
+<li>Use the <em class="emphasis">Variable</em> pull down menu, to choose "Short". Confirm the population proportion is 0.41.</li>
+<li>Check the <em class="emphasis">Show Sampling Options</em> box. Specify 5 in the <em class="emphasis">Sample Size</em> box and press the <em class="emphasis">Draw Samples</em> button.</li>
+</ul><div style="display:table;margin-left:0%;margin-right:0%;">
+<div style="display:table-cell;width:30%;vertical-align:top;"><img src="../code/assets/3-1/samp_words_app.png" width="500"/></div>
+<div style="display:table-cell;width:70%;vertical-align:top;"><p>You will see the five selected words appear in the box below. You will also see five blue dots within the population distribution representing the five words you have sampled (and whether they are short). These five yes/no outcomes for your sample are also displayed in a dotplot in the middle panel. The blue triangle indicates the proportion of short words in this sample. This value also appears on the Sampling Distribution graph to the right. Press <em class="emphasis">Draw Samples</em> again.</p></div>
+</div></p></div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Did you get the same sample this time? Did you get the same sample proportion?</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Suppose you take 1,000 different random samples and examined the distribution of the 1,000 sample proportions. Where do you think this distribution will be centered? What shape do you think it will have? Predict the largest and smallest values.</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Change the Number of samples from 1 to 9998, for a total of 10,000 samples and press Draw Samples. Describe the behavior of the distribution of sample proportions and contrast it with your prediction, as well as to the class distribution of nonrandom samples using 10 words.</p>
+</div></section><section><h3>Definition 8:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A <dfn class="terminology">sampling distribution</dfn>  is the distribution of a statistic for all possible samples of size n randomly selected from the same population. By taking lots of samples, you can approximate this sampling distribution.</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>The following table outlines the simulation process you are using to approximate the sampling distribution of sample proportions of short words from the Gettysburg Address.</p></div></section><section><h3>Table 9:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption>Parallels between population distributions and sampling distributions</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Population</td>
+<td class="l m b0 r0 l0 t0 lines">All 268 words in the Gettysburg Address</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Parameter</td>
+<td class="l m b0 r0 l0 t0 lines">Proportion of words in the population that are short (<span class="process-math">\(\pi  = 0.41\)</span>)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Sample</td>
+<td class="l m b0 r0 l0 t0 lines">5 randomly selected words</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Statistic</td>
+<td class="l m b0 r0 l0 t0 lines">Proportion of sampled words that are short ( <span class="process-math">\(\hat p\)</span> varies from sample to sample)</td>
+</tr>
+</table></div></figure>
+</div></section><section><h3></h3>
+<div align="left"><p>One big change between the random samples and the previous convenience samples is the center of the sampling distribution should now be close to <span class="process-math">\(\pi \text{,}\)</span> the population proportion. In other words, simple random sampling is an unbiased sampling method because there is no tendency to over- or underestimate the parameter.</p></div></section><section><h3>Remark 10:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The mean of the sampling distribution of sample proportions for all possible simple random samples from a population with success proportion <span class="process-math">\(\pi \)</span> will be equal to <span class="process-math">\(\pi \text{.}\)</span></p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>As we saw, this sampling method (taking 5 randomly selected words) is better (unbiased) even though we selected fewer words.</p></div></section></section><section><section><h1>Sampling Distribution of Sample Proportions</h1></section><section><h3></h3>
+<div align="left"><p>Based on what you learned about sample proportions previously, you should not be too surprised that the distribution of sample proportions you produced in 
+  [REF=TODO]
+ is somewhat symmetric (because <span class="process-math">\(\pi \)</span> is close to 0.50), with a mean close to 0.41 (because the sampling method is unbiased). In fact, our previous formula for the standard deviation of sample proportions, <span class="process-math">\(\sqrt{\dfrac{\pi(1 - \pi)}{n}}\text{,}\)</span> still works as well!</p></div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Verify that the standard deviation of your 10,000 sample proportions is close to the standard deviation of sample proportions defined above. (Hint: What values are you using for <span class="process-math">\(\pi \)</span> and n?)</p>
+</div></section><section><h3>Remark 11:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-3"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>When sampling from a large population, the standard deviation of sample proportions is estimated by the same formula,</p> <p><div class="displaymath process-math">
+\begin{equation*}
+\text{standard deviation of sample proportions} = \sqrt{\dfrac{\pi(1 - \pi)}{n}},
+\end{equation*}
+</div></p> <p>where <span class="process-math">\(\pi \)</span> represents the proportion of successes in the population and n represents the sample size. The population size is considered large enough when it is more than 20 times that sample size.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>Notice one new aspect here compared to earlier: When we are sampling from a finite population rather than from an infinite random process, we want the population to be large in order to assume <span class="process-math">\(\pi \)</span> represents a constant probability of success. In this case, <span class="process-math">\(268 &gt; 200( = 20 \times 10)\text{,}\)</span> and the formula should apply. In which case, we can use the same theory-based methods we used before.</p></div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>How would our prediction of the behavior (shape, mean, largest value/smallest value) of the distribution of sample proportions change if the population size had been 2,680?</p>
+</div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Name two things that do impact the standard deviation of the distribution of sample proportions.</p>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>In the applet, select the radio button labeled Fixed. Then change the Sample size from 5 to 10 and the Number of samples from 9,998 to 10,000. Press Draw Samples and describe the behavior of the new sampling distribution. Does the standard deviation change as you predicted? Is the sampling method still unbiased? How are you deciding?</p>
+</div></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>Repeat 
+  [REF=TODO]
+ for a sample size of 20.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Keep in mind that our population size (268) is not all that large here and you may start to see some discrepancies with the standard deviation formula with samples of 20 or more (Why?). But also notice that the shape of the distribution of sample proportions is looking more and more like a normal distribution as we increase the sample size, just as you saw previously.</p></div></section><section><h3>Remark 12:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-4"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>The <dfn class="terminology">Central Limit Theorem for sampling from a large finite population</dfn> says that the distribution of sample proportions from repeated random samples will be approximately normal if there at least 10 successes and at least 10 failures in each sample.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>In the following figure, we have overlaid the normal distribution predicted by the Central Limit Theorem and determined the proportion of samples and the theoretical probability for a sample proportion of 0.55 and higher.</p></div></section><section><h3>Figure 13:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-4"><img height="800" src="../code/assets/3-1/fig-3-1-1.png"/><figcaption>Figure 321: Distribution of sample proportions compared to predicted distribution</figcaption></figure>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>Does the normal approximation appear to be valid here? Which value (0.1381 or 0.1027) do you trust more? Explain your reasoning.</p>
+</div></section></section><section><section><h1>Other Considerations</h1></section><section><h3></h3>
+<div align="left"><p>Another key property of our sampling method is that we had a list of every word in the population. This list is referred to as a <dfn class="terminology">sampling frame</dfn>. An incomplete sampling frame (e.g., only the first paragraph of the speech) would also produce a biased sampling method if the observational units not in the sampling frame were systematically different from the rest of the population.</p></div></section><section><h3>Remark 14:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-5"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>If a sampling frame does not include every member of the population (e.g., last paragraph missing, nouns not listed), then we cannot claim to represent those segments in the population with our sample. An incomplete sampling frame can also lead to biased sampling.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>You also need to be sure there are not any other <dfn class="terminology">nonsampling concerns</dfn>. These represent problems that arise even with a carefully selected sample. For example, suppose we were not able to accurately measure the lengths of the words. Or, different individuals used different definitions of "short."</p></div></section><section><h3>Remark 15:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-6"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>In addition to carefully selecting the sample, you need to guard against other possible sources of bias as well. For example, when talking to people, their suspect memories and truthfulness can impact people’s answers. Other examples of <dfn class="terminology">nonsampling concerns</dfn> include the effects that the wording of a question can have on people’s responses (e.g., how extreme the phrasing is), the effects that the interviewer can have by virtue of their demeanor, sex, race, and other characteristics, using an uncalibrated scale, and so on.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>See Example 2.1 for additional discussion of nonsampling concerns.</p></div></section></section><section><section><h1>Exploring Further</h1></section><section><h3>Exercise 24</h3>
+<div align="left"> <p>As part of the General Social Survey in 2018, a random sample of U.S. adults were asked whether at least one of their grandparents was born outside the United States. In the sample of 2,214 respondents, 881 said "yes."</p>
+</div></section><section><h3>Exercise 24a:</h3>
+<div align="left"> <p>Define the parameter of interest in words. Do you know its value (if so, what is it)?</p>
+</div></section><section><h3>Exercise 24b:</h3>
+<div align="left"> <p>Describe the statistic in words. Do you know its value (if so, what is it)?</p>
+</div></section><section><h3>Exercise 24c:</h3>
+<div align="left"> <p>Do you consider this sample of 2,214 U.S. adults to be generalizable to the roughly 253,881,929 U.S. adults in 2018? Explain why or why not.</p>
+</div></section><section><h3>Exercise 24d:</h3>
+<div align="left"> <p>Suppose we assume the population proportion is 0.50. If we were to predict the behavior of the distribution of sample proportions, what do you predict for: Mean? Standard deviation? Shape?</p>
+</div></section><section><h3>Exercise 24e:</h3>
+<div align="left"> <p>Based on the observed sample proportion, is it plausible that the observed sample came from a population with <span class="process-math">\(\pi = 0.50\text{?}\)</span> Be clear how you are deciding.</p>
+</div></section><section><h3>Exercise 24f:</h3>
+<div align="left"> <p>Is it plausible that the observed sample came from a population with <span class="process-math">\(\pi = 0.40\text{?}\)</span> Explain how you are deciding.</p>
+</div></section><section><h3>Exercise 24g:</h3>
+<div align="left"> <p>Do you have any reason to suspect the respondents could be giving misleading information to this question? What are the implications of your answer?</p>
+</div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:29:40-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>8-2 : Simulation-based approach for analyzing paired data</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>8-2 : Simulation-based approach for analyzing paired data</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Exercise and heart rate</h1></section><section><h3></h3>
+<div align="left"><p>Raising your heart rate is one of the major goals of exercise. Do some exercises raise your heart rate more than others? Which common exercise, jumping jacks or bicycle kicks, raises your heart rate more? In this exploration, you are going to compare heart rates of you and your classmates doing jumping jacks and bicycle kicks. If you don’t want to collect your own data, you may use data already collected on a class where jumping jacks were compared to bicycle kicks. The dataset is <a class="external" href="https://static-content2.zybooks.com/isi/data/chap7/JJvsBicycle.txt" target="_blank">JJvsBicycle</a>. Below are links to YouTube videos explaining how to do each of these exercises.<ul class="disc">
+<li>Jumping jack: <a class="external" href="http://www.youtube.com/watch?v=dmYwZH_BNd0" target="_blank">http://www.youtube.com/watch?v=dmYwZH_BNd0</a>
+</li>
+<li>Bicycle kicks: <a class="external" href="https://www.youtube.com/watch?v=9FGilxCbdz8" target="_blank">https://www.youtube.com/watch?v=9FGilxCbdz8</a>
+</li>
+</ul></p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>You will first randomize the order (jumping jacks first or bicycle kicks first) in which you measure your heart rate. If heads:<ul class="disc">
+<li>Do jumping jacks for 30 seconds. Then, measure your jumping jack heart rate.</li>
+<li>Sit down and take a break for two minutes.</li>
+<li>Now do bicycle kicks for 30 seconds. Then, measure your bicycle kick heart rate.</li>
+</ul>If tails:<ul class="disc">
+<li>Now do bicycle kicks for 30 seconds. Then, measure your bicycle kick heart rate.</li>
+<li>Sit down and take a break for two minutes.</li>
+<li>Do jumping jacks for 30 seconds. Then, measure your jumping jack heart rate.</li>
+</ul></p>
+</div></section><section><h3>Exercise 1a:</h3>
+<div align="left"> <p>Report your heart rate for bicycle kicks and jumping jacks in beats per minute.</p>
+</div></section><section><h3>Exercise 1b:</h3>
+<div align="left"> <p>Find the difference in your two heart rates (jumping jack heart rate-bicycle kick heart rate) in  beats per minute.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Your instructor will give you and your classmates instructions on where to record your jumping jack heart rate, bicycle kick heart rate, and difference (jumping jacks-bicycle kick).</p></div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>Explain why it is reasonable to say that the two heart rates you collected should not be treated as independent data.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Why do you think we randomized the order of jumping jacks and bicycle kicks before measuring heart rates?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>As seen in previous chapters, we can summarize the quantitative data on heart rates using averages or means. But, because the data are paired, instead of comparing mean jumping jack heart rate to mean bicycle kick heart rate, we will instead look at the mean difference in heart rate between doing jumping jacks and bicycle kicks. Thus, we can define our parameter of interest to be</p></div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>State the null and alternative hypotheses to test whether the mean difference in heart rate between the two exercises is not 0.</p>
+</div></section><section><h3>Remark 1:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>When the parameter of interest is the long-run mean difference or population mean difference, the corresponding statistic is the sample mean difference.</p></article>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Find the average of the differences between the two heart rates for the entire class. This is the statistic we will use to summarize the data.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Your null hypothesis should essentially state that there is no difference in the heart rates between the two exercises, on average. If that is the case, it doesn’t really matter if we swap someone’s jumping jack heart rate with his or her bicycle kick heart rate. This is how we will model the null to develop a null distribution. To randomly swap some of the values we can just use a coin flip. If the coin lands heads you will swap the two heart rates. If the coin lands tails you won’t swap the heart rates.</p></div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>Flip a coin for each pair of heart rates and switch the appropriate ones. Recalculate the difference in heart rates and find the new simulated mean difference. Plot this value on the board in the classroom along with those from the rest of the class. Where does the actual statistic you found in question 5 fit in this null distribution? Is it out in the tail?</p>
+</div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>As you know, it would be better to have many more simulations than what your class just did. We will do this by using an applet.<ul class="disc">
+<li>Go to the <a class="external" href="https://static-content.zybooks.com/applets/2021/matchedpairs/MatchedPairs.htm?hideExtras=1" target="_blank">Matched Pairs applet</a>.</li>
+<li>Press <em class="emphasis">Clear</em> to erase the default data and then copy and paste the <a class="external" href="https://static-content2.zybooks.com/isi/data/chap7/JJvsBicycle.txt" target="_blank">JJvsBicycle</a> data (both columns— jacks and kicks) into the <em class="emphasis">Data</em> window. Then press <em class="emphasis">Use Data</em>.</li>
+<li>Notice that the applet graphs the individual heart rates in each group, along with the means and standard deviations for the two groups.</li>
+<li>Below that, the applet provides a dotplot of the differences in the heart rates in the sample. Please note that these difference values can be negative numbers because you are looking at <em class="emphasis">change or difference</em> in heart rates. The "Differences" graph also shows the mean of the differences and the standard deviation of the differences.</li>
+<li>Write down these values in the following table:</li>
+</ul><section><h3>Table 2:</h3>
+<div align="left"> <figure class="table table-like" id="table-1"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Condition</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Sample mean <span class="process-math">\(\overline{x}\)</span>
+</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Sample standard deviation <span class="process-math">\(s\)</span>
+</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jumping jacks</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_{jj} =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_{jj} =  \)</span></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Bicycle kicks</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_{bicycle} =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_{bicycle} =  \)</span></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Diff = JJ - BK</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_d =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_d =  \)</span></th>
+</tr>
+</table></div></figure>
+</div></section></p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>The Matched Pairs applet will perform the simulation similar to what you did with flipping a coin.<ul class="disc">
+<li>Check the <em class="emphasis">Randomize</em> box.</li>
+<li>Set the number of times to <em class="emphasis">Randomize</em> to 1 and press <em class="emphasis">Randomize</em>.</li>
+<li>Once the coin tosses have determined which heart rate will be in which column, the applet displays the rerandomized data (the colors show you the original column for each observation, so you should see a mix in each group now).</li>
+<li>This could-have-been value for the mean difference is added to the Average Difference graph.</li>
+<li>Write down these could-have-been values for the re-randomized data:</li>
+</ul><section><h3>Table 3:</h3>
+<div align="left"> <figure class="table table-like" id="table-2"><figcaption></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Condition</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">Rerandomized sample mean <span class="process-math">\(\overline{x}\)</span>
+</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col">​​Rerandomized sample standard deviation <span class="process-math">\(s\)</span>
+</th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Jumping jacks</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_{jj} =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_{jj} =  \)</span></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Bicycle kicks</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_{bicycle} =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_{bicycle} =  \)</span></th>
+</tr>
+<tr class="header-horizontal">
+<th class="l m b0 r0 l0 t0 lines" scope="col">Diff = JJ - BK</th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(\overline{x}_d =  \)</span></th>
+<th class="l m b0 r0 l0 t0 lines" scope="col"><span class="process-math">\(s_d =  \)</span></th>
+</tr>
+</table></div></figure>
+</div></section></p>
+</div></section><section><h3>Exercise 8a:</h3>
+<div align="left"> <p>How does the actual mean difference compare to your simulated mean difference: More extreme/Less extreme/Similar.</p>
+</div></section><section><h3>Exercise 8b:</h3>
+<div align="left"> <p>How are you deciding?</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Update the number of times to <em class="emphasis">Randomize</em> to 99 (for a total of 100 repetitions), and press <em class="emphasis">Randomize</em>. Consider the graph "Average Difference" that the applet has created</p>
+</div></section><section><h3>Exercise 9a:</h3>
+<div align="left"> <p>How many dots are in this graph?</p>
+</div></section><section><h3>Exercise 9b:</h3>
+<div align="left"> <p>What does each dot represent?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The table below summarizes the key aspects of the simulation:</p></div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>To see many more possible values of mean difference in sample means that could have been, If jumping jacks and bicycle kick rates were swappable, update the number of times to <em class="emphasis">Randomize</em> to 900 and press <em class="emphasis">Randomize</em> (for a total of 1,000 repetitions). Describe the updated "Average Difference" graph with the 1,000 samples or repetitions, with regard to the following features.</p>
+</div></section><section><h3>Exercise 10a:</h3>
+<div align="left"> <p>Shape:</p>
+</div></section><section><h3>Exercise 10b:</h3>
+<div align="left"> <p>About what number is this graph centered? Explain why you were expecting this.</p>
+</div></section><section><h3>Exercise 10c:</h3>
+<div align="left"> <p>This graph also reports a value for standard deviation, SD. Report this value and give a simple interpretation of this value, as in, "What is this value measuring?"</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>You now should have generated 1,000 possible values of the mean difference in jumping jacks and bicycle kick heart rates that were simulated assuming the null hypothesis was true and these rates were the same, on average. How does the observed mean difference from your data (as reported in question 5 and question 7) compare to these simulated values? Is an average difference in heart rates like that observed in the actual study unlikely to happen by chance alone if jumping jacks and bicycle kick heart rates are the same, on average? How are you deciding?</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>To quantify the strength of evidence against the null hypothesis, you can find the p-value. Go back to the Matched Pairs applet. In the Count Samples box, make an appropriate selection from the drop-down menu. (Hint: In what direction does your alternative hypothesis look?) and enter the appropriate number in the box (Hint: At least as extreme as what number?). Report the approximate p-value.</p>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Use the p-value to state a conclusion in the context of the problem. Be sure to comment on statistical significance. Can you conclude that there is strong evidence that jumping jack heart rate and bicycle kick heart rate differ? Why or why not? Can you draw a cause-and-effect conclusion? To what population are you willing to generalize the results?</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>Alternatively, you can summarize the strength of evidence using a standardized statistic. Find the standardized statistic and confirm that the strength of evidence you receive from the p-value is approximately the same as with the standardized statistic.</p>
+</div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>We can again use the 2SD method to approximate a 95% confidence interval for the mean difference in heart rates between those that do the two exercises. The overall structure of the formula is the same: statistic ± 2 (SD),  where the statistic is the sample mean difference in heart rates for your class and SD is the standard deviation of your null distribution when you did 1,000 repetitions in the applet (not the standard deviation from the data). Use these numbers to find an approximate 95% confidence interval for the mean difference in heart rates for those that do the two exercises your class did.</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Provide an interpretation of this confidence interval, being sure to explain the parameter in this context.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>As you may have already noticed, the strategy we used to find the p-value for this study is the same 3S strategy that is found in Step 4 of our statistical investigation method and has been used in analyses involving one or two groups:<ul class="disc">
+<li>
+<dfn class="terminology">Statistic</dfn>: Compute the statistic in the sample. In this case, the statistic you looked at was the observed mean difference in heart rates.</li>
+<li>
+<dfn class="terminology">Simulate</dfn>: Identify a chance model that reflects the null hypothesis. To simulate what could have been if the null hypothesis is true, you can toss a coin for each student, and if it lands heads, swap the two heart rates recorded for that student. If the coin lands tails, do not swap the heart rates. Repeat this process 1,000 times, recording the mean difference in heart rates each time and thus obtaining a distribution of these mean differences that were simulated assuming the null hypothesis were true.</li>
+<li>
+<dfn class="terminology">Strength of evidence</dfn>: If your actual observed statistic falls in the tail of the null distribution, then you have strong evidence that there is a genuine difference in the average heart rates between the two exercises.</li>
+</ul></p></div></section><section><h3></h3>
+<div align="left"><p>Let’s check out how things would have worked had we ignored the pairing and analyzed the data as if the jumping jacks heart rates and bicycle kicks heart rates had come from two totally different samples that were independent of each other.</p></div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Go to the <a class="external" href="https://static-content.zybooks.com/applets/2021/anovashuffle/AnovaShuffle.htm?hideExtras=2" target="_blank">Multiple Means applet</a> and analyze the data as though we have two independent samples, as you did in a previous chapter. (The heart rate data are unstacked, meaning the heart rates for the two exercises are given in two columns. Make sure you have the unstacked box checked before you paste in your data.)</p>
+</div></section><section><h3>Exercise 17a:</h3>
+<div align="left"> <p>With regard to the graph of the distribution of "Shuffled Differences in Means": What are the mean and SD?</p>
+</div></section><section><h3>Exercise 17b:</h3>
+<div align="left"> <p>Find and report the approximate p-value.</p>
+</div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>Compare the SD of the null distribution obtained using the two-independent-samples method to that obtained using the paired samples method. Which SD is larger?</p>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Compare the p-value obtained using the two-independent-samples method to that obtained using the paired samples method. Which p-value is smaller and hence provides stronger evidence against the null hypothesis of no difference?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>Note: Using a paired samples method will often give a smaller p-value and hence stronger evidence against the null hypothesis than the two-independent-samples method. Perhaps this is what you found in Question 19. This would happen if students with high heart rates after doing jumping jacks tended to have high heart rates after doing bicycles, and students with low heart rates after doing jumping jacks tended to have low heart rates after doing bicycles. This would make the variability of the differences in heart rates small. However this may not have happened for students in your class. If the variability within your jumping jack data or within your bicycle data is small but there is a lot of variability in the differences, you could get a smaller p-value using the two-independent-samples method.</p></div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2024-09-24T13:28:12-04:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>5-2 : Observational studies versus experiments</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<link href="reveal.js/dist/reveal.css" rel="stylesheet"/>
+<link href="reveal.js/dist/theme/black.css" id="theme" rel="stylesheet"/>
+<link href="reveal.js/plugin/highlight/zenburn.css" rel="stylesheet"/>
+<link href="reveal.js-plugins/chalkboard/style.css" rel="stylesheet"/>
+<script src="reveal.js/dist/reveal.js"></script><script src="reveal.js/plugin/markdown/markdown.js"></script><script src="reveal.js/plugin/math/math.js"></script><script src="reveal.js/plugin/highlight/highlight.js"></script><script src="reveal.js-plugins/menu/menu.js"></script><script src="reveal.js-plugins/chalkboard/plugin.js"></script><link href="reveal.js-plugins/menu/font-awesome/css/fontawesome.css" rel="stylesheet"/>
+<style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+p {
+  font-size: 1.3em !important;
+}
+.definition,.theorem,.activity {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: 2em;
+}
+.definition {
+  background: #00608010;
+}
+.theorem {
+  background: #ff000010;
+}
+.proof {
+  background: #ffffff90;
+}
+.activity {
+  background: #60800010;
+}
+dfn {
+  font-weight: bold;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker,
+.pretext-content li.no-marker {
+    list-style-type: none;
+}
+
+.pretext-content ol.decimal {
+    list-style-type: decimal;
+}
+.pretext-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.pretext-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.pretext-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.pretext-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.pretext-content ul.disc {
+    list-style-type: disc;
+}
+.pretext-content ul.square {
+    list-style-type: square;
+}
+.pretext-content ul.circle {
+    list-style-type: circle;
+}
+.pretext-content ol.no-marker,
+.pretext-content ul.no-marker {
+    list-style-type: none;
+}
+.pretext-content .cols1 li,
+.pretext-content .cols2 li,
+.pretext-content .cols3 li,
+.pretext-content .cols4 li,
+.pretext-content .cols5 li,
+.pretext-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+          </style>
+</head>
+<body><div class="reveal pretext-content">
+<div class="hidden-content process-math" id="latex-macros" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>5-2 : Observational studies versus experiments</h1>
+<h2>MAT 2100: Introduction to Statistics</h2>
+<table>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+</table>
+<h4>Grace College</h4>
+<h4><div class="date">Last updated September 24, 2024</div></h4></section></section><section><h3>The Jesus Creed</h3>
+<div align="left"> <p>Hear, O Israel: The Lord our God, the Lord is one.</p> <p>Love the Lord your God with all your heart and with all</p> <p>your soul and with all your mind and with all your strength.</p> <p>The second is this: Love your neighbor as yourself.</p>
+</div></section><section><section><h1>Have a nice trip</h1></section><section><h3></h3>
+<div align="left"><p>An area of research in biomechanics and gerontology concerns falls and fall-related injuries, especially for elderly people. Recent studies have focused on how individuals respond to large postural disturbances (e.g., tripping, induced slips). One question is whether subjects can be instructed to improve their recovery from such disturbances.</p></div></section><section><h3></h3>
+<div align="left"><p>Suppose researchers want to compare two such recovery strategies, lowering (quickly stepping down with front leg and then raising back leg over the object) and elevating (lifting front leg over the object). Subjects will have first been trained on one of these two recovery strategies, and they will be asked to apply it after they feel themselves tripping. The researchers will then induce the subject to trip while walking (but harnessed for safety) using a concealed mechanical obstacle.</p></div></section><section><h3></h3>
+<div align="left"><p>Suppose the following 24 subjects have agreed to participate in such a study:<dl class="description-list">
+<div>
+<dt>Females</dt>
+<dd><p>Alisha, Alice, Betty, Martha, Audrey, Mary, Barbie, Anna</p></dd>
+</div>
+<div>
+<dt>Males</dt>
+<dd><p>Matt, Peter, Shawn, Brad, Michael, Kyle, Russ, Patrick, Bob, Kevin, Mitch, Marvin, Paul, Pedro, Roger, Sam</p></dd>
+</div>
+</dl></p></div></section><section><h3>Exercise 1</h3>
+<div align="left"> <p>One way to design this study would be to assign the 8 females to use the elevating strategy and the 16 males to use the lowering strategy. Would this be a reasonable strategy? Why not?</p>
+</div></section><section><h3>Exercise 2</h3>
+<div align="left"> <p>One way to deal with this issue is to assign 4 females and 8 males to each group. Show how the proportion of males in each group is the same.</p>
+</div></section><section><h3>Exercise 3</h3>
+<div align="left"> <p>Now, if you saw a difference in the proportion of trips in the two groups, could it be because of the sex of the subject? Why or why not? Could it be due to other variables, distinct from the recovery strategy? Why or why not?</p>
+</div></section><section><h3>Exercise 4</h3>
+<div align="left"> <p>Because there will always be more potential confounding variables which could be distributed unevenly between the groups being compared, identify a better method for deciding who uses which strategy.</p>
+</div></section><section><h3>Definition 1:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>In an <dfn class="terminology">observational study</dfn>, the groups you compare are "just there," that is, they are defined by what you see rather than by what you do. In an <dfn class="terminology">experiment</dfn>, you actively create the groups by what you choose to do. More formally, you assign the conditions to be compared. These conditions may be one or more <dfn class="terminology">treatments</dfn> or a <dfn class="terminology">control</dfn> (a group you do nothing to).</p>
+</div>
+</div></section><section><h3></h3>
+<div align="left"><p>Note our change in terminology: We now will sometimes call the individuals in the study experimental units instead of observational units, because they are in an experiment instead of an observational study.</p></div></section><section><h3>Definition 2:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>In a <dfn class="terminology">randomized experiment</dfn>, you use a chance device to make the assignments. The units in an experiment are often called experimental units. The role of the random assignment is to balance out potentially confounding variables among the explanatory variable groups, giving us the potential to draw cause-and-effect conclusions.</p>
+</div>
+</div></section><section><h3>Exercise 5</h3>
+<div align="left"> <p>Let’s explore the process of random assignment to determine whether it does "work." First, let’s focus on the sex (male vs. female) variable. Suppose we put each person’s name on a slip, put those slips in a hat and mix them up thoroughly, and then randomly draw out 12 slips for names of people to assign to the elevating strategy. What proportion of this group do you expect will be male? What proportion of the lowering strategy do you expect will be male? Do you think we will always get an 8/8 split (8 males in each treatment group)?</p>
+</div></section><section><h3>Exercise 6</h3>
+<div align="left"> <p>To repeat this random assignment a large number of times to observe the long-run behavior, we will use the <a class="external" href="https://static-content.zybooks.com/applets/2021/randomassignment/Subjects.html?hideExtras=1" target="_blank">Randomizing Subjects applet</a>. Open the applet and press the <em class="emphasis">Randomize</em> button.</p> <p>What proportion of subjects assigned to Group 1 are men? Of Group 2? What is the difference in these two proportions?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>You will notice that the difference in proportions of males is shown in the dotplot in the bottom graph. In this graph, each dot represents one repetition of the random assignment process where we are recording the difference in proportions of men between the two groups.</p></div></section><section><h3>Exercise 7</h3>
+<div align="left"> <p>Press the <em class="emphasis">Randomize</em> button again.</p> <p>Was the difference in proportions of men the same this time?</p>
+</div></section><section><h3>Exercise 8</h3>
+<div align="left"> <p>Change the number of replications from 1 to 198 (for 200 total), uncheck the <em class="emphasis">Animate</em> option, and press the <em class="emphasis">Randomize</em> button.</p> <p>The dotplot will display the difference between the two proportions of men for each of the 200 repetitions of the random assignment process. Where are these values centered?</p>
+</div></section><section><h3>Exercise 9</h3>
+<div align="left"> <p>Does random assignment always equally distribute/balance the men and women between the two groups? Is there a tendency for there to be a similar proportion of men in the two groups? Explain.</p>
+</div></section><section><h3>Definition 3:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A comparative study is <dfn class="terminology">balanced with respect to a possible confounding variable</dfn> if the distribution of the variable is the same for each group in the study.</p>
+</div>
+</div></section><section><h3>Exercise 10</h3>
+<div align="left"> <p>Prior research has also shown that the likelihood of falling is related to variables such as walking speed, stride rate, and height, so we would like the random assignment to distribute these variables equally between the groups as well. In the applet, use the pull-down menu to switch from the sex-of-participant variable to the height variable. The dotplot now displays the differences in average height between Group 1 and Group 2 for these 200 repetitions. In the long run, does random assignment tend to equally distribute the height variable between the two groups? Explain how you are deciding.</p>
+</div></section><section><h3>Exercise 11</h3>
+<div align="left"> <p>Suppose there is a "balance gene" that is related to people’s ability to recover from a trip. We didn’t know about this gene ahead of time, but if you select the <em class="emphasis">Reveal gene?</em> button and then select gene from the pull-down menu, the applet shows you this gene information for each subject and also how the proportions with the <em class="emphasis">gene</em> differ in the two groups.</p> <p>Does this variable tend to equalize between the two groups in the long run? Explain.</p>
+</div></section><section><h3>Exercise 12</h3>
+<div align="left"> <p>Suppose there were other "x-variables" that we could not measure such as stride rate or walking speed. Select the <em class="emphasis">Reveal both?</em> button and use the pull-down menu to display the results for the x-variable (X-var).</p> <p>Does random assignment generally succeed in equalizing this variable between the two groups or is there a tendency for one group to always have higher results for the x-variable? Explain.</p>
+</div></section><section><h3>Remark 4:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>Randomly assigning experimental units to groups tends to balance out all other variables between the groups. Any variables that could have an effect on the response should be equalized between the two groups and therefore should not be confounding.</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>The diagram in the figure below illustrates the preceding key idea. The top panel shows the possible confounding effect if the study design had not been randomized. We want to know whether differences in the explanatory variable cause differences in the response (dotted arrow). However, a confounding variable would affect both the explanatory and response variables, making it impossible to separate the effects of explanatory and confounding variables on the response. The bottom panel shows how randomization removes the effect of the potential confounders.</p></div></section><section><h3>Figure 5:</h3>
+<div align="left"> <figure class="figure figure-like" id="figure-1"><img height="800" src="../code/assets/5-2/random.png"/><figcaption>Randomization creates approximate balance and tends to eliminate confounding effects</figcaption></figure>
+</div></section><section><h3>Exercise 13</h3>
+<div align="left"> <p>Suppose this study finds a statistically significant difference between the two groups. What conclusion would you draw? For what population? What additional information would you need to know?</p>
+</div></section><section><h3>Exercise 14</h3>
+<div align="left"> <p>As in 
+  [REF=TODO]
+, if you obtain a statistically significant result, what does that suggest about the potential for a cause-and-effect relationship? Why?</p>
+</div></section></section><section><section><h1>Another Study: Cursive Handwriting</h1></section><section><h3></h3>
+<div align="left"><p>An <a class="external" href="https://www.washingtonpost.com/wp-dyn/content/article/2006/10/10/AR2006101001475.html" target="_blank">article about handwriting</a> appeared in the October 11, 2006, issue of the Washington Post. The article mentioned that among students who took the essay portion of the SAT exam in 2005-2006, those who wrote in cursive style scored significantly higher on the essay, on average, than students who used printed block letters.</p></div></section><section><h3>Exercise 15</h3>
+<div align="left"> <p>Identify the observational units in this study as well as the explanatory and response variables. Also classify each variable as categorical or quantitative.</p>
+</div></section><section><h3>Exercise 16</h3>
+<div align="left"> <p>Explain how you know that this was an observational study.</p>
+</div></section><section><h3>Exercise 17</h3>
+<div align="left"> <p>Is it reasonable to conclude that using a cursive writing style caused higher scores on the essay, or can you think of an alternative explanation for why students who wrote in cursive style scored higher on average than students who write with block letters? In other words, can you think of other ways in which the cursive and block letter groups might have systematically differed and identify a potential confounding variable?</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The same <em class="emphasis">Washington Post</em> article also mentioned a different study in which the identical essay was shown to many graders, but some graders were randomly chosen to see a cursive version of the essay and the other graders were shown a version with printed block letters. The average score assigned to the essay with the cursive style was significantly higher than the average score assigned to the essay with the printed block letters.</p></div></section><section><h3>Exercise 18</h3>
+<div align="left"> <p>How does this study differ from the original one? Explain.</p>
+</div></section><section><h3>Exercise 19</h3>
+<div align="left"> <p>Would you be willing to draw a cause-and-effect conclusion from this study, as opposed to the original study? Explain why.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>The "placebo effect" has been found in numerous studies: When subjects are told something good is going to happen, they often have a positive response even if nothing is actually done to them. For this reason, subjects are often kept "blind" as to which treatment group they are placed in, for example by giving one group the actual treatment and the other group a "fake" treatment, like a placebo (an inert pill). Placebo treatments have even been used in studies about knee surgery!</p></div></section><section><h3>Exercise 20</h3>
+<div align="left"> <p>Discuss why it was important in this second study for the scorers of the essays to not know that there was no difference in the essays given to different individuals other than the writing style.</p>
+</div></section><section><h3>Exercise 21</h3>
+<div align="left"> <p>Discuss how this study also reveals that those evaluating the response variable in a study, if it requires any subjective judgment, should be “blind” to which treatment group individuals are in.</p>
+</div></section><section><h3>Definition 6:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>In <dfn class="terminology">double-blind</dfn> studies, neither the subjects nor those evaluating the response variable know which treatment group the subject is in.</p>
+</div>
+</div></section></section><section><section><h1>Exploring Further</h1></section><section><h3></h3>
+<div align="left"><p>Recall at the beginning of the exploration when we explicitly controlled the number of females to be the same in each group and the number of males to be the same in each group by randomly assigning 4 females to each treatment group and then randomly assigning 8 males to each treatment group. This is a technique called <dfn class="terminology">blocking</dfn>.</p></div></section><section><h3>Definition 7:</h3>
+<div align="left"> <div class="boxed definition">
+<h3>Definition ():
+      </h3>
+<p>A <dfn class="terminology">block study</dfn> design creates <dfn class="terminology">blocks</dfn> of experimental units that are similar to each other, randomly assigns the treatments within each block, and then analyzes the data in a way which accounts for block to block variations. When there are only two treatment groups being compared, a block study design is called a matched pairs design. The term block comes from the first block designs which were agricultural experiments in large fields where separate parts of the field were called blocks.</p>
+</div>
+</div></section><section><h3>Exercise 22</h3>
+<div align="left"> <p>In the <a class="external" href="https://static-content.zybooks.com/applets/2021/randomassignment/Subjects.html?hideExtras=1" target="_blank">Randomizing Subjects applet</a>, select the <em class="emphasis">Randomized block</em> option on the left. Leave <em class="emphasis">Animate</em> checked and make sure that <em class="emphasis">sex</em> is the variable selected. Press the <em class="emphasis">Randomize</em> button.</p> <p>What do you notice about the animated shuffling of cards to the two treatments?</p>
+</div></section><section><h3>Exercise 23</h3>
+<div align="left"> <p>Is the proportion of males the same in each group? Is the proportion of females the same in each group?</p>
+</div></section><section><h3>Exercise 24</h3>
+<div align="left"> <p>Uncheck <em class="emphasis">Animate</em> and do 999 more random shuffles.</p> <p>Describe the shape, center, and variability of the graph displaying the differences in the proportions of males in each group for each of the 1,000 random shuffles.</p>
+</div></section><section><h3></h3>
+<div align="left"><p>We can see that blocking on sex has completely controlled sex as a confounding variable; that is to say there will always be the same proportions of males in each treatment and of females in each treatment, so sex could never account for any of the differences in the treatment groups. Might there be added benefits to controlling confounding variables when blocking is used?</p></div></section><section><h3>Exercise 25</h3>
+<div align="left"> <p>Use the pull-down menu to select the variable <em class="emphasis">height</em>.</p> <p>Report the SD of the distribution of differences in average heights between the two treatment groups.</p>
+</div></section><section><h3>Exercise 26</h3>
+<div align="left"> <p>Now select the <em class="emphasis">Completely Randomized</em> button to approximate the SD of the distribution of differences in average heights when the proportion of males in the treatment groups could differ by chance.</p> <p>How does this SD compare to the SD of the distribution of differences in average heights when blocking on the variable sex?</p>
+</div></section><section><h3>Remark 8:</h3>
+<div align="left"> <article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Key Idea</span><span class="space"> </span><span class="period">.</span>
+</h4>
+<p>Why is the variability in the differences in average heights reduced in the block design compared to the completely randomized design?</p></article>
+</div></section><section><h3></h3>
+<div align="left"><p>When other variables (like height) are associated with the blocking variable, we see the added benefit that these variables are more evenly distributed across the treatments.</p></div></section></section>
+</div>
+</div></body>
+<script>
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            width: 1920,
+            height: 1080,
+            margin: 0.04,
+            math: {
+              mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+              config: 'TeX-AMS_HTML-full',
+              // other options are passed into MathJax.Hub.Config()
+              tex2jax: {
+                inlineMath:  [['\\(','\\)']],
+                displayMath: [],
+              }
+            },
+            chalkboard: { // font-awesome.min.css must be available
+              //src: "reveal.js-plugins/chalkboard/chalkboard.json",
+              //storage: "slides",
+            boardmarkerWidth: 4,
+            chalkWidth: 5,
+            chalkEffect: 0.0001,
+              theme: "blackboard",
+              toggleChalkboardButton: { left: "80px" },
+              toggleNotesButton: { left: "130px" },
+              colorButtons: 7,
+              boardmarkers : [
+                        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+                        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+                        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+                        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+                        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+                        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'},
+                        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'}
+                ]
+            },
+            customcontrols: {
+              controls: [
+                { icon: '<i class="fa fa-pen-square"></i>',
+                  title: 'Toggle chalkboard (B)',
+                  action: 'RevealChalkboard.toggleChalkboard();'
+                },
+                { icon: '<i class="fa fa-pen"></i>',
+                  title: 'Toggle notes canvas (C)',
+                  action: 'RevealChalkboard.toggleNotesCanvas();'
+                }
+              ]
+            },
+            menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+              themes: false,
+              transitions: false,
+              markers: true,
+              hideMissingTitles: true
+            },
+            plugins: [ RevealMath, RevealMarkdown, RevealMenu, RevealHighlight, RevealChalkboard ]
+          });
+          </script>
+</html>
