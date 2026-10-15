@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">10.2.12</span><span class="period">.</span>
+</h4>
+<div class="introduction">
+<div class="para">Now we’ll use the Squared Error (SE) terms from the last exercise to compute the ANOVA table.</div> <figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">10.2.6<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">df</td>
+<td class="l m b0 r0 l0 t0 lines">SS (SSE)</td>
+<td class="l m b0 r0 l0 t0 lines">MS (MSE)</td>
+<td class="l m b0 r0 l0 t0 lines">F</td>
+<td class="l m b0 r0 l0 t0 lines">p-value</td>
+<td class="l m b0 r0 l0 t0 lines">R^2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Model</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Error</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Total</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">First, we’ll fill in the <code class="code-inline tex2jax_ignore">df</code> column, which stands for “degrees of freedom”.  For the first entry, corresponding to the <code class="code-inline tex2jax_ignore">Model</code> row, input the number of groups we have minus 1.  For the last entry, corresponding to the <code class="code-inline tex2jax_ignore">Total</code> row, input the sample size minus 1.  For the middle entry, corresponding to the <code class="code-inline tex2jax_ignore">Error</code> row, input <span class="process-math">\(\text{df}_{\text{Total}} - \text{df}_{\text{Model}}\text{,}\)</span> in other words, the last number from the column minus the first number from this column.</div> <div class="para">Your three numbers should be such that the number from the <code class="code-inline tex2jax_ignore">Model</code> row plus the number from the <code class="code-inline tex2jax_ignore">Error</code> row add up to the number from the <code class="code-inline tex2jax_ignore">Total</code> row.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Now we’ll fill in the SS (SSE) column, the Sum Squared Error.  For the first number, the <code class="code-inline tex2jax_ignore">Model</code> row, compute the sum of four Squared Error (SE) numbers from the last exercise.  For the last number, the <code class="code-inline tex2jax_ignore">Total</code> row, compute <span class="process-math">\(s^2 \times n\text{,}\)</span> in other words, the standard deviation of the entire sample times the sample size of the whole sample.  For the middle entry, corresponding to the <code class="code-inline tex2jax_ignore">Error</code> row, compute <span class="process-math">\(\text{SS}_{\text{Total}}-\text{SS}_{\text{Model}}\text{,}\)</span> in other words, the last entry of this column minus the first entry.</div> <div class="para">Just like part a, your three numbers should be such that the number from the <code class="code-inline tex2jax_ignore">Model</code> row plus the number from the <code class="code-inline tex2jax_ignore">Error</code> row add up to the number from the <code class="code-inline tex2jax_ignore">Total</code> row.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Now we’ll fill in the MS (MSE) column, the mean squared error column.  For the <code class="code-inline tex2jax_ignore">Model</code> and the <code class="code-inline tex2jax_ignore">Error</code> columns, take the SS (SSE) number to the left divided by the df number further left, i.e. <span class="process-math">\(\text{MS} = \frac{\text{SS}}{\text{df}}\text{.}\)</span>  Leave the bottom cell empty because there is no mean squared error for the <code class="code-inline tex2jax_ignore">Total</code> row.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para">We’re finally read to compute <span class="process-math">\(F\text{.}\)</span>  We just need the two numbers from the MS (MSE) column.  Take the first number, i.e. the <code class="code-inline tex2jax_ignore">Model</code> number, and divide by the second number, i.e. the <code class="code-inline tex2jax_ignore">Error</code> number.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para">The F-statistic computes the between-group-variability divided by the within-group-variability.  Write something you notice (i.e. a statement) or something you wonder (i.e. a question) about how it is computed or what it represents.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para">Now we’ll compute the last number, the <span class="process-math">\(R^2\)</span> number.  We just need the first and last numbers of the SS (SSE) column.  <span class="process-math">\(R^2\)</span> is simply the first number divided by the last number from the SS (SSE) column.</div> <div class="para">The p-value takes a more complicated computation than is necessary for this exercise.  In this case, it is approximately 0.0106.</div></article></article><span class="incontext"><a href="section_10-2.html#q-10-2-12" class="internal">in-context</a></span>
+</body>
+</html>

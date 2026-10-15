@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">F-statistic (ANOVA test):</div>
+<ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\mu_i\)</span>  are the population means for the groups.</div></li>
+<li><div class="para">
+<span class="process-math">\(n_i\)</span> are the sample sizes for the groups with <span class="process-math">\(n\)</span> as the overall sample size.</div></li>
+<li><div class="para">
+<span class="process-math">\(\overline{x}_i\)</span> are the sample means for the groups.</div></li>
+<li><div class="para">
+<span class="process-math">\(s_i\)</span> are the sample standard deviations for the groups.</div></li>
+<li><div class="para">
+<span class="process-math">\(l\)</span> is the number of treatments (groups).</div></li>
+<li><div class="para">
+<span class="process-math">\(df\)</span> are the degrees of freedom for the F-distribution.</div></li>
+<li><div class="para">
+<span class="process-math">\(SS\)</span> is the sum of squares.</div></li>
+<li><div class="para">
+<span class="process-math">\(MS\)</span> is the mean squares.</div></li>
+<li><div class="para">
+<span class="process-math">\(F\)</span> is calculated as the ratio <span class="process-math">\(F = \frac{\text{between-group variability}}{\text{within-group variability}} = \frac{MS_{Treatment}}{MS_{Error}} \text{.}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(R^2\)</span> is the "coefficient of determination" the proportion of the variation in the response variable which is explained by the treatment, calculated as  <span class="process-math">\(R^2 = \frac{SS_{Treatment}}{SS_{Error}} \text{.}\)</span>
+</div></li>
+<li><div class="para">The mean of an F-distribution is <span class="process-math">\(\frac{df_{Error} }{ df_{Error} - 2} \text{.}\)</span>
+</div></li>
+<li><div class="para">The SD of an F-distribution is <span class="process-math">\(\sqrt{  \frac{2 (df_{Error})^2 (df_{Treatment} + df_{Error} - 2 )}{df_{Treatment} (df_{Error} -2)^2 (df_{Error} - 4)}   }   \text{.}\)</span>
+</div></li>
+</ul>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle df_{Treatment} = l - 1 \)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle df_{Error} = n - l \)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle df_{Total} = df_{Treatment} + df_{Error} = n -1 \)</span></div></li>
+</ul>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle SS_{Treatment} = \sum n_i(\bar{x}_i - \bar{x})^2 \)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle SS_{Error} = \sum (n_i-1)(s_i^2) \)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle SS_{Total} = SS_{Treatment} + SS_{Error} \)</span></div></li>
+</ul>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(\displaystyle MS_{Treatment} = \frac{SS_{Treatment}}{df_{Treatment}} = \frac{\sum n_i(\bar{x}_i - \bar{x})^2}{l-1} \)</span></div></li>
+<li><div class="para"><span class="process-math">\(MS_{Error} = \frac{SS_{Error}}{df_{Error}}  = \frac{\sum (n_i-1)(s_i^2)}{n-l} \text{.}\)</span></div></li>
+</ul>
+</div>
+<span class="incontext"><a href="section_10-3.html#p-2130" class="internal">in-context</a></span>
+</body>
+</html>
